@@ -1,0 +1,27 @@
+{
+  "nodes": [
+    {
+      "name": "Mailjet Trigger",
+      "type": "n8n-nodes-base.mailjetTrigger",
+      "position": [
+        530,
+        400
+      ],
+      "parameters": {
+        "event": "sent"
+      },
+      "credentials": {
+        "mailjetEmailApi": "mailjet creds"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {},
+  "_cn_meta": {
+    "title_zh": "Receive updates on emails sent via Mailjet",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 521,
+    "synced_at": "2026-06-17T14:10:59.596209"
+  }
+}

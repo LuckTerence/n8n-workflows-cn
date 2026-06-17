@@ -1,0 +1,55 @@
+{
+  "id": "59",
+  "name": "Send an SMS using the Mocean node",
+  "nodes": [
+    {
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        590,
+        260
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "name": "Mocean",
+      "type": "n8n-nodes-base.mocean",
+      "position": [
+        790,
+        260
+      ],
+      "parameters": {
+        "to": "",
+        "from": "",
+        "message": ""
+      },
+      "credentials": {
+        "moceanApi": "mocean"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "active": false,
+  "settings": {},
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Mocean",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "_cn_meta": {
+    "title_zh": "Send an SMS using the Mocean node",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 667,
+    "synced_at": "2026-06-17T14:11:24.635782"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "name": "IMAP Email",
+      "type": "n8n-nodes-base.emailReadImap",
+      "position": [
+        760,
+        400
+      ],
+      "parameters": {
+        "options": {
+          "allowUnauthorizedCerts": false
+        }
+      },
+      "credentials": {
+        "imap": "imap_creds"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {},
+  "_cn_meta": {
+    "title_zh": "Receive email updates via IMAP",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 587,
+    "synced_at": "2026-06-17T14:10:56.637111"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "name": "Copper Trigger",
+      "type": "n8n-nodes-base.copperTrigger",
+      "position": [
+        890,
+        400
+      ],
+      "webhookId": "493ce79a-6a08-4062-86d9-7f4618b6c1ea",
+      "parameters": {
+        "event": "new",
+        "resource": "project"
+      },
+      "credentials": {
+        "copperApi": "copper_creds"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {},
+  "_cn_meta": {
+    "title_zh": "Receive updates on a new project created in Copper",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 537,
+    "synced_at": "2026-06-17T14:10:59.004605"
+  }
+}

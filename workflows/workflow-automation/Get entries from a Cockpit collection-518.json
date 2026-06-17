@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        750,
+        360
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "name": "Cockpit",
+      "type": "n8n-nodes-base.cockpit",
+      "position": [
+        950,
+        360
+      ],
+      "parameters": {
+        "options": {},
+        "collection": "samplecollection"
+      },
+      "credentials": {
+        "cockpitApi": "cockpit api"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Cockpit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "_cn_meta": {
+    "title_zh": "Get entries from a Cockpit collection",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 518,
+    "synced_at": "2026-06-17T14:09:58.343254"
+  }
+}

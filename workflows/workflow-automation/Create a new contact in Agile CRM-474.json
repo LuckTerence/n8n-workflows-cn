@@ -1,0 +1,57 @@
+{
+  "id": "96",
+  "name": "Create a new contact in Agile CRM",
+  "nodes": [
+    {
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        250,
+        300
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "name": "AgileCRM",
+      "type": "n8n-nodes-base.agileCrm",
+      "position": [
+        450,
+        300
+      ],
+      "parameters": {
+        "operation": "create",
+        "additionalFields": {
+          "lastName": "",
+          "firstName": ""
+        }
+      },
+      "credentials": {
+        "agileCrmApi": ""
+      },
+      "typeVersion": 1
+    }
+  ],
+  "active": false,
+  "settings": {},
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "AgileCRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "_cn_meta": {
+    "title_zh": "Create a new contact in Agile CRM",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 474,
+    "synced_at": "2026-06-17T14:16:26.927065"
+  }
+}
