@@ -102,9 +102,10 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 | finance-analysis | 2 | 加密货币、股票数据 |
 
 ## 工作流索引
-> 点击链接查看 workflow.json
+> 点击 ▶ 展开查看，点击链接打开 workflow.json
 
-### AI Agent（93 个）
+<details>
+<summary><b>AI Agent</b>（93 个）</summary>
 
 - [AI Agent Integration for Bubble Apps with MCP Protocol Data Access](workflows/ai-agent/AI Agent Integration for Bubble Apps with MCP Protocol Data Access-4952/workflow.json)
 - [AI Agents can Create, Enrich leads with this Lemlist Tool MCP Server](workflows/ai-agent/AI Agents can Create, Enrich leads with this Lemlist Tool MCP Server-5233/workflow.json)
@@ -187,7 +188,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Personal Portfolio CV  Rag Chatbot - with Conversation Store and Email](workflows/ai-agent/Personal Portfolio CV  Rag Chatbot - with Conversation Store and Email Summary-2987/workflow.json)
 - [Proxmox AI Agent with n8n and Generative AI Integration](workflows/ai-agent/Proxmox AI Agent with n8n and Generative AI Integration-2749/workflow.json)
 - [Query PostgreSQL Database with Natural Language Using Groq AI Chatbot](workflows/ai-agent/Query PostgreSQL Database with Natural Language Using Groq AI Chatbot-3680/workflow.json)
-- [Question and Answer AI Agent Chatbot [2-2]](workflows/ai-agent/Question and Answer AI Agent Chatbot [2-2]-13354/workflow.json)
+- [Question and Answer AI Agent Chatbot 2-2](workflows/ai-agent/Question and Answer AI Agent Chatbot [2-2]-13354/workflow.json)
 - [Real Estate Chatbot with AI Property Matching and Automated Calendar S](workflows/ai-agent/Real Estate Chatbot with AI Property Matching and Automated Calendar Scheduling-7250/workflow.json)
 - [Retrieve Mercedes-Benz Vehicle Images for AI Agents with MCP Server](workflows/ai-agent/Retrieve Mercedes-Benz Vehicle Images for AI Agents with MCP Server-5659/workflow.json)
 - [SMS Messaging API Integration for AI Agents with BulkSMS](workflows/ai-agent/SMS Messaging API Integration for AI Agents with BulkSMS-5548/workflow.json)
@@ -200,7 +201,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [多级网页搜索](workflows/ai-agent/多级网页搜索-2539/workflow.json)
 - [构建AI自动化](workflows/ai-agent/构建AI自动化-3941/workflow.json)
 
-### DevOps（153 个）
+</details>
+
+
+<details>
+<summary><b>DevOps</b>（153 个）</summary>
 
 - [AI Linux管理员](workflows/devops/AI Linux管理员-3020/workflow.json)
 - [AI Privacy-Minded Router: PII Detection for Privacy, Security, & Compl](workflows/devops/AI Privacy-Minded Router- PII Detection for Privacy, Security, & Compliance-5874/workflow.json)
@@ -356,7 +361,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Simple SMS Messaging System with Textbelt API Integration](workflows/devops/Simple SMS Messaging System with Textbelt API Integration-6228/workflow.json)
 - [定时启停n8n工作流](workflows/devops/定时启停n8n工作流-3229/workflow.json)
 
-### 金融分析（25 个）
+</details>
+
+
+<details>
+<summary><b>金融分析</b>（25 个）</summary>
 
 - [AAVE投资组合Agent](workflows/finance-analysis/AAVE投资组合Agent-4267/workflow.json)
 - [AI-Powered Invoice Reminder & Payment Tracker for Finance & Accounting](workflows/finance-analysis/AI-Powered Invoice Reminder & Payment Tracker for Finance & Accounting-10111/workflow.json)
@@ -384,7 +393,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Send crypto price alerts, daily digests and -price replies with CoinGe](workflows/finance-analysis/Send crypto price alerts, daily digests and -price replies with CoinGecko, Teleg-16061/workflow.json)
 - [Send hourly cryptocurrency price summaries to Telegram with CoinGecko](workflows/finance-analysis/Send hourly cryptocurrency price summaries to Telegram with CoinGecko-15562/workflow.json)
 
-### 知识库/RAG（47 个）
+</details>
+
+
+<details>
+<summary><b>知识库/RAG</b>（47 个）</summary>
 
 - [AI Agent with Ollama for current weather and wiki](workflows/knowledge-rag/AI Agent with Ollama for current weather and wiki-2931/workflow.json)
 - [AI-Powered Ticket Triage with Multi-Model Classification & Knowledge B](workflows/knowledge-rag/AI-Powered Ticket Triage with Multi-Model Classification & Knowledge Base-11854/workflow.json)
@@ -434,7 +447,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Smarter RAG Agents with Enriched Retrieval and Modular Workflows](workflows/knowledge-rag/Smarter RAG Agents with Enriched Retrieval and Modular Workflows-8008/workflow.json)
 - [自适应RAG策略](workflows/knowledge-rag/自适应RAG策略-3459/workflow.json)
 
-### 多模态AI（52 个）
+</details>
+
+
+<details>
+<summary><b>多模态AI</b>（52 个）</summary>
 
 - [3D手办生成](workflows/multimodal-ai/3D手办生成-3628/workflow.json)
 - [AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)](workflows/multimodal-ai/AI Real Estate Agent- End-to-End Ops Automation (Web, Data, Voice)-4368/workflow.json)
@@ -489,7 +506,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [fal.ai图片生成](workflows/multimodal-ai/fal.ai图片生成-4108/workflow.json)
 - [电商3D视频生成](workflows/multimodal-ai/电商3D视频生成-4987/workflow.json)
 
-### 工作流自动化（1110 个）
+</details>
+
+
+<details>
+<summary><b>工作流自动化</b>（1110 个）</summary>
 
 - [10X E-commerce Sales AI Product Photography That Makes your product lo](workflows/workflow-automation/10X E-commerce Sales AI Product Photography That Makes your product look Premium-6151/workflow.json)
 - [3D Product Video Generator from 2D Image for E-Commerce Stores](workflows/workflow-automation/3D Product Video Generator from 2D Image for E-Commerce Stores-4987/workflow.json)
@@ -579,7 +600,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Analyze crypto markets with CoinGecko MCP and C1](workflows/workflow-automation/Analyze crypto markets with CoinGecko MCP and C1-12548/workflow.json)
 - [Analyze up to 100 URLs for on-page SEO and export results to CSV](workflows/workflow-automation/Analyze up to 100 URLs for on-page SEO and export results to CSV-15756/workflow.json)
 - [Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI](workflows/workflow-automation/Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI-9605/workflow.json)
-- [Anomaly (images) detection tool [3-3 - anomaly]](workflows/workflow-automation/Anomaly (images) detection tool [3-3 - anomaly]-2656/workflow.json)
+- [Anomaly (images) detection tool 3-3 - anomaly](workflows/workflow-automation/Anomaly (images) detection tool [3-3 - anomaly]-2656/workflow.json)
 - [Anonymize Faces and License Plates in Media with BlurIt](workflows/workflow-automation/Anonymize Faces and License Plates in Media with BlurIt-8535/workflow.json)
 - [AppSheet Intelligent Query Orchestrator- Query any data!](workflows/workflow-automation/AppSheet Intelligent Query Orchestrator- Query any data!-2932/workflow.json)
 - [Ask a human for help when the AI doesn't know the answer](workflows/workflow-automation/Ask a human for help when the AI doesn't know the answer-2095/workflow.json)
@@ -1252,7 +1273,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Import workflows and map their credentials using a Multi-Form](workflows/workflow-automation/Import workflows and map their credentials using a Multi-Form-2506/workflow.json)
 - [Index your website using IndexNow and your XML sitemap](workflows/workflow-automation/Index your website using IndexNow and your XML sitemap-13775/workflow.json)
 - [Influencer Brand Safety Auditor with Engagement Analysis](workflows/workflow-automation/Influencer Brand Safety Auditor with Engagement Analysis-11808/workflow.json)
-- [Ingest and enrich Q&A pairs then store in Data Table [1-2]](workflows/workflow-automation/Ingest and enrich Q&A pairs then store in Data Table [1-2]-13353/workflow.json)
+- [Ingest and enrich Q&A pairs then store in Data Table 1-2](workflows/workflow-automation/Ingest and enrich Q&A pairs then store in Data Table [1-2]-13353/workflow.json)
 - [Insert data into a new row for a table in Coda](workflows/workflow-automation/Insert data into a new row for a table in Coda-482/workflow.json)
 - [Inserting Brevo Contact Reports into NocoDB](workflows/workflow-automation/Inserting Brevo Contact Reports into NocoDB-9364/workflow.json)
 - [Instant Infographic Generator (LINE + Nano Banana Pro)](workflows/workflow-automation/Instant Infographic Generator (LINE + Nano Banana Pro)-11244/workflow.json)
@@ -1267,7 +1288,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Jarvis: Productivity AI Agent for Tasks, Calendar, Email & Expense usi](workflows/workflow-automation/Jarvis- Productivity AI Agent for Tasks, Calendar, Email & Expense using MCPs-8500/workflow.json)
 - [Job Applying Agent](workflows/workflow-automation/Job Applying Agent-7889/workflow.json)
 - [Joining different datasets](workflows/workflow-automation/Joining different datasets-1747/workflow.json)
-- [KNN (images) classifier tool [2-2 KNN]](workflows/workflow-automation/KNN (images) classifier tool [2-2 KNN]-2657/workflow.json)
+- [KNN (images) classifier tool 2-2 KNN](workflows/workflow-automation/KNN (images) classifier tool [2-2 KNN]-2657/workflow.json)
 - [KlickTipp tag manager: convert tag names to IDs](workflows/workflow-automation/KlickTipp tag manager- convert tag names to IDs-11923/workflow.json)
 - [Landing Page Analyzing Agent](workflows/workflow-automation/Landing Page Analyzing Agent-7897/workflow.json)
 - [Learn Anything from HN - Get Top Resource Recommendations from Hacker ](workflows/workflow-automation/Learn Anything from HN - Get Top Resource Recommendations from Hacker News-2697/workflow.json)
@@ -1330,12 +1351,12 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Monitor Kimai project deadlines and budgets with daily email alerts](workflows/workflow-automation/Monitor Kimai project deadlines and budgets with daily email alerts-14306/workflow.json)
 - [Monitor NASA asteroid threats with AI fact-check and multi-channel ale](workflows/workflow-automation/Monitor NASA asteroid threats with AI fact-check and multi-channel alerts-11289/workflow.json)
 - [Monitor PKI Certificates & CRLs for Expiration with Telegram & SMS Ale](workflows/workflow-automation/Monitor PKI Certificates & CRLs for Expiration with Telegram & SMS Alerts-9865/workflow.json)
+- [Monitor PROD workflows in real time with the n8n Public API dashboard](workflows/workflow-automation/Monitor [PROD] workflows in real time with the n8n Public API dashboard-13665/workflow.json)
 - [Monitor S3 Bucket Changes with Automated Integrity Auditing using Mist](workflows/workflow-automation/Monitor S3 Bucket Changes with Automated Integrity Auditing using Mistral AI-7547/workflow.json)
 - [Monitor Security Advisories](workflows/workflow-automation/Monitor Security Advisories-1974/workflow.json)
 - [Monitor Supplier Financial Health with ScrapeGraphAI & Multi-Channel R](workflows/workflow-automation/Monitor Supplier Financial Health with ScrapeGraphAI & Multi-Channel Risk Alerts-7129/workflow.json)
 - [Monitor USDT ERC-20 Wallet Balance with Etherscan and Telegram Notific](workflows/workflow-automation/Monitor USDT ERC-20 Wallet Balance with Etherscan and Telegram Notifications-3330/workflow.json)
 - [Monitor Workflow Audits and Failures with InfluxDB Dashboard](workflows/workflow-automation/Monitor Workflow Audits and Failures with InfluxDB Dashboard-5873/workflow.json)
-- [Monitor [PROD] workflows in real time with the n8n Public API dashboar](workflows/workflow-automation/Monitor [PROD] workflows in real time with the n8n Public API dashboard-13665/workflow.json)
 - [Monitor cryptocurrency payments across multiple blockchains with Agent](workflows/workflow-automation/Monitor cryptocurrency payments across multiple blockchains with AgentGatePay-12015/workflow.json)
 - [Monitor iOS App Store Reviews & Send Email Notifications Automatically](workflows/workflow-automation/Monitor iOS App Store Reviews & Send Email Notifications Automatically-9343/workflow.json)
 - [Monitor n8n Workflow Errors with Telegram Alerts (Multi-language Setup](workflows/workflow-automation/Monitor n8n Workflow Errors with Telegram Alerts (Multi-language Setup)-5939/workflow.json)
@@ -1566,7 +1587,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Sentiment Analytics Visualizer](workflows/workflow-automation/Sentiment Analytics Visualizer-5204/workflow.json)
 - [Serve Custom HTML Webpages with Webhooks](workflows/workflow-automation/Serve Custom HTML Webpages with Webhooks-5173/workflow.json)
 - [Serve Inspirational Quotes On-Demand via Webhook using ZenQuotes API](workflows/workflow-automation/Serve Inspirational Quotes On-Demand via Webhook using ZenQuotes API-4065/workflow.json)
-- [Set up cluster centres&thresholds for anomaly detection [2-3 - anomaly](workflows/workflow-automation/Set up cluster centres&thresholds for anomaly detection [2-3 - anomaly]-2655/workflow.json)
+- [Set up cluster centres&thresholds for anomaly detection 2-3 - anomaly](workflows/workflow-automation/Set up cluster centres&thresholds for anomaly detection [2-3 - anomaly]-2655/workflow.json)
 - [SharePoint List Fetch with OAuth Token](workflows/workflow-automation/SharePoint List Fetch with OAuth Token-2527/workflow.json)
 - [Shopify弃购挽回](workflows/workflow-automation/Shopify弃购挽回-3415/workflow.json)
 - [Sign PDF Documents with X.509 Certificates using PAdES Standards](workflows/workflow-automation/Sign PDF Documents with X.509 Certificates using PAdES Standards-10606/workflow.json)
@@ -1601,6 +1622,9 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [Validate Seatable Webhooks with HMAC SHA256 Authentication](workflows/workflow-automation/Validate Seatable Webhooks with HMAC SHA256 Authentication-3439/workflow.json)
 - [人工审核邮件回复](workflows/workflow-automation/人工审核邮件回复-2907/workflow.json)
 - [弃购挽回分析](workflows/workflow-automation/弃购挽回分析-6045/workflow.json)
+
+</details>
+
 
 ## 许可
 
