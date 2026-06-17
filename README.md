@@ -1,7 +1,5 @@
 # n8n-workflows-cn
 
-> n8n 工作流模板的本地化笔记 — 记录一些替换海外服务的尝试，希望对有类似需求的朋友有帮助
-
 [![Workflows](https://img.shields.io/badge/Workflows-1480-brightgreen)](INDEX.md)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
@@ -9,21 +7,27 @@
 
 ---
 
-## 这是什么
+## 项目介绍
 
-[nusquama/n8nworkflows.xyz](https://github.com/nusquama/n8nworkflows.xyz) 收集了大量优秀的 n8n 工作流模板，但很多依赖 OpenAI、Slack、Google 等服务，在国内用起来不太方便。这个仓库把这些模板里的海外服务，逐个换成了自己常用的国内方案（DeepSeek、通义千问、飞书等），并加上了中文说明。
+这是一个 n8n 工作流模板合集，源自 [nusquama/n8nworkflows.xyz](https://github.com/nusquama/n8nworkflows.xyz) 社区收集的 1480 个模板。
 
-目前整理了 1480 个模板，覆盖 6 大类、60+ 个细分场景。
+**做了什么：** 原始模板里的服务大多是 OpenAI、Slack、Google Workspace 等海外产品。我把这些逐个替换成了国内常用的服务（DeepSeek、通义千问、飞书、微信支付、阿里云等），并给每个工作流加了中文说明和适配记录。
+
+**适合谁：** 如果你用 n8n 做自动化，但不想折腾海外账号和支付，这个仓库可能能帮你省点时间。
+
+**数据概览：**
+
+| | |
+|---|---|
+| 工作流总数 | 1480 |
+| 大分类 | 6 个（AI Agent、DevOps、金融分析、知识库 RAG、多模态 AI、工作流自动化） |
+| 细分场景 | 60+ 个（对话机器人、邮件处理、监控告警、股票分析……） |
+| 替换服务 | 14 项（OpenAI → DeepSeek、Slack → 飞书、Gmail → QQ邮箱……） |
+| 格式 | 每个工作流 = `workflow.json`（可在 n8n 里 Import）+ `readme.md`（说明文档） |
 
 ## 起因
 
-自己在用 n8n 的时候，经常遇到：
-
-- 看到一个不错的模板，打开全是 OpenAI / Claude 节点的，没账号没法用
-- Slack、Google Sheets 这些平时也不用的服务占了一半节点
-- 每次手动换 Base URL、改节点类型、调消息体格式，来来回回很费时间
-
-所以就整理了这个仓库，算是个学习记录，也希望能帮到有类似困扰的朋友。
+自己用 n8n 的时候经常遇到：打开一个模板全是 OpenAI / Claude 节点没账号没法用、Slack 和 Google Sheets 这些用不上的服务占一半、每次手动改 Base URL 调消息格式很费时间。所以就整理了这份笔记，也能帮到有类似困扰的朋友。
 
 ## 快速试试
 
