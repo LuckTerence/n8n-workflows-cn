@@ -167,8 +167,8 @@ def generate_data():
                 "tags": tags,
                 "tier": tier,
                 "desc": desc,
-                "path": f"../workflows/{cat}/{wf_dir}/",
-                "readme": f"../workflows/{cat}/{wf_dir}/readme.md",
+                "path": f"https://github.com/LuckTerence/n8n-workflows-cn/tree/main/workflows/{cat}/{wf_dir}/",
+                "readme": f"https://github.com/LuckTerence/n8n-workflows-cn/blob/main/workflows/{cat}/{wf_dir}/readme.md",
             })
     return workflows
 
