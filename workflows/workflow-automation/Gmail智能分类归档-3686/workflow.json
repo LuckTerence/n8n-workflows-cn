@@ -24,8 +24,10 @@
         0
       ],
       "parameters": {
-        "model": "openai/gpt-4.1-nano",
-        "options": {}
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "credentials": {
         "openRouterApi": {
@@ -228,8 +230,10 @@
         0
       ],
       "parameters": {
-        "model": "openai/gpt-4.1-nano",
-        "options": {}
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "credentials": {
         "openRouterApi": {
@@ -472,8 +476,9 @@
     "title_zh": "Gmail智能分类归档",
     "description_zh": "AI自动分类邮件并归档",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3686,
-    "synced_at": "2026-06-17T11:37:08.218316"
+    "synced_at": "2026-06-17T11:37:08.218316",
+    "upgraded_at": "2026-06-17"
   }
 }

@@ -42,13 +42,10 @@
         260
       ],
       "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4.1-nano",
-          "cachedResultName": "gpt-4.1-nano"
-        },
-        "options": {}
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "credentials": {
         "openAiApi": {
@@ -212,8 +209,9 @@
     "title_zh": "Gmail垃圾邮件清理",
     "description_zh": "AI识别垃圾/促销邮件自动删除",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 4507,
-    "synced_at": "2026-06-17T11:37:08.889247"
+    "synced_at": "2026-06-17T11:37:08.889247",
+    "upgraded_at": "2026-06-17"
   }
 }

@@ -36,7 +36,12 @@
         560,
         0
       ],
-      "parameters": {},
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
+      },
       "typeVersion": 1.4
     },
     {
@@ -315,7 +320,12 @@
         2460,
         520
       ],
-      "parameters": {},
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
+      },
       "typeVersion": 1.4
     },
     {
@@ -780,8 +790,9 @@
     "title_zh": "AI新闻研究团队",
     "description_zh": "24小时AI自动化新闻简报",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 2778,
-    "synced_at": "2026-06-17T11:37:02.791320"
+    "synced_at": "2026-06-17T11:37:02.791320",
+    "upgraded_at": "2026-06-17"
   }
 }

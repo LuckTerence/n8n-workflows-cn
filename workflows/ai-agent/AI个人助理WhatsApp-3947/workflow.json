@@ -441,7 +441,12 @@
         1100,
         240
       ],
-      "parameters": {},
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
+      },
       "typeVersion": 1.4
     },
     {
@@ -1454,8 +1459,9 @@
     "title_zh": "AI个人助理WhatsApp",
     "description_zh": "GPT-4o RAG语音助手WhatsApp",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3947,
-    "synced_at": "2026-06-17T11:37:15.999923"
+    "synced_at": "2026-06-17T11:37:15.999923",
+    "upgraded_at": "2026-06-17"
   }
 }

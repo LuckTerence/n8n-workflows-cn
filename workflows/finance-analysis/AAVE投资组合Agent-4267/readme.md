@@ -3,7 +3,7 @@
 
 Telegram+Email+GPT-4o加密投资分析
 
-> 分类：金融分析 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 分类：金融分析 | 适配等级：A-adapted（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
 > 原始来源：https://n8nworkflows.xyz/workflows/4267
 
 ---

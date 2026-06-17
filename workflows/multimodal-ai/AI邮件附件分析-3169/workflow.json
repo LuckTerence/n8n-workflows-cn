@@ -36,13 +36,10 @@
         980
       ],
       "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "deepseek/deepseek-r1:free",
-          "cachedResultName": "deepseek/deepseek-r1:free"
-        },
-        "options": {}
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "credentials": {
         "openAiApi": {
@@ -296,7 +293,11 @@
       "parameters": {
         "text": "=## PDF Summarization System Prompt\n\nYou are a specialized AI assistant tasked with creating concise, accurate summaries of documents. Your goal is to extract and distill the most important information from the content provided as input and present it in a clear, precise plain text summary.\n\n### Your responsibilities:\n\n1. Identify the main topic and purpose of the document\n2. Extract key points, arguments, findings, or conclusions\n3. Preserve essential data points, statistics, dates, and figures\n4. Recognize and highlight critical information and takeaways\n5. Maintain the original document's logical structure in your summary\n6. Prioritize information based on its significance to the document's purpose\n\n### Summary format:\n\n- Provide your summary in plain text only (no formatting)\n- Begin with a concise overview of the document's main topic and purpose\n- Present important points in a logical, sequential narrative\n- Use clear, direct language that accurately represents the original content\n- Maintain appropriate context for all extracted information\n- Keep the summary concise while including all crucial information\n- Use proper transitions between topics to maintain readability\n\n### What to exclude:\n\n- Minor details that don't contribute to the main points\n- Repetitive information\n- Extensive examples unless they're critical to understanding\n- Citations, references, and bibliographic details unless specifically important\n- Decorative or non-essential images (describe important visualized data if relevant)\n- Your own interpretations or opinions not supported by the document\n\n{{ $json.text }}",
         "promptType": "define",
-        "hasOutputParser": true
+        "hasOutputParser": true,
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "typeVersion": 1.5
     },
@@ -534,7 +535,11 @@
             }
           ]
         },
-        "promptType": "define"
+        "promptType": "define",
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
       },
       "typeVersion": 1.5
     },
@@ -1193,8 +1198,9 @@
     "title_zh": "AI邮件附件分析",
     "description_zh": "分析PDF/图片附件保存到Drive+Telegram",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3169,
-    "synced_at": "2026-06-17T11:37:04.650552"
+    "synced_at": "2026-06-17T11:37:04.650552",
+    "upgraded_at": "2026-06-17"
   }
 }

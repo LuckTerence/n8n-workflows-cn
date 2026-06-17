@@ -381,7 +381,12 @@
         1260,
         900
       ],
-      "parameters": {},
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
+      },
       "typeVersion": 1.7
     },
     {
@@ -666,8 +671,9 @@
     "title_zh": "AI邮件自动回复RAG",
     "description_zh": "RAG增强的邮件自动回复系统",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 4748,
-    "synced_at": "2026-06-17T11:36:59.420983"
+    "synced_at": "2026-06-17T11:36:59.420983",
+    "upgraded_at": "2026-06-17"
   }
 }

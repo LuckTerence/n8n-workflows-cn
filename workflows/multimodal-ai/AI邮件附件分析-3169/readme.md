@@ -3,7 +3,7 @@
 
 分析PDF/图片附件保存到Drive+Telegram
 
-> 分类：多模态 AI | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 分类：多模态 AI | 适配等级：A-adapted（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
 > 原始来源：https://n8nworkflows.xyz/workflows/3169
 
 ---

@@ -341,7 +341,12 @@
         2180,
         1880
       ],
-      "parameters": {},
+      "parameters": {
+        "model": "deepseek-chat",
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        }
+      },
       "typeVersion": 1.5
     },
     {
@@ -774,8 +779,9 @@
     "title_zh": "AI数字产品销售",
     "description_zh": "GPT-4o驱动的SaaS产品销售自动化",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3342,
-    "synced_at": "2026-06-17T11:37:05.352274"
+    "synced_at": "2026-06-17T11:37:05.352274",
+    "upgraded_at": "2026-06-17"
   }
 }
