@@ -158,20 +158,20 @@ def generate_data():
                 except Exception:
                     pass
 
-            # Calculate difficulty
-            node_count = 0
-            difficulty = "⭐ 入门"
-            wf_json = os.path.join(wf_path, "workflow.json")
+            # Detect required APIs
+            api_needs = []
+            all_nodes_text = ''
             if os.path.exists(wf_json):
                 try:
                     with open(wf_json, "r", encoding="utf-8") as f:
                         nodes_data = json.load(f).get("nodes", [])
-                    skip = {'n8n-nodes-base.stickyNote','n8n-nodes-base.manualTrigger','n8n-nodes-base.scheduleTrigger','n8n-nodes-base.webhook','n8n-nodes-base.formTrigger','n8n-nodes-base.telegramTrigger','n8n-nodes-base.chatTrigger','@n8n/n8n-nodes-langchain.chatTrigger'}
-                    real = [n for n in nodes_data if n.get('type','') not in skip]
-                    node_count = len(real)
-                    if node_count <= 5: difficulty = "⭐ 入门"
-                    elif node_count <= 15: difficulty = "⭐⭐ 进阶"
-                    else: difficulty = "⭐⭐⭐ 高级"
+                    all_types = ' '.join(n.get('type','') for n in nodes_data)
+                    if 'telegram' in all_types: api_needs.append('Telegram')
+                    if any(t in all_types for t in ['lmChat','openAi','langchain','agent']): api_needs.append('DeepSeek')
+                    if any(t in all_types for t in ['email','mail']): api_needs.append('邮箱')
+                    if 'postgres' in all_types: api_needs.append('PostgreSQL')
+                    if 'redis' in all_types: api_needs.append('Redis')
+                    if 'serp' in all_types or 'search' in all_types.lower(): api_needs.append('搜索API')
                 except Exception:
                     pass
 
@@ -184,8 +184,7 @@ def generate_data():
                 "tags": tags,
                 "tier": tier,
                 "desc": desc,
-                "difficulty": difficulty,
-                "nodeCount": node_count,
+                "apiNeeds": api_needs,
                 "path": f"https://github.com/LuckTerence/n8n-workflows-cn/tree/main/workflows/{cat}/{wf_dir}/",
                 "readme": f"https://github.com/LuckTerence/n8n-workflows-cn/blob/main/workflows/{cat}/{wf_dir}/readme.md",
             })
@@ -342,6 +341,8 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
 .tier-a {{ color: #4caf50; font-weight: 600; }}
 .tier-b {{ color: #ff9800; font-weight: 600; }}
 .card-desc {{ font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.5; }}
+.card-apis {{ margin-top: 4px; }}
+.api-tag {{ font-size: 11px; color: var(--accent); background: rgba(76,175,80,0.1); padding: 1px 6px; border-radius: 3px; margin-right: 4px; }}
 </style>
 </head>
 <body>
@@ -405,6 +406,7 @@ function render(items) {{
                 <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:4px;">Tier ${{w.tier||'B'}}</span>
             </div>
             ${{w.desc ? `<div class="card-desc">${{w.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</div>` : ''}}
+            ${{w.apiNeeds && w.apiNeeds.length ? `<div class="card-apis">${{w.apiNeeds.map(a => '<span class="api-tag">🔑 '+a+'</span>').join(' ')}}</div>` : ''}}
             <div class="card-meta">
                 <span class="tag cat-tag">${{w.categoryIcon}} ${{w.categoryName}}</span>
                 <span class="tag sub-tag">${{w.subcategory}}</span>

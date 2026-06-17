@@ -1,0 +1,36 @@
+name: 工作流反馈
+description: 报告某个工作流的问题，或提交实测验证结果
+title: "[反馈] "
+labels: ["community-feedback"]
+body:
+  - type: input
+    attributes:
+      label: 工作流名称
+      placeholder: 例如 AI Agent聊天-1954
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: 反馈类型
+      options:
+        - 实测跑通，验证成功
+        - 导入失败 / JSON 格式问题
+        - 节点配置报错
+        - API Key 相关的问题
+        - 运行结果不符合预期
+        - 文档说明不清楚
+        - 其他
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: n8n 版本
+      placeholder: 例如 1.82.3
+  - type: textarea
+    attributes:
+      label: 详细描述
+      placeholder: 尽量描述清楚你做了什么、期望什么结果、实际发生了什么。
+  - type: textarea
+    attributes:
+      label: 截图或日志
+      placeholder: 把报错信息或截图拖过来。
