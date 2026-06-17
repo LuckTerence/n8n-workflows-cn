@@ -358,32 +358,38 @@ def build():
             lines.append("")
         return lines
 
-    # ── Main INDEX.md (repo root) ──
+    # ── Main INDEX.md (repo root) — slim TOC only ──
     lines = []
     lines.append("# 工作流索引")
     lines.append("")
-    lines.append(f"> 按分类和场景整理的 {len(workflows)} 个 n8n 工作流模板目录，点击链接查看工作流详情说明。")
+    lines.append(f"> 按分类和场景整理的 {len(workflows)} 个 n8n 工作流模板目录。点击分类名称查看详细列表。")
     lines.append("")
-    lines.append("## 目录")
+    lines.append("## 分类导航")
     lines.append("")
 
     for cat in ordered_cats:
         meta = CATEGORIES[cat]
-        lines.append(f"- [{meta['name']}](index/INDEX-{cat}.md)（{sum(len(v) for v in tree[cat].values())} 个）— {meta['desc']}")
+        total = sum(len(v) for v in tree[cat].values())
+        lines.append(f"- [{meta['name']}](index/INDEX-{cat}.md)（{total} 个）— {meta['desc']}")
 
     lines.append("")
     lines.append("---")
     lines.append("")
-    lines.append("点击分类名称查看各分类的详细工作流列表。")
+    lines.append("### 使用说明")
     lines.append("")
-
-    for cat in ordered_cats:
-        lines.extend(write_category_index(cat, prefix=""))
+    lines.append("- 点击分类名称进入各分类的详细索引（支持浏览器内折叠/展开浏览）")
+    lines.append("- 每个工作流目录包含 `workflow.json`（可导入 n8n）和 `readme.md`（中文说明）")
+    lines.append("")
+    lines.append("### 快速入口")
+    lines.append("")
+    lines.append("- [精选合集](CURATED.md) — 按场景推荐的工作流组合")
+    lines.append("- [升级指南](UPGRADE_GUIDE.md) — Tier B→A 升级操作清单")
+    lines.append("- [在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) — 可搜索筛选的浏览器")
 
     output_path = os.path.join(BASE, "INDEX.md")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
-    print(f"Written {len(workflows)} workflows to {output_path}")
+    print(f"Written TOC to {output_path}")
 
     # ── Per-category INDEX files (index/ directory) ──
     os.makedirs(os.path.join(BASE, "index"), exist_ok=True)
