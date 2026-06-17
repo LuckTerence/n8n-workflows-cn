@@ -1,6 +1,15 @@
+## 简介
+**AI 日历助手**
+
+Telegram Bot AI 日程管理
+
+> 分类：AI Agent | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/2703
+
+---
+
 # AI 日历助手
 
-https://n8nworkflows.xyz/workflows/2703
 
 通过 Telegram Bot 接收自然语言指令，由 AI Agent 理解意图后调用日历工具完成日程管理。
 

@@ -1,6 +1,15 @@
+## 简介
+**Selectively import workflows between instances using the n8n API and forms**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/13425
+
+---
+
 # Selectively import workflows between instances using the n8n API and forms
 
-https://n8nworkflows.xyz/workflows/13425
 
 ## 节点清单
 

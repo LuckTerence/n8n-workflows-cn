@@ -1,6 +1,15 @@
+## 简介
+**AI邮件附件分析**
+
+分析PDF/图片附件保存到Drive+Telegram
+
+> 分类：多模态 AI | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3169
+
+---
+
 # AI邮件附件分析
 
-https://n8nworkflows.xyz/workflows/3169
 
 ## 节点清单
 

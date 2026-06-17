@@ -1,6 +1,15 @@
+## 简介
+**Create Sales Orders with Web POS Interface, AI Reports, Telegram Alerts & Sheets**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6714
+
+---
+
 # Create Sales Orders with Web POS Interface, AI Reports, Telegram Alerts & Sheets
 
-https://n8nworkflows.xyz/workflows/6714
 
 ## 节点清单
 

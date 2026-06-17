@@ -1,6 +1,15 @@
+## 简介
+**Retrieve Answers from Knowledge Base with InfraNodus GraphRAG Chatbot**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/11570
+
+---
+
 # Retrieve Answers from Knowledge Base with InfraNodus GraphRAG Chatbot
 
-https://n8nworkflows.xyz/workflows/11570
 
 ## 节点清单
 

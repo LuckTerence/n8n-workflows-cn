@@ -1,6 +1,15 @@
+## 简介
+**AI客服中心Telegram呼入**
+
+生产级聊天机器人Part1
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4044
+
+---
+
 # AI客服中心Telegram呼入
 
-https://n8nworkflows.xyz/workflows/4044
 
 ## 节点清单
 

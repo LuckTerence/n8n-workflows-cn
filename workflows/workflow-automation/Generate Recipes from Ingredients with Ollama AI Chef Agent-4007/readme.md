@@ -1,6 +1,15 @@
+## 简介
+**Generate Recipes from Ingredients with Ollama AI Chef Agent**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4007
+
+---
+
 # Generate Recipes from Ingredients with Ollama AI Chef Agent
 
-https://n8nworkflows.xyz/workflows/4007
 
 ## 节点清单
 

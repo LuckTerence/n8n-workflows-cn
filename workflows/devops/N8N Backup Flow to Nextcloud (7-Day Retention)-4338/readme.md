@@ -1,6 +1,15 @@
+## 简介
+**N8N Backup Flow to Nextcloud (7-Day Retention)**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4338
+
+---
+
 # N8N Backup Flow to Nextcloud (7-Day Retention)
 
-https://n8nworkflows.xyz/workflows/4338
 
 ## 节点清单
 

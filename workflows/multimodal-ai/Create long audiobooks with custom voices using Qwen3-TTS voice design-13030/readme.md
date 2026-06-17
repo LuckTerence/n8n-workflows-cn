@@ -1,6 +1,15 @@
+## 简介
+**Create long audiobooks with custom voices using Qwen3-TTS voice design**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/13030
+
+---
+
 # Create long audiobooks with custom voices using Qwen3-TTS voice design
 
-https://n8nworkflows.xyz/workflows/13030
 
 ## 节点清单
 

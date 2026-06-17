@@ -1,6 +1,15 @@
+## 简介
+**Extract URLs from XML sitemaps to CSV via chat and HTTP request**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15443
+
+---
+
 # Extract URLs from XML sitemaps to CSV via chat and HTTP request
 
-https://n8nworkflows.xyz/workflows/15443
 
 ## 节点清单
 

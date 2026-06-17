@@ -1,6 +1,15 @@
+## 简介
+**Send Voice Calls in seconds: Automate Text-To-Speech using ClickSend API**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3072
+
+---
+
 # Send Voice Calls in seconds: Automate Text-To-Speech using ClickSend API
 
-https://n8nworkflows.xyz/workflows/3072
 
 ## 节点清单
 

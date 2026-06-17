@@ -1,6 +1,15 @@
+## 简介
+**Automate Token Purchases with Dollar Cost Averaging on Uniswap V3 & 1Shot API**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8044
+
+---
+
 # Automate Token Purchases with Dollar Cost Averaging on Uniswap V3 & 1Shot API
 
-https://n8nworkflows.xyz/workflows/8044
 
 ## 节点清单
 

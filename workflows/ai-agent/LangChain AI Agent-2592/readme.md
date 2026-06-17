@@ -1,6 +1,15 @@
+## 简介
+**LangChain AI Agent**
+
+基于LangChain节点的Telegram机器人
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2592
+
+---
+
 # LangChain AI Agent
 
-https://n8nworkflows.xyz/workflows/2592
 
 ## 节点清单
 

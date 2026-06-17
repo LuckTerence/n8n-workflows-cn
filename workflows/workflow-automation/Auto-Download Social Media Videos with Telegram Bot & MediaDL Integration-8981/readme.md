@@ -1,6 +1,15 @@
+## 简介
+**Auto-Download Social Media Videos with Telegram Bot & MediaDL Integration**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8981
+
+---
+
 # Auto-Download Social Media Videos with Telegram Bot & MediaDL Integration
 
-https://n8nworkflows.xyz/workflows/8981
 
 ## 节点清单
 

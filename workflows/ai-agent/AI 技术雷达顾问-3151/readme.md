@@ -1,6 +1,15 @@
+## 简介
+**AI 技术雷达顾问**
+
+SQL DB + RAG + 路由 Agent 构建技术雷达
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3151
+
+---
+
 # AI 技术雷达顾问
 
-https://n8nworkflows.xyz/workflows/3151
 
 ## 节点清单
 

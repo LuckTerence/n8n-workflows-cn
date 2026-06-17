@@ -1,6 +1,15 @@
+## 简介
+**Real Estate Chatbot with AI Property Matching and Automated Calendar Scheduling**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/7250
+
+---
+
 # Real Estate Chatbot with AI Property Matching and Automated Calendar Scheduling
 
-https://n8nworkflows.xyz/workflows/7250
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Send pre-meeting context briefings with Outlook, SharePoint, Entra ID and Teams**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/16107
+
+---
+
 # Send pre-meeting context briefings with Outlook, SharePoint, Entra ID and Teams
 
-https://n8nworkflows.xyz/workflows/16107
 
 ## 节点清单
 

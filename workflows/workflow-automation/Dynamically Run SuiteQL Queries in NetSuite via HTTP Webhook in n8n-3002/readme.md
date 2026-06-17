@@ -1,6 +1,15 @@
+## 简介
+**Dynamically Run SuiteQL Queries in NetSuite via HTTP Webhook in n8n**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3002
+
+---
+
 # Dynamically Run SuiteQL Queries in NetSuite via HTTP Webhook in n8n
 
-https://n8nworkflows.xyz/workflows/3002
 
 ## 节点清单
 

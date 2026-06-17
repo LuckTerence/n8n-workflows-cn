@@ -1,6 +1,15 @@
+## 简介
+**AI Privacy-Minded Router: PII Detection for Privacy, Security, & Compliance**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5874
+
+---
+
 # AI Privacy-Minded Router: PII Detection for Privacy, Security, & Compliance
 
-https://n8nworkflows.xyz/workflows/5874
 
 ## 节点清单
 

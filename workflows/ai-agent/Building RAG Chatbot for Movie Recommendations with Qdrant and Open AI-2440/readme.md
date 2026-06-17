@@ -1,6 +1,15 @@
+## 简介
+**Building RAG Chatbot for Movie Recommendations with Qdrant and Open AI**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2440
+
+---
+
 # Building RAG Chatbot for Movie Recommendations with Qdrant and Open AI
 
-https://n8nworkflows.xyz/workflows/2440
 
 ## 节点清单
 

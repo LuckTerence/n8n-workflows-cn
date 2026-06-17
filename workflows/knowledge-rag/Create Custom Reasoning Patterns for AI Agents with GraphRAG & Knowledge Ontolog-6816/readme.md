@@ -1,6 +1,15 @@
+## 简介
+**Create Custom Reasoning Patterns for AI Agents with GraphRAG & Knowledge Ontology**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6816
+
+---
+
 # Create Custom Reasoning Patterns for AI Agents with GraphRAG & Knowledge Ontology
 
-https://n8nworkflows.xyz/workflows/6816
 
 ## 节点清单
 

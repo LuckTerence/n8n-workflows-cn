@@ -1,6 +1,15 @@
+## 简介
+**Scan Confluence pages with the REST API for inactive page owners**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/12238
+
+---
+
 # Scan Confluence pages with the REST API for inactive page owners
 
-https://n8nworkflows.xyz/workflows/12238
 
 ## 节点清单
 

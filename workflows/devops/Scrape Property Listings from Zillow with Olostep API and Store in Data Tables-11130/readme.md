@@ -1,6 +1,15 @@
+## 简介
+**Scrape Property Listings from Zillow with Olostep API and Store in Data Tables**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/11130
+
+---
+
 # Scrape Property Listings from Zillow with Olostep API and Store in Data Tables
 
-https://n8nworkflows.xyz/workflows/11130
 
 ## 节点清单
 

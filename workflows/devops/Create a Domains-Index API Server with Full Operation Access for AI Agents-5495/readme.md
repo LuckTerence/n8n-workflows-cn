@@ -1,6 +1,15 @@
+## 简介
+**Create a Domains-Index API Server with Full Operation Access for AI Agents**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5495
+
+---
+
 # Create a Domains-Index API Server with Full Operation Access for AI Agents
 
-https://n8nworkflows.xyz/workflows/5495
 
 ## 节点清单
 

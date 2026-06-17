@@ -1,6 +1,15 @@
+## 简介
+**Automate RSS-to-Social Media with AI Summaries and Image Generation**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/9208
+
+---
+
 # Automate RSS-to-Social Media with AI Summaries and Image Generation
 
-https://n8nworkflows.xyz/workflows/9208
 
 ## 节点清单
 

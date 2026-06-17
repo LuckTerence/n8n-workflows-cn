@@ -1,6 +1,15 @@
+## 简介
+**Automate Outbound Voice Calls from Go High Level Opportunities with Vapi**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6088
+
+---
+
 # Automate Outbound Voice Calls from Go High Level Opportunities with Vapi
 
-https://n8nworkflows.xyz/workflows/6088
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**AAVE投资组合Agent**
+
+Telegram+Email+GPT-4o加密投资分析
+
+> 分类：金融分析 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4267
+
+---
+
 # AAVE投资组合Agent
 
-https://n8nworkflows.xyz/workflows/4267
 
 ## 节点清单
 

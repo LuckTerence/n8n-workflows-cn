@@ -1,6 +1,15 @@
+## 简介
+**Humanize AI-generated text using Rephrasy by detecting and rewriting only flagged sentences**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14545
+
+---
+
 # Humanize AI-generated text using Rephrasy by detecting and rewriting only flagged sentences
 
-https://n8nworkflows.xyz/workflows/14545
 
 ## 节点清单
 

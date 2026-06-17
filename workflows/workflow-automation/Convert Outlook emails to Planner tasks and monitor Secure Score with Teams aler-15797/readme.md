@@ -1,6 +1,15 @@
+## 简介
+**Convert Outlook emails to Planner tasks and monitor Secure Score with Teams alerts in M365**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15797
+
+---
+
 # Convert Outlook emails to Planner tasks and monitor Secure Score with Teams alerts in M365
 
-https://n8nworkflows.xyz/workflows/15797
 
 ## 节点清单
 

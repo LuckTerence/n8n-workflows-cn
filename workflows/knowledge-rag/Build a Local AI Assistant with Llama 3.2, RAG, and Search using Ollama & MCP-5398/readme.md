@@ -1,6 +1,15 @@
+## 简介
+**Build a Local AI Assistant with Llama 3.2, RAG, and Search using Ollama & MCP**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5398
+
+---
+
 # Build a Local AI Assistant with Llama 3.2, RAG, and Search using Ollama & MCP
 
-https://n8nworkflows.xyz/workflows/5398
 
 ## 节点清单
 

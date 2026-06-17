@@ -1,6 +1,15 @@
+## 简介
+**AI Chatbot Call Center: Taxi Booking Support (Production-Ready, Part 7)**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4051
+
+---
+
 # AI Chatbot Call Center: Taxi Booking Support (Production-Ready, Part 7)
 
-https://n8nworkflows.xyz/workflows/4051
 
 ## 节点清单
 

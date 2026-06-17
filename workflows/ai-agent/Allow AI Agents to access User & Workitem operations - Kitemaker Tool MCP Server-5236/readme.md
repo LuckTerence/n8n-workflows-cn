@@ -1,6 +1,15 @@
+## 简介
+**Allow AI Agents to access User & Workitem operations - Kitemaker Tool MCP Server**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5236
+
+---
+
 # Allow AI Agents to access User & Workitem operations - Kitemaker Tool MCP Server
 
-https://n8nworkflows.xyz/workflows/5236
 
 ## 节点清单
 

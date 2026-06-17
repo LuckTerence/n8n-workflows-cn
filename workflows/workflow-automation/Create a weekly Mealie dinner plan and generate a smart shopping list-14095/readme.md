@@ -1,6 +1,15 @@
+## 简介
+**Create a weekly Mealie dinner plan and generate a smart shopping list**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14095
+
+---
+
 # Create a weekly Mealie dinner plan and generate a smart shopping list
 
-https://n8nworkflows.xyz/workflows/14095
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Generate Images and Convert to Video Using Flux, Kraken & Runway**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4056
+
+---
+
 # Generate Images and Convert to Video Using Flux, Kraken & Runway
 
-https://n8nworkflows.xyz/workflows/4056
 
 ## 节点清单
 

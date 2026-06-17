@@ -1,6 +1,15 @@
+## 简介
+**AI Agent聊天**
+
+基础AI Agent对话模板
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/1954
+
+---
+
 # AI Agent聊天
 
-https://n8nworkflows.xyz/workflows/1954
 
 ## 节点清单
 

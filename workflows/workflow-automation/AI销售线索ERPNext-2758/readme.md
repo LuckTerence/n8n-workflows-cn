@@ -1,6 +1,15 @@
+## 简介
+**AI销售线索ERPNext**
+
+AI驱动的销售线索管理和跟进
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2758
+
+---
+
 # AI销售线索ERPNext
 
-https://n8nworkflows.xyz/workflows/2758
 
 ## 节点清单
 

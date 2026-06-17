@@ -1,6 +1,15 @@
+## 简介
+**Find Content Gaps in Competitors' Websites with InfraNodus GraphRAG for SEO**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4403
+
+---
+
 # Find Content Gaps in Competitors' Websites with InfraNodus GraphRAG for SEO
 
-https://n8nworkflows.xyz/workflows/4403
 
 ## 节点清单
 

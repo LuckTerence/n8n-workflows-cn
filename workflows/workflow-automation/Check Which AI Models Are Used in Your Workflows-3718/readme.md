@@ -1,6 +1,15 @@
+## 简介
+**Check Which AI Models Are Used in Your Workflows**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3718
+
+---
+
 # Check Which AI Models Are Used in Your Workflows
 
-https://n8nworkflows.xyz/workflows/3718
 
 ## 节点清单
 

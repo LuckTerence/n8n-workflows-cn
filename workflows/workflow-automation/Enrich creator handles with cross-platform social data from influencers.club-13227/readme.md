@@ -1,6 +1,15 @@
+## 简介
+**Enrich creator handles with cross-platform social data from influencers.club**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/13227
+
+---
+
 # Enrich creator handles with cross-platform social data from influencers.club
 
-https://n8nworkflows.xyz/workflows/13227
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Generate Videos from Text or Images with Sora 2 AI - No Watermark**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/9810
+
+---
+
 # Generate Videos from Text or Images with Sora 2 AI - No Watermark
 
-https://n8nworkflows.xyz/workflows/9810
 
 ## 节点清单
 

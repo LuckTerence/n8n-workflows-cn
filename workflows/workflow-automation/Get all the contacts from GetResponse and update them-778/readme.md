@@ -1,6 +1,15 @@
+## 简介
+**Get all the contacts from GetResponse and update them**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/778
+
+---
+
 # Get all the contacts from GetResponse and update them
 
-https://n8nworkflows.xyz/workflows/778
 
 ## 节点清单
 

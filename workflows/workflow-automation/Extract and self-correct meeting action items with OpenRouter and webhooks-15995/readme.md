@@ -1,6 +1,15 @@
+## 简介
+**Extract and self-correct meeting action items with OpenRouter and webhooks**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15995
+
+---
+
 # Extract and self-correct meeting action items with OpenRouter and webhooks
 
-https://n8nworkflows.xyz/workflows/15995
 
 ## 节点清单
 

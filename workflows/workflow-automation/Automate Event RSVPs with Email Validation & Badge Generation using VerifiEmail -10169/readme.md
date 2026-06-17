@@ -1,6 +1,15 @@
+## 简介
+**Automate Event RSVPs with Email Validation & Badge Generation using VerifiEmail & HTMLCssToImage**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10169
+
+---
+
 # Automate Event RSVPs with Email Validation & Badge Generation using VerifiEmail & HTMLCssToImage
 
-https://n8nworkflows.xyz/workflows/10169
 
 ## 节点清单
 

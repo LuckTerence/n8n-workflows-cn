@@ -1,6 +1,15 @@
+## 简介
+**Ollama天气查询**
+
+本地Ollama+天气查询+维基百科
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2931
+
+---
+
 # Ollama天气查询
 
-https://n8nworkflows.xyz/workflows/2931
 
 ## 节点清单
 

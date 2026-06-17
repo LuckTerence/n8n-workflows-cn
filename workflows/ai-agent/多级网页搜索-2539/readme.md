@@ -1,6 +1,15 @@
+## 简介
+**多级网页搜索**
+
+多阶段AI搜索和研究套件
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2539
+
+---
+
 # 多级网页搜索
 
-https://n8nworkflows.xyz/workflows/2539
 
 ## 节点清单
 

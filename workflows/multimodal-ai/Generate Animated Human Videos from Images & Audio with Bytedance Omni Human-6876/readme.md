@@ -1,6 +1,15 @@
+## 简介
+**Generate Animated Human Videos from Images & Audio with Bytedance Omni Human**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6876
+
+---
+
 # Generate Animated Human Videos from Images & Audio with Bytedance Omni Human
 
-https://n8nworkflows.xyz/workflows/6876
 
 ## 节点清单
 

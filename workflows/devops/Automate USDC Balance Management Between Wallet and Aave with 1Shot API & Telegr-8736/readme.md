@@ -1,6 +1,15 @@
+## 简介
+**Automate USDC Balance Management Between Wallet and Aave with 1Shot API & Telegram**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8736
+
+---
+
 # Automate USDC Balance Management Between Wallet and Aave with 1Shot API & Telegram
 
-https://n8nworkflows.xyz/workflows/8736
 
 ## 节点清单
 

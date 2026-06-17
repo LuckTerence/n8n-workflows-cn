@@ -1,6 +1,15 @@
+## 简介
+**Pattern for Parallel Sub-Workflow Execution Followed by Wait-For-All Loop**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2536
+
+---
+
 # Pattern for Parallel Sub-Workflow Execution Followed by Wait-For-All Loop
 
-https://n8nworkflows.xyz/workflows/2536
 
 ## 节点清单
 

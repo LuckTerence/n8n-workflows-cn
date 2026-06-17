@@ -1,6 +1,15 @@
+## 简介
+**Multi-Tool Research Agent for Animal Advocacy with OpenRouter, Serper & Open Paws DB**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5588
+
+---
+
 # Multi-Tool Research Agent for Animal Advocacy with OpenRouter, Serper & Open Paws DB
 
-https://n8nworkflows.xyz/workflows/5588
 
 ## 节点清单
 

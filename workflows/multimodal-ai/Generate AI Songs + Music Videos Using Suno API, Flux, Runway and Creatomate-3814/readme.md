@@ -1,6 +1,15 @@
+## 简介
+**Generate AI Songs + Music Videos Using Suno API, Flux, Runway and Creatomate**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3814
+
+---
+
 # Generate AI Songs + Music Videos Using Suno API, Flux, Runway and Creatomate
 
-https://n8nworkflows.xyz/workflows/3814
 
 ## 节点清单
 

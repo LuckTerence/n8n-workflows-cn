@@ -1,6 +1,15 @@
+## 简介
+**Discover, enrich & store cryptocurrency data with CoinMarketCap API**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10969
+
+---
+
 # Discover, enrich & store cryptocurrency data with CoinMarketCap API
 
-https://n8nworkflows.xyz/workflows/10969
 
 ## 节点清单
 

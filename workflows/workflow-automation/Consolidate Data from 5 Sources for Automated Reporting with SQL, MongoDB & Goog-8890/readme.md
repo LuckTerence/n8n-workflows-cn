@@ -1,6 +1,15 @@
+## 简介
+**Consolidate Data from 5 Sources for Automated Reporting with SQL, MongoDB & Google Tools**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8890
+
+---
+
 # Consolidate Data from 5 Sources for Automated Reporting with SQL, MongoDB & Google Tools
 
-https://n8nworkflows.xyz/workflows/8890
 
 ## 节点清单
 

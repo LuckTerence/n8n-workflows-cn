@@ -1,6 +1,15 @@
+## 简介
+**AI个人助理WhatsApp**
+
+GPT-4o RAG语音助手WhatsApp
+
+> 分类：AI Agent | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3947
+
+---
+
 # AI个人助理WhatsApp
 
-https://n8nworkflows.xyz/workflows/3947
 
 ## 节点清单
 

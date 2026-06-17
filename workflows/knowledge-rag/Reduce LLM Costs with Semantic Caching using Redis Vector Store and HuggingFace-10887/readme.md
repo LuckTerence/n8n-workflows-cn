@@ -1,6 +1,15 @@
+## 简介
+**Reduce LLM Costs with Semantic Caching using Redis Vector Store and HuggingFace**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10887
+
+---
+
 # Reduce LLM Costs with Semantic Caching using Redis Vector Store and HuggingFace
 
-https://n8nworkflows.xyz/workflows/10887
 
 ## 节点清单
 

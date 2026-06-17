@@ -1,6 +1,15 @@
+## 简介
+**Real-time PulsePoint Emergency Alerts to iMessage with AI Summaries**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5533
+
+---
+
 # Real-time PulsePoint Emergency Alerts to iMessage with AI Summaries
 
-https://n8nworkflows.xyz/workflows/5533
 
 ## 节点清单
 

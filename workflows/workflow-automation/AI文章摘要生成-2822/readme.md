@@ -1,6 +1,15 @@
+## 简介
+**AI文章摘要生成**
+
+WordPress文章AI摘要
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/2822
+
+---
+
 # AI文章摘要生成
 
-https://n8nworkflows.xyz/workflows/2822
 
 ## 节点清单
 

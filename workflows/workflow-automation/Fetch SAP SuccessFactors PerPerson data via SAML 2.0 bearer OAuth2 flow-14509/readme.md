@@ -1,6 +1,15 @@
+## 简介
+**Fetch SAP SuccessFactors PerPerson data via SAML 2.0 bearer OAuth2 flow**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14509
+
+---
+
 # Fetch SAP SuccessFactors PerPerson data via SAML 2.0 bearer OAuth2 flow
 
-https://n8nworkflows.xyz/workflows/14509
 
 ## 节点清单
 

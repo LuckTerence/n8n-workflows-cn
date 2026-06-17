@@ -1,6 +1,15 @@
+## 简介
+**Get Colombian Peso to USD Exchange Rate with Telegram Bot and AI Date Recognition**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4246
+
+---
+
 # Get Colombian Peso to USD Exchange Rate with Telegram Bot and AI Date Recognition
 
-https://n8nworkflows.xyz/workflows/4246
 
 ## 节点清单
 

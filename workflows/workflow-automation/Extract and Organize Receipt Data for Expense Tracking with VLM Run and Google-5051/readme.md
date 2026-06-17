@@ -1,6 +1,15 @@
+## 简介
+**Extract and Organize Receipt Data for Expense Tracking with VLM Run and Google**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5051
+
+---
+
 # Extract and Organize Receipt Data for Expense Tracking with VLM Run and Google
 
-https://n8nworkflows.xyz/workflows/5051
 
 ## 节点清单
 

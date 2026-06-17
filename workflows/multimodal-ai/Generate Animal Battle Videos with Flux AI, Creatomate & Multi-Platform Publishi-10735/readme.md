@@ -1,6 +1,15 @@
+## 简介
+**Generate Animal Battle Videos with Flux AI, Creatomate & Multi-Platform Publishing**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10735
+
+---
+
 # Generate Animal Battle Videos with Flux AI, Creatomate & Multi-Platform Publishing
 
-https://n8nworkflows.xyz/workflows/10735
 
 ## 节点清单
 

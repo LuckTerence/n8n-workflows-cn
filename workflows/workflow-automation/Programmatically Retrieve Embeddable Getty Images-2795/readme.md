@@ -1,6 +1,15 @@
+## 简介
+**Programmatically Retrieve Embeddable Getty Images**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2795
+
+---
+
 # Programmatically Retrieve Embeddable Getty Images
 
-https://n8nworkflows.xyz/workflows/2795
 
 ## 节点清单
 

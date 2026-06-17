@@ -1,6 +1,15 @@
+## 简介
+**Set Up Complete MERN Stack Development Environment on Linux Server**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6131
+
+---
+
 # Set Up Complete MERN Stack Development Environment on Linux Server
 
-https://n8nworkflows.xyz/workflows/6131
 
 ## 节点清单
 

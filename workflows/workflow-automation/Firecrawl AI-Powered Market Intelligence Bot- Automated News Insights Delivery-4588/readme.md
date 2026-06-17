@@ -1,6 +1,15 @@
+## 简介
+**Firecrawl AI-Powered Market Intelligence Bot: Automated News Insights Delivery**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4588
+
+---
+
 # Firecrawl AI-Powered Market Intelligence Bot: Automated News Insights Delivery
 
-https://n8nworkflows.xyz/workflows/4588
 
 ## 节点清单
 

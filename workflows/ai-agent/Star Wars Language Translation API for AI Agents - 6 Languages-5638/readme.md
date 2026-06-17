@@ -1,6 +1,15 @@
+## 简介
+**Star Wars Language Translation API for AI Agents - 6 Languages**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5638
+
+---
+
 # Star Wars Language Translation API for AI Agents - 6 Languages
 
-https://n8nworkflows.xyz/workflows/5638
 
 ## 节点清单
 

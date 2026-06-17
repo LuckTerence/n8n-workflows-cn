@@ -1,6 +1,15 @@
+## 简介
+**Intelligent Real-Time Financial Fraud Detection and Risk Scoring Engine**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/11862
+
+---
+
 # Intelligent Real-Time Financial Fraud Detection and Risk Scoring Engine
 
-https://n8nworkflows.xyz/workflows/11862
 
 ## 节点清单
 

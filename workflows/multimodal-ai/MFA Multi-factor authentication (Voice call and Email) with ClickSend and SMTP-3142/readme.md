@@ -1,6 +1,15 @@
+## 简介
+**MFA Multi-factor authentication (Voice call and Email) with ClickSend and SMTP**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3142
+
+---
+
 # MFA Multi-factor authentication (Voice call and Email) with ClickSend and SMTP
 
-https://n8nworkflows.xyz/workflows/3142
 
 ## 节点清单
 

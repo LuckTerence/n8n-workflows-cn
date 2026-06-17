@@ -1,6 +1,15 @@
+## 简介
+**Post text and images to X using a simple form trigger**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15899
+
+---
+
 # Post text and images to X using a simple form trigger
 
-https://n8nworkflows.xyz/workflows/15899
 
 ## 节点清单
 

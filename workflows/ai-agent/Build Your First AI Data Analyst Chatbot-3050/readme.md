@@ -1,6 +1,15 @@
+## 简介
+**Build Your First AI Data Analyst Chatbot**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3050
+
+---
+
 # Build Your First AI Data Analyst Chatbot
 
-https://n8nworkflows.xyz/workflows/3050
 
 ## 节点清单
 

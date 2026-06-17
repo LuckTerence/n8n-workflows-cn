@@ -1,6 +1,15 @@
+## 简介
+**Automate RSS News to Multi-Platform Social Media Publishing via PostPulse**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8800
+
+---
+
 # Automate RSS News to Multi-Platform Social Media Publishing via PostPulse
 
-https://n8nworkflows.xyz/workflows/8800
 
 ## 节点清单
 

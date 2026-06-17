@@ -1,6 +1,15 @@
+## 简介
+**Screen Applicants With AI, notify HR and save them in a Google Sheet**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2632
+
+---
+
 # Screen Applicants With AI, notify HR and save them in a Google Sheet
 
-https://n8nworkflows.xyz/workflows/2632
 
 ## 节点清单
 

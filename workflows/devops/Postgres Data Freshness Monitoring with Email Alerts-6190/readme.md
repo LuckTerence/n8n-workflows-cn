@@ -1,6 +1,15 @@
+## 简介
+**Postgres Data Freshness Monitoring with Email Alerts**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6190
+
+---
+
 # Postgres Data Freshness Monitoring with Email Alerts
 
-https://n8nworkflows.xyz/workflows/6190
 
 ## 节点清单
 

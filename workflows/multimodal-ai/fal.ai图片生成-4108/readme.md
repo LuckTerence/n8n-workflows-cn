@@ -1,6 +1,15 @@
+## 简介
+**fal.ai图片生成**
+
+基于fal.ai的文本生成图片
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4108
+
+---
+
 # fal.ai图片生成
 
-https://n8nworkflows.xyz/workflows/4108
 
 ## 节点清单
 

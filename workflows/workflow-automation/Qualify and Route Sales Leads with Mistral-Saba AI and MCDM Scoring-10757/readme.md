@@ -1,6 +1,15 @@
+## 简介
+**Qualify and Route Sales Leads with Mistral-Saba AI and MCDM Scoring**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10757
+
+---
+
 # Qualify and Route Sales Leads with Mistral-Saba AI and MCDM Scoring
 
-https://n8nworkflows.xyz/workflows/10757
 
 ## 节点清单
 

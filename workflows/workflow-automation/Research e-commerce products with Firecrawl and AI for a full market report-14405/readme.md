@@ -1,6 +1,15 @@
+## 简介
+**Research e-commerce products with Firecrawl and AI for a full market report**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14405
+
+---
+
 # Research e-commerce products with Firecrawl and AI for a full market report
 
-https://n8nworkflows.xyz/workflows/14405
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Qualify insurance quote leads with Aloware SMS and AI voice agent**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15030
+
+---
+
 # Qualify insurance quote leads with Aloware SMS and AI voice agent
 
-https://n8nworkflows.xyz/workflows/15030
 
 ## 节点清单
 

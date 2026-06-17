@@ -1,6 +1,15 @@
+## 简介
+**AI股票基本面分析**
+
+自动分析股票基本面并生成Q&A报告
+
+> 分类：金融分析 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2183
+
+---
+
 # AI股票基本面分析
 
-https://n8nworkflows.xyz/workflows/2183
 
 ## 节点清单
 

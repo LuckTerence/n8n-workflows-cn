@@ -1,6 +1,15 @@
+## 简介
+**Create a Secure MongoDB Data Retrieval API with Input Validation and HTTP Responses**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/7674
+
+---
+
 # Create a Secure MongoDB Data Retrieval API with Input Validation and HTTP Responses
 
-https://n8nworkflows.xyz/workflows/7674
 
 ## 节点清单
 

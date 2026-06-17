@@ -1,6 +1,15 @@
+## 简介
+**Automated Range Trading with Uniswap V3, Telegram Alerts & MetaMask Delegation**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/8427
+
+---
+
 # Automated Range Trading with Uniswap V3, Telegram Alerts & MetaMask Delegation
 
-https://n8nworkflows.xyz/workflows/8427
 
 ## 节点清单
 

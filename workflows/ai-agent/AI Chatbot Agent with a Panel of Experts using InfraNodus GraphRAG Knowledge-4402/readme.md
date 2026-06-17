@@ -1,6 +1,15 @@
+## 简介
+**AI Chatbot Agent with a Panel of Experts using InfraNodus GraphRAG Knowledge**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4402
+
+---
+
 # AI Chatbot Agent with a Panel of Experts using InfraNodus GraphRAG Knowledge
 
-https://n8nworkflows.xyz/workflows/4402
 
 ## 节点清单
 

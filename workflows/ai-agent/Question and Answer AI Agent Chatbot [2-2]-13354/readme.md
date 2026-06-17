@@ -1,6 +1,15 @@
+## 简介
+**Question and Answer AI Agent Chatbot [2-2]**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/13354
+
+---
+
 # Question and Answer AI Agent Chatbot [2-2]
 
-https://n8nworkflows.xyz/workflows/13354
 
 ## 节点清单
 

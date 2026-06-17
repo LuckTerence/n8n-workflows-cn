@@ -1,6 +1,15 @@
+## 简介
+**Automated Kubernetes Testing with Robot Framework, ArgoCD & Complete KinD Lifecycle**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/10302
+
+---
+
 # Automated Kubernetes Testing with Robot Framework, ArgoCD & Complete KinD Lifecycle
 
-https://n8nworkflows.xyz/workflows/10302
 
 ## 节点清单
 

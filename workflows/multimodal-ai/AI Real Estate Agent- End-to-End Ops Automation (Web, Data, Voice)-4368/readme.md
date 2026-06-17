@@ -1,6 +1,15 @@
+## 简介
+**AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4368
+
+---
+
 # AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)
 
-https://n8nworkflows.xyz/workflows/4368
 
 ## 节点清单
 

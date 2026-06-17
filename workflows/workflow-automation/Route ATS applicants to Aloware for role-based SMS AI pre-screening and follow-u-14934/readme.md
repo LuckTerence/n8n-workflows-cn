@@ -1,6 +1,15 @@
+## 简介
+**Route ATS applicants to Aloware for role-based SMS AI pre-screening and follow-up**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14934
+
+---
+
 # Route ATS applicants to Aloware for role-based SMS AI pre-screening and follow-up
 
-https://n8nworkflows.xyz/workflows/14934
 
 ## 节点清单
 

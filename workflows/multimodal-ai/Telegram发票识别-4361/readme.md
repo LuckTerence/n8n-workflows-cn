@@ -1,6 +1,15 @@
+## 简介
+**Telegram发票识别**
+
+Tesseract+Llama OCR提取
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4361
+
+---
+
 # Telegram发票识别
 
-https://n8nworkflows.xyz/workflows/4361
 
 ## 节点清单
 

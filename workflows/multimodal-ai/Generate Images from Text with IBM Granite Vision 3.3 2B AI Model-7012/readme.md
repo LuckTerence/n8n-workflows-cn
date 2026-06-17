@@ -1,6 +1,15 @@
+## 简介
+**Generate Images from Text with IBM Granite Vision 3.3 2B AI Model**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/7012
+
+---
+
 # Generate Images from Text with IBM Granite Vision 3.3 2B AI Model
 
-https://n8nworkflows.xyz/workflows/7012
 
 ## 节点清单
 

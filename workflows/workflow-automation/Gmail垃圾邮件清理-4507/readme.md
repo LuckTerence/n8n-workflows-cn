@@ -1,6 +1,15 @@
+## 简介
+**Gmail垃圾邮件清理**
+
+AI识别垃圾/促销邮件自动删除
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4507
+
+---
+
 # Gmail垃圾邮件清理
 
-https://n8nworkflows.xyz/workflows/4507
 
 ## 节点清单
 

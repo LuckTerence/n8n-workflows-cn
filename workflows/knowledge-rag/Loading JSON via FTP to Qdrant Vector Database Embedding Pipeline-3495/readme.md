@@ -1,6 +1,15 @@
+## 简介
+**Loading JSON via FTP to Qdrant Vector Database Embedding Pipeline**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3495
+
+---
+
 # Loading JSON via FTP to Qdrant Vector Database Embedding Pipeline
 
-https://n8nworkflows.xyz/workflows/3495
 
 ## 节点清单
 

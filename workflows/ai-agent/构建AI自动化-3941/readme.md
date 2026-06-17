@@ -1,6 +1,15 @@
+## 简介
+**构建AI自动化**
+
+AI自动化和Agent的构建与销售
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3941
+
+---
+
 # 构建AI自动化
 
-https://n8nworkflows.xyz/workflows/3941
 
 ## 节点清单
 

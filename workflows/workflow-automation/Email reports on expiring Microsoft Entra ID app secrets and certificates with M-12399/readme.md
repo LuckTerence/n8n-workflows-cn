@@ -1,6 +1,15 @@
+## 简介
+**Email reports on expiring Microsoft Entra ID app secrets and certificates with Microsoft Graph**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/12399
+
+---
+
 # Email reports on expiring Microsoft Entra ID app secrets and certificates with Microsoft Graph
 
-https://n8nworkflows.xyz/workflows/12399
 
 ## 节点清单
 

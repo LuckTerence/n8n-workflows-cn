@@ -1,6 +1,15 @@
+## 简介
+**Simplify Medical Lab Reports with Ollama AI and Email Delivery System**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/7274
+
+---
+
 # Simplify Medical Lab Reports with Ollama AI and Email Delivery System
 
-https://n8nworkflows.xyz/workflows/7274
 
 ## 节点清单
 

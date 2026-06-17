@@ -1,6 +1,15 @@
+## 简介
+**AI新闻简报构建**
+
+Dumpling AI爬站+GPT-4o摘要+简报
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4030
+
+---
+
 # AI新闻简报构建
 
-https://n8nworkflows.xyz/workflows/4030
 
 ## 节点清单
 

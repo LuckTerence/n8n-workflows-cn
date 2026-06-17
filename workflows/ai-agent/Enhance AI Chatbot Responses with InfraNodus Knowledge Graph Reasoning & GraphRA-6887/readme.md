@@ -1,6 +1,15 @@
+## 简介
+**Enhance AI Chatbot Responses with InfraNodus Knowledge Graph Reasoning & GraphRAG**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6887
+
+---
+
 # Enhance AI Chatbot Responses with InfraNodus Knowledge Graph Reasoning & GraphRAG
 
-https://n8nworkflows.xyz/workflows/6887
 
 ## 节点清单
 

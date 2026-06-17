@@ -1,6 +1,15 @@
+## 简介
+**Post to an XMLRPC API via the HTTP Request node**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2888
+
+---
+
 # Post to an XMLRPC API via the HTTP Request node
 
-https://n8nworkflows.xyz/workflows/2888
 
 ## 节点清单
 

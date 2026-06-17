@@ -1,6 +1,15 @@
+## 简介
+**3D手办生成**
+
+Midjourney+GPT-4o生成3D模型多视角图
+
+> 分类：多模态 AI | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3628
+
+---
+
 # 3D手办生成
 
-https://n8nworkflows.xyz/workflows/3628
 
 ## 节点清单
 

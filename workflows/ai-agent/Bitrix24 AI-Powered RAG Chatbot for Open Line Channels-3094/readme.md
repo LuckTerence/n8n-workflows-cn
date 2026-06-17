@@ -1,6 +1,15 @@
+## 简介
+**Bitrix24 AI-Powered RAG Chatbot for Open Line Channels**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3094
+
+---
+
 # Bitrix24 AI-Powered RAG Chatbot for Open Line Channels
 
-https://n8nworkflows.xyz/workflows/3094
 
 ## 节点清单
 

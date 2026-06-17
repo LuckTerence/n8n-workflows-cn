@@ -1,6 +1,15 @@
+## 简介
+**AI数字产品销售**
+
+GPT-4o驱动的SaaS产品销售自动化
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3342
+
+---
+
 # AI数字产品销售
 
-https://n8nworkflows.xyz/workflows/3342
 
 ## 节点清单
 

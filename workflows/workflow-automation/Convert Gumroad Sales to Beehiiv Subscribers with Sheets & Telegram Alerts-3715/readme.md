@@ -1,6 +1,15 @@
+## 简介
+**Convert Gumroad Sales to Beehiiv Subscribers with Sheets & Telegram Alerts**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/3715
+
+---
+
 # Convert Gumroad Sales to Beehiiv Subscribers with Sheets & Telegram Alerts
 
-https://n8nworkflows.xyz/workflows/3715
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Import workflows and map their credentials using a Multi-Form**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2506
+
+---
+
 # Import workflows and map their credentials using a Multi-Form
 
-https://n8nworkflows.xyz/workflows/2506
 
 ## 节点清单
 

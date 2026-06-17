@@ -1,6 +1,15 @@
+## 简介
+**Chat with PDF - MD - Text Files using GraphRAG (no vector store needed)**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4755
+
+---
+
 # Chat with PDF - MD - Text Files using GraphRAG (no vector store needed)
 
-https://n8nworkflows.xyz/workflows/4755
 
 ## 节点清单
 

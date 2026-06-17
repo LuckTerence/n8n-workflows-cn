@@ -1,6 +1,15 @@
+## 简介
+**人工审核邮件回复**
+
+AI生成回复+人工确认后再发送
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/2907
+
+---
+
 # 人工审核邮件回复
 
-https://n8nworkflows.xyz/workflows/2907
 
 ## 节点清单
 

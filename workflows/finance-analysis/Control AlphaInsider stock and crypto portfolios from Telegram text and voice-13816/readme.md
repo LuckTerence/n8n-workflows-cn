@@ -1,6 +1,15 @@
+## 简介
+**Control AlphaInsider stock and crypto portfolios from Telegram text and voice**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/13816
+
+---
+
 # Control AlphaInsider stock and crypto portfolios from Telegram text and voice
 
-https://n8nworkflows.xyz/workflows/13816
 
 ## 节点清单
 

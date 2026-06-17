@@ -1,6 +1,15 @@
+## 简介
+**AI agents can get end of day market data with this Marketstack Tool MCP Server**
+
+（待补充中文描述）
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5205
+
+---
+
 # AI agents can get end of day market data with this Marketstack Tool MCP Server
 
-https://n8nworkflows.xyz/workflows/5205
 
 ## 节点清单
 

@@ -1,6 +1,15 @@
+## 简介
+**Automate Regulatory Compliance Monitoring with ScrapeGraphAI and Email Alerts**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/6567
+
+---
+
 # Automate Regulatory Compliance Monitoring with ScrapeGraphAI and Email Alerts
 
-https://n8nworkflows.xyz/workflows/6567
 
 ## 节点清单
 

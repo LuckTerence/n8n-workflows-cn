@@ -1,6 +1,15 @@
+## 简介
+**Build a local RAG chatbot with Ollama, Qwen, BGE-M3 and Postgres PGVector**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/14782
+
+---
+
 # Build a local RAG chatbot with Ollama, Qwen, BGE-M3 and Postgres PGVector
 
-https://n8nworkflows.xyz/workflows/14782
 
 ## 节点清单
 

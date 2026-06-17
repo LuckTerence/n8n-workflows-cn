@@ -1,6 +1,15 @@
+## 简介
+**自适应RAG策略**
+
+查询分类+Qdrant
+
+> 分类：知识库 RAG | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3459
+
+---
+
 # 自适应RAG策略
 
-https://n8nworkflows.xyz/workflows/3459
 
 ## 节点清单
 

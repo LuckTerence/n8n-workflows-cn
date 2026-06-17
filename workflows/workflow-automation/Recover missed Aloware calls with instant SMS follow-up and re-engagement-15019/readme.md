@@ -1,6 +1,15 @@
+## 简介
+**Recover missed Aloware calls with instant SMS follow-up and re-engagement**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/15019
+
+---
+
 # Recover missed Aloware calls with instant SMS follow-up and re-engagement
 
-https://n8nworkflows.xyz/workflows/15019
 
 ## 节点清单
 

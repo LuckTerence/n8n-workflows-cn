@@ -1,6 +1,15 @@
+## 简介
+**Automate Stock Trades with AI-Driven Technical Analysis & Alpaca Trading**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A-adapted（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/7240
+
+---
+
 # Automate Stock Trades with AI-Driven Technical Analysis & Alpaca Trading
 
-https://n8nworkflows.xyz/workflows/7240
 
 ## 节点清单
 

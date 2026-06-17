@@ -1,6 +1,15 @@
+## 简介
+**AI 数据库对话 Agent**
+
+用自然语言查询 PostgreSQL 数据库
+
+> 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/2612
+
+---
+
 # AI 数据库对话 Agent
 
-https://n8nworkflows.xyz/workflows/2612
 
 ## 节点清单
 

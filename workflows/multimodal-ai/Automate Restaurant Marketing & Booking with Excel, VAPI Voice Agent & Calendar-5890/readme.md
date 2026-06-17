@@ -1,6 +1,15 @@
+## 简介
+**Automate Restaurant Marketing & Booking with Excel, VAPI Voice Agent & Calendar**
+
+（待补充中文描述）
+
+> 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/5890
+
+---
+
 # Automate Restaurant Marketing & Booking with Excel, VAPI Voice Agent & Calendar
 
-https://n8nworkflows.xyz/workflows/5890
 
 ## 节点清单
 

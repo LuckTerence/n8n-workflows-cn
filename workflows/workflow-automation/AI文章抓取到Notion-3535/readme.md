@@ -1,6 +1,15 @@
+## 简介
+**AI文章抓取到Notion**
+
+Gemini+浏览器抓取文章摘要保存
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/3535
+
+---
+
 # AI文章抓取到Notion
 
-https://n8nworkflows.xyz/workflows/3535
 
 ## 节点清单
 

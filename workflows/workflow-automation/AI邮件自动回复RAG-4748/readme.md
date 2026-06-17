@@ -1,6 +1,15 @@
+## 简介
+**AI邮件自动回复RAG**
+
+RAG增强的邮件自动回复系统
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4748
+
+---
+
 # AI邮件自动回复RAG
 
-https://n8nworkflows.xyz/workflows/4748
 
 ## 节点清单
 

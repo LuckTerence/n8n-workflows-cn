@@ -1,6 +1,15 @@
+## 简介
+**Generate Website Screenshots On-Demand with ScreenshotMachine API via Webhooks**
+
+（待补充中文描述）
+
+> 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/4594
+
+---
+
 # Generate Website Screenshots On-Demand with ScreenshotMachine API via Webhooks
 
-https://n8nworkflows.xyz/workflows/4594
 
 ## 节点清单
 

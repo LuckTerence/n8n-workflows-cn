@@ -1,6 +1,15 @@
+## 简介
+**Aggregate Crypto and Stock Market News Feed from Multiple Sources**
+
+（待补充中文描述）
+
+> 分类：金融分析 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/11103
+
+---
+
 # Aggregate Crypto and Stock Market News Feed from Multiple Sources
 
-https://n8nworkflows.xyz/workflows/11103
 
 ## 节点清单
 

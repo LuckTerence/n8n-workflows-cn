@@ -1,6 +1,15 @@
+## 简介
+**Gmail客服自动回复**
+
+Ollama+Pinecone RAG
+
+> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4760
+
+---
+
 # Gmail客服自动回复
 
-https://n8nworkflows.xyz/workflows/4760
 
 ## 节点清单
 

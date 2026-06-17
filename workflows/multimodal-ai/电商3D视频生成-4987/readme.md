@@ -1,6 +1,15 @@
+## 简介
+**电商3D视频生成**
+
+2D图片生成3D产品展示视频
+
+> 分类：多模态 AI | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 原始来源：https://n8nworkflows.xyz/workflows/4987
+
+---
+
 # 电商3D视频生成
 
-https://n8nworkflows.xyz/workflows/4987
 
 ## 节点清单
 

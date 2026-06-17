@@ -1,6 +1,15 @@
+## 简介
+**Build hybrid RAG search over PDFs with Qdrant and Ollama**
+
+（待补充中文描述）
+
+> 分类：知识库 RAG | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/16040
+
+---
+
 # Build hybrid RAG search over PDFs with Qdrant and Ollama
 
-https://n8nworkflows.xyz/workflows/16040
 
 ## 节点清单
 

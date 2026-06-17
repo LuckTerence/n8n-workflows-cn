@@ -1,6 +1,15 @@
+## 简介
+**Research topics using OpenRouter AI agents with Serper search and Jina AI reports**
+
+（待补充中文描述）
+
+> 分类：工作流自动化 | 适配等级：A（基本改完，配置 API Key 应该就能跑）
+> 原始来源：https://n8nworkflows.xyz/workflows/12504
+
+---
+
 # Research topics using OpenRouter AI agents with Serper search and Jina AI reports
 
-https://n8nworkflows.xyz/workflows/12504
 
 ## 节点清单
 
