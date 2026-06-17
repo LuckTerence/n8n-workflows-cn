@@ -1,0 +1,47 @@
+name: Validate Workflows
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "workflows/**"
+      - "scripts/validate.py"
+  pull_request:
+    branches: [main]
+    paths:
+      - "workflows/**"
+      - "scripts/validate.py"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run validation
+        run: python scripts/validate.py
+
+  index-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify INDEX.md can be regenerated
+        run: |
+          python scripts/build_index.py
+          if [ ! -s INDEX.md ]; then
+            echo "❌ INDEX.md 生成失败或为空"
+            exit 1
+          fi
+          echo "✅ INDEX.md 可以正常生成 ($(wc -l < INDEX.md) 行)"
