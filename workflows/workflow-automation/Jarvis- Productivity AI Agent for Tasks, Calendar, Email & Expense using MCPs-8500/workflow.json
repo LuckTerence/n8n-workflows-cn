@@ -1938,6 +1938,7 @@
       "Google Sheets",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
+    "description_zh": "AI 智能体、MCP 协议集成、邮件自动化"
   }
 }

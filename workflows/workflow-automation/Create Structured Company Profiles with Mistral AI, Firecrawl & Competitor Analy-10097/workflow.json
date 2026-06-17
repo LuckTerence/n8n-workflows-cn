@@ -1098,6 +1098,7 @@
       "Google Drive",
       "Supabase"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
+    "description_zh": "网页爬取"
   }
 }

@@ -357,6 +357,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 13445,
-    "synced_at": "2026-06-17T14:18:31.741791"
+    "synced_at": "2026-06-17T14:18:31.741791",
+    "description_zh": "自动部署"
   }
 }

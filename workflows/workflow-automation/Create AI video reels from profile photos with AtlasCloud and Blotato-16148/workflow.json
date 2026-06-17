@@ -743,6 +743,7 @@
     "synced_at": "2026-06-17T14:08:08.385282",
     "foreign_services": [
       "Notion"
-    ]
+    ],
+    "description_zh": "视频生成"
   }
 }

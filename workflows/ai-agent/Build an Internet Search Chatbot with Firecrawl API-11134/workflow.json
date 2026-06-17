@@ -411,6 +411,7 @@
     "foreign_services": [
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信",
+    "description_zh": "AI 聊天机器人、AI 对话、API 接口"
   }
 }

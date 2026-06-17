@@ -233,6 +233,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7356,
-    "synced_at": "2026-06-17T14:15:35.834272"
+    "synced_at": "2026-06-17T14:15:35.834272",
+    "description_zh": "API 接口、向量存储、PDF 文档"
   }
 }

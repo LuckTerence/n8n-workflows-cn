@@ -601,6 +601,7 @@
       "Zoom",
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Zoom→腾讯会议"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Zoom→腾讯会议",
+    "description_zh": "视频生成、工作流管理、流程自动化"
   }
 }

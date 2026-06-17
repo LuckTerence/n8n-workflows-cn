@@ -214,6 +214,7 @@
       "Google Sheets",
       "Slack"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人"
+    "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
+    "description_zh": "流程自动化"
   }
 }

@@ -1882,6 +1882,7 @@
     "synced_at": "2026-06-17T14:11:34.467127",
     "foreign_services": [
       "Twilio"
-    ]
+    ],
+    "description_zh": "自动化工作流"
   }
 }

@@ -223,7 +223,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 1. 试试某个工作流能不能跑，遇到问题提 issue
 2. 把自己用的服务替换方案加进来
 3. 翻译英文说明、补使用示例
-4. 帮忙完善 INDEX.md 的分类
+4. 帮忙完善工作流索引（index/ 目录）的分类
 
 ## 许可
 

@@ -78,6 +78,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 1005,
-    "synced_at": "2026-06-17T14:11:26.570973"
+    "synced_at": "2026-06-17T14:11:26.570973",
+    "description_zh": "天气信息"
   }
 }

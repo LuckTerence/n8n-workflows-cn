@@ -185,6 +185,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 4932,
-    "synced_at": "2026-06-17T14:19:08.056014"
+    "synced_at": "2026-06-17T14:19:08.056014",
+    "description_zh": "自动化工作流"
   }
 }

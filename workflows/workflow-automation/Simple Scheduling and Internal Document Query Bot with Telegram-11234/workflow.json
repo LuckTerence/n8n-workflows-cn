@@ -630,6 +630,7 @@
       "Google Docs",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库",
+    "description_zh": "Telegram 机器人"
   }
 }

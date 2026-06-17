@@ -2457,6 +2457,7 @@
     "synced_at": "2026-06-17T14:12:45.072497",
     "foreign_services": [
       "Notion"
-    ]
+    ],
+    "description_zh": "API 接口、股票分析、新闻聚合"
   }
 }

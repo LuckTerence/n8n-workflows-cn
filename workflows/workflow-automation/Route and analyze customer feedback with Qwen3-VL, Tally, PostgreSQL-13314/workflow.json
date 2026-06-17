@@ -1235,6 +1235,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 13314,
-    "synced_at": "2026-06-17T14:13:38.025921"
+    "synced_at": "2026-06-17T14:13:38.025921",
+    "description_zh": "PostgreSQL、SQL 查询"
   }
 }

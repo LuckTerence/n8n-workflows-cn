@@ -477,6 +477,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 5746,
-    "synced_at": "2026-06-17T14:12:48.537772"
+    "synced_at": "2026-06-17T14:12:48.537772",
+    "description_zh": "RAG 检索增强、HR 人事、PDF 文档"
   }
 }

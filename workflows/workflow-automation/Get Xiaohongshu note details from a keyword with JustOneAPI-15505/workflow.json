@@ -384,6 +384,7 @@
     "synced_at": "2026-06-17T14:09:53.501213",
     "foreign_services": [
       "Notion"
-    ]
+    ],
+    "description_zh": "API 接口"
   }
 }

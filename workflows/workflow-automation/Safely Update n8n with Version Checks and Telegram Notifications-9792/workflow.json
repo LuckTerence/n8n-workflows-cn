@@ -470,6 +470,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 9792,
-    "synced_at": "2026-06-17T14:11:11.836426"
+    "synced_at": "2026-06-17T14:11:11.836426",
+    "description_zh": "Telegram 机器人、消息通知、n8n 运维"
   }
 }

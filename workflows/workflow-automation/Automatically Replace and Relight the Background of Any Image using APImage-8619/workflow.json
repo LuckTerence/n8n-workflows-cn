@@ -267,6 +267,7 @@
       "Google Sheets",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
+    "description_zh": "API 接口、图片生成"
   }
 }

@@ -193,6 +193,7 @@
       "Notion",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Notion→飞书文档/语雀"
+    "upgrade_note": "Google Drive→阿里云OSS、Notion→飞书文档/语雀",
+    "description_zh": "API 接口、图片生成、流程自动化"
   }
 }

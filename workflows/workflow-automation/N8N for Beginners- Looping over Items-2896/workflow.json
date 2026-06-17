@@ -480,6 +480,7 @@
     "synced_at": "2026-06-17T14:10:33.026359",
     "foreign_services": [
       "Supabase"
-    ]
+    ],
+    "description_zh": "n8n 运维"
   }
 }

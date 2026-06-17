@@ -790,6 +790,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 8552,
-    "synced_at": "2026-06-17T14:22:14.541612"
+    "synced_at": "2026-06-17T14:22:14.541612",
+    "description_zh": "网页爬取、流程自动化"
   }
 }

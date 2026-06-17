@@ -417,6 +417,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3044,
-    "synced_at": "2026-06-17T14:21:57.339534"
+    "synced_at": "2026-06-17T14:21:57.339534",
+    "description_zh": "视频生成"
   }
 }

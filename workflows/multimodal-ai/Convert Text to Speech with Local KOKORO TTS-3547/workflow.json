@@ -99,6 +99,7 @@
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 3547,
-    "synced_at": "2026-06-17T14:19:53.565328"
+    "synced_at": "2026-06-17T14:19:53.565328",
+    "description_zh": "文本转语音"
   }
 }

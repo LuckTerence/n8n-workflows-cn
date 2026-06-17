@@ -785,6 +785,7 @@
     "synced_at": "2026-06-17T14:14:04.958760",
     "foreign_services": [
       "Stripe"
-    ]
+    ],
+    "description_zh": "Webhook 集成、表单处理、工作流管理"
   }
 }

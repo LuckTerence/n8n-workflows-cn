@@ -310,6 +310,7 @@
     "foreign_services": [
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信",
+    "description_zh": "新闻聚合、推荐系统"
   }
 }

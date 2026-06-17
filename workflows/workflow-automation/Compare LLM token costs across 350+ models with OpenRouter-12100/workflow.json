@@ -629,6 +629,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 12100,
-    "synced_at": "2026-06-17T14:07:48.987712"
+    "synced_at": "2026-06-17T14:07:48.987712",
+    "description_zh": "Token 管理"
   }
 }

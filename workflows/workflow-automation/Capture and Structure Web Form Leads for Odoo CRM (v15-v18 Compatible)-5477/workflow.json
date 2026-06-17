@@ -138,6 +138,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 5477,
-    "synced_at": "2026-06-17T14:20:21.933233"
+    "synced_at": "2026-06-17T14:20:21.933233",
+    "description_zh": "表单处理、线索管理、CRM 客户"
   }
 }

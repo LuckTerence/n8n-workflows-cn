@@ -109,6 +109,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 1839,
-    "synced_at": "2026-06-17T14:10:08.049615"
+    "synced_at": "2026-06-17T14:10:08.049615",
+    "description_zh": "MySQL 管理、SQL 查询"
   }
 }

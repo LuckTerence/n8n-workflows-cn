@@ -337,6 +337,7 @@
     "synced_at": "2026-06-17T14:17:46.898244",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "邮件自动化、系统监控、告警通知"
   }
 }

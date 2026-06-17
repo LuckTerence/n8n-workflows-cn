@@ -760,6 +760,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 5171,
-    "synced_at": "2026-06-17T14:18:47.902114"
+    "synced_at": "2026-06-17T14:18:47.902114",
+    "description_zh": "API 接口、工作流管理"
   }
 }

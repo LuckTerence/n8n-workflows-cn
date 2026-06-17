@@ -1462,6 +1462,7 @@
       "Google Drive",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "description_zh": "表单处理、社交平台"
   }
 }

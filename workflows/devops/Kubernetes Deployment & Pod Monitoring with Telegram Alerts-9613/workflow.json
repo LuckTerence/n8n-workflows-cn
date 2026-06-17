@@ -328,6 +328,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 9613,
-    "synced_at": "2026-06-17T14:18:47.316100"
+    "synced_at": "2026-06-17T14:18:47.316100",
+    "description_zh": "Telegram 机器人、自动部署、K8s 运维"
   }
 }

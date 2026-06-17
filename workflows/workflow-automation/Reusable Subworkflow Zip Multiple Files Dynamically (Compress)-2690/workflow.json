@@ -130,6 +130,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2690,
-    "synced_at": "2026-06-17T14:14:38.376441"
+    "synced_at": "2026-06-17T14:14:38.376441",
+    "description_zh": "工作流管理"
   }
 }

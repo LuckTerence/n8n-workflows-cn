@@ -709,6 +709,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7676,
-    "synced_at": "2026-06-17T14:12:59.217699"
+    "synced_at": "2026-06-17T14:12:59.217699",
+    "description_zh": "Telegram 机器人、智能搜索"
   }
 }

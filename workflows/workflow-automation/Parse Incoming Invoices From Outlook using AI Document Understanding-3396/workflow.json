@@ -737,6 +737,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3396,
-    "synced_at": "2026-06-17T14:16:05.314687"
+    "synced_at": "2026-06-17T14:16:05.314687",
+    "description_zh": "语音处理、发票处理"
   }
 }

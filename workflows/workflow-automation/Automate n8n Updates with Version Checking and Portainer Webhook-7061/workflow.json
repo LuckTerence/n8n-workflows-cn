@@ -285,6 +285,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7061,
-    "synced_at": "2026-06-17T14:13:59.761107"
+    "synced_at": "2026-06-17T14:13:59.761107",
+    "description_zh": "Webhook 集成、流程自动化、n8n 运维"
   }
 }

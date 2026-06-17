@@ -245,6 +245,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 12152,
-    "synced_at": "2026-06-17T14:11:22.179233"
+    "synced_at": "2026-06-17T14:11:22.179233",
+    "description_zh": "Telegram 机器人、消息通知"
   }
 }

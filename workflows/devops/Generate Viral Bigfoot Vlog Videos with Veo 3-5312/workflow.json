@@ -922,6 +922,7 @@
       "Stripe",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Stripe→微信支付"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Stripe→微信支付",
+    "description_zh": "视频生成"
   }
 }

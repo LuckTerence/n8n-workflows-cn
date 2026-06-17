@@ -997,6 +997,7 @@
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 4468,
-    "synced_at": "2026-06-17T14:19:58.595791"
+    "synced_at": "2026-06-17T14:19:58.595791",
+    "description_zh": "图片生成、视频生成、音频处理"
   }
 }

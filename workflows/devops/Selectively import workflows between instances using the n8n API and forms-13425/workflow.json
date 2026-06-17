@@ -1555,6 +1555,7 @@
     "foreign_services": [
       "Notion",
       "Supabase"
-    ]
+    ],
+    "description_zh": "API 接口、表单处理、工作流管理"
   }
 }

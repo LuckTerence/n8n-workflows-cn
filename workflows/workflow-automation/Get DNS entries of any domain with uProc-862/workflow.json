@@ -74,6 +74,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 862,
-    "synced_at": "2026-06-17T14:09:49.021885"
+    "synced_at": "2026-06-17T14:09:49.021885",
+    "description_zh": "自动化工作流"
   }
 }

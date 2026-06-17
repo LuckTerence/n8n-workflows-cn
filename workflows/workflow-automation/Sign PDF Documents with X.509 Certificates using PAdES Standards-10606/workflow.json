@@ -1840,6 +1840,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 10606,
-    "synced_at": "2026-06-17T14:16:09.926144"
+    "synced_at": "2026-06-17T14:16:09.926144",
+    "description_zh": "PDF 文档"
   }
 }

@@ -655,6 +655,7 @@
       "Twilio",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Twilio→腾讯云短信"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Twilio→腾讯云短信",
+    "description_zh": "邮件自动化、系统监控、告警通知"
   }
 }

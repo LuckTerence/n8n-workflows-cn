@@ -299,6 +299,7 @@
     "foreign_services": [
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "description_zh": "图片生成、流程自动化"
   }
 }

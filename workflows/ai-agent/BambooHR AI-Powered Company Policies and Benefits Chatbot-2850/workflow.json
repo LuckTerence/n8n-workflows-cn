@@ -1442,6 +1442,7 @@
     "synced_at": "2026-06-17T14:17:23.245164",
     "foreign_services": [
       "Supabase"
-    ]
+    ],
+    "description_zh": "AI 聊天机器人、AI 对话、HR 人事"
   }
 }

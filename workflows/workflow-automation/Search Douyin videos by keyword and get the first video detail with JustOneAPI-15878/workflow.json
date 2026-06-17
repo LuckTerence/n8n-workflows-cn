@@ -400,6 +400,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 15878,
-    "synced_at": "2026-06-17T14:11:14.368889"
+    "synced_at": "2026-06-17T14:11:14.368889",
+    "description_zh": "API 接口、视频生成、智能搜索"
   }
 }

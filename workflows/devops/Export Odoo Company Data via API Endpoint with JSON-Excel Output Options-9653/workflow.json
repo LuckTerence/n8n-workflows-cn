@@ -400,6 +400,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 9653,
-    "synced_at": "2026-06-17T14:18:27.282460"
+    "synced_at": "2026-06-17T14:18:27.282460",
+    "description_zh": "API 接口"
   }
 }

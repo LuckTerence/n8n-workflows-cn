@@ -345,6 +345,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 2692,
-    "synced_at": "2026-06-17T14:18:45.266305"
+    "synced_at": "2026-06-17T14:18:45.266305",
+    "description_zh": "API 接口、天气信息"
   }
 }

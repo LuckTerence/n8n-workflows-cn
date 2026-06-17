@@ -504,6 +504,7 @@
     "foreign_services": [
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS"
+    "upgrade_note": "Google Drive→阿里云OSS",
+    "description_zh": "音频处理"
   }
 }

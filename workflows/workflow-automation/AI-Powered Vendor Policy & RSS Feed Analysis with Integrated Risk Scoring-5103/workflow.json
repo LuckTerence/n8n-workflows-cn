@@ -838,6 +838,7 @@
     "foreign_services": [
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信",
+    "description_zh": "自动化工作流"
   }
 }

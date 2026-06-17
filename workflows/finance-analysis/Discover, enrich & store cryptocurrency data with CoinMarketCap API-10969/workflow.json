@@ -816,6 +816,7 @@
     "foreign_services": [
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格"
+    "upgrade_note": "Google Sheets→飞书多维表格",
+    "description_zh": "API 接口、加密货币、市场数据"
   }
 }

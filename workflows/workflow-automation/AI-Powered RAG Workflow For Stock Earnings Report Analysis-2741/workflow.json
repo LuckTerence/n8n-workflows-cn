@@ -548,6 +548,7 @@
       "Google Docs",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库",
+    "description_zh": "RAG 检索增强、股票分析、工作流管理"
   }
 }

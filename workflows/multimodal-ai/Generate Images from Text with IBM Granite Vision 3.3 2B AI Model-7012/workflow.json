@@ -284,6 +284,7 @@
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 7012,
-    "synced_at": "2026-06-17T14:20:04.114587"
+    "synced_at": "2026-06-17T14:20:04.114587",
+    "description_zh": "图片生成"
   }
 }

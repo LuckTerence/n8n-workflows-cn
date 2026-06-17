@@ -1401,6 +1401,7 @@
       "Google Drive",
       "Supabase"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
+    "description_zh": "AI 智能体、RAG 检索增强、向量存储"
   }
 }

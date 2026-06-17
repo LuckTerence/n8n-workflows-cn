@@ -728,6 +728,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 13877,
-    "synced_at": "2026-06-17T14:21:26.492156"
+    "synced_at": "2026-06-17T14:21:26.492156",
+    "description_zh": "Telegram 机器人、Webhook 集成"
   }
 }

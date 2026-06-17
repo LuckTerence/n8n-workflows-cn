@@ -347,6 +347,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3231,
-    "synced_at": "2026-06-17T14:11:16.869697"
+    "synced_at": "2026-06-17T14:11:16.869697",
+    "description_zh": "MCP 协议集成、Telegram 机器人、智能搜索"
   }
 }

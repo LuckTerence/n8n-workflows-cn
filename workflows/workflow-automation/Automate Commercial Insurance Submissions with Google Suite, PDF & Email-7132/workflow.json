@@ -727,6 +727,7 @@
       "Google Sheets",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
+    "description_zh": "邮件自动化、PDF 文档、流程自动化"
   }
 }

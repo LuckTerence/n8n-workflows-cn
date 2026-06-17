@@ -324,6 +324,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 5489,
-    "synced_at": "2026-06-17T14:18:07.365318"
+    "synced_at": "2026-06-17T14:18:07.365318",
+    "description_zh": "AI 智能体、MCP 协议集成、API 接口"
   }
 }

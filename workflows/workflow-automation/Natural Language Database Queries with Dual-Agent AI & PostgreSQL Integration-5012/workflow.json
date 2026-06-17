@@ -620,6 +620,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 5012,
-    "synced_at": "2026-06-17T14:14:30.062249"
+    "synced_at": "2026-06-17T14:14:30.062249",
+    "description_zh": "AI 智能体、数据库操作、PostgreSQL"
   }
 }

@@ -143,6 +143,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4602,
-    "synced_at": "2026-06-17T14:14:12.571478"
+    "synced_at": "2026-06-17T14:14:12.571478",
+    "description_zh": "Webhook 集成"
   }
 }

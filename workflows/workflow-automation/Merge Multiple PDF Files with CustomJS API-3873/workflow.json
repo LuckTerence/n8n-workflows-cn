@@ -188,6 +188,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3873,
-    "synced_at": "2026-06-17T14:16:02.857930"
+    "synced_at": "2026-06-17T14:16:02.857930",
+    "description_zh": "API 接口、PDF 文档"
   }
 }

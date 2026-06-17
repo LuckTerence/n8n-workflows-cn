@@ -1021,6 +1021,7 @@
     "synced_at": "2026-06-17T14:15:07.459340",
     "foreign_services": [
       "Pinecone"
-    ]
+    ],
+    "description_zh": "向量存储、Pinecone 向量库"
   }
 }

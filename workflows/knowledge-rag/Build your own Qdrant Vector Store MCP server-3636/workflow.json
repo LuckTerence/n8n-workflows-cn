@@ -1723,6 +1723,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 3636,
-    "synced_at": "2026-06-17T14:14:58.849421"
+    "synced_at": "2026-06-17T14:14:58.849421",
+    "description_zh": "MCP 协议集成、向量存储、Qdrant 向量库"
   }
 }

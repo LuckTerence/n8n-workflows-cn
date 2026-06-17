@@ -321,6 +321,7 @@
     "foreign_services": [
       "Notion",
       "Slack"
-    ]
+    ],
+    "description_zh": "工作流管理、流程自动化、AI 摘要"
   }
 }

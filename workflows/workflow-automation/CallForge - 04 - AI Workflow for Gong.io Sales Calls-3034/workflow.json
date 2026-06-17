@@ -772,6 +772,7 @@
     "foreign_services": [
       "Notion",
       "Slack"
-    ]
+    ],
+    "description_zh": "工作流管理"
   }
 }

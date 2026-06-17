@@ -735,6 +735,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 8340,
-    "synced_at": "2026-06-17T14:17:50.376780"
+    "synced_at": "2026-06-17T14:17:50.376780",
+    "description_zh": "Telegram 机器人、告警通知、外汇交易"
   }
 }

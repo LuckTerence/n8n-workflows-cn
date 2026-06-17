@@ -382,6 +382,7 @@
       "Google Drive",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
+    "description_zh": "流程自动化"
   }
 }

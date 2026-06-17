@@ -264,6 +264,7 @@
     "foreign_services": [
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信",
+    "description_zh": "邮件自动化、PDF 文档、PostgreSQL"
   }
 }

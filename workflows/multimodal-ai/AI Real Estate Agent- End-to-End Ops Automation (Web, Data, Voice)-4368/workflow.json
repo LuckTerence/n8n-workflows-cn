@@ -1023,6 +1023,7 @@
       "Google Sheets",
       "Google Docs"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Twilio→腾讯云短信"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Twilio→腾讯云短信",
+    "description_zh": "AI 智能体、语音处理"
   }
 }

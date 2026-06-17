@@ -511,6 +511,7 @@
       "Twilio",
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信",
+    "description_zh": "邮件自动化、数据库操作、流程自动化"
   }
 }

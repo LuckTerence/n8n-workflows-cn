@@ -316,6 +316,7 @@
     "synced_at": "2026-06-17T14:12:42.487932",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "市场数据、网页爬取、新闻聚合"
   }
 }

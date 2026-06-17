@@ -148,6 +148,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4004,
-    "synced_at": "2026-06-17T14:13:32.670234"
+    "synced_at": "2026-06-17T14:13:32.670234",
+    "description_zh": "系统监控"
   }
 }

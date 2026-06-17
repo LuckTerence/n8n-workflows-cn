@@ -293,6 +293,7 @@
       "Google Sheets",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
+    "description_zh": "邮件自动化、数据库操作、SQL 查询"
   }
 }

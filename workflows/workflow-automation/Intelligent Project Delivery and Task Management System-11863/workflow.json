@@ -975,6 +975,7 @@
     "synced_at": "2026-06-17T14:21:14.991500",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "自动化工作流"
   }
 }

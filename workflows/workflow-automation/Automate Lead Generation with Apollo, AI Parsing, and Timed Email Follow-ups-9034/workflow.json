@@ -1782,6 +1782,7 @@
       "Stripe",
       "Slack"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议",
+    "description_zh": "邮件自动化、线索管理、流程自动化"
   }
 }

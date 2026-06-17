@@ -243,6 +243,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3207,
-    "synced_at": "2026-06-17T14:19:23.322597"
+    "synced_at": "2026-06-17T14:19:23.322597",
+    "description_zh": "LINE 集成"
   }
 }

@@ -2600,6 +2600,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 5621,
-    "synced_at": "2026-06-17T14:17:40.159579"
+    "synced_at": "2026-06-17T14:17:40.159579",
+    "description_zh": "MCP 协议集成、API 接口、数据库操作"
   }
 }

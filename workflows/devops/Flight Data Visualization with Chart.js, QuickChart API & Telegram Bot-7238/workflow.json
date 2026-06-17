@@ -742,6 +742,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 7238,
-    "synced_at": "2026-06-17T14:18:31.135744"
+    "synced_at": "2026-06-17T14:18:31.135744",
+    "description_zh": "Telegram 机器人、API 接口"
   }
 }

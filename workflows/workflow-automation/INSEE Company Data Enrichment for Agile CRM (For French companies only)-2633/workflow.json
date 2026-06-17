@@ -399,6 +399,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2633,
-    "synced_at": "2026-06-17T14:16:29.487116"
+    "synced_at": "2026-06-17T14:16:29.487116",
+    "description_zh": "CRM 客户"
   }
 }

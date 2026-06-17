@@ -784,6 +784,7 @@
       "Google Sheets",
       "Slack"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀",
+    "description_zh": "Telegram 机器人"
   }
 }

@@ -712,6 +712,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2923,
-    "synced_at": "2026-06-17T14:14:04.362247"
+    "synced_at": "2026-06-17T14:14:04.362247",
+    "description_zh": "AI 聊天机器人、AI 对话、Webhook 集成"
   }
 }

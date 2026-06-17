@@ -209,6 +209,7 @@
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 6088,
-    "synced_at": "2026-06-17T14:19:44.965134"
+    "synced_at": "2026-06-17T14:19:44.965134",
+    "description_zh": "API 接口、语音处理、流程自动化"
   }
 }

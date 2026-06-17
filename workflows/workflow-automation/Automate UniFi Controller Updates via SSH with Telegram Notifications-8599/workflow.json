@@ -306,6 +306,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 8599,
-    "synced_at": "2026-06-17T14:07:03.578333"
+    "synced_at": "2026-06-17T14:07:03.578333",
+    "description_zh": "Telegram 机器人、消息通知、SSH 远程"
   }
 }

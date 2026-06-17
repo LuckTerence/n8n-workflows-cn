@@ -994,6 +994,7 @@
       "Notion",
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Notion→飞书文档/语雀"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Notion→飞书文档/语雀",
+    "description_zh": "视频生成"
   }
 }

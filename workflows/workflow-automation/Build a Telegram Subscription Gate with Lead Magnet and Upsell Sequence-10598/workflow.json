@@ -802,6 +802,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 10598,
-    "synced_at": "2026-06-17T14:20:20.679320"
+    "synced_at": "2026-06-17T14:20:20.679320",
+    "description_zh": "Telegram 机器人、线索管理"
   }
 }

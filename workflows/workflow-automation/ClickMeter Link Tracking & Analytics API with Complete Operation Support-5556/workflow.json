@@ -4686,6 +4686,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 5556,
-    "synced_at": "2026-06-17T14:12:21.682519"
+    "synced_at": "2026-06-17T14:12:21.682519",
+    "description_zh": "API 接口"
   }
 }

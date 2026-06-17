@@ -261,6 +261,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 9406,
-    "synced_at": "2026-06-17T14:09:13.269914"
+    "synced_at": "2026-06-17T14:09:13.269914",
+    "description_zh": "邮件自动化、表单处理"
   }
 }

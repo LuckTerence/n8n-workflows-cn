@@ -327,6 +327,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7158,
-    "synced_at": "2026-06-17T14:07:23.278940"
+    "synced_at": "2026-06-17T14:07:23.278940",
+    "description_zh": "AI 智能体"
   }
 }

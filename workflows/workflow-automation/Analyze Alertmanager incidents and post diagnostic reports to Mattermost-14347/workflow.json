@@ -629,6 +629,7 @@
     "synced_at": "2026-06-17T14:11:49.730689",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "告警通知"
   }
 }

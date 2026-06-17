@@ -1193,6 +1193,7 @@
       "Notion",
       "Pinecone"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库",
+    "description_zh": "网页爬取"
   }
 }

@@ -179,6 +179,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 5583,
-    "synced_at": "2026-06-17T14:18:44.037355"
+    "synced_at": "2026-06-17T14:18:44.037355",
+    "description_zh": "MCP 协议集成、服务器管理"
   }
 }

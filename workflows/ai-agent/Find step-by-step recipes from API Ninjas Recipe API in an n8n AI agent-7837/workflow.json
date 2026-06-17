@@ -173,6 +173,7 @@
     "category": "ai-agent",
     "tier": "A",
     "source_id": 7837,
-    "synced_at": "2026-06-17T14:17:02.917884"
+    "synced_at": "2026-06-17T14:17:02.917884",
+    "description_zh": "AI 智能体、API 接口、n8n 运维"
   }
 }

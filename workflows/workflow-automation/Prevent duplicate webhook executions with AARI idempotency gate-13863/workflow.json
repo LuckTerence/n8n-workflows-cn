@@ -318,6 +318,7 @@
     "synced_at": "2026-06-17T14:14:34.006118",
     "foreign_services": [
       "Stripe"
-    ]
+    ],
+    "description_zh": "Webhook 集成"
   }
 }

@@ -487,6 +487,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 12194,
-    "synced_at": "2026-06-17T14:18:30.460287"
+    "synced_at": "2026-06-17T14:18:30.460287",
+    "description_zh": "API 接口、Webhook 集成、服务器管理"
   }
 }

@@ -351,6 +351,7 @@
     "synced_at": "2026-06-17T14:13:25.378028",
     "foreign_services": [
       "Notion"
-    ]
+    ],
+    "description_zh": "消息通知、文本转语音"
   }
 }

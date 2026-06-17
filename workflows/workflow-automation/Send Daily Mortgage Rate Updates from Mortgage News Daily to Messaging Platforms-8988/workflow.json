@@ -242,6 +242,7 @@
     "synced_at": "2026-06-17T14:11:18.672633",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "表单处理、新闻聚合"
   }
 }

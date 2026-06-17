@@ -601,6 +601,7 @@
       "Slack",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀",
+    "description_zh": "市场数据、智能搜索"
   }
 }

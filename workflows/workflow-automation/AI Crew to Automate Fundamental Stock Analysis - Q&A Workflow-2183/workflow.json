@@ -457,6 +457,7 @@
       "Google Drive",
       "Supabase"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
+    "description_zh": "股票分析、工作流管理、流程自动化"
   }
 }

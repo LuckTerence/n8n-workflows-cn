@@ -268,6 +268,7 @@
     "foreign_services": [
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "description_zh": "向量存储、PDF 文档"
   }
 }

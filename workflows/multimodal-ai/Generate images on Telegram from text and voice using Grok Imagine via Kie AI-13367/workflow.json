@@ -1171,6 +1171,7 @@
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 13367,
-    "synced_at": "2026-06-17T14:20:05.309623"
+    "synced_at": "2026-06-17T14:20:05.309623",
+    "description_zh": "Telegram 机器人、图片生成、语音处理"
   }
 }

@@ -511,6 +511,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 15477,
-    "synced_at": "2026-06-17T14:14:53.874699"
+    "synced_at": "2026-06-17T14:14:53.874699",
+    "description_zh": "RAG 检索增强"
   }
 }

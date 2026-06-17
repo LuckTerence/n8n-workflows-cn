@@ -2430,6 +2430,7 @@
     "foreign_services": [
       "Zoom",
       "Notion"
-    ]
+    ],
+    "description_zh": "表单处理、社交平台"
   }
 }

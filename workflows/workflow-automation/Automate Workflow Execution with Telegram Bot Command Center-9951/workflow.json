@@ -738,6 +738,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 9951,
-    "synced_at": "2026-06-17T14:13:58.509382"
+    "synced_at": "2026-06-17T14:13:58.509382",
+    "description_zh": "Telegram 机器人、工作流管理、流程自动化"
   }
 }

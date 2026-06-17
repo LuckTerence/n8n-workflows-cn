@@ -987,6 +987,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 13987,
-    "synced_at": "2026-06-17T14:16:01.640815"
+    "synced_at": "2026-06-17T14:16:01.640815",
+    "description_zh": "AI 对话、AI 智能体、语音处理"
   }
 }

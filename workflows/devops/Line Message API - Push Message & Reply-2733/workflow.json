@@ -231,6 +231,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 2733,
-    "synced_at": "2026-06-17T14:18:49.156892"
+    "synced_at": "2026-06-17T14:18:49.156892",
+    "description_zh": "LINE 集成、API 接口"
   }
 }

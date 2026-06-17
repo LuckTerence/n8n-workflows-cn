@@ -341,6 +341,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 15020,
-    "synced_at": "2026-06-17T14:20:54.295474"
+    "synced_at": "2026-06-17T14:20:54.295474",
+    "description_zh": "线索管理"
   }
 }

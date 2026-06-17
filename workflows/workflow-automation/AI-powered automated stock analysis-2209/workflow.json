@@ -426,6 +426,7 @@
     "foreign_services": [
       "Google Docs"
     ],
-    "upgrade_note": "Google Docs→飞书文档"
+    "upgrade_note": "Google Docs→飞书文档",
+    "description_zh": "股票分析、流程自动化"
   }
 }

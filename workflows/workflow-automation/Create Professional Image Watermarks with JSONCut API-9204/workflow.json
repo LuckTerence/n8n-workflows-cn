@@ -513,6 +513,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 9204,
-    "synced_at": "2026-06-17T14:08:10.895160"
+    "synced_at": "2026-06-17T14:08:10.895160",
+    "description_zh": "API 接口、图片生成"
   }
 }

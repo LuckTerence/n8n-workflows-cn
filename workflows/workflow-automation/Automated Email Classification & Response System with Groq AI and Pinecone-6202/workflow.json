@@ -1175,6 +1175,7 @@
     "synced_at": "2026-06-17T14:07:09.175854",
     "foreign_services": [
       "Pinecone"
-    ]
+    ],
+    "description_zh": "邮件自动化、Pinecone 向量库、流程自动化"
   }
 }

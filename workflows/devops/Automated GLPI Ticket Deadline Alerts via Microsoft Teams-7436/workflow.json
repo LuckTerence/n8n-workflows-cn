@@ -554,6 +554,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 7436,
-    "synced_at": "2026-06-17T14:17:50.994936"
+    "synced_at": "2026-06-17T14:17:50.994936",
+    "description_zh": "LINE 集成、告警通知、工单管理"
   }
 }

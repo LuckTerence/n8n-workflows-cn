@@ -386,6 +386,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 8071,
-    "synced_at": "2026-06-17T14:15:18.075796"
+    "synced_at": "2026-06-17T14:15:18.075796",
+    "description_zh": "RAG 检索增强、表单处理"
   }
 }

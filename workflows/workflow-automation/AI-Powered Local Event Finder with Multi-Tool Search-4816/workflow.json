@@ -686,6 +686,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4816,
-    "synced_at": "2026-06-17T14:06:34.871645"
+    "synced_at": "2026-06-17T14:06:34.871645",
+    "description_zh": "智能搜索"
   }
 }

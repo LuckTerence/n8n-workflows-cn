@@ -595,6 +595,7 @@
     "foreign_services": [
       "Zoom",
       "Supabase"
-    ]
+    ],
+    "description_zh": "AI 智能体"
   }
 }

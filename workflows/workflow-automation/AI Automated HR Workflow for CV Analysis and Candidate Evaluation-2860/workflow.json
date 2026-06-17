@@ -681,6 +681,7 @@
       "Google Sheets",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "description_zh": "HR 人事、工作流管理、流程自动化"
   }
 }

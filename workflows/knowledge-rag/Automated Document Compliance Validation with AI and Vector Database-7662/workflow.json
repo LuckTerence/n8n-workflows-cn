@@ -577,6 +577,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 7662,
-    "synced_at": "2026-06-17T14:14:52.274563"
+    "synced_at": "2026-06-17T14:14:52.274563",
+    "description_zh": "向量存储、数据库操作、流程自动化"
   }
 }

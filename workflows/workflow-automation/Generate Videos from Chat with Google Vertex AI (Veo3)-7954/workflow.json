@@ -345,6 +345,7 @@
       "Slack",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Slack→飞书群机器人"
+    "upgrade_note": "Google Drive→阿里云OSS、Slack→飞书群机器人",
+    "description_zh": "AI 对话、视频生成"
   }
 }

@@ -752,6 +752,7 @@
     "synced_at": "2026-06-17T14:09:34.795970",
     "foreign_services": [
       "Zoom"
-    ]
+    ],
+    "description_zh": "图片生成、视频生成"
   }
 }

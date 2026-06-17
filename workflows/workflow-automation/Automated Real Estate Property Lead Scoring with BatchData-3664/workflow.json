@@ -472,6 +472,7 @@
     "foreign_services": [
       "Twilio",
       "Slack"
-    ]
+    ],
+    "description_zh": "线索管理、流程自动化"
   }
 }

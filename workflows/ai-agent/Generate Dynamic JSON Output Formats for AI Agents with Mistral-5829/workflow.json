@@ -989,6 +989,7 @@
     "category": "ai-agent",
     "tier": "A",
     "source_id": 5829,
-    "synced_at": "2026-06-17T14:17:04.196749"
+    "synced_at": "2026-06-17T14:17:04.196749",
+    "description_zh": "AI 智能体、表单处理"
   }
 }

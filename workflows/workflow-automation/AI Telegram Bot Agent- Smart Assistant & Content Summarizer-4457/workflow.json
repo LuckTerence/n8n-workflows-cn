@@ -543,6 +543,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4457,
-    "synced_at": "2026-06-17T14:06:33.105468"
+    "synced_at": "2026-06-17T14:06:33.105468",
+    "description_zh": "AI 智能体、Telegram 机器人"
   }
 }

@@ -852,6 +852,7 @@
     "foreign_services": [
       "Notion",
       "Slack"
-    ]
+    ],
+    "description_zh": "自动化工作流"
   }
 }

@@ -555,6 +555,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 3576,
-    "synced_at": "2026-06-17T14:15:17.093181"
+    "synced_at": "2026-06-17T14:15:17.093181",
+    "description_zh": "AI 对话、向量存储、数据库操作"
   }
 }

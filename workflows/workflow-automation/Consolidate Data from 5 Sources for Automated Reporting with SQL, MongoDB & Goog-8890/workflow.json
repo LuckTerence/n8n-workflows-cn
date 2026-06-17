@@ -565,6 +565,7 @@
     "foreign_services": [
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
+    "description_zh": "SQL 查询、流程自动化"
   }
 }

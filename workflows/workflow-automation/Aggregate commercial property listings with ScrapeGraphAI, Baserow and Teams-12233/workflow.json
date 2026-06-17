@@ -602,6 +602,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 12233,
-    "synced_at": "2026-06-17T14:22:03.468238"
+    "synced_at": "2026-06-17T14:22:03.468238",
+    "description_zh": "数据采集"
   }
 }

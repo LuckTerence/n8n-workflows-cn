@@ -118,6 +118,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 3038,
-    "synced_at": "2026-06-17T14:18:26.116745"
+    "synced_at": "2026-06-17T14:18:26.116745",
+    "description_zh": "Telegram 机器人、告警通知、工作流管理"
   }
 }

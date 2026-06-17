@@ -183,6 +183,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4335,
-    "synced_at": "2026-06-17T14:07:20.920512"
+    "synced_at": "2026-06-17T14:07:20.920512",
+    "description_zh": "n8n 运维"
   }
 }

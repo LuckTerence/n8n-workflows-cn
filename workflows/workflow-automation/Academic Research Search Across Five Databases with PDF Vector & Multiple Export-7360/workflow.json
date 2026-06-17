@@ -234,6 +234,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7360,
-    "synced_at": "2026-06-17T14:15:26.825583"
+    "synced_at": "2026-06-17T14:15:26.825583",
+    "description_zh": "向量存储、PDF 文档、数据库操作"
   }
 }

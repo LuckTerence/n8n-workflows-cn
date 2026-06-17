@@ -223,6 +223,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4608,
-    "synced_at": "2026-06-17T14:11:19.232158"
+    "synced_at": "2026-06-17T14:11:19.232158",
+    "description_zh": "Telegram 机器人、表单处理、天气信息"
   }
 }

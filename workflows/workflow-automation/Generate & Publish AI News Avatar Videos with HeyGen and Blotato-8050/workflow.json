@@ -836,6 +836,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 8050,
-    "synced_at": "2026-06-17T14:09:13.873689"
+    "synced_at": "2026-06-17T14:09:13.873689",
+    "description_zh": "视频生成、新闻聚合"
   }
 }

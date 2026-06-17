@@ -447,6 +447,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 8375,
-    "synced_at": "2026-06-17T14:18:32.928647"
+    "synced_at": "2026-06-17T14:18:32.928647",
+    "description_zh": "API 接口、图片生成"
   }
 }

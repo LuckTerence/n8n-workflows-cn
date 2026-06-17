@@ -541,6 +541,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 3411,
-    "synced_at": "2026-06-17T14:18:32.351631"
+    "synced_at": "2026-06-17T14:18:32.351631",
+    "description_zh": "API 接口、视频生成"
   }
 }

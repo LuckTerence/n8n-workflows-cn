@@ -272,6 +272,7 @@
     "category": "ai-agent",
     "tier": "A",
     "source_id": 5638,
-    "synced_at": "2026-06-17T14:17:18.326133"
+    "synced_at": "2026-06-17T14:17:18.326133",
+    "description_zh": "AI 智能体、API 接口"
   }
 }

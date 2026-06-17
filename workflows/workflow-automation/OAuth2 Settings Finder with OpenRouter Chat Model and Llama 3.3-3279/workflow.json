@@ -291,6 +291,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3279,
-    "synced_at": "2026-06-17T14:10:36.720202"
+    "synced_at": "2026-06-17T14:10:36.720202",
+    "description_zh": "AI 对话、认证集成"
   }
 }

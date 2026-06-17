@@ -265,6 +265,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 8498,
-    "synced_at": "2026-06-17T14:14:55.167480"
+    "synced_at": "2026-06-17T14:14:55.167480",
+    "description_zh": "API 接口、Webhook 集成、向量存储"
   }
 }

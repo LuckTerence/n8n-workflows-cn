@@ -938,6 +938,7 @@
       "Supabase",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase",
+    "description_zh": "AI 智能体、线索管理"
   }
 }

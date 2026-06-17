@@ -3326,6 +3326,7 @@
       "Google Docs",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
+    "description_zh": "AI 智能体、SEO 优化、博客内容"
   }
 }

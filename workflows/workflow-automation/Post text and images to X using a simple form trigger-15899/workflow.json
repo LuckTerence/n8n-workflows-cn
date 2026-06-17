@@ -1051,6 +1051,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 15899,
-    "synced_at": "2026-06-17T14:14:32.682558"
+    "synced_at": "2026-06-17T14:14:32.682558",
+    "description_zh": "图片生成、表单处理"
   }
 }

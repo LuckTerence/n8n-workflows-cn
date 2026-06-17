@@ -245,6 +245,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 8082,
-    "synced_at": "2026-06-17T14:10:34.215119"
+    "synced_at": "2026-06-17T14:10:34.215119",
+    "description_zh": "Telegram 机器人、图片生成"
   }
 }

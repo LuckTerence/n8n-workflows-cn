@@ -580,6 +580,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 16081,
-    "synced_at": "2026-06-17T14:06:27.619069"
+    "synced_at": "2026-06-17T14:06:27.619069",
+    "description_zh": "API 接口、Webhook 集成、求职招聘"
   }
 }

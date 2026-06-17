@@ -630,6 +630,7 @@
     "category": "devops",
     "tier": "A",
     "source_id": 7028,
-    "synced_at": "2026-06-17T14:18:58.475177"
+    "synced_at": "2026-06-17T14:18:58.475177",
+    "description_zh": "自动部署、工作流管理、n8n 运维"
   }
 }

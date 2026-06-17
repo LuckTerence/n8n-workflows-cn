@@ -2212,6 +2212,7 @@
       "Slack",
       "Supabase"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Supabase→腾讯云CloudBase",
+    "description_zh": "RAG 检索增强"
   }
 }

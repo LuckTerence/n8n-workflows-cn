@@ -683,6 +683,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 16040,
-    "synced_at": "2026-06-17T14:14:58.038557"
+    "synced_at": "2026-06-17T14:14:58.038557",
+    "description_zh": "RAG 检索增强、Qdrant 向量库、PDF 文档"
   }
 }

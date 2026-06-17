@@ -1428,6 +1428,7 @@
       "Pinecone",
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
+    "description_zh": "Telegram 机器人、Pinecone 向量库"
   }
 }

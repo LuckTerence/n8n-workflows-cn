@@ -196,6 +196,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3621,
-    "synced_at": "2026-06-17T14:13:41.033219"
+    "synced_at": "2026-06-17T14:13:41.033219",
+    "description_zh": "Telegram 机器人、加密货币、市场数据"
   }
 }

@@ -598,6 +598,7 @@
     "synced_at": "2026-06-17T14:16:47.507634",
     "foreign_services": [
       "Supabase"
-    ]
+    ],
+    "description_zh": "AI 智能体、Telegram 机器人"
   }
 }

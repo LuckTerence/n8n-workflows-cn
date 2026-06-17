@@ -147,6 +147,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 7322,
-    "synced_at": "2026-06-17T14:11:16.301183"
+    "synced_at": "2026-06-17T14:11:16.301183",
+    "description_zh": "API 接口、智能搜索"
   }
 }

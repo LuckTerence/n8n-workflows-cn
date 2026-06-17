@@ -758,6 +758,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 14862,
-    "synced_at": "2026-06-17T14:12:06.448590"
+    "synced_at": "2026-06-17T14:12:06.448590",
+    "description_zh": "外汇交易、新闻聚合、流程自动化"
   }
 }

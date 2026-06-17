@@ -86,6 +86,7 @@
     "category": "ai-agent",
     "tier": "A",
     "source_id": 5090,
-    "synced_at": "2026-06-17T14:17:17.082574"
+    "synced_at": "2026-06-17T14:17:17.082574",
+    "description_zh": "AI 智能体、消息通知"
   }
 }

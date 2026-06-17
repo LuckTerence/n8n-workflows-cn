@@ -469,6 +469,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 13977,
-    "synced_at": "2026-06-17T14:15:02.239185"
+    "synced_at": "2026-06-17T14:15:02.239185",
+    "description_zh": "AI 对话、RAG 检索增强、Telegram 机器人"
   }
 }

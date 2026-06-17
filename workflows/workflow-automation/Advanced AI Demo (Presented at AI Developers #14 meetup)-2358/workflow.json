@@ -978,6 +978,7 @@
       "Slack",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Pinecone→Milvus/腾讯云向量库"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Pinecone→Milvus/腾讯云向量库",
+    "description_zh": "自动化工作流"
   }
 }

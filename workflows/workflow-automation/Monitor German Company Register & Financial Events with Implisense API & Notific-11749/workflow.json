@@ -837,6 +837,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 11749,
-    "synced_at": "2026-06-17T14:13:09.363825"
+    "synced_at": "2026-06-17T14:13:09.363825",
+    "description_zh": "API 接口、系统监控、消息通知"
   }
 }

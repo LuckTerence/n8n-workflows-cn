@@ -1360,6 +1360,7 @@
       "Slack",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
+    "description_zh": "SEO 优化、PDF 文档、流程自动化"
   }
 }

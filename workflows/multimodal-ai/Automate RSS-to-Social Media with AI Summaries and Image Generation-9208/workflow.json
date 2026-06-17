@@ -1207,6 +1207,7 @@
       "Google Sheets",
       "Supabase"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase",
+    "description_zh": "图片生成、社交平台、流程自动化"
   }
 }

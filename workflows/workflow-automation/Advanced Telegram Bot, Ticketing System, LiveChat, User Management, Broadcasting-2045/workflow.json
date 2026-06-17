@@ -1096,6 +1096,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2045,
-    "synced_at": "2026-06-17T14:06:39.591068"
+    "synced_at": "2026-06-17T14:06:39.591068",
+    "description_zh": "AI 对话、Telegram 机器人、工单管理"
   }
 }

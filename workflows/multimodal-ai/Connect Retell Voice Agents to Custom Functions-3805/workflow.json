@@ -1587,6 +1587,7 @@
     "synced_at": "2026-06-17T14:19:52.920249",
     "foreign_services": [
       "Slack"
-    ]
+    ],
+    "description_zh": "AI 智能体、语音处理"
   }
 }

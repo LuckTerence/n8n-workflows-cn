@@ -1262,6 +1262,7 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2339,
-    "synced_at": "2026-06-17T14:21:05.303326"
+    "synced_at": "2026-06-17T14:21:05.303326",
+    "description_zh": "Qdrant 向量库"
   }
 }

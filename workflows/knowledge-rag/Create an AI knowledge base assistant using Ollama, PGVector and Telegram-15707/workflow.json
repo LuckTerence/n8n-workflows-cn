@@ -1068,6 +1068,7 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 15707,
-    "synced_at": "2026-06-17T14:15:06.291644"
+    "synced_at": "2026-06-17T14:15:06.291644",
+    "description_zh": "Telegram 机器人、向量存储"
   }
 }

@@ -840,6 +840,7 @@
     "foreign_services": [
       "Google Drive"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS"
+    "upgrade_note": "Google Drive→阿里云OSS",
+    "description_zh": "AI 对话、Telegram 机器人、向量存储"
   }
 }
