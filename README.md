@@ -189,10 +189,16 @@ n8n 编辑器里 **Import from File** 导入 `workflow.json` 就行。n8n 安装
 docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 ```
 
+## 在线浏览
+
+> **[🔍 工作流浏览站点](https://luckterence.github.io/n8n-workflows-cn/)** — 可搜索、可按分类筛选的在线浏览器，暗色主题。
+
+启用方式：仓库 Settings > Pages > Source 选 `Deploy from a branch`，分支 `main`，目录 `/docs`，保存后等几分钟即可访问。
+
 ## 接下来想做的
 
 - [ ] CI/CD 自动验证 — GitHub Actions 检查工作流和新版本 n8n 的兼容性
-- [ ] 工作流浏览站点 — 搭个 GitHub Pages，方便搜索筛选
+- [x] 工作流浏览站点 — 搭个 GitHub Pages，方便搜索筛选
 - [ ] 精选合集 — 按场景整理推荐组合
 - [ ] 完善适配 — 把更多 Tier C 提升到 Tier A
 
