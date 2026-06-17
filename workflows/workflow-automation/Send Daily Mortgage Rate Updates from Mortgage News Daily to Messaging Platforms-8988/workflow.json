@@ -57,24 +57,33 @@
     {
       "id": "03ad32b4-a10b-40bb-8c82-df36afc1ece2",
       "name": "Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         928,
         0
       ],
       "webhookId": "edc34cef-bff7-4bcf-ace5-0e43959cfdf9",
       "parameters": {
-        "content": "={{ $('Code in JavaScript').item.json.content }}\n\nCustom Client Messages:\n{{ $json.content.parts[0].text }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "discordWebhookApi": {
           "id": "6S341y8tVCvOIO8r",
           "name": "All Ops Notis Discord Webhook"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "c01f5aea-976b-4ac3-a17f-e8d51887d80d",
@@ -243,6 +252,18 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "表单处理、新闻聚合"
+    "description_zh": "表单处理、新闻聚合",
+    "replacements": {
+      "03ad32b4-a10b-40bb-8c82-df36afc1ece2": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Discord",
+        "parameters": {
+          "content": "={{ $('Code in JavaScript').item.json.content }}\n\nCustom Client Messages:\n{{ $json.content.parts[0].text }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

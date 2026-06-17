@@ -310,7 +310,7 @@
         -800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -322,15 +322,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "4c7ff16e-8649-4364-9aa6-c06670f4c36a",
@@ -380,15 +379,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "HEy5EuZkgPZVEa9w",
           "name": "Google Drive account (n3w.it)"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "9537f678-163c-40de-93f3-9934f4ae2ad0",
@@ -469,7 +467,7 @@
         20
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -481,15 +479,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "2b32c086-c436-436e-93c3-da88e6f08247",
@@ -500,7 +497,7 @@
         1040
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -512,15 +509,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "135bf3c3-e45f-4363-857b-2345e0bc7964",
@@ -969,7 +965,7 @@
     "title_zh": "AI邮件附件分析",
     "description_zh": "分析PDF/图片附件保存到Drive+Telegram",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3169,
     "synced_at": "2026-06-17T11:37:04.650552",
     "upgraded_at": "2026-06-17",
@@ -977,6 +973,308 @@
       "Google Sheets",
       "Google Drive"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "replacements": {
+      "ba6f6d2f-9a13-4bb4-80fb-72f5c4124473": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save summary PDF",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
+              "DATE": "={{ $now.format('dd/LL/yyyy') }}",
+              "TYPE": "pdf",
+              "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
+              "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
+              "SUMMARY": "={{ $json.output.content }}"
+            },
+            "schema": [
+              {
+                "id": "DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUBJECT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUBJECT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TYPE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TYPE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUMMARY",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUMMARY",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
+            "cachedResultName": "Analyze Email + Attachments"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "dc5858b7-c30b-413b-a1d0-143a068f2c87": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload attachments",
+        "parameters": {
+          "name": "={{$now.format('yyyyLLddhhiiss')}}-{{ $binary.data.fileName }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1CV5PgqBQIVFEacmbApdCApjNEtoNPzXQ",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1CV5PgqBQIVFEacmbApdCApjNEtoNPzXQ",
+            "cachedResultName": "Analyze attachments"
+          }
+        },
+        "typeVersion": 3
+      },
+      "99b4c22c-a29b-4b72-bc4a-bed5c1320386": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save summary image",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
+              "DATE": "={{ $now.format('dd/LL/yyyy') }}",
+              "TYPE": "image",
+              "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
+              "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
+              "SUMMARY": "={{ $json.content }}"
+            },
+            "schema": [
+              {
+                "id": "DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUBJECT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUBJECT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TYPE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TYPE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUMMARY",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUMMARY",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
+            "cachedResultName": "Analyze Email + Attachments"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "2b32c086-c436-436e-93c3-da88e6f08247": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save summary text",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
+              "DATE": "={{ $now.format('dd/LL/yyyy') }}",
+              "TYPE": "email",
+              "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
+              "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
+              "SUMMARY": "={{ $json.response.text }}"
+            },
+            "schema": [
+              {
+                "id": "DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUBJECT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUBJECT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TYPE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TYPE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SUMMARY",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SUMMARY",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
+            "cachedResultName": "Analyze Email + Attachments"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

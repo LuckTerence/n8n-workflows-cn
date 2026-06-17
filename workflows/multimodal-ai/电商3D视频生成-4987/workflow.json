@@ -79,15 +79,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "aqCousOTolMFE3cy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "29230056-71c0-4900-9d00-d017213fe856",
@@ -117,15 +116,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "aqCousOTolMFE3cy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "33180073-9abe-4a92-9f82-2486a8b58eab",
@@ -152,15 +150,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "aqCousOTolMFE3cy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "bf26fc49-f91c-40f1-83d3-d2330f242f56",
@@ -174,15 +171,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "aqCousOTolMFE3cy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "4eadd7af-a13d-40a8-b886-71c798acc547",
@@ -339,15 +335,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "aqCousOTolMFE3cy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "1b9c83e7-5d77-4477-9518-d72a6c2f624a",
@@ -358,7 +353,7 @@
         -20
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -370,15 +365,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "9JjVrrcwf7D4bsa6",
           "name": "Google Credentials"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "b3492513-e591-4106-a806-9fb1c43f513b",
@@ -389,7 +383,7 @@
         180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -401,15 +395,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "9JjVrrcwf7D4bsa6",
           "name": "Google Credentials"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "cbc141e9-7cf5-4c57-a4b1-d719182cb997",
@@ -474,7 +467,7 @@
         180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -486,15 +479,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "9JjVrrcwf7D4bsa6",
           "name": "Google Credentials"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "7adb552d-939f-42d1-b425-45b88d52aa71",
@@ -749,7 +741,7 @@
     "title_zh": "电商3D视频生成",
     "description_zh": "2D图片生成3D产品展示视频",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4987,
     "synced_at": "2026-06-17T11:37:10.198363",
     "upgraded_at": "2026-06-17",
@@ -758,6 +750,369 @@
       "Google Drive",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
+    "replacements": {
+      "d615090d-236d-444a-add9-f9a429019088": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Give Access to folder",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Create Folder').item.json.id }}"
+          },
+          "options": {},
+          "operation": "share",
+          "permissionsUi": {
+            "permissionsValues": {
+              "role": "reader",
+              "type": "anyone"
+            }
+          }
+        },
+        "typeVersion": 3
+      },
+      "ee55f4d4-475f-4220-843a-4ad8b16bbad8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Remove BG image",
+        "parameters": {
+          "name": "=(no-bg){{ $('Create Folder').item.json.name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Create Folder').item.json.id }}"
+          },
+          "inputDataFieldName": "=no-bg.png"
+        },
+        "typeVersion": 3
+      },
+      "88d1f349-959a-498f-8f2f-ab45d3d9b25f": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Video",
+        "parameters": {
+          "name": "=Video-file",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Create Folder').item.json.id }}"
+          },
+          "inputDataFieldName": "Video-file"
+        },
+        "typeVersion": 3
+      },
+      "bf26fc49-f91c-40f1-83d3-d2330f242f56": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create Folder",
+        "parameters": {
+          "name": "={{ $json.slug }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "root",
+            "cachedResultUrl": "https://drive.google.com/drive",
+            "cachedResultName": "/ (Root folder)"
+          },
+          "resource": "folder"
+        },
+        "typeVersion": 3
+      },
+      "4c10c26e-3caa-45f0-bf12-9779cd82d87c": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Original Image",
+        "parameters": {
+          "name": "={{ $('Create Folder').item.json.name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Create Folder').item.json.id }}"
+          }
+        },
+        "typeVersion": 3
+      },
+      "1b9c83e7-5d77-4477-9518-d72a6c2f624a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Insert New Product",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Slug": "={{ $('Create Slug').item.json.slug }}",
+              "Product Title": "={{ $('On Form Submission').item.json['Product Title'] }}",
+              "Original Image": "={{ $json.webViewLink }}"
+            },
+            "schema": [
+              {
+                "id": "Original Image",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Original Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "BG Remove Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "BG Remove Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Product Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Product Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Link",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video Link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Slug",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Slug",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
+            "cachedResultName": "3D Product Video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b3492513-e591-4106-a806-9fb1c43f513b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Remove BG URL",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Slug": "={{ $('Create Folder').item.json.name }}",
+              "BG Remove Image": "={{ $json.webViewLink }}"
+            },
+            "schema": [
+              {
+                "id": "Original Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Original Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "BG Remove Image",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "BG Remove Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Product Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Product Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Link",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video Link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Slug",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Slug",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Slug"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
+            "cachedResultName": "3D Product Video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b2c905dc-2743-4b5d-b850-facecd489166": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Video Link",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Slug": "={{ $('Create Folder').item.json.name }}",
+              "Video Link": "={{ $('Get Video Link').item.json.video.url }}"
+            },
+            "schema": [
+              {
+                "id": "Original Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Original Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "BG Remove Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "BG Remove Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Product Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Product Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Video Link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Slug",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Slug",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Slug"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
+            "cachedResultName": "3D Product Video"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

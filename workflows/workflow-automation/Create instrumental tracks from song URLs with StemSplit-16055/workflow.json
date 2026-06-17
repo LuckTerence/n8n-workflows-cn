@@ -340,9 +340,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "a1000000-0000-4000-8000-000000000018",
@@ -525,7 +524,7 @@
   "_cn_meta": {
     "title_zh": "Create instrumental tracks from song URLs with StemSplit",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 16055,
     "synced_at": "2026-06-17T14:12:29.266101",
     "foreign_services": [
@@ -533,6 +532,31 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "a1000000-0000-4000-8000-000000000017": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive",
+        "parameters": {
+          "name": "={{ $('Normalize form data').item.json.safeFileName }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "root",
+            "cachedResultName": "/ (Root folder)"
+          },
+          "resource": "file",
+          "operation": "upload",
+          "inputDataFieldName": "data"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

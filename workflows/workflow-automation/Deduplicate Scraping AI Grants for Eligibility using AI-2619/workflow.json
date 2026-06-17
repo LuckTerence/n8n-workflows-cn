@@ -167,15 +167,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "Und0frCQ6SNVX3VV",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "f0712788-b801-4070-a5c2-2f7ed620588e",
@@ -231,15 +230,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "Und0frCQ6SNVX3VV",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "70bca43a-d00e-4ee6-828a-9926ba1d8fdb",
@@ -395,7 +393,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -403,8 +401,7 @@
           "name": "Airtable Personal Access Token account"
         }
       },
-      "executeOnce": true,
-      "typeVersion": 2.1
+      "executeOnce": true
     },
     {
       "id": "3be0788b-90ef-4648-aa25-1170208a685d",
@@ -652,13 +649,338 @@
   "_cn_meta": {
     "title_zh": "Deduplicate Scraping AI Grants for Eligibility using AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2619,
     "synced_at": "2026-06-17T14:22:07.434859",
     "foreign_services": [
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "API 接口"
+    "description_zh": "API 接口",
+    "replacements": {
+      "2dffda98-18c6-4c7b-8fc3-0e6539642ea2": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Save to Tracker",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appiNoPRvhJxz9crl",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl",
+            "cachedResultName": "US Grants.gov Tracker"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblX93C9MNzizhibd",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl/tblX93C9MNzizhibd",
+            "cachedResultName": "Table 1"
+          },
+          "columns": {
+            "value": {
+              "URL": "=https://grants.gov/search-results-detail/{{ $('Get Grant Details').item.json.id }}",
+              "Goal": "={{ $json.output.goal }}",
+              "Notes": "={{ $json.output.good_to_know.join('\\n') }}",
+              "Title": "={{ $('Get Grant Details').item.json.opportunityTitle }}",
+              "Agency": "={{ $('Get Grant Details').item.json.synopsis.agencyContactName }}",
+              "Status": "New",
+              "Funding": "={{ $('Get Grant Details').item.json.synopsis.estimatedFunding }}",
+              "Duration": "={{ $json.output.duration }}",
+              "Award Floor": "={{ $('Get Grant Details').item.json.synopsis.awardFloor }}",
+              "Posted Date": "={{ $('Get Grant Details').item.json.synopsis.postingDate }}",
+              "Agency Email": "={{ $('Get Grant Details').item.json.synopsis.agencyContactEmail }}",
+              "Agency Phone": "={{ $('Get Grant Details').item.json.synopsis.agencyContactPhone }}",
+              "Eligibility?": "={{ $json.output.eligibility_matches.length > 0 ? 'Yes' : 'No' }}",
+              "Award Ceiling": "={{ $('Get Grant Details').item.json.synopsis.awardCeiling }}",
+              "Response Date": "={{ $('Get Grant Details').item.json.synopsis.responseDate }}",
+              "Success Criteria": "={{ $json.output.success_criteria.join('\\n') }}",
+              "Eligibility Notes": "={{ $json.output.eligibility_matches.join('\\n') }}",
+              "Opportunity Number": "={{ $('Get Grant Details').item.json.opportunityNumber }}"
+            },
+            "schema": [
+              {
+                "id": "Opportunity Number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Opportunity Number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "New",
+                    "value": "New"
+                  },
+                  {
+                    "name": "Under Review",
+                    "value": "Under Review"
+                  },
+                  {
+                    "name": "Interested",
+                    "value": "Interested"
+                  },
+                  {
+                    "name": "Not Interested",
+                    "value": "Not Interested"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Goal",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Goal",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Success Criteria",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Success Criteria",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Notes",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Notes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Eligibility?",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Yes",
+                    "value": "Yes"
+                  },
+                  {
+                    "name": "No",
+                    "value": "No"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Eligibility?",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Eligibility Notes",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Eligibility Notes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Duration",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Agency",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Agency",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Agency Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Agency Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Agency Phone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Agency Phone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Posted Date",
+                "type": "dateTime",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Posted Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Response Date",
+                "type": "dateTime",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Response Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Funding",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Funding",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Award Ceiling",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Award Ceiling",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Award Floor",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Award Floor",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "create"
+        },
+        "typeVersion": 2.1
+      },
+      "0446c882-764a-4c94-8c49-f368c50586a0": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get New Eligible Grants Today",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appiNoPRvhJxz9crl",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl",
+            "cachedResultName": "US Grants.gov Tracker"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblX93C9MNzizhibd",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl/tblX93C9MNzizhibd",
+            "cachedResultName": "Table 1"
+          },
+          "options": {},
+          "operation": "search",
+          "filterByFormula": "=AND(\n  {Status} = 'New',\n  {Eligibility?} = 'Yes',\n  IS_SAME(DATETIME_FORMAT(Created, 'YYYY-MM-DD'), DATETIME_FORMAT(TODAY(), 'YYYY-MM-DD'))\n)"
+        },
+        "typeVersion": 2.1
+      },
+      "784d59f3-5b1f-4404-bc04-4bd58cf03585": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get Subscribers",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appiNoPRvhJxz9crl",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl",
+            "cachedResultName": "US Grants.gov Tracker"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblaS91hyhguntfaC",
+            "cachedResultUrl": "https://airtable.com/appiNoPRvhJxz9crl/tblaS91hyhguntfaC",
+            "cachedResultName": "Subscribers"
+          },
+          "options": {},
+          "operation": "search",
+          "filterByFormula": "AND({Status} = 'Active')"
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

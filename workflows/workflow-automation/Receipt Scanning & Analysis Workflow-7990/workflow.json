@@ -152,7 +152,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -164,15 +164,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "Heyjvh3DnLP9bR1B",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "276a2c56-5abe-41a4-87ab-4fa773c975a7",
@@ -391,7 +390,7 @@
   "_cn_meta": {
     "title_zh": "Receipt Scanning & Analysis Workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7990,
     "synced_at": "2026-06-17T14:16:07.685109",
     "foreign_services": [
@@ -399,6 +398,111 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "工作流管理"
+    "description_zh": "工作流管理",
+    "replacements": {
+      "a1c817d0-dccc-4666-9728-5f74107d5c1e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "To": "={{ $json.output.To }}",
+              "From": "={{ $json.output.From }}",
+              "Due Date": "={{ $json.output.dueDate }}",
+              "Invoice Date": "={{ $json.output.invoiceDate }}",
+              "Link to File": "={{ $('Google Drive Trigger').item.json.webViewLink }}",
+              "Invoice Number": "={{ $json.output.invoiceNumber }}",
+              "Short Description": "={{ $json.output.shortDescription }}"
+            },
+            "schema": [
+              {
+                "id": "Invoice Number",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Invoice Number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "From",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "From",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "To",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "To",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Invoice Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Invoice Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Due Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Due Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Short Description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Short Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Link to File",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Link to File",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14tyy2at8ZtfoQq4zGYph4DG7omv9uA9aXGH5KnQbPgs/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14tyy2at8ZtfoQq4zGYph4DG7omv9uA9aXGH5KnQbPgs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14tyy2at8ZtfoQq4zGYph4DG7omv9uA9aXGH5KnQbPgs/edit?usp=drivesdk",
+            "cachedResultName": "Invoices from Google Drive"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

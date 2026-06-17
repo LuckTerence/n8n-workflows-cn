@@ -471,9 +471,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "24e7982a-aaf9-4d74-bbfe-360fa321182b",
@@ -738,9 +737,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "46eb337a-8bd3-4d08-b8a6-afc7dcc96682",
@@ -1067,7 +1065,7 @@
   "_cn_meta": {
     "title_zh": "Create Structured Company Profiles with Mistral AI, Firecrawl & Competitor Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10097,
     "synced_at": "2026-06-17T14:12:28.690900",
     "foreign_services": [
@@ -1075,6 +1073,54 @@
       "Supabase"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
-    "description_zh": "网页爬取"
+    "description_zh": "网页爬取",
+    "replacements": {
+      "2beb0004-5196-44d6-aec6-0a493f49a0e4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive2",
+        "parameters": {
+          "name": "={{ $json.output.company_name }}(detailed)",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1eW5r0x6mSG0xnfq-Hjuc49AbDUg-dgf_",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1eW5r0x6mSG0xnfq-Hjuc49AbDUg-dgf_",
+            "cachedResultName": "Companies_profiles"
+          }
+        },
+        "typeVersion": 3
+      },
+      "2d7ff3e1-b712-4c66-948f-4887bd5693f2": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "save to Google Drive1",
+        "parameters": {
+          "name": "={{ $('Information Extractor1').item.json.output.NAME }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1eW5r0x6mSG0xnfq-Hjuc49AbDUg-dgf_",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1eW5r0x6mSG0xnfq-Hjuc49AbDUg-dgf_",
+            "cachedResultName": "Companies_profiles"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

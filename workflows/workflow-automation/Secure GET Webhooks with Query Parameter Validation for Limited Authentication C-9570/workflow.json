@@ -201,7 +201,7 @@
   "_cn_meta": {
     "title_zh": "Secure GET Webhooks with Query Parameter Validation for Limited Authentication Cases",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9570,
     "synced_at": "2026-06-17T14:14:41.655681",
     "foreign_services": [

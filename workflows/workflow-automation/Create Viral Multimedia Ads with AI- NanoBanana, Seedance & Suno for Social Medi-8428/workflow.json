@@ -41,15 +41,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "gzeHMd64HAz6HBIe",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "657506bc-4d83-4b76-938a-eb649601c639",
@@ -767,15 +766,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "gzeHMd64HAz6HBIe",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "1ff9308c-e41c-4fc2-868a-5e5a88cda8f6",
@@ -786,7 +784,7 @@
         1184
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -798,15 +796,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "2073a516-f1e4-4013-ba0d-255d11d89e8f",
@@ -871,7 +868,7 @@
         1184
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -883,15 +880,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "60791963-3ba2-4ad2-b88a-4047e7d5564f",
@@ -934,7 +930,7 @@
         1184
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -946,15 +942,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "51b8f1ef-971b-4fb1-838f-b394d6e90456",
@@ -1392,7 +1387,7 @@
   "_cn_meta": {
     "title_zh": "Create Viral Multimedia Ads with AI: NanoBanana, Seedance & Suno for Social Media",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8428,
     "synced_at": "2026-06-17T14:20:25.836096",
     "foreign_services": [
@@ -1401,6 +1396,263 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "社交平台"
+    "description_zh": "社交平台",
+    "replacements": {
+      "d768709c-4dd1-4698-a653-5aafd58e2126": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive: Upload Image",
+        "parameters": {
+          "name": "={{ $('Trigger: Receive Idea via Telegram').item.json.message.photo[2].file_unique_id }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "5731a023-3925-4f52-abe8-7a559438ecb8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Final Video to Google Drive",
+        "parameters": {
+          "name": "={{ $('Trigger: Receive Idea via Telegram').item.json.message.photo[2].file_unique_id }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "1ff9308c-e41c-4fc2-868a-5e5a88cda8f6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read Brand Settings",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "a365514a-114f-4919-a84f-c921796717dd": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Ad Data to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "STATUS": "CREATE",
+              "ADS TEXT": "={{ $json.message.content }}",
+              "ID IMAGE": "={{ $node[\"Trigger: Receive Idea via Telegram\"].json.message.photo[2].file_unique_id }}\n",
+              "URL IMAGE": "={{ $node[\"Download Edited Image\"].json.images[0].url }}\n",
+              "URL VIDEO": "={{ $node[\"Set: Video URL\"].json.url_video }}\n",
+              "URL FINAL VIDEO": "={{ $node[\"Download Final Video\"].json.video.url }}\n"
+            },
+            "schema": [
+              {
+                "id": "ID IMAGE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "ID IMAGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL IMAGE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "URL IMAGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "URL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL FINAL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "URL FINAL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ADS TEXT",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "ADS TEXT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "ID IMAGE"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "0de87c01-99eb-4f3c-8b7d-46fedccfa680": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Publishing Status to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "STATUS": "Published",
+              "ID IMAGE": "={{ $node[\"Trigger: Receive Idea via Telegram\"].json.message.photo[2].file_unique_id }}"
+            },
+            "schema": [
+              {
+                "id": "ID IMAGE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "ID IMAGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL IMAGE",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "URL IMAGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "URL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL FINAL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "URL FINAL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ADS TEXT",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "ADS TEXT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "ID IMAGE"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

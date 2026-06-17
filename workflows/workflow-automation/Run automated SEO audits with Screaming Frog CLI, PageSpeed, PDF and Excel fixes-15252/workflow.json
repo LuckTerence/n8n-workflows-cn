@@ -417,15 +417,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "credential-id",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "b57a8ed6-17c2-416f-891c-7978b9276374",
@@ -540,15 +539,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "credential-id",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "59dd3aeb-b6c2-4d15-aae0-0aa014818365",
@@ -646,7 +644,7 @@
         4256
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -658,15 +656,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "credential-id",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "e1941f7c-7258-4ef6-803a-0eb2debc1ca6",
@@ -758,11 +755,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -770,7 +768,6 @@
           "name": "SF Audit"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -795,11 +792,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -807,7 +805,6 @@
           "name": "SF Audit"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1277,7 +1274,7 @@
   "_cn_meta": {
     "title_zh": "Run automated SEO audits with Screaming Frog CLI, PageSpeed, PDF and Excel fixes",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15252,
     "synced_at": "2026-06-17T14:16:08.761249",
     "foreign_services": [
@@ -1286,6 +1283,163 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "SEO 优化、PDF 文档、流程自动化"
+    "description_zh": "SEO 优化、PDF 文档、流程自动化",
+    "replacements": {
+      "90567f5b-2fb3-4301-9770-b201a179e1e1": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload file",
+        "parameters": {
+          "name": "={{ $json.spreadsheet_title }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
+            "cachedResultName": "SEO Audits"
+          }
+        },
+        "typeVersion": 3
+      },
+      "93a0017c-e728-416c-91d9-66f7e4d204ba": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Drive",
+        "parameters": {
+          "name": "={{ $json.data.filename }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
+            "cachedResultName": "SEO Audits"
+          }
+        },
+        "typeVersion": 3
+      },
+      "f9e55f1d-238a-4871-9a14-d88856d6faa5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Website": "={{ $('Arrange Data').first().json.website }}",
+              "Excel Link": "={{ $json.webViewLink[0] }}",
+              "Report Link": "={{ $json.webViewLink[1] }}"
+            },
+            "schema": [
+              {
+                "id": "Website",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Report Link",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Report Link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Excel Link",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Excel Link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k/edit?usp=drivesdk",
+            "cachedResultName": "SF Audit Logs"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "8191d939-93bb-4902-b517-12a427c843c1": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Failed Message",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Input Cleaner').item.json.channel_id }}"
+          },
+          "otherOptions": {
+            "thread_ts": {
+              "replyValues": {
+                "thread_ts": "={{ $('Input Cleaner').item.json.message_id }}"
+              }
+            },
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "API is Down or the SF is Carshed Try again"
+          }
+        },
+        "typeVersion": 2.4
+      },
+      "d7ad489d-462c-482a-b5ea-dba000dd2325": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Report",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Data').item.json.channel_id }}"
+          },
+          "otherOptions": {
+            "thread_ts": {
+              "replyValues": {
+                "thread_ts": "={{ $('Data').item.json.message_id }}"
+              }
+            },
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=PDF Report:  {{ $json.webViewLink[1] }}\n\nFixes CSV: {{ $json.webViewLink[0] }}"
+          }
+        },
+        "typeVersion": 2.4
+      }
+    }
   }
 }

@@ -256,7 +256,7 @@
         1008
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -268,9 +268,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "f68e0852-c8ac-4c14-8bb4-1c66a8809270",
@@ -347,18 +346,27 @@
     {
       "id": "3db268d7-162f-4917-a77f-6528f3616b8a",
       "name": "Send Predictions to Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -4528,
         1904
       ],
       "webhookId": "889468d9-2b04-4d49-8ec8-491009c44304",
       "parameters": {
-        "content": "={{ $json.predictionMessage }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "52dc4e6e-b24f-4ea0-b021-cd8a5c4c072d",
@@ -408,7 +416,7 @@
         2368
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -420,9 +428,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "55d4f0c8-1e48-4364-b554-f66bb678e8b5",
@@ -509,18 +516,27 @@
     {
       "id": "adadbd20-23b0-4af3-998e-866dbccbb11d",
       "name": "Send Weekly to Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -4032,
         2448
       ],
       "webhookId": "c3fdf38b-3a01-44f3-9b24-8cbf788251f1",
       "parameters": {
-        "content": "={{ $json.weeklyReport }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "e9899310-c455-42cb-9184-f59ec3897735",
@@ -600,18 +616,27 @@
     {
       "id": "c4758a00-7bc8-43b0-a2c2-906217a806ad",
       "name": "Send to Discord2",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2688,
         1008
       ],
       "webhookId": "1b04ca2a-d509-4d07-ab1f-d11177856ea6",
       "parameters": {
-        "content": "={{ $json.notificationMessage }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "bc84d059-9b7c-4352-ab05-c510336014d6",
@@ -648,13 +673,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1291,6 +1316,111 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "告警通知、消息通知、天气信息"
+    "description_zh": "告警通知、消息通知、天气信息",
+    "replacements": {
+      "b2df9e60-6761-49f5-b3a0-0e08c8eb51c9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log to History",
+        "parameters": {
+          "columns": {
+            "value": {
+              "weather": "={{ $json.weather.description }}",
+              "location": "={{ $json.userLocation.name }}",
+              "direction": "={{ $json.nearbySatellites[0]?.directionJP }}",
+              "elevation": "={{ $json.nearbySatellites[0]?.elevation }}",
+              "satellite": "={{ $json.nearbySatellites[0]?.name }}",
+              "timestamp": "={{ $json.timestamp }}",
+              "cloudiness": "={{ $json.weather.cloudiness }}",
+              "distance_km": "={{ $json.nearbySatellites[0]?.distance }}",
+              "could_observe": "={{ $json.observation.canObserve }}",
+              "trivia_category": "={{ $json.trivia.category }}",
+              "observation_score": "={{ $json.observation.score }}"
+            },
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "Sightings",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "={{ $vars.GOOGLE_SHEET_ID }}",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "3db268d7-162f-4917-a77f-6528f3616b8a": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Predictions to Discord",
+        "parameters": {
+          "content": "={{ $json.predictionMessage }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      },
+      "b8a703ad-2c5f-4ddd-b964-e211a8aec47c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get History Data",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "Sightings",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "={{ $vars.GOOGLE_SHEET_ID }}",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "adadbd20-23b0-4af3-998e-866dbccbb11d": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Weekly to Discord",
+        "parameters": {
+          "content": "={{ $json.weeklyReport }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      },
+      "c4758a00-7bc8-43b0-a2c2-906217a806ad": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send to Discord2",
+        "parameters": {
+          "content": "={{ $json.notificationMessage }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      },
+      "3513c339-c26c-4c89-9642-1268911f0ffe": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send to Slack1",
+        "parameters": {
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ $json.shortMessage }}"
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

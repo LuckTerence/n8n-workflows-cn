@@ -338,7 +338,7 @@
   "_cn_meta": {
     "title_zh": "Generate Videos from Chat with Google Vertex AI (Veo3)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7954,
     "synced_at": "2026-06-17T14:09:33.621476",
     "foreign_services": [

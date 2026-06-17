@@ -90,24 +90,32 @@
     {
       "id": "c9873e32-cbc3-4c4b-b796-b3038562960e",
       "name": "Get Target Accounts from CRM",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         300,
         340
       ],
       "parameters": {
-        "limit": 50,
-        "resource": "company",
-        "operation": "getAll",
-        "returnAll": false
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "hubspotOAuth2Api": {
           "id": "credential-id",
           "name": "HubSpot OAuth2"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "c45060ec-77c0-4be0-93b5-af686d0a8146",
@@ -240,11 +248,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -252,7 +261,6 @@
           "name": "Slack OAuth2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -263,27 +271,32 @@
     {
       "id": "d8b07baf-f406-4879-bccb-6dd1b8f8eaae",
       "name": "Update Account in CRM",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2100,
         440
       ],
       "parameters": {
-        "resource": "company",
-        "companyId": "={{ $('Detect Signals per Company').item.json.companyId }}",
-        "operation": "update",
-        "updateFields": {
-          "industry": "={{ $('Detect Signals per Company').item.json.industry }}",
-          "numberofemployees": "={{ $('Detect Signals per Company').item.json.currentEmployeeCount }}"
-        }
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "hubspotOAuth2Api": {
           "id": "credential-id",
           "name": "HubSpot OAuth2"
         }
-      },
-      "typeVersion": 2
+      }
     }
   ],
   "pinData": {},
@@ -392,6 +405,46 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "c9873e32-cbc3-4c4b-b796-b3038562960e": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "Get Target Accounts from CRM",
+        "parameters": {
+          "limit": 50,
+          "resource": "company",
+          "operation": "getAll",
+          "returnAll": false
+        },
+        "typeVersion": 2
+      },
+      "7dc4f7c0-abdf-417f-a7fd-fe0f017bd918": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Signal Alert to Sales",
+        "parameters": {
+          "channel": "#account-signals",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=📡 *Account Signal Alert*\n\n*{{ $('Detect Signals per Company').item.json.companyName }}* ({{ $('Detect Signals per Company').item.json.domain }})\n\n*Signals detected:*\n{{ $('Detect Signals per Company').item.json.signals.map(s => `• ${s.type}: ${s.detail} [${s.strength}]`).join('\\n') }}\n\n*Key contacts found — see CRM for details.*"
+          }
+        },
+        "typeVersion": 2
+      },
+      "d8b07baf-f406-4879-bccb-6dd1b8f8eaae": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "Update Account in CRM",
+        "parameters": {
+          "resource": "company",
+          "companyId": "={{ $('Detect Signals per Company').item.json.companyId }}",
+          "operation": "update",
+          "updateFields": {
+            "industry": "={{ $('Detect Signals per Company').item.json.industry }}",
+            "numberofemployees": "={{ $('Detect Signals per Company').item.json.currentEmployeeCount }}"
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

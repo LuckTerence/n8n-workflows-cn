@@ -474,7 +474,7 @@
         -100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -486,15 +486,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "fb6ac68e-170d-4af4-8869-722f5c5c43a8",
@@ -660,7 +659,7 @@
         400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -672,15 +671,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "9622c800-2c3e-43d4-a9d6-37e81972a273",
@@ -926,7 +924,7 @@
   "_cn_meta": {
     "title_zh": "Generating AI Videos with VEO3 and Distributing with Blotato across Multiple Platforms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6669,
     "synced_at": "2026-06-17T14:09:46.545444",
     "foreign_services": [
@@ -934,6 +932,109 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Notion→飞书文档/语雀",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "7d148aac-728d-4686-9935-bea9158f2e9b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read Video Parameters from Google Sheet",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "2a8539e3-f8cd-4322-bd19-c2006840d1c8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Caption Video to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Title": "={{ $('AI Agent: Generate Video Script').item.json.output.title }}",
+              "Prompt": "={{ $('AI Agent: Generate Video Script').item.json.output.final_prompt }}",
+              "CAPTION": "={{ $json.message.content }}",
+              "Subject": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.text }}",
+              "URL VIDEO": "={{ $('Download Video from VEO3').item.json.data.response.resultUrls[0] }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Subject",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Subject",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "URL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CAPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

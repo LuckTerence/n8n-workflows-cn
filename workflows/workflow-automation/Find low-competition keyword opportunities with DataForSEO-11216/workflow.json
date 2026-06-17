@@ -58,7 +58,7 @@
         3680
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -70,15 +70,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "zyEOPkCfmHTXNm4V",
           "name": "Google Sheets (Dummy Account)"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "2563a5c1-ee84-4f65-b066-f84676d6a792",
@@ -116,7 +115,7 @@
         3472
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -128,15 +127,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "zyEOPkCfmHTXNm4V",
           "name": "Google Sheets (Dummy Account)"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "1cd961c3-7823-4c00-b3a6-c99a98e68259",
@@ -432,13 +430,193 @@
   "_cn_meta": {
     "title_zh": "Find low-competition keyword opportunities with DataForSEO",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11216,
     "synced_at": "2026-06-17T14:09:10.698106",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "SEO 优化"
+    "description_zh": "SEO 优化",
+    "replacements": {
+      "161964df-e615-4999-b0f8-a74c591a2813": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read Seeds",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1232412"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/XX/edit?usp=drivesdkXXXXXXXX"
+          }
+        },
+        "typeVersion": 4
+      },
+      "305d419d-efd5-41c9-8c6a-c1f39509e870": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Write to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "SE Type": "={{ $json['SE Type'] }}",
+              "keywords": "={{ $json.keywords }}",
+              "Backlinks": "={{ $json.Backlinks }}",
+              "Main Intent": "={{ $json['Main Intent'] }}",
+              "Trend Yearly": "={{ $json['Trend Yearly'] }}",
+              "Search Volume": "={{ $json['Search Volume'] }}",
+              "Trend Monthly": "={{ $json['Trend Monthly'] }}",
+              "Foreign Intent": "={{ $json['Foreign Intent'] }}",
+              "Trend Quarterly": "={{ $json['Trend Quarterly'] }}",
+              "Last Updated Time": "={{ $json['Last Updated Time'] }}",
+              "Keyword Difficulty": "={{ $json['Keyword Difficulty'] }}"
+            },
+            "schema": [
+              {
+                "id": "keywords",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "keywords",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Search Volume",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Search Volume",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Trend Monthly",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Trend Monthly",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Trend Quarterly",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Trend Quarterly",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Trend Yearly",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Trend Yearly",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SE Type",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "SE Type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Main Intent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Main Intent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Foreign Intent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Foreign Intent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last Updated Time",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Last Updated Time",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Backlinks",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Backlinks",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword Difficulty",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keyword Difficulty",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "data",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "data",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": 129579803
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1RERSXASXDADS"
+          }
+        },
+        "typeVersion": 4
+      }
+    }
   }
 }

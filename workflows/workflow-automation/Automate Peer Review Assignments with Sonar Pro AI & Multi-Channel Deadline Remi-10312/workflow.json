@@ -255,28 +255,27 @@
     {
       "id": "e5e4c276-b2c4-4296-967f-0681c32375c4",
       "name": "Send Discord Notification",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2256,
         560
       ],
       "webhookId": "bcc2b28c-18a4-497c-b21f-136bc13c3862",
       "parameters": {
-        "content": "=**🎓 Peer Evaluation Assignment**\n\n@{{ $json.reviewer_email }}\n\nYou've been assigned to review:\n- **Assignment:** {{ $json.assignment_title }}\n- **Student:** {{ $json.student_id }}\n- **Deadline:** {{ $json.deadline }}\n\nAI Preliminary Score: {{ $('Store Evaluation Results').item.json.total_score }}/100\n\nPlease check your email for the complete evaluation template and submission link.",
-        "guildId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
         },
         "options": {},
-        "resource": "message",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "56aea28b-e448-4769-91b4-a98b54f6984b",
@@ -306,7 +305,7 @@
         752
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -318,9 +317,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "05f1584b-1ee8-49d0-9aa4-8b59523265fe",
@@ -331,7 +329,7 @@
         192
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -343,9 +341,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "4b7c80b4-ee14-4113-8847-54db1b587096",
@@ -400,28 +397,27 @@
     {
       "id": "cddfbdcf-b637-49c8-8588-15f665b10ffc",
       "name": "Send Deadline Reminder - Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1552,
         192
       ],
       "webhookId": "f676be85-3f3d-43b2-bf9e-21c3ac406412",
       "parameters": {
-        "content": "=⏰ **DEADLINE REMINDER**\n\n**Assignment:** {{ $json.assignment_title }}\n**Student:** {{ $json.student_id }}\n**Deadline:** {{ $json.deadline }}\n\nYour peer evaluation is due in less than 48 hours! Please complete your review.",
-        "guildId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
         },
         "options": {},
-        "resource": "message",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "1a0937dc-69a0-4605-8064-14c05b08ea19",
@@ -706,6 +702,109 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "LINE 集成、流程自动化"
+    "description_zh": "LINE 集成、流程自动化",
+    "replacements": {
+      "e5e4c276-b2c4-4296-967f-0681c32375c4": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Discord Notification",
+        "parameters": {
+          "content": "=**🎓 Peer Evaluation Assignment**\n\n@{{ $json.reviewer_email }}\n\nYou've been assigned to review:\n- **Assignment:** {{ $json.assignment_title }}\n- **Student:** {{ $json.student_id }}\n- **Deadline:** {{ $json.deadline }}\n\nAI Preliminary Score: {{ $('Store Evaluation Results').item.json.total_score }}/100\n\nPlease check your email for the complete evaluation template and submission link.",
+          "guildId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "options": {},
+          "resource": "message",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 2
+      },
+      "da00d68a-3cf0-4ab2-821d-a720436b598d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save to Google Sheets - Grading",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "Pending Peer Review",
+              "ai_score": "={{ $('Store Evaluation Results').item.json.total_score }}",
+              "analysis": "={{ $('Store Evaluation Results').item.json.ai_evaluation.analysis }}",
+              "student_id": "={{ $('Store Evaluation Results').item.json.student_id }}",
+              "course_code": "={{ $('Store Evaluation Results').item.json.course_code }}",
+              "documentation": "={{ $('Store Evaluation Results').item.json.ai_evaluation.documentation }}",
+              "implementation": "={{ $('Store Evaluation Results').item.json.ai_evaluation.implementation }}",
+              "evaluation_date": "={{ $('Store Evaluation Results').item.json.evaluation_date }}",
+              "problem_solving": "={{ $('Store Evaluation Results').item.json.ai_evaluation.problem_solving }}",
+              "assignment_title": "={{ $('Store Evaluation Results').item.json.assignment_title }}",
+              "technical_accuracy": "={{ $('Store Evaluation Results').item.json.ai_evaluation.technical_accuracy }}"
+            },
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "Peer Evaluations"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "engineering-grades-sheet-id"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "05f1584b-1ee8-49d0-9aa4-8b59523265fe": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Check Review Deadlines",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "Pending Peer Review",
+                "lookupColumn": "status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "Peer Evaluations"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "engineering-grades-sheet-id"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "cddfbdcf-b637-49c8-8588-15f665b10ffc": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Deadline Reminder - Discord",
+        "parameters": {
+          "content": "=⏰ **DEADLINE REMINDER**\n\n**Assignment:** {{ $json.assignment_title }}\n**Student:** {{ $json.student_id }}\n**Deadline:** {{ $json.deadline }}\n\nYour peer evaluation is due in less than 48 hours! Please complete your review.",
+          "guildId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "options": {},
+          "resource": "message",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

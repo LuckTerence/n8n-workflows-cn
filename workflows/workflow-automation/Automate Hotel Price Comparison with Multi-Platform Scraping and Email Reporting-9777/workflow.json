@@ -283,7 +283,7 @@
         -32
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -295,15 +295,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "0de90b41-12aa-4997-96f9-ee90d6b59ebe",
@@ -554,13 +553,30 @@
   "_cn_meta": {
     "title_zh": "Automate Hotel Price Comparison with Multi-Platform Scraping and Email Reporting",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9777,
     "synced_at": "2026-06-17T14:12:00.653811",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、API 接口、表单处理"
+    "description_zh": "邮件自动化、API 接口、表单处理",
+    "replacements": {
+      "c7984244-c4d7-4343-88d6-422e1f54a06f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save to Google Sheets",
+        "parameters": {
+          "columns": {
+            "mappingMode": "autoMapInputData"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": "Analytics",
+          "documentId": "your-google-sheet-id",
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      }
+    }
   }
 }

@@ -159,11 +159,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -171,7 +172,6 @@
           "name": "REDACTED_NAME"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -558,12 +558,32 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Stock Market Summary Bot",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4867,
     "synced_at": "2026-06-17T14:21:28.263607",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "股票分析、市场数据、AI 摘要"
+    "description_zh": "股票分析、市场数据、AI 摘要",
+    "replacements": {
+      "97f8d2af-02a9-4f93-8bf7-ee083b13dccf": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Summary to User(s)",
+        "parameters": {
+          "user": {
+            "mode": "list",
+            "value": "REDACTED_USER_ID",
+            "cachedResultName": "REDACTED_USER"
+          },
+          "select": "user",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ $json.output }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

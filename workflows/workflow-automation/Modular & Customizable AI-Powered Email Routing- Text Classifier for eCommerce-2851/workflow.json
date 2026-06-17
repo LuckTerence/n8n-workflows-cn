@@ -243,7 +243,7 @@
         -780
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -255,15 +255,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c14008fb-8932-44ad-88ef-42f6d4029fb1",
@@ -274,7 +273,7 @@
         -540
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -286,15 +285,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "f2e02c07-7218-4d08-a816-1ce2de289312",
@@ -305,7 +303,7 @@
         -320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -317,15 +315,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "d6ee5c05-d966-47c1-a7ec-df721f77c5d0",
@@ -336,7 +333,7 @@
         -80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -348,15 +345,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "b4f344bd-a5c4-4977-af96-edbab85b49d0",
@@ -367,7 +363,7 @@
         140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -379,15 +375,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "99872f49-85c3-47a0-b0ea-10ebbdbb67f5",
@@ -531,7 +526,7 @@
   "_cn_meta": {
     "title_zh": "Modular & Customizable AI-Powered Email Routing: Text Classifier for eCommerce",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2851,
     "synced_at": "2026-06-17T14:16:38.994878",
     "foreign_services": [
@@ -539,6 +534,478 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化"
+    "description_zh": "邮件自动化",
+    "replacements": {
+      "c411a82d-0b86-49da-a11f-47ec79f9f7ff": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Quote DB",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TO": "={{ (JSON.stringify($json.envelope.to)) }}",
+              "DATA": "={{ $('Text Classifier').item.json.submittedAt }}",
+              "NOME": "={{ $('Text Classifier').item.json.Name }}",
+              "EMAIL": "={{ $('Text Classifier').item.json.Email }}",
+              "CATEGORIA": "info prodotti",
+              "RICHIESTA": "={{ $('Text Classifier').item.json.Message }}"
+            },
+            "schema": [
+              {
+                "id": "DATA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "NOME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "NOME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RICHIESTA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "RICHIESTA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CATEGORIA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CATEGORIA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "TO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit?usp=drivesdk",
+            "cachedResultName": "Classified Contact Form"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "c14008fb-8932-44ad-88ef-42f6d4029fb1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Prod DB",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TO": "={{ (JSON.stringify($json.envelope.to)) }}",
+              "DATA": "={{ $('Text Classifier').item.json.submittedAt }}",
+              "NOME": "={{ $('Text Classifier').item.json.Name }}",
+              "EMAIL": "={{ $('Text Classifier').item.json.Email }}",
+              "CATEGORIA": "info prodotti",
+              "RICHIESTA": "={{ $('Text Classifier').item.json.Message }}"
+            },
+            "schema": [
+              {
+                "id": "DATA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "NOME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "NOME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RICHIESTA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "RICHIESTA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CATEGORIA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CATEGORIA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "TO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit?usp=drivesdk",
+            "cachedResultName": "Classified Contact Form"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "f2e02c07-7218-4d08-a816-1ce2de289312": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "General DB",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TO": "={{ (JSON.stringify($json.envelope.to)) }}",
+              "DATA": "={{ $('Text Classifier').item.json.submittedAt }}",
+              "NOME": "={{ $('Text Classifier').item.json.Name }}",
+              "EMAIL": "={{ $('Text Classifier').item.json.Email }}",
+              "CATEGORIA": "info prodotti",
+              "RICHIESTA": "={{ $('Text Classifier').item.json.Message }}"
+            },
+            "schema": [
+              {
+                "id": "DATA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "NOME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "NOME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RICHIESTA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "RICHIESTA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CATEGORIA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CATEGORIA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "TO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit?usp=drivesdk",
+            "cachedResultName": "Classified Contact Form"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "d6ee5c05-d966-47c1-a7ec-df721f77c5d0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Order DB",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TO": "={{ (JSON.stringify($json.envelope.to)) }}",
+              "DATA": "={{ $('Text Classifier').item.json.submittedAt }}",
+              "NOME": "={{ $('Text Classifier').item.json.Name }}",
+              "EMAIL": "={{ $('Text Classifier').item.json.Email }}",
+              "CATEGORIA": "info prodotti",
+              "RICHIESTA": "={{ $('Text Classifier').item.json.Message }}"
+            },
+            "schema": [
+              {
+                "id": "DATA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "NOME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "NOME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RICHIESTA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "RICHIESTA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CATEGORIA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CATEGORIA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "TO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit?usp=drivesdk",
+            "cachedResultName": "Classified Contact Form"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b4f344bd-a5c4-4977-af96-edbab85b49d0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Other DB",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TO": "={{ (JSON.stringify($json.envelope.to)) }}",
+              "DATA": "={{ $('Text Classifier').item.json.submittedAt }}",
+              "NOME": "={{ $('Text Classifier').item.json.Name }}",
+              "EMAIL": "={{ $('Text Classifier').item.json.Email }}",
+              "CATEGORIA": "info prodotti",
+              "RICHIESTA": "={{ $('Text Classifier').item.json.Message }}"
+            },
+            "schema": [
+              {
+                "id": "DATA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "NOME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "NOME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RICHIESTA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "RICHIESTA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CATEGORIA",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CATEGORIA",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "TO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D6tfsAK81ZE6VA0-sd_syuyI_rloNYjgWOhwgszPIZw/edit?usp=drivesdk",
+            "cachedResultName": "Classified Contact Form"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

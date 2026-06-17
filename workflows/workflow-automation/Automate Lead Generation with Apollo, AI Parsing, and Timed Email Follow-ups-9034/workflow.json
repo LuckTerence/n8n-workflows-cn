@@ -31,7 +31,7 @@
         576
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -43,15 +43,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "2cfca14f-0c63-49f6-b4c1-597a15ba1fc2",
@@ -137,7 +136,7 @@
         576
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -149,15 +148,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3c4951fe-f0ab-4c3b-9d3d-19de8bde8259",
@@ -198,7 +196,7 @@
         144
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -210,15 +208,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "0b11e707-4df3-4d55-acf9-f1dd40be47b0",
@@ -305,7 +302,7 @@
         208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -317,15 +314,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "d3a1e7c2-a664-42b7-8e10-349b69f58fb8",
@@ -578,7 +574,7 @@
         1072
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -590,15 +586,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "d4f06004-f3ab-4a1f-be45-673b4e02d18e",
@@ -656,7 +651,7 @@
         1072
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -668,15 +663,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "c8f62500-05a7-446d-9b5e-5d377732cd8e",
@@ -769,7 +763,7 @@
         96
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -781,7 +775,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -790,7 +784,6 @@
         }
       },
       "executeOnce": true,
-      "typeVersion": 4.7,
       "alwaysOutputData": false
     },
     {
@@ -1323,7 +1316,7 @@
   "_cn_meta": {
     "title_zh": "Automate Lead Generation with Apollo, AI Parsing, and Timed Email Follow-ups",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9034,
     "synced_at": "2026-06-17T14:19:29.677479",
     "foreign_services": [
@@ -1334,6 +1327,597 @@
       "Slack"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议",
-    "description_zh": "邮件自动化、线索管理、流程自动化"
+    "description_zh": "邮件自动化、线索管理、流程自动化",
+    "replacements": {
+      "0ce9db68-c58b-4b09-8e85-fc7a49ea6307": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get row(s) in sheet",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "not sent",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for content creators"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "5e7a9e77-3743-4d98-ba28-a11761c0a329": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Email": "={{ $('Get row(s) in sheet').item.json.Email }}",
+              "Status": "sent",
+              "Date sent": "={{ new Date().toLocaleString() }}\n\n\n\n"
+            },
+            "schema": [
+              {
+                "id": "Full Name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Full Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Personal LinkedIn",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Personal LinkedIn",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Company Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Website",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Company Website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Followed up",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Followed up",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Date sent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Date sent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Email"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for content creators"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "44668354-7b56-4ebd-b2f9-63c50c8527cd": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add to Google Sheet1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Email": "={{ $('If').item.json.output.email }}",
+              "Title": "={{ $('If').item.json.output.title }}",
+              "Status": "not sent",
+              "Full Name": "={{ $('If').item.json.output.fullName }}",
+              "Followed up": "not sent",
+              "Company Name": "={{ $('If').item.json.output.companyName }}",
+              "Company Website": "={{ $('If').item.json.output.companyWebsite }}",
+              "Personal LinkedIn": "={{ $('If').item.json.output.LinkedIn }}"
+            },
+            "schema": [
+              {
+                "id": "Full Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Full Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Personal LinkedIn",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Personal LinkedIn",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Website",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Followed up",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Followed up",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Date sent",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Date sent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Email"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for marketing & advertisment"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "44589449-d7bd-4d54-9754-916040cd5257": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add to Google Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Email": "={{ $json.output.email }}",
+              "Title": "={{ $json.output.title }}",
+              "Full Name": "={{ $json.output.fullName }}",
+              "Company Name": "={{ $json.output.companyName }}",
+              "Company Website": "={{ $json.output.companyWebsite }}",
+              "Personal LinkedIn": "={{ $json.output.LinkedIn }}"
+            },
+            "schema": [
+              {
+                "id": "Full Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Full Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Personal LinkedIn",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Personal LinkedIn",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Website",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Email"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for marketing & advertisment"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ed24a32a-e6fc-44d3-95b0-7b8a81ce0c59": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get row(s) in sheet1",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "not sent",
+                "lookupColumn": "Followed up"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for content creators"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "c131a939-28ee-424c-bf9f-7c31a94e007b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update row in sheet1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Email": "={{ $('Get row(s) in sheet1').item.json.Email }}",
+              "Followed up": "sent"
+            },
+            "schema": [
+              {
+                "id": "Full Name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Full Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Personal LinkedIn",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Personal LinkedIn",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Company Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Website",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Company Website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Followed up",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Followed up",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Email"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for content creators"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "06e93388-90b4-4fc9-81be-c2acc070f759": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get row(s) in sheet2",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
+            "cachedResultName": "Leads for marketing & advertisment"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

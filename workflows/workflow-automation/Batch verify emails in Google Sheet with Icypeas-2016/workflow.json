@@ -94,7 +94,7 @@
         1320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -106,9 +106,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.1
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "bc548060-6e09-493b-9e74-fc7ef6a9b88f",
@@ -197,13 +196,32 @@
   "_cn_meta": {
     "title_zh": "Batch verify emails in Google Sheet with Icypeas",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2016,
     "synced_at": "2026-06-17T14:07:22.643821",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、表格处理"
+    "description_zh": "邮件自动化、表格处理",
+    "replacements": {
+      "96128999-d7e1-44cd-b9d3-7550e4333414": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Reads lastname,firstname and company from your sheet",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.1
+      }
+    }
   }
 }

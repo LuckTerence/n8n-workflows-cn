@@ -232,7 +232,7 @@
         384
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -244,15 +244,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "credential-id",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "node-slack",
@@ -271,11 +270,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -283,7 +283,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -371,7 +370,7 @@
   "_cn_meta": {
     "title_zh": "Generate concert ticket PDFs with QR codes using PDF Generator API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14216,
     "synced_at": "2026-06-17T14:15:59.160621",
     "foreign_services": [
@@ -380,6 +379,57 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "API 接口、工单管理、PDF 文档"
+    "description_zh": "API 接口、工单管理、PDF 文档",
+    "replacements": {
+      "node-sheets": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Ticket Sale",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug/edit?usp=drivesdk",
+            "cachedResultName": "Concert Tickets"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "node-slack": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify Event Organizer",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "id",
+            "value": "U02P412345"
+          },
+          "select": "user",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ '🎫 New ticket issued!\\n*' + $('Prepare Ticket Data').item.json.tierBadge + '* — ' + $('Prepare Ticket Data').item.json.eventName + '\\n\\n👤 *Attendee:* ' + $('Prepare Ticket Data').item.json.attendeeName + '\\n📧 ' + $('Prepare Ticket Data').item.json.attendeeEmail + '\\n💺 *Seat:* ' + $('Prepare Ticket Data').item.json.seatNumber + '\\n🎟 *Ticket ID:* ' + $('Prepare Ticket Data').item.json.ticketId + '\\n\\n📄 PDF: ' + $('Generate Concert Ticket PDF').item.json.response }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

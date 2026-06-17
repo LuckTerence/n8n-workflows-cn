@@ -125,7 +125,7 @@
         720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -137,9 +137,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "700a1485-7061-4a13-a9b5-58a19585658d",
@@ -153,9 +152,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "9a7a078a-dfa3-49b5-9326-1b4eac9aa393",
@@ -169,9 +167,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "f2232b9d-49d9-4b07-b780-03dbf2817339",
@@ -204,7 +201,7 @@
         -100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -216,9 +213,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2f40158b-b769-4a7b-bc7c-f48984fbcc5a",
@@ -229,7 +225,7 @@
         -100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -241,9 +237,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "268bf914-05b2-4d56-b32f-5f1940b2c0ae",
@@ -254,7 +249,7 @@
         260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -266,9 +261,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "c9565457-b25a-4d68-bb2e-20214f766339",
@@ -279,7 +273,7 @@
         260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -291,9 +285,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "716fda24-7b62-4021-8ad9-37a61bb4f276",
@@ -317,7 +310,7 @@
         620
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -329,9 +322,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b9ba52a9-1ae9-4ec3-980f-12ff1b44f56d",
@@ -397,7 +389,7 @@
         620
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -409,9 +401,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "aa17b8f1-e2d3-4a0e-b4c1-15da54671a44",
@@ -520,7 +511,7 @@
         960
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -532,9 +523,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "9fb77120-fc89-4bc0-a828-f672355cd6ed",
@@ -604,7 +594,7 @@
         1300
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -616,9 +606,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "90802d0d-fd83-4fc6-8f92-542f6a51474e",
@@ -629,7 +618,7 @@
         960
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -641,9 +630,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "7edff654-4cee-4726-8cfe-60652a4ba1f6",
@@ -757,7 +745,7 @@
         1300
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -769,9 +757,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "47b89892-7e8f-420b-bd57-a1fc16db6d51",
@@ -782,7 +769,7 @@
         1620
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -794,9 +781,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "d6bbe89b-b862-4f29-ae8f-6947439470db",
@@ -807,7 +793,7 @@
         1820
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -819,9 +805,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "865c02d3-c571-4cf7-b82d-0d6e8d54812b",
@@ -832,7 +817,7 @@
         1820
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -844,9 +829,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     }
   ],
   "active": false,
@@ -1253,7 +1237,7 @@
   "_cn_meta": {
     "title_zh": "Automated SEO Keyword & SERP Analysis with DataForSEO for High-Converting Content",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4277,
     "synced_at": "2026-06-17T14:12:10.928949",
     "foreign_services": [
@@ -1261,6 +1245,104 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "SEO 优化、流程自动化"
+    "description_zh": "SEO 优化、流程自动化",
+    "replacements": {
+      "8d7a1074-df18-4127-9338-4667c38bea52": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets KW Research Template",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "700a1485-7061-4a13-a9b5-58a19585658d": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive Create KW Folder",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "9a7a078a-dfa3-49b5-9326-1b4eac9aa393": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive Copy KW Template",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "6439a767-ab07-4c28-a3ae-21ba493f8657": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Related KWs to Related KWs Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "2f40158b-b769-4a7b-bc7c-f48984fbcc5a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Related KWs to Master all KW Variations Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "268bf914-05b2-4d56-b32f-5f1940b2c0ae": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add KWs to Keyword Suggestions Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "c9565457-b25a-4d68-bb2e-20214f766339": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add KWs to Master All KW Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "99ada347-09c8-4cc0-abd7-fba96dc012fa": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add KWs to Master All KW Sheet1",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "035ac1ab-943b-4221-8912-627d9134e429": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add KWs to Keyword Ideas Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "26337f73-7aab-46f8-89a6-30d71039f3c8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Autocomplete to Autocomplete Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "a2c66ce2-598b-4f52-b703-bf2a5289f0ba": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Subtopics to Subtopics Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "90802d0d-fd83-4fc6-8f92-542f6a51474e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Subtopics to Master KWs Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "c3ca3b7c-7c07-4e03-8d5a-b0df7f92853f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Subtopics to Master KW sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "47b89892-7e8f-420b-bd57-a1fc16db6d51": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add SERPs to SERP Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "d6bbe89b-b862-4f29-ae8f-6947439470db": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add PAA to PAA Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "865c02d3-c571-4cf7-b82d-0d6e8d54812b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add PAA to Master KW Variations Sheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

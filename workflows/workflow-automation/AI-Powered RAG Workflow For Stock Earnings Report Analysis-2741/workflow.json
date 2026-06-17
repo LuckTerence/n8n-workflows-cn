@@ -272,7 +272,7 @@
         -60
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -284,15 +284,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "sRJmS2k8zdqVjtJL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "b0d58ce5-9ac0-4f0f-ac7c-d6cb27551d82",
@@ -306,15 +305,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "uixLsi5TmrfwXPeB",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "28817b3d-fb54-4dc2-83bc-3ac27320712b",
@@ -532,7 +530,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered RAG Workflow For Stock Earnings Report Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2741,
     "synced_at": "2026-06-17T14:11:45.718930",
     "foreign_services": [
@@ -542,6 +540,46 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "RAG 检索增强、股票分析、工作流管理"
+    "description_zh": "RAG 检索增强、股票分析、工作流管理",
+    "replacements": {
+      "9b0bff2e-06f4-4c89-b9dc-c54cfb79577c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "List Of Files To Load (Google Sheets)",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1476836405,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ckP-ZgAMs2l2sFUpLAXx-gWNOQrHXoAs48Vo271X3rs/edit#gid=1476836405",
+            "cachedResultName": "GOOG"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1ckP-ZgAMs2l2sFUpLAXx-gWNOQrHXoAs48Vo271X3rs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ckP-ZgAMs2l2sFUpLAXx-gWNOQrHXoAs48Vo271X3rs/edit?usp=drivesdk",
+            "cachedResultName": "Watchlist"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b0d58ce5-9ac0-4f0f-ac7c-d6cb27551d82": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download File From Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "={{ $('List Of Files To Load (Google Sheets)').item.json['File URL'] }}"
+          },
+          "options": {
+            "fileName": "={{ $('List Of Files To Load (Google Sheets)').item.json['10Q'] }}"
+          },
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

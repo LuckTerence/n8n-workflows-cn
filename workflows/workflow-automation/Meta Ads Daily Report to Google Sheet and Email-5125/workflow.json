@@ -104,7 +104,7 @@
         -60
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -116,15 +116,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "WjMwx7PaMo9SecZ1",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "d1a39c39-5dde-4949-8769-aef90115cc7b",
@@ -249,7 +248,7 @@
   "_cn_meta": {
     "title_zh": "Meta Ads Daily Report to Google Sheet and Email",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5125,
     "synced_at": "2026-06-17T14:13:04.168641",
     "foreign_services": [
@@ -257,6 +256,107 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、表格处理"
+    "description_zh": "邮件自动化、表格处理",
+    "replacements": {
+      "b57d0634-e50c-4f00-864f-541473f06ef7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Google Sheet\t",
+        "parameters": {
+          "columns": {
+            "value": {
+              "CPM": "=={{ $json.cpm }}",
+              "Date": "={{ $json.date }}",
+              "Spend": "=={{ $json.spend }}",
+              "Results": "=={{ $json.results }}",
+              "Cost/Result": "=={{ $json.cost_per_result }}",
+              "Campaign Name": "={{ $json.campaign_name }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Campaign Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Campaign Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Spend",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Spend",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Results",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Results",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Cost/Result",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Cost/Result",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CPM",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CPM",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tnd0mehy0ZEWwmVExDAu3danPPt1YZKe1SSdh-0ZjFg/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tnd0mehy0ZEWwmVExDAu3danPPt1YZKe1SSdh-0ZjFg",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tnd0mehy0ZEWwmVExDAu3danPPt1YZKe1SSdh-0ZjFg/edit?usp=drivesdk",
+            "cachedResultName": "Meta ads "
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

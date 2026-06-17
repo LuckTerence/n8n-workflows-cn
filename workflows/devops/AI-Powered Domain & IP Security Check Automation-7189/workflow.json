@@ -722,7 +722,7 @@
         120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -734,15 +734,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "171ccfa2-ab2c-4acd-91c5-8e2a270c7e0e",
@@ -753,7 +752,7 @@
         120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -765,15 +764,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "8a49881a-e6d9-425c-a47f-d27953ce3e7a",
@@ -784,7 +782,7 @@
         120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -796,15 +794,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "6da4c1a5-061c-4d77-ac09-d339d284275d",
@@ -815,7 +812,7 @@
         720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -827,15 +824,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "fa15fa27-7254-4952-9a08-207fab278dfd",
@@ -846,7 +842,7 @@
         720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -858,15 +854,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "ffd9cfc8-34f3-4276-8dbc-bbb4924f587b",
@@ -877,7 +872,7 @@
         720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -889,15 +884,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "a02c8a9d-bad5-405b-8279-d724e48db6b0",
@@ -908,7 +902,7 @@
         420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -920,15 +914,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "f6da4aec-6b74-40da-ad11-96488f6fa1e7",
@@ -939,7 +932,7 @@
         420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -951,15 +944,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "e3043a9b-4b8c-41f7-a0dd-8c92b3a1ed7b",
@@ -970,7 +962,7 @@
         420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -982,15 +974,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "4791fa0a-0435-4125-9a2e-a820e67305ea",
@@ -1114,7 +1105,7 @@
         420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1126,15 +1117,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "3f29ab18-ba93-4c63-9fd6-41095b641a14",
@@ -1145,7 +1135,7 @@
         800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1157,15 +1147,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "57c1f7f4-4a44-4c27-8aaf-81dcccef9940",
@@ -1176,7 +1165,7 @@
         800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1188,15 +1177,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "9cfc50dc-5aed-46e6-b5f6-5f6d2fbe0a52",
@@ -1207,7 +1195,7 @@
         800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1219,15 +1207,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hiZFCP2vQ7V8canv",
           "name": "garrynacov"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "13e1257c-473d-4d48-b758-4f8c083cbf97",
@@ -1703,13 +1690,932 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Domain & IP Security Check Automation",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7189,
     "synced_at": "2026-06-17T14:17:38.673473",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "a1864a19-f8c6-4e7e-9138-4dfdd236b721": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "To do",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "171ccfa2-ab2c-4acd-91c5-8e2a270c7e0e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "To do",
+              "Keterangan": "={{ $('AI Agent2').item.json.output }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Status"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "8a49881a-e6d9-425c-a47f-d27953ce3e7a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Done",
+              "Keterangan": "={{ $json.Keterangan }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keterangan"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "6da4c1a5-061c-4d77-ac09-d339d284275d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets3",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "To do",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "fa15fa27-7254-4952-9a08-207fab278dfd": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets4",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "To do",
+              "Keterangan": "={{ $('AI Agent2').item.json.output }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Status"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "ffd9cfc8-34f3-4276-8dbc-bbb4924f587b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets5",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Done",
+              "Keterangan": "={{ $json.Keterangan }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keterangan"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "a02c8a9d-bad5-405b-8279-d724e48db6b0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets6",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "To do",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "f6da4aec-6b74-40da-ad11-96488f6fa1e7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets7",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "To do",
+              "Keterangan": "={{ $('AI Agent1').item.json.output }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Status"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "e3043a9b-4b8c-41f7-a0dd-8c92b3a1ed7b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets8",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Done",
+              "Keterangan": "={{ $json.Keterangan }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keterangan"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "fbd9230e-d021-4b7f-a964-8dec0b07b28c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets10",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "To do",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "3f29ab18-ba93-4c63-9fd6-41095b641a14": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets9",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "To do",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "57c1f7f4-4a44-4c27-8aaf-81dcccef9940": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets11",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "={{ $json.Status }}",
+              "Keterangan": "={{ $json.Keterangan }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Status"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "9cfc50dc-5aed-46e6-b5f6-5f6d2fbe0a52": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets12",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Done",
+              "Keterangan": "={{ $json.Keterangan }}"
+            },
+            "schema": [
+              {
+                "id": "No",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "No",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keterangan",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Keterangan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keterangan"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
+            "cachedResultName": "Domain Customer"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

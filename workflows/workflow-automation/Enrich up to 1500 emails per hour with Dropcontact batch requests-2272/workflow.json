@@ -376,13 +376,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -532,7 +532,7 @@
   "_cn_meta": {
     "title_zh": "Enrich up to 1500 emails per hour with Dropcontact batch requests",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2272,
     "synced_at": "2026-06-17T14:08:44.051551",
     "foreign_services": [
@@ -540,6 +540,26 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "邮件自动化"
+    "description_zh": "邮件自动化",
+    "replacements": {
+      "b233abfe-cfae-474a-b86d-29e56e1f3ac7": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "select": "user",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "Dropcontact Credits issue: url "
+          }
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

@@ -181,7 +181,7 @@
         480
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -193,15 +193,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YdlTTXiu8194dEFE",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     }
   ],
   "active": true,
@@ -281,7 +280,7 @@
   "_cn_meta": {
     "title_zh": "Screen Applicants With AI, notify HR and save them in a Google Sheet",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2632,
     "synced_at": "2026-06-17T14:06:29.953916",
     "foreign_services": [
@@ -289,6 +288,99 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "消息通知、HR 人事、表格处理"
+    "description_zh": "消息通知、HR 人事、表格处理",
+    "replacements": {
+      "d2dfbf1e-8d88-49e6-940d-e1717de97b30": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Candidate Lists",
+        "parameters": {
+          "columns": {
+            "value": {
+              "CV": "={{ $('Application Form').item.json['Your Resume/CV'][0].filename }}",
+              "E-mail": "={{ $('Application Form').item.json['E-mail'] }}",
+              "Linkedin": "={{ $('Application Form').item.json.Linkedin }}",
+              "AI Rating": "={{ $json.text }}",
+              "Full Name": "={{ $('Application Form').item.json['Full Name'] }}",
+              "Expectation": "={{ $('Application Form').item.json.Expectation }}"
+            },
+            "schema": [
+              {
+                "id": "CV",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "CV",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Full Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Full Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "E-mail",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "E-mail",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Expectation",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Expectation",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Linkedin",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Linkedin",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "AI Rating",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "AI Rating",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1y4FFMXTuznSf2wWUraK57eBJnu4MVtgkxrGYRzRMwDQ/edit#gid=0",
+            "cachedResultName": "পত্রক1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1y4FFMXTuznSf2wWUraK57eBJnu4MVtgkxrGYRzRMwDQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1y4FFMXTuznSf2wWUraK57eBJnu4MVtgkxrGYRzRMwDQ/edit?usp=drivesdk",
+            "cachedResultName": "CV of Software Engineers"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

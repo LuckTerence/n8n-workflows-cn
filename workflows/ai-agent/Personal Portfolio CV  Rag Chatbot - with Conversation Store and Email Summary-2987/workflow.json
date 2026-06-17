@@ -303,15 +303,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "4de6XIuqMin5BQiH",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "96e86dab-a1d9-4845-908a-18b56fddee7c",
@@ -950,7 +949,7 @@
   "_cn_meta": {
     "title_zh": "Personal Portfolio CV  Rag Chatbot - with Conversation Store and Email Summary",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2987,
     "synced_at": "2026-06-17T14:17:35.077159",
     "foreign_services": [
@@ -959,6 +958,24 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "AI 聊天机器人、AI 对话、RAG 检索增强"
+    "description_zh": "AI 聊天机器人、AI 对话、RAG 检索增强",
+    "replacements": {
+      "912b1222-7c03-41a3-8c30-d93ed47b8141": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download CV File From Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {
+            "fileName": "={{ $json.name }}"
+          },
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

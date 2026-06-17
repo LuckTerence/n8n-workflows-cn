@@ -263,15 +263,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "4pJ4FbSsj82fOkbU",
           "name": "Gridve"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "33160ec4-53df-4a5c-95be-029065d4e2f7",
@@ -282,7 +281,7 @@
         208
       ],
       "parameters": {
-        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+        "url": "https://api.replicate.com/v1/models/minimax/speech-02-hd/predictions",
         "method": "POST",
         "options": {},
         "jsonBody": "={\n  \"input\": {\n    \"text\": \"{{ $json.text }}\",\n    \"pitch\": 0,\n    \"speed\": 1,\n    \"volume\": 1,\n    \"bitrate\": 128000,\n    \"channel\": \"mono\",\n    \"emotion\": \"happy\",\n    \"voice_id\": \"Friendly_Person\",\n    \"sample_rate\": 32000,\n    \"language_boost\": \"English\",\n    \"english_normalization\": true\n  }\n} ",
@@ -298,8 +297,7 @@
               "value": "wait"
             }
           ]
-        },
-        "notes": "原 Replicate → 通义万相"
+        }
       },
       "credentials": {
         "httpBearerAuth": {
@@ -487,13 +485,38 @@
   "_cn_meta": {
     "title_zh": "Ebook to Audiobook converter using MiniMax and FFmpeg",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9944,
     "synced_at": "2026-06-17T14:19:56.573518",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "音频处理"
+    "description_zh": "音频处理",
+    "replacements": {
+      "d7b3d611-98d0-44fc-8ded-597f1e5ad916": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Uploads Ebook",
+        "parameters": {
+          "name": "audiobook.mp3",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "11eIODBtLZwiUjUVJvK97_Z42uPmEnMMu",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/11eIODBtLZwiUjUVJvK97_Z42uPmEnMMu",
+            "cachedResultName": "Audiobook"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

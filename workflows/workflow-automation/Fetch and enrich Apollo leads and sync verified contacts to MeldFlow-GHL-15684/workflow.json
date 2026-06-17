@@ -95,7 +95,7 @@
         544
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -107,7 +107,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -116,8 +116,7 @@
         }
       },
       "executeOnce": true,
-      "retryOnFail": true,
-      "typeVersion": 4.7
+      "retryOnFail": true
     },
     {
       "id": "366271dd-7d6e-4136-b8d1-f726d84c90c4",
@@ -516,7 +515,7 @@
         -208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -528,7 +527,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -536,8 +535,7 @@
           "name": "Google Sheets account"
         }
       },
-      "retryOnFail": true,
-      "typeVersion": 4.7
+      "retryOnFail": true
     }
   ],
   "active": false,
@@ -680,13 +678,52 @@
   "_cn_meta": {
     "title_zh": "Fetch and enrich Apollo leads and sync verified contacts to MeldFlow-GHL",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15684,
     "synced_at": "2026-06-17T14:20:31.735354",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "线索管理"
+    "description_zh": "线索管理",
+    "replacements": {
+      "6f3d56c7-b60b-43c4-842b-197b3933a6a0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Page Number",
+        "parameters": {
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "71bd5212-60df-488e-8f90-443f6f284a8e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Apollo Page",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

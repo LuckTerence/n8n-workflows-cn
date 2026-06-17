@@ -188,7 +188,7 @@
         -620
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -200,15 +200,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "bpr2LoSELMlxpwnN",
           "name": "Google Sheets account David"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "ea83d68c-f499-4864-918c-5ccaccf555a5",
@@ -684,13 +683,33 @@
   "_cn_meta": {
     "title_zh": "Evaluation metric example: RAG document relevance",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4273,
     "synced_at": "2026-06-17T14:15:08.960765",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "RAG 检索增强"
+    "description_zh": "RAG 检索增强",
+    "replacements": {
+      "eefe3a5a-722a-4cce-b84b-65c0520a225f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get dataset",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1uuPS5cHtSNZ6HNLOi75A2m8nVWZrdBZ_Ivf58osDAS8/edit?gid=630157309#gid=630157309"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1uuPS5cHtSNZ6HNLOi75A2m8nVWZrdBZ_Ivf58osDAS8/edit?gid=630157309#gid=630157309"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

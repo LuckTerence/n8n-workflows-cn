@@ -21,7 +21,7 @@
         300
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -33,15 +33,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "1",
           "name": "Google API"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "name": "Format Quiz",
@@ -169,7 +168,7 @@
   "_cn_meta": {
     "title_zh": "Daily Govt Exam Quiz by Gopal Debnath (mrtechyguru)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5284,
     "synced_at": "2026-06-17T14:08:30.641257",
     "foreign_services": [
@@ -177,6 +176,18 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Twilio→腾讯云短信",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Question",
+        "parameters": {
+          "range": "Sheet1!A2:F",
+          "sheetId": "YOUR_GOOGLE_SHEET_ID",
+          "valueRenderMode": "FORMATTED_VALUE"
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

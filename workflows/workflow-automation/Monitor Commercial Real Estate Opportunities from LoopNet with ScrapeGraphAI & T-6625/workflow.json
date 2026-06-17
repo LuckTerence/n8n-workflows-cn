@@ -263,7 +263,7 @@
         1456
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -275,9 +275,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.4
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     }
   ],
   "active": false,
@@ -340,13 +339,24 @@
   "_cn_meta": {
     "title_zh": "Monitor Commercial Real Estate Opportunities from LoopNet with ScrapeGraphAI & Telegram",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6625,
     "synced_at": "2026-06-17T14:13:07.077138",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、数据采集"
+    "description_zh": "系统监控、数据采集",
+    "replacements": {
+      "501df296-9ece-4f93-ac15-d6b753c10813": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log to Google Sheets",
+        "parameters": {
+          "resource": "spreadsheet",
+          "operation": "appendOrUpdate"
+        },
+        "typeVersion": 4.4
+      }
+    }
   }
 }

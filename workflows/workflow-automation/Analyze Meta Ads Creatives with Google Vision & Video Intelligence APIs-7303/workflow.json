@@ -518,7 +518,7 @@
         -32
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -530,15 +530,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "0drwHzGo1eKmiTc6",
           "name": "KH | Google Sheets "
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "6ed766ae-73a3-4f69-91f2-ca07d2c70e90",
@@ -571,7 +570,7 @@
         -16
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -583,7 +582,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -591,7 +590,6 @@
           "name": "KH | Google Sheets "
         }
       },
-      "typeVersion": 4.6,
       "alwaysOutputData": false
     },
     {
@@ -1195,13 +1193,341 @@
   "_cn_meta": {
     "title_zh": "Analyze Meta Ads Creatives with Google Vision & Video Intelligence APIs",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7303,
     "synced_at": "2026-06-17T14:11:52.969206",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "API 接口、视频生成"
+    "description_zh": "API 接口、视频生成",
+    "replacements": {
+      "6dd566d0-2f05-495f-b1e6-8d9e58a116a6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add errors",
+        "parameters": {
+          "columns": {
+            "value": {
+              "error_type": "={{ $json.error_type }}"
+            },
+            "schema": [
+              {
+                "id": "error_type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "error_type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "error_message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "error_message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "campaign_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "campaign_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ad_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ad_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "creative_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "creative_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "video_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "file_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "file_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "image_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "thumbnail_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "thumbnail_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "source",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "source",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "processed_at_utc",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "processed_at_utc",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1828512644,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA/edit#gid=1828512644",
+            "cachedResultName": "errors"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA/edit?usp=drivesdk",
+            "cachedResultName": "MetaAds Creative Insights researcher by videointelligence v_1.1"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "f7be8b28-9f68-4d36-bfd6-9d45ba55fd80": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Segments data",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ad_id": "={{ $('Set id data for Video').item.json.ad_id }}",
+              "source": "={{ $('Set id data for Video').item.json.source }}",
+              "category": "={{ $json.category }}",
+              "video_id": "={{ $('Set id data for Video').item.json.video_id }}",
+              "file_name": "={{ $('Set id data for Video').item.json.file_name }}",
+              "image_url": "={{ $('Set id data for Video').item.json.image_url }}",
+              "confidence": "={{ $json.confidence }}",
+              "end_time_s": "={{ $json.end_time_s }}",
+              "campaign_id": "={{ $('Set id data for Video').item.json.campaign_id }}",
+              "creative_id": "={{ $('Set id data for Video').item.json.creative_id }}",
+              "start_time_s": "={{ $json.start_time_s }}",
+              "label_or_text": "={{ $json.label_or_text }}",
+              "language_code": "={{ $json.language_code }}",
+              "annotation_type": "={{ $json.annotation_type }}",
+              "full_transcript": "={{ $json.full_transcript }}",
+              "processed_at_utc": "={{ $json.processed_at_utc }}"
+            },
+            "schema": [
+              {
+                "id": "source",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "source",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "campaign_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "campaign_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ad_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ad_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "creative_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "creative_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "video_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "file_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "file_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "image_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "annotation_type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "annotation_type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "label_or_text",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "label_or_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "full_transcript",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "full_transcript",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "category",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "confidence",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "confidence",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "start_time_s",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "start_time_s",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "end_time_s",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "end_time_s",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "language_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "language_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "processed_at_utc",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "processed_at_utc",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XgMMxrnthHhy1jIaxCWNGHLZ50Z5mv4Be1RlwSpGcuA/edit?usp=drivesdk",
+            "cachedResultName": "MetaAds Creative Insights researcher by videointelligence v_1.1"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

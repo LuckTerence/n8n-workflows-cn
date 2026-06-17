@@ -289,43 +289,33 @@
     {
       "id": "d28b483f-6532-41bc-89d1-a44ae3055fae",
       "name": "Send Discord Notification",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         32,
         80
       ],
       "webhookId": "1f4e20f7-bebe-430e-8bc7-06fc9b9fa93b",
       "parameters": {
-        "embeds": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
             {
-              "json": "={{ JSON.stringify($json.embed) }}",
-              "inputMethod": "json"
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "guildId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1408795203615326341",
-          "cachedResultUrl": "https://discord.com/channels/1408795203615326341",
-          "cachedResultName": "Artisan Corner"
-        },
         "options": {},
-        "resource": "message",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.channel_id }}"
-        }
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "discordBotApi": {
           "id": "jCGPtIEUf0DAUsdi",
           "name": "Discord Bot account"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "5ca6bdaa-167c-42f0-b232-061a9e6666d2",
@@ -1236,6 +1226,37 @@
     "tier": "B",
     "source_id": 13314,
     "synced_at": "2026-06-17T14:13:38.025921",
-    "description_zh": "PostgreSQL、SQL 查询"
+    "description_zh": "PostgreSQL、SQL 查询",
+    "replacements": {
+      "d28b483f-6532-41bc-89d1-a44ae3055fae": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Discord Notification",
+        "parameters": {
+          "embeds": {
+            "values": [
+              {
+                "json": "={{ JSON.stringify($json.embed) }}",
+                "inputMethod": "json"
+              }
+            ]
+          },
+          "guildId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1408795203615326341",
+            "cachedResultUrl": "https://discord.com/channels/1408795203615326341",
+            "cachedResultName": "Artisan Corner"
+          },
+          "options": {},
+          "resource": "message",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.channel_id }}"
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

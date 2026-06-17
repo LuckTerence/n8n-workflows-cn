@@ -168,16 +168,29 @@
     {
       "id": "f908d750-b0aa-4fbb-926b-dd17cf79ebe3",
       "name": "Send Update to Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "maxTries": 3,
       "position": [
         3584,
         656
       ],
       "webhookId": "8cfd3e9c-7271-4899-bcc2-2b6037f23951",
-      "parameters": {},
-      "retryOnFail": true,
-      "typeVersion": 2
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      },
+      "retryOnFail": true
     },
     {
       "id": "1aed1df1-3a38-4f77-8870-6d8e7ae0e2c7",
@@ -318,16 +331,29 @@
     {
       "id": "a1e74152-c254-471b-bbbe-d84f81e11167",
       "name": "Send Trade Confirmation",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "maxTries": 3,
       "position": [
         4704,
         848
       ],
       "webhookId": "d052a1a5-25b6-413d-8c0d-ca2a84e6bcea",
-      "parameters": {},
-      "retryOnFail": true,
-      "typeVersion": 2
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      },
+      "retryOnFail": true
     },
     {
       "id": "94a4917e-0932-4d7e-8ba5-54bc28cd606b",
@@ -759,6 +785,20 @@
     "tier": "B",
     "source_id": 14862,
     "synced_at": "2026-06-17T14:12:06.448590",
-    "description_zh": "外汇交易、新闻聚合、流程自动化"
+    "description_zh": "外汇交易、新闻聚合、流程自动化",
+    "replacements": {
+      "f908d750-b0aa-4fbb-926b-dd17cf79ebe3": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Update to Discord",
+        "parameters": {},
+        "typeVersion": 2
+      },
+      "a1e74152-c254-471b-bbbe-d84f81e11167": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Trade Confirmation",
+        "parameters": {},
+        "typeVersion": 2
+      }
+    }
   }
 }

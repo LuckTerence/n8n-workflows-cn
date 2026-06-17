@@ -258,37 +258,32 @@
     {
       "id": "e091dea6-9880-48fd-a7ca-7b4fadce66ce",
       "name": "Get Contacts",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         560,
         464
       ],
       "parameters": {
-        "operation": "search",
-        "authentication": "oAuth2",
-        "filterGroupsUi": {
-          "filterGroupsValues": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "filtersUi": {
-                "filterValues": [
-                  {
-                    "value": "DECISION_MAKER",
-                    "propertyName": "hs_buying_role|enumeration"
-                  }
-                ]
-              }
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "additionalFields": {}
+        "options": {},
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "hubspotOAuth2Api": {
           "id": "Vxqd8oQJmbtNmpRz",
           "name": "HubSpot account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "6aae27da-13ce-4535-9e80-b7ff190595ee",
@@ -546,6 +541,32 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "邮件自动化"
+    "description_zh": "邮件自动化",
+    "replacements": {
+      "e091dea6-9880-48fd-a7ca-7b4fadce66ce": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "Get Contacts",
+        "parameters": {
+          "operation": "search",
+          "authentication": "oAuth2",
+          "filterGroupsUi": {
+            "filterGroupsValues": [
+              {
+                "filtersUi": {
+                  "filterValues": [
+                    {
+                      "value": "DECISION_MAKER",
+                      "propertyName": "hs_buying_role|enumeration"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "additionalFields": {}
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

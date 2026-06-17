@@ -3,7 +3,7 @@
 
 自动生成AI图片推送到Telegram
 
-> 分类：多模态 AI | 适配等级：A（需替换Google Sheets/Google Drive)（基本改完，配置 API Key 应该就能跑）
+> 分类：多模态 AI | 适配等级：B（需替换Google Sheets/Google Drive)（基本改完，配置 API Key 应该就能跑）
 > 原始来源：https://n8nworkflows.xyz/workflows/4049
 
 ---

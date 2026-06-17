@@ -151,11 +151,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -163,7 +164,6 @@
           "name": "Slack account 8"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -188,11 +188,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -200,7 +201,6 @@
           "name": "Slack account 8"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -627,12 +627,54 @@
   "_cn_meta": {
     "title_zh": "Detect Stock Price Anomalies & Send News Alerts with Marketstack, HackerNews & DeepL",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10306,
     "synced_at": "2026-06-17T14:21:36.535294",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "告警通知、股票分析、市场数据"
+    "description_zh": "告警通知、股票分析、市场数据",
+    "replacements": {
+      "478fdb62-dde4-40e3-9e0b-2676330f91c0": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Alert to Slack",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "CKUCBTG0H",
+            "cachedResultName": "general"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🌐 *Original (English)*  \n{{ $json.message }}\n\n---\n\n🇯🇵 *Translated (Japanese)*  \n{{ $json.text }}"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "7ea2b37e-e074-400d-9e3b-28ac0bc9c816": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Normal Report to Slack",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "CKUCBTG0H",
+            "cachedResultName": "general"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=✅ 異常なし この銘柄の終値は安定しています。 現在値：{{ $('Calculate Deviation').item.json.latest }}（平均 {{ $('Calculate Deviation').item.json.mean }} ± {{ $('Calculate Deviation').item.json.sigma }})"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

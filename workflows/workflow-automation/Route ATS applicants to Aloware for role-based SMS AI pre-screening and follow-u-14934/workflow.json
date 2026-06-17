@@ -816,11 +816,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -828,7 +829,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1127,12 +1127,26 @@
   "_cn_meta": {
     "title_zh": "Route ATS applicants to Aloware for role-based SMS AI pre-screening and follow-up",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14934,
     "synced_at": "2026-06-17T14:06:28.799536",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "69d8f95f-89ce-4afc-98c2-cbcd42784c09": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Notify Hiring Manager",
+        "parameters": {
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=⚠️ *No response from candidate after 24h*\n\n*Name:* {{ $('Normalize Candidate Data').item.json.candidateFirstName }} {{ $('Normalize Candidate Data').item.json.candidateLastName }}\n*Role:* {{ $('Normalize Candidate Data').item.json.jobTitle }} ({{ $('Normalize Candidate Data').item.json.department }})\n*Phone:* {{ $('Normalize Candidate Data').item.json.candidatePhone }}\n*Source:* {{ $('Normalize Candidate Data').item.json.applicationSource }}\n\nFollow-up SMS has been sent. Manual outreach may be needed."
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

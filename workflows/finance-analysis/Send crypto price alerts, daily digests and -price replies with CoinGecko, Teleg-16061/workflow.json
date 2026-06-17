@@ -583,7 +583,7 @@
         768
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -595,7 +595,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -603,7 +603,6 @@
           "name": "Google Sheets account 4"
         }
       },
-      "typeVersion": 4.5,
       "continueOnFail": true
     },
     {
@@ -1355,13 +1354,143 @@
   "_cn_meta": {
     "title_zh": "Send crypto price alerts, daily digests and -price replies with CoinGecko, Telegram and Sheets",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 16061,
     "synced_at": "2026-06-17T14:21:41.638891",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "告警通知、加密货币"
+    "description_zh": "告警通知、加密货币",
+    "replacements": {
+      "dabb7d9e-caad-407e-b264-b1ffe00561d1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append Alert to Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "RSI": "={{ $json.rsi || '' }}",
+              "Date": "={{ $json.alertDate }}",
+              "Symbol": "={{ $json.symbol }}",
+              "Display": "={{ $json.display }}",
+              "Price ($)": "={{ $json.currentPrice }}",
+              "Threshold ($)": "={{ $json.threshold }}",
+              "24h Change (%)": "={{ $json.change24h }}",
+              "Alert Triggers": "={{ $json.triggerReasonsStr }}",
+              "Portfolio Value ($)": "={{ $json.portfolioValue || '' }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Symbol",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Symbol",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Display",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Display",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Price ($)",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Price ($)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "24h Change (%)",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "24h Change (%)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Alert Triggers",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Alert Triggers",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Threshold ($)",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Threshold ($)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Portfolio Value ($)",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Portfolio Value ($)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "RSI",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "RSI",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "gid",
+            "value": "gid=0"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.googleSheetId }}"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

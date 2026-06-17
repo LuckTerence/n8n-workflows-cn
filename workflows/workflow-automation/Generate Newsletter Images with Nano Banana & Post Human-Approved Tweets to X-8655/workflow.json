@@ -142,7 +142,7 @@
         448
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -154,9 +154,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "21e17eff-1ee9-4c5b-9b96-d60bc1573abe",
@@ -224,7 +223,7 @@
         1552
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -236,9 +235,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "f7038b75-7d6b-40fe-b6aa-32ddc4e6569f",
@@ -307,7 +305,7 @@
         1296
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -319,9 +317,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "8d711b2d-ede5-46e2-92c0-ebc228bb3458",
@@ -567,13 +564,33 @@
   "_cn_meta": {
     "title_zh": "Generate Newsletter Images with Nano Banana & Post Human-Approved Tweets to X",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8655,
     "synced_at": "2026-06-17T14:22:01.561278",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "图片生成、新闻聚合"
+    "description_zh": "图片生成、新闻聚合",
+    "replacements": {
+      "facaea24-1375-4e65-ab62-8ed01fad19b1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Image URL",
+        "parameters": {},
+        "typeVersion": 4.7
+      },
+      "cfb48a9e-f290-43eb-a2b3-3ba0f16752c7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Tweet not approved",
+        "parameters": {},
+        "typeVersion": 4.7
+      },
+      "6144f543-5b3f-4991-831c-7b6d36a6e123": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Tweet posted",
+        "parameters": {},
+        "typeVersion": 4.7
+      }
+    }
   }
 }

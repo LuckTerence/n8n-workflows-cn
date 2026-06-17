@@ -27,7 +27,7 @@
         448
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -39,9 +39,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "95b66133-04fe-42fd-b906-8e742efa1b27",
@@ -248,7 +247,7 @@
         448
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -260,9 +259,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "499dbf0b-3c1a-4a86-930e-d792834635d2",
@@ -463,7 +461,7 @@
   "_cn_meta": {
     "title_zh": "AI Invoice Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7905,
     "synced_at": "2026-06-17T14:15:24.870211",
     "foreign_services": [
@@ -471,6 +469,151 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、语音处理、发票处理"
+    "description_zh": "AI 智能体、语音处理、发票处理",
+    "replacements": {
+      "89a82cb6-c972-4a06-9f7e-29e3f322ad89": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs/edit?usp=drivesdk",
+            "cachedResultName": "Client Invoices"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "d2249aba-b9ef-451b-9646-e529836c38aa": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Completed",
+              "Due Date": "={{ $('Edit Fields').item.json['Due Date'] }}",
+              "\tInvoice ID": "={{ $('Edit Fields').item.json['\tInvoice ID'] }}",
+              "Invoice Date": "={{ $('Edit Fields').item.json['Invoice Date'] }}"
+            },
+            "schema": [
+              {
+                "id": "\tInvoice ID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "\tInvoice ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Client Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Client Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Client Email",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Client Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Client Address",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Client Address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Project Name\t",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Project Name\t",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Amount (USD)",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Amount (USD)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Invoice Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Invoice Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Due Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Due Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "\tInvoice ID"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1d7CWcM_Ge6s2iaoGXOsxykLQFsDa_iyEFyP0qxJ9Qbs/edit?usp=drivesdk",
+            "cachedResultName": "Client Invoices"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

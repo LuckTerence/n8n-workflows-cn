@@ -27,7 +27,7 @@
         176
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -39,15 +39,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "3fea256c-b34b-4200-8757-903fb7370183",
@@ -188,7 +187,7 @@
         176
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -200,15 +199,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "081864e8-cfd4-4fa3-9521-63b0c8940a1e",
@@ -437,7 +435,7 @@
   "_cn_meta": {
     "title_zh": "Real-Time Stock Monitor with Smart Alerts via Email & Telegram for Indian & US Markets",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7701,
     "synced_at": "2026-06-17T14:13:31.487092",
     "foreign_services": [
@@ -445,6 +443,47 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、邮件自动化、系统监控"
+    "description_zh": "Telegram 机器人、邮件自动化、系统监控",
+    "replacements": {
+      "1e0a06c3-a7da-44ca-a47d-4821bf599049": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read Stock Watchlist",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=YOUR_GOOGLE_SHEET_ID_HERE"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=YOUR_GOOGLE_SHEET_ID_HERE"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      },
+      "6c24ea09-602b-4347-8501-bbaf943332d9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Alert History",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": "Sheet1",
+          "documentId": "YOUR_GOOGLE_SHEET_ID_HERE",
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      }
+    }
   }
 }

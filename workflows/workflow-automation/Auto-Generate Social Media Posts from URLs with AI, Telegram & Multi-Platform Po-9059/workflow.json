@@ -197,7 +197,7 @@
         448
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -209,7 +209,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -217,7 +217,6 @@
           "name": "YOUR_GOOGLE_SHEETS_OAUTH2_API_CREDENTIAL"
         }
       },
-      "typeVersion": 4,
       "alwaysOutputData": true
     },
     {
@@ -713,7 +712,7 @@
         448
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -725,15 +724,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "",
           "name": "YOUR_GOOGLE_SHEETS_OAUTH2_API_CREDENTIAL"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "name": "Credentials",
@@ -1336,7 +1334,7 @@
   "_cn_meta": {
     "title_zh": "Auto-Generate Social Media Posts from URLs with AI, Telegram & Multi-Platform Posting",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9059,
     "synced_at": "2026-06-17T14:21:54.200251",
     "foreign_services": [
@@ -1344,6 +1342,117 @@
       "Supabase"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase",
-    "description_zh": "Telegram 机器人、表单处理、社交平台"
+    "description_zh": "Telegram 机器人、表单处理、社交平台",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append or update row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Source URL": "={{ $json.url }}"
+            },
+            "schema": [
+              {
+                "id": "Source URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Source URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Facebook Content",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Facebook Content",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Facebook URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Facebook URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Instagram Content",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Instagram Content",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Instagram URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Instagram URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "LinkedIn Content ",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "LinkedIn Content ",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "LinkedIn URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "LinkedIn URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Image URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Source URL"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1b7k0A06DY_oI3Ex6fR48FN0PXK6g59U4714wBYUCezw/edit#gid=0",
+            "cachedResultName": "Arkusz1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1b7k0A06DY_oI3Ex6fR48FN0PXK6g59U4714wBYUCezw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1b7k0A06DY_oI3Ex6fR48FN0PXK6g59U4714wBYUCezw/edit?usp=drivesdk",
+            "cachedResultName": "n8n - Telegram Social Media Content Automation"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

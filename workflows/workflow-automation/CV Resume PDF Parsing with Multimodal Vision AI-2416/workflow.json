@@ -103,15 +103,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "yOwz41gMQclOadgu",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "ea904365-d9d2-4f15-b7c3-7abfeb4c8c50",
@@ -354,13 +353,29 @@
   "_cn_meta": {
     "title_zh": "CV Resume PDF Parsing with Multimodal Vision AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2416,
     "synced_at": "2026-06-17T14:06:22.296731",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "PDF 文档"
+    "description_zh": "PDF 文档",
+    "replacements": {
+      "d21fe4dd-0879-4e5a-a70d-10f09b25eee2": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Resume",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1MORAdeev6cMcTJBV2EYALAwll8gCDRav"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

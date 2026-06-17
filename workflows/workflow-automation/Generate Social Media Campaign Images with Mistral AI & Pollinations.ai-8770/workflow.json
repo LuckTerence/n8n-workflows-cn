@@ -260,15 +260,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "ukOlw9NKhJMJxRUB",
           "name": "Google Drive account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "52656d86-ec0f-4fee-9e38-5c471f94ac70",
@@ -282,15 +281,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "ukOlw9NKhJMJxRUB",
           "name": "Google Drive account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "6d845bac-de42-4d9f-b645-1ff7204c5a8b",
@@ -465,15 +463,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "ukOlw9NKhJMJxRUB",
           "name": "Google Drive account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "76f8fc04-be8f-4b5d-b685-4c8ba77668c2",
@@ -769,13 +766,64 @@
   "_cn_meta": {
     "title_zh": "Generate Social Media Campaign Images with Mistral AI & Pollinations.ai",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8770,
     "synced_at": "2026-06-17T14:20:39.965838",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成、社交平台"
+    "description_zh": "图片生成、社交平台",
+    "replacements": {
+      "b71a28a6-fb07-45ef-bd88-0a4823523718": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "brand goals",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "",
+            "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "52656d86-ec0f-4fee-9e38-5c471f94ac70": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "brand profile",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "",
+            "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "c6b6132c-761c-4dd1-b794-07710f313be4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload file",
+        "parameters": {
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "root",
+            "cachedResultName": "/ (Root folder)"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

@@ -381,7 +381,7 @@
         1136
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -393,15 +393,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "notionApi": {
           "id": "i9koSu1TWLJJkhIS",
           "name": "Stephen Notion account"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "29e48900-5423-45eb-bfb4-d4fa68ae2f14",
@@ -1558,6 +1557,26 @@
       "Notion",
       "Supabase"
     ],
-    "description_zh": "API 接口、表单处理、工作流管理"
+    "description_zh": "API 接口、表单处理、工作流管理",
+    "replacements": {
+      "39db5553-77e5-4a12-9b98-716d16bcb445": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Get Instance Information",
+        "parameters": {
+          "options": {},
+          "resource": "databasePage",
+          "operation": "getAll",
+          "returnAll": true,
+          "databaseId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "306785c0-cfab-80a8-9236-f9c9b14042b5",
+            "cachedResultUrl": "https://www.notion.so/306785c0cfab80a89236f9c9b14042b5",
+            "cachedResultName": "Granite n8n Keys"
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

@@ -778,7 +778,7 @@
         280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -790,9 +790,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
-      },
-      "typeVersion": 1.3
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "9ea7a1d6-a78d-4299-930c-2e8428861f55",
@@ -803,7 +802,7 @@
         280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -815,9 +814,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
-      },
-      "typeVersion": 1.3
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "019a38f2-4447-4b31-8fc5-41cf0ca90a29",
@@ -828,7 +826,7 @@
         280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -840,9 +838,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
-      },
-      "typeVersion": 1.3
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "c3352115-f872-46a8-a880-bd45d9e082b9",
@@ -853,7 +850,7 @@
         280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -865,9 +862,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
-      },
-      "typeVersion": 1.3
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "d6c48e3b-7e3f-4924-a41d-e772e3e1b208",
@@ -878,7 +874,7 @@
         280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -890,9 +886,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
-      },
-      "typeVersion": 1.3
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "c78ead66-8c1c-4003-82dd-4e3ba42dd04a",
@@ -1872,6 +1867,38 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "AI 智能体、RAG 检索增强、表单处理"
+    "description_zh": "AI 智能体、RAG 检索增强、表单处理",
+    "replacements": {
+      "ea7c1010-8de9-46da-a9f9-75d0dbd25d0a": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Create Event with Attendee",
+        "parameters": {},
+        "typeVersion": 1.3
+      },
+      "9ea7a1d6-a78d-4299-930c-2e8428861f55": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Create Event",
+        "parameters": {},
+        "typeVersion": 1.3
+      },
+      "019a38f2-4447-4b31-8fc5-41cf0ca90a29": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Get Events",
+        "parameters": {},
+        "typeVersion": 1.3
+      },
+      "c3352115-f872-46a8-a880-bd45d9e082b9": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Delete Event",
+        "parameters": {},
+        "typeVersion": 1.3
+      },
+      "d6c48e3b-7e3f-4924-a41d-e772e3e1b208": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Update Event",
+        "parameters": {},
+        "typeVersion": 1.3
+      }
+    }
   }
 }

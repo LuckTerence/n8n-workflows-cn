@@ -190,7 +190,7 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -199,7 +199,6 @@
         }
       },
       "retryOnFail": true,
-      "typeVersion": 3,
       "waitBetweenTries": 5000
     },
     {
@@ -402,15 +401,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "rvBAumtq4Uwnq9sJ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "dbd37184-e2f1-4204-9262-cc1a582c5f71",
@@ -437,15 +435,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "rvBAumtq4Uwnq9sJ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "dc0bc4db-3b43-4f2f-8ac5-5ad400fc23dc",
@@ -813,13 +810,70 @@
   "_cn_meta": {
     "title_zh": "Optimize Technical Manuals for RAG & Agents with Blockify IdeaBlocks",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9593,
     "synced_at": "2026-06-17T14:15:14.766066",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "AI 智能体、RAG 检索增强"
+    "description_zh": "AI 智能体、RAG 检索增强",
+    "replacements": {
+      "71e3e38e-b653-47d5-9924-3dd9d28cb401": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Blockified Manual",
+        "parameters": {
+          "name": "=blockified-manual.txt",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1yVqBHUS7RZqNY1cj6IYUOQ_eLVDjA7y5",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1yVqBHUS7RZqNY1cj6IYUOQ_eLVDjA7y5",
+            "cachedResultName": "n8n-blockify-manual-extraction"
+          }
+        },
+        "typeVersion": 3
+      },
+      "88d04eda-7ba3-4f32-a943-019622e513f2": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Search files and folders",
+        "parameters": {
+          "filter": {
+            "folderId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "root",
+              "cachedResultUrl": "https://drive.google.com/drive",
+              "cachedResultName": "/ (Root folder)"
+            }
+          },
+          "options": {},
+          "resource": "fileFolder",
+          "returnAll": true,
+          "searchMethod": "query"
+        },
+        "typeVersion": 3
+      },
+      "5591235c-65fe-4b78-9f60-df81e4c8ddc5": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Document to Blockify",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

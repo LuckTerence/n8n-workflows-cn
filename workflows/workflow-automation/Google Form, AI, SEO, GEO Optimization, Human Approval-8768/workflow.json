@@ -215,7 +215,7 @@
         1312
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -227,9 +227,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "8304abe7-1eba-484d-a673-4e3d1c655ba3",
@@ -240,7 +239,7 @@
         1312
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -252,9 +251,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b82347fd-1fbd-41f7-a653-3b591d8aeadd",
@@ -652,7 +650,7 @@
   "_cn_meta": {
     "title_zh": "Google Form, AI, SEO, GEO Optimization, Human Approval",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8768,
     "synced_at": "2026-06-17T14:10:02.102529",
     "foreign_services": [
@@ -660,6 +658,149 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表单处理、SEO 优化"
+    "description_zh": "表单处理、SEO 优化",
+    "replacements": {
+      "8d769939-c3b6-472b-85cc-15af3e28590a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Generated Content to Google Sheets1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Title": "={{ $('Set Data1').item.json['Topic Title'] }}",
+              "Content": "={{ $('Set Data1').item.json.Content }}",
+              "Generation Date": "={{ $now }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Content",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Content",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generation Date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Generation Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1579104486,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit#gid=1579104486",
+            "cachedResultName": "Generated Content"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit?usp=drivesdk",
+            "cachedResultName": "Content Topics"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "8304abe7-1eba-484d-a673-4e3d1c655ba3": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Topic Status on Google Sheets1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Completed",
+              "row_number": "={{ $('Get Topic from Google Sheets').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "Topic",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Topic",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Output",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Output",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit#gid=0",
+            "cachedResultName": "Topic List"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit?usp=drivesdk",
+            "cachedResultName": "Content Topics"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

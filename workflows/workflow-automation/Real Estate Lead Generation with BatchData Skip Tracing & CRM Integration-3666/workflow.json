@@ -136,16 +136,26 @@
     {
       "id": "954c492a-7da2-4902-99ab-318d4ea6e333",
       "name": "Push to CRM",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1280,
         540
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "additionalFields": {}
-      },
-      "typeVersion": 2
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "61bfd72b-8971-4298-8d2a-09baea403956",
@@ -380,6 +390,17 @@
     "tier": "B",
     "source_id": 3666,
     "synced_at": "2026-06-17T14:19:38.277425",
-    "description_zh": "线索管理、CRM 客户"
+    "description_zh": "线索管理、CRM 客户",
+    "replacements": {
+      "954c492a-7da2-4902-99ab-318d4ea6e333": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "Push to CRM",
+        "parameters": {
+          "options": {},
+          "additionalFields": {}
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

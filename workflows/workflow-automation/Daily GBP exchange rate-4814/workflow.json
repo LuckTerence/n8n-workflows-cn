@@ -97,7 +97,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -109,15 +109,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "KEkXl3MqpfWNarDZ",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.6
+      }
     }
   ],
   "active": false,
@@ -164,7 +163,7 @@
   "_cn_meta": {
     "title_zh": "Daily GBP exchange rate",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4814,
     "synced_at": "2026-06-17T14:08:30.068428",
     "foreign_services": [
@@ -172,6 +171,69 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "63b058fd-c9a7-44ee-8356-d1731448922e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $('HTTP Request').item.json.date }}",
+              "Rate": "={{ $('HTTP Request').item.json.rates.USD }}",
+              "Currency": "={{ $('HTTP Request').item.json.base }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Currency",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Currency",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Rate",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Rate",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cO7Qo4g8o5zaXi54KmqzZYDDHw0yFLJ_-BPyNnLfOG8/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1cO7Qo4g8o5zaXi54KmqzZYDDHw0yFLJ_-BPyNnLfOG8"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

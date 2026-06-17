@@ -54,15 +54,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "L47XiMFzcjUgBp2i",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "50a59e8e-ca95-4594-b8a9-0ba709795d42",
@@ -155,15 +154,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "L47XiMFzcjUgBp2i",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "70b6bb63-fedf-42eb-a6a0-30faae883f2c",
@@ -252,13 +250,45 @@
   "_cn_meta": {
     "title_zh": "Automated AI image tagging and writing keywords into image (via community node)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2997,
     "synced_at": "2026-06-17T14:07:06.176482",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成、流程自动化"
+    "description_zh": "图片生成、流程自动化",
+    "replacements": {
+      "1df51279-b3bd-49bd-9711-951eb4164290": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Image File",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "9c531288-7fca-4cca-9717-6dd059266f47": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Update Image File",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Download Image File').item.json.id }}"
+          },
+          "options": {},
+          "operation": "update",
+          "changeFileContent": true,
+          "newUpdatedFileName": "={{ $('Download Image File').item.json.name }}"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

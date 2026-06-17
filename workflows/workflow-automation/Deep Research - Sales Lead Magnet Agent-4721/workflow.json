@@ -349,15 +349,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "ZJFp1qPZlykTJQ35",
           "name": "Google Drive account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "78e3fb39-f170-4c71-8e69-4661625306a0",
@@ -859,7 +858,7 @@
   "_cn_meta": {
     "title_zh": "Deep Research - Sales Lead Magnet Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4721,
     "synced_at": "2026-06-17T14:12:36.583834",
     "foreign_services": [
@@ -867,6 +866,28 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
-    "description_zh": "AI 智能体、线索管理、智能搜索"
+    "description_zh": "AI 智能体、线索管理、智能搜索",
+    "replacements": {
+      "f704a1c4-04ed-40cf-a9d2-49f60c2fa249": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.documentId }}"
+          },
+          "options": {},
+          "operation": "share",
+          "permissionsUi": {
+            "permissionsValues": {
+              "role": "reader",
+              "type": "anyone"
+            }
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

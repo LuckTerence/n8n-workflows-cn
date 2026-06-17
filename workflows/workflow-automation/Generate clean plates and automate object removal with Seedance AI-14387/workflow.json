@@ -264,15 +264,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "credential-id",
           "name": "Automations.ai"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "f22c8936-37b8-4f15-8b33-a2cb82279830",
@@ -304,13 +303,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -335,13 +334,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -358,7 +357,7 @@
         528
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -370,15 +369,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "notionApi": {
           "id": "credential-id",
           "name": "saurabh notion"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "9d556eab-3bb8-4390-9bfb-509c832cc363",
@@ -559,13 +557,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -812,7 +810,7 @@
   "_cn_meta": {
     "title_zh": "Generate clean plates and automate object removal with Seedance AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14387,
     "synced_at": "2026-06-17T14:09:40.048840",
     "foreign_services": [
@@ -821,6 +819,130 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "流程自动化"
+    "description_zh": "流程自动化",
+    "replacements": {
+      "5df88f1b-96ec-4489-9f21-221a04a4e4dd": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive: Upload Clean Plate",
+        "parameters": {
+          "name": "={{ $('Generate Nuke Comp Script').first().json.shotCode }}_{{ $('Generate Nuke Comp Script').first().json.passType }}_{{ $('Generate Nuke Comp Script').first().json.variantId }}.mp4",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1fL57MP1QWsF0O_n7WuqfzJ0hO6I9Csrh",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1fL57MP1QWsF0O_n7WuqfzJ0hO6I9Csrh",
+            "cachedResultName": "Simulation FX Concept Generator "
+          }
+        },
+        "typeVersion": 3
+      },
+      "6dce94fe-8de1-4bf4-b523-22ceb5d90dde": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Notify Paint/Comp Team",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0ANFAL4WJ2",
+            "cachedResultName": "social"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🧹 *AI Clean Plate Ready – {{ $json.shotCode }}* {{ $json.allQcPassed ? '✅ All QC Passed' : '⚠️ Some Passes Need Review' }}\n\n📋 *Shot:* {{ $json.shotCode }} | *Sequence:* {{ $json.sequenceCode }}\n🎯 *Object Type:* {{ $json.objectType }}\n📝 *Brief:* {{ $json.removalBrief }}\n📊 *Total Passes:* {{ $json.totalPasses }}\n\n*Generated Passes:*\n{{ $json.passLines }}\n\n📁 *Folder Structure:*\n> Clean Plates: {{ $json.folderStructure.cleanPlates }}\n> Diff Maps: {{ $json.folderStructure.differenceMaps }}\n> Nuke Scripts: {{ $json.folderStructure.nukeScripts }}\n\n📝 *Nuke Script:* {{ $json.nukeScriptName }}\n```\n{{ $json.nukeScript }}\n```\n\n_{{ $json.allQcPassed ? 'All passes auto-approved — ready for comp!' : 'Some passes need artist review before use.' }}_\n_Generated at: {{ $json.generatedAt }}_"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "33185252-2326-4683-8f6e-ae9170930389": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: QC Failed — Artist Review",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0ANFAL4WJ2",
+            "cachedResultName": "social"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=⚠️ *Clean Plate QC Failed – Needs Artist Review – {{ $json.shotCode }}*\n\n📋 *Shot:* {{ $json.shotCode }}\n🎯 *Object Type:* {{ $json.objectType }}\n📝 *Brief:* {{ $json.removalBrief }}\n\n> QC score below threshold — artist review required before use.\n> 🎬 <{{ $json.videoUrl }}|View Result>\n> 📅 {{ $json.generatedAt }}\n\n_Please review manually and approve or re-submit._"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "ba7a8922-509e-4a99-9931-d3f9ec75efc1": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Create a database page",
+        "parameters": {
+          "title": "AI-Assisted Clean Plate",
+          "options": {},
+          "resource": "databasePage",
+          "databaseId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "32f802b9-1fa0-80da-b562-e27227bc9319",
+            "cachedResultUrl": "https://www.notion.so/32f802b91fa080dab562e27227bc9319",
+            "cachedResultName": "AI-Assisted Clean Plate & Object Removal"
+          },
+          "propertiesUi": {
+            "propertyValues": [
+              {
+                "key": "plateImageUrl|rich_text",
+                "textContent": "={{ $json.plateImageUrl }}"
+              },
+              {
+                "key": "projectId|rich_text",
+                "textContent": "={{ $json.projectId }}"
+              },
+              {
+                "key": "sequenceCode|rich_text",
+                "textContent": "={{ $json.sequenceCode }}"
+              },
+              {
+                "key": "variantId|title",
+                "title": "={{ $json.variantId }}"
+              },
+              {
+                "key": "videoUrl|rich_text",
+                "textContent": "={{ $json.videoUrl }}"
+              }
+            ]
+          }
+        },
+        "typeVersion": 2.2
+      },
+      "be1bebcd-f0a4-41f4-ac75-ac94e689e766": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Error Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0ANFAL4WJ2",
+            "cachedResultName": "social"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=❌ *AI-Assisted Clean Plate & Object Removal\n\nError: {{ $json.message }}\nTime: {{ new Date().toISOString() }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

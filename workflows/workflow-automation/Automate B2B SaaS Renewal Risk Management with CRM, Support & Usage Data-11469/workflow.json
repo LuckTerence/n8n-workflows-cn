@@ -189,23 +189,32 @@
     {
       "id": "929935d7-d621-459d-9c88-3462be51ecb0",
       "name": "HubSpot – Get engagement history",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1008,
         -160
       ],
       "parameters": {
-        "resource": "engagement",
-        "operation": "getAll",
-        "authentication": "oAuth2"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "hubspotOAuth2Api": {
           "id": "yourid",
           "name": "HubSpot account"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "3e4ea5c2-bbd9-47ac-b349-b4cd41ad3560",
@@ -635,11 +644,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -647,7 +657,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1333,6 +1342,38 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "CRM 客户、流程自动化"
+    "description_zh": "CRM 客户、流程自动化",
+    "replacements": {
+      "929935d7-d621-459d-9c88-3462be51ecb0": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "HubSpot – Get engagement history",
+        "parameters": {
+          "resource": "engagement",
+          "operation": "getAll",
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 2.2
+      },
+      "268fb051-179d-4a6a-8294-e731a913e861": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack notification",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C09V1228324",
+            "cachedResultName": "tous-n8n"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "Alert: risk of churn"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

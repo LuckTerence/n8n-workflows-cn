@@ -370,11 +370,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -382,7 +383,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -892,7 +892,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Ticket Triage with Multi-Model Classification & Knowledge Base",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11854,
     "synced_at": "2026-06-17T14:14:50.198463",
     "foreign_services": [
@@ -901,6 +901,27 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "工单管理"
+    "description_zh": "工单管理",
+    "replacements": {
+      "af2df0d0-e747-4836-b6de-392a914fd728": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify Engineer",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Workflow Configuration').first().json.slackChannel }}"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 *Engineer Attention Required*\n\n*Ticket:* {{ $json.title }}\n*Category:* {{ $json.category }}\n*Priority:* {{ $json.priority }}\n*Complexity:* {{ $json.complexity }}\n\n*AI-Generated Solution:*\n{{ $json.solution }}\n\n*Diagnostic Info:*\n```{{ JSON.stringify($json.diagnosticInfo, null, 2) }}```\n\nPlease review and take action."
+          }
+        },
+        "typeVersion": 2.4
+      }
+    }
   }
 }

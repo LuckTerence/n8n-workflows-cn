@@ -17,7 +17,7 @@
         -64
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -29,7 +29,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -39,7 +39,6 @@
       },
       "executeOnce": false,
       "retryOnFail": false,
-      "typeVersion": 4.7,
       "alwaysOutputData": true
     },
     {
@@ -315,7 +314,7 @@
         -80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -327,7 +326,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -335,8 +334,7 @@
           "name": "googleSheetsOAuth2Api Credential"
         }
       },
-      "retryOnFail": true,
-      "typeVersion": 4.7
+      "retryOnFail": true
     },
     {
       "id": "d57bc019-f640-48d0-9628-4e3c9c1f5d57",
@@ -861,7 +859,7 @@
         -944
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -873,15 +871,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "credential-id",
           "name": "googleSheetsOAuth2Api Credential"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "af27370d-b54a-4b35-b31d-679a1889ebe8",
@@ -916,7 +913,7 @@
         -80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -928,7 +925,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -936,8 +933,7 @@
           "name": "googleSheetsOAuth2Api Credential"
         }
       },
-      "notesInFlow": false,
-      "typeVersion": 4.7
+      "notesInFlow": false
     },
     {
       "id": "9852ebb9-18c4-4420-9281-048c03995433",
@@ -1822,13 +1818,245 @@
   "_cn_meta": {
     "title_zh": "AI expense tracker: Telegram voice-photo-text to sheets",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12006,
     "synced_at": "2026-06-17T14:11:39.943781",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、语音处理、表格处理"
+    "description_zh": "Telegram 机器人、语音处理、表格处理",
+    "replacements": {
+      "789a3e35-547d-47ff-9fce-4287f1a51ee0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets: Get Rows (Dedup lookup)",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.update_id }}",
+                "lookupColumn": "Update_ID"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.sheet_gid_log }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "1cd58e0a-904a-4ac6-88dc-e35b6f3cbfc2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets → Append row(s)",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $json.date }}",
+              "Item": "={{ $json.item }}",
+              "Amount": "={{ $json.amount }}",
+              "Category": "={{ $json.category }}",
+              "Currency": "={{ $json.currency }}",
+              "Raw_Input": "={{ $json.raw_input }}",
+              "Update_ID": "={{ $json.update_id }}",
+              "Message_ID": "={{ $json.message_id }}",
+              "Payment_Method": "={{ $json.payment_method }}"
+            },
+            "schema": [
+              {
+                "id": "Update_ID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Update_ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Message_ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Message_ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Item",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Item",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Amount",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Amount",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Payment_Method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Payment_Method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Currency",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Currency",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw_Input",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Raw_Input",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.sheet_gid_log }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "9551f85a-3dd3-413c-a5b9-155a3065611e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets → Append or update row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ts": "={{ new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }) }}",
+              "amount": "={{ $json.amount }}",
+              "raw_text": "={{ $json.raw_text }}"
+            },
+            "schema": [
+              {
+                "id": "ts",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "ts",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "amount",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "amount",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "raw_text",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "raw_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ Number($('CONFIG - User Settings').item.json.sheet_gid_budget) }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "179743fe-7387-48b4-a2e0-50a5b9479ad4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "GS - Get Daily Report Range",
+        "parameters": {
+          "options": {
+            "dataLocationOnSheet": {
+              "values": {
+                "range": "D1:I2",
+                "rangeDefinition": "specifyRangeA1"
+              }
+            }
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ Number($('CONFIG - User Settings').item.json.sheet_gid_dashboard) }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

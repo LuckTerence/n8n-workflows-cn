@@ -47,7 +47,7 @@
         -208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -59,9 +59,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Split: Education",
@@ -84,7 +83,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -96,9 +95,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Split: Skills",
@@ -121,7 +119,7 @@
         192
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -133,9 +131,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Append: Summary",
@@ -145,7 +142,7 @@
         384
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -157,9 +154,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Fan-out",
@@ -465,13 +461,118 @@
   "_cn_meta": {
     "title_zh": "Create a master CV Google Sheet from uploaded CVs with easybits",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15528,
     "synced_at": "2026-06-17T14:06:22.878177",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表格处理"
+    "description_zh": "表格处理",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append: Summary",
+        "parameters": {
+          "columns": {
+            "value": {
+              "email": "={{ $json.summaryRow.email }}",
+              "links": "={{ $json.summaryRow.links }}",
+              "summary": "={{ $json.summaryRow.summary }}",
+              "location": "={{ $json.summaryRow.location }}",
+              "full_name": "={{ $json.summaryRow.full_name }}",
+              "languages": "={{ $json.summaryRow.languages }}",
+              "linkedin_url": "={{ $json.summaryRow.linkedin_url }}"
+            },
+            "schema": [
+              {
+                "id": "full_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "full_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "linkedin_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "linkedin_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "location",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "location",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "summary",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "summary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "languages",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "languages",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "links",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "links",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 585954066,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1L9Jx4MR-A0DskhZfhHB62GwtSVX2A0y1o8k_rn5F1AY/edit#gid=585954066",
+            "cachedResultName": "Summary"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "REPLACE_WITH_YOUR_SHEET_ID",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SHEET_ID/edit",
+            "cachedResultName": "Master CV"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

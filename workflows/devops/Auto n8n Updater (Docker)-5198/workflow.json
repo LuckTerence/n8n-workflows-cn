@@ -731,7 +731,7 @@
   "_cn_meta": {
     "title_zh": "Auto n8n Updater (Docker)",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5198,
     "synced_at": "2026-06-17T14:17:43.210680",
     "foreign_services": [

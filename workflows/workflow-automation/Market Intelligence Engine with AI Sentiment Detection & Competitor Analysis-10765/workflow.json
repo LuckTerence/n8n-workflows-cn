@@ -607,11 +607,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -619,7 +620,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1361,7 +1361,7 @@
   "_cn_meta": {
     "title_zh": "Market Intelligence Engine with AI Sentiment Detection & Competitor Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10765,
     "synced_at": "2026-06-17T14:13:03.590500",
     "foreign_services": [
@@ -1369,6 +1369,27 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "市场数据"
+    "description_zh": "市场数据",
+    "replacements": {
+      "d62439d4-c362-41e6-a191-a47fcb47f5cb": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Slack Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Slack channel ID or name__>"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 *New AI Trend Alert*\n\n{{ $json.message }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

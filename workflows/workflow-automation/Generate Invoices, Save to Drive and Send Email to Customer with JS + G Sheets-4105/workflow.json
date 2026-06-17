@@ -44,7 +44,7 @@
         20
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -56,7 +56,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -64,7 +64,6 @@
           "name": "Google Sheets"
         }
       },
-      "typeVersion": 4.5,
       "alwaysOutputData": true
     },
     {
@@ -211,15 +210,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "l8Cc2MEVE7foBfbK",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "b181eddc-e786-4d44-a334-e1b581b3981f",
@@ -256,7 +254,7 @@
         320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -268,15 +266,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "d0qeLhShx9sGXalR",
           "name": "Google Sheets"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "cd06d6c9-903d-4af8-8327-eb36ba3bc73a",
@@ -458,7 +455,7 @@
   "_cn_meta": {
     "title_zh": "Generate Invoices, Save to Drive and Send Email to Customer with JS + G Sheets",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4105,
     "synced_at": "2026-06-17T14:15:55.999752",
     "foreign_services": [
@@ -466,6 +463,156 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "邮件自动化、语音处理、发票处理"
+    "description_zh": "邮件自动化、语音处理、发票处理",
+    "replacements": {
+      "bf50ca10-4021-4e6f-9c08-56fd84ce13ed": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Check if ID Already Exists",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.order_id }}",
+                "lookupColumn": "Invoice ID"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit#gid=0",
+            "cachedResultName": "Invoices"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit?usp=drivesdk",
+            "cachedResultName": "Uppfy Shop Invoices"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "cebf6d0d-d43f-4e50-abc0-79ff8da1817a": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload PDF to GDrive",
+        "parameters": {
+          "name": "={{ $('Set Fields').item.json.order_id }} - {{ $('Set Fields').item.json.customer_name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "root",
+            "cachedResultName": "/ (Root folder)"
+          }
+        },
+        "typeVersion": 3
+      },
+      "883e32b6-a812-44c8-b525-97e819af90bd": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append Details to Invoices Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Unpaid",
+              "Invoice ID": "={{ $('Set Fields').item.json.order_id }}",
+              "Invoice URL": "={{ $('Upload PDF to GDrive').item.json.webViewLink }}",
+              "Invoice Amt.": "=${{ $('Set Fields').item.json.total }}",
+              "Customer Name": "={{ $('Set Fields').item.json.customer_name }}",
+              "Customer Email": "={{ $('Set Fields').item.json.customer_email }}"
+            },
+            "schema": [
+              {
+                "id": "Invoice ID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Invoice ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Customer Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Customer Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Invoice Amt.",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Invoice Amt.",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Invoice URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Invoice URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Invoice ID"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit#gid=0",
+            "cachedResultName": "Invoices"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit?usp=drivesdk",
+            "cachedResultName": "Uppfy Shop Invoices"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

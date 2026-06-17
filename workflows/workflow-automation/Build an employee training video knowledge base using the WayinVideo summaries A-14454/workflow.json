@@ -222,7 +222,7 @@
         1904
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -234,9 +234,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "078817c7-9d1c-4aa1-89ba-ec2394a9abb0",
@@ -337,7 +336,7 @@
   "_cn_meta": {
     "title_zh": "Build an employee training video knowledge base using the WayinVideo summaries API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14454,
     "synced_at": "2026-06-17T14:06:21.714061",
     "foreign_services": [
@@ -345,6 +344,99 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "fbcc3551-2649-465f-8a5d-701dc665b371": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "6. Save — Append Row to Google Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Tags": "={{ $json.data.tags.map(tag => `• ${tag}`).join('\\n') }}",
+              "Video URL": "={{ $('1. Form — Video URL + Topic1').item.json['Training Video URL'] }}",
+              "Highlights": "={{ $json.data.highlights\n  .flatMap(item => item.events.map(e => e.desc))\n  .map((desc, i) => `${i + 1}. ${desc}`)\n  .join('\\n\\n')\n}}",
+              "Key Summary": "={{ $json.data.summary }}",
+              "Video Title": "={{ $json.data.title }}",
+              "Topic/Department": "={{ $('1. Form — Video URL + Topic1').item.json['Topic / Department'] }}"
+            },
+            "schema": [
+              {
+                "id": "Topic/Department",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Topic/Department",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Key Summary",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Key Summary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Highlights",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Highlights",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Tags",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Tags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "YOUR_GOOGLE_SHEET_URL"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

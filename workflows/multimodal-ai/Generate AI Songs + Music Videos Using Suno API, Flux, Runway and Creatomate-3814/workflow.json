@@ -400,7 +400,7 @@
         560
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -412,10 +412,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "executeOnce": true,
-      "typeVersion": 4.5
+      "executeOnce": true
     },
     {
       "id": "6c0a6276-23cf-4a44-8fcb-f25b196e4b2d",
@@ -485,9 +484,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "66c1f238-ed4b-41ae-8081-d1cbf039b721",
@@ -498,7 +496,7 @@
         500
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -510,10 +508,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "executeOnce": true,
-      "typeVersion": 4.5
+      "executeOnce": true
     },
     {
       "id": "414980db-7132-4721-a07a-61392e25a35a",
@@ -560,9 +557,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "ccbcdb14-f25e-4544-9d48-102c6383bd2f",
@@ -632,9 +628,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "231f64c6-499e-44c6-84a0-9a59062c5a4d",
@@ -645,7 +640,7 @@
         640
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -657,9 +652,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2b7e5239-1c99-4875-b8e8-659ee305affa",
@@ -693,7 +687,7 @@
         1440
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -705,10 +699,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "executeOnce": true,
-      "typeVersion": 4.5
+      "executeOnce": true
     },
     {
       "id": "6f6fb085-e42c-4cfc-bad4-2bcbeb47eb92",
@@ -744,9 +737,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "f996a858-e7e6-42d0-999f-c41ca96c2c93",
@@ -757,7 +749,7 @@
         1440
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -769,9 +761,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "29088148-44ce-40cd-8b22-51046e0c5ee4",
@@ -1465,7 +1456,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI Songs + Music Videos Using Suno API, Flux, Runway and Creatomate",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3814,
     "synced_at": "2026-06-17T14:19:59.187163",
     "foreign_services": [
@@ -1473,6 +1464,62 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "API 接口、视频生成"
+    "description_zh": "API 接口、视频生成",
+    "replacements": {
+      "5bcb2486-f772-4989-9653-db971b9143bc": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get one Pending Row",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "120e3d81-547a-43f2-b33b-3ed84f5a10db": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Audio Track to Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "66c1f238-ed4b-41ae-8081-d1cbf039b721": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Audio URL in GSheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "582fac36-87c5-46b6-b1cd-37b572c2cdca": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Cover Image 1:1 to Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "a017607f-b8e1-4863-aef7-0d85ef20ffa3": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Converted Video to Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "231f64c6-499e-44c6-84a0-9a59062c5a4d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Cover Photo & Video URLs",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "292d51ff-477f-4b0e-b018-664949d5b880": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Pending Render Row",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "70a37583-ddf8-44ab-8628-9a89c3586685": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Rename Uploaded Video",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "f996a858-e7e6-42d0-999f-c41ca96c2c93": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Music Video URL + Render Status",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

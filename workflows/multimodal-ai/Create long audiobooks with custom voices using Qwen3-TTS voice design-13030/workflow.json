@@ -85,7 +85,7 @@
         416
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -97,15 +97,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "08e31150-9ab1-4a21-8076-a8321152cf05",
@@ -116,7 +115,7 @@
         432
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -128,15 +127,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "f239924d-33e2-4ed7-b6a5-e71e7b1450a6",
@@ -291,15 +289,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "HEy5EuZkgPZVEa9w",
           "name": "Google Drive account (n3w.it)"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "888104ba-8bce-432c-9384-29fab163c784",
@@ -310,7 +307,7 @@
         432
       ],
       "parameters": {
-        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
+        "url": "https://api.replicate.com/v1/models/qwen/qwen3-tts/predictions",
         "method": "POST",
         "options": {},
         "jsonBody": "={\n  \"input\": {\n    \"mode\": \"voice_design\",\n    \"text\": \"{{ $json.Text }}\",\n    \"language\": \"auto\",\n     \"speaker\": \"{{ $json.Speaker }}\",\n    \"voice_description\": \"{{ $json['Voice Description'] }}\",\n    \"style_instruction\":\"{{ $json['Style Instruction'] }}\"\n  }\n} ",
@@ -326,8 +323,7 @@
               "value": "wait"
             }
           ]
-        },
-        "notes": "原 Replicate → 通义万相"
+        }
       },
       "credentials": {
         "httpBearerAuth": {
@@ -602,7 +598,7 @@
   "_cn_meta": {
     "title_zh": "Create long audiobooks with custom voices using Qwen3-TTS voice design",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13030,
     "synced_at": "2026-06-17T14:19:55.381335",
     "foreign_services": [
@@ -610,6 +606,162 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "语音处理、音频处理、文本转语音"
+    "description_zh": "语音处理、音频处理、文本转语音",
+    "replacements": {
+      "5dab72a8-326f-4483-a83f-0c68546508fe": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get scripts",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "Temp URL"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit?usp=drivesdk",
+            "cachedResultName": "Audiobooks"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "08e31150-9ab1-4a21-8076-a8321152cf05": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Temp URL",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Temp URL": "={{ $json.output }}",
+              "To Merge": "x",
+              "row_number": "={{ $('Loop Over Items').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "Text",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Speaker",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Speaker",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Voice Description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Voice Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Style Instruction",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Style Instruction",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Temp URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Temp URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "To Merge",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "To Merge",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit?usp=drivesdk",
+            "cachedResultName": "Audiobooks"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "889c8e2c-9a08-49b9-a820-1bfd194e8934": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Audiobook",
+        "parameters": {
+          "name": "={{ $now.format('yyyyLLddHHmmss') }}-{{ $json.audio.file_name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
+            "cachedResultName": "Fal.run"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

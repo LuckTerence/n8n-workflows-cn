@@ -38,15 +38,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "oz9iNMxcuQ2pxr1e",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "22872ac5-14e4-4ea7-b792-30e19a02cb88",
@@ -73,15 +72,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "oz9iNMxcuQ2pxr1e",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "8c1f2da9-fff4-457d-bc2e-7c84de3500b3",
@@ -783,13 +781,49 @@
   "_cn_meta": {
     "title_zh": "Chat with PDF - MD - Text Files using GraphRAG (no vector store needed)",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4755,
     "synced_at": "2026-06-17T14:15:00.904726",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "AI 对话、RAG 检索增强、向量存储"
+    "description_zh": "AI 对话、RAG 检索增强、向量存储",
+    "replacements": {
+      "011910a9-c2a0-49eb-b1eb-8043e0c2accc": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Search Google Drive",
+        "parameters": {
+          "filter": {
+            "folderId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "13tqp0SaI_v4jG1CFLAZo96isx-UBno4v",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/13tqp0SaI_v4jG1CFLAZo96isx-UBno4v",
+              "cachedResultName": "GraphRAG"
+            }
+          },
+          "options": {},
+          "resource": "fileFolder",
+          "returnAll": true,
+          "queryString": "*"
+        },
+        "typeVersion": 3
+      },
+      "6456b7ac-f936-425a-a0ac-62fe118e985a": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Retrieve File",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

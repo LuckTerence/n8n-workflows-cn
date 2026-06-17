@@ -16,15 +16,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "nTWGelaHlbvHrG66",
           "name": "Khaisa Studio"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "40108440-f928-4550-b7f9-7777ccbee4e8",
@@ -38,15 +37,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "nTWGelaHlbvHrG66",
           "name": "Khaisa Studio"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "b47daf1e-f98e-4039-a521-e18117df50cd",
@@ -2131,7 +2129,7 @@
   "_cn_meta": {
     "title_zh": "Automatic Job Listings Extraction and Publishing Template",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6518,
     "synced_at": "2026-06-17T14:06:21.124431",
     "foreign_services": [
@@ -2139,6 +2137,41 @@
       "Supabase"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
-    "description_zh": "求职招聘"
+    "description_zh": "求职招聘",
+    "replacements": {
+      "27e265ef-0178-463c-894f-638b05f36ab6": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Search File",
+        "parameters": {
+          "filter": {
+            "folderId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "1qarDrwjNIrrx2wk8RMzLpyIq_6r0DHLX",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/1qarDrwjNIrrx2wk8RMzLpyIq_6r0DHLX",
+              "cachedResultName": "GPT"
+            }
+          },
+          "options": {},
+          "resource": "fileFolder",
+          "returnAll": true
+        },
+        "typeVersion": 3
+      },
+      "40108440-f928-4550-b7f9-7777ccbee4e8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Get Data",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

@@ -357,7 +357,7 @@
         -180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -369,15 +369,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "3Pu0wlfxgNYzVqY6",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "62dd3faf-22db-40f9-892c-2cf9368a9496",
@@ -388,7 +387,7 @@
         460
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -400,15 +399,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "3Pu0wlfxgNYzVqY6",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "7b465ed0-d2cc-4862-b0e6-4bd6215f3945",
@@ -748,13 +746,117 @@
   "_cn_meta": {
     "title_zh": "Obsidian Notes Read Aloud using AI: Available as a Podcast Feed",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2699,
     "synced_at": "2026-06-17T14:20:44.996730",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "10a35ef9-ab86-4010-9fcc-3cd765384e93": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append Item to Google Sheet",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "duration",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit#gid=0",
+            "cachedResultName": "Blad1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit?usp=drivesdk",
+            "cachedResultName": "obsidian-n8n"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "62dd3faf-22db-40f9-892c-2cf9368a9496": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Items from Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit#gid=0",
+            "cachedResultName": "Blad1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit?usp=drivesdk",
+            "cachedResultName": "obsidian-n8n"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

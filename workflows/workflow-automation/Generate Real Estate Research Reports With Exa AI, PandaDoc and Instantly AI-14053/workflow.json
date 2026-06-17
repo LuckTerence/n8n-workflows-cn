@@ -202,13 +202,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -324,7 +324,7 @@
         -288
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -336,15 +336,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "FFE3eW2xeyduMxp9",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "f32205a5-a69d-42bb-84b3-ce718163297e",
@@ -374,13 +373,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -397,7 +396,7 @@
         -64
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -409,15 +408,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "FFE3eW2xeyduMxp9",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "80061df0-aa51-487c-810f-d2357c353e36",
@@ -667,7 +665,7 @@
   "_cn_meta": {
     "title_zh": "Generate Real Estate Research Reports With Exa AI, PandaDoc and Instantly AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14053,
     "synced_at": "2026-06-17T14:12:47.964143",
     "foreign_services": [
@@ -675,6 +673,64 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "智能搜索"
+    "description_zh": "智能搜索",
+    "replacements": {
+      "6528e245-161c-48f9-9c27-6495d8277f07": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Pending Approval",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "select": "user",
+          "otherOptions": {}
+        },
+        "typeVersion": 2.4
+      },
+      "c2d49cc1-02cd-4a07-b13c-05ed2f7b160c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Sheet Status",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "e12642bd-c4d7-436e-b3f2-201ef9296c48": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send a message1",
+        "parameters": {
+          "otherOptions": {}
+        },
+        "typeVersion": 2.4
+      },
+      "74bbd717-bd9e-4451-b014-52d20bd2b405": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch contact",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

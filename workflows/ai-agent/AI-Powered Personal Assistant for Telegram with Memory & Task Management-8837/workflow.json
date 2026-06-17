@@ -442,7 +442,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -450,7 +450,6 @@
           "name": "Zeus Memory Fr"
         }
       },
-      "typeVersion": 2.1,
       "alwaysOutputData": true
     },
     {
@@ -611,7 +610,7 @@
         640
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -623,15 +622,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "w9J3GFIveWCX6Ri9",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "bf874e10-c9a2-403c-8d46-94c80e82e76e",
@@ -642,7 +640,7 @@
         960
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -654,15 +652,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "w9J3GFIveWCX6Ri9",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "feb5b5c7-87e8-496e-8e39-5ecebc9159ea",
@@ -673,7 +670,7 @@
         1120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -685,15 +682,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "w9J3GFIveWCX6Ri9",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "d35e34d1-2546-4d89-b29c-494c8941aa8d",
@@ -704,7 +700,7 @@
         1260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -716,15 +712,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "w9J3GFIveWCX6Ri9",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "b46df7ea-e400-4d2d-bd9f-5327e324ea86",
@@ -943,7 +938,7 @@
         800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -955,15 +950,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "w9J3GFIveWCX6Ri9",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "297e1c8b-c0f7-4fc2-ad65-b2eb8fb98e2c",
@@ -1304,9 +1298,127 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Personal Assistant for Telegram with Memory & Task Management",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8837,
     "synced_at": "2026-06-17T14:16:44.754004",
-    "description_zh": "Telegram 机器人"
+    "description_zh": "Telegram 机器人",
+    "replacements": {
+      "c9717320-f73e-495f-851b-579a56ffca33": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get Memories",
+        "parameters": {
+          "base": {
+            "mode": "list",
+            "value": "={{ $json.settings.AIRTABLE_BASE_ID }}"
+          },
+          "sort": {
+            "property": [
+              {
+                "field": "Time"
+              }
+            ]
+          },
+          "table": {
+            "mode": "list",
+            "value": "={ $json.settings.AIRTABLE_TABLE_MEMORY }"
+          },
+          "options": {},
+          "operation": "search"
+        },
+        "typeVersion": 2.1
+      },
+      "2dfd5a1d-11c7-4127-a42e-01c4aed85a36": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Get Events",
+        "parameters": {
+          "limit": "={{ $fromAI(\"Limit\") }}",
+          "options": {},
+          "timeMax": "={{ $fromAI(\"Before\") }}",
+          "timeMin": "={{ $fromAI(\"After\") }}",
+          "calendar": {
+            "mode": "id",
+            "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+          },
+          "operation": "getAll"
+        },
+        "typeVersion": 1.3
+      },
+      "bf874e10-c9a2-403c-8d46-94c80e82e76e": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Create Events",
+        "parameters": {
+          "end": "={{ $fromAI(\"End\") }}",
+          "start": "={{ $fromAI(\"Start\") }}",
+          "calendar": {
+            "mode": "id",
+            "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+          },
+          "additionalFields": {
+            "color": "={{ $fromAI(\"Color\") }}",
+            "summary": "={{ $fromAI(\"Title\") }}",
+            "location": "={{ $fromAI(\"Location\") }}",
+            "description": "={{ $fromAI(\"Description\") }}"
+          }
+        },
+        "typeVersion": 1.3
+      },
+      "feb5b5c7-87e8-496e-8e39-5ecebc9159ea": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Delete Events",
+        "parameters": {
+          "eventId": "={{ $fromAI(\"EventID\") }}",
+          "options": {},
+          "calendar": {
+            "mode": "id",
+            "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+          },
+          "operation": "delete"
+        },
+        "typeVersion": 1.3
+      },
+      "d35e34d1-2546-4d89-b29c-494c8941aa8d": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Update Events",
+        "parameters": {
+          "eventId": "={{ $fromAI(\"EventID\") }}",
+          "calendar": {
+            "mode": "id",
+            "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+          },
+          "operation": "update",
+          "updateFields": {
+            "end": "={{ $fromAI(\"End\") }}",
+            "color": "={{ $fromAI(\"Color\") }}",
+            "start": "={{ $fromAI(\"Start\") }}",
+            "summary": "={{ $fromAI(\"Title\") }}",
+            "location": "={{ $fromAI(\"Location\") }}",
+            "description": "={{ $fromAI(\"Description\") }}",
+            "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}"
+          }
+        },
+        "typeVersion": 1.3
+      },
+      "24b6f50f-2502-415a-a3de-8760044094dc": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Create Recurring Events",
+        "parameters": {
+          "end": "={{ $fromAI(\"End\") }}",
+          "start": "={{ $fromAI(\"Start\") }}",
+          "calendar": {
+            "mode": "id",
+            "value": "={{ $json.settings.GCAL_ID || 'primary' }}",
+            "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+          },
+          "additionalFields": {
+            "color": "={{ $fromAI(\"Color\") }}",
+            "summary": "={{ $fromAI(\"Title\") }}",
+            "location": "={{ $fromAI(\"Location\") }}",
+            "description": "={{ $fromAI(\"Description\") }}",
+            "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}"
+          }
+        },
+        "typeVersion": 1.3
+      }
+    }
   }
 }

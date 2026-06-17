@@ -38,7 +38,7 @@
         -100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -50,15 +50,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "TKSdrVOdpgxWBVk8",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "d491b5c3-31ab-49b2-abc3-8c2a67cf9571",
@@ -187,7 +186,7 @@
         20
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -199,15 +198,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "TKSdrVOdpgxWBVk8",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "f649c5b9-fad1-412c-8389-ed53b95e5583",
@@ -274,7 +272,7 @@
         -20
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -286,15 +284,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "TKSdrVOdpgxWBVk8",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "6be3a88c-4e0f-44e6-97c1-eafa13230ae7",
@@ -918,13 +915,179 @@
   "_cn_meta": {
     "title_zh": "Get Daily Exercise Plan with Flex Message via LINE",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2988,
     "synced_at": "2026-06-17T14:09:49.653519",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "529d9ed9-3ae5-41cb-983e-874aa37ee1c7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "YogaLog",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $('Trigger 2130 YogaPosesToday').first().json.timestamp }}",
+              "JSON": "={{ $('CombineAll').item.json.LineBody }}",
+              "Text": "={{ $('RewritePosesToday').item.json.text }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Text",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "JSON",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "JSON",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Date"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 325576327,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=325576327",
+            "cachedResultName": "YogaLog"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
+            "cachedResultName": "SerenityAI"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ff7bd540-c89b-43d1-bb07-bb060a6b4ba6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "YogaLog2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $('Trigger 2130 YogaPosesToday').first().json.timestamp }}",
+              "Pose": "={{ $json.name }}",
+              "Sequence": "={{ $json.sequence }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Sequence",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Sequence",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Pose",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Pose",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Date"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 2060471945,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=2060471945",
+            "cachedResultName": "YogaLog2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
+            "cachedResultName": "SerenityAI"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "acee6e43-f094-4f30-bffb-6c56b0425327": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get PoseName",
+        "parameters": {
+          "options": {
+            "dataLocationOnSheet": {
+              "values": {
+                "range": "B18:D28",
+                "rangeDefinition": "specifyRangeA1"
+              }
+            }
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 2035276041,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=2035276041",
+            "cachedResultName": "NotePad"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
+            "cachedResultName": "SerenityAI"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

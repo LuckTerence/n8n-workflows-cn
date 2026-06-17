@@ -1081,7 +1081,7 @@
         680
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1093,15 +1093,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "40b30a2c-22ee-437e-aaff-d1d0d65ddd2f",
@@ -1112,7 +1111,7 @@
         220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1124,15 +1123,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "46245ef4-d075-4ca8-b069-09e3df764c51",
@@ -1146,15 +1144,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "9c74b2ef-d345-4cb5-b2c3-200468987d5f",
@@ -1168,15 +1165,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "31dcda2a-01da-4dbc-a741-74fdb94eb61c",
@@ -1187,7 +1183,7 @@
         900
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1199,15 +1195,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "472a6076-28b6-401a-943d-2c5b1f113aaf",
@@ -1218,7 +1213,7 @@
         1180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1230,15 +1225,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "ba9a5c64-4132-4b29-bd1a-9031f078e577",
@@ -1252,15 +1246,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "ec7b39cc-fdd4-4690-8a98-0dfea0df5933",
@@ -1285,7 +1278,7 @@
         1140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1297,15 +1290,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "ec29a2d4-5881-4bec-b304-153176d9afab",
@@ -1316,7 +1308,7 @@
         1140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1328,15 +1320,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "88a1d0f3-1148-4e20-bfe3-47b1880e961a",
@@ -1347,7 +1338,7 @@
         1580
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1359,15 +1350,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "8451b2e1-cbad-4876-95cf-0d2282f88ac8",
@@ -1381,15 +1371,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "4ba4a83a-77b9-409d-95a4-9a204d988eaa",
@@ -1400,7 +1389,7 @@
         1760
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1412,15 +1401,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "4872ad87-39d9-4124-be98-c094cedb0992",
@@ -1431,7 +1419,7 @@
         2080
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1443,15 +1431,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c599c499-9f92-4fb9-8cfc-a170f9037b74",
@@ -1462,7 +1449,7 @@
         2100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1474,15 +1461,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c896e7fa-0af7-4b12-930c-0a4c14514557",
@@ -1520,7 +1506,7 @@
         2100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1532,15 +1518,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "f78c0176-d4d4-4c66-a56f-56027c028a63",
@@ -1551,7 +1536,7 @@
         2400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1563,15 +1548,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "836f3ee4-fd16-47b3-a6cd-372ff9a1f614",
@@ -1609,7 +1593,7 @@
         2400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1621,15 +1605,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "7ef03b26-acfe-4427-9b30-ad40d0eea495",
@@ -1640,7 +1623,7 @@
         2400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1652,15 +1635,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "94d30137-6c14-4d58-a479-5a3aa292b4bc",
@@ -1671,7 +1653,7 @@
         680
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1683,15 +1665,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "19c19724-c862-4aa4-931d-cac19ec9894e",
@@ -1702,7 +1683,7 @@
         2720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1714,15 +1695,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "ba4f1d6c-08fc-4375-8f7d-2ec23487943e",
@@ -1733,7 +1713,7 @@
         2720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1745,15 +1725,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "9d2fae96-163d-4139-a93c-77d5108364d0",
@@ -1777,7 +1756,7 @@
         2980
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1789,15 +1768,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "d813b0c1-0cc5-4dfa-9b7f-f264f97dfa58",
@@ -1808,7 +1786,7 @@
         2980
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1820,15 +1798,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "e74abe2a-52ba-47e2-a3f1-7837980b3a24",
@@ -1840,7 +1817,7 @@
         3420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1852,15 +1829,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c7f072a8-dddd-4eb8-b53b-f458afae9fe1",
@@ -1872,7 +1848,7 @@
         3420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1884,15 +1860,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "L15RgysjJzH0KRXL",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "bb7c3691-5aa8-48e7-a269-18ecda997e1c",
@@ -1971,15 +1946,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "9a69ae33-5fbe-4ac1-a72d-eab62532e602",
@@ -1993,15 +1967,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "EkHmdaGQ4cf4w7fy",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "e8db120a-5cab-489f-a188-e1937b8e66e1",
@@ -2790,7 +2763,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI Videos from Scripts with DeepSeek, TTS, and Together.ai",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6777,
     "synced_at": "2026-06-17T14:09:17.423830",
     "foreign_services": [
@@ -2799,6 +2772,2142 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
-    "description_zh": "视频生成、文本转语音"
+    "description_zh": "视频生成、文本转语音",
+    "replacements": {
+      "4ea7537f-f72c-4f2f-96ed-4cb6a14d6e0f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets1",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "40b30a2c-22ee-437e-aaff-d1d0d65ddd2f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Title": "={{ $('Output Parser 🛠').item.json.output.Title }}",
+              "Script": "={{ $json.Script }}",
+              "TTS Voice": "={{ $('On form submission').item.json['TTS Voice'] }}",
+              "Description": "={{ $('Output Parser 🛠').item.json.output.Description }}",
+              "Initial Prompt": "={{ $('Set Idea').item.json['User Input'] }}",
+              "Generative Style": "={{ $('On form submission').item.json['Generative Style'] }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "46245ef4-d075-4ca8-b069-09e3df764c51": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {
+          "name": "={{ $json.headers.date }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "18-Q0caunbnwIJRDKTMb8fHKvVS3kqynF",
+            "cachedResultUrl": "",
+            "cachedResultName": "tts"
+          }
+        },
+        "typeVersion": 3
+      },
+      "9c74b2ef-d345-4cb5-b2c3-200468987d5f": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive1",
+        "parameters": {
+          "name": "={{ $json.headers.date }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1ELY3F2IhJGLrrKBIE5cMV22GyAMXx6zN",
+            "cachedResultUrl": "",
+            "cachedResultName": "caption"
+          }
+        },
+        "typeVersion": 3
+      },
+      "31dcda2a-01da-4dbc-a741-74fdb94eb61c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Google Sheets1').item.json.row_number }}",
+              "Captions URL": "={{ $json.webViewLink }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "472a6076-28b6-401a-943d-2c5b1f113aaf": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets3",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ba9a5c64-4132-4b29-bd1a-9031f078e577": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive2",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "={{ $json['Captions URL'] }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "cb49323d-be0e-4e2c-adb6-cdc0804641ad": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets4",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Prompt": "={{ $json.output.Prompt }}",
+              "Duration": "={{ $('Split Out').item.json.json.duration }}",
+              "Record_id": "={{ $('Split Out').item.json.json.id }}"
+            },
+            "schema": [
+              {
+                "id": "Record_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Record_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Prompt",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Duration",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image-id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Image-id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Clip URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video Clip URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ec29a2d4-5881-4bec-b304-153176d9afab": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets5",
+        "parameters": {
+          "columns": {
+            "value": {
+              "scenes": "={{ $json.ids }}",
+              "row_number": "={{ $('Google Sheets3').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "88a1d0f3-1148-4e20-bfe3-47b1880e961a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets6",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "8451b2e1-cbad-4876-95cf-0d2282f88ac8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive3",
+        "parameters": {
+          "name": "={{ $json.headers.date }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1arlKXztkpWNzUqjupICRigGUOA6_78kw",
+            "cachedResultUrl": "",
+            "cachedResultName": "image"
+          }
+        },
+        "typeVersion": 3
+      },
+      "4ba4a83a-77b9-409d-95a4-9a204d988eaa": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets7",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Image": "={{ $json.webViewLink }}",
+              "Image-id": "={{ $json.id }}",
+              "Record_id": "={{ $('Loop Over Items').item.json.Record_id }}"
+            },
+            "schema": [
+              {
+                "id": "Record_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Record_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Duration",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image-id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Image-id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Clip URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video Clip URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Record_id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "4872ad87-39d9-4124-be98-c094cedb0992": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets8",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "c599c499-9f92-4fb9-8cfc-a170f9037b74": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets9",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.scenes }}",
+                "lookupColumn": "Record_id"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "444e08f8-067b-4059-ba1b-597b2e7de1b8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets10",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Record_id": "={{ $('Google Sheets9').item.json.Record_id }}",
+              "Video Clip URL": "={{ $json.response }}"
+            },
+            "schema": [
+              {
+                "id": "Record_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Record_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Duration",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Image-id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Image-id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video Clip URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video Clip URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Record_id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "f78c0176-d4d4-4c66-a56f-56027c028a63": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets12",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "93dd7b1b-054b-404e-ae6d-65a697f74c8c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets11",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.scenes }}",
+                "lookupColumn": "Record_id"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1408445170,
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "7ef03b26-acfe-4427-9b30-ad40d0eea495": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets13",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Google Sheets12').item.json.row_number }}",
+              "Raw Video URL": "={{ $json.response }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "94d30137-6c14-4d58-a479-5a3aa292b4bc": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets14",
+        "parameters": {
+          "columns": {
+            "value": {
+              "TTS Audio": "={{ $json.webViewLink }}",
+              "row_number": "={{ $('Google Sheets1').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "19c19724-c862-4aa4-931d-cac19ec9894e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets15",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ba4f1d6c-08fc-4375-8f7d-2ec23487943e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets16",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Google Sheets15').item.json.row_number }}",
+              "Video + Audio URL": "={{ $json.response[0].file_url }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b77778a1-07b0-4313-bad5-de3b99bd8332": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets17",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "d813b0c1-0cc5-4dfa-9b7f-f264f97dfa58": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets18",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Google Sheets17').item.json.row_number }}",
+              "Video + Caption URL": "={{ $json.response }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "e74abe2a-52ba-47e2-a3f1-7837980b3a24": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets19",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "c7f072a8-dddd-4eb8-b53b-f458afae9fe1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets20",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Google Sheets17').item.json.row_number }}",
+              "Video + Caption URL": "={{ $json.response }}"
+            },
+            "schema": [
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Script",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Script",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Final Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Caption URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Video + Caption URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video + Audio URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Video + Audio URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Raw Video URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Raw Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Audio",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Audio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TTS Voice",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TTS Voice",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "scenes",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "scenes",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Captions URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Captions URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Generative Style",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Generative Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Initial Prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Initial Prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1DkNSHR_yeqTR3IKudp8-W__PtvnnReOyaT0b8qmAK7E",
+            "cachedResultUrl": "",
+            "cachedResultName": "video"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "384fa241-3739-402e-8fd6-8daf447a917e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive4",
+        "parameters": {
+          "name": "={{ $('Google Sheets17').item.json.Title }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "11iyHSvbPR8S5tI1jzJmrKjTMo-mYUMVW",
+            "cachedResultUrl": "",
+            "cachedResultName": "clips"
+          }
+        },
+        "typeVersion": 3
+      },
+      "9a69ae33-5fbe-4ac1-a72d-eab62532e602": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive6",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Google Drive4').item.json.id }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

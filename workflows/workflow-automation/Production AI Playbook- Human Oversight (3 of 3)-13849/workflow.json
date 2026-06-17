@@ -168,11 +168,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"=*Content Approval Required*\\n\\n*Original:*\\n{{ $('On form submission1').item.json['Content Body'].substring(0,300) }}\\n\\n*AI Enhanced:*\\n{{ $json.output.substring(0,300) }}\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -180,7 +181,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -661,7 +661,7 @@
   "_cn_meta": {
     "title_zh": "Production AI Playbook: Human Oversight (3 of 3)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13849,
     "synced_at": "2026-06-17T14:10:49.818542",
     "foreign_services": [
@@ -669,6 +669,38 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "cad71c5b-918c-40a1-ada5-4baf93396386": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack Approval Request",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": "U0AB7QP5H1B",
+            "cachedResultName": "elvissaravia"
+          },
+          "message": "=*Content Approval Required*\n\n*Original:*\n{{ $('On form submission1').item.json['Content Body'].substring(0,300) }}\n\n*AI Enhanced:*\n{{ $json.output.substring(0,300) }}",
+          "options": {
+            "limitWaitTime": {
+              "values": {
+                "resumeUnit": "minutes",
+                "resumeAmount": 2
+              }
+            }
+          },
+          "operation": "sendAndWait",
+          "authentication": "oAuth2",
+          "approvalOptions": {
+            "values": {
+              "approvalType": "double",
+              "disapproveLabel": "Reject"
+            }
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

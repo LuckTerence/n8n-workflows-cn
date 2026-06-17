@@ -155,13 +155,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -453,13 +453,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -668,7 +668,7 @@
   "_cn_meta": {
     "title_zh": "Generate style-locked Seedance videos with an automated QC pipeline",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14889,
     "synced_at": "2026-06-17T14:16:28.925729",
     "foreign_services": [
@@ -676,6 +676,48 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "视频生成、流程自动化"
+    "description_zh": "视频生成、流程自动化",
+    "replacements": {
+      "0cee6a18-b757-47df-8d78-00a0e333c007": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Post Style QC Report1",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_SLACK_CHANNEL_ID",
+            "cachedResultName": "your-channel-name"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🎨 *Style QC Report – {{ $json.shotCode }} ({{ $json.showName }})*\n\n📺 *Episode:* {{ $json.episodeId }} | *Vendor:* {{ $json.vendorName }}\n🎬 *Shot:* {{ $json.newShotDescription }}\n📊 *Results:* ✅ {{ $json.totalApproved }} Approved | ❌ {{ $json.totalRejected }} Rejected\n\n*✅ Approved for Editorial:*\n{{ $json.slackApproved || 'None passed QC' }}\n\n*❌ Rejected (do not deliver):*\n{{ $json.slackRejected }}\n\n🖼️ *Hero Reference:* <{{ $json.heroReferenceUrl }}|View Approved Style Ref>\n\n_Style QC ran automatically against show profile. Approved variants pushed to editorial._\n_Generated: {{ $json.generatedAt }}_"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "b9ca3aa7-423c-4898-a944-c77494de122f": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Error Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0ANFAL4WJ2",
+            "cachedResultName": "social"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=❌ *Style Look Transfer Workflow Failed*\n\nError: {{ $json.message }}\nTime: {{ new Date().toISOString() }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

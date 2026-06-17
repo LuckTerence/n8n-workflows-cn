@@ -267,7 +267,7 @@
         128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -279,9 +279,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "c033cad3-3efe-4504-9c48-56ffb6efdc0a",
@@ -292,7 +291,7 @@
         272
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -304,9 +303,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "ba6667ca-f603-4a50-a7cd-5242dd8a35f5",
@@ -324,13 +322,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -665,7 +663,7 @@
   "_cn_meta": {
     "title_zh": "Automated Dynamic Pricing with AI Competitor Monitoring & Revenue Optimization",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6448,
     "synced_at": "2026-06-17T14:12:05.246998",
     "foreign_services": [
@@ -673,6 +671,102 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、流程自动化"
+    "description_zh": "系统监控、流程自动化",
+    "replacements": {
+      "f48d631a-3296-4815-a462-c6c83c3f282a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Pricing History Logger",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Strategy": "={{ $json.pricing_recommendation.strategy_recommendation }}",
+              "New_Price": "={{ $json.pricing_recommendation.recommended_price }}",
+              "Timestamp": "={{ $json.timestamp }}",
+              "Competitor": "={{ $json.market_analysis.competitor }}",
+              "Confidence": "={{ $json.pricing_recommendation.confidence_level }}",
+              "Product_ID": "={{ $json.product_info.id }}",
+              "Session_ID": "={{ $json.session_id }}",
+              "Demand_Score": "={{ $json.pricing_recommendation.factor_scores.demand }}",
+              "Price_Change": "={{ $json.pricing_recommendation.price_change }}",
+              "Product_Name": "={{ $json.product_info.name }}",
+              "Market_Context": "={{ $json.market_context.time_of_day + ' - ' + $json.market_context.current_day }}",
+              "Previous_Price": "={{ $json.product_info.current_price }}",
+              "Revenue_Change": "={{ $json.revenue_projection.revenue_change_estimate }}",
+              "Sentiment_Score": "={{ $json.pricing_recommendation.factor_scores.sentiment }}",
+              "Change_Percentage": "={{ $json.pricing_recommendation.price_change_percentage }}",
+              "Revenue_Projection": "={{ $json.revenue_projection.projected_revenue_estimate }}",
+              "Competitor_Avg_Price": "={{ $json.market_analysis.competitor_data.price_statistics?.avg_price || 'N/A' }}"
+            },
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Pricing_History"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "1your-pricing-dashboard-sheet-id"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "c033cad3-3efe-4504-9c48-56ffb6efdc0a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Revenue Analytics Logger",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ new Date().toISOString().split('T')[0] }}",
+              "Hour": "={{ new Date().getHours() }}",
+              "Product_ID": "={{ $json.product_info.id }}",
+              "Session_ID": "={{ $json.session_id }}",
+              "Revenue_Impact": "={{ $json.revenue_projection.revenue_change_estimate }}",
+              "Inventory_Level": "={{ $json.product_info.inventory_level || 0 }}",
+              "Strategy_Applied": "={{ $json.pricing_recommendation.strategy_recommendation }}",
+              "Demand_Multiplier": "={{ $json.market_context.demand_multiplier || 1 }}",
+              "Price_Sensitivity": "={{ $json.market_analysis.sentiment_data.price_elasticity_indicators?.price_sensitivity_score || 0.5 }}",
+              "Optimization_Score": "={{ $json.pricing_recommendation.optimization_score }}",
+              "Competitor_Price_Avg": "={{ $json.market_analysis.competitor_data.price_statistics?.avg_price || 0 }}",
+              "Current_Revenue_Rate": "={{ $json.revenue_projection.current_revenue_estimate }}",
+              "Projected_Revenue_Rate": "={{ $json.revenue_projection.projected_revenue_estimate }}"
+            },
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Revenue_Analytics"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "1your-revenue-analytics-sheet-id"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "ba6667ca-f603-4a50-a7cd-5242dd8a35f5": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Pricing Alert Sender",
+        "parameters": {
+          "channel": "pricing-alerts",
+          "attachments": [],
+          "otherOptions": {
+            "icon_emoji": ":money_with_wings:"
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=💰 **Price Optimization Alert**\n\n📦 **Product**: {{ $json.product_info.name }} ({{ $json.product_info.id }})\n💵 **Price Change**: ${{ $json.product_info.current_price }} → ${{ $json.pricing_recommendation.recommended_price }}\n📈 **Change**: {{ $json.pricing_recommendation.price_change_percentage > 0 ? '+' : '' }}{{ $json.pricing_recommendation.price_change_percentage }}%\n\n🎯 **Strategy**: {{ $json.pricing_recommendation.strategy_recommendation.toUpperCase() }}\n📊 **Confidence**: {{ Math.round($json.pricing_recommendation.confidence_level * 100) }}%\n\n**Market Analysis**:\n• 🏪 Competitor Avg: ${{ $json.market_analysis.competitor_data.price_statistics?.avg_price || 'N/A' }}\n• 📈 Demand Score: {{ Math.round($json.pricing_recommendation.factor_scores.demand * 100) }}/100\n• 💭 Sentiment Score: {{ Math.round($json.pricing_recommendation.factor_scores.sentiment * 100) }}/100\n\n💡 **Revenue Impact**: {{ $json.revenue_projection.revenue_change_estimate > 0 ? '+' : '' }}${{ Math.round($json.revenue_projection.revenue_change_estimate) }}/month"
+          }
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

@@ -350,7 +350,7 @@
   "_cn_meta": {
     "title_zh": "Scrape recent news about a company before a call",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2110,
     "synced_at": "2026-06-17T14:22:19.901909",
     "foreign_services": [

@@ -157,15 +157,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "8UenyA7IO3w0wN2R",
           "name": "Google Drive account 3"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "43c338b4-1455-4106-8c92-53d55e6adcdf",
@@ -202,11 +201,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -214,7 +214,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -262,7 +261,7 @@
   "_cn_meta": {
     "title_zh": "AI Video Summarization with VLM Run - Automated Content Analysis for Teams",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5108,
     "synced_at": "2026-06-17T14:11:39.156076",
     "foreign_services": [
@@ -270,6 +269,46 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "视频生成、流程自动化"
+    "description_zh": "视频生成、流程自动化",
+    "replacements": {
+      "d768bfc1-496d-4acd-aaee-0ce7c4c6d284": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Video File",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {
+            "binaryPropertyName": "data"
+          },
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "6f223750-f307-41f7-9509-254b8e6f310f": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Summary to Team",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C08S3SR2LUW",
+            "cachedResultName": "workflow-testing"
+          },
+          "otherOptions": {
+            "mrkdwn": true,
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=🎥 *New Video Summary Ready!*\n\n📄 **Summary:**\n{{ $json.body.response.content }}\n\n🔍 **Key Topics:**\n{{ $json.body.response.topics }}\n\n✅ Processing complete!"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

@@ -215,7 +215,7 @@
         500
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -227,9 +227,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "67d0a46b-f81f-4a73-bd39-5c400b1eeefd",
@@ -482,7 +481,7 @@
         2220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -494,9 +493,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 1
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "869c74a0-a87d-4c1a-8f5f-2d853e8f0778",
@@ -518,7 +516,7 @@
         2220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -530,9 +528,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 1
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "726ac587-3a4c-45d0-9076-b94fcd6ee91c",
@@ -1057,7 +1054,7 @@
   "_cn_meta": {
     "title_zh": "AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4368,
     "synced_at": "2026-06-17T14:19:40.076176",
     "foreign_services": [
@@ -1066,6 +1063,26 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Twilio→腾讯云短信",
-    "description_zh": "AI 智能体、语音处理"
+    "description_zh": "AI 智能体、语音处理",
+    "replacements": {
+      "1cdeaf35-c50d-4c16-b1af-38f8f0ba5924": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Real Estate Data",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "ebc6a20f-a395-4cf4-bccb-9f408a8d39d0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets - Log Lead",
+        "parameters": {},
+        "typeVersion": 1
+      },
+      "2247fdc7-b4e7-45c8-80b8-0bc62fd0dfcb": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets - Log Summary",
+        "parameters": {},
+        "typeVersion": 1
+      }
+    }
   }
 }

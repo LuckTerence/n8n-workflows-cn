@@ -577,7 +577,7 @@
         352
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -589,9 +589,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2682e628-ed05-4fd2-8feb-43d9caff7470",
@@ -610,13 +609,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1104,7 +1103,7 @@
   "_cn_meta": {
     "title_zh": "No AI suggestion available",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14276,
     "synced_at": "2026-06-17T14:10:36.102015",
     "foreign_services": [
@@ -1112,6 +1111,49 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "4cdd473a-2795-43ed-a464-a874d458e3ff": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log to Reconciliation Report",
+        "parameters": {
+          "columns": {
+            "value": null,
+            "mappingMode": "autoMapInputData"
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Reconciliation Report"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "2682e628-ed05-4fd2-8feb-43d9caff7470": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify Finance Team",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Slack Channel ID or Name__>"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=Reconciliation Complete!\n\nTotal Records Processed: {{ $json.totalRecords }}\nAuto-Reconciled: {{ $json.autoReconciledCount }}\nPending Review: {{ $json.pendingReviewCount }}\n\nView full report: {{ $json.reportUrl }}"
+          }
+        },
+        "typeVersion": 2.4
+      }
+    }
   }
 }

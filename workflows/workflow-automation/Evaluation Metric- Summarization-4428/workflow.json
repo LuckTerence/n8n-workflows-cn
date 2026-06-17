@@ -209,15 +209,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "yOwz41gMQclOadgu",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "767a7dc0-62e7-47b8-a9eb-84a399acdf1a",
@@ -509,7 +508,7 @@
   "_cn_meta": {
     "title_zh": "Evaluation Metric: Summarization",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4428,
     "synced_at": "2026-06-17T14:08:46.532005",
     "foreign_services": [
@@ -517,6 +516,22 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "f6e24007-39e5-47e4-88fc-a7bf3a994fa6": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Transcript",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "={{ $json.input }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

@@ -893,9 +893,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "fc593f3a-edcb-4c1c-9105-0c4e81f4d812",
@@ -1452,7 +1451,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Social Media Content Creator with Multi-Platform Publishing & Approval",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5669,
     "synced_at": "2026-06-17T14:21:52.869542",
     "foreign_services": [
@@ -1460,6 +1459,22 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "表单处理、社交平台"
+    "description_zh": "表单处理、社交平台",
+    "replacements": {
+      "f66196c1-fc5b-4a0e-8b47-3f486ffb7a83": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Get Social Post from Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.output.response }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

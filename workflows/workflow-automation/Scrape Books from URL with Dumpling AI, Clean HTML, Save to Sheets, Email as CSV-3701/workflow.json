@@ -370,7 +370,7 @@
   "_cn_meta": {
     "title_zh": "Scrape Books from URL with Dumpling AI, Clean HTML, Save to Sheets, Email as CSV",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3701,
     "synced_at": "2026-06-17T14:22:15.394500",
     "foreign_services": [

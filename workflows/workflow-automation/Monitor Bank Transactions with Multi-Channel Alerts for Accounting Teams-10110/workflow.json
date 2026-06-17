@@ -248,7 +248,7 @@
         32
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -260,15 +260,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "60e0ded9-8df3-4db0-a8a8-272100b3867d",
@@ -279,7 +278,7 @@
         224
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -291,15 +290,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "6fad427f-102f-4bbe-9c3e-9b6553e0c595",
@@ -310,7 +308,7 @@
         416
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -322,15 +320,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "ce4daee5-785b-46e3-ac36-236fd37acd35",
@@ -399,11 +396,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -411,7 +409,6 @@
           "name": "Slack account - test "
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -436,11 +433,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -448,7 +446,6 @@
           "name": "Slack account - test "
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -497,7 +494,7 @@
         128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -509,15 +506,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "4fdbf3d4-a589-46f8-9ca0-cc11f8f51a35",
@@ -919,7 +915,7 @@
   "_cn_meta": {
     "title_zh": "Monitor Bank Transactions with Multi-Channel Alerts for Accounting Teams",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10110,
     "synced_at": "2026-06-17T14:13:05.925306",
     "foreign_services": [
@@ -927,6 +923,288 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、告警通知"
+    "description_zh": "系统监控、告警通知",
+    "replacements": {
+      "629b2dc4-8b5c-420b-b62d-d0c1653900a2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Critical to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappings": [
+              {
+                "value": "={{ $json.timestamp }}",
+                "column": "Timestamp"
+              },
+              {
+                "value": "={{ $json.id }}",
+                "column": "Transaction_ID"
+              },
+              {
+                "value": "={{ $json.amount }}",
+                "column": "Amount"
+              },
+              {
+                "value": "={{ $json.vendor }}",
+                "column": "Vendor"
+              },
+              {
+                "value": "={{ $json.adjusted_risk_score }}",
+                "column": "Adjusted_Risk_Score"
+              },
+              {
+                "value": "={{ $json.risk_category }}",
+                "column": "Risk_Category"
+              },
+              {
+                "value": "={{ $json.country }}",
+                "column": "Country"
+              },
+              {
+                "value": "={{ $json.velocity_anomaly }}",
+                "column": "Velocity_Anomaly"
+              },
+              {
+                "value": "PENDING_REVIEW",
+                "column": "Status"
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Critical_Alerts"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1a2b3c4d5e6f7g8h"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      },
+      "60e0ded9-8df3-4db0-a8a8-272100b3867d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log High Priority to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappings": [
+              {
+                "value": "={{ $json.timestamp }}",
+                "column": "Timestamp"
+              },
+              {
+                "value": "={{ $json.id }}",
+                "column": "Transaction_ID"
+              },
+              {
+                "value": "={{ $json.amount }}",
+                "column": "Amount"
+              },
+              {
+                "value": "={{ $json.vendor }}",
+                "column": "Vendor"
+              },
+              {
+                "value": "={{ $json.adjusted_risk_score }}",
+                "column": "Adjusted_Risk_Score"
+              },
+              {
+                "value": "={{ $json.risk_category }}",
+                "column": "Risk_Category"
+              },
+              {
+                "value": "NEEDS_REVIEW",
+                "column": "Status"
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "High_Priority_Alerts"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1a2b3c4d5e6f7g8h"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      },
+      "6fad427f-102f-4bbe-9c3e-9b6553e0c595": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Medium Priority to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappings": [
+              {
+                "value": "={{ $json.timestamp }}",
+                "column": "Timestamp"
+              },
+              {
+                "value": "={{ $json.id }}",
+                "column": "Transaction_ID"
+              },
+              {
+                "value": "={{ $json.amount }}",
+                "column": "Amount"
+              },
+              {
+                "value": "={{ $json.vendor }}",
+                "column": "Vendor"
+              },
+              {
+                "value": "={{ $json.adjusted_risk_score }}",
+                "column": "Adjusted_Risk_Score"
+              },
+              {
+                "value": "LOGGED",
+                "column": "Status"
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Medium_Alerts"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1a2b3c4d5e6f7g8h"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      },
+      "5519d3bd-91b2-4973-b67a-3473a40f81c9": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Critical Slack Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "C01234ABCDE"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 *CRITICAL TRANSACTION ALERT* 🚨\n\n*Amount:* ${{ $json.amount }}\n*Vendor:* {{ $json.vendor }}\n*Risk Score:* {{ $json.adjusted_risk_score }}/10\n*Transaction ID:* {{ $json.id }}\n*Country:* {{ $json.country || 'Domestic' }}\n\n<!channel> *IMMEDIATE REVIEW REQUIRED*"
+          }
+        },
+        "typeVersion": 2.1
+      },
+      "89b36305-1002-4eec-8875-b505fcf680a7": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send High Priority Slack",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "C01234ABCDE"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=⚠️ *High Priority Transaction*\n\n*Amount:* ${{ $json.amount }}\n*Vendor:* {{ $json.vendor }}\n*Risk Score:* {{ $json.adjusted_risk_score }}/10\n*ID:* {{ $json.id }}\n\nReview within 2 hours."
+          }
+        },
+        "typeVersion": 2.1
+      },
+      "ae35c4f8-6ef1-49e4-ba55-8f2b4b0e246b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Summary to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappings": [
+              {
+                "value": "={{ $json.summary_timestamp }}",
+                "column": "Timestamp"
+              },
+              {
+                "value": "={{ $json.total_transactions }}",
+                "column": "Total_Transactions"
+              },
+              {
+                "value": "={{ $json.critical_alerts }}",
+                "column": "Critical_Count"
+              },
+              {
+                "value": "={{ $json.high_priority_alerts }}",
+                "column": "High_Count"
+              },
+              {
+                "value": "={{ $json.medium_priority_alerts }}",
+                "column": "Medium_Count"
+              },
+              {
+                "value": "={{ $json.total_amount }}",
+                "column": "Total_Amount"
+              },
+              {
+                "value": "={{ $json.average_risk_score }}",
+                "column": "Avg_Risk_Score"
+              },
+              {
+                "value": "={{ $json.international_transactions }}",
+                "column": "International_Count"
+              },
+              {
+                "value": "={{ $json.velocity_anomalies }}",
+                "column": "Velocity_Anomalies"
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Daily_Summary"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1a2b3c4d5e6f7g8h"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      }
+    }
   }
 }

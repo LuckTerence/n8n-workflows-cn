@@ -27,7 +27,7 @@
         -160
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -39,15 +39,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GaJqJHuS5mQxap7q",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "a996f64a-bb61-493d-90ca-dce9d465fd58",
@@ -321,7 +320,7 @@
     "title_zh": "AI新闻简报构建",
     "description_zh": "Dumpling AI爬站+GPT-4o摘要+简报",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4030,
     "synced_at": "2026-06-17T11:37:07.518720",
     "upgraded_at": "2026-06-17",
@@ -329,6 +328,30 @@
       "Google Sheets",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
+    "replacements": {
+      "5bf110b3-a678-4a34-a4c9-3a87ab22774f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Website URLs from Google Sheet",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10AQk_0kG8d0fa7gwbm0W8f9CyMZ9syPGksQoMNBkut4/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10AQk_0kG8d0fa7gwbm0W8f9CyMZ9syPGksQoMNBkut4/edit?usp=drivesdk",
+            "cachedResultName": "sites"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

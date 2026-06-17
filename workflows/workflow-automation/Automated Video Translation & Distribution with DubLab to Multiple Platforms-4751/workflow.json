@@ -246,23 +246,23 @@
     {
       "id": "9e0c84a5-5ddc-4628-a391-5771a5f10fa3",
       "name": "Dropbox",
-      "type": "n8n-nodes-base.dropbox",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -260,
         420
       ],
       "parameters": {
-        "path": "=/dublab-files/{{ Math.random().toString(36).slice(2) }}-dubbed-{{ $json.body.dest_lang }}-{{ $json.body.name }}",
-        "binaryData": true,
-        "authentication": "oAuth2"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Dropbox → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "dropboxOAuth2Api": {
           "id": "KaBWvQNCjKDgcxYH",
           "name": "Dropbox account"
         }
-      },
-      "typeVersion": 1
+      }
     },
     {
       "id": "0134c66f-d572-4737-90c1-09d835a0478e",
@@ -604,6 +604,18 @@
     "tier": "B",
     "source_id": 4751,
     "synced_at": "2026-06-17T14:19:22.039041",
-    "description_zh": "视频生成、表单处理、流程自动化"
+    "description_zh": "视频生成、表单处理、流程自动化",
+    "replacements": {
+      "9e0c84a5-5ddc-4628-a391-5771a5f10fa3": {
+        "type": "n8n-nodes-base.dropbox",
+        "name": "Dropbox",
+        "parameters": {
+          "path": "=/dublab-files/{{ Math.random().toString(36).slice(2) }}-dubbed-{{ $json.body.dest_lang }}-{{ $json.body.name }}",
+          "binaryData": true,
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

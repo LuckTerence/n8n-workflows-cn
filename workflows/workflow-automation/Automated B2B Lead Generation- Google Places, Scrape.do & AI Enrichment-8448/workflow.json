@@ -335,7 +335,7 @@
         128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -347,15 +347,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "df8r9D022KIAOHTC",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "7981793a-4b97-4f32-91eb-52fafc237aa5",
@@ -584,13 +583,114 @@
   "_cn_meta": {
     "title_zh": "Automated B2B Lead Generation: Google Places, Scrape.do & AI Enrichment",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8448,
     "synced_at": "2026-06-17T14:19:31.140426",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "数据采集、线索管理、流程自动化"
+    "description_zh": "数据采集、线索管理、流程自动化",
+    "replacements": {
+      "3cc6fa78-f210-49e8-a49a-b5735ef7c262": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "7. Save Enriched Lead to Google Sheets",
+        "parameters": {
+          "options": {},
+          "fieldsUi": {
+            "fieldValues": [
+              {
+                "fieldId": "BusinessName",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.businessName }}"
+              },
+              {
+                "fieldId": "Address",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.address }}"
+              },
+              {
+                "fieldId": "Phone",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.phone }}"
+              },
+              {
+                "fieldId": "website",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.website }}"
+              },
+              {
+                "fieldId": "emails",
+                "fieldValue": "={{ $json.output.contact.emails[0] }}"
+              },
+              {
+                "fieldId": "Facebook",
+                "fieldValue": "={{ $json.output.social.facebook }}"
+              },
+              {
+                "fieldId": "Instagram",
+                "fieldValue": "={{ $json.output.social.instagram }}"
+              },
+              {
+                "fieldId": "Youtube",
+                "fieldValue": "={{ $json.output.social.youtube }}"
+              },
+              {
+                "fieldId": "Linkedin",
+                "fieldValue": "={{ $json.output.social.linkedin }}"
+              },
+              {
+                "fieldId": "Pinterest",
+                "fieldValue": "={{ $json.output.social.pinterest }}"
+              },
+              {
+                "fieldId": "Other",
+                "fieldValue": "={{ $json.output.other_contact_methods[0].url }}"
+              },
+              {
+                "fieldId": "rating",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.rating }}"
+              },
+              {
+                "fieldId": "businessStatus",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.businessStatus }}"
+              },
+              {
+                "fieldId": "primaryType",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.primaryType }}"
+              },
+              {
+                "fieldId": "Lantitude",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.latitude }}"
+              },
+              {
+                "fieldId": "Longitude",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.longitude }}"
+              },
+              {
+                "fieldId": "searchLocation",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.searchLocation }}"
+              },
+              {
+                "fieldId": "SearchCategory",
+                "fieldValue": "={{ $('5. Loop Through Each Lead').item.json.searchCategory }}"
+              }
+            ]
+          },
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1I9uFYn0q-yBmaGwmN24w6L_1-qjqEVaQj0FwN5RfoFY/edit#gid=0",
+            "cachedResultName": "Table"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1I9uFYn0q-yBmaGwmN24w6L_1-qjqEVaQj0FwN5RfoFY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1I9uFYn0q-yBmaGwmN24w6L_1-qjqEVaQj0FwN5RfoFY/edit?usp=drivesdk",
+            "cachedResultName": "Lead Generator"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

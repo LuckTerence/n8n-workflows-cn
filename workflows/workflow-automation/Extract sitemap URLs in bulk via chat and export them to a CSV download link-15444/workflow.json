@@ -1203,7 +1203,7 @@
   "_cn_meta": {
     "title_zh": "Extract sitemap URLs in bulk via chat and export them to a CSV download link",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15444,
     "synced_at": "2026-06-17T14:20:30.472010",
     "foreign_services": [

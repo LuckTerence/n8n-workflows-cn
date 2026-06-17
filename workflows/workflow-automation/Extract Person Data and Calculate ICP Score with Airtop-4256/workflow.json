@@ -567,7 +567,7 @@
   "_cn_meta": {
     "title_zh": "Extract Person Data and Calculate ICP Score with Airtop",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4256,
     "synced_at": "2026-06-17T14:08:57.451352",
     "foreign_services": [

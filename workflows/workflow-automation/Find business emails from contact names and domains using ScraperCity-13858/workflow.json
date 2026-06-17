@@ -263,7 +263,7 @@
         400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -275,15 +275,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "credential-id",
           "name": "googleSheetsOAuth2Api Credential"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "a1000000-0000-0000-0000-000000000020",
@@ -546,13 +545,89 @@
   "_cn_meta": {
     "title_zh": "Find business emails from contact names and domains using ScraperCity",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13858,
     "synced_at": "2026-06-17T14:22:09.707367",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、数据采集"
+    "description_zh": "邮件自动化、数据采集",
+    "replacements": {
+      "a1000000-0000-0000-0000-000000000013": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Write Results to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "email": "={{ $json.email }}",
+              "domain": "={{ $json.domain }}",
+              "last_name": "={{ $json.last_name }}",
+              "confidence": "={{ $json.confidence }}",
+              "first_name": "={{ $json.first_name }}",
+              "email_status": "={{ $json.email_status }}"
+            },
+            "schema": [
+              {
+                "id": "first_name",
+                "required": false,
+                "displayName": "first_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_name",
+                "required": false,
+                "displayName": "last_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "domain",
+                "required": false,
+                "displayName": "domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email_status",
+                "required": false,
+                "displayName": "email_status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "confidence",
+                "required": false,
+                "displayName": "confidence",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

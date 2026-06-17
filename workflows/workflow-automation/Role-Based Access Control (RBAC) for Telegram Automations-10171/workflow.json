@@ -470,7 +470,7 @@
         208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -482,15 +482,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "PO5jjOqRb3T4m5PE",
           "name": "Google Sheets EGM"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "16445f51-bcfa-4f60-b4d7-27c06c011f30",
@@ -513,9 +512,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
-      },
-      "typeVersion": 2.1
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "9ebab38a-64ae-4cf9-a67b-f7393e4e435d",
@@ -526,7 +524,7 @@
         544
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -538,15 +536,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "notionApi": {
           "id": "EddmMwhQbDV4V3oj",
           "name": "Notion Archive"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "8091fb5a-6d7b-4f10-b5fb-7eedf661203b",
@@ -787,7 +784,7 @@
   "_cn_meta": {
     "title_zh": "Role-Based Access Control (RBAC) for Telegram Automations",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10171,
     "synced_at": "2026-06-17T14:14:39.095320",
     "foreign_services": [
@@ -796,6 +793,57 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "Telegram 机器人"
+    "description_zh": "Telegram 机器人",
+    "replacements": {
+      "5777c1eb-aa86-4e23-848b-bc91ec133345": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get row(s) in sheet",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "16445f51-bcfa-4f60-b4d7-27c06c011f30": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get a record",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": ""
+          },
+          "options": {}
+        },
+        "typeVersion": 2.1
+      },
+      "9ebab38a-64ae-4cf9-a67b-f7393e4e435d": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Get a database page",
+        "parameters": {
+          "pageId": {
+            "__rl": true,
+            "mode": "url",
+            "value": ""
+          },
+          "resource": "databasePage",
+          "operation": "get"
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

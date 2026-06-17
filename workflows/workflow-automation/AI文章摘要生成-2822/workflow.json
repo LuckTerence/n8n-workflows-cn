@@ -204,7 +204,7 @@
         -820
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -216,7 +216,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
@@ -224,7 +224,6 @@
           "name": "Google Sheets account"
         }
       },
-      "typeVersion": 4.5,
       "alwaysOutputData": true
     },
     {
@@ -288,7 +287,7 @@
         -820
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -300,15 +299,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "57fd5aaf-4a43-458b-8842-72e3289c7dca",
@@ -327,19 +325,19 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"=📄🔔 *New WordPress Post Updated with AI Summary*\\n\\nThe post *{{ $('Set fields - Prepare data for Gsheets & Slack').item.json.title }}* has been updated with an AI-generated summary at the top of the ar\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
           "id": "",
           "name": "slack-topic-monitoring-dtk"
         }
-      },
-      "typeVersion": 4.2
+      }
     },
     {
       "id": "29669a57-4104-4328-a834-0b07724fe245",
@@ -956,7 +954,7 @@
     "title_zh": "AI文章摘要生成",
     "description_zh": "WordPress文章AI摘要",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2822,
     "synced_at": "2026-06-17T11:21:16.021371",
     "upgraded_at": "2026-06-17",
@@ -964,6 +962,149 @@
       "Google Sheets",
       "Slack"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
+    "replacements": {
+      "4aa026fd-29c3-4848-bfd1-98efba165b68": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets - Get rows",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.id }}",
+                "lookupColumn": "post_id"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk/edit#gid=0",
+            "cachedResultName": "AI-Summarized Posts"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk/edit?usp=drivesdk",
+            "cachedResultName": "Template - AI Summary WordPress Posts"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4.5
+      },
+      "f35a0520-9b88-4840-bdff-970a15a8d691": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets - Add Row",
+        "parameters": {
+          "columns": {
+            "value": {
+              "post_id": "={{ $json.id }}",
+              "summary": "={{$json.ai_summary}}",
+              "edit_link": "={{ $json.edit_link }}",
+              "post_link": "={{ $json.link }}",
+              "summarized_date": "={{$now}}"
+            },
+            "schema": [
+              {
+                "id": "post_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "post_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "summary",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "summary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "post_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "edit_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "edit_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "summarized_date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "summarized_date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "post_id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk/edit#gid=0",
+            "cachedResultName": "AI-Summarized Posts"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uO0zaNc5UrLhtdcvETFcZGln_qij-nqpYP06n9GxJUk/edit?usp=drivesdk",
+            "cachedResultName": "Template - AI Summary WordPress Posts"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4.5
+      },
+      "57fd5aaf-4a43-458b-8842-72e3289c7dca": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack - Notify Channel",
+        "parameters": {
+          "text": "=📄🔔 *New WordPress Post Updated with AI Summary*\n\nThe post *{{ $('Set fields - Prepare data for Gsheets & Slack').item.json.title }}* has been updated with an AI-generated summary at the top of the article.  \nYou can view it here: {{ $('Set fields - Prepare data for Gsheets & Slack').item.json.post_link }}\n\n• *Post ID*: {{ $('Set fields - Prepare data for Gsheets & Slack').item.json.post_id }}\n• *Edit Link*: {{ $('Set fields - Prepare data for Gsheets & Slack').item.json.edit_link }}\n",
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C08AN5DJLCT",
+            "cachedResultName": "wp-posts-ai"
+          },
+          "otherOptions": {
+            "mrkdwn": true
+          },
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

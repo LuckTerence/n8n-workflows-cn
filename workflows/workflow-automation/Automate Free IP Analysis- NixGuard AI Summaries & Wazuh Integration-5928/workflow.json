@@ -70,13 +70,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -213,7 +213,7 @@
   "_cn_meta": {
     "title_zh": "Automate Free IP Analysis: NixGuard AI Summaries & Wazuh Integration",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5928,
     "synced_at": "2026-06-17T14:11:59.966399",
     "foreign_services": [
@@ -221,6 +221,21 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "流程自动化"
+    "description_zh": "流程自动化",
+    "replacements": {
+      "698377ac-1c77-45fe-b877-eff606701b82": {
+        "type": "n8n-nodes-base.slack",
+        "name": "(Optional) Send Slack Alert for High-Risk Events",
+        "parameters": {
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 *NixGuard IP Analysis* 🚨\n\n*AI Summary:*\n{{ $json.ai_summary }}"
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

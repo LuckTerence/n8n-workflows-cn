@@ -24,7 +24,7 @@
         300
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -36,12 +36,11 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": "google-sheets"
-      },
-      "typeVersion": 1
+      }
     },
     {
       "name": "Create Account",
@@ -104,7 +103,7 @@
         500
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -116,12 +115,11 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": "google-sheets"
-      },
-      "typeVersion": 1
+      }
     },
     {
       "name": "Merge Data",
@@ -309,7 +307,7 @@
   "_cn_meta": {
     "title_zh": "Manage attendee registrations and send emails",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 730,
     "synced_at": "2026-06-17T14:10:22.419323",
     "foreign_services": [
@@ -317,6 +315,19 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化"
+    "description_zh": "邮件自动化",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Session Details",
+        "parameters": {
+          "range": "Sessions!A:F",
+          "options": {},
+          "sheetId": "1nlnsTQKGgQZN-Rtd07K9bn0ROm0aFBC2O4kzM2YaTBI",
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

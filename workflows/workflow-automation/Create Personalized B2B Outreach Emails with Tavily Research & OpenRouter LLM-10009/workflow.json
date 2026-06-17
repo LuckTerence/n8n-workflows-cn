@@ -48,7 +48,7 @@
         -208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -60,15 +60,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "Ja0tGvoFNudNwqMM",
           "name": "md83 H2"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c00b9130-4f3f-41c1-a670-77098f59c804",
@@ -312,7 +311,7 @@
         -128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -324,15 +323,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "Ja0tGvoFNudNwqMM",
           "name": "md83 H2"
         }
-      },
-      "typeVersion": 4.7
+      }
     }
   ],
   "active": false,
@@ -479,13 +477,251 @@
   "_cn_meta": {
     "title_zh": "Create Personalized B2B Outreach Emails with Tavily Research & OpenRouter LLM",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10009,
     "synced_at": "2026-06-17T14:19:35.342413",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、智能搜索"
+    "description_zh": "邮件自动化、智能搜索",
+    "replacements": {
+      "357f24f2-50ce-4100-9f09-ed8e1dcaf29a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Company Info to Google Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "complete",
+              "company_name": "={{ $('Limit(Test)').item.json.company_name }}",
+              "Key Offerings": "={{ $('Company Research').item.json.output.keyOfferings }}",
+              "Company Summary": "={{ $('Company Research').item.json.output.comprehensiveSummary }}",
+              "Outreach Message": "={{ $json.text }}",
+              "Company Background": "={{ $('Company Research').item.json.output.companyOverview }}",
+              "Recent Company News": "={{ $('Company Research').item.json.output.recentWebsiteNews }}"
+            },
+            "schema": [
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "company_name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "company_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "department",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "department",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "full_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "full_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "postal_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "postal_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "address",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "mobile_phone_number",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "mobile_phone_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "phone_number",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "phone_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fax_number",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "fax_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "website_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "website_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Background",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Background",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Recent Company News",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Recent Company News",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Key Offerings",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Key Offerings",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Company Summary",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Company Summary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Outreach Message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Outreach Message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "company_name"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4/edit#gid=0",
+            "cachedResultName": "BusinessCardList"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4/edit?usp=drivesdk",
+            "cachedResultName": "Demo"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "9368676a-b904-4f30-8f53-196c794f7f9c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Business card data extraction",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "ready",
+                "lookupColumn": "status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4/edit#gid=0",
+            "cachedResultName": "BusinessCardList"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rYf2kqfmMRUtpFAb5YdhOcsvGg8Gr1CTbO-lvrd48m4/edit?usp=drivesdk",
+            "cachedResultName": "Demo"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

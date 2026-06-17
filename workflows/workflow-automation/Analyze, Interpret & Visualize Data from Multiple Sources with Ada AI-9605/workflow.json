@@ -161,7 +161,7 @@
         992
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -173,15 +173,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "TYgnI9PXhFzSLNSk",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "0cf1ecaf-77a5-4c42-a8a4-c1ed05d1b044",
@@ -693,7 +692,7 @@
   "_cn_meta": {
     "title_zh": "Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9605,
     "synced_at": "2026-06-17T14:11:57.853198",
     "foreign_services": [
@@ -701,6 +700,30 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "809b1798-dcf6-42cc-8d8d-d258fa6d67fd": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get data from Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 332281959,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM/edit#gid=332281959",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM/edit?usp=drivesdk",
+            "cachedResultName": "example_data"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

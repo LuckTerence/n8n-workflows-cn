@@ -167,13 +167,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -209,13 +209,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -599,7 +599,7 @@
   "_cn_meta": {
     "title_zh": "Generate multi-pass Seedance AI roto mattes with QC and Nuke handoff",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14390,
     "synced_at": "2026-06-17T14:09:42.233092",
     "foreign_services": [
@@ -608,6 +608,20 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "42f82c86-dd07-4bf7-8e18-b2e06d3096a7": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: QC Failed — Manual Roto Required",
+        "parameters": {},
+        "typeVersion": 2.3
+      },
+      "58f71bc7-df89-42c9-9fc7-5f9727e88082": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Error Alert",
+        "parameters": {},
+        "typeVersion": 2.3
+      }
+    }
   }
 }

@@ -67,7 +67,7 @@
         2425
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -79,7 +79,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -87,8 +87,7 @@
           "name": "Google Sheets account"
         }
       },
-      "executeOnce": false,
-      "typeVersion": 4.6
+      "executeOnce": false
     },
     {
       "id": "9a429a0a-06f0-49ca-9d6a-d2bfa55a996c",
@@ -99,7 +98,7 @@
         1800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -111,7 +110,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -120,7 +119,6 @@
         }
       },
       "executeOnce": false,
-      "typeVersion": 4.6,
       "alwaysOutputData": true
     },
     {
@@ -132,7 +130,7 @@
         1800
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -144,7 +142,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -153,7 +151,6 @@
         }
       },
       "executeOnce": false,
-      "typeVersion": 4.6,
       "alwaysOutputData": true
     },
     {
@@ -178,7 +175,7 @@
         2200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -190,7 +187,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -198,8 +195,7 @@
           "name": "Google Sheets account"
         }
       },
-      "executeOnce": false,
-      "typeVersion": 4.6
+      "executeOnce": false
     },
     {
       "id": "59d163f7-771e-40e6-bf5f-e091de3233a9",
@@ -308,11 +304,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -320,7 +317,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -396,11 +392,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -408,7 +405,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -517,7 +513,7 @@
         2200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -529,7 +525,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -537,7 +533,6 @@
           "name": "Google Sheets account"
         }
       },
-      "typeVersion": 4.6,
       "alwaysOutputData": true
     }
   ],
@@ -768,7 +763,7 @@
   "_cn_meta": {
     "title_zh": "Multiple Websites Monitoring with Notifications including Phone Calls",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4833,
     "synced_at": "2026-06-17T14:13:23.915076",
     "foreign_services": [
@@ -777,6 +772,315 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、消息通知"
+    "description_zh": "系统监控、消息通知",
+    "replacements": {
+      "6f17ae5e-5451-4b78-99b1-20fa16255ead": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Website URLs",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 959117872,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit#gid=959117872",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit?usp=drivesdk",
+            "cachedResultName": "Website Moniter"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "9a429a0a-06f0-49ca-9d6a-d2bfa55a996c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Active Down Record",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $('Loop Over Items').item.json['Website URL'] }}",
+                "lookupColumn": "Website URL"
+              },
+              {
+                "lookupColumn": "Up Time"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit#gid=0",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit?usp=drivesdk",
+            "cachedResultName": "Website Moniter"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "57f054ee-8f40-45a9-9da9-3befd1ac489c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Uptime and Total Downtime",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Up Time": "={{ new Date().toLocaleTimeString('en-GB', { hour12: false }) }}",
+              "row_number": "={{ $json.row_number }}",
+              "Website URL": "={{ $json['Website URL'] }}",
+              "Total downtime": "={{(() => {\n  const downTimeStr = $input.first().json['Down Time'];\n\n  // Get current time in HH:MM:SS format\n  const now = new Date();\n  const upTimeStr = now.toLocaleTimeString('en-GB', { hour12: false });\n\n  function parseTime(timeStr) {\n    const [h, m, s] = timeStr.split(\":\").map(Number);\n    const date = new Date();\n    date.setHours(h, m, s, 0);\n    return date;\n  }\n\n  const downTime = parseTime(downTimeStr);\n  const upTime = parseTime(upTimeStr);\n\n  // Handle overnight scenario\n  if (upTime < downTime) {\n    upTime.setDate(upTime.getDate() + 1);\n  }\n\n  const diffMs = upTime - downTime;\n  const totalMinutes = Math.floor(diffMs / 60000);\n  const hours = Math.floor(totalMinutes / 60);\n  const minutes = totalMinutes % 60;\n  const seconds = Math.floor((diffMs % 60000) / 1000);\n\n  return `${hours}h ${minutes}m ${seconds}s`;\n})()}}"
+            },
+            "schema": [
+              {
+                "id": "Website URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Website URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Down Time",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Down Time",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Up Time",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Up Time",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total downtime",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Total downtime",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit#gid=0",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit?usp=drivesdk",
+            "cachedResultName": "Website Moniter"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "220717dd-659a-44af-98f8-3e03aa0021ea": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add Downtime Record",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Down Time": "={{ new Date().toLocaleTimeString('en-GB', { hour12: false }) }}",
+              "Website URL": "={{ $('Loop Over Items').item.json[\"Website URL\"] }}"
+            },
+            "schema": [
+              {
+                "id": "Website URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Website URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Down Time",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Down Time",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Up Time",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Up Time",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total downtime",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Total downtime",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Website URL"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit#gid=0",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit?usp=drivesdk",
+            "cachedResultName": "Website Moniter"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "e79a52cd-7ea4-41fc-80e3-82ac947d4d1f": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack Notification for Down",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": "U08QEDH1YVB",
+            "cachedResultName": "mail"
+          },
+          "select": "user",
+          "otherOptions": {
+            "includeLinkToWorkflow": false
+          },
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 Alert:| Hi there, The {{ $json['Website URL'] }} website is currently down. Kindly look into this issue and take necessary action as soon as possible.  Thank you."
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "19a35cc4-9477-476b-973c-02ccbe4746a4": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack Notification for Up",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": "U08QEDH1YVB",
+            "cachedResultName": "mail"
+          },
+          "select": "user",
+          "otherOptions": {
+            "includeLinkToWorkflow": false
+          },
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "We're excited to announce that the {{ $('Website URLs').item.json['Website URL'] }} is now live! Feel free to visit and explore."
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "08a21aa6-89c6-406b-becd-43688b793b2c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Existing Down Records",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $('Loop Over Items').item.json['Website URL'] }}",
+                "lookupColumn": "Website URL"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit#gid=0",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_VVpkIvpYQigw5q0KmPXUAC2aV2rk1nRQLQZ7YK2KwY/edit?usp=drivesdk",
+            "cachedResultName": "Website Moniter"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

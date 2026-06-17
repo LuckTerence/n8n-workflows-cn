@@ -46,11 +46,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -58,7 +59,6 @@
           "name": "Slack Bot Token | Giulio [✅ Share ok]"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -659,12 +659,32 @@
   "_cn_meta": {
     "title_zh": "Phishing Analysis - URLScan.io and VirusTotal",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 1992,
     "synced_at": "2026-06-17T14:13:27.795402",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "5a1e0490-6971-4490-a806-46da5e226365": {
+        "type": "n8n-nodes-base.slack",
+        "name": "sends slack message",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "name",
+            "value": "test-giulio-public"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=*Email Analysis*\n\nSubject: {{ $('Microsoft Outlook').item.json[\"subject\"] }}\nFrom: {{ $('Microsoft Outlook').item.json[\"sender\"][\"emailAddress\"][\"address\"] }}\nDate: {{ $('Microsoft Outlook').item.json[\"sentDateTime\"] }}\n\nReport:\n\n*URLScan Report URL:* {{ $('urlscan.io').item.json.result ? $('urlscan.io').item.json.result : \"N/A\" }}\n*Virustotal report:* https://www.virustotal.com/gui/url/{{ $json[\"data\"][\"id\"].split(\"-\")[1] }}\n*Virustotal Verdict:* {{ $json.data.attributes.stats.malicious + $json.data.attributes.stats.suspicious }} / {{ Object.keys($json.data.attributes.results).length }}"
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

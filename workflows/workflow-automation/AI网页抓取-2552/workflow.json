@@ -34,7 +34,7 @@
         520
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -46,15 +46,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GHRceL2SKjXxz0Dx",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.2
+      }
     },
     {
       "id": "a63c3ab3-6aab-43b2-8af6-8b00e24e0ee6",
@@ -199,13 +198,97 @@
     "title_zh": "AI网页抓取",
     "description_zh": "Jina+Google Sheets+OpenAI自动抓取网页数据",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2552,
     "synced_at": "2026-06-17T11:36:55.495115",
     "upgraded_at": "2026-06-17",
     "foreign_services": [
       "Google Sheets"
     ],
-    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
+    "replacements": {
+      "b8aa573d-5b63-4669-900f-bcc915b6ad41": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "price",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "price",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "availability",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "availability",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "Book prices"
+            ]
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 258629074,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VDbfi2PpeheD2ZlO6feX3RdMeSsm0XukQlNVW8uVcuo/edit#gid=258629074",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1VDbfi2PpeheD2ZlO6feX3RdMeSsm0XukQlNVW8uVcuo",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VDbfi2PpeheD2ZlO6feX3RdMeSsm0XukQlNVW8uVcuo/edit?usp=drivesdk",
+            "cachedResultName": "Book Prices"
+          }
+        },
+        "typeVersion": 4.2
+      }
+    }
   }
 }

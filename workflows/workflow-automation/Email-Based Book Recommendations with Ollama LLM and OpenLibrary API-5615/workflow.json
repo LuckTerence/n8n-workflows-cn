@@ -580,7 +580,7 @@
   "_cn_meta": {
     "title_zh": "Email-Based Book Recommendations with Ollama LLM and OpenLibrary API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5615,
     "synced_at": "2026-06-17T14:08:41.000579",
     "foreign_services": [

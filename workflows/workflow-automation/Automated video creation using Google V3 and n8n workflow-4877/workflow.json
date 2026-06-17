@@ -24,7 +24,7 @@
         140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -36,15 +36,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "uvQG3YEEXtu5NVSj",
           "name": "Freelance Account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "d47052aa-2bd9-4273-99f0-2d3b8cb593f9",
@@ -241,7 +240,7 @@
         140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -253,15 +252,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "uvQG3YEEXtu5NVSj",
           "name": "Freelance Account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "b5bc4902-7953-4f5e-8ad1-65218fe5bb45",
@@ -525,7 +523,7 @@
   "_cn_meta": {
     "title_zh": "Automated video creation using Google V3 and n8n workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4877,
     "synced_at": "2026-06-17T14:14:02.328515",
     "foreign_services": [
@@ -533,6 +531,117 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Zoom→腾讯会议",
-    "description_zh": "视频生成、工作流管理、流程自动化"
+    "description_zh": "视频生成、工作流管理、流程自动化",
+    "replacements": {
+      "ebd26e9d-956e-49d5-9819-f560c443163f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "📊 Fetch Ready Ideas from Sheet",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "ready",
+                "lookupColumn": "Status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc/edit?usp=drivesdk",
+            "cachedResultName": "VEO3 Video Generation"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "3ab5da68-d834-41f9-aef3-9de8fa81b0b9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "📊 Update Sheet with Video URL",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "completed",
+              "Video URL": "={{ $json.video.url }}",
+              "row_number": "={{ $('📊 Fetch Ready Ideas from Sheet').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "Idea",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Idea",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Video URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Video URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VHJFdJjqKWT973NK4TVTdzodAiHM4Zzb4tIkK-kqqGc/edit?usp=drivesdk",
+            "cachedResultName": "VEO3 Video Generation"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

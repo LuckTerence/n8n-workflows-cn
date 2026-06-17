@@ -303,7 +303,7 @@
         240
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -315,15 +315,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DHJcCtarL7rWLBsF",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "5c8a772c-573d-4115-ab61-54a492f69907",
@@ -334,7 +333,7 @@
         240
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -346,15 +345,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DHJcCtarL7rWLBsF",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "47de0abb-b1ff-4620-a80f-ac3c3a2369a6",
@@ -458,7 +456,7 @@
         600
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -470,15 +468,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DHJcCtarL7rWLBsF",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "15dbb650-6c59-49fa-a2fd-8cf4a691b667",
@@ -781,7 +778,7 @@
         1060
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -793,15 +790,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DHJcCtarL7rWLBsF",
           "name": "Google Sheets account 2"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "068b21f2-b4e8-4ccb-9756-b0e5ee3a6833",
@@ -1120,7 +1116,7 @@
   "_cn_meta": {
     "title_zh": "Find Content Gaps in Competitors' Websites with InfraNodus GraphRAG for SEO",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4403,
     "synced_at": "2026-06-17T14:15:10.168577",
     "foreign_services": [
@@ -1128,6 +1124,150 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档",
-    "description_zh": "RAG 检索增强、SEO 优化、HR 人事"
+    "description_zh": "RAG 检索增强、SEO 优化、HR 人事",
+    "replacements": {
+      "4c82a7bf-aa76-4d43-83dc-de54679b5f10": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read a Google Sheets File",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1122486654,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
+            "cachedResultName": "Empty"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
+            "cachedResultName": "Visual Text Analysis Tools"
+          }
+        },
+        "typeVersion": 3
+      },
+      "5c8a772c-573d-4115-ab61-54a492f69907": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Google Sheets with Content Insights",
+        "parameters": {
+          "options": {},
+          "fieldsUi": {
+            "values": [
+              {
+                "column": "Graph Summary",
+                "fieldValue": "={{ $json.graphSummary }}"
+              },
+              {
+                "column": "Topical Summary",
+                "fieldValue": "={{ $json.aiAdvice[0].text }}"
+              }
+            ]
+          },
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1122486654,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
+            "cachedResultName": "Empty"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?gid=1287901638#gid=1287901638"
+          },
+          "valueToMatchOn": "={{ $json.URL }}",
+          "columnToMatchOn": "URL"
+        },
+        "typeVersion": 3
+      },
+      "e1814824-cb3d-46d3-8747-57bce510493f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get the content from Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1122486654,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
+            "cachedResultName": "Empty"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
+            "cachedResultName": "Visual Text Analysis Tools"
+          },
+          "combineFilters": "OR"
+        },
+        "typeVersion": 4.6
+      },
+      "5a14b12b-9645-4a16-a377-e707562af837": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1122486654,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
+            "cachedResultName": "Empty"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
+            "cachedResultName": "Visual Text Analysis Tools"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

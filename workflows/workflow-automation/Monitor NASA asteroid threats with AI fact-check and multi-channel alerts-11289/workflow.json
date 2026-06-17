@@ -367,13 +367,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -384,18 +384,27 @@
     {
       "id": "3619815a-4b82-4131-934b-30d36d840851",
       "name": "Send Discord Alert",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3264,
         1184
       ],
       "webhookId": "8848538e-de58-468a-8139-95ea39e8e8a2",
       "parameters": {
-        "content": "={{ $json.discord_message }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "e1cba41d-2d63-4a80-9540-6977424516ec",
@@ -439,7 +448,7 @@
         1792
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -451,9 +460,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "0a4d533a-cb47-42a4-9a00-228bcc27fdcf",
@@ -691,6 +699,76 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、告警通知、HR 人事"
+    "description_zh": "系统监控、告警通知、HR 人事",
+    "replacements": {
+      "1847ddc7-4dca-4768-ad82-f98984b6f67c": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Slack Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "YOUR_SLACK_CHANNEL_ID"
+          },
+          "attachments": [
+            {
+              "text": "={{ $json.slack_message }}",
+              "color": "={{ $json.asteroid_data.alert_color }}",
+              "title": "={{ $json.alert_emoji }} Asteroid Alert Report",
+              "image_url": "={{ $json.threat_chart_url }}"
+            }
+          ],
+          "messageType": "attachment",
+          "otherOptions": {},
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 2.3
+      },
+      "3619815a-4b82-4131-934b-30d36d840851": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Discord Alert",
+        "parameters": {
+          "content": "={{ $json.discord_message }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      },
+      "d5716068-c397-4730-9f48-46f7342d6676": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $now.format('YYYY-MM-DD HH:mm:ss') }}",
+              "Alert Level": "={{ $('Analyze Asteroid Threats').item.json.alert_level }}",
+              "Threat Score": "={{ $('Parse AI Response').item.json.threat_score }}",
+              "Top Asteroid": "={{ $('Analyze Asteroid Threats').item.json.biggest_asteroid?.name }}",
+              "Hazardous Count": "={{ $('Analyze Asteroid Threats').item.json.hazardous_count }}",
+              "Media Panic Score": "={{ $('Parse AI Response').item.json.media_panic_score }}",
+              "Most Accurate Region": "={{ $('Parse AI Response').item.json.regional_comparison?.most_accurate_region }}",
+              "Misinformation Detected": "={{ $('Parse AI Response').item.json.misinformation_detected }}"
+            },
+            "schema": [],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Asteroid Alerts Log"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "YOUR_GOOGLE_SHEET_ID"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

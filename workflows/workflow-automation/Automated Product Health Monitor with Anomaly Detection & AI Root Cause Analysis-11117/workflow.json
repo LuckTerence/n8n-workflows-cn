@@ -324,11 +324,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -336,7 +337,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -573,7 +573,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -585,15 +585,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "notionApi": {
           "id": "yourid",
           "name": "Notion account"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "2c680c1d-25c7-4fc7-9d2a-60afd028063d",
@@ -612,11 +611,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -624,7 +624,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -732,11 +731,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -744,7 +744,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -875,7 +874,7 @@
         320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -887,15 +886,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "notionApi": {
           "id": "yourid",
           "name": "Notion account"
         }
-      },
-      "typeVersion": 2.2
+      }
     },
     {
       "id": "70b6bd0a-6913-41bd-a116-4cc283b95223",
@@ -1245,7 +1243,7 @@
   "_cn_meta": {
     "title_zh": "Automated Product Health Monitor with Anomaly Detection & AI Root Cause Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11117,
     "synced_at": "2026-06-17T14:12:10.299771",
     "foreign_services": [
@@ -1255,6 +1253,108 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase",
-    "description_zh": "系统监控、流程自动化"
+    "description_zh": "系统监控、流程自动化",
+    "replacements": {
+      "a802b7e3-031a-4ed0-8137-ed9c4a8d63cb": {
+        "type": "n8n-nodes-base.slack",
+        "name": "root cause summary",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "yourvalue",
+            "cachedResultName": "product-health-monitor"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "={   \"text\": \"*Product Health – Root Cause Analysis*\\n\\nIncident:\\n- Metric: {{ $json.metric_name }}\\n- Date: {{ $json.date_start }}\\n- Severity: {{ $json.severity }}\\n\\nAI Summary:\\n{{ $json.ai_summary }}\",   \"mrkdwn\": true }"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "df08d817-79cd-4799-8e15-1470aaedfe91": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Update notions",
+        "parameters": {
+          "pageId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://www.notion.so/"
+          },
+          "options": {},
+          "resource": "databasePage",
+          "operation": "update"
+        },
+        "typeVersion": 2.2
+      },
+      "2c680c1d-25c7-4fc7-9d2a-60afd028063d": {
+        "type": "n8n-nodes-base.slack",
+        "name": "slack notification",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "yourvalue",
+            "cachedResultName": "product-health-monitor"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "={   \"text\": \":rotating_light: *Product Health – Revenue Anomaly Detected*\\n\\n*Metric:* {{ $json.metric_name }}\\n*Date:* {{ $json.date }}\\n*Severity:* {{ $json.severity }}\\n*Baseline:* {{ $json.baseline_value }}\\n*Current:* {{ $json.actual_value }}\\n*Delta (%):* {{ $json.delta_pct }}\",   \"mrkdwn\": true }"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "46fa29f5-e74d-49ad-a6e5-1cb9ceb3eb8a": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack notification",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "yourvalue",
+            "cachedResultName": "product-health-monitor"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "={   \"text\": \":warning: *Product Health – Feature Usage Drop*\\n\\n*Metric:* {{ $json.metric_name }}\\n*Date:* {{ $json.date }}\\n*Severity:* {{ $json.severity }}\\n*Baseline accounts:* {{ $json.baseline_value }}\\n*Current accounts:* {{ $json.actual_value }}\\n*Delta (%):* {{ $json.delta_pct }}\",   \"mrkdwn\": true }"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "36eac13a-bab7-4b21-b572-0299d00ff1c1": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Notions database creation",
+        "parameters": {
+          "title": "=\"title\": \"=Daily Report – {{ new Date().toISOString().slice(0,10) }}\"",
+          "blockUi": {
+            "blockValues": [
+              {
+                "textContent": "={{$json.text}}"
+              },
+              {
+                "textContent": "={{ $json.incidents.length }}"
+              }
+            ]
+          },
+          "options": {},
+          "resource": "databasePage",
+          "databaseId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://www.notion.so/"
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

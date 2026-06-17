@@ -104,15 +104,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "dceb7ad3-3c29-4cb9-b097-00c5ae1d2732",
@@ -135,15 +134,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "15a418ac-9de1-4c1d-ada7-057c280373df",
@@ -198,15 +196,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "0f08fcee-b892-47ec-b13c-639f7e5b4b91",
@@ -245,15 +242,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "e20c0448-9688-47ae-873b-7cc5ac6e826a",
@@ -308,15 +304,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "c58724ab-354b-43af-8a60-495837f8a4a2",
@@ -339,15 +334,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "yX3WnQ0zNClN0JoN",
           "name": "Airtable giulio@n8n"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "1b8fc8af-4892-4804-85d0-8e84904a3cf0",
@@ -509,9 +503,327 @@
   "_cn_meta": {
     "title_zh": "Build an endpoint to perform CRUD operations with multiple HTTP methods",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2490,
     "synced_at": "2026-06-17T14:07:29.238879",
-    "description_zh": "表单处理"
+    "description_zh": "表单处理",
+    "replacements": {
+      "2e820357-250c-41a7-9daa-4eb77e7eded6": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Create",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "columns": {
+            "value": {
+              "email": "={{ $json.query.email }}",
+              "phone": "={{ $json.query.phone }}",
+              "address": "={{ $json.query.address }}",
+              "last_name": "={{ $json.query.last_name }}",
+              "first_name": "={{ $json.query.first_name }}",
+              "customer_id": "={{ $json.query.customer_id }}"
+            },
+            "schema": [
+              {
+                "id": "customer_id",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "customer_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "first_name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "first_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "last_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "phone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "phone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "address",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "create"
+        },
+        "typeVersion": 2.1
+      },
+      "dceb7ad3-3c29-4cb9-b097-00c5ae1d2732": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get All",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "options": {},
+          "operation": "search"
+        },
+        "typeVersion": 2.1
+      },
+      "b5544fc2-10cf-47dd-815c-51e8044e073d": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get Single",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "limit": 1,
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "options": {},
+          "operation": "search",
+          "returnAll": false,
+          "filterByFormula": "=({customer_id} = {{ $json.params.id }})"
+        },
+        "typeVersion": 2.1
+      },
+      "56ff1769-15fe-475d-96aa-9c0f1a9edf05": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Airtable",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "columns": {
+            "value": {
+              "email": "={{ $json.query.email }}",
+              "phone": "={{ $json.query.phone }}",
+              "address": "={{ $json.query.address }}",
+              "last_name": "={{ $json.query.last_name }}",
+              "first_name": "={{ $json.query.first_name }}",
+              "customer_id": "={{ $json.query.customer_id }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "customer_id",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "customer_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "first_name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "first_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "last_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "phone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "phone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "address",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "customer_id"
+            ]
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      },
+      "0f434e52-2fda-41c0-9f40-38bf1977b8a6": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Airtable1",
+        "parameters": {
+          "id": "={{ $json.id }}",
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "operation": "deleteRecord"
+        },
+        "typeVersion": 2.1
+      },
+      "c58724ab-354b-43af-8a60-495837f8a4a2": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get Single1",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "app662qLY5J8ys4fU",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU",
+            "cachedResultName": "customers"
+          },
+          "limit": 1,
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblwvA7Wrmvmv37rq",
+            "cachedResultUrl": "https://airtable.com/app662qLY5J8ys4fU/tblwvA7Wrmvmv37rq",
+            "cachedResultName": "Table 1"
+          },
+          "options": {},
+          "operation": "search",
+          "returnAll": false,
+          "filterByFormula": "=({customer_id} = {{ $json.params.id }})"
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

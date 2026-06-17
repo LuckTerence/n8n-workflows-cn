@@ -205,7 +205,7 @@
   "_cn_meta": {
     "title_zh": "Automate Google OAuth2 Credential Creation in n8n",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2909,
     "synced_at": "2026-06-17T14:06:55.185342",
     "foreign_services": [

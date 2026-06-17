@@ -55,7 +55,7 @@
         -280
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -67,15 +67,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "Ou2SgvNZctBeYWT5",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "1f1b0840-0da9-4118-96d5-62a1a36f902b",
@@ -311,13 +310,92 @@
   "_cn_meta": {
     "title_zh": "Convert Gumroad Sales to Beehiiv Subscribers with Sheets & Telegram Alerts",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3715,
     "synced_at": "2026-06-17T14:20:23.162041",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、告警通知、表格处理"
+    "description_zh": "Telegram 机器人、告警通知、表格处理",
+    "replacements": {
+      "6e464a73-a5c0-4a5d-95ce-c3cc2547a373": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "append row in CRM",
+        "parameters": {
+          "columns": {
+            "value": {
+              "date": "={{ $('Gumroad Sale Trigger').item.json.sale_timestamp }}",
+              "email": "={{ $('Gumroad Sale Trigger').item.json.email }}",
+              "country": "={{ $('Gumroad Sale Trigger').item.json.ip_country }}",
+              "product name": "={{ $('Gumroad Sale Trigger').item.json.product_name }}"
+            },
+            "schema": [
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "product name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "country",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "country",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4/edit?usp=drivesdk",
+            "cachedResultName": "Gumroad sales CRM"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

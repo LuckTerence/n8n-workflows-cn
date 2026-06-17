@@ -38,29 +38,49 @@
     },
     {
       "name": "Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         700,
         300
       ],
       "parameters": {
-        "text": "value found",
-        "webhookUri": ""
-      },
-      "typeVersion": 1
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Discord1",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         700,
         450
       ],
       "parameters": {
-        "text": "value not found",
-        "webhookUri": ""
-      },
-      "typeVersion": 1
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "name": "Cron",
@@ -127,6 +147,17 @@
     "tier": "B",
     "source_id": 426,
     "synced_at": "2026-06-17T14:19:19.573608",
-    "description_zh": "告警通知"
+    "description_zh": "告警通知",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Discord1",
+        "parameters": {
+          "text": "value not found",
+          "webhookUri": ""
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

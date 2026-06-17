@@ -48,7 +48,7 @@
         -144
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -60,7 +60,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -68,7 +68,6 @@
           "name": "Google Sheets account"
         }
       },
-      "typeVersion": 4.5,
       "continueOnFail": true
     },
     {
@@ -560,7 +559,7 @@
         208
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -572,7 +571,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -580,7 +579,6 @@
           "name": "Google Sheets account"
         }
       },
-      "typeVersion": 4.5,
       "continueOnFail": true
     },
     {
@@ -935,7 +933,7 @@
   "_cn_meta": {
     "title_zh": "Get a daily financial news digest on Telegram with Mistral and RSS feeds",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14172,
     "synced_at": "2026-06-17T14:21:39.582735",
     "foreign_services": [
@@ -943,6 +941,236 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、新闻聚合"
+    "description_zh": "Telegram 机器人、新闻聚合",
+    "replacements": {
+      "a4144121-78d9-46b9-9243-624c3c74e701": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Digest to Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ new Date().toLocaleDateString('en-US') }}",
+              "Run ID": "={{ $execution.id }}",
+              "Timestamp": "={{ new Date().toISOString() }}",
+              "Stories Count": "={{ $('Build Telegram Payload').item.json.topStories.length }}",
+              "Story 1 Title": "={{ $('Build Telegram Payload').item.json.topStories[0]?.title || '' }}",
+              "Story 2 Title": "={{ $('Build Telegram Payload').item.json.topStories[1]?.title || '' }}",
+              "Story 3 Title": "={{ $('Build Telegram Payload').item.json.topStories[2]?.title || '' }}",
+              "Story 4 Title": "={{ $('Build Telegram Payload').item.json.topStories[3]?.title || '' }}",
+              "Story 5 Title": "={{ $('Build Telegram Payload').item.json.topStories[4]?.title || '' }}",
+              "Telegram Status": "={{ $('Send to Telegram').item.json.ok ? 'SENT' : 'FAILED' }}",
+              "Total Articles Collected": "={{ $('Build Telegram Payload').item.json.totalCollected }}"
+            },
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Stories Count",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Stories Count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Story 1 Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Story 1 Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Story 2 Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Story 2 Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Story 3 Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Story 3 Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Story 4 Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Story 4 Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Story 5 Title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Story 5 Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total Articles Collected",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Total Articles Collected",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Telegram Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Telegram Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Run ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Run ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Digest_Log"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('📋 RSS Feed Config1').first().json.googleSheetId }}"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "f1524be6-cf67-41e2-a2d6-28f4d9e4cf90": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Error to Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Stage": "={{ $json.Stage }}",
+              "Run ID": "={{ $json['Run ID'] }}",
+              "Timestamp": "={{ $json.Timestamp }}",
+              "HTTP Status": "={{ $json['HTTP Status'] }}",
+              "Error Message": "={{ $json['Error Message'] }}",
+              "Total Articles Collected": "={{ $json['Total Articles Collected'] }}"
+            },
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Run ID",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Run ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Stage",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Stage",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Error Message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Error Message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "HTTP Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "HTTP Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Total Articles Collected",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Total Articles Collected",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Error_Log"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('📋 RSS Feed Config1').first().json.googleSheetId }}"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

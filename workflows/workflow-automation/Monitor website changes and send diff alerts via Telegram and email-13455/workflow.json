@@ -224,7 +224,7 @@
         720
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -236,9 +236,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.6,
       "alwaysOutputData": true
     },
     {
@@ -296,7 +295,7 @@
         656
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -308,9 +307,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "6ab2ff6a-4c6e-41d4-947a-4209a6bd46fe",
@@ -358,7 +356,7 @@
         832
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -370,9 +368,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "0e16d10a-b095-411b-a4f7-4552b0de7958",
@@ -512,7 +509,7 @@
   "_cn_meta": {
     "title_zh": "Monitor website changes and send diff alerts via Telegram and email",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13455,
     "synced_at": "2026-06-17T14:13:20.013293",
     "foreign_services": [
@@ -521,6 +518,655 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Telegram 机器人、邮件自动化、系统监控"
+    "description_zh": "Telegram 机器人、邮件自动化、系统监控",
+    "replacements": {
+      "23a42e29-2815-4cad-90db-67afcb7cedda": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "📋 Load Previous Snapshot",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "={{ $json.name }}",
+                "lookupColumn": "Name"
+              },
+              {
+                "lookupValue": "={{ $json.url }}",
+                "lookupColumn": "url"
+              },
+              {
+                "lookupValue": "={{ $json.selector }}",
+                "lookupColumn": "selector"
+              },
+              {
+                "lookupValue": "={{ $json.pageTitle }}",
+                "lookupColumn": "page title"
+              },
+              {
+                "lookupValue": "={{ $json.metaDescription }}",
+                "lookupColumn": "meta description"
+              },
+              {
+                "lookupValue": "={{ $json.cleanText }}",
+                "lookupColumn": "clean text"
+              },
+              {
+                "lookupValue": "={{ $json.contentHash }}",
+                "lookupColumn": "content hash"
+              },
+              {
+                "lookupValue": "={{ $json.contentLength }}",
+                "lookupColumn": "content lenght"
+              },
+              {
+                "lookupValue": "={{ $json.fetchedAt }}",
+                "lookupColumn": "fetched at"
+              },
+              {
+                "lookupValue": "={{ $json.httpStatus }}",
+                "lookupColumn": "http status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 299160514,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
+            "cachedResultName": "website"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEET_ID",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
+            "cachedResultName": "Website Monitor"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "e525973e-572e-4ba6-9d9b-206a59f4dc57": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "💾 Save Snapshot",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Name": "={{ $json.name }}"
+            },
+            "schema": [
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "selector",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "selector",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "page title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "page title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "meta description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "meta description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "clean text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "clean text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content hash",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "content hash",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content lenght",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "content lenght",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fetched at",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "fetched at",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "http status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "http status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "pageTitle",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "pageTitle",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "metaDescription",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "metaDescription",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cleanText",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "cleanText",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "contentHash",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "contentHash",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "contentLength",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "contentLength",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fetchedAt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "fetchedAt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "httpStatus",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "httpStatus",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "hasChanged",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "hasChanged",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "isFirstRun",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "isFirstRun",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "changePercentage",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "changePercentage",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "diffSummary",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "diffSummary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "addedLines",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "addedLines",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "removedLines",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "removedLines",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "lastChecked",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "lastChecked",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "comparedAt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "comparedAt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "Name"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": true
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 299160514,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
+            "cachedResultName": "website"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEET_ID",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
+            "cachedResultName": "Website Monitor"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "8c5ef23c-9c33-449b-b90c-2fad25cc69a7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "💾 Save (No Change)",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "selector",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "selector",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "page title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "page title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "meta description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "meta description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "clean text",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "clean text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content hash",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "content hash",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content lenght",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "content lenght",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fetched at",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "fetched at",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "http status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "http status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "pageTitle",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "pageTitle",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "metaDescription",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "metaDescription",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cleanText",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "cleanText",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "contentHash",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "contentHash",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "contentLength",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "contentLength",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fetchedAt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "fetchedAt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "httpStatus",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "httpStatus",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "hasChanged",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "hasChanged",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "isFirstRun",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "isFirstRun",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "changePercentage",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "changePercentage",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "diffSummary",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "diffSummary",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "addedLines",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "addedLines",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "removedLines",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "removedLines",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "lastChecked",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "lastChecked",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "comparedAt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "comparedAt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "Name"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 299160514,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
+            "cachedResultName": "website"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEET_ID",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
+            "cachedResultName": "Website Monitor"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

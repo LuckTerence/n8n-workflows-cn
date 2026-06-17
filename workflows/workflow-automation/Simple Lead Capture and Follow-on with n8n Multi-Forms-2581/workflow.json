@@ -232,7 +232,7 @@
         200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -244,15 +244,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "XHvC7jIRR8A2TlUl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "0cacb296-0d12-44e5-a749-65aa2e89a42d",
@@ -263,7 +262,7 @@
         160
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -275,15 +274,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "XHvC7jIRR8A2TlUl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "9befb4d6-7c50-4acb-9972-97e95981632f",
@@ -384,11 +382,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"={\\n\\t\\\"blocks\\\": [\\n\\t\\t{\\n\\t\\t\\t\\\"type\\\": \\\"section\\\",\\n\\t\\t\\t\\\"text\\\": {\\n\\t\\t\\t\\t\\\"type\\\": \\\"mrkdwn\\\",\\n\\t\\t\\t\\t\\\"text\\\": \\\"{{ $('Sign Up Form').first().json.Email.extractEmail() }} *just signed up to the newsletter!*\\\"\\n\\t\\t\\t}\\n\\t\\t}\\n\\t]\\n}\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -396,7 +395,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -488,7 +486,7 @@
   "_cn_meta": {
     "title_zh": "Simple Lead Capture and Follow-on with n8n Multi-Forms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2581,
     "synced_at": "2026-06-17T14:19:39.449429",
     "foreign_services": [
@@ -496,6 +494,325 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "表单处理、线索管理、n8n 运维"
+    "description_zh": "表单处理、线索管理、n8n 运维",
+    "replacements": {
+      "e7143922-7de1-448d-9abb-72034437f79c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Capture More Info",
+        "parameters": {
+          "columns": {
+            "value": {
+              "job_level": "={{ $('About You').item.json['Job Level'] }}",
+              "last_name": "={{ $('About You').item.json['Last Name'] }}",
+              "first_name": "={{ $('About You').item.json['First Name'] }}",
+              "execution_id": "={{ $execution.id }}",
+              "job_function": "={{ $('About You').item.json['Job Function'].join(', ') }}",
+              "product_goals": "={{ $('Your Interests').item.json['Describe briefly what you\\'d like to get out of our product?'] }}",
+              "country_region": "={{ $('About You').item.json['Country/Region'] }}",
+              "enrol_betatesters": "={{ $json['Would you like to be considered for our beta testers list?'] }}",
+              "product_experience": "={{ $('Your Interests').item.json['How familiar are you with no-code automation?'] }}"
+            },
+            "schema": [
+              {
+                "id": "execution_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "execution_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "first_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "first_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "last_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_level",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_level",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_function",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_function",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "country_region",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "country_region",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_experience",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "product_experience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_goals",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "product_goals",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "enrol_betatesters",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "enrol_betatesters",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "execution_id"
+            ]
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit?usp=drivesdk",
+            "cachedResultName": "Newsletter Signup"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "0cacb296-0d12-44e5-a749-65aa2e89a42d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Capture Email",
+        "parameters": {
+          "columns": {
+            "value": {
+              "date": "={{ $json.submittedAt }}",
+              "email": "={{ $json.Email }}",
+              "execution_id": "={{ $execution.id }}"
+            },
+            "schema": [
+              {
+                "id": "execution_id",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "execution_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "first_name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "first_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_name",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "last_name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_level",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "job_level",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_function",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "job_function",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "country_region",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "country_region",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_experience",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "product_experience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_goals",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "product_goals",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "enrol_betatesters",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "enrol_betatesters",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit?usp=drivesdk",
+            "cachedResultName": "Newsletter Signup"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "8035269e-224f-4036-9e8a-9447cfa87252": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify New Signup!",
+        "parameters": {
+          "select": "channel",
+          "blocksUi": "={\n\t\"blocks\": [\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"{{ $('Sign Up Form').first().json.Email.extractEmail() }} *just signed up to the newsletter!*\"\n\t\t\t}\n\t\t}\n\t]\n}",
+          "channelId": {
+            "__rl": true,
+            "mode": "name",
+            "value": "#general"
+          },
+          "messageType": "block",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=A user signed up to the newsletter!"
+          }
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

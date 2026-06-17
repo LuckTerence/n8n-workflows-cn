@@ -16,7 +16,7 @@
         -440
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -28,9 +28,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "365a660e-bbc6-44e8-983f-65a98803b5e6",
@@ -350,33 +349,20 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
-      },
-      "typeVersion": 2.1
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "850a5f0b-dc9c-4bd4-9a75-6e4a72369a80",
       "name": "HubSpot",
-      "type": "n8n-nodes-base.hubspot",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         -640,
         320
       ],
-      "parameters": {},
-      "typeVersion": 2.1
-    },
-    {
-      "id": "a64aa092-f503-4746-b604-88fa6e4bd54e",
-      "name": "Notion",
-      "type": "n8n-nodes-base.httpRequest",
-      "disabled": true,
-      "position": [
-        -480,
-        320
-      ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -388,9 +374,33 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
-      },
-      "typeVersion": 2.2
+        "notes": "原 Hubspot → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
+    },
+    {
+      "id": "a64aa092-f503-4746-b604-88fa6e4bd54e",
+      "name": "Notion",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true,
+      "position": [
+        -480,
+        320
+      ],
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "ccd2582a-7b67-4ec2-a767-6811f16f4e53",
@@ -784,6 +794,32 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信、Notion→飞书文档/语雀",
-    "description_zh": "Telegram 机器人、邮件自动化"
+    "description_zh": "Telegram 机器人、邮件自动化",
+    "replacements": {
+      "a3d30169-6b1a-45ae-8d99-e30f1d13cd8b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "10247d26-e873-4356-bdb4-840913724c7b": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Airtable1",
+        "parameters": {},
+        "typeVersion": 2.1
+      },
+      "850a5f0b-dc9c-4bd4-9a75-6e4a72369a80": {
+        "type": "n8n-nodes-base.hubspot",
+        "name": "HubSpot",
+        "parameters": {},
+        "typeVersion": 2.1
+      },
+      "a64aa092-f503-4746-b604-88fa6e4bd54e": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Notion",
+        "parameters": {},
+        "typeVersion": 2.2
+      }
+    }
   }
 }

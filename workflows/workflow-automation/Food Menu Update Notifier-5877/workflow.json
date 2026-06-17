@@ -93,7 +93,7 @@
         40
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -105,15 +105,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "rgIk6EXVdPbmPYAl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.4
+      }
     },
     {
       "id": "4f38bdba-10fb-4664-bd82-0562fb5c1236",
@@ -150,7 +149,7 @@
         40
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -162,15 +161,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "rgIk6EXVdPbmPYAl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.4
+      }
     },
     {
       "id": "a7f5a4ab-415d-45aa-b83e-c4e000ea06ee",
@@ -255,7 +253,7 @@
         -160
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -267,15 +265,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "rgIk6EXVdPbmPYAl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.4
+      }
     },
     {
       "id": "8ca7e47b-219a-4be1-8ca1-5aea15b4e0c8",
@@ -376,7 +373,7 @@
         40
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -388,15 +385,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "rgIk6EXVdPbmPYAl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.4
+      }
     },
     {
       "id": "e3fe9db7-df90-491a-b471-e1a0eafc4f86",
@@ -456,7 +452,7 @@
         240
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -468,15 +464,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "rgIk6EXVdPbmPYAl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.4
+      }
     },
     {
       "id": "14957f37-83b2-48b6-b61d-0244147f77db",
@@ -739,7 +734,7 @@
   "_cn_meta": {
     "title_zh": "Food Menu Update Notifier",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5877,
     "synced_at": "2026-06-17T14:09:12.025985",
     "foreign_services": [
@@ -747,6 +742,301 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信",
-    "description_zh": "消息通知"
+    "description_zh": "消息通知",
+    "replacements": {
+      "90184fe7-7c85-4e1c-8a50-db72dfbbeab6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Special Menu Data",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit#gid=0",
+            "cachedResultName": "Special Menu"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit?usp=drivesdk",
+            "cachedResultName": "Special Offers"
+          }
+        },
+        "typeVersion": 4.4
+      },
+      "bc83e5ce-dce8-4873-8d0a-9a7a7180c88c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Customer Contact List",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1419004309,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit#gid=1419004309",
+            "cachedResultName": "Customers"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit?usp=drivesdk",
+            "cachedResultName": "Special Offers"
+          }
+        },
+        "typeVersion": 4.4
+      },
+      "ccada993-edbe-4cd5-8d0e-53b3e1b7454b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log WhatsApp Status",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Sent",
+              "Message": "={{ $node['Merge Menu with Customer Data'].json.messageData.whatsappMessage.substring(0, 100) }}...",
+              "Timestamp": "={{ new Date().toISOString() }}",
+              "Customer Name": "={{ $json['Customer Name'] }}",
+              "Notification Type": "WhatsApp"
+            },
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Notification Type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Notification Type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1731532192,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit#gid=1731532192",
+            "cachedResultName": "Notification Logs"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit?usp=drivesdk",
+            "cachedResultName": "Special Offers"
+          }
+        },
+        "typeVersion": 4.4
+      },
+      "91eca46b-30ca-4e83-8897-cff4ae3d2f1b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Email Status1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Sent",
+              "Message": "={{ $('Filter Email Users').item.json.messageData[0].emailMessage }}",
+              "Timestamp": "={{ new Date().toISOString() }}",
+              "Customer Name": "={{ $('Filter Email Users').item.json.customers[0]['Customer Name'] }}",
+              "Notification Type": "Email"
+            },
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Notification Type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Notification Type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1731532192,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit#gid=1731532192",
+            "cachedResultName": "Notification Logs"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit?usp=drivesdk",
+            "cachedResultName": "Special Offers"
+          }
+        },
+        "typeVersion": 4.4
+      },
+      "36a469d9-6966-4d14-917d-9d619c4220b7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": " Log SMS Status",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Status": "Sent",
+              "Message": "={{ $node['Merge Menu with Customer Data'].json.messageData.smsMessage.substring(0, 100) }}...",
+              "Timestamp": "={{ new Date().toISOString() }}",
+              "Customer Name": "={{ $json['Customer Name'] }}",
+              "Notification Type": "SMS"
+            },
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Customer Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Customer Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Notification Type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Notification Type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1731532192,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit#gid=1731532192",
+            "cachedResultName": "Notification Logs"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/185-CpBG7aVkoiq25NXjTW5gnNJC75n7w3TOBH9HpzhQ/edit?usp=drivesdk",
+            "cachedResultName": "Special Offers"
+          }
+        },
+        "typeVersion": 4.4
+      }
+    }
   }
 }

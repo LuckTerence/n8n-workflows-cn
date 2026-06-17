@@ -98,7 +98,7 @@
         80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -110,15 +110,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "zeOFqZko9HcOCo00",
           "name": "Google Calendar account"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "eb6d3232-39e4-4459-9d01-5553c76d04af",
@@ -413,11 +412,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"in:<#C08RV147W01> from:me \"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -425,7 +425,6 @@
           "name": "Max Personal - May 2025"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -575,7 +574,7 @@
         -220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -587,15 +586,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "h6BWkFrOpF4Fixzj",
           "name": "Google Sheets account 4"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "47f36ebb-d421-46ef-999c-02eb242372a8",
@@ -614,11 +612,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -626,7 +625,6 @@
           "name": "Jarvis Agent - May 2025"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -970,7 +968,7 @@
   "_cn_meta": {
     "title_zh": "AI Personal Assistant",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4723,
     "synced_at": "2026-06-17T14:16:43.456590",
     "foreign_services": [
@@ -979,6 +977,108 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "7d4ce33f-a3e9-4476-8815-13a970847909": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Google Calendar",
+        "parameters": {
+          "options": {},
+          "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
+          "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "max@trigify.io",
+            "cachedResultName": "max@trigify.io"
+          },
+          "operation": "getAll",
+          "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}"
+        },
+        "typeVersion": 1.3
+      },
+      "b35ba2f5-1941-49ca-b517-876d762ec679": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack1",
+        "parameters": {
+          "query": "in:<#C08RV147W01> from:me ",
+          "options": {},
+          "operation": "search"
+        },
+        "typeVersion": 2.3
+      },
+      "d08fe78c-d123-40ac-9ec7-611bebc766c2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Date": "={{ $now }}",
+              "To-Do": "={{ $json.output }}"
+            },
+            "schema": [
+              {
+                "id": "Date",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "To-Do",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "To-Do",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1YgZ6vFwDd1JHqIhOdtAUf5zNSmUuS2v-m2nKvhy0a24/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1YgZ6vFwDd1JHqIhOdtAUf5zNSmUuS2v-m2nKvhy0a24",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1YgZ6vFwDd1JHqIhOdtAUf5zNSmUuS2v-m2nKvhy0a24/edit?usp=drivesdk",
+            "cachedResultName": "To-Do's"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "47f36ebb-d421-46ef-999c-02eb242372a8": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack2",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "list",
+            "value": "U057SEMAP6J",
+            "cachedResultName": "max"
+          },
+          "select": "user",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=Hi Max,  \n\n{{ $('Master Orchestrator Agent').item.json.output }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

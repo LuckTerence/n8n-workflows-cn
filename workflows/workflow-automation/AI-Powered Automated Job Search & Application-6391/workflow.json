@@ -324,7 +324,7 @@
         -360
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -336,15 +336,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YOUR_GOOGLE_SHEETS_CRED_ID",
           "name": "YOUR_GOOGLE_SHEETS_CRED_NAME"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "96617cf6-7968-4ca2-9fd4-9fecd78b1b9a",
@@ -662,7 +661,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Automated Job Search & Application",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6391,
     "synced_at": "2026-06-17T14:06:12.417753",
     "foreign_services": [
@@ -670,6 +669,143 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "求职招聘、流程自动化、智能搜索"
+    "description_zh": "求职招聘、流程自动化、智能搜索",
+    "replacements": {
+      "efe315eb-d796-4e23-8870-0bfad16f35b1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Upate sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "draft",
+              "job_url": "={{ $('🧪 Extract Job Info').item.json.job_url }}",
+              "cover_letter": "={{ $json.output }}",
+              "tailored_resume": "={{ $('8️⃣Rewrite Resume').item.json.output }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_title",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_description",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "job_url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "job_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "company",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "company",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "resume",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "resume",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tailored_resume",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "tailored_resume",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cover_letter",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "cover_letter",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "status"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1612746852,
+            "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL#gid=1612746852",
+            "cachedResultName": "update sheet"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEET_ID",
+            "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL",
+            "cachedResultName": "Job Search Automation Product Database"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

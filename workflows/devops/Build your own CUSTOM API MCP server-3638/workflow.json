@@ -463,7 +463,7 @@
         260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -475,15 +475,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "XHvC7jIRR8A2TlUl",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "7723947c-94a3-4bf1-b6c8-b595027a33dc",
@@ -1277,13 +1276,105 @@
   "_cn_meta": {
     "title_zh": "Build your own CUSTOM API MCP server",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3638,
     "synced_at": "2026-06-17T14:18:01.520377",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "MCP 协议集成、API 接口、服务器管理"
+    "description_zh": "MCP 协议集成、API 接口、服务器管理",
+    "replacements": {
+      "679a2413-448f-43d8-98fc-7fd8b83775e7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Call",
+        "parameters": {
+          "columns": {
+            "value": {
+              "query": "={{ $json.query }}",
+              "values": "={{ $json.values.toJsonString() }}",
+              "operation": "={{ $json.operation }}",
+              "timestamp": "={{ $now.toISO() }}",
+              "employeeId": "={{ $json.employeeId }}"
+            },
+            "schema": [
+              {
+                "id": "timestamp",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "operation",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "operation",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "query",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "query",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "employeeId",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "employeeId",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "values",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "values",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {
+            "useAppend": true
+          },
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ls_3pmzIafl1NUAzzflkJgyq1smPW6vfGjbVuVzdkac/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1Ls_3pmzIafl1NUAzzflkJgyq1smPW6vfGjbVuVzdkac",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ls_3pmzIafl1NUAzzflkJgyq1smPW6vfGjbVuVzdkac/edit?usp=drivesdk",
+            "cachedResultName": "98. MCP Audit"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

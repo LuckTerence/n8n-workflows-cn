@@ -329,9 +329,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "0eb98dd8-b354-4491-8fc0-f314c1b00809",
@@ -513,13 +512,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -555,13 +554,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -808,7 +807,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI camera moves with Seedance and build a previs review board",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14891,
     "synced_at": "2026-06-17T14:09:19.948381",
     "foreign_services": [
@@ -816,6 +815,69 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "45fc8958-c402-4236-932a-c22a9c8740e5": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive: Archive Lighting Ref",
+        "parameters": {
+          "name": "=={{ $json.shotCode }}_lighting_{{ $now.toFormat('yyyyMMdd_HHmmss') }}.mp4",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_GOOGLE_DRIVE_FOLDER_ID",
+            "cachedResultName": "Previs Archive Folder"
+          }
+        },
+        "typeVersion": 3
+      },
+      "d222ad6e-e474-4331-92b3-4f5f40ac36b2": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Publish Previs Board1",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_SLACK_CHANNEL_ID",
+            "cachedResultName": "your-channel-name"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🎬 *AI Previs Board Ready — {{ $json.shotCode }}*\n\n📋 *Sequence:* {{ $json.sequenceCode }} | *Complexity:* {{ $json.complexity }}\n🎯 *Shot Intent:* {{ $json.shotIntent }}\n📝 *Script:* {{ $json.scriptSnippet }}\n🎥 *Lens:* {{ $json.lensSpecs }}\n\n*── 3 Camera Options for Supervisor Review ──*\n{{ $json.moveCards }}\n\n👆 *Supervisor — reply with Option A, B, or C. Your choice will be auto-attached to the shot task in Jira.*\n\n_AI previs generated in {{ $json.totalMoves }} camera variations. Generated: {{ $json.generatedAt }}_"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "30233fa0-16ff-4328-9b00-0e7a978b1680": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack: Error Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0ANFAL4WJ2",
+            "cachedResultName": "social"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=❌ *AI-Assisted Clean Plate & Object Removal\n\nError: {{ $json.message }}\nTime: {{ new Date().toISOString() }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

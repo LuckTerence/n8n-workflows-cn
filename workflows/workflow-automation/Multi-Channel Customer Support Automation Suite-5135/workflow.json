@@ -135,11 +135,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -147,7 +148,6 @@
           "name": "O2 Personal Account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -416,12 +416,27 @@
   "_cn_meta": {
     "title_zh": "Multi-Channel Customer Support Automation Suite",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5135,
     "synced_at": "2026-06-17T14:14:27.677994",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "352f497d-9b66-40c5-8a0a-cfac715db269": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify Slack",
+        "parameters": {
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🎫 New {{$json[\"priority\"]}} Priority Ticket"
+          }
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

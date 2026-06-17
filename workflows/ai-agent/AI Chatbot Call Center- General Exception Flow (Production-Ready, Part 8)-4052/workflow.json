@@ -43,11 +43,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -56,7 +57,6 @@
         }
       },
       "notesInFlow": true,
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -90,12 +90,34 @@
   "_cn_meta": {
     "title_zh": "AI Chatbot Call Center: General Exception Flow (Production-Ready, Part 8)",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4052,
     "synced_at": "2026-06-17T14:17:20.678194",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "AI 聊天机器人、AI 对话"
+    "description_zh": "AI 聊天机器人、AI 对话",
+    "replacements": {
+      "42f2e2c9-40f7-4201-86c5-892b212863d3": {
+        "type": "n8n-nodes-base.slack",
+        "name": "👻 Exception Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "name",
+            "value": "#demo-n8n-error"
+          },
+          "otherOptions": {
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=👻 Exception @DEMO\nWorkflow: {{ $json.workflow.name }}\nUrl: {{ $json.execution.url }}\n{{ $json.execution.error.message }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

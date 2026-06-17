@@ -74,15 +74,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "credential-id",
           "name": "Google Drive"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "8af70f1f-c2fb-442f-b7b9-1be3305ff8dd",
@@ -175,7 +174,7 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -184,7 +183,6 @@
         }
       },
       "retryOnFail": true,
-      "typeVersion": 3,
       "alwaysOutputData": true
     },
     {
@@ -234,7 +232,7 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -242,8 +240,7 @@
           "name": "Google Drive"
         }
       },
-      "retryOnFail": true,
-      "typeVersion": 3
+      "retryOnFail": true
     },
     {
       "id": "6f884d85-dddd-4d8d-8773-4068be63072f",
@@ -1156,7 +1153,7 @@
   "_cn_meta": {
     "title_zh": "Crawl documentation sites and build an AI knowledge base with Olostep",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13436,
     "synced_at": "2026-06-17T14:15:04.388681",
     "foreign_services": [
@@ -1167,6 +1164,68 @@
       "Pinecone"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "网页爬取"
+    "description_zh": "网页爬取",
+    "replacements": {
+      "7401b2b1-a43d-4a29-a8fe-40e9abc3e8bc": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create Parent Folder",
+        "parameters": {
+          "name": "={{ $json.Service }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1ogVqaOeuMSGOs_jUclfs8Mj6oKX71EhZ",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1ogVqaOeuMSGOs_jUclfs8Mj6oKX71EhZ",
+            "cachedResultName": "api workflow"
+          },
+          "resource": "folder"
+        },
+        "typeVersion": 3
+      },
+      "aa4f21b0-caad-48f5-9c4a-d63b264fd957": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Search files and folders",
+        "parameters": {
+          "limit": 1,
+          "filter": {
+            "folderId": {
+              "__rl": true,
+              "mode": "id",
+              "value": "={{ $json.parent_id }}"
+            }
+          },
+          "options": {},
+          "resource": "fileFolder",
+          "queryString": "={{ $json.url.split('/') [$json.counter] }}"
+        },
+        "typeVersion": 3
+      },
+      "f3722176-6062-4b55-b9da-cc8960d8f650": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create folder",
+        "parameters": {
+          "name": "={{ $('counter').item.json.url.split('/') [$('counter').item.json.counter] }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('counter').item.json.parent_id }}"
+          },
+          "resource": "folder"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

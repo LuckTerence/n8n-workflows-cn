@@ -215,7 +215,7 @@
         592
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -227,9 +227,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "33fbb3e0-ed9b-4449-a358-4758a77b396d",
@@ -354,13 +353,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -623,7 +622,7 @@
   "_cn_meta": {
     "title_zh": "Phase-Based Blog Creation System with Specialized AI Sub-Agents",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10524,
     "synced_at": "2026-06-17T14:18:59.675083",
     "foreign_services": [
@@ -631,6 +630,20 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "AI 智能体、博客内容"
+    "description_zh": "AI 智能体、博客内容",
+    "replacements": {
+      "5e41b4bc-d2cd-4259-bce0-98b9306426d5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Research",
+        "parameters": {},
+        "typeVersion": 4.7
+      },
+      "7ce062cc-3deb-4eb0-a534-44fefb373732": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack Message Response",
+        "parameters": {},
+        "typeVersion": 2.3
+      }
+    }
   }
 }

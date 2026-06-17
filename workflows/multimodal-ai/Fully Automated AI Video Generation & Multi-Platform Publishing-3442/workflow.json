@@ -501,9 +501,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "eec529e9-2601-4f7b-b415-63d2ebba1574",
@@ -517,9 +516,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "63e72d56-140e-47d8-9f72-b58c764deed9",
@@ -572,18 +570,27 @@
     {
       "id": "89c0e958-7690-4f3d-af49-3e9776f2c979",
       "name": "Notify me on Discord",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2780,
         1140
       ],
       "webhookId": "1541bc50-06e4-48e8-8c76-23850ee4edf6",
       "parameters": {
-        "content": "=A new Resume Studio POV video has been created: {{ $json.final_output }}",
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
         "options": {},
-        "authentication": "webhook"
-      },
-      "typeVersion": 2
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "14a09794-5e02-4880-b33d-139a91726dda",
@@ -613,7 +620,7 @@
         1220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -625,9 +632,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.5,
       "alwaysOutputData": true
     },
     {
@@ -745,15 +751,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "2TbhWtnbRfSloGxX",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "3893d1de-7464-48ad-91a3-14b867c2a516",
@@ -787,15 +792,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "2TbhWtnbRfSloGxX",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "a2c07158-e949-4b5b-a92e-f4b021742831",
@@ -806,7 +810,7 @@
         1140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -818,15 +822,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "3IOU2VjBnR4hGohx",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "62423325-f9da-4cdf-8864-c011fb4fa14f",
@@ -1780,6 +1783,489 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
-    "description_zh": "视频生成、表单处理、流程自动化"
+    "description_zh": "视频生成、表单处理、流程自动化",
+    "replacements": {
+      "ad87317d-3ed0-4fdf-aea5-7b2fa60fb59f": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Voice Audio",
+        "parameters": {
+          "name": "={{ $('Load Google Sheet').item.json.id }}-voiceover.mp3",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
+            "cachedResultName": "Resume Studio"
+          }
+        },
+        "typeVersion": 3
+      },
+      "eec529e9-2601-4f7b-b415-63d2ebba1574": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Set Access Permissions",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "share",
+          "permissionsUi": {
+            "permissionsValues": {
+              "role": "writer",
+              "type": "anyone",
+              "allowFileDiscovery": true
+            }
+          }
+        },
+        "typeVersion": 3
+      },
+      "89c0e958-7690-4f3d-af49-3e9776f2c979": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Notify me on Discord",
+        "parameters": {
+          "content": "=A new Resume Studio POV video has been created: {{ $json.final_output }}",
+          "options": {},
+          "authentication": "webhook"
+        },
+        "typeVersion": 2
+      },
+      "4de1f1c7-52ad-4e00-ad22-b4c3c0f718d8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Load Google Sheet",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": true
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "for production",
+                "lookupColumn": "production"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit?usp=drivesdk",
+            "cachedResultName": "Sheet Template"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "b0d0fe6f-39c2-4da6-9fcf-b0151ed2c351": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Final Video",
+        "parameters": {
+          "name": "=POV-{{ $('Render Final Video').item.json.id }}.mp4",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
+            "cachedResultName": "Resume Studio"
+          }
+        },
+        "typeVersion": 3
+      },
+      "74de5f28-f081-4ec5-a47e-681eb845f701": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Set Permissions",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {},
+          "operation": "share",
+          "permissionsUi": {
+            "permissionsValues": {
+              "role": "writer",
+              "type": "anyone",
+              "allowFileDiscovery": true
+            }
+          }
+        },
+        "typeVersion": 3
+      },
+      "a2c07158-e949-4b5b-a92e-f4b021742831": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Google Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "id": "={{ $('Load Google Sheet').first().json.id }}",
+              "width": "={{ $('Get Raw File').item.json.width }}",
+              "height": "={{ $('Get Raw File').item.json.height }}",
+              "model1": "={{ $('Generate Video Captions').item.json.model }}",
+              "model2": "={{ $('Pair Videos with Audio').item.json.model }}",
+              "model3": "={{ $('Generate Script').item.json.model }}",
+              "duration": "={{ $('Get Raw File').item.json.duration }}",
+              "fluxCost": "0.075",
+              "frameRate": "={{ $('Get Raw File').item.json.frame_rate }}",
+              "klingCost": "2.3",
+              "production": "done",
+              "publishing": "for publishing",
+              "final_output": "={{ $('Upload Final Video').item.json.webContentLink }}",
+              "prompt1 input tokens": "={{ $('Generate Video Captions').item.json.usage.prompt_tokens }}",
+              "prompt2 input tokens": "={{ $('Pair Videos with Audio').item.json.input_tokens }}",
+              "prompt3 input tokens": "={{ $('Generate Script').item.json.usage.prompt_tokens }}",
+              "prompt1 output tokens": "={{ $('Generate Video Captions').item.json.usage.completion_tokens }}",
+              "prompt2 output tokens": "={{ $('Pair Videos with Audio').item.json.output_tokens }}",
+              "prompt3 output tokens": "={{ $('Generate Script').item.json.usage.completion_tokens }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "idea",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "idea",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "caption",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "caption",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "production",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "production",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "environment_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "environment_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "publishing",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "publishing",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "final_output",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "final_output",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "width",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "width",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "height",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "height",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "duration",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "duration",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "frameRate",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "frameRate",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model1",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt1 input tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt1 input tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt1 output tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt1 output tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model1 cost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model1 cost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt2 input tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt2 input tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt2 output tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt2 output tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model2 cost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model2 cost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt3 input tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt3 input tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt3 output tokens",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt3 output tokens",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model3 cost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model3 cost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cmCost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "cmCost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "upgradeCmCost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "upgradeCmCost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fluxCost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "fluxCost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "klingCost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "klingCost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "totalCost",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "totalCost",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "datePosted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "datePosted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit?usp=drivesdk",
+            "cachedResultName": "Sheet Template"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

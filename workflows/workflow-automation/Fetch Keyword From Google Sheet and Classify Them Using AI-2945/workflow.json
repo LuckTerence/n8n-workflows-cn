@@ -83,7 +83,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -95,15 +95,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DeaHa70CotH7MPX6",
           "name": "Google Sheets account NN DB test"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "73e208d1-e8d8-4c8b-90f3-06202ed73986",
@@ -140,7 +139,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -152,15 +151,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "DeaHa70CotH7MPX6",
           "name": "Google Sheets account NN DB test"
         }
-      },
-      "typeVersion": 4.5
+      }
     }
   ],
   "pinData": {},
@@ -258,13 +256,244 @@
   "_cn_meta": {
     "title_zh": "Fetch Keyword From Google Sheet and Classify Them Using AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2945,
     "synced_at": "2026-06-17T14:09:05.544771",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表格处理"
+    "description_zh": "表格处理",
+    "replacements": {
+      "900ac097-c6de-41c0-8270-c9de60424d5f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Keywords from Sheet",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1319606837,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU/edit#gid=1319606837",
+            "cachedResultName": "Copy of Sheet1 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU/edit?usp=drivesdk",
+            "cachedResultName": "AI + agents"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "313474f7-a53d-479c-a33e-9327ca29e570": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Sheet with Analysis Results",
+        "parameters": {
+          "columns": {
+            "value": {
+              "Number": "={{ $('Process Keywords in Batches').item.json.Number }}",
+              "Service?": "={{ $json.output.Isservice }}"
+            },
+            "schema": [
+              {
+                "id": "Number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Service?",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Service?",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Country",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Country",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Difficulty",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Difficulty",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Volume",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Volume",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CPC",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CPC",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CPS",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CPS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Parent Keyword",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Parent Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last Update",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Last Update",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SERP Features",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "SERP Features",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Global volume",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Global volume",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Traffic potential",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Traffic potential",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Global traffic potential",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Global traffic potential",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "First seen",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "First seen",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Intents",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "Intents",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1319606837,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU/edit#gid=1319606837",
+            "cachedResultName": "Copy of Sheet1 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1jzDvszQoVDV-jrAunCXqTVsiDxXVLMGqQ1zGXwfy5eU/edit?usp=drivesdk",
+            "cachedResultName": "AI + agents"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

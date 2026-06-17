@@ -30,15 +30,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "pl7bkYVKthXr65dR",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "ed922804-f614-4dc4-be98-263c803e8382",
@@ -263,7 +262,7 @@
         2016
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -275,15 +274,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "HlBW2puZbuCCq8jJ",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3d4d077f-4988-4b70-b3a5-358ecbab19f4",
@@ -469,7 +467,7 @@
   "_cn_meta": {
     "title_zh": "Bulk AI Video Generation with Freepik Minimax Hailuo & Google Suite Integration",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7335,
     "synced_at": "2026-06-17T14:19:49.430137",
     "foreign_services": [
@@ -477,6 +475,53 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "78fa05c7-f18f-4d91-a425-d3760106016e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive1",
+        "parameters": {
+          "name": "=video - {{ $('Get prompt from google sheet').item.json.Name }} - {{ $('Duplicate Rows2').item.json.run }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1TnDibwPPPUm3VbmETiqWDVhtaUTLJ6mn",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1TnDibwPPPUm3VbmETiqWDVhtaUTLJ6mn",
+            "cachedResultName": "n8n workflows"
+          }
+        },
+        "typeVersion": 3
+      },
+      "34f8f236-4efb-44c8-aead-4dc19d7e2381": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get prompt from google sheet",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_u9IxEZINcwKQB15Rfx7C1hM71zeDST58Fz3nRHTCUY/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1_u9IxEZINcwKQB15Rfx7C1hM71zeDST58Fz3nRHTCUY",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_u9IxEZINcwKQB15Rfx7C1hM71zeDST58Fz3nRHTCUY/edit?usp=drivesdk",
+            "cachedResultName": "freepik prompts"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

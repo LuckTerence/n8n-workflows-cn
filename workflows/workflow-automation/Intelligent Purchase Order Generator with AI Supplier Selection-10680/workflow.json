@@ -232,9 +232,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "8ae567c0-551e-4496-babb-df74a6992eb2",
@@ -482,7 +481,7 @@
   "_cn_meta": {
     "title_zh": "Intelligent Purchase Order Generator with AI Supplier Selection",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10680,
     "synced_at": "2026-06-17T14:16:38.393711",
     "foreign_services": [
@@ -491,6 +490,27 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "f63b61f7-855c-4a78-b418-1edccec085e4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Archive in Drive",
+        "parameters": {
+          "name": "={{ $('Generate PO Document').item.json.fileName }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "root"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

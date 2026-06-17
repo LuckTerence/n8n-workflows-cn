@@ -239,7 +239,7 @@
         400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -251,9 +251,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 1
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     }
   ],
   "connections": {
@@ -366,7 +365,7 @@
     "title_zh": "弃购挽回分析",
     "description_zh": "Gmail+Sheets的弃购挽回分析",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6045,
     "synced_at": "2026-06-17T11:37:18.577744",
     "upgraded_at": "2026-06-17",
@@ -374,6 +373,28 @@
       "Google Sheets",
       "Gmail"
     ],
-    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格"
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
+    "replacements": {
+      "13": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Track Recovery Start",
+        "parameters": {
+          "values": {
+            "values": [
+              "={{ $node['Generate Recovery Data'].json.recoveryId }}",
+              "={{ $node['Generate Recovery Data'].json.cartData.customer_email }}",
+              "={{ $node['Generate Recovery Data'].json.cartData.cart_value }}",
+              "={{ new Date().toISOString() }}",
+              "sequence_started"
+            ]
+          },
+          "resource": "sheet",
+          "operation": "appendRow",
+          "sheetName": "Cart Recovery Tracking",
+          "documentId": "your-google-sheet-id"
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

@@ -102,7 +102,7 @@
         -80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -114,9 +114,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.6,
       "alwaysOutputData": true
     },
     {
@@ -139,7 +138,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -151,11 +150,10 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "executeOnce": false,
       "retryOnFail": false,
-      "typeVersion": 4.6,
       "alwaysOutputData": false,
       "waitBetweenTries": 2000
     },
@@ -168,7 +166,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -180,9 +178,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "7fc67f04-72bd-410b-a31e-001421769a9f",
@@ -253,7 +250,7 @@
         200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -265,9 +262,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "7e1dcf30-6dfc-4587-abb1-1380c7c8ac0b",
@@ -533,13 +529,39 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Interview Preparation System using Local LLM for Campus Placements",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4761,
     "synced_at": "2026-06-17T14:06:13.666918",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "面试系统"
+    "description_zh": "面试系统",
+    "replacements": {
+      "bd8a55e4-a326-4eb6-96a0-8ec079fa1552": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "create a sheet in google spreadsheet",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "8419db80-d996-4adc-bac1-92bbf3c06ac2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add csv data to google spreadsheet",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "bf878d70-ef89-498f-88a4-eb7cbfd3362d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Select first row based on selected column",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "6e1fa2e2-c749-42ce-a50d-0780badb59c9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update the selected column to spreadsheet",
+        "parameters": {},
+        "typeVersion": 4.6
+      }
+    }
   }
 }

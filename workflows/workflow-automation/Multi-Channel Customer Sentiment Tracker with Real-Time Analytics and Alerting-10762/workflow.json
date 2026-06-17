@@ -561,11 +561,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -573,7 +574,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -610,7 +610,7 @@
         640
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -622,15 +622,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hQFe8XTqJEiHL03Z",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "5708352b-ae26-4f26-9ee1-129755341f9c",
@@ -1223,7 +1222,7 @@
   "_cn_meta": {
     "title_zh": "Multi-Channel Customer Sentiment Tracker with Real-Time Analytics and Alerting",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10762,
     "synced_at": "2026-06-17T14:13:21.406329",
     "foreign_services": [
@@ -1231,6 +1230,104 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "告警通知"
+    "description_zh": "告警通知",
+    "replacements": {
+      "b51e28a7-1e7a-4c8e-bd41-f1f477f5442d": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Alert to Slack",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Slack channel ID or name__>"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=🚨 **Sentiment Alert Detected**\n\n**Alert Type:** {{ $json.alertType || 'Sentiment Anomaly' }}\n**Entity Affected:** {{ $json.entity || 'N/A' }}\n**Current Sentiment Score:** {{ $json.sentimentScore || 'N/A' }}\n**Time Period:** {{ $json.timePeriod || 'N/A' }}\n**Threshold Exceeded:** {{ $json.thresholdExceeded || 'N/A' }}\n\nPlease review the dashboard for more details."
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "4042811e-c468-4f6d-8a85-3971fee49e68": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Dashboard - Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "entity": "={{ $json.entity }}",
+              "timestamp": "={{ $json.timestamp }}",
+              "feedback_count": "={{ $json.feedback_count }}",
+              "sentiment_score": "={{ $json.sentiment_score }}",
+              "trend_direction": "={{ $json.trend_direction }}",
+              "sentiment_distribution": "={{ $json.sentiment_distribution }}"
+            },
+            "schema": [
+              {
+                "id": "timestamp",
+                "required": false,
+                "displayName": "timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "entity",
+                "required": false,
+                "displayName": "entity",
+                "defaultMatch": true,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "sentiment_score",
+                "required": false,
+                "displayName": "sentiment_score",
+                "defaultMatch": false,
+                "canBeUsedToMatch": false
+              },
+              {
+                "id": "sentiment_distribution",
+                "required": false,
+                "displayName": "sentiment_distribution",
+                "defaultMatch": false,
+                "canBeUsedToMatch": false
+              },
+              {
+                "id": "feedback_count",
+                "required": false,
+                "displayName": "feedback_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": false
+              },
+              {
+                "id": "trend_direction",
+                "required": false,
+                "displayName": "trend_direction",
+                "defaultMatch": false,
+                "canBeUsedToMatch": false
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "entity"
+            ]
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "Sentiment Dashboard"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Google Sheets document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

@@ -41,9 +41,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2534a95b-7c65-4c3b-b927-9cdbfbb400a7",
@@ -109,7 +108,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -121,9 +120,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2a7c8960-b9ec-4114-bc5e-0d878d7485ed",
@@ -227,7 +225,7 @@
   "_cn_meta": {
     "title_zh": "Effortless Job Hunting: Let this Automation Find Your Next Role",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3051,
     "synced_at": "2026-06-17T14:06:23.910030",
     "foreign_services": [
@@ -235,6 +233,20 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "求职招聘"
+    "description_zh": "求职招聘",
+    "replacements": {
+      "da9591a1-87fd-4b4e-bcae-ec2fc5264b9a": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Resume (PDF File)",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "5fb3753e-b5b9-4a8f-942b-986cd571764d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Upload Job Posts Organised in a Spreadsheet",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

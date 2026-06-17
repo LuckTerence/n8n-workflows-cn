@@ -127,7 +127,7 @@
         128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -139,15 +139,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "5f7344d8-a277-457b-a33f-c48e2ced1e49",
@@ -646,7 +645,7 @@
         320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -658,15 +657,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "30c415e0-58e0-48b9-b7e9-11dc5d979ac8",
@@ -775,15 +773,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "gzeHMd64HAz6HBIe",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "a9614733-44e3-4580-95f8-a955d9136be4",
@@ -794,7 +791,7 @@
         -512
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -806,15 +803,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "a8e85901-2451-4037-ba0c-aa2b229c9d0f",
@@ -900,7 +896,7 @@
         -752
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -912,15 +908,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "efd41bb8-ecef-49ea-9051-ead169d6766b",
@@ -1052,7 +1047,7 @@
         -192
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1064,15 +1059,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "51us92xkOlrvArhV",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "abafa8c6-55a0-488c-970e-d2a969ad7959",
@@ -1609,7 +1603,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI viral videos with NanoBanana & VEO3, shared on socials via Blotato",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8270,
     "synced_at": "2026-06-17T14:09:23.302437",
     "foreign_services": [
@@ -1618,6 +1612,439 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "视频生成、社交平台"
+    "description_zh": "视频生成、社交平台",
+    "replacements": {
+      "bee496d6-fc2d-4f1c-812f-9d6be08154a7": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Status to \"DONE\"",
+        "parameters": {
+          "columns": {
+            "value": {
+              "STATUS": "Published",
+              "IMAGE NAME": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.photo[2].file_unique_id }}"
+            },
+            "schema": [
+              {
+                "id": "IMAGE NAME",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE DESCRIPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE DESCRIPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CAPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL VIDEO FINAL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "URL VIDEO FINAL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TITRE VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "TITRE VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CAPTION VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "IMAGE NAME"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "8b4c6b55-a0d7-4a19-b85c-1927ccb5eaa2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Caption Video to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "STATUS": "CREATE",
+              "IMAGE NAME": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.photo[2].file_unique_id }}",
+              "TITRE VIDEO": "={{ $('AI Agent: Generate Video Script').item.json.output.title }}",
+              "CAPTION VIDEO": "={{ $json.message.content }}",
+              "URL VIDEO FINAL": "={{ $('Download Video from VEO3').item.json.data.response.resultUrls[0] }}"
+            },
+            "schema": [
+              {
+                "id": "IMAGE NAME",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE DESCRIPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE DESCRIPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CAPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL VIDEO FINAL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "URL VIDEO FINAL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "TITRE VIDEO",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "TITRE VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CAPTION VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "IMAGE NAME"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "7a362123-c86c-45f9-b80c-a5660f92da46": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive: Upload Image",
+        "parameters": {
+          "name": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.photo[2].file_unique_id }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "a9614733-44e3-4580-95f8-a955d9136be4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets: Log Image & Caption",
+        "parameters": {
+          "columns": {
+            "value": {
+              "STATUS": "EN COURS",
+              "CAPTION": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.caption }}",
+              "IMAGE URL": "={{ $json.webContentLink }}",
+              "IMAGE NAME": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.photo[2].file_unique_id }}"
+            },
+            "schema": [
+              {
+                "id": "IMAGE NAME",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE DESCRIPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE DESCRIPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CAPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "IMAGE NAME"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "6d78c44a-9073-4a2c-9a17-102c870b2162": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets: Update Image Description",
+        "parameters": {
+          "columns": {
+            "value": {
+              "IMAGE NAME": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.photo[2].file_unique_id }}",
+              "IMAGE DESCRIPTION": "={{ $json.content }}"
+            },
+            "schema": [
+              {
+                "id": "IMAGE NAME",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE URL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "IMAGE URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "IMAGE DESCRIPTION",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "IMAGE DESCRIPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CAPTION",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "CAPTION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "STATUS",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "STATUS",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "IMAGE NAME"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "ec725aa0-fd30-4d98-b984-0228873db428": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets: Read Video Parameters (CONFIG)",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

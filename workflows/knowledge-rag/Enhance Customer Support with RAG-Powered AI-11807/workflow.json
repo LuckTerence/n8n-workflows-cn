@@ -839,11 +839,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -851,7 +852,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -881,7 +881,7 @@
         -11888
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -893,15 +893,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "HAfpzdG2C44jXSec",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "d688bdf8-ca16-4c49-b97d-a48ac0b5b19e",
@@ -929,7 +928,7 @@
         -10576
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -941,15 +940,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "HAfpzdG2C44jXSec",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "e771b416-8588-42ad-8407-2893367c064f",
@@ -1124,11 +1122,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -1136,7 +1135,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -2194,7 +2192,7 @@
   "_cn_meta": {
     "title_zh": "Enhance Customer Support with RAG-Powered AI",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11807,
     "synced_at": "2026-06-17T14:15:08.275482",
     "foreign_services": [
@@ -2203,6 +2201,96 @@
       "Supabase"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Supabase→腾讯云CloudBase",
-    "description_zh": "RAG 检索增强"
+    "description_zh": "RAG 检索增强",
+    "replacements": {
+      "2dde2c80-830d-49a8-ac89-72722d703ba0": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Escalation Alert to Support Team",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Workflow Configuration').first().json.slackSupportChannelId }}"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ '🚨 Escalation Alert\nUser: ' + $json.userId + '\nPriority: ' + $json.priority + '\nReason: ' + ($json.confidence < 0.7 ? 'Low confidence' : 'Negative sentiment') + '\nMessage: ' + $json.message }}"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "dfcb156f-79c8-417e-80b7-c7c51dd8afce": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Conversation to Sheets",
+        "parameters": {
+          "columns": {
+            "value": {
+              "userId": "={{ $json.userId }}",
+              "channel": "={{ $json.channel }}",
+              "message": "={{ $json.message }}",
+              "category": "={{ $json.category }}",
+              "sentiment": "={{ $json.sentiment }}",
+              "timestamp": "={{ $json.timestamp }}",
+              "aiResponse": "={{ $json.aiResponse }}",
+              "confidence": "={{ $json.confidence }}"
+            },
+            "mappingMode": "defineBelow"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "={{ $('Workflow Configuration').first().json.googleSheetsLogSheet }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Workflow Configuration').first().json.googleSheetsDocId }}"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4.7
+      },
+      "b60e07af-f9ae-4aa3-862b-c5157794f815": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Weekly Metrics",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "name",
+            "value": "={{ $('Workflow Configuration').first().json.googleSheetsMetricsSheet }}"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Workflow Configuration').first().json.googleSheetsDocId }}"
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4.7
+      },
+      "8e1ab4da-3c5b-4044-a60d-476f3efeafb1": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Weekly Summary",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Workflow Configuration').first().json.slackWeeklySummaryChannelId }}"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ '📊 Weekly Support Summary\nTotal conversations: ' + $json.totalCount + '\nAvg confidence: ' + $json.avgConfidence + '\nEscalations: ' + $json.escalations }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

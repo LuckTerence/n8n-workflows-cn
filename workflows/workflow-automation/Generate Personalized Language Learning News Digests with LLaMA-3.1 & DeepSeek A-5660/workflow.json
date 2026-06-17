@@ -26,7 +26,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -38,9 +38,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "46bd85ea-ef08-454d-9872-1e4537417127",
@@ -271,7 +270,7 @@
   "_cn_meta": {
     "title_zh": "Generate Personalized Language Learning News Digests with LLaMA-3.1 & DeepSeek AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5660,
     "synced_at": "2026-06-17T14:09:30.354908",
     "foreign_services": [
@@ -279,6 +278,14 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "新闻聚合"
+    "description_zh": "新闻聚合",
+    "replacements": {
+      "fb2857cc-ade3-4f7f-9fbc-a710dd92510e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

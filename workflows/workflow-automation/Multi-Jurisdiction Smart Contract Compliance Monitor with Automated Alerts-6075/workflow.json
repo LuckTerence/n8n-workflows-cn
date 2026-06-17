@@ -344,7 +344,7 @@
         570
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -356,9 +356,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 1
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     }
   ],
   "connections": {
@@ -506,7 +505,7 @@
   "_cn_meta": {
     "title_zh": "Multi-Jurisdiction Smart Contract Compliance Monitor with Automated Alerts",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6075,
     "synced_at": "2026-06-17T14:13:22.023071",
     "foreign_services": [
@@ -514,6 +513,30 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、告警通知、流程自动化"
+    "description_zh": "系统监控、告警通知、流程自动化",
+    "replacements": {
+      "16": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Compliance Check",
+        "parameters": {
+          "values": {
+            "values": [
+              "={{ $json.regulatory_update.title }}",
+              "={{ $json.regulatory_update.jurisdiction }}",
+              "={{ $json.risk_score }}",
+              "={{ $json.risk_level }}",
+              "={{ $json.impact_assessment.contract_count }}",
+              "={{ $json.recommended_action }}",
+              "={{ $json.analyzed_at }}"
+            ]
+          },
+          "resource": "sheet",
+          "operation": "appendRow",
+          "sheetName": "Compliance Monitoring Log",
+          "documentId": "your-google-sheet-id"
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

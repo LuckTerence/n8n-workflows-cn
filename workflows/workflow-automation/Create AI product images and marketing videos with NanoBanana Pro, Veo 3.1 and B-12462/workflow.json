@@ -164,15 +164,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "5e713b2d-6756-43c2-8c55-7dfa26797ea1",
@@ -199,15 +198,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "fc3cc7b3-9f4a-44a5-9dba-00e115b750d9",
@@ -221,15 +219,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "314f4ca9-10a2-4110-8b4c-8ef426db8ca8",
@@ -243,15 +240,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "bde757be-c869-42ab-b4a5-ffc0b58f518f",
@@ -265,15 +261,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "3e24fa2c-0e84-49f4-acd8-8b40ce8d56d5",
@@ -287,15 +282,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "e218c4bf-7cc4-4a24-b787-d99ad4961f49",
@@ -306,7 +300,7 @@
         1184
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -318,15 +312,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "37cca6f3-f484-4cf6-9cfa-fbe3880d26da",
@@ -337,7 +330,7 @@
         1376
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -349,15 +342,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "925c029f-6a93-4c9c-bf04-4596dea35842",
@@ -368,7 +360,7 @@
         1568
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -380,15 +372,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "692d6144-0031-464e-90af-d2701cbb58b6",
@@ -399,7 +390,7 @@
         1760
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -411,15 +402,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3fdea09a-5260-4342-a878-7bd99594933f",
@@ -430,7 +420,7 @@
         1952
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -442,15 +432,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "4bff23d7-e944-4aff-95bd-b1911aa535fc",
@@ -461,7 +450,7 @@
         2144
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -473,15 +462,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "067f6811-230d-4723-ac2d-7575f9898241",
@@ -774,7 +762,7 @@
         1472
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -786,15 +774,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "6a3e34fe-2697-4175-8bb9-6f3e93f7e6d4",
@@ -805,7 +792,7 @@
         2080
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -817,15 +804,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "0ade2e46-7157-4901-907f-2e575f50f1b0",
@@ -836,7 +822,7 @@
         1872
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -848,15 +834,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "7e15685d-fdb7-4bec-a5f6-ccb95f4e81c2",
@@ -867,7 +852,7 @@
         1664
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -879,15 +864,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3393dba0-470a-4997-a0e7-91649816e116",
@@ -898,7 +882,7 @@
         1264
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -910,15 +894,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "2b78a81c-37d0-4872-b178-909a5c3362d2",
@@ -975,7 +958,7 @@
         2144
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -987,15 +970,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "a26bca08-e037-495c-af30-b56e3609796a",
@@ -1097,7 +1079,7 @@
         1664
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1109,15 +1091,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "21de713e-b642-41f4-ba91-c5809241fefd",
@@ -1560,15 +1541,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "odf7JAwyqVFVZBhQ",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "31c520c0-dd34-4852-89af-126d6314fadb",
@@ -1594,7 +1574,7 @@
         288
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1606,15 +1586,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "9838a243-3ac7-4bf9-a634-bfaa5263bf01",
@@ -1652,7 +1631,7 @@
         896
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1664,15 +1643,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "073b238d-886c-491a-a97a-3af1b4e84fcc",
@@ -1772,7 +1750,7 @@
         896
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1784,15 +1762,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YlIXFU6zUDsqwmRG",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "8a46291a-b57f-4827-afc7-fcc6224b7d79",
@@ -2628,7 +2605,7 @@
   "_cn_meta": {
     "title_zh": "Create AI product images and marketing videos with NanoBanana Pro, Veo 3.1 and Blotato",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12462,
     "synced_at": "2026-06-17T14:20:23.965028",
     "foreign_services": [
@@ -2637,6 +2614,2849 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "市场数据、图片生成、视频生成"
+    "description_zh": "市场数据、图片生成、视频生成",
+    "replacements": {
+      "d6b15a51-e5f7-460f-a5ec-3e96ae089ab6": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive",
+        "parameters": {
+          "name": "={{ \n  \"image_top_left_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "1feb8bed-9156-460a-91f0-40e0968fa77b": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive1",
+        "parameters": {
+          "name": "={{ \n  \"image_top_center_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "fc3cc7b3-9f4a-44a5-9dba-00e115b750d9": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive2",
+        "parameters": {
+          "name": "={{ \n  \"image_top_right_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          }
+        },
+        "typeVersion": 3
+      },
+      "314f4ca9-10a2-4110-8b4c-8ef426db8ca8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive3",
+        "parameters": {
+          "name": "={{ \n  \"image_bottom_left_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "bde757be-c869-42ab-b4a5-ffc0b58f518f": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive4",
+        "parameters": {
+          "name": "={{ \n  \"image_bottom_center_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "3e24fa2c-0e84-49f4-acd8-8b40ce8d56d5": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload to Google Drive5",
+        "parameters": {
+          "name": "={{ \n  \"image_bottom_right_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 3
+      },
+      "e218c4bf-7cc4-4a24-b787-d99ad4961f49": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_top_left",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_1": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "37cca6f3-f484-4cf6-9cfa-fbe3880d26da": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_top_center",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_2": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "925c029f-6a93-4c9c-bf04-4596dea35842": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_top_right",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_3": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "692d6144-0031-464e-90af-d2701cbb58b6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_bottom_left",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_4": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "3fdea09a-5260-4342-a878-7bd99594933f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_bottom_center",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_5": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "4bff23d7-e944-4aff-95bd-b1911aa535fc": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update url image_bottom_right",
+        "parameters": {
+          "columns": {
+            "value": {
+              "new_image_6": "={{ $json.webContentLink }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "7d98612b-7643-46b4-abff-8e2f94f1640b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video 2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "video_2": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "6a3e34fe-2697-4175-8bb9-6f3e93f7e6d4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video 5",
+        "parameters": {
+          "columns": {
+            "value": {
+              "video_5": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "0ade2e46-7157-4901-907f-2e575f50f1b0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video 4",
+        "parameters": {
+          "columns": {
+            "value": {
+              "video_4": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "7e15685d-fdb7-4bec-a5f6-ccb95f4e81c2": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video 3",
+        "parameters": {
+          "columns": {
+            "value": {
+              "video_3": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "3393dba0-470a-4997-a0e7-91649816e116": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video 1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "video_1": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "67c7c244-e7e8-4d56-919e-e98d95a09d1b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update URL Final video",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "done",
+              "Final video": "={{ $json.video.url }}",
+              "image_contactsheet": "={{ $('Set Image URL').item.json.image_url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "new_image_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "new_image_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_4",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_4",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_5",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_5",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "video_6",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "video_6",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final video",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Final video",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_contactsheet"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "3c25a229-96d3-4520-bea9-f2e812bb7c82": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Search new image",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "e1858aae-e735-4b7b-93c3-3a4dca8ba3df": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload file",
+        "parameters": {
+          "name": "={{$binary.image.fileName}}\n",
+          "driveId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "inputDataFieldName": "image"
+        },
+        "typeVersion": 3
+      },
+      "084cbc5f-db93-4463-aff6-fc48f52c29b9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "nano_done",
+              "image_1": "={{ $('Aggregate descriptions').item.json.image1Url }}",
+              "image_2": "={{ $('Aggregate descriptions').item.json.image2Url }}",
+              "image_3": "={{ $('Aggregate descriptions').item.json.image3Url }}",
+              "description_all": "={{ $('Aggregate descriptions').item.json.allDescriptions }}",
+              "image_nanobanana": "={{ $json.images[0].url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>\n"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "5565af9e-f320-4816-be23-d047d0b61f69": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get image nanobanana",
+        "parameters": {
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "",
+            "cachedResultName": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "05441a54-658f-4e13-b838-1f65f3322119": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update database",
+        "parameters": {
+          "columns": {
+            "value": {
+              "status": "ContactSheet_done",
+              "row_number": 0,
+              "image_nanobanana": "={{ $('Get image nanobanana').item.json.image_nanobanana }}",
+              "image_contactsheet": "={{ $json.images[0].url }}"
+            },
+            "schema": [
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_1",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_2",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_3",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "image_3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description_all",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "description_all",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_nanobanana",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_nanobanana",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_contactsheet",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "image_contactsheet",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "image_nanobanana"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

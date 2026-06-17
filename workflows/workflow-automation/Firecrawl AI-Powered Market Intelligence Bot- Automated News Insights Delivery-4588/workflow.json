@@ -140,11 +140,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -152,7 +153,6 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -311,12 +311,33 @@
   "_cn_meta": {
     "title_zh": "Firecrawl AI-Powered Market Intelligence Bot: Automated News Insights Delivery",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4588,
     "synced_at": "2026-06-17T14:12:42.487932",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "市场数据、网页爬取、新闻聚合"
+    "description_zh": "市场数据、网页爬取、新闻聚合",
+    "replacements": {
+      "f5965b4a-4ab1-4e5f-868c-2dc11c59fc28": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Summary to Slack",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C08TTV0CC3E",
+            "cachedResultName": "all-nathing"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=🔍 AI Research Summary: \nTitle: {{ $('Filter Relevant Articles').item.json.article.title }}\nLink: {{ $('Filter Relevant Articles').item.json.url }}\nSummary: {{ $json.output }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

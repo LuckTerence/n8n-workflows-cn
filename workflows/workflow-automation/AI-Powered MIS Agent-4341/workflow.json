@@ -57,9 +57,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "896ecb02-212f-4741-bc43-f17e5d8454b9",
@@ -193,9 +192,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "251c918e-d86e-46d8-864b-16d307d139ec",
@@ -209,9 +207,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "972db37a-9fd1-47f6-af08-7f07f3ed318f",
@@ -225,9 +222,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "adb37b79-efef-4056-8022-34cfa56065ee",
@@ -241,9 +237,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "e850a716-626c-40c0-b05f-d0dfdb972095",
@@ -257,9 +252,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "7b71d7d4-c89a-4ca5-a66b-9d58f2da35d4",
@@ -273,9 +267,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "f69eac3c-2f2c-4d94-be0e-f03a08e98de8",
@@ -327,9 +320,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "a9978123-27d7-4eb6-854c-615abfe0d659",
@@ -510,9 +502,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 3,
       "alwaysOutputData": false
     },
     {
@@ -527,9 +518,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b0bca736-a81e-48a0-a70f-f9265f2652ff",
@@ -543,9 +533,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "fd96e282-c444-4839-af97-a8ad8da029e7",
@@ -596,9 +585,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b2a32c8b-dcd4-4736-9f28-1c4f72c7c75b",
@@ -621,7 +609,7 @@
         3060
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -633,9 +621,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "0fe2bb72-5c7d-4845-9f36-8651a149baa0",
@@ -646,7 +633,7 @@
         3360
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -658,9 +645,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "fee9ece9-d592-4ff1-9628-0bc56a87fd5d",
@@ -818,9 +804,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "1786391d-f802-4cbc-bb2d-0b67bc875eb7",
@@ -875,7 +860,7 @@
         3760
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -887,9 +872,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "9dcdfa19-0653-450f-a77c-cc43a8d8a529",
@@ -949,9 +933,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "ada42b2e-3185-4215-b8b3-d9ff4c303f4c",
@@ -1006,7 +989,7 @@
         4040
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1018,9 +1001,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "0fd2cb1a-715d-412d-9d5e-b4ab5d53cc41",
@@ -1381,9 +1363,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "5b91eafa-20fa-44ee-bbc5-80a937e60e47",
@@ -1397,9 +1378,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "89c6a1bb-dee6-441c-9dee-89def66d5d94",
@@ -1557,7 +1537,7 @@
         2360
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -1569,9 +1549,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "eb697cae-2f46-47bd-8792-9078f4707366",
@@ -1684,9 +1663,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b3cff5e5-34c2-42c4-ba3a-445640720e4f",
@@ -19730,7 +19708,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered MIS Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4341,
     "synced_at": "2026-06-17T14:06:35.809055",
     "foreign_services": [
@@ -19740,6 +19718,140 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "AI 智能体"
+    "description_zh": "AI 智能体",
+    "replacements": {
+      "807f7bbd-f4c0-48bf-b46b-dd43ea6462f0": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "17f0444c-ee85-45e2-a8a7-ed45532c9c14": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive1",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "251c918e-d86e-46d8-864b-16d307d139ec": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive2",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "972db37a-9fd1-47f6-af08-7f07f3ed318f": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive3",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "adb37b79-efef-4056-8022-34cfa56065ee": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive4",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "e850a716-626c-40c0-b05f-d0dfdb972095": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive5",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "7b71d7d4-c89a-4ca5-a66b-9d58f2da35d4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive6",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "1bc1fee2-c256-4d52-8e2a-1981c0ea3bea": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive10",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "4582656d-856e-4c41-8c50-b3a3f20791db": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Daily Sales Folder",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "d4719c21-129a-43cb-81b5-0addba3ffaa9": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Address Folder",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "b0bca736-a81e-48a0-a70f-f9265f2652ff": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "customer_info folder",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "aa7ee570-4f05-41af-90eb-01168d505c3e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Master",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "ca561379-c751-467f-a5a7-20faf2acc5ed": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets2",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "0fe2bb72-5c7d-4845-9f36-8651a149baa0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets6",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "52ac95d1-740a-4c5c-a1d5-5a75c2df3277": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive7",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "144eedc9-3636-445e-8f5a-5cfddf0085f8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "64eff3a5-d12f-4599-900b-f187902f5b5b": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive8",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "395e894a-fe4d-499f-b7fd-fa03ca40a7c0": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets3",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "24ae13bd-d9c6-4570-ad45-a27b2471dd0e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Knowledge_base",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "5b91eafa-20fa-44ee-bbc5-80a937e60e47": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download files",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "f0d44a66-1cbf-405c-b0df-a8d533f33376": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets4",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "0f2dcf21-1519-449b-8628-7b11ae47ee0a": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive9",
+        "parameters": {},
+        "typeVersion": 3
+      }
+    }
   }
 }

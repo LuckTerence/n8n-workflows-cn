@@ -295,7 +295,7 @@
         1056
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -307,15 +307,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "bd20eb61-ade0-4b4b-ba89-943dfa11ac05",
@@ -326,7 +325,7 @@
         1136
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -338,15 +337,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "ace1f669-dd08-48df-81bc-30c852e1424d",
@@ -357,7 +355,7 @@
         1248
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -369,15 +367,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "e24ed479-8a75-4c21-9f25-51d603b35574",
@@ -388,7 +385,7 @@
         1264
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -400,15 +397,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "8e9a40fd-9f34-44e0-b256-f15eb0a73ba2",
@@ -419,7 +415,7 @@
         1152
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -431,15 +427,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "991c7d7f-3bcf-4006-8a56-8e606ff49307",
@@ -450,7 +445,7 @@
         1040
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -462,15 +457,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+        "notes": "原 Google Calendar → 飞书日历。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
           "id": "4tovWKQg16ZAJg26",
           "name": "jitesh.com@gmail.com"
         }
-      },
-      "typeVersion": 1.3
+      }
     },
     {
       "id": "f4245e85-acc0-4529-9524-3484a237da24",
@@ -1906,7 +1900,7 @@
   "_cn_meta": {
     "title_zh": "Jarvis: Productivity AI Agent for Tasks, Calendar, Email & Expense using MCPs",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8500,
     "synced_at": "2026-06-17T14:21:16.376042",
     "foreign_services": [
@@ -1914,6 +1908,153 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、MCP 协议集成、邮件自动化"
+    "description_zh": "AI 智能体、MCP 协议集成、邮件自动化",
+    "replacements": {
+      "47e41e13-e6e7-4959-bb08-1f1f4da01b34": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Check Availability",
+        "parameters": {
+          "options": {
+            "timezone": {
+              "__rl": true,
+              "mode": "list",
+              "value": "Asia/Kolkata",
+              "cachedResultName": "Asia/Kolkata"
+            }
+          },
+          "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End_Time', ``, 'string') }}",
+          "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start_Time', ``, 'string') }}",
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "resource": "calendar",
+          "descriptionType": "manual",
+          "toolDescription": "Check if a slot is available on my calendar"
+        },
+        "typeVersion": 1.3
+      },
+      "bd20eb61-ade0-4b4b-ba89-943dfa11ac05": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Get all Events",
+        "parameters": {
+          "options": {
+            "orderBy": "startTime",
+            "timeZone": {
+              "__rl": true,
+              "mode": "list",
+              "value": "Asia/Kolkata",
+              "cachedResultName": "Asia/Kolkata"
+            },
+            "recurringEventHandling": "expand"
+          },
+          "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
+          "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', `Should be a future date and time`, 'string') }}",
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "operation": "getAll",
+          "returnAll": true,
+          "descriptionType": "manual",
+          "toolDescription": "Get future events on Google Calendar"
+        },
+        "typeVersion": 1.3
+      },
+      "ace1f669-dd08-48df-81bc-30c852e1424d": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Delete Calendar Event",
+        "parameters": {
+          "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the event id of the event to delete`, 'string') }}",
+          "options": {},
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "operation": "delete",
+          "descriptionType": "manual",
+          "toolDescription": "Delete Calendar Event"
+        },
+        "typeVersion": 1.3
+      },
+      "e24ed479-8a75-4c21-9f25-51d603b35574": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Reschedule Event",
+        "parameters": {
+          "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the id of the event to reschedule or update`, 'string') }}",
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "operation": "update",
+          "updateFields": {
+            "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+            "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+            "attendeesUi": {
+              "values": {
+                "mode": "replace",
+                "attendees": [
+                  "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('attendees0_Attendees', ``, 'string') }}"
+                ]
+              }
+            },
+            "sendUpdates": "all"
+          },
+          "descriptionType": "manual",
+          "toolDescription": "Update an event on Google Calendar",
+          "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}"
+        },
+        "typeVersion": 1.3
+      },
+      "8e9a40fd-9f34-44e0-b256-f15eb0a73ba2": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Get Event",
+        "parameters": {
+          "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the event id`, 'string') }}",
+          "options": {},
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "operation": "get",
+          "descriptionType": "manual",
+          "toolDescription": "Get an event in Google Calendar"
+        },
+        "typeVersion": 1.3
+      },
+      "991c7d7f-3bcf-4006-8a56-8e606ff49307": {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "name": "Create an event",
+        "parameters": {
+          "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
+          "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
+          "calendar": {
+            "__rl": true,
+            "mode": "list",
+            "value": "jitesh.com@gmail.com",
+            "cachedResultName": "jitesh.com@gmail.com"
+          },
+          "descriptionType": "manual",
+          "toolDescription": "Create an event on Google Calendar",
+          "additionalFields": {
+            "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
+            "visibility": "default",
+            "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
+          },
+          "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}"
+        },
+        "typeVersion": 1.3
+      }
+    }
   }
 }

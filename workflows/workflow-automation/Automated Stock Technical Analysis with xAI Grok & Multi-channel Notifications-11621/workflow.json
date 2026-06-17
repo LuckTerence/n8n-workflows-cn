@@ -282,7 +282,7 @@
         752
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -294,9 +294,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "17dd0f9e-a110-441e-b8a6-6fcd6c603b46",
@@ -482,7 +481,7 @@
   "_cn_meta": {
     "title_zh": "Automated Stock Technical Analysis with xAI Grok & Multi-channel Notifications",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11621,
     "synced_at": "2026-06-17T14:12:11.502324",
     "foreign_services": [
@@ -490,6 +489,14 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "消息通知、股票分析、流程自动化"
+    "description_zh": "消息通知、股票分析、流程自动化",
+    "replacements": {
+      "7a025bac-e13e-4c18-9e60-9c6c71fa93f6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append row in sheet",
+        "parameters": {},
+        "typeVersion": 4.7
+      }
+    }
   }
 }

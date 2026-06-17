@@ -219,7 +219,7 @@
         700
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -231,15 +231,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GC2OQl3Jvy543LT2",
           "name": "Google Sheets account - perso"
         }
-      },
-      "typeVersion": 4.3
+      }
     },
     {
       "id": "6611f852-b4d6-4a07-9428-db206ef57cc3",
@@ -280,7 +279,7 @@
         340
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -292,15 +291,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GC2OQl3Jvy543LT2",
           "name": "Google Sheets account - perso"
         }
-      },
-      "typeVersion": 4.3
+      }
     },
     {
       "id": "eb0c95e7-2211-48d1-abaf-07cd0c76d3a6",
@@ -617,7 +615,7 @@
   "_cn_meta": {
     "title_zh": "AI web researcher for sales",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2324,
     "synced_at": "2026-06-17T14:11:40.519366",
     "foreign_services": [
@@ -625,6 +623,185 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Notion→飞书文档/语雀",
-    "description_zh": "智能搜索"
+    "description_zh": "智能搜索",
+    "replacements": {
+      "ff1cb26d-6138-4ee1-9f28-4ecc80c1c8ae": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets - Update Row with data",
+        "parameters": {
+          "columns": {
+            "value": {
+              "domain": "={{ $json.domain }}",
+              "market": "={{ $json.market }}",
+              "row_number": "={{ $json.row_number }}",
+              "linkedinUrl": "={{ $json.linkedinUrl }}",
+              "integrations": "={{ $json.integrations }}",
+              "cheapest_plan": "={{ $json.cheapest_plan }}",
+              "has_free_trial": "={{ $json.has_free_trial }}",
+              "enrichment_status": "done",
+              "has_entreprise_plan": "={{ $json.has_enterprise_plan }}",
+              "last_case_study_link": "={{ $json.case_study_link }}"
+            },
+            "schema": [
+              {
+                "id": "input",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "input",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "domain",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "domain",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "linkedinUrl",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "linkedinUrl",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "has_free_trial",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "has_free_trial",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cheapest_plan",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "cheapest_plan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "has_entreprise_plan",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "has_entreprise_plan",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "last_case_study_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "last_case_study_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "market",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "market",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "integrations",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "integrations",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "enrichment_status",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "enrichment_status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ]
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE/edit?usp=drivesdk",
+            "cachedResultName": "Enrich companies using AI agents"
+          }
+        },
+        "typeVersion": 4.3
+      },
+      "67d485c9-3289-4bb3-9523-cd24c0b1aa05": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get rows to enrich",
+        "parameters": {
+          "options": {
+            "returnAllMatches": "returnAllMatches"
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "enrichment_status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/19U7gAgkUEz6mbFcnygf1zKDdGvY6OAdUqq3bZQWgjxE/edit?usp=drivesdk",
+            "cachedResultName": "Enrich companies using AI agents"
+          }
+        },
+        "typeVersion": 4.3
+      }
+    }
   }
 }

@@ -42,7 +42,7 @@
         -580
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -54,15 +54,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GaJqJHuS5mQxap7q",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "004427b8-e8d7-4f28-b03e-4b459f2a7b2b",
@@ -246,7 +245,7 @@
         -600
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -258,15 +257,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "GaJqJHuS5mQxap7q",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "e30e0706-3732-4a2f-81f2-d50e63043632",
@@ -384,13 +382,103 @@
   "_cn_meta": {
     "title_zh": "Cold Outreach Automation: Scrape Local Leads with Dumpling AI & Call via Vapi",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4031,
     "synced_at": "2026-06-17T14:19:34.146550",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "API 接口、数据采集、线索管理"
+    "description_zh": "API 接口、数据采集、线索管理",
+    "replacements": {
+      "072baaf9-81d8-4989-9354-822f02b2f922": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Search Keywords from Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QXZk6D8hW29f9umrmsYv_HeZYRKWOjsxOaFZ2BZtu3Y/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QXZk6D8hW29f9umrmsYv_HeZYRKWOjsxOaFZ2BZtu3Y/edit?usp=drivesdk",
+            "cachedResultName": "leads"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "fc705d86-98b2-4219-9b19-0350657b845b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Called Business Info to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "website": "={{ $('Extract Business Name, Phone and website').item.json.website }}",
+              "company name": "={{ $('Extract Business Name, Phone and website').item.json.title }}",
+              "phone number ": "={{ $('Format Phone Number for Calling').item.json.formattedPhone }}"
+            },
+            "schema": [
+              {
+                "id": "company name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "company name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "phone number ",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "phone number ",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "website",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "website",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1315810611,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QXZk6D8hW29f9umrmsYv_HeZYRKWOjsxOaFZ2BZtu3Y/edit#gid=1315810611",
+            "cachedResultName": "leads"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1QXZk6D8hW29f9umrmsYv_HeZYRKWOjsxOaFZ2BZtu3Y",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QXZk6D8hW29f9umrmsYv_HeZYRKWOjsxOaFZ2BZtu3Y/edit?usp=drivesdk",
+            "cachedResultName": "leads"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

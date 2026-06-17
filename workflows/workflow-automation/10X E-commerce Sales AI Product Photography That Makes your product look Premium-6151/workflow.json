@@ -16,9 +16,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b20d6ab3-e90d-4a06-8c77-447c7b327413",
@@ -47,9 +46,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "123430d3-e08f-42f3-8e65-cc20a07c28ad",
@@ -188,9 +186,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "1c668c86-2ec4-4ddd-a5b5-0c37dac39c93",
@@ -281,13 +278,74 @@
   "_cn_meta": {
     "title_zh": "10X E-commerce Sales AI Product Photography That Makes your product look Premium",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6151,
     "synced_at": "2026-06-17T14:16:33.988512",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "1c1f5f21-2517-4644-bb67-4d9887f3b2c6": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Get Images from Google Drive",
+        "parameters": {
+          "filter": {
+            "folderId": {
+              "__rl": true,
+              "mode": "list",
+              "value": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
+              "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_FOLDER_ID",
+              "cachedResultName": "Product Images"
+            }
+          },
+          "options": {},
+          "resource": "fileFolder",
+          "returnAll": true,
+          "queryString": ".png"
+        },
+        "typeVersion": 3
+      },
+      "aef4b599-cd45-48c9-8a31-8a6f31fc7680": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Save Enhanced Image",
+        "parameters": {
+          "name": "enhanced-{{ $('Get Images from Google Drive').item.json.name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_OUTPUT_FOLDER_ID",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_OUTPUT_FOLDER_ID",
+            "cachedResultName": "Enhanced Products"
+          }
+        },
+        "typeVersion": 3
+      },
+      "81ca6ccb-855e-4b04-934c-8167feea9fea": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Binary Image Files2",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.id }}"
+          },
+          "options": {
+            "binaryPropertyName": "imageData"
+          },
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

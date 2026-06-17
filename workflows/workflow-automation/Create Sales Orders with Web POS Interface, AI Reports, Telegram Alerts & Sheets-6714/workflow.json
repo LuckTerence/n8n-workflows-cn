@@ -39,7 +39,7 @@
         40
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -51,7 +51,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -59,8 +59,7 @@
           "name": "Google Sheets account"
         }
       },
-      "executeOnce": false,
-      "typeVersion": 4.6
+      "executeOnce": false
     },
     {
       "id": "e8b420ed-e5cb-4835-9f9b-979bb9e44e05",
@@ -87,7 +86,7 @@
         220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -99,7 +98,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -107,8 +106,7 @@
           "name": "Google Sheets account"
         }
       },
-      "executeOnce": true,
-      "typeVersion": 4.6
+      "executeOnce": true
     },
     {
       "id": "dff306ac-b6ad-4814-9ed2-2ffed96b420a",
@@ -423,13 +421,155 @@
   "_cn_meta": {
     "title_zh": "Create Sales Orders with Web POS Interface, AI Reports, Telegram Alerts & Sheets",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6714,
     "synced_at": "2026-06-17T14:12:28.102664",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、告警通知、表格处理"
+    "description_zh": "Telegram 机器人、告警通知、表格处理",
+    "replacements": {
+      "75d42049-e27a-4208-82ef-4a121812563e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Append or update row in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "SALES ID": "={{ $json[\"SALES ID\"] }}",
+              "SALES QTY": "={{ $json[\"SALES QTY\"] }}",
+              "SALES DATE": "={{ $json[\"SALES DATE\"] }}",
+              "SALES DISCOUNT": "={{ $json[\"SALES DISCOUNT\"] }}",
+              "SALES PRICE (USD)": "={{ $json[\"SALES PRICE (USD)\"] }}",
+              "SALES PRODUCT NAME": "={{ $json[\"SALES PRODUCT NAME\"] }}",
+              "SALES CUSTOMER NAME": "={{ $json[\"SALES CUSTOMER NAME\"] }}"
+            },
+            "schema": [
+              {
+                "id": "SALES ID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "SALES ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES CUSTOMER NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES CUSTOMER NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES PRODUCT NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES PRODUCT NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES CATEGORY NAME",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "SALES CATEGORY NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES PRICE (USD)",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES PRICE (USD)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES QTY",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES QTY",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES DISCOUNT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "SALES DISCOUNT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "SALES TOTAL",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "required": false,
+                "displayName": "SALES TOTAL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "SALES ID"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1157363351
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEETS_ID"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "84791b6d-a9b2-42b5-8c26-616c66adadd6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get products data",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "YOUR_GOOGLE_SHEETS_ID"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

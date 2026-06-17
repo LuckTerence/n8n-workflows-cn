@@ -149,7 +149,7 @@
         460
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -161,10 +161,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
-      "credentials": {},
-      "typeVersion": 2.1
+      "credentials": {}
     },
     {
       "id": "9d547270-37dd-41ee-98b7-13001c954ffa",
@@ -175,7 +174,7 @@
         640
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -187,10 +186,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
       },
-      "credentials": {},
-      "typeVersion": 2.1
+      "credentials": {}
     },
     {
       "id": "f612d12c-d3cf-4186-9ed1-c75ed53132cb",
@@ -209,14 +207,14 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {},
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -241,14 +239,14 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {},
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -273,14 +271,14 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {},
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -436,14 +434,14 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {},
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -834,13 +832,193 @@
   "_cn_meta": {
     "title_zh": "Automatically document and backup N8N workflows",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3354,
     "synced_at": "2026-06-17T14:17:58.282911",
     "foreign_services": [
       "Notion",
       "Slack"
     ],
-    "description_zh": "自动备份、工作流管理、n8n 运维"
+    "description_zh": "自动备份、工作流管理、n8n 运维",
+    "replacements": {
+      "86edfe55-9a88-49ed-82de-df0c44a65d53": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Add to Notion",
+        "parameters": {
+          "title": "={{ $('Map fields').item.json.input['workflow-name'] }}",
+          "options": {},
+          "resource": "databasePage",
+          "databaseId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "<replace_me>",
+            "cachedResultUrl": "https://www.notion.so/<replace_me>",
+            "cachedResultName": "Workflow Sync"
+          },
+          "propertiesUi": {
+            "propertyValues": [
+              {
+                "key": "Workflow Name|title",
+                "title": "={{ $('Map fields').item.json.input['workflow-name'] }}"
+              },
+              {
+                "key": "URL (dev)|url",
+                "urlValue": "={{ $('Map fields').item.json.input.url }}"
+              },
+              {
+                "key": "isActive (dev)|checkbox",
+                "checkboxValue": "={{ $('Map fields').item.json.input.active }}"
+              },
+              {
+                "key": "Workflow created at|date",
+                "date": "={{ $('Map fields').item.json.input.createdAt }}"
+              },
+              {
+                "key": "Workflow updated at|date",
+                "date": "={{ $('Map fields').item.json.input.updatedAt }}"
+              },
+              {
+                "key": "Error workflow setup|checkbox",
+                "checkboxValue": "={{ $('Map fields').item.json.input.errorWorkflow }}"
+              },
+              {
+                "key": "Record last update|date",
+                "date": "={{ $now }}"
+              },
+              {
+                "key": "AI Summary|rich_text",
+                "textContent": "={{ $json.message.content }}"
+              },
+              {
+                "key": "envId|rich_text",
+                "textContent": "={{ $('Map fields').item.json.input.envId }}"
+              }
+            ]
+          }
+        },
+        "typeVersion": 2.1
+      },
+      "9d547270-37dd-41ee-98b7-13001c954ffa": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Update in Notion",
+        "parameters": {
+          "pageId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $('Map fields').item.json.results[0].id }}"
+          },
+          "options": {},
+          "resource": "databasePage",
+          "operation": "update",
+          "propertiesUi": {
+            "propertyValues": [
+              {
+                "key": "isActive (dev)|checkbox",
+                "checkboxValue": "={{ $('Set fields').item.json.active }}"
+              },
+              {
+                "key": "Workflow updated at|date",
+                "date": "={{ $('Set fields').item.json.updatedAt }}"
+              },
+              {
+                "key": "Error workflow setup|checkbox",
+                "checkboxValue": "={{ $('Set fields').item.json.errorWorkflow }}"
+              },
+              {
+                "key": "AI Summary|rich_text",
+                "textContent": "={{ $json.message.content }}"
+              }
+            ]
+          }
+        },
+        "typeVersion": 2.1
+      },
+      "f612d12c-d3cf-4186-9ed1-c75ed53132cb": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify internal-infra of push",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "<yourchannelID>",
+            "cachedResultName": "<yourchannelname>"
+          },
+          "otherOptions": {
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=Pushed new workflow to Notion: {{ $('Map fields').item.json.input['workflow-name'] }}"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "aef5c65e-323b-463b-8e1e-f09cc064c44b": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify internal-infra of update",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "<yourchannelID>",
+            "cachedResultName": "<yourchannelname>"
+          },
+          "otherOptions": {
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=Updated workflow in Notion: {{ $('Map fields').item.json.input['workflow-name'] }}"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "f200a66c-b902-4b90-8499-93ae7d12a552": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify on workflow setup error",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "<yourchannelID>",
+            "cachedResultName": "<yourchannelname>"
+          },
+          "otherOptions": {
+            "mrkdwn": true,
+            "includeLinkToWorkflow": false
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=WARNING: Error workflow has NOT been setup for: <{{ $json.input.url }}|{{ $json.input['workflow-name'] }}> (No backup will take place until err-workflow is configured)"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "e640de5f-2cc8-4fd9-817b-147a3fd67ed3": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify on create file in repo fail",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "<yourchannelID>",
+            "cachedResultName": "<yourchannelname>"
+          },
+          "otherOptions": {
+            "mrkdwn": true,
+            "includeLinkToWorkflow": true
+          },
+          "msg_type": "text",
+          "content": {
+            "text": "=WARNING: Failed to upload new N8N workflow <{{ $json.input.url }}|{{ $json.input['workflow-name'] }}> to repo"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

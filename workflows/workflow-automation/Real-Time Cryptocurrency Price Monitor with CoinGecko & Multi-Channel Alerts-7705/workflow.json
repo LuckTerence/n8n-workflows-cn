@@ -27,7 +27,7 @@
         832
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -39,15 +39,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "af441c6d-0034-4d39-9ff1-60e9c56b8c01",
@@ -178,28 +177,33 @@
     {
       "id": "6139992f-563f-4f7e-a0fd-04e42684cf77",
       "name": "Send Discord Crypto Alert",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         912,
         1120
       ],
       "webhookId": "8b0ccaaa-caea-48a6-9c88-4217f569850c",
       "parameters": {
-        "name": "new",
-        "guildId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=987654321t5r4w2"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "discordBotApi": {
           "id": "r1gTUG66KRYBDfTA",
           "name": "Discord Bot account - test"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "0bcadcb1-e39e-443d-8483-20c548480d1f",
@@ -210,7 +214,7 @@
         736
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -222,15 +226,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "ScSS2KxGQULuPtdy",
           "name": "Google Sheets- test"
         }
-      },
-      "typeVersion": 4
+      }
     },
     {
       "id": "7806b975-49a0-4a9c-9aed-77f4768fd65d",
@@ -488,6 +491,53 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、告警通知、加密货币"
+    "description_zh": "系统监控、告警通知、加密货币",
+    "replacements": {
+      "29541d43-fc8a-45c8-8911-b97ab3e4c080": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Read Crypto Watchlist",
+        "parameters": {
+          "options": {},
+          "sheetName": "Sheet1",
+          "documentId": "YOUR_GOOGLE_SHEET_ID_HERE",
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      },
+      "6139992f-563f-4f7e-a0fd-04e42684cf77": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send Discord Crypto Alert",
+        "parameters": {
+          "name": "new",
+          "guildId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=987654321t5r4w2"
+          },
+          "options": {}
+        },
+        "typeVersion": 2
+      },
+      "0bcadcb1-e39e-443d-8483-20c548480d1f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Crypto Alert History",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": "Sheet1",
+          "documentId": "YOUR_GOOGLE_SHEET_ID_HERE",
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4
+      }
+    }
   }
 }

@@ -579,11 +579,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -591,7 +592,6 @@
           "name": "Slack Oauth"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -946,12 +946,33 @@
   "_cn_meta": {
     "title_zh": "Assign Requests Using AI and Send Reminders Based On NocoDB Kanban Board Status",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3784,
     "synced_at": "2026-06-17T14:20:57.587067",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "c31d46a2-d1f2-4573-a4dd-f07a7f9b2e52": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack to assignee",
+        "parameters": {
+          "user": {
+            "__rl": true,
+            "mode": "username",
+            "value": "={{ $json['assignee slack'] }}"
+          },
+          "select": "user",
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "You have unfinished task in progress. Inform client on your next steps and update expected resolution time."
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

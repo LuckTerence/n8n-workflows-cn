@@ -276,13 +276,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -378,9 +378,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "571868fe-b339-4279-b7e9-079837b568c7",
@@ -391,7 +390,7 @@
         1360
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -403,9 +402,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
-      },
-      "typeVersion": 2.2
+        "notes": "原 Notion → 飞书文档。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "60f1f178-6ef4-4767-9eef-0043807d5bce",
@@ -593,7 +591,7 @@
   "_cn_meta": {
     "title_zh": "Generate merchandise proposals and market research from NASA APOD",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11291,
     "synced_at": "2026-06-17T14:12:51.738623",
     "foreign_services": [
@@ -602,6 +600,58 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "市场数据、智能搜索"
+    "description_zh": "市场数据、智能搜索",
+    "replacements": {
+      "cb306cd3-c787-4e95-b42e-41da0b267e44": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Slack Proposal1",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Slack Channel ID__>"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "=💰 *Merch Candidate Found!*\n\n*Title:* {{ $('Get NASA APOD1').first().json.title }}\n*Keywords:* {{ $('Generate Keywords & Check Logo1').first().json.keywords }}\n*Has NASA Logo:* {{ $('Generate Keywords & Check Logo1').first().json.has_logo ? \"⚠️ Yes - Review needed\" : \"✅ No\" }}\n\n💵 *Market Data:*\n• Average Price: ${{ $('Calculate Profit1').first().json.avg_price }}\n• Production Cost: ${{ $('Calculate Profit1').first().json.production_cost }}\n• Est. Profit: ${{ $('Calculate Profit1').first().json.profit }} / unit\n• Competitors: {{ $('Calculate Profit1').first().json.competitor_count }}\n• Profitable: {{ $('Calculate Profit1').first().json.is_profitable ? \"✅ Yes\" : \"❌ No\" }}\n\n🤖 *AI Advice:*\n{{ $('AI Marketing Advisor1').first().json.message.content }}\n\n👕 *Mockup Preview:* Check the file attachment\n\n*Save this design to your database?*"
+          }
+        },
+        "typeVersion": 2.3
+      },
+      "211dc2b0-0f38-4264-a8c2-16d39ca3e4d4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Save to Google Drive1",
+        "parameters": {
+          "name": "={{ $('Get NASA APOD1').first().json.title }}.jpg",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Google Drive Folder ID__>"
+          }
+        },
+        "typeVersion": 3
+      },
+      "571868fe-b339-4279-b7e9-079837b568c7": {
+        "type": "n8n-nodes-base.notion",
+        "name": "Save to Notion DB1",
+        "parameters": {
+          "title": "={{ $('Get NASA APOD1').first().json.title }}",
+          "pageId": {
+            "mode": "id",
+            "value": "<__PLACEHOLDER_VALUE__Notion Database ID__>"
+          },
+          "options": {}
+        },
+        "typeVersion": 2.2
+      }
+    }
   }
 }

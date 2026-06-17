@@ -9,7 +9,7 @@
 
 ---
 
-> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1458 个开箱即用**
+> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 985 个开箱即用**
 
 [🔍 在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [📋 完整索引](INDEX.md) · [🎯 精选合集](CURATED.md) · [⚡ 快速开始](#快速试试)
 
@@ -38,6 +38,14 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 | Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | [📂 打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
 | AI 股票基本面分析 | 多维度股票基本面分析 | ⭐⭐ | [📂 打开](workflows/finance-analysis/AI股票基本面分析-2183/) |
 | 定时启停 n8n 工作流 | 学会用 n8n 管理 n8n 本身 | ⭐ | [📂 打开](workflows/devops/定时启停n8n工作流-3229/) |
+
+
+> 💡 **需要切回海外节点？** 部分工作流的 Gmail/Slack/Google Sheets 等节点已替换为飞书/阿里云方案。如果你有海外账号想用原始节点：
+> ```bash
+> python scripts/toggle_region.py overseas  # 恢复海外原始节点
+> python scripts/toggle_region.py cn        # 切回国内方案
+> python scripts/toggle_region.py status    # 查看当前状态
+> ```
 
 ## 工作流分类
 
@@ -173,8 +181,8 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 }
 ```
 
-- **Tier A**（1458 个）— 外服节点已替换，配 API Key 就能跑
-- **Tier B**（22 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
+- **Tier A**（985 个）— 外服节点已替换，配 API Key 就能跑
+- **Tier B**（495 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
 
 > 注意：Tier 标准基于代码审查，标注为 A 不代表在所有 n8n 版本中都能 100% 跑通。欢迎实测后提 issue 或 PR 帮忙完善。
 

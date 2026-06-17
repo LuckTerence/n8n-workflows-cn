@@ -74,7 +74,7 @@
         -180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -86,15 +86,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JgI9maibw5DnBXRP",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "f220c6db-eafb-4bb5-9cbe-43edcf563a67",
@@ -365,13 +364,37 @@
   "_cn_meta": {
     "title_zh": "Automate n8n User Invitations from a Google Spreadsheet",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3233,
     "synced_at": "2026-06-17T14:07:05.535791",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表格处理、流程自动化、n8n 运维"
+    "description_zh": "表格处理、流程自动化、n8n 运维",
+    "replacements": {
+      "2a66ddc7-5fde-4e2b-9ad6-7c68968214ae": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get all rows",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg/edit?usp=drivesdk",
+            "cachedResultName": "n8n-submission"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

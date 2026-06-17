@@ -313,15 +313,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "1aeadd6d-ca19-485e-99e3-27fe287ba6eb",
@@ -370,15 +369,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "bdb0b334-6f16-4d50-9999-63005acfcf4d",
@@ -627,15 +625,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "de4ad432-4cf4-46d2-8dc3-ecc0a105f6ed",
@@ -658,15 +655,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "27cf13d8-c013-4c1f-90b1-63ba39cef14f",
@@ -774,7 +770,7 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -782,7 +778,6 @@
           "name": "Airtable Personal Access Token account"
         }
       },
-      "typeVersion": 2.1,
       "alwaysOutputData": false
     },
     {
@@ -942,15 +937,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "cbb2f30f-b77e-465e-ae8c-fa515124a985",
@@ -1016,15 +1010,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "D9AiOyADd2P9e8YQ",
           "name": "Airtable Personal Access Token account 2"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "96a2453b-ae39-4a13-97da-90a7a5310061",
@@ -1583,9 +1576,1632 @@
   "_cn_meta": {
     "title_zh": "RSS to Social: Automated Content Generation with Llama 3 & GetLate Publishing",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9147,
     "synced_at": "2026-06-17T14:10:54.223751",
-    "description_zh": "社交平台、流程自动化"
+    "description_zh": "社交平台、流程自动化",
+    "replacements": {
+      "0d441755-0a8c-40d2-8771-bce33ed96328": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Generated Post Content (Bluesky)",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "RSS Feed Store - Wallabag RSS Feed Aggregator"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Pull New Article').item.json.id }}",
+              "cta_used": "={{ $('Bluesky SMCG').item.json.output.cta_used }}",
+              "image_id": "={{ $('Store Image on Imgbb (Bluesky)').item.json.data.id }}",
+              "is_posted": 1,
+              "post_text": "={{ $('Bluesky SMCG').item.json.output.post_text }}",
+              "image_link": "={{ $('Store Image on Imgbb (Bluesky)').item.json.data.image.url }}",
+              "article_url": "={{ $('Pull New Article').item.json.article_url }}",
+              "goal_applied": "={{ $('Bluesky SMCG').item.json.output.goal_applied }}",
+              "image_prompt": "={{ $('Bluesky SMCG').item.json.output.image_prompt }}",
+              "tone_applied": "={{ $('Bluesky SMCG').item.json.output.tone_applied }}",
+              "image_filename": "={{ $('Store Image on Imgbb (Bluesky)').item.json.data.title }}",
+              "character_count": "={{ $('Bluesky SMCG').item.json.output.character_count }}",
+              "audience_ targeted": "={{ $('Bluesky SMCG').item.json.output.audience_targeted }}",
+              "suggested_hashtags": "={{ $('Bluesky SMCG').item.json.output.suggested_hashtags.join(', ') }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "upsert"
+        },
+        "typeVersion": 2.1
+      },
+      "777dff77-d15f-49da-9ac5-5e161b0adb08": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Generated Post Content (No Image, Bluesky)",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "RSS Feed Store - Wallabag RSS Feed Aggregator"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Pull New Article').item.json.id }}",
+              "cta_used": "={{ $('Bluesky SMCG').item.json.output.cta_used }}",
+              "is_posted": 1,
+              "post_text": "={{ $('Bluesky SMCG').item.json.output.post_text }}",
+              "article_url": "={{ $('Pull New Article').item.json.article_url }}",
+              "goal_applied": "={{ $('Bluesky SMCG').item.json.output.goal_applied }}",
+              "tone_applied": "={{ $('Bluesky SMCG').item.json.output.tone_applied }}",
+              "character_count": "={{ $('Bluesky SMCG').item.json.output.character_count }}",
+              "audience_ targeted": "={{ $('Bluesky SMCG').item.json.output.audience_targeted }}",
+              "suggested_hashtags": "={{ $('Bluesky SMCG').item.json.output.suggested_hashtags.join(', ') }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "upsert"
+        },
+        "typeVersion": 2.1
+      },
+      "e6a52db6-6abf-45e0-b42d-e523c5a48f71": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Generated Post Content (LinkedIn)",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "RSS Feed Store - Wallabag RSS Feed Aggregator"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Pull New Article').item.json.id }}",
+              "cta_used": "={{ $('LinkedIn SMCG').item.json.output.cta_used }}",
+              "image_id": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.id }}",
+              "is_posted": 1,
+              "post_text": "={{ $('LinkedIn SMCG').item.json.output.post_text }}",
+              "image_link": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.image.url }}",
+              "article_url": "={{ $('Pull New Article').item.json.article_url }}",
+              "goal_applied": "={{ $('LinkedIn SMCG').item.json.output.goal_applied }}",
+              "image_prompt": "={{ $('LinkedIn SMCG').item.json.output.image_prompt }}",
+              "tone_applied": "={{ $('LinkedIn SMCG').item.json.output.tone_applied }}",
+              "image_filename": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.title }}",
+              "character_count": "={{ $('LinkedIn SMCG').item.json.output.character_count }}",
+              "audience_ targeted": "={{ $('LinkedIn SMCG').item.json.output.audience_targeted }}",
+              "suggested_hashtags": "={{ $('LinkedIn SMCG').item.json.output.suggested_hashtags.join(', ') }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "upsert"
+        },
+        "typeVersion": 2.1
+      },
+      "de4ad432-4cf4-46d2-8dc3-ecc0a105f6ed": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Generated Post Content (No Image, LinkedIn)",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "GetLate n8n Arena Challenge - Wallabag Content Store"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Pull New Article').item.json.id }}",
+              "cta_used": "={{ $('LinkedIn SMCG').item.json.output.cta_used }}",
+              "image_id": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.id }}",
+              "is_posted": 1,
+              "post_text": "={{ $('LinkedIn SMCG').item.json.output.post_text }}",
+              "image_link": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.image.url }}",
+              "article_url": "={{ $('Pull New Article').item.json.article_url }}",
+              "goal_applied": "={{ $('LinkedIn SMCG').item.json.output.goal_applied }}",
+              "image_prompt": "={{ $('LinkedIn SMCG').item.json.output.image_prompt }}",
+              "tone_applied": "={{ $('LinkedIn SMCG').item.json.output.tone_applied }}",
+              "image_filename": "={{ $('Store Image on Imgbb (LinkedIn)').item.json.data.title }}",
+              "character_count": "={{ $('LinkedIn SMCG').item.json.output.character_count }}",
+              "audience_ targeted": "={{ $('LinkedIn SMCG').item.json.output.audience_targeted }}",
+              "suggested_hashtags": "={{ $('LinkedIn SMCG').item.json.output.suggested_hashtags.join(', ') }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "upsert"
+        },
+        "typeVersion": 2.1
+      },
+      "e2a265aa-e23a-4630-aeb4-fa155dc6ed52": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Pull New Article",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "RSS Feed Store - Wallabag RSS Feed Aggregator"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "options": {
+            "view": {
+              "__rl": true,
+              "mode": "list",
+              "value": "viwzBm6hokiAHlXTp",
+              "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5/viwzBm6hokiAHlXTp",
+              "cachedResultName": "Grid view"
+            },
+            "fields": [
+              "id",
+              "feed_id",
+              "title",
+              "author",
+              "content_markdown",
+              "is_posted",
+              "platform",
+              "post_text",
+              "suggested_hashtags",
+              "cta_used",
+              "tone_applied",
+              "goal_applied",
+              "audience_ targeted",
+              "character_count",
+              "image_prompt",
+              "image_id",
+              "image_filename",
+              "image_link",
+              "article_url"
+            ]
+          },
+          "operation": "search",
+          "filterByFormula": "is_posted=0"
+        },
+        "typeVersion": 2.1
+      },
+      "d92d35b0-d8d3-468f-b88e-61f23df393ba": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Article Content (LinkedIn)",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "GetLate n8n Arena Challenge - Wallabag Content Store"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "title": "={{ $('RSS Feed Trigger: \\'#to-share-linkedin\\'').item.json.title }}",
+              "author": "={{ $('RSS Feed Trigger: \\'#to-share-linkedin\\'').item.json.author }}",
+              "feed_id": "={{ $('RSS Feed Trigger: \\'#to-share-linkedin\\'').item.json.id }}",
+              "platform": "={{ $('Set Platform (LinkedIn)').item.json.platform.toLowerCase() }}",
+              "is_posted": 0,
+              "article_url": "={{ $('RSS Feed Trigger: \\'#to-share-linkedin\\'').item.json.link }}",
+              "character_count": 0,
+              "content_markdown": "={{ $json.content_markdown }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "create"
+        },
+        "typeVersion": 2.1
+      },
+      "bb6e0188-e34a-40a0-b41c-4b11ead349ab": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store Article Content",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appobCAkHxBSApdQ3",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3",
+            "cachedResultName": "RSS Feed Store - Wallabag RSS Feed Aggregator"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tbl8jsh0nMt3F5mo5",
+            "cachedResultUrl": "https://airtable.com/appobCAkHxBSApdQ3/tbl8jsh0nMt3F5mo5",
+            "cachedResultName": "RSS Feed - Content Store"
+          },
+          "columns": {
+            "value": {
+              "title": "={{ $('RSS Feed Trigger: \\'#to-share-bluesky\\'').item.json.title }}",
+              "author": "={{ $('RSS Feed Trigger: \\'#to-share-bluesky\\'').item.json.author }}",
+              "feed_id": "={{ $('RSS Feed Trigger: \\'#to-share-bluesky\\'').item.json.id }}",
+              "platform": "={{ $('Set Platform (Bluesky)').item.json.platform.toLowerCase() }}",
+              "is_posted": 0,
+              "article_url": "={{ $('RSS Feed Trigger: \\'#to-share-bluesky\\'').item.json.link }}",
+              "character_count": 0,
+              "content_markdown": "={{ $json.content_markdown }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "feed_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "feed_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "article_url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "article_url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "author",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "author",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "content_markdown",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "content_markdown",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "is_posted",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "is_posted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "platform",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "post_text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "post_text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "suggested_hashtags",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "suggested_hashtags",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "cta_used",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "cta_used",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tone_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "tone_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "goal_applied",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "goal_applied",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "audience_ targeted",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "audience_ targeted",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "character_count",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "character_count",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_filename",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_filename",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "image_link",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "image_link",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "create"
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

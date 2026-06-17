@@ -99,7 +99,7 @@
         -544
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -111,15 +111,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "de323153-3e9d-4937-98f1-1ce9bbbff51a",
@@ -209,7 +208,7 @@
         -528
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -221,15 +220,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "afc85c64-f00c-4424-8344-aa8696fcdf96",
@@ -324,7 +322,7 @@
         160
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -336,15 +334,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "674a755d-2c6f-480b-88bb-54efd4d9d193",
@@ -576,7 +573,7 @@
   "_cn_meta": {
     "title_zh": "Automate Email Tracking & Generate Pixel for Lead Nurturing with Google Sheet",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11248,
     "synced_at": "2026-06-17T14:11:59.344613",
     "foreign_services": [
@@ -584,6 +581,420 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、线索管理、表格处理"
+    "description_zh": "邮件自动化、线索管理、表格处理",
+    "replacements": {
+      "813526d1-3e10-4c06-adfd-3d332b4bda4a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get CRM",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "EMAIL 1 SEND"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
+            "cachedResultName": "Lead nurturing"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "a1063c9e-ea92-46c0-b97e-da0933d37fc4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update CRM",
+        "parameters": {
+          "columns": {
+            "value": {
+              "row_number": "={{ $('Get CRM').item.json.row_number }}",
+              "EMAIL 1 DATE": "={{$now.format('dd/LL/yyyy')}}",
+              "EMAIL 1 SEND": "={{ $json.id }}",
+              "PIXEL EMAIL 1": "={{ $('Generate Pixel').item.json.pixel }}"
+            },
+            "schema": [
+              {
+                "id": "DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "FIRST NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "FIRST NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "LAST NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "LAST NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 1 SEND",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL 1 SEND",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 1 DATE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "EMAIL 1 DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PIXEL EMAIL 1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "PIXEL EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "OPEN EMAIL 1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "OPEN EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CLICK EMAIL 1",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CLICK EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "REPLY TO EMAIL 1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "REPLY TO EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 2 SEND",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "EMAIL 2 SEND",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 2 DATE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "EMAIL 2 DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PIXEL EMAIL 2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "PIXEL EMAIL 2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "OPEN EMAIL 2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "OPEN EMAIL 2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CLICK EMAIL 2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CLICK EMAIL 2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "REPLY TO EMAIL 2",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "REPLY TO EMAIL 2",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 3 SEND",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "EMAIL 3 SEND",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 3 DATE",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "EMAIL 3 DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PIXEL EMAIL 3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "PIXEL EMAIL 3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "OPEN EMAIL 3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "OPEN EMAIL 3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CLICK EMAIL 3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CLICK EMAIL 3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "REPLY TO EMAIL 3",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "REPLY TO EMAIL 3",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
+            "cachedResultName": "Lead nurturing"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "575935b6-4709-4146-93ee-c6bd47215cad": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Open email 1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "OPEN EMAIL 1": "yes",
+              "PIXEL EMAIL 1": "={{ $json.pixel }}"
+            },
+            "schema": [
+              {
+                "id": "DATE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DATE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "FIRST NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "FIRST NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "LAST NAME",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "LAST NAME",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "EMAIL 1 SEND",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "EMAIL 1 SEND",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PIXEL EMAIL 1",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "PIXEL EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "OPEN EMAIL 1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "OPEN EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "REPLY TO EMAIL 1",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "REPLY TO EMAIL 1",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "PIXEL EMAIL 1"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
+            "cachedResultName": "Lead nurturing"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

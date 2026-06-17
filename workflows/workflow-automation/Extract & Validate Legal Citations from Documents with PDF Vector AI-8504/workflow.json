@@ -28,9 +28,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "pdfvector-extract",
@@ -229,13 +228,24 @@
   "_cn_meta": {
     "title_zh": "Extract & Validate Legal Citations from Documents with PDF Vector AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8504,
     "synced_at": "2026-06-17T14:15:49.166460",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "向量存储、PDF 文档"
+    "description_zh": "向量存储、PDF 文档",
+    "replacements": {
+      "google-drive": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive - Get Legal Document",
+        "parameters": {
+          "fileId": "={{ $json.fileId }}",
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

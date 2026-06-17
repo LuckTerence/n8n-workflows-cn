@@ -179,15 +179,28 @@
     {
       "id": "37778379-98da-4e67-8656-2376cbd4d543",
       "name": "Discord Alert",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         2040,
         680
       ],
       "webhookId": "4280db72-cccc-4b63-816d-bdc1b8d54ebe",
-      "parameters": {},
-      "typeVersion": 2
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "cc34d68c-8e38-4ac4-a63b-90b19142d863",
@@ -998,6 +1011,14 @@
     "tier": "B",
     "source_id": 4468,
     "synced_at": "2026-06-17T14:19:58.595791",
-    "description_zh": "图片生成、视频生成、音频处理"
+    "description_zh": "图片生成、视频生成、音频处理",
+    "replacements": {
+      "37778379-98da-4e67-8656-2376cbd4d543": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Discord Alert",
+        "parameters": {},
+        "typeVersion": 2
+      }
+    }
   }
 }

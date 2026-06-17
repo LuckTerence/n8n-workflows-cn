@@ -28,7 +28,7 @@
         260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -40,9 +40,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "93166047-b345-4083-bad8-2e68cb1539bb",
@@ -136,7 +135,7 @@
         260
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -148,9 +147,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "45d1195a-bc36-4c65-8424-258b52eac589",
@@ -316,13 +314,27 @@
   "_cn_meta": {
     "title_zh": "PT Clinic AI Cold Email Sequence Generator With GPT4",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5422,
     "synced_at": "2026-06-17T14:16:18.470445",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化"
+    "description_zh": "邮件自动化",
+    "replacements": {
+      "a8eaf027-a13a-4083-b331-800b354ff482": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "📊 Fetch PT Prospects",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "bbb0b293-69ab-4a1d-8ce4-ba25d56e7ebf": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "💾 Save to Sheets",
+        "parameters": {},
+        "typeVersion": 4.6
+      }
+    }
   }
 }

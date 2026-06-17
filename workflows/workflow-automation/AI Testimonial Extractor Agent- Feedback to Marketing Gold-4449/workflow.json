@@ -189,7 +189,7 @@
         580
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -201,15 +201,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "pIXaxnRxnyRBTUfl",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "64020a72-449b-489f-8a21-c2371f1af8f5",
@@ -296,7 +295,7 @@
   "_cn_meta": {
     "title_zh": "AI Testimonial Extractor Agent: Feedback to Marketing Gold",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4449,
     "synced_at": "2026-06-17T14:20:11.387487",
     "foreign_services": [
@@ -304,6 +303,98 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、市场数据"
+    "description_zh": "AI 智能体、市场数据",
+    "replacements": {
+      "c72c0de6-cc21-4b9c-8bf8-b7aa6fd90d7b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Extracted Testimonial",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Feedback",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Feedback",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Testimony",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Testimony",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "text",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "text",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "Testimony"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 352165437,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s/edit#gid=352165437",
+            "cachedResultName": "Form Responses 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s/edit?usp=drivesdk",
+            "cachedResultName": "Testimonial"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

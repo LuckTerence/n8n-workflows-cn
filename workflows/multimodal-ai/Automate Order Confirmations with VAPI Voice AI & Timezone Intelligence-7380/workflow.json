@@ -222,15 +222,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "airtable-credentials",
           "name": "Airtable Orders Database"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "schedule-call-later",
@@ -253,15 +252,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "airtable-credentials",
           "name": "Airtable Orders Database"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "scheduled-caller",
@@ -304,15 +302,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "airtable-credentials",
           "name": "Airtable Orders Database"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "vapi-webhook",
@@ -397,15 +394,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "airtable-credentials",
           "name": "Airtable Orders Database"
         }
-      },
-      "typeVersion": 2
+      }
     },
     {
       "id": "check-followup-needed",
@@ -578,15 +574,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "airtable-credentials",
           "name": "Airtable Orders Database"
         }
-      },
-      "typeVersion": 2
+      }
     }
   ],
   "pinData": {},
@@ -848,9 +843,192 @@
   "_cn_meta": {
     "title_zh": "Automate Order Confirmations with VAPI Voice AI & Timezone Intelligence",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7380,
     "synced_at": "2026-06-17T14:19:44.352319",
-    "description_zh": "API 接口、语音处理、流程自动化"
+    "description_zh": "API 接口、语音处理、流程自动化",
+    "replacements": {
+      "update-order-status": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Order Status",
+        "parameters": {
+          "tableId": "orders",
+          "resource": "database",
+          "columnsUi": {
+            "columns": [
+              {
+                "value": "initiated",
+                "column": "call_status"
+              },
+              {
+                "value": "={{ $json.id }}",
+                "column": "call_id"
+              },
+              {
+                "value": "={{ new Date().toISOString() }}",
+                "column": "call_timestamp"
+              },
+              {
+                "value": "calling",
+                "column": "confirmation_status"
+              },
+              {
+                "value": "={{ $('Format Order Data').item.json.customer_timezone }}",
+                "column": "customer_timezone"
+              },
+              {
+                "value": "={{ $('Format Order Data').item.json.call_context.customer_local_time }}",
+                "column": "customer_local_time"
+              }
+            ]
+          },
+          "operation": "update",
+          "updateKey": "order_id",
+          "dataToSend": "defineBelow"
+        },
+        "typeVersion": 2
+      },
+      "schedule-call-later": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Schedule Call for Later",
+        "parameters": {
+          "tableId": "orders",
+          "resource": "database",
+          "columnsUi": {
+            "columns": [
+              {
+                "value": "scheduled",
+                "column": "confirmation_status"
+              },
+              {
+                "value": "={{ $json.customer_timezone }}",
+                "column": "customer_timezone"
+              },
+              {
+                "value": "={{ $json.next_call_time }}",
+                "column": "next_call_time"
+              },
+              {
+                "value": "={{ $json.scheduling_info.customer_local_time }}",
+                "column": "customer_local_time"
+              },
+              {
+                "value": "Outside calling hours (10 AM - 3 PM local time)",
+                "column": "scheduled_reason"
+              },
+              {
+                "value": "0",
+                "column": "call_attempts"
+              },
+              {
+                "value": "={{ new Date().toISOString() }}",
+                "column": "last_updated"
+              }
+            ]
+          },
+          "operation": "update",
+          "updateKey": "order_id",
+          "dataToSend": "defineBelow"
+        },
+        "typeVersion": 2
+      },
+      "get-scheduled-calls": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Get Scheduled Calls",
+        "parameters": {
+          "options": {
+            "filterByFormula": "AND({confirmation_status} = 'scheduled', {next_call_time} <= NOW(), {call_attempts} < 3)"
+          },
+          "tableId": "orders",
+          "resource": "database",
+          "operation": "list"
+        },
+        "typeVersion": 2
+      },
+      "update-final-status": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Final Status",
+        "parameters": {
+          "tableId": "orders",
+          "resource": "database",
+          "columnsUi": {
+            "columns": [
+              {
+                "value": "={{ $json.confirmation_status }}",
+                "column": "confirmation_status"
+              },
+              {
+                "value": "={{ $json.customer_response }}",
+                "column": "customer_response"
+              },
+              {
+                "value": "={{ $json.confidence_score }}",
+                "column": "confidence_score"
+              },
+              {
+                "value": "={{ $json.call_duration }}",
+                "column": "call_duration"
+              },
+              {
+                "value": "={{ $json.transcript }}",
+                "column": "call_transcript"
+              },
+              {
+                "value": "={{ $json.issues.join(', ') }}",
+                "column": "issues_reported"
+              },
+              {
+                "value": "={{ $json.requires_followup }}",
+                "column": "requires_followup"
+              },
+              {
+                "value": "={{ $json.call_quality }}",
+                "column": "call_quality"
+              },
+              {
+                "value": "={{ $json.call_cost }}",
+                "column": "call_cost"
+              },
+              {
+                "value": "={{ $json.processed_at }}",
+                "column": "last_updated"
+              }
+            ]
+          },
+          "operation": "update",
+          "updateKey": "order_id",
+          "dataToSend": "defineBelow"
+        },
+        "typeVersion": 2
+      },
+      "increment-call-attempts": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Increment Call Attempts",
+        "parameters": {
+          "tableId": "orders",
+          "resource": "database",
+          "columnsUi": {
+            "columns": [
+              {
+                "value": "={{ ($json.call_attempts || 0) + 1 }}",
+                "column": "call_attempts"
+              },
+              {
+                "value": "={{ new Date().toISOString() }}",
+                "column": "last_attempt"
+              },
+              {
+                "value": "calling",
+                "column": "confirmation_status"
+              }
+            ]
+          },
+          "operation": "update",
+          "updateKey": "order_id",
+          "dataToSend": "defineBelow"
+        },
+        "typeVersion": 2
+      }
+    }
   }
 }

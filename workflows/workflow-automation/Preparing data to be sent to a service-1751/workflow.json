@@ -32,7 +32,7 @@
         480
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -44,15 +44,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "8",
           "name": "Sheets"
         }
-      },
-      "typeVersion": 1
+      }
     },
     {
       "name": "Note1",
@@ -156,13 +155,27 @@
   "_cn_meta": {
     "title_zh": "Preparing data to be sent to a service",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 1751,
     "synced_at": "2026-06-17T14:10:45.481226",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Create or Update record in Google Sheet",
+        "parameters": {
+          "range": "A:C",
+          "options": {},
+          "sheetId": "13_bAEYNTzVXVY6SfAkBa9ijtJGSxPd8D-hcXXwXtdDo",
+          "operation": "upsert",
+          "authentication": "oAuth2"
+        },
+        "typeVersion": 1
+      }
+    }
   }
 }

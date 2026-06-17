@@ -296,15 +296,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "PgwI1k1VFnoEhOi6",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "bb63dd72-17b0-4416-9939-d9b8b359acd6",
@@ -318,15 +317,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "PgwI1k1VFnoEhOi6",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "8c9f60d6-1b14-4770-a585-0f6aa4c8a9e0",
@@ -570,13 +568,53 @@
   "_cn_meta": {
     "title_zh": "AI Video Generator for eCommerce Product Catalogs with Veo 3.1",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10063,
     "synced_at": "2026-06-17T14:16:35.219483",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "19358bdb-61ce-454e-bf40-6e0760429c6e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "upload_source_image",
+        "parameters": {
+          "name": "=Source Image #{{ $runIndex + 1 }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://drive.google.com/drive/u/0/folders/1_BnKHFYsaar9LvYRQ9B9FJ11lEoK7jyx"
+          }
+        },
+        "typeVersion": 3
+      },
+      "bb63dd72-17b0-4416-9939-d9b8b359acd6": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "upload_output_video",
+        "parameters": {
+          "name": "=Output Video #{{ $runIndex + 1 }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "url",
+            "value": "https://drive.google.com/drive/u/0/folders/1_BnKHFYsaar9LvYRQ9B9FJ11lEoK7jyx"
+          }
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

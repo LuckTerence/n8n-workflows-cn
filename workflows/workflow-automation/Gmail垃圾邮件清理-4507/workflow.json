@@ -209,7 +209,7 @@
     "title_zh": "Gmail垃圾邮件清理",
     "description_zh": "AI识别垃圾/促销邮件自动删除",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4507,
     "synced_at": "2026-06-17T11:37:08.889247",
     "upgraded_at": "2026-06-17",

@@ -91,7 +91,7 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -99,7 +99,6 @@
           "name": "Google Drive account"
         }
       },
-      "typeVersion": 3,
       "alwaysOutputData": true
     },
     {
@@ -111,7 +110,7 @@
         440
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -123,15 +122,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "04iXS2lwUVyzn6F2",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "49b0cc43-30d3-4331-a608-4f51c9ac0efd",
@@ -155,7 +153,7 @@
         140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -167,15 +165,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "04iXS2lwUVyzn6F2",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "80a9da50-93df-476a-a39f-ffece642a934",
@@ -524,7 +521,7 @@
   "_cn_meta": {
     "title_zh": "Simple Eval for Legal Benchmarking",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4712,
     "synced_at": "2026-06-17T14:11:30.593668",
     "foreign_services": [
@@ -532,6 +529,172 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "9e76d679-6f4b-419b-af36-771aba5b9e98": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json[\"URL\"].match(/[-\\w]{25,}/)[0] }}"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "8f2fc75f-ea5d-4700-b58b-b5f5e3e360e5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Tests",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU/edit#gid=0",
+            "cachedResultName": "Tests"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU/edit?usp=drivesdk",
+            "cachedResultName": "LLM Judge"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "cf3cce00-33c4-4bcd-a2a2-75d7e49439d3": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Results",
+        "parameters": {
+          "columns": {
+            "value": {
+              "ID": "={{ $('Loop Over Items').item.json[\"ID\"] }}",
+              "URL": "={{ $('Loop Over Items').item.json[\"URL\"] }}",
+              "Input": "={{ $('Loop Over Items').item.json[\"Input\"] }}",
+              "Output": "={{ $('Loop Over Items').item.json[\"Output\"] }}",
+              "Decision": "={{ $json.output.decision }}",
+              "Test No.": "={{ $('Loop Over Items').item.json[\"Test No.\"] }}",
+              "Reasoning": "={{ $json.output.reasoning }}",
+              "AI Platform": "={{ $('Loop Over Items').item.json[\"AI Platform\"] }}",
+              "Relevant Source Reference": "={{ $('Loop Over Items').item.json[\"Relevant Source Reference\"] }}"
+            },
+            "schema": [
+              {
+                "id": "ID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "ID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Test No.",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Test No.",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "AI Platform",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "AI Platform",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Relevant Source Reference",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Relevant Source Reference",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Input",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Input",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Output",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Output",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Decision",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "Decision",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Reasoning",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Reasoning",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 537199982,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU/edit#gid=537199982",
+            "cachedResultName": "Results"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10l_gMtPsge00eTTltGrgvAo54qhh3_twEDsETrQLAGU/edit?usp=drivesdk",
+            "cachedResultName": "Info Extraction Tasks (LLM Judge)"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

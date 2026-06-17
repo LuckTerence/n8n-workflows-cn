@@ -55,7 +55,7 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -63,7 +63,6 @@
           "name": "Google Drive account"
         }
       },
-      "typeVersion": 3,
       "alwaysOutputData": true
     },
     {
@@ -78,15 +77,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "CnU44UbBjK0GdP6C",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "f85f1e8c-26f7-4d5f-98f3-4e803281f13b",
@@ -523,7 +521,7 @@
         128
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -535,15 +533,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "0drwHzGo1eKmiTc6",
           "name": "KH | Google Sheets "
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "ce0b1a97-e852-40fe-a97e-9eac57d1f450",
@@ -917,7 +914,7 @@
   "_cn_meta": {
     "title_zh": "Automation of Creative Testing and Campaign Launching for Meta Ads",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6038,
     "synced_at": "2026-06-17T14:20:20.081954",
     "foreign_services": [
@@ -925,6 +922,148 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "b1f789fc-f8a1-4e54-bdc7-094d81f440a5": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Files search",
+        "parameters": {
+          "filter": {},
+          "options": {
+            "fields": [
+              "id",
+              "name",
+              "mimeType",
+              "webViewLink",
+              "thumbnailLink"
+            ]
+          },
+          "resource": "fileFolder",
+          "returnAll": true,
+          "queryString": "(mimeType='image/jpeg' or mimeType='image/png' or mimeType='video/mp4') and '13WeDNsMdihc79WNZYOGxZvXU9ea7N4X_' in parents and trashed=false",
+          "searchMethod": "query"
+        },
+        "typeVersion": 3
+      },
+      "241c082a-a8b8-429c-9c51-5bfc02bad341": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Download Files",
+        "parameters": {
+          "fileId": "={{ $json.id }}",
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "a9ae4171-32f9-4c18-8500-966fa0874a2b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Full Report to Sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "AdID": "={{ $json.id }}",
+              "Type": "={{ $('Merge').item.json.mimeType }}",
+              "AdsetID": "={{ $('Create Ad Set').item.json.id }}",
+              "FileName": "={{ $('Merge').item.json.original_file_name }}",
+              "Timestamp": "={{$now.toFormat('ddMMyyyy')}}",
+              "CampaignID": "={{ $('Create Campaign').item.json.id }}",
+              "CreativeID": "={{ $('Merge').item.json.creative_id }}"
+            },
+            "schema": [
+              {
+                "id": "FileName",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "FileName",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CreativeID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CreativeID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Type",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Timestamp",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "Timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "CampaignID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "CampaignID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "AdsetID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "AdsetID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "AdID",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "AdID",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "CreativeID"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw/edit#gid=0",
+            "cachedResultName": "Creatives"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw/edit?usp=drivesdk",
+            "cachedResultName": "AutoTest_of_Creatives_v2"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

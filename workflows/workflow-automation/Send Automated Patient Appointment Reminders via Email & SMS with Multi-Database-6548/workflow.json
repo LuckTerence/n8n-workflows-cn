@@ -47,7 +47,7 @@
         16
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -59,9 +59,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.4
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "b91c8dfa-f6be-49e9-84ab-7dfc477d7876",
@@ -84,9 +83,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
-      },
-      "typeVersion": 2
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "58623e20-a443-494c-ae69-3e7bc2741527",
@@ -132,7 +130,7 @@
         -96
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -144,9 +142,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.4
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "8b5748ed-a62e-4725-a2ad-6412d1468b18",
@@ -169,9 +166,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
-      },
-      "typeVersion": 2
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "4caf96ed-2006-41fa-9c4f-ede96ea654e0",
@@ -217,7 +213,7 @@
         -96
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -229,9 +225,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.4
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2398d8d2-7255-4306-806a-aaac78aeaecd",
@@ -254,9 +249,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
-      },
-      "typeVersion": 2
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "00e32802-9651-4aa9-9143-81a90b7fe00d",
@@ -588,7 +582,7 @@
   "_cn_meta": {
     "title_zh": "Send Automated Patient Appointment Reminders via Email & SMS with Multi-Database Support",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6548,
     "synced_at": "2026-06-17T14:21:23.986144",
     "foreign_services": [
@@ -596,6 +590,44 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信",
-    "description_zh": "邮件自动化、数据库操作、流程自动化"
+    "description_zh": "邮件自动化、数据库操作、流程自动化",
+    "replacements": {
+      "8045beb6-3991-4be1-b4bb-dd9639180a48": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Store in Google Sheets",
+        "parameters": {},
+        "typeVersion": 4.4
+      },
+      "b91c8dfa-f6be-49e9-84ab-7dfc477d7876": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Store in Airtable",
+        "parameters": {},
+        "typeVersion": 2
+      },
+      "2792acef-a716-42ba-b401-e1b84408ef5f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Google Sheets: 3-Day Sent",
+        "parameters": {},
+        "typeVersion": 4.4
+      },
+      "8b5748ed-a62e-4725-a2ad-6412d1468b18": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Airtable: 3-Day Sent",
+        "parameters": {},
+        "typeVersion": 2
+      },
+      "586716de-9d48-468a-8f97-a7e8f87dd1e4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update Google Sheets: 1-Day Sent",
+        "parameters": {},
+        "typeVersion": 4.4
+      },
+      "2398d8d2-7255-4306-806a-aaac78aeaecd": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Airtable: 1-Day Sent",
+        "parameters": {},
+        "typeVersion": 2
+      }
+    }
   }
 }

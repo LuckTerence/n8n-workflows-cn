@@ -92,7 +92,7 @@
         1024
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -104,15 +104,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3a578528-f974-4499-8a07-a38038b3a75a",
@@ -275,15 +274,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "HEy5EuZkgPZVEa9w",
           "name": "Google Drive account (n3w.it)"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "93fc3621-b08e-426c-b765-f0ee7baad60d",
@@ -464,7 +462,7 @@
         1024
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -476,15 +474,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "3ee5d942-7ad2-4478-959a-53690596f573",
@@ -571,7 +568,7 @@
         1568
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -583,15 +580,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "239477c1-c0ac-43e5-a051-1d831b357da7",
@@ -853,7 +849,7 @@
         496
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -865,15 +861,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "JYR6a64Qecd6t8Hb",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "ba797a59-c99d-4b27-9fef-7d135ab6e61a",
@@ -1202,7 +1197,7 @@
   "_cn_meta": {
     "title_zh": "Extend and Merge UGC Viral Videos Using Kling 2.1, Then Publish on Social Media",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11710,
     "synced_at": "2026-06-17T14:21:48.362453",
     "foreign_services": [
@@ -1210,6 +1205,285 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成、社交平台"
+    "description_zh": "视频生成、社交平台",
+    "replacements": {
+      "bcaec2e1-ab42-4e97-a5c8-8e9a1c4090c8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video url",
+        "parameters": {
+          "columns": {
+            "value": {
+              "VIDEO URL": "={{ $json.output.result }}",
+              "row_number": "={{ $('Get prompts').item.json.row_number }}"
+            },
+            "schema": [
+              {
+                "id": "START",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "START",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PROMPT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "PROMPT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "DURATION",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DURATION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "VIDEO URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "VIDEO URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "MERGE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "MERGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
+            "cachedResultName": "Extend and merge video"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "04530e5e-6fa0-4cb8-86b7-1bf39b6197d1": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Video2",
+        "parameters": {
+          "name": "={{ $now.format('yyyyLLddHHmmss') }}-{{ $('Get Clip Url').item.json.video.file_name }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
+            "cachedResultName": "Fal.run"
+          }
+        },
+        "typeVersion": 3
+      },
+      "cbf2490c-8ea2-4af6-ad72-a27503bf3044": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get videos to merge",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "MERGE"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
+            "cachedResultName": "Extend and merge video"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "a99141d9-b745-4516-b448-7128825308c6": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update video url2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "MERGE": "x",
+              "VIDEO URL": "=",
+              "row_number": "={{ $('Get prompts').item.json.row_number }}",
+              "FINAL VIDEO": "={{ $json.video.url }}"
+            },
+            "schema": [
+              {
+                "id": "START",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "START",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "PROMPT",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "PROMPT",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "DURATION",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "DURATION",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "VIDEO URL",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "VIDEO URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "MERGE",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "MERGE",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "FINAL VIDEO",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "FINAL VIDEO",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "row_number"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
+            "cachedResultName": "Extend and merge video"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "16b1b296-b956-4c00-9455-bf641be349f3": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get video",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "VIDEO URL"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
+            "cachedResultName": "Foglio1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
+            "cachedResultName": "Extend and merge video"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

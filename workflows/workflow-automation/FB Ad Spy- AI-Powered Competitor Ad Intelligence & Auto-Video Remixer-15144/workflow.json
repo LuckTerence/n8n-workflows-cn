@@ -229,9 +229,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "1913035b-9713-4564-ad2f-acb5aa97e445",
@@ -312,9 +311,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "2ca3abd9-1bcc-45cf-a4bb-e37e7a3c5f7c",
@@ -371,7 +369,7 @@
         240
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -383,9 +381,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "e48a756e-098f-4342-bfb6-eaa495df64bd",
@@ -440,7 +437,7 @@
         592
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -452,9 +449,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "3d8e0081-1d36-426c-978f-b6085cf03654",
@@ -487,7 +483,7 @@
         1248
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -499,9 +495,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "12aa472e-f368-47d2-962e-890b2d0d9de1",
@@ -718,7 +713,7 @@
         320
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -730,9 +725,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "21ab5b35-efd5-4e18-84c3-4374180b725c",
@@ -1536,7 +1530,7 @@
   "_cn_meta": {
     "title_zh": "FB Ad Spy: AI-Powered Competitor Ad Intelligence & Auto-Video Remixer",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15144,
     "synced_at": "2026-06-17T14:20:31.150631",
     "foreign_services": [
@@ -1544,6 +1538,44 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "6d887073-a799-4041-a2a9-5997ed49c0ad": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Save Video to Google Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "3b512368-8b2c-41d4-970d-bd626b0dc69e": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Retrieve Video from Drive",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "f9c33232-867f-41ec-8e91-7a95cb4eb0a5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Record Video Data in Sheets",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "061f947e-a674-4e53-b1ea-280aed785e2a": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Record Image Data in Sheets",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "b2f34f8f-f736-4b7a-8559-628c6d3ca664": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Record Text Data in Sheets",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "9e3987a4-3a64-4209-b675-8eb8c4f21add": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Modify Google Sheet Entry",
+        "parameters": {},
+        "typeVersion": 4.6
+      }
+    }
   }
 }

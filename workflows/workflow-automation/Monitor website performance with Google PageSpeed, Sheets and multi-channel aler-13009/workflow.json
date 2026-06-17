@@ -28,7 +28,7 @@
         -464
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -40,10 +40,9 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "retryOnFail": false,
-      "typeVersion": 4.7
+      "retryOnFail": false
     },
     {
       "id": "f623cbbc-9ea1-4af4-811b-c2f47d760e67",
@@ -65,7 +64,7 @@
         -560
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -77,9 +76,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.6
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "30b189f9-b751-4b84-837d-ed20897b0e2f",
@@ -101,7 +99,7 @@
         -560
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -113,9 +111,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.7
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "bc37257c-771e-4917-b11c-93f1fa9a45e4",
@@ -153,14 +150,27 @@
     {
       "id": "5f42af79-d4d7-4b22-90cf-02e26472f519",
       "name": "Send a message",
-      "type": "n8n-nodes-base.discord",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1168,
         -416
       ],
       "webhookId": "302121b8-3595-4b48-b8ba-adb41978d17f",
-      "parameters": {},
-      "typeVersion": 2
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Discord → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "02685dd8-b715-46e9-af41-1c3af5e504f6",
@@ -513,6 +523,32 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、表单处理、表格处理"
+    "description_zh": "系统监控、表单处理、表格处理",
+    "replacements": {
+      "32a2b196-121f-4188-85df-54708df4bd01": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get Data Form Sheet",
+        "parameters": {},
+        "typeVersion": 4.7
+      },
+      "9e82c921-8dfa-4558-9971-db01ffa62656": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Results",
+        "parameters": {},
+        "typeVersion": 4.6
+      },
+      "d60f8ea3-4519-4965-9a17-f9d89233f972": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update data",
+        "parameters": {},
+        "typeVersion": 4.7
+      },
+      "5f42af79-d4d7-4b22-90cf-02e26472f519": {
+        "type": "n8n-nodes-base.discord",
+        "name": "Send a message",
+        "parameters": {},
+        "typeVersion": 2
+      }
+    }
   }
 }

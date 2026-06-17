@@ -270,7 +270,7 @@
         400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -282,15 +282,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "credential-id",
           "name": "googleSheetsOAuth2Api Credential"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "a1000000-0000-0000-0000-000000000020",
@@ -520,13 +519,38 @@
   "_cn_meta": {
     "title_zh": "Look up contact details and addresses from names using ScraperCity",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13929,
     "synced_at": "2026-06-17T14:22:13.405780",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "数据采集"
+    "description_zh": "数据采集",
+    "replacements": {
+      "a1000000-0000-0000-0000-000000000013": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save Results to Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "mappingMode": "autoMapInputData"
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "="
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

@@ -378,7 +378,7 @@
         340
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -390,15 +390,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "cd66ebf5-9266-47dd-9e46-012a64f06fdb",
@@ -441,7 +440,7 @@
         -380
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -453,15 +452,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "54807d8b-df01-4932-8f65-750853fe828c",
@@ -472,7 +470,7 @@
         -200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -484,15 +482,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "b32f9a30-3ba4-4b45-9bb5-edd3feca7277",
@@ -503,7 +500,7 @@
         -100
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -515,15 +512,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "f41ae072-181a-4480-bb4a-759418409e6f",
@@ -576,7 +572,7 @@
         120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -588,15 +584,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "6def1d6b-c496-4cb4-91e3-683fe346ffcf",
@@ -607,7 +602,7 @@
         220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -619,15 +614,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "68da45f2-3480-4133-b71c-a2116eff7e25",
@@ -638,7 +632,7 @@
         440
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -650,15 +644,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "d4bcbae9-d8b8-4e0d-aabb-290adb3a3a84",
@@ -669,7 +662,7 @@
         580
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -681,15 +674,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "029f31d2-3c97-4a66-83f9-e2405053d32c",
@@ -700,7 +692,7 @@
         780
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -712,15 +704,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "5UMhhnm7ZoIEGIE4",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.6
+      }
     }
   ],
   "active": false,
@@ -937,13 +928,781 @@
   "_cn_meta": {
     "title_zh": "Flexible Currency Rate Uploads for SAP B1 with AI Validation & Multiple Sources",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4931,
     "synced_at": "2026-06-17T14:20:34.248333",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "77b9008d-ff45-4ce9-866d-178fa4d0f2c4": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g/edit?usp=drivesdk",
+            "cachedResultName": "RATE"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "fe249d41-6cf2-4bee-bc02-16abb9c58339": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Success",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $('Split Out').item.json.Currency }}\",\n    \"Rate\": \"{{ $('Split Out').item.json.Rate }}\",\n    \"RateDate\": \"{{ $('Split Out').item.json.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "=Enviado correctamente a SAP, pero sin contenido",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "=204"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "54807d8b-df01-4932-8f65-750853fe828c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fallo",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "={{ $json.error.message }}",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "={{ $json.error.status }}"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "b32f9a30-3ba4-4b45-9bb5-edd3feca7277": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Success1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $('Comprobar Fecha').item.json.message.content.Currency }}\",\n    \"Rate\": \"{{ $('Comprobar Fecha').item.json.message.content.Rate }}\",\n    \"RateDate\": \"{{ $('Comprobar Fecha').item.json.message.content.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "=Enviado correctamente a SAP, pero sin contenido",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "=204"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "88eed1d3-bf5e-4338-b829-a7031134bcba": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fallo1",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "={{ $json.error.message }}",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "={{ $json.error.status }}"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "6def1d6b-c496-4cb4-91e3-683fe346ffcf": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Success2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $('Google Sheets').item.json.Currency }}\",\n    \"Rate\": \"{{ $('Google Sheets').item.json.Rate }}\",\n    \"RateDate\": \"{{ $('Google Sheets').item.json.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "=Enviado correctamente a SAP, pero sin contenido",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "=204"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "68da45f2-3480-4133-b71c-a2116eff7e25": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fallo2",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
+              "method": "POST",
+              "message": "={{ $json.error.message }}",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "={{ $json.error.status }}"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "d4bcbae9-d8b8-4e0d-aabb-290adb3a3a84": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Success3",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $('Webhook').item.json.body.currency }}\",\n    \"Rate\": \"{{ $('Webhook').item.json.body.rate }}\",\n    \"RateDate\": \"{{ $('Webhook').item.json.body.rateDate }}\"\n}",
+              "method": "POST",
+              "message": "=Enviado correctamente a SAP, pero sin contenido",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "=204"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "029f31d2-3c97-4a66-83f9-e2405053d32c": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fallo3",
+        "parameters": {
+          "columns": {
+            "value": {
+              "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
+              "json": "={\n    \"Currency\": \"{{ $('Webhook').item.json.body.currency }}\",\n    \"Rate\": \"{{ $('Webhook').item.json.body.rate }}\",\n    \"RateDate\": \"{{ $('Webhook').item.json.body.rateDate }}\"\n}",
+              "method": "POST",
+              "message": "={{ $json.error.message }}",
+              "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
+              "status_code": "={{ $json.error.status }}"
+            },
+            "schema": [
+              {
+                "id": "workflow",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "workflow",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "method",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "method",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "json",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "json",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status_code",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "status_code",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "message",
+                "type": "string",
+                "display": true,
+                "required": false,
+                "displayName": "message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
+            "cachedResultName": "Hoja 1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
+            "cachedResultName": "LOGS_N8N"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

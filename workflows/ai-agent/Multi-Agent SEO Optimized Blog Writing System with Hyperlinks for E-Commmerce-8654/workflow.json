@@ -136,15 +136,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "IdMuG6Ja3xc0kVnw",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "bec7f1dd-048f-4db5-bec3-d25abafa8038",
@@ -508,15 +507,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "bTYdJq6EmVpNFiv8",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "cc02b819-0ac0-4951-b06f-3d15ad9d7322",
@@ -530,15 +528,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "bTYdJq6EmVpNFiv8",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "1dcbe7b4-45e3-41c7-94be-28a1af2a12d0",
@@ -584,15 +581,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "IdMuG6Ja3xc0kVnw",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "3f6d8d9c-39b5-45af-ae4b-0aa1419cf37b",
@@ -685,15 +681,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "IdMuG6Ja3xc0kVnw",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "bf0a750c-f47e-4aa2-acaf-b1bd88ca0f5c",
@@ -739,15 +734,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "IdMuG6Ja3xc0kVnw",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "8ffa47b5-4f0a-483c-86e4-fdeee6485294",
@@ -1269,15 +1263,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "IdMuG6Ja3xc0kVnw",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "a0385d9e-393a-48f1-bd66-5761a85ad047",
@@ -2459,7 +2452,7 @@
   "_cn_meta": {
     "title_zh": "Multi-Agent SEO Optimized Blog Writing System with Hyperlinks for E-Commmerce",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8654,
     "synced_at": "2026-06-17T14:17:11.503766",
     "foreign_services": [
@@ -2467,6 +2460,990 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
-    "description_zh": "AI 智能体、SEO 优化、博客内容"
+    "description_zh": "AI 智能体、SEO 优化、博客内容",
+    "replacements": {
+      "f4d5e013-191f-4811-8b05-6681cf5674d9": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Airtable Get Article Data",
+        "parameters": {
+          "id": "={{ $('Webhook').item.json.body.recordID }}",
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "apprrQ0Dv1cJOfMi9",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9",
+            "cachedResultName": "KW Research The Bucket Hat"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblVTpv8JG5lZRiF2",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9/tblVTpv8JG5lZRiF2",
+            "cachedResultName": "Article Writer"
+          },
+          "options": {}
+        },
+        "typeVersion": 2.1
+      },
+      "f428be45-2d9d-4e9b-9f9d-80f4cc2633d8": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create Article Folder",
+        "parameters": {
+          "name": "={{ $('Sets New Title Field').item.json.new_title }}",
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "options": {},
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1AViQ9PVYtVdrC68iImpTr0kl1pEtS6aR"
+          },
+          "resource": "folder"
+        },
+        "typeVersion": 3
+      },
+      "cc02b819-0ac0-4951-b06f-3d15ad9d7322": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "={{ $json.documentId }}"
+          },
+          "options": {},
+          "operation": "share",
+          "permissionsUi": {
+            "permissionsValues": {
+              "role": "writer",
+              "type": "anyone"
+            }
+          }
+        },
+        "typeVersion": 3
+      },
+      "27aecd35-2d91-4aca-9e87-50fe99d9b454": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Airtable",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "apprrQ0Dv1cJOfMi9",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9",
+            "cachedResultName": "KW Research The Bucket Hat"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblVTpv8JG5lZRiF2",
+            "cachedResultUrl": "https://airtable.com/appuvbLPrnVBj88Eb/tblVTpv8JG5lZRiF2",
+            "cachedResultName": "Article Writer"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Webhook').item.json.body.recordID }}",
+              "Google Doc URL": "={{ $json.url }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Create Article",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Write Article",
+                    "value": "Write Article"
+                  },
+                  {
+                    "name": "Keep",
+                    "value": "Keep"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Create Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Primary Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Primary Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Google Doc URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Google Doc URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Writing Style",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Writing Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Tone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Tone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Target Audience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Target Audience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Goal of Article",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Goal of Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Title Options",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Original Title",
+                    "value": "Original Title"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title Options",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      },
+      "b7d1727f-669a-4867-a0f3-401a2989c946": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Article Writer table",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "apprrQ0Dv1cJOfMi9",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9",
+            "cachedResultName": "KW Research The Bucket Hat"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblVTpv8JG5lZRiF2",
+            "cachedResultUrl": "https://airtable.com/appuvbLPrnVBj88Eb/tblVTpv8JG5lZRiF2",
+            "cachedResultName": "Article Writer"
+          },
+          "columns": {
+            "value": {
+              "id": "={{ $('Airtable Get Article Data').item.json.id }}",
+              "Tone": "={{ $json.writing_tone }}",
+              "Keyword": "={{ $('Set Airtable Fields for Agents').item.json.Keyword }}",
+              "Search Intent": "={{ $json.search_intent }}",
+              "Writing Style": "={{ $json.writing_style }}",
+              "Hidden Insight": "={{ $json.hidden_insight }}",
+              "Goal of Article": "={{ $json.article_goal }}",
+              "Primary Keyword": "={{ $('Set Airtable Fields for Agents').item.json.Primary.Keyword }}",
+              "Target Audience": "={{ $json.target_audience }}",
+              "Semantic Analysis": "={{ $json.semantic_analysis }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Final Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Create Article",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Write Article",
+                    "value": "Write Article"
+                  },
+                  {
+                    "name": "Keep",
+                    "value": "Keep"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Create Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Primary Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Primary Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Google Doc URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Google Doc URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Writing Style",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Writing Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Tone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Tone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Target Audience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Target Audience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Goal of Article",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Goal of Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Search Intent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Search Intent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Hidden Insight",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Hidden Insight",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Semantic Analysis",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Semantic Analysis",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keywords",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keywords",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      },
+      "4b7ac83a-c89c-477b-9f90-506590ee0515": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Article Title",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "apprrQ0Dv1cJOfMi9",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9",
+            "cachedResultName": "KW Research The Bucket Hat"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblVTpv8JG5lZRiF2",
+            "cachedResultUrl": "https://airtable.com/appuvbLPrnVBj88Eb/tblVTpv8JG5lZRiF2",
+            "cachedResultName": "Article Writer"
+          },
+          "columns": {
+            "value": {
+              "Tone": "={{ $json.writing_tone }}",
+              "Keyword": "={{ $('Set Airtable Fields for Agents').item.json.Keyword }}",
+              "Keywords": "={{ $json.keywords }}",
+              "Final Title": "={{ $json.new_title }}",
+              "Search Intent": "={{ $json.search_intent }}",
+              "Writing Style": "={{ $json.writing_style }}",
+              "Hidden Insight": "={{ $json.hidden_insight }}",
+              "Goal of Article": "={{ $json.article_goal }}",
+              "Target Audience": "={{ $json.target_audience }}",
+              "Semantic Analysis": "={{ $json.semantic_analysis }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Final Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Create Article",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Write Article",
+                    "value": "Write Article"
+                  },
+                  {
+                    "name": "Keep",
+                    "value": "Keep"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Create Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Primary Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Primary Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Google Doc URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Google Doc URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Writing Style",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Writing Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Tone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Tone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Target Audience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Target Audience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Goal of Article",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Goal of Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Search Intent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Search Intent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Hidden Insight",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Hidden Insight",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Semantic Analysis",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Semantic Analysis",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keywords",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keywords",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keyword"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      },
+      "9f62d8bb-95d0-4858-b536-676033f2302f": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Update Article Writer table1",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "apprrQ0Dv1cJOfMi9",
+            "cachedResultUrl": "https://airtable.com/apprrQ0Dv1cJOfMi9",
+            "cachedResultName": "KW Research The Bucket Hat"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblVTpv8JG5lZRiF2",
+            "cachedResultUrl": "https://airtable.com/appuvbLPrnVBj88Eb/tblVTpv8JG5lZRiF2",
+            "cachedResultName": "Article Writer"
+          },
+          "columns": {
+            "value": {
+              "Tone": "={{ $json.writing_tone }}",
+              "Keyword": "={{ $('Set Airtable Fields for Agents').item.json.Keyword }}",
+              "Keywords": "={{ $json.keywords }}",
+              "Search Intent": "={{ $json.search_intent }}",
+              "Writing Style": "={{ $json.writing_style }}",
+              "Hidden Insight": "={{ $json.hidden_insight }}",
+              "Goal of Article": "={{ $json.article_goal }}",
+              "Target Audience": "={{ $json.target_audience }}",
+              "Semantic Analysis": "={{ $json.semantic_analysis }}"
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true
+              },
+              {
+                "id": "Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Final Title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Final Title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Create Article",
+                "type": "options",
+                "display": true,
+                "options": [
+                  {
+                    "name": "Write Article",
+                    "value": "Write Article"
+                  },
+                  {
+                    "name": "Keep",
+                    "value": "Keep"
+                  }
+                ],
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Create Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Primary Keyword",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Primary Keyword",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Category",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Category",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Google Doc URL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Google Doc URL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Writing Style",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Writing Style",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Tone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Tone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Target Audience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Target Audience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Goal of Article",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Goal of Article",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Search Intent",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Search Intent",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Hidden Insight",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Hidden Insight",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Semantic Analysis",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Semantic Analysis",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Keywords",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Keywords",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Keyword"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

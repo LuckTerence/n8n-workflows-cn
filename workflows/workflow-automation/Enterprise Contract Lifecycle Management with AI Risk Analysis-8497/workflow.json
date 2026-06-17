@@ -274,13 +274,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -362,13 +362,13 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -574,7 +574,7 @@
   "_cn_meta": {
     "title_zh": "Enterprise Contract Lifecycle Management with AI Risk Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8497,
     "synced_at": "2026-06-17T14:12:38.888258",
     "foreign_services": [
@@ -582,6 +582,70 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "notify-legal": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Notify Legal Team",
+        "parameters": {
+          "channel": "#legal-contracts",
+          "attachments": [
+            {
+              "ts": "={{ Date.now() / 1000 }}",
+              "color": "#ff0000",
+              "title": "{{ $json.contractAnalysis.type }} - {{ $json.contractAnalysis.parties[0].name }}",
+              "fields": {
+                "item": [
+                  {
+                    "short": true,
+                    "title": "Contract Value",
+                    "value": "{{ $json.contractAnalysis.currency }} {{ $json.contractAnalysis.value.toLocaleString() }}"
+                  },
+                  {
+                    "short": true,
+                    "title": "Risk Score",
+                    "value": "{{ $json.riskAssessment.overallScore }}/10"
+                  },
+                  {
+                    "short": false,
+                    "title": "Risk Factors",
+                    "value": "{{ $json.riskAssessment.riskFactors.filter(r => r.score > 6).map(r => r.category).join('\\n') }}"
+                  },
+                  {
+                    "short": false,
+                    "title": "Missing Clauses",
+                    "value": "{{ $json.riskAssessment.missingClauses.join('\\n') || 'None' }}"
+                  }
+                ]
+              },
+              "footer": "Contract Review System",
+              "title_link": "https://contracts.company.com/review/{{ $json.contractAnalysis.contractId }}"
+            }
+          ],
+          "msg_type": "text",
+          "content": {
+            "text": "⚠️ High Risk Contract Requires Review"
+          }
+        },
+        "typeVersion": 2.1
+      },
+      "send-daily-summary": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Send Daily Summary",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "value": "contract-alerts"
+          },
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "=📅 Daily Contract Alert Summary\\n\\nYou have {{ $items.length }} upcoming contract deadlines:\\n\\n{{ $items.map(item => `• ${item.json.alert.type}: ${item.json.alert.description || item.json.contract_id} - Due ${item.json.alert.date} (${item.json.alert.daysRemaining} days)`).join('\\n') }}"
+          }
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

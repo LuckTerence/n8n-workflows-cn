@@ -43,15 +43,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "yOwz41gMQclOadgu",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "1dd3d3fd-6c2e-4e23-9c82-b0d07b199de3",
@@ -442,13 +441,31 @@
     "title_zh": "AI股票基本面分析",
     "description_zh": "自动分析股票基本面并生成Q&A报告",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2183,
     "synced_at": "2026-06-17T11:37:00.122741",
     "foreign_services": [
       "Google Drive",
       "Supabase"
     ],
-    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase"
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
+    "replacements": {
+      "9dc8f2a7-eeff-4a35-be52-05c42b71eee4": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Google Drive",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1LZezppYrWpMStr4qJXtoIX-Dwzvgehll",
+            "cachedResultUrl": "https://drive.google.com/file/d/1LZezppYrWpMStr4qJXtoIX-Dwzvgehll/view?usp=drivesdk",
+            "cachedResultName": "crowdstrike.pdf"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

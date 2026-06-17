@@ -105,15 +105,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "yOwz41gMQclOadgu",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "8942c6bf-4d86-4a95-aa4a-c819008e2534",
@@ -127,15 +126,14 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
           "id": "yOwz41gMQclOadgu",
           "name": "Google Drive account"
         }
-      },
-      "typeVersion": 3
+      }
     },
     {
       "id": "94a1c3ca-1ca7-4bb1-9e7c-8314742423ab",
@@ -676,13 +674,43 @@
   "_cn_meta": {
     "title_zh": "Parse and Extract Data from Documents-Images with Mistral OCR",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3102,
     "synced_at": "2026-06-17T14:16:05.895921",
     "foreign_services": [
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成"
+    "description_zh": "图片生成",
+    "replacements": {
+      "7abfb1f8-f6c8-4fd0-a78e-9d4b97a4d6bc": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Import PDF",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "15BcE6nXto9lQDHPmwjm7y9JPerAVEutY"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      },
+      "8942c6bf-4d86-4a95-aa4a-c819008e2534": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Import Image",
+        "parameters": {
+          "fileId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "1a2FcRDWHHncMO8CYxD80uNUBGH1Sy1k2"
+          },
+          "options": {},
+          "operation": "download"
+        },
+        "typeVersion": 3
+      }
+    }
   }
 }

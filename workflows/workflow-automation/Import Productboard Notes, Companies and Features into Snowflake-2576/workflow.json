@@ -887,11 +887,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"={\\n  \\\"blocks\\\": [\\n    {\\n      \\\"type\\\": \\\"section\\\",\\n      \\\"text\\\": {\\n        \\\"type\\\": \\\"mrkdwn\\\",\\n        \\\"text\\\": \\\":productboard: Weekly Update in :snowflake_logo: Completed\\\\n\\\\n*{{ $json.NOTES_7_DAYS }}* new \"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -901,7 +902,6 @@
       },
       "executeOnce": true,
       "retryOnFail": false,
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1285,12 +1285,34 @@
   "_cn_meta": {
     "title_zh": "Import Productboard Notes, Companies and Features into Snowflake",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2576,
     "synced_at": "2026-06-17T14:21:14.376114",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "3eb88f88-8fad-4aaf-b6f9-6f7d87e30018": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack",
+        "parameters": {
+          "select": "channel",
+          "blocksUi": "={\n  \"blocks\": [\n    {\n      \"type\": \"section\",\n      \"text\": {\n        \"type\": \"mrkdwn\",\n        \"text\": \":productboard: Weekly Update in :snowflake_logo: Completed\\n\\n*{{ $json.NOTES_7_DAYS }}* new insights added in the last 7 days.\\n\\n*{{ $json.NOTES_UNPROCESSED }}* insights remain unprocessed.\\n\\nYou can view the updated :metabase: dashboard below:\"\n      }\n    },\n    {\n      \"type\": \"actions\",\n      \"elements\": [\n        {\n          \"type\": \"button\",\n          \"text\": {\n            \"type\": \"plain_text\",\n            \"text\": \"Open Dashboard\",\n            \"emoji\": true\n          },\n          \"url\": \"https://metabase.com\"\n        }\n      ]\n    }\n  ]\n}",
+          "channelId": {
+            "__rl": true,
+            "mode": "name",
+            "value": "#product-notifications"
+          },
+          "messageType": "block",
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "="
+          }
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

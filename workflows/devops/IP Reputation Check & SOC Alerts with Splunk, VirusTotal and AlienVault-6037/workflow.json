@@ -218,11 +218,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -230,7 +231,6 @@
           "name": "Slack account 3"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -460,7 +460,7 @@
   "_cn_meta": {
     "title_zh": "IP Reputation Check & SOC Alerts with Splunk, VirusTotal and AlienVault",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6037,
     "synced_at": "2026-06-17T14:18:43.397979",
     "foreign_services": [
@@ -468,6 +468,28 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "告警通知"
+    "description_zh": "告警通知",
+    "replacements": {
+      "7aa90c7f-4766-4a7b-9e70-09ad884901e4": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Slack IP Alert",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "C0913JPTZBJ",
+            "cachedResultName": "n8n-trigger"
+          },
+          "otherOptions": {},
+          "authentication": "oAuth2",
+          "msg_type": "text",
+          "content": {
+            "text": "={{ $json.summary.VirusTotal.Status === 'Safe' ? '✅' : '🚨' }} IP {{ $json.summary.VirusTotal.IP }}\nStatus: *{{ $json.summary.Status }}*\nEvent: {{ $json.summary.VirusTotal.Description }}\n"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }

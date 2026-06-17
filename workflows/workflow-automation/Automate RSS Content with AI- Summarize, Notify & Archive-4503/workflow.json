@@ -142,7 +142,7 @@
         1740
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -154,9 +154,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
-      "typeVersion": 4.5,
       "alwaysOutputData": true
     },
     {
@@ -467,13 +466,21 @@
   "_cn_meta": {
     "title_zh": "Automate RSS Content with AI: Summarize, Notify & Archive",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4503,
     "synced_at": "2026-06-17T14:06:58.626781",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "消息通知、流程自动化"
+    "description_zh": "消息通知、流程自动化",
+    "replacements": {
+      "9f1a6dbe-0918-4909-b4fe-d361adee2c47": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Save News",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

@@ -38,7 +38,7 @@
         60
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -50,9 +50,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "6565f357-d72e-457e-b99d-70299701a742",
@@ -102,9 +101,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "3a334d41-383d-42e4-8f4c-de54cd6928ee",
@@ -118,9 +116,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "e873a5c2-5153-4c8b-94e5-abd098daa753",
@@ -181,10 +178,9 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "executeOnce": false,
-      "typeVersion": 3,
       "alwaysOutputData": true
     },
     {
@@ -200,10 +196,9 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
       },
       "executeOnce": false,
-      "typeVersion": 3,
       "alwaysOutputData": true
     },
     {
@@ -304,7 +299,7 @@
         -200
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -316,9 +311,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "a5107e43-bba9-44bb-abbc-02a2659c35ef",
@@ -340,7 +334,7 @@
         120
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -352,9 +346,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "fe5af04c-fff5-4523-81ef-54dbea772424",
@@ -468,9 +461,8 @@
         "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
         "method": "PUT",
         "options": {},
-        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
-      },
-      "typeVersion": 3
+        "notes": "原 Google Drive → 阿里云 OSS。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "1e80f5a3-c0e7-499c-a0d5-4537d7d9b767",
@@ -493,7 +485,7 @@
         660
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -505,9 +497,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "d6413bd4-9e9f-46f4-bc86-41dda9fcfbe6",
@@ -575,7 +566,7 @@
         -420
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -587,9 +578,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "d9f4ac0b-c728-48ec-908a-505223fd1f30",
@@ -600,7 +590,7 @@
         -400
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -612,9 +602,8 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
-      },
-      "typeVersion": 4.5
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
+      }
     },
     {
       "id": "d83eccf2-c38c-4e56-8c58-0b2ccc3c5a55",
@@ -1917,7 +1906,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI Stock Images with Flux1-schnell, Metadata Tagging & Google Integration",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4445,
     "synced_at": "2026-06-17T14:19:59.796676",
     "foreign_services": [
@@ -1925,6 +1914,74 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "股票分析、图片生成"
+    "description_zh": "股票分析、图片生成",
+    "replacements": {
+      "874d35db-a40a-4ee4-a789-c260a193eda1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "2572c69f-d725-4896-bff6-2083b1103e52": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create Folder for images",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "3a334d41-383d-42e4-8f4c-de54cd6928ee": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Create New Sheet",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "e886b68f-7c34-4e3f-beb1-bef34216f4a0": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Check the folder",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "b85d86bd-89af-4142-b758-6af070c6405d": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Check sheet",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "2014cbcd-9e1d-4a92-9724-c4074ab8a177": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets3",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "f4738f03-3664-41a5-83c9-c15b4e92ffee": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets4",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "ac791c27-3821-446f-8af3-db5e8afc82b5": {
+        "type": "n8n-nodes-base.googleDrive",
+        "name": "Upload Images",
+        "parameters": {},
+        "typeVersion": 3
+      },
+      "92143600-5a94-4420-aa12-84128cb93790": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Error",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "236f37c2-915d-4bf2-8e10-f3b2f644d23d": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets1",
+        "parameters": {},
+        "typeVersion": 4.5
+      },
+      "d9f4ac0b-c728-48ec-908a-505223fd1f30": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets2",
+        "parameters": {},
+        "typeVersion": 4.5
+      }
+    }
   }
 }

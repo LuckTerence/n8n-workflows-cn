@@ -149,7 +149,7 @@
         80
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -161,15 +161,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "gFH3Wjq6yYqSEAei",
           "name": "Google Sheets"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "315446fa-9dbe-474e-870f-719e616f1d15",
@@ -404,7 +403,7 @@
   "_cn_meta": {
     "title_zh": "Create Your First AI Agent",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9311,
     "synced_at": "2026-06-17T14:16:54.192648",
     "foreign_services": [
@@ -413,6 +412,63 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Slack→飞书群机器人",
-    "description_zh": "AI 智能体"
+    "description_zh": "AI 智能体",
+    "replacements": {
+      "87a16b40-ae21-48b1-b1a5-1017c67f9a10": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Store in sheet",
+        "parameters": {
+          "columns": {
+            "value": {
+              "replay message": "={{ $json.output }}",
+              "output data (Crypto)": "={{ $json.data }}"
+            },
+            "schema": [
+              {
+                "id": "replay message",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "replay message",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "output data (Crypto)",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "output data (Crypto)",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IPjHgpBYSOeEgdfDk3DQxRrHPb1jUNNV9yIhkf7tWnQ/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1IPjHgpBYSOeEgdfDk3DQxRrHPb1jUNNV9yIhkf7tWnQ",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IPjHgpBYSOeEgdfDk3DQxRrHPb1jUNNV9yIhkf7tWnQ/edit?usp=drivesdk",
+            "cachedResultName": "Build a Personal Chatbot with Google Gemini & Auto Store Chats in Google Sheets"
+          }
+        },
+        "typeVersion": 4.6
+      }
+    }
   }
 }

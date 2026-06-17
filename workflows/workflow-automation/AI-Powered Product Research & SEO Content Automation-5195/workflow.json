@@ -114,7 +114,7 @@
         -140
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -126,15 +126,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleApi": {
           "id": "Rt0RWApx8PL9t0RF",
           "name": "Google Docs account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "571bb379-f061-42ae-b633-3e80467a0a3d",
@@ -414,7 +413,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Product Research & SEO Content Automation",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5195,
     "synced_at": "2026-06-17T14:11:45.101772",
     "foreign_services": [
@@ -422,6 +421,99 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档",
-    "description_zh": "SEO 优化、智能搜索"
+    "description_zh": "SEO 优化、智能搜索",
+    "replacements": {
+      "44d6ebd9-ad12-4838-aee0-9b8a4a847a6b": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Google Sheets",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "type",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "type",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "keywords",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "keywords",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_title",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "product_title",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "product_description",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "product_description",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [
+              "text"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "url",
+            "value": ""
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "url",
+            "value": ""
+          },
+          "authentication": "serviceAccount"
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

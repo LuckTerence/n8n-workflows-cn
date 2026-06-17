@@ -314,7 +314,7 @@
         -180
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -326,15 +326,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "3Pu0wlfxgNYzVqY6",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "9ce7bf73-211a-4f5b-b39d-81a2d513a3ef",
@@ -448,13 +447,37 @@
   "_cn_meta": {
     "title_zh": "Form with Dynamic Dropdown Field",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2712,
     "synced_at": "2026-06-17T14:09:12.642695",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表单处理"
+    "description_zh": "表单处理",
+    "replacements": {
+      "07635565-f8ea-4fac-b93c-069fbe065ce8": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get all values",
+        "parameters": {
+          "options": {},
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit#gid=0",
+            "cachedResultName": "Blad1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit?usp=drivesdk",
+            "cachedResultName": "obsidian-n8n"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

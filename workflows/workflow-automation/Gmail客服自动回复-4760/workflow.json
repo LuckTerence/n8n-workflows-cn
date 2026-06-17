@@ -237,7 +237,7 @@
     "title_zh": "Gmail客服自动回复",
     "description_zh": "Ollama+Pinecone RAG",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4760,
     "synced_at": "2026-06-17T11:21:19.253263",
     "upgraded_at": "2026-06-17",

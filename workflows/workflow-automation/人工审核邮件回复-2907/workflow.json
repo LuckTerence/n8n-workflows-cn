@@ -431,7 +431,7 @@
     "title_zh": "人工审核邮件回复",
     "description_zh": "AI生成回复+人工确认后再发送",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2907,
     "synced_at": "2026-06-17T11:36:56.165421",
     "upgraded_at": "2026-06-17",

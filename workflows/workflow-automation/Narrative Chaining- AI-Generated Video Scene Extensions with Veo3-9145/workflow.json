@@ -319,7 +319,7 @@
         48
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -331,15 +331,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "30479907-33a4-40e5-bad6-0cc48d8f9532",
@@ -491,7 +490,7 @@
         560
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -503,15 +502,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.6
+      }
     },
     {
       "id": "244af354-5da7-4093-85f1-c0fa389fcc3f",
@@ -651,7 +649,7 @@
         656
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -663,15 +661,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "b838eda5-8848-4974-9a4c-b19d2af69eb7",
@@ -696,7 +693,7 @@
         656
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -708,15 +705,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "e64a05ad-90ea-4bf3-803c-19c69c1ce5ec",
@@ -768,7 +764,7 @@
         48
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -780,15 +776,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "QAjXHWGg9aLQ9IOb",
           "name": "Google Sheets account 3"
         }
-      },
-      "typeVersion": 4.7
+      }
     },
     {
       "id": "e51a5c61-d9d9-4e0a-9009-7d29f1518131",
@@ -1133,13 +1128,318 @@
   "_cn_meta": {
     "title_zh": "Narrative Chaining: AI-Generated Video Scene Extensions with Veo3",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9145,
     "synced_at": "2026-06-17T14:10:34.867341",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "视频生成"
+    "description_zh": "视频生成",
+    "replacements": {
+      "cd97d8fc-6f46-4f4a-a20e-00def5dc01d1": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get input",
+        "parameters": {
+          "options": {},
+          "filtersUI": {
+            "values": [
+              {
+                "lookupValue": "for production",
+                "lookupColumn": "status"
+              }
+            ]
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
+            "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "b04e2a3a-365a-41d6-ac63-4843bb2b4272": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Add scene",
+        "parameters": {
+          "columns": {
+            "value": {
+              "scene": "={{ $('Looper').item.json.step }}",
+              "prompt": "={{ $('ExtendRobo AI Agent').item.json.output.video_prompt }}",
+              "sceneURL": "={{ $json.data.response.resultUrls[0] }}",
+              "row_number": 0
+            },
+            "schema": [
+              {
+                "id": "scene",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "scene",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "prompt",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "prompt",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "sceneURL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "sceneURL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "scene"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 423194450,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1x65wzvPcZAahQsegZ8h99Qh3boI5xRNymx-gtlE9QEU/edit#gid=423194450",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
+            "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
+          }
+        },
+        "typeVersion": 4.6
+      },
+      "2a476a33-9514-4122-9833-70ad865086c5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Get scenes",
+        "parameters": {
+          "options": {
+            "dataLocationOnSheet": {
+              "values": {
+                "range": "C:C",
+                "rangeDefinition": "specifyRangeA1"
+              }
+            }
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 423194450,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=423194450",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
+            "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "7e850ef2-14ce-473f-a595-6d12f55656f9": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Update log",
+        "parameters": {
+          "columns": {
+            "value": {
+              "id": "={{ $('Get input').item.json.id }}",
+              "status": "done",
+              "outputURL": "={{ $json.video.url }}",
+              "row_number": 0
+            },
+            "schema": [
+              {
+                "id": "id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "id",
+                "defaultMatch": true,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "videoURL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "videoURL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "clips to add",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "clips to add",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "aspect ratio",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "aspect ratio",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "narrative theme",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "narrative theme",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "model",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "model",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "any special requests",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "any special requests",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "outputURL",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "outputURL",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "type": "number",
+                "display": true,
+                "removed": false,
+                "readOnly": true,
+                "required": false,
+                "displayName": "row_number",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "id"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "update",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1x65wzvPcZAahQsegZ8h99Qh3boI5xRNymx-gtlE9QEU/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
+            "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
+          }
+        },
+        "typeVersion": 4.7
+      },
+      "092668d1-5aed-4366-bd7f-b44cf6aaf417": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Clear scenes",
+        "parameters": {
+          "clear": "specificRange",
+          "range": "B2:C20",
+          "operation": "clear",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 423194450,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=423194450",
+            "cachedResultName": "Sheet2"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
+            "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
+          }
+        },
+        "typeVersion": 4.7
+      }
+    }
   }
 }

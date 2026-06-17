@@ -30,7 +30,7 @@
         0
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -42,15 +42,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "VV5AyFvgYkc4TfC7",
           "name": "Onur Drive "
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "37951981-3c3d-4434-8782-51e9129f0bbc",
@@ -206,7 +205,7 @@
         -220
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -218,15 +217,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "VV5AyFvgYkc4TfC7",
           "name": "Onur Drive "
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "98295978-21f1-420f-8e9c-4014d53ffb16",
@@ -296,7 +294,7 @@
         300
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -308,15 +306,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "VV5AyFvgYkc4TfC7",
           "name": "Onur Drive "
         }
-      },
-      "typeVersion": 4.5
+      }
     },
     {
       "id": "c6828c9c-c39f-40b5-9197-1435915d3682",
@@ -532,7 +529,7 @@
   "_cn_meta": {
     "title_zh": "Automated Daily Customer Win-Back Campaign with AI Offers",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4001,
     "synced_at": "2026-06-17T14:20:15.176932",
     "foreign_services": [
@@ -540,6 +537,157 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "流程自动化"
+    "description_zh": "流程自动化",
+    "replacements": {
+      "8f52666a-7247-4058-a775-2be80e3b4c0e": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Fetch Customer Data from Sheet",
+        "parameters": {
+          "options": {
+            "returnFirstMatch": false
+          },
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 1698897552,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit#gid=1698897552",
+            "cachedResultName": "Customer Data"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit?usp=drivesdk",
+            "cachedResultName": "Medium Post Automation"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "005890c2-f77d-4d0d-add2-496642464a9f": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log Sent Offer in System Log",
+        "parameters": {
+          "columns": {
+            "value": {
+              "date": "={{ $json.output.timestamp }}",
+              "system_log": "={{ $json.output.action_taken }}",
+              "customer_id": "={{ $json.output.customer_id }}"
+            },
+            "schema": [
+              {
+                "id": "system_log",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "system_log",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "customer_id",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "customer_id",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "system_log"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 157558698,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit#gid=157558698",
+            "cachedResultName": "SYSTEM_LOG"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit?usp=drivesdk",
+            "cachedResultName": "OnurPolat05 N8N  Db"
+          }
+        },
+        "typeVersion": 4.5
+      },
+      "1f823726-6483-40c1-b184-eac87886ded5": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "Log 'Not Found' in System Log",
+        "parameters": {
+          "columns": {
+            "value": {
+              "date": "={{ $json.date }}",
+              "system_log": "={{ $json.system_log }}"
+            },
+            "schema": [
+              {
+                "id": "system_log",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "system_log",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "date",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "date",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "system_log"
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "appendOrUpdate",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": 157558698,
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit#gid=157558698",
+            "cachedResultName": "SYSTEM_LOG"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hG2NMi-4fMa7D5qGonCN8bsYVya4L2TOB_8mI4XK-9k/edit?usp=drivesdk",
+            "cachedResultName": "OnurPolat05 N8N  Db"
+          }
+        },
+        "typeVersion": 4.5
+      }
+    }
   }
 }

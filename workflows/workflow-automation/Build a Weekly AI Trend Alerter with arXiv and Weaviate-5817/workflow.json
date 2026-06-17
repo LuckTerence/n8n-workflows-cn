@@ -1336,7 +1336,7 @@
   "_cn_meta": {
     "title_zh": "Build a Weekly AI Trend Alerter with arXiv and Weaviate",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5817,
     "synced_at": "2026-06-17T14:12:19.641757",
     "foreign_services": [

@@ -495,7 +495,7 @@
         1700
       ],
       "parameters": {
-        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
         "method": "GET",
         "sendHeaders": true,
         "headerParameters": {
@@ -507,15 +507,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+        "notes": "原 Google Sheets → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "hflsBesfa3NNf1aS",
           "name": "Google Sheets account"
         }
-      },
-      "typeVersion": 4.1
+      }
     },
     {
       "id": "e58189c4-13f2-4423-ad63-42afb16e1d98",
@@ -789,13 +788,177 @@
   "_cn_meta": {
     "title_zh": "Prevent Duplicate Processing with Redis Item State Tracking",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6828,
     "synced_at": "2026-06-17T14:13:28.507255",
     "foreign_services": [
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "d93cee23-3274-4105-be43-d7972c79da87": {
+        "type": "n8n-nodes-base.googleSheets",
+        "name": "redis-audit-log",
+        "parameters": {
+          "columns": {
+            "value": {},
+            "schema": [
+              {
+                "id": "timestamp",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "timestamp",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "utilityName",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "utilityName",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "action",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "action",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "keyPrefix",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "keyPrefix",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "itemId",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "itemId",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "fullKey",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "fullKey",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "ttl_seconds",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "ttl_seconds",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "status",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "status",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "parentExecution",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "parentExecution",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "result",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "result",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "workflowName",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "workflowName",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "WorkflowId",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "WorkflowId",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "url",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "required": false,
+                "displayName": "url",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "autoMapInputData",
+            "matchingColumns": [],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {},
+          "operation": "append",
+          "sheetName": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gid=0",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10wfQiHgxabjELTgaTKYN3iTInam2ipJG7ZdheRvD2lk/edit#gid=0",
+            "cachedResultName": "Sheet1"
+          },
+          "documentId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "10wfQiHgxabjELTgaTKYN3iTInam2ipJG7ZdheRvD2lk",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/10wfQiHgxabjELTgaTKYN3iTInam2ipJG7ZdheRvD2lk/edit?usp=drivesdk",
+            "cachedResultName": "redis-audit-log"
+          }
+        },
+        "typeVersion": 4.1
+      }
+    }
   }
 }

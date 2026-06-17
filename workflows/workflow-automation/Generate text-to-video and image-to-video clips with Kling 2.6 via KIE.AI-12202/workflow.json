@@ -858,7 +858,7 @@
   "_cn_meta": {
     "title_zh": "Generate text-to-video and image-to-video clips with Kling 2.6 via KIE.AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12202,
     "synced_at": "2026-06-17T14:09:44.677130",
     "foreign_services": [

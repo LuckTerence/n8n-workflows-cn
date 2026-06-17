@@ -160,15 +160,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "Und0frCQ6SNVX3VV",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "127965b3-a2c6-443b-942d-8691b5bcb25d",
@@ -273,15 +272,14 @@
           ]
         },
         "options": {},
-        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+        "notes": "原 Airtable → 飞书多维表格。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "airtableTokenApi": {
           "id": "Und0frCQ6SNVX3VV",
           "name": "Airtable Personal Access Token account"
         }
-      },
-      "typeVersion": 2.1
+      }
     },
     {
       "id": "38115307-824c-4354-917c-b18e93178f87",
@@ -748,9 +746,357 @@
   "_cn_meta": {
     "title_zh": "Handling Job Application Submissions with AI and n8n Forms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2579,
     "synced_at": "2026-06-17T14:06:25.831702",
-    "description_zh": "表单处理、求职招聘、n8n 运维"
+    "description_zh": "表单处理、求职招聘、n8n 运维",
+    "replacements": {
+      "ec54096b-5f9f-444e-87b1-db99197731f1": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Save to Airtable",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appQ6mE9KSzlvaGDT",
+            "cachedResultUrl": "https://airtable.com/appQ6mE9KSzlvaGDT",
+            "cachedResultName": "Job Applications with AI & Forms"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblUwwRXGnNzesNgr",
+            "cachedResultUrl": "https://airtable.com/appQ6mE9KSzlvaGDT/tblUwwRXGnNzesNgr",
+            "cachedResultName": "Table 1"
+          },
+          "columns": {
+            "value": {
+              "Name": "={{ $json.output.Name }}",
+              "Email": "={{ $json.output.Email }}",
+              "Address": "={{ $json.output.Address }}",
+              "Education": "={{ $json.output.Education }}",
+              "Telephone": "={{ $json.output.Telephone }}",
+              "Cover Letter": "={{ $json.output['Cover Letter'] }}",
+              "Submitted By": "={{ $('Step 1 of 2 - Upload CV').first().json.Name }}",
+              "Years of Experience": "={{ $json.output['Years of Experience'] }}",
+              "Skills & Technologies": "={{ $json.output['Skills & Technologies'] }}"
+            },
+            "schema": [
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "File",
+                "type": "array",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "File",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Cover Letter",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Cover Letter",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Address",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Telephone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Telephone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Education",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Education",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Skills & Technologies",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Skills & Technologies",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Years of Experience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Years of Experience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Created",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "Created",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last Modified",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "Last Modified",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Submitted By",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Submitted By",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": []
+          },
+          "options": {},
+          "operation": "create"
+        },
+        "typeVersion": 2.1
+      },
+      "43d46474-b9f8-4adf-89f8-d4c993641448": {
+        "type": "n8n-nodes-base.airtable",
+        "name": "Save to Airtable1",
+        "parameters": {
+          "base": {
+            "__rl": true,
+            "mode": "list",
+            "value": "appQ6mE9KSzlvaGDT",
+            "cachedResultUrl": "https://airtable.com/appQ6mE9KSzlvaGDT",
+            "cachedResultName": "Job Applications with AI & Forms"
+          },
+          "table": {
+            "__rl": true,
+            "mode": "list",
+            "value": "tblUwwRXGnNzesNgr",
+            "cachedResultUrl": "https://airtable.com/appQ6mE9KSzlvaGDT/tblUwwRXGnNzesNgr",
+            "cachedResultName": "Table 1"
+          },
+          "columns": {
+            "value": {
+              "Name": "={{ $json.Name }}",
+              "Email": "={{ $json.Email }}",
+              "Address": "={{ $json.Address }}",
+              "Education": "={{ $json.Education }}",
+              "Telephone": "={{ $json.Telephone }}",
+              "Cover Letter": "={{ $json.output['Cover Letter'] }}",
+              "Years of Experience": "={{ $json['Years of Experience'] }}",
+              "Skills & Technologies": "={{ $json['Skills & Technologies'] }}"
+            },
+            "schema": [
+              {
+                "id": "Name",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Name",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "File",
+                "type": "array",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "File",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Cover Letter",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Cover Letter",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Address",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Address",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Email",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Email",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Telephone",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Telephone",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Education",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Education",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Skills & Technologies",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Skills & Technologies",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Years of Experience",
+                "type": "string",
+                "display": true,
+                "removed": false,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Years of Experience",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Created",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "Created",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Last Modified",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": true,
+                "required": false,
+                "displayName": "Last Modified",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "Submitted By",
+                "type": "string",
+                "display": true,
+                "removed": true,
+                "readOnly": false,
+                "required": false,
+                "displayName": "Submitted By",
+                "defaultMatch": false,
+                "canBeUsedToMatch": true
+              }
+            ],
+            "mappingMode": "defineBelow",
+            "matchingColumns": [
+              "Email",
+              "Name"
+            ]
+          },
+          "options": {},
+          "operation": "update"
+        },
+        "typeVersion": 2.1
+      }
+    }
   }
 }

@@ -236,11 +236,12 @@
           "parameters": [
             {
               "name": "body",
-              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"消息内容\"}]}}"
             }
           ]
         },
-        "options": {}
+        "options": {},
+        "notes": "原 Slack → 飞书机器人 Webhook。切换: scripts/toggle_region.py"
       },
       "credentials": {
         "slackApi": {
@@ -248,7 +249,6 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -426,12 +426,32 @@
   "_cn_meta": {
     "title_zh": "Ask a human for help when the AI doesn't know the answer",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2095,
     "synced_at": "2026-06-17T14:06:42.112529",
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流",
+    "replacements": {
+      "b9c552ce-4c58-48dd-b168-5e277de89954": {
+        "type": "n8n-nodes-base.slack",
+        "name": "Message Slack for help",
+        "parameters": {
+          "select": "channel",
+          "channelId": {
+            "__rl": true,
+            "mode": "name",
+            "value": "#general"
+          },
+          "otherOptions": {},
+          "msg_type": "text",
+          "content": {
+            "text": "={{ \"A user had a question the bot couldn't answer. Here's their message: \" + $('When Executed by Another Workflow').first().json.chatInput }}"
+          }
+        },
+        "typeVersion": 2.3
+      }
+    }
   }
 }
