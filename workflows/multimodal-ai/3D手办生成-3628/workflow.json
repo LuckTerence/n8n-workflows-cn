@@ -356,7 +356,7 @@
     "title_zh": "3D手办生成",
     "description_zh": "Midjourney+GPT-4o生成3D模型多视角图",
     "category": "multimodal-ai",
-    "tier": "A-adapted",
+    "tier": "B",
     "source_id": 3628,
     "synced_at": "2026-06-17T11:37:09.542189",
     "upgraded_at": "2026-06-17",
