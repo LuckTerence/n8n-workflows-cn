@@ -1233,7 +1233,7 @@
   "_cn_meta": {
     "title_zh": "Route and analyze customer feedback with Qwen3-VL, Tally, PostgreSQL",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13314,
     "synced_at": "2026-06-17T14:13:38.025921",
     "description_zh": "PostgreSQL、SQL 查询"

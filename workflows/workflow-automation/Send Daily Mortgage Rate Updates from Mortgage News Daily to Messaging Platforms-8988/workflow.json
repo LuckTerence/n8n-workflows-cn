@@ -237,7 +237,7 @@
   "_cn_meta": {
     "title_zh": "Send Daily Mortgage Rate Updates from Mortgage News Daily to Messaging Platforms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8988,
     "synced_at": "2026-06-17T14:11:18.672633",
     "foreign_services": [

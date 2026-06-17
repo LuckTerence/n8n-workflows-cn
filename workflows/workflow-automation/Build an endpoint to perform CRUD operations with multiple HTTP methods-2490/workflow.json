@@ -705,7 +705,7 @@
   "_cn_meta": {
     "title_zh": "Build an endpoint to perform CRUD operations with multiple HTTP methods",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2490,
     "synced_at": "2026-06-17T14:07:29.238879",
     "description_zh": "表单处理"
