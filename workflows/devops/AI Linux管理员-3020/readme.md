@@ -1,23 +1,23 @@
-# AI Linux管理员
+# AI Linux 管理员
 
 https://n8nworkflows.xyz/workflows/3020
 
-## 节点清单
+通过 Webhook 接收管理指令，AI Agent 连接 SSH 在目标服务器上执行运维操作。
+
+## 节点
 
 | 节点 | 类型 |
 |------|------|
-| OpenAI Chat Model | OpenAI Chat Model |
-| When chat message received | Chat 触发器 |
-| Basic SSH commands | HTTP 工具 |
-| Execute SSH | 工作流工具 |
-| AI SysAdmin | AI Agent |
+| Webhook Trigger | Webhook 触发器 |
+| AI Agent | AI Agent |
+| SSH | SSH 连接 |
+| Code | 数据处理 |
+| Webhook Response | 响应输出 |
 
 ## 触发方式
-- When chat message received 触发
+
+HTTP Webhook 触发
 
 ## 统计
-- 节点总数：5
-- 触发节点：1
-- 处理节点：3
-- 输出节点：1
-- 分类：devops
+
+- 节点数：5 · 分类：devops
