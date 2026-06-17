@@ -9,7 +9,7 @@
 
 ---
 
-> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 985 个开箱即用**
+> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1479 个开箱即用**
 
 [🔍 在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [📋 完整索引](INDEX.md) · [🎯 精选合集](CURATED.md) · [⚡ 快速开始](#快速试试)
 
@@ -21,18 +21,28 @@
 
 **适合谁：用 n8n 做自动化，但不想折腾海外账号和支付的开发者。**
 
-## 快速试试
+## 5 分钟上手
 
+**第 1 步** — 一行命令启动 n8n：
 ```bash
-# 一行启动 n8n
 docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
-# 打开 http://localhost:5678 → Import from File → 导入任意 workflow.json → 填 API Key 即用
 ```
+
+**第 2 步** — 打开 `http://localhost:5678`，点 **Import from File**，导入任意 `workflow.json`
+
+**第 3 步** — 填 API Key（DeepSeek / 千问 / 飞书），点 **Execute Workflow**
+
+> 每个工作流的 readme 都标了难度标签（⭐ / ⭐⭐ / ⭐⭐⭐）和节点数，新手从 ⭐ 入手。
 
 **推荐从这几个开始：**
 
-| 工作流 | 说明 | 难度 | 入口 |
-|--------|------|:--:|------|
+| 工作流 | 说明 | 难度 | 节点 | 入口 |
+|--------|------|:--:|:--:|------|
+| AI Agent 聊天 | 基础 AI 对话，配 DeepSeek Key 直接跑 | ⭐ | 5 | [📂](workflows/ai-agent/AI%20Agent聊天-1954/) |
+| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | 12 | [📂](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
+| Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | 8 | [📂](workflows/workflow-automation/Gmail智能分类归档-3686/) |
+| AI 股票基本面分析 | 多维度股票基本面分析 | ⭐⭐ | 10 | [📂](workflows/finance-analysis/AI股票基本面分析-2183/) |
+| 定时启停 n8n 工作流 | 用 n8n 管理 n8n 本身 | ⭐ | 5 | [📂](workflows/devops/定时启停n8n工作流-3229/) |
 | AI Agent 聊天 | 基础 AI 对话，5 个节点，配 DeepSeek Key 直接跑 | ⭐ | [📂 打开](workflows/ai-agent/AI%20Agent聊天-1954/) |
 | AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | [📂 打开](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
 | Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | [📂 打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
@@ -181,8 +191,8 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 }
 ```
 
-- **Tier A**（985 个）— 外服节点已替换，配 API Key 就能跑
-- **Tier B**（495 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
+- **Tier A**（1479 个）— 外服节点已替换，配 API Key 就能跑
+- **Tier B**（1 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
 
 > 注意：Tier 标准基于代码审查，标注为 A 不代表在所有 n8n 版本中都能 100% 跑通。欢迎实测后提 issue 或 PR 帮忙完善。
 

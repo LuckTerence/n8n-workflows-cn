@@ -158,6 +158,23 @@ def generate_data():
                 except Exception:
                     pass
 
+            # Calculate difficulty
+            node_count = 0
+            difficulty = "⭐ 入门"
+            wf_json = os.path.join(wf_path, "workflow.json")
+            if os.path.exists(wf_json):
+                try:
+                    with open(wf_json, "r", encoding="utf-8") as f:
+                        nodes_data = json.load(f).get("nodes", [])
+                    skip = {'n8n-nodes-base.stickyNote','n8n-nodes-base.manualTrigger','n8n-nodes-base.scheduleTrigger','n8n-nodes-base.webhook','n8n-nodes-base.formTrigger','n8n-nodes-base.telegramTrigger','n8n-nodes-base.chatTrigger','@n8n/n8n-nodes-langchain.chatTrigger'}
+                    real = [n for n in nodes_data if n.get('type','') not in skip]
+                    node_count = len(real)
+                    if node_count <= 5: difficulty = "⭐ 入门"
+                    elif node_count <= 15: difficulty = "⭐⭐ 进阶"
+                    else: difficulty = "⭐⭐⭐ 高级"
+                except Exception:
+                    pass
+
             workflows.append({
                 "name": wf_dir,
                 "category": cat,
@@ -167,6 +184,8 @@ def generate_data():
                 "tags": tags,
                 "tier": tier,
                 "desc": desc,
+                "difficulty": difficulty,
+                "nodeCount": node_count,
                 "path": f"https://github.com/LuckTerence/n8n-workflows-cn/tree/main/workflows/{cat}/{wf_dir}/",
                 "readme": f"https://github.com/LuckTerence/n8n-workflows-cn/blob/main/workflows/{cat}/{wf_dir}/readme.md",
             })
@@ -383,7 +402,9 @@ function render(items) {{
         <div class="card">
             <div class="card-title">
                 <a href="${{w.path}}" target="_blank">${{w.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</a>
-                <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:6px;">Tier ${{w.tier||'B'}}</span>
+                <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:4px;">Tier ${{w.tier||'B'}}</span>
+                <span style="font-size:11px;margin-left:4px;color:var(--muted);">${{w.difficulty||''}}</span>
+                <span style="font-size:10px;color:var(--muted);margin-left:2px;">(${{w.nodeCount||0}}节)</span>
             </div>
             ${{w.desc ? `<div class="card-desc">${{w.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</div>` : ''}}
             <div class="card-meta">

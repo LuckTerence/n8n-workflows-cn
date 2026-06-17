@@ -313,7 +313,7 @@
   "_cn_meta": {
     "title_zh": "Bulk JSON File Downloader from Google Sheet to Local Folders",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6366,
     "synced_at": "2026-06-17T14:07:31.869625",
     "foreign_services": [

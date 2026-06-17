@@ -965,7 +965,7 @@
     "title_zh": "AI邮件附件分析",
     "description_zh": "分析PDF/图片附件保存到Drive+Telegram",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3169,
     "synced_at": "2026-06-17T11:37:04.650552",
     "upgraded_at": "2026-06-17",

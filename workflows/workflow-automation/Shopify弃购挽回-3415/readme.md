@@ -3,7 +3,8 @@
 
 Gmail+Sheets+Twilio自动挽回弃购
 
-> 分类：工作流自动化 | 适配等级：B（需替换Twilio/Google Sheets/Gmail)（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 分类：工作流自动化 | 适配等级：A（需替换Twilio/Google Sheets/Gmail)（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 节点数：17 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3415
 
 ---

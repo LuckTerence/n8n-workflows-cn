@@ -421,7 +421,7 @@
   "_cn_meta": {
     "title_zh": "Automate External Attack Surface Mapping with Shodan API and DNS Lookups",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10740,
     "synced_at": "2026-06-17T14:17:45.567721",
     "foreign_services": [

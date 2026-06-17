@@ -3,7 +3,8 @@
 
 分析PDF/图片附件保存到Drive+Telegram
 
-> 分类：多模态 AI | 适配等级：B（需替换Google Sheets/Google Drive)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
+> 分类：多模态 AI | 适配等级：A（需替换Google Sheets/Google Drive)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
+> 节点数：25 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3169
 
 ---

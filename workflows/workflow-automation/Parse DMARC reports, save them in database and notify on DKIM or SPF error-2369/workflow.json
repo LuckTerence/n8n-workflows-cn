@@ -725,7 +725,7 @@
   "_cn_meta": {
     "title_zh": "Parse DMARC reports, save them in database and notify on DKIM or SPF error",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2369,
     "synced_at": "2026-06-17T14:13:27.180222",
     "foreign_services": [

@@ -278,7 +278,7 @@
   "_cn_meta": {
     "title_zh": "Send Personalized Transactional Emails from KlickTipp via SMTP",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8508,
     "synced_at": "2026-06-17T14:11:21.496736",
     "foreign_services": [

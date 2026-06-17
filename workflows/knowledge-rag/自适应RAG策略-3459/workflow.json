@@ -1243,7 +1243,7 @@
     "title_zh": "自适应RAG策略",
     "description_zh": "查询分类+Qdrant",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3459,
     "synced_at": "2026-06-17T11:21:15.195687",
     "upgraded_at": "2026-06-17"

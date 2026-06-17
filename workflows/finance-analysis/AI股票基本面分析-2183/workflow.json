@@ -441,7 +441,7 @@
     "title_zh": "AI股票基本面分析",
     "description_zh": "自动分析股票基本面并生成Q&A报告",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2183,
     "synced_at": "2026-06-17T11:37:00.122741",
     "foreign_services": [

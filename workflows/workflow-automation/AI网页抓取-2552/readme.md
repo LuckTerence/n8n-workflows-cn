@@ -3,7 +3,8 @@
 
 Jina+Google Sheets+OpenAI自动抓取网页数据
 
-> 分类：工作流自动化 | 适配等级：B（需替换Google Sheets)（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 分类：工作流自动化 | 适配等级：A（需替换Google Sheets)（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 节点数：5 | 难度：⭐ 入门
 > 原始来源：https://n8nworkflows.xyz/workflows/2552
 
 ---

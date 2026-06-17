@@ -3,7 +3,8 @@
 
 （待补充中文描述）
 
-> 分类：工作流自动化 | 适配等级：B（需替换Google Docs/Google Drive/Gmail/Supabase/Notion/Google Sheets/Pinecone)（基本改完，配置 API Key 应该就能跑）
+> 分类：工作流自动化 | 适配等级：A（需替换Google Docs/Google Drive/Gmail/Supabase/Notion/Google Sheets/Pinecone)（基本改完，配置 API Key 应该就能跑）
+> 节点数：92 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3891
 
 ---

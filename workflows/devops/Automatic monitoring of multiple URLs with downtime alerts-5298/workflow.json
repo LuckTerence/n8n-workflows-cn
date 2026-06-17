@@ -468,7 +468,7 @@
   "_cn_meta": {
     "title_zh": "Automatic monitoring of multiple URLs with downtime alerts",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5298,
     "synced_at": "2026-06-17T14:17:57.702225",
     "foreign_services": [

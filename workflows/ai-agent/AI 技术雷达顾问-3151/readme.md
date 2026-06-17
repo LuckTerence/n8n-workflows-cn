@@ -3,7 +3,8 @@
 
 SQL DB + RAG + 路由 Agent 构建技术雷达
 
-> 分类：AI Agent | 适配等级：B（需替换Google Docs/Google Drive/Gmail/Pinecone/Google Sheets)（基本改完，配置 API Key 应该就能跑）
+> 分类：AI Agent | 适配等级：A（需替换Google Docs/Google Drive/Gmail/Pinecone/Google Sheets)（基本改完，配置 API Key 应该就能跑）
+> 节点数：36 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3151
 
 ---

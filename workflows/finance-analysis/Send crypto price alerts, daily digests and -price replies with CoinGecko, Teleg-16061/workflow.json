@@ -1354,7 +1354,7 @@
   "_cn_meta": {
     "title_zh": "Send crypto price alerts, daily digests and -price replies with CoinGecko, Telegram and Sheets",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 16061,
     "synced_at": "2026-06-17T14:21:41.638891",
     "foreign_services": [

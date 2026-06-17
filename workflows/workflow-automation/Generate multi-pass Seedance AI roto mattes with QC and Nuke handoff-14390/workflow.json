@@ -599,7 +599,7 @@
   "_cn_meta": {
     "title_zh": "Generate multi-pass Seedance AI roto mattes with QC and Nuke handoff",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14390,
     "synced_at": "2026-06-17T14:09:42.233092",
     "foreign_services": [

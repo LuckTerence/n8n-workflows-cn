@@ -678,7 +678,7 @@
   "_cn_meta": {
     "title_zh": "Fetch and enrich Apollo leads and sync verified contacts to MeldFlow-GHL",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 15684,
     "synced_at": "2026-06-17T14:20:31.735354",
     "foreign_services": [

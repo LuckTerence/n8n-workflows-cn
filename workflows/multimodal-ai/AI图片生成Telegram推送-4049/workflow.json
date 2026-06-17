@@ -237,7 +237,7 @@
     "title_zh": "AI图片生成Telegram推送",
     "description_zh": "自动生成AI图片推送到Telegram",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4049,
     "synced_at": "2026-06-17T11:37:10.846025",
     "foreign_services": [

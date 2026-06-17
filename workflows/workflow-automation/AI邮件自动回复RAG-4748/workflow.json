@@ -688,7 +688,7 @@
     "title_zh": "AI邮件自动回复RAG",
     "description_zh": "RAG增强的邮件自动回复系统",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4748,
     "synced_at": "2026-06-17T11:36:59.420983",
     "upgraded_at": "2026-06-17",

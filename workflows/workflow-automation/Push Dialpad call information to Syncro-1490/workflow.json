@@ -714,7 +714,7 @@
   "_cn_meta": {
     "title_zh": "Push Dialpad call information to Syncro",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 1490,
     "synced_at": "2026-06-17T14:20:45.592721",
     "foreign_services": [

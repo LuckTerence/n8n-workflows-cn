@@ -336,7 +336,7 @@
   "_cn_meta": {
     "title_zh": "SSL Certificate Expiry Notifier (No Paid APIs)",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4643,
     "synced_at": "2026-06-17T14:11:11.119309",
     "foreign_services": [

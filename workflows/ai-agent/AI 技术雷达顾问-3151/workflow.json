@@ -1422,7 +1422,7 @@
     "title_zh": "AI 技术雷达顾问",
     "description_zh": "SQL DB + RAG + 路由 Agent 构建技术雷达",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "tags": [
       "ai-agent",
       "rag"
