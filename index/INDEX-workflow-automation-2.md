@@ -1,0 +1,707 @@
+# Workflow Automation — 工作流索引
+
+> 业务流程自动化、邮件处理、数据采集、社交媒体、CRM 集成，共 1110 个工作流模板。
+
+[← 返回总索引](../INDEX.md)
+
+---
+
+
+---
+
+
+<details>
+<summary><b>日历 & 日程</b>（13 个）</summary>
+
+- [Activate and deactivate workflows on schedule using native n8n API-3229](../workflows/workflow-automation/Activate and deactivate workflows on schedule using native n8n API-3229/) — API 接口、工作流管理、n8n 运维
+- [Automatically Add Travel Time Blockers to Calendar using Google Directions API-6700](../workflows/workflow-automation/Automatically Add Travel Time Blockers to Calendar using Google Directions API-6700/) — API 接口
+- [Extract and self-correct meeting action items with OpenRouter and webhooks-15995](../workflows/workflow-automation/Extract and self-correct meeting action items with OpenRouter and webhooks-15995/) — Webhook 集成
+- [Generate AI Meeting Summaries and Tasks from Fathom Recordings to Dart-10569](../workflows/workflow-automation/Generate AI Meeting Summaries and Tasks from Fathom Recordings to Dart-10569/) — 自动化工作流
+- [Generate Filtered Calendar Views in Baserow with External Calendar Integration-8485](../workflows/workflow-automation/Generate Filtered Calendar Views in Baserow with External Calendar Integration-8485/) — 自动化工作流
+- [Host your own Uptime Monitoring with Scheduled Triggers-2327](../workflows/workflow-automation/Host your own Uptime Monitoring with Scheduled Triggers-2327/) — 系统监控
+- [Meeting Management Agent-7904](../workflows/workflow-automation/Meeting Management Agent-7904/) — AI 智能体
+- [Monitor scheduled workflow health in n8n with automatic trigger checks-13290](../workflows/workflow-automation/Monitor scheduled workflow health in n8n with automatic trigger checks-13290/) — 系统监控、工作流管理、n8n 运维
+- [Qualifying Appointment Requests with AI & n8n Forms-2580](../workflows/workflow-automation/Qualifying Appointment Requests with AI & n8n Forms-2580/) — 表单处理、n8n 运维
+- [Scheduled FTP-SFTP to MinIO Backup with Preserved Folder Structure-7377](../workflows/workflow-automation/Scheduled FTP-SFTP to MinIO Backup with Preserved Folder Structure-7377/) — 自动备份
+- [Scrape Hotel Listings with Prices from Booking.com using Brightdata & OpenRouter-8836](../workflows/workflow-automation/Scrape Hotel Listings with Prices from Booking.com using Brightdata & OpenRouter-8836/) — 数据采集
+- [Smart Travel Package Finder- Search Flights & Hotels with Skyscanner-Booking.com-10354](../workflows/workflow-automation/Smart Travel Package Finder- Search Flights & Hotels with Skyscanner-Booking.com-10354/) — 智能搜索
+- [Smart irrigation scheduler with weather forecast and soil analysis-11939](../workflows/workflow-automation/Smart irrigation scheduler with weather forecast and soil analysis-11939/) — 天气信息
+
+</details>
+
+<details>
+<summary><b>社交媒体 & 内容</b>（68 个）</summary>
+
+- [AI SEO Readability Audit- Check Website Friendliness for LLMs-4151](../workflows/workflow-automation/AI SEO Readability Audit- Check Website Friendliness for LLMs-4151/) — SEO 优化
+- [Analyze up to 100 URLs for on-page SEO and export results to CSV-15756](../workflows/workflow-automation/Analyze up to 100 URLs for on-page SEO and export results to CSV-15756/) — SEO 优化
+- [Auto-Summarize Blog Posts to Social Media with Gemma and Postiz-9316](../workflows/workflow-automation/Auto-Summarize Blog Posts to Social Media with Gemma and Postiz-9316/) — 博客内容、社交平台
+- [Automate ASMR Video Creation and Distribution with FalAI and Social Media Integr-5553](../workflows/workflow-automation/Automate ASMR Video Creation and Distribution with FalAI and Social Media Integr-5553/) — 视频生成、社交平台、流程自动化
+- [Automate Monthly CrUX Report Transfer from BigQuery to NocoDB with Data Cleanup-9368](../workflows/workflow-automation/Automate Monthly CrUX Report Transfer from BigQuery to NocoDB with Data Cleanup-9368/) — 流程自动化
+- [Automate RSS Content with AI- Summarize, Notify & Archive-4503](../workflows/workflow-automation/Automate RSS Content with AI- Summarize, Notify & Archive-4503/) — 消息通知、流程自动化
+- [Automate RSS News to Multi-Platform Social Media Publishing via PostPulse-8800](../workflows/workflow-automation/Automate RSS News to Multi-Platform Social Media Publishing via PostPulse-8800/) — 表单处理、社交平台、新闻聚合
+- [Automate Rank Math SEO Field Updates for Posts and Products-2836](../workflows/workflow-automation/Automate Rank Math SEO Field Updates for Posts and Products-2836/) — SEO 优化、流程自动化
+- [Automate Video Content Posting to Multiple Social Platforms with Postiz-6653](../workflows/workflow-automation/Automate Video Content Posting to Multiple Social Platforms with Postiz-6653/) — 视频生成、表单处理、社交平台
+- [Automate follower resource distribution on BlueSky with keyword-triggered DMs-12159](../workflows/workflow-automation/Automate follower resource distribution on BlueSky with keyword-triggered DMs-12159/) — 流程自动化
+- [Automate social media content planning with Llama 3.3 AI, trending topics & Goog-11880](../workflows/workflow-automation/Automate social media content planning with Llama 3.3 AI, trending topics & Goog-11880/) — 社交平台、流程自动化
+- [Automated Blog Content Tracking with RSS Feeds and Time-Based Filtering-9596](../workflows/workflow-automation/Automated Blog Content Tracking with RSS Feeds and Time-Based Filtering-9596/) — 博客内容、流程自动化
+- [Automated Forex Portfolio Manager with AI, MT5 & News Sentiment Analysis-14862](../workflows/workflow-automation/Automated Forex Portfolio Manager with AI, MT5 & News Sentiment Analysis-14862/) — 外汇交易、新闻聚合、流程自动化
+- [Automated Replies to X Threads with Airtop Browser Automation-4054](../workflows/workflow-automation/Automated Replies to X Threads with Airtop Browser Automation-4054/) — HR 人事、流程自动化
+- [Automated SEO Keyword & SERP Analysis with DataForSEO for High-Converting Conten-4277](../workflows/workflow-automation/Automated SEO Keyword & SERP Analysis with DataForSEO for High-Converting Conten-4277/) — SEO 优化、流程自动化
+- [Automated SEO indexing- sitemap to GSC & indexing API-11979](../workflows/workflow-automation/Automated SEO indexing- sitemap to GSC & indexing API-11979/) — API 接口、SEO 优化、流程自动化
+- [Automatically Send a Direct Message (DM) to New Followers on Bluesky using Baser-2827](../workflows/workflow-automation/Automatically Send a Direct Message (DM) to New Followers on Bluesky using Baser-2827/) — 自动化工作流
+- [Convert DOCX (from URL) to PDF using ConvertAPI-2297](../workflows/workflow-automation/Convert DOCX (from URL) to PDF using ConvertAPI-2297/) — API 接口、PDF 文档
+- [Convert PPTX to PDF using ConvertAPI-2305](../workflows/workflow-automation/Convert PPTX to PDF using ConvertAPI-2305/) — API 接口、PDF 文档
+- [Create & Post Social Media Carousels Across 5 Platforms with AI & Blotato-8559](../workflows/workflow-automation/Create & Post Social Media Carousels Across 5 Platforms with AI & Blotato-8559/) — 表单处理、社交平台
+- [Create AI News Videos with HeyGen Avatars and Auto-Post to Social Media-3538](../workflows/workflow-automation/Create AI News Videos with HeyGen Avatars and Auto-Post to Social Media-3538/) — 视频生成、社交平台、新闻聚合
+- [Create AI Viral Videos using NanoBanana 2 PRO & VEO3.1 and Publish via Blotato-11204](../workflows/workflow-automation/Create AI Viral Videos using NanoBanana 2 PRO & VEO3.1 and Publish via Blotato-11204/) — 视频生成
+- [Create Branded Social Media Images with Bannerbear (Sync-Async modes)-9537](../workflows/workflow-automation/Create Branded Social Media Images with Bannerbear (Sync-Async modes)-9537/) — 图片生成、社交平台
+- [Create Multi-Platform Social Media Content with Sonnet 4.5, GoToHuman Approval &-9402](../workflows/workflow-automation/Create Multi-Platform Social Media Content with Sonnet 4.5, GoToHuman Approval &-9402/) — 表单处理、社交平台
+- [Create Threads on Bluesky-2798](../workflows/workflow-automation/Create Threads on Bluesky-2798/) — HR 人事
+- [Create an image procedurally using Bannerbear-544](../workflows/workflow-automation/Create an image procedurally using Bannerbear-544/) — 图片生成
+- [Create and publish AI social posts to multiple platforms using Blotato-13471](../workflows/workflow-automation/Create and publish AI social posts to multiple platforms using Blotato-13471/) — 表单处理、社交平台
+- [Extend and Merge UGC Viral Videos Using Kling 2.1, Then Publish on Social Media-11710](../workflows/workflow-automation/Extend and Merge UGC Viral Videos Using Kling 2.1, Then Publish on Social Media-11710/) — 视频生成、社交平台
+- [Extract And Decode Google News RSS URLs to Clean Article Links-3150](../workflows/workflow-automation/Extract And Decode Google News RSS URLs to Clean Article Links-3150/) — 新闻聚合
+- [Extract Website URLs from Sitemap.XML for SEO Analysis-4671](../workflows/workflow-automation/Extract Website URLs from Sitemap.XML for SEO Analysis-4671/) — SEO 优化
+- [Extract and Convert PDF Documents to Markdown with LlamaIndex Cloud API-7164](../workflows/workflow-automation/Extract and Convert PDF Documents to Markdown with LlamaIndex Cloud API-7164/) — API 接口、PDF 文档
+- [Extract and Structure X Post Comments with Airtop Browser Automation-4208](../workflows/workflow-automation/Extract and Structure X Post Comments with Airtop Browser Automation-4208/) — 自动化工作流
+- [Extract high-intent SEO keywords with Decodo from web pages with AI + SERP data-11491](../workflows/workflow-automation/Extract high-intent SEO keywords with Decodo from web pages with AI + SERP data-11491/) — SEO 优化
+- [Find low-competition keyword opportunities with DataForSEO-11216](../workflows/workflow-automation/Find low-competition keyword opportunities with DataForSEO-11216/) — SEO 优化
+- [Find relevant X tweets based on your profile and suggest responses-4851](../workflows/workflow-automation/Find relevant X tweets based on your profile and suggest responses-4851/) — 自动化工作流
+- [Generate & Auto-post Tech News AI Avatar Videos to Social Media with Heygen and -8308](../workflows/workflow-automation/Generate & Auto-post Tech News AI Avatar Videos to Social Media with Heygen and -8308/) — 视频生成、社交平台、新闻聚合
+- [Generate & Publish AI News Avatar Videos with HeyGen and Blotato-8050](../workflows/workflow-automation/Generate & Publish AI News Avatar Videos with HeyGen and Blotato-8050/) — 视频生成、新闻聚合
+- [Generate & Publish SEO Blog Posts to Blogger using OpenRouter AI & Mediastack Ne-6015](../workflows/workflow-automation/Generate & Publish SEO Blog Posts to Blogger using OpenRouter AI & Mediastack Ne-6015/) — SEO 优化、博客内容
+- [Generate AI viral videos with NanoBanana & VEO3, shared on socials via Blotato-8270](../workflows/workflow-automation/Generate AI viral videos with NanoBanana & VEO3, shared on socials via Blotato-8270/) — 视频生成、社交平台
+- [Generate News Videos from RSS Feeds with HeyGen Avatar-6229](../workflows/workflow-automation/Generate News Videos from RSS Feeds with HeyGen Avatar-6229/) — 视频生成、新闻聚合
+- [Generate SEO Keywords with AI- Topic to Keyword List in Seconds-3544](../workflows/workflow-automation/Generate SEO Keywords with AI- Topic to Keyword List in Seconds-3544/) — SEO 优化
+- [Generate SEO Seed Keywords Using AI-2473](../workflows/workflow-automation/Generate SEO Seed Keywords Using AI-2473/) — SEO 优化
+- [Generate Secure Social Media Connection Links for Clients with Upload-Post-8596](../workflows/workflow-automation/Generate Secure Social Media Connection Links for Clients with Upload-Post-8596/) — 社交平台
+- [Generate Social Media Campaign Images with Mistral AI & Pollinations.ai-8770](../workflows/workflow-automation/Generate Social Media Campaign Images with Mistral AI & Pollinations.ai-8770/) — 图片生成、社交平台
+- [Generate Videos from Chat with Google Vertex AI (Veo3)-7954](../workflows/workflow-automation/Generate Videos from Chat with Google Vertex AI (Veo3)-7954/) — AI 对话、视频生成
+- [Generate multi-format social visuals with Abyssale and publish via Blotato-13357](../workflows/workflow-automation/Generate multi-format social visuals with Abyssale and publish via Blotato-13357/) — 表单处理、社交平台
+- [Generate styled PDF or DOCX business reports from Markdown with Autype-13777](../workflows/workflow-automation/Generate styled PDF or DOCX business reports from Markdown with Autype-13777/) — PDF 文档
+- [Get Daily Exercise Plan with Flex Message via LINE-2988](../workflows/workflow-automation/Get Daily Exercise Plan with Flex Message via LINE-2988/) — 自动化工作流
+- [Get only new RSS with photo-1309](../workflows/workflow-automation/Get only new RSS with photo-1309/) — 自动化工作流
+- [Google Form, AI, SEO, GEO Optimization, Human Approval-8768](../workflows/workflow-automation/Google Form, AI, SEO, GEO Optimization, Human Approval-8768/) — 表单处理、SEO 优化
+- [High-Level Service Page SEO Blueprint Report Generator-3583](../workflows/workflow-automation/High-Level Service Page SEO Blueprint Report Generator-3583/) — SEO 优化
+- [Index your website using IndexNow and your XML sitemap-13775](../workflows/workflow-automation/Index your website using IndexNow and your XML sitemap-13775/) — 自动化工作流
+- [List social media activity of a company before a call-2124](../workflows/workflow-automation/List social media activity of a company before a call-2124/) — 社交平台
+- [Post new RSS feed items as BlueSky posts-2571](../workflows/workflow-automation/Post new RSS feed items as BlueSky posts-2571/) — 自动化工作流
+- [Post on X using Airtop and automate content pipelines-3482](../workflows/workflow-automation/Post on X using Airtop and automate content pipelines-3482/) — 流程自动化
+- [Post text and images to X using a simple form trigger-15899](../workflows/workflow-automation/Post text and images to X using a simple form trigger-15899/) — 图片生成、表单处理
+- [Proxmox System Monitor - VM Status, Host Resources & Temperature Alerts via Tele-9733](../workflows/workflow-automation/Proxmox System Monitor - VM Status, Host Resources & Temperature Alerts via Tele-9733/) — 系统监控、告警通知
+- [Publish a social media post with Swonkie-14024](../workflows/workflow-automation/Publish a social media post with Swonkie-14024/) — 社交平台
+- [RSS Feed News Processing and Distribution Workflow-2785](../workflows/workflow-automation/RSS Feed News Processing and Distribution Workflow-2785/) — 新闻聚合、工作流管理
+- [RSS to Social- Automated Content Generation with Llama 3 & GetLate Publishing-9147](../workflows/workflow-automation/RSS to Social- Automated Content Generation with Llama 3 & GetLate Publishing-9147/) — 社交平台、流程自动化
+- [Read RSS feed from two different sources-687](../workflows/workflow-automation/Read RSS feed from two different sources-687/) — 自动化工作流
+- [Real-time X Post Monitoring & Auto-Categorization with Airtop-4206](../workflows/workflow-automation/Real-time X Post Monitoring & Auto-Categorization with Airtop-4206/) — 系统监控
+- [Research SEO keywords from a seed term with Keupera and n8n data tables-15921](../workflows/workflow-automation/Research SEO keywords from a seed term with Keupera and n8n data tables-15921/) — SEO 优化、n8n 运维、智能搜索
+- [Run automated SEO audits with Screaming Frog CLI, PageSpeed, PDF and Excel fixes-15252](../workflows/workflow-automation/Run automated SEO audits with Screaming Frog CLI, PageSpeed, PDF and Excel fixes-15252/) — SEO 优化、PDF 文档、流程自动化
+- [SEO On-site Audit-5106](../workflows/workflow-automation/SEO On-site Audit-5106/) — SEO 优化
+- [Send a welcome private message to your new BlueSky followers-2570](../workflows/workflow-automation/Send a welcome private message to your new BlueSky followers-2570/) — 自动化工作流
+- [Simple Bluesky multi-image post using native Bluesky API-2562](../workflows/workflow-automation/Simple Bluesky multi-image post using native Bluesky API-2562/) — API 接口、图片生成
+- [Strategic Social Media Goal Tracker Automation-4469](../workflows/workflow-automation/Strategic Social Media Goal Tracker Automation-4469/) — 社交平台
+
+</details>
+
+<details>
+<summary><b>数据采集 & 爬虫</b>（54 个）</summary>
+
+- [AI Data Extraction with Dynamic Prompts and Baserow-2780](../workflows/workflow-automation/AI Data Extraction with Dynamic Prompts and Baserow-2780/) — 自动化工作流
+- [AI Job Crawler with Suitability Scoring-15412](../workflows/workflow-automation/AI Job Crawler with Suitability Scoring-15412/) — 网页爬取、求职招聘
+- [Aggregate commercial property listings with ScrapeGraphAI, Baserow and Teams-12233](../workflows/workflow-automation/Aggregate commercial property listings with ScrapeGraphAI, Baserow and Teams-12233/) — 数据采集
+- [Automate Data Extraction with Zyte AI (Products, Jobs, Articles & More)-11637](../workflows/workflow-automation/Automate Data Extraction with Zyte AI (Products, Jobs, Articles & More)-11637/) — 求职招聘、流程自动化
+- [Automate Screenshot Upload to Postimages.org with Airtop Browser Automation-4521](../workflows/workflow-automation/Automate Screenshot Upload to Postimages.org with Airtop Browser Automation-4521/) — 图片生成、流程自动化
+- [Automated Video Download from Sample.cat using Airtop Browser Automation-4522](../workflows/workflow-automation/Automated Video Download from Sample.cat using Airtop Browser Automation-4522/) — 视频生成、流程自动化
+- [Automated Web Browsing & Extraction with Airtop and AI-Prompted Queries-6710](../workflows/workflow-automation/Automated Web Browsing & Extraction with Airtop and AI-Prompted Queries-6710/) — 流程自动化
+- [Automated error monitoring and reporting system using data tables-12724](../workflows/workflow-automation/Automated error monitoring and reporting system using data tables-12724/) — 系统监控、流程自动化
+- [Automatic Job Listings Extraction and Publishing Template-6518](../workflows/workflow-automation/Automatic Job Listings Extraction and Publishing Template-6518/) — 求职招聘
+- [Classify documents with easybits Extractor via web form-14314](../workflows/workflow-automation/Classify documents with easybits Extractor via web form-14314/) — 表单处理
+- [Cold Outreach Automation- Scrape Local Leads with Dumpling AI & Call via Vapi-4031](../workflows/workflow-automation/Cold Outreach Automation- Scrape Local Leads with Dumpling AI & Call via Vapi-4031/) — API 接口、数据采集、线索管理
+- [Collect Star Rating Feedback with Self-Contained HTML Forms and Data Tables-9787](../workflows/workflow-automation/Collect Star Rating Feedback with Self-Contained HTML Forms and Data Tables-9787/) — 表单处理
+- [Conference Networking Intelligence from Eventbrite with ScrapeGraphAI-6568](../workflows/workflow-automation/Conference Networking Intelligence from Eventbrite with ScrapeGraphAI-6568/) — 数据采集
+- [Convert HTML to PDF & Extract Text from PDFs with CustomJS API-3871](../workflows/workflow-automation/Convert HTML to PDF & Extract Text from PDFs with CustomJS API-3871/) — API 接口、PDF 文档
+- [Copyright Infringement Detector with ScrapeGraphAI and Automated Legal Response-6642](../workflows/workflow-automation/Copyright Infringement Detector with ScrapeGraphAI and Automated Legal Response-6642/) — 数据采集、流程自动化
+- [Create Structured Company Profiles with Mistral AI, Firecrawl & Competitor Analy-10097](../workflows/workflow-automation/Create Structured Company Profiles with Mistral AI, Firecrawl & Competitor Analy-10097/) — 网页爬取
+- [Discovering and Analyzing Conferences for Networking with ScrapeGraphAI-6728](../workflows/workflow-automation/Discovering and Analyzing Conferences for Networking with ScrapeGraphAI-6728/) — 数据采集
+- [Document Parsing & Data Extraction with Mistral OCR, AI Processing, and Multi-Ch-4933](../workflows/workflow-automation/Document Parsing & Data Extraction with Mistral OCR, AI Processing, and Multi-Ch-4933/) — 自动化工作流
+- [Domain-Specific Web Content Crawler with Depth Control & Text Extraction-8852](../workflows/workflow-automation/Domain-Specific Web Content Crawler with Depth Control & Text Extraction-8852/) — 网页爬取
+- [Extract & Process Q&A from URLs with Airtop, OpenRouter AI & Safety Guardrails-10849](../workflows/workflow-automation/Extract & Process Q&A from URLs with Airtop, OpenRouter AI & Safety Guardrails-10849/) — 自动化工作流
+- [Extract & Validate Legal Citations from Documents with PDF Vector AI-8504](../workflows/workflow-automation/Extract & Validate Legal Citations from Documents with PDF Vector AI-8504/) — 向量存储、PDF 文档
+- [Extract Clinical Data from Medical Documents with PDF Vector & HIPAA Compliance-8502](../workflows/workflow-automation/Extract Clinical Data from Medical Documents with PDF Vector & HIPAA Compliance-8502/) — 向量存储、PDF 文档
+- [Extract Company Data and Calculate ICP Score with Airtop-4260](../workflows/workflow-automation/Extract Company Data and Calculate ICP Score with Airtop-4260/) — 自动化工作流
+- [Extract Construction Blueprint Data with VLM Run and Microsoft Office Suite-8304](../workflows/workflow-automation/Extract Construction Blueprint Data with VLM Run and Microsoft Office Suite-8304/) — 自动化工作流
+- [Extract Links and URLs from PDF documents using PDF.co-7031](../workflows/workflow-automation/Extract Links and URLs from PDF documents using PDF.co-7031/) — PDF 文档
+- [Extract Named Entities from Web Pages with Google Natural Language API-3950](../workflows/workflow-automation/Extract Named Entities from Web Pages with Google Natural Language API-3950/) — API 接口
+- [Extract Organizations & Summarize Documents with Foxit and Diffbot-6286](../workflows/workflow-automation/Extract Organizations & Summarize Documents with Foxit and Diffbot-6286/) — 自动化工作流
+- [Extract Person Data and Calculate ICP Score with Airtop-4256](../workflows/workflow-automation/Extract Person Data and Calculate ICP Score with Airtop-4256/) — 自动化工作流
+- [Extract Product Info from Website Screenshots with Dumpling AI + Sheets-5169](../workflows/workflow-automation/Extract Product Info from Website Screenshots with Dumpling AI + Sheets-5169/) — 表格处理
+- [Extract Specific Pages from PDFs with CustomJS API-3872](../workflows/workflow-automation/Extract Specific Pages from PDFs with CustomJS API-3872/) — API 接口、PDF 文档
+- [Extract Text from Receipts with OCR.space Table Recognition-8506](../workflows/workflow-automation/Extract Text from Receipts with OCR.space Table Recognition-8506/) — 自动化工作流
+- [Extract URLs from XML sitemaps to CSV via chat and HTTP request-15443](../workflows/workflow-automation/Extract URLs from XML sitemaps to CSV via chat and HTTP request-15443/) — AI 对话
+- [Extract University Term Dates from Excel using CloudFlare Markdown Conversion-3505](../workflows/workflow-automation/Extract University Term Dates from Excel using CloudFlare Markdown Conversion-3505/) — 自动化工作流
+- [Extract and Organize Receipt Data for Expense Tracking with VLM Run and Google-5051](../workflows/workflow-automation/Extract and Organize Receipt Data for Expense Tracking with VLM Run and Google-5051/) — 自动化工作流
+- [Extract and Parse Revit Model Data to Structured Excel Format-7654](../workflows/workflow-automation/Extract and Parse Revit Model Data to Structured Excel Format-7654/) — 表单处理
+- [Extract license plate number from image uploaded via an n8n form-2911](../workflows/workflow-automation/Extract license plate number from image uploaded via an n8n form-2911/) — 图片生成、表单处理、n8n 运维
+- [Extract sitemap URLs in bulk via chat and export them to a CSV download link-15444](../workflows/workflow-automation/Extract sitemap URLs in bulk via chat and export them to a CSV download link-15444/) — AI 对话
+- [Generate AI-Ready llms.txt Files from Screaming Frog Website Crawls-3219](../workflows/workflow-automation/Generate AI-Ready llms.txt Files from Screaming Frog Website Crawls-3219/) — 网页爬取
+- [Google Autocomplete Keyword Scraper-3836](../workflows/workflow-automation/Google Autocomplete Keyword Scraper-3836/) — 数据采集
+- [Hacker News Job Listing Scraper and Parser-2924](../workflows/workflow-automation/Hacker News Job Listing Scraper and Parser-2924/) — 数据采集、求职招聘、新闻聚合
+- [Ingest and enrich Q&A pairs then store in Data Table (1-2)-13353](../workflows/workflow-automation/Ingest and enrich Q&A pairs then store in Data Table [1-2]-13353/) — 自动化工作流
+- [JSON Data Utility- Extract Key-Value Pairs by Index-6615](../workflows/workflow-automation/JSON Data Utility- Extract Key-Value Pairs by Index-6615/) — 自动化工作流
+- [Look up contact details and addresses from names using ScraperCity-13929](../workflows/workflow-automation/Look up contact details and addresses from names using ScraperCity-13929/) — 数据采集
+- [Monitor Commercial Real Estate Opportunities from LoopNet with ScrapeGraphAI & T-6625](../workflows/workflow-automation/Monitor Commercial Real Estate Opportunities from LoopNet with ScrapeGraphAI & T-6625/) — 系统监控、数据采集
+- [Monitor Supplier Financial Health with ScrapeGraphAI & Multi-Channel Risk Alerts-7129](../workflows/workflow-automation/Monitor Supplier Financial Health with ScrapeGraphAI & Multi-Channel Risk Alerts-7129/) — 系统监控、告警通知、数据采集
+- [Orchestrate Web Crawls with Scrapyd and Automated Data Enrichment-8552](../workflows/workflow-automation/Orchestrate Web Crawls with Scrapyd and Automated Data Enrichment-8552/) — 网页爬取、流程自动化
+- [Parse and Extract Data from Documents-Images with Mistral OCR-3102](../workflows/workflow-automation/Parse and Extract Data from Documents-Images with Mistral OCR-3102/) — 图片生成
+- [Score Company ICP (Ideal Customer Profile) with Airtop-4262](../workflows/workflow-automation/Score Company ICP (Ideal Customer Profile) with Airtop-4262/) — 自动化工作流
+- [Score Person ICP (Ideal Customer Profile) with Airtop-4258](../workflows/workflow-automation/Score Person ICP (Ideal Customer Profile) with Airtop-4258/) — 自动化工作流
+- [Scrape Latest 20 TechCrunch Articles-2832](../workflows/workflow-automation/Scrape Latest 20 TechCrunch Articles-2832/) — 数据采集
+- [Scrape any web page into structured JSON data with ScrapeNinja and AI-2812](../workflows/workflow-automation/Scrape any web page into structured JSON data with ScrapeNinja and AI-2812/) — 数据采集
+- [Scrape recent news about a company before a call-2110](../workflows/workflow-automation/Scrape recent news about a company before a call-2110/) — 数据采集、新闻聚合
+- [Self-Hosted JWT Authentication System with Data Tables and Token Management-9660](../workflows/workflow-automation/Self-Hosted JWT Authentication System with Data Tables and Token Management-9660/) — Token 管理、认证集成
+- [Store variables between workflow runs using data tables as a key-value store-13442](../workflows/workflow-automation/Store variables between workflow runs using data tables as a key-value store-13442/) — 工作流管理
+
+</details>
+
+<details>
+<summary><b>文件 & 存储</b>（70 个）</summary>
+
+- [Academic Research Search Across Five Databases with PDF Vector & Multiple Export-7360](../workflows/workflow-automation/Academic Research Search Across Five Databases with PDF Vector & Multiple Export-7360/) — 向量存储、PDF 文档、数据库操作
+- [Auto-like Tweets from Selected Profiles with Phantombuster & SharePoint AI Rotat-8630](../workflows/workflow-automation/Auto-like Tweets from Selected Profiles with Phantombuster & SharePoint AI Rotat-8630/) — 自动化工作流
+- [Automate Actions After PDF Generation with PDFMonkey-3060](../workflows/workflow-automation/Automate Actions After PDF Generation with PDFMonkey-3060/) — PDF 文档、流程自动化
+- [Automate PDF Purchase Orders to Sales Orders in Adobe Commerce with AI-8388](../workflows/workflow-automation/Automate PDF Purchase Orders to Sales Orders in Adobe Commerce with AI-8388/) — PDF 文档、流程自动化
+- [Automate S3 video transcoding, thumbnail generation & CDN distribution-11853](../workflows/workflow-automation/Automate S3 video transcoding, thumbnail generation & CDN distribution-11853/) — 视频生成、流程自动化
+- [Automated Digital Certificate Creator & Validator with PDF Generation-11097](../workflows/workflow-automation/Automated Digital Certificate Creator & Validator with PDF Generation-11097/) — PDF 文档、流程自动化
+- [Automated PDF Form Filling for W-9 and More with PDF.co-7863](../workflows/workflow-automation/Automated PDF Form Filling for W-9 and More with PDF.co-7863/) — 表单处理、PDF 文档、流程自动化
+- [Automated Upload & Send a Large File with TransferNow-8742](../workflows/workflow-automation/Automated Upload & Send a Large File with TransferNow-8742/) — 流程自动化
+- [Automatically Upload Scanned Documents to Nextcloud via ScanservJS-3861](../workflows/workflow-automation/Automatically Upload Scanned Documents to Nextcloud via ScanservJS-3861/) — 自动化工作流
+- [Batch Convert CAD-BIM Files to XLSX-DAE with Validation and Reporting-7650](../workflows/workflow-automation/Batch Convert CAD-BIM Files to XLSX-DAE with Validation and Reporting-7650/) — 自动化工作流
+- [Build Academic Citation Networks with PDF Vector API for Gephi Visualization-7356](../workflows/workflow-automation/Build Academic Citation Networks with PDF Vector API for Gephi Visualization-7356/) — API 接口、向量存储、PDF 文档
+- [Build a PDF Search System with Mistral OCR and Weaviate DB-7339](../workflows/workflow-automation/Build a PDF Search System with Mistral OCR and Weaviate DB-7339/) — PDF 文档、智能搜索
+- [Bulk JSON File Downloader from Google Sheet to Local Folders-6366](../workflows/workflow-automation/Bulk JSON File Downloader from Google Sheet to Local Folders-6366/) — 表格处理
+- [Bulk enrich CSV contact lists with Lusha-13345](../workflows/workflow-automation/Bulk enrich CSV contact lists with Lusha-13345/) — 自动化工作流
+- [Bulk generate payment reminder PDFs from NocoDB with Autype-13786](../workflows/workflow-automation/Bulk generate payment reminder PDFs from NocoDB with Autype-13786/) — 支付集成、PDF 文档
+- [CV Resume PDF Parsing with Multimodal Vision AI-2416](../workflows/workflow-automation/CV Resume PDF Parsing with Multimodal Vision AI-2416/) — PDF 文档
+- [Chat with a Google Sheet using AI-2085](../workflows/workflow-automation/Chat with a Google Sheet using AI-2085/) — AI 对话、表格处理
+- [Convert CAD-BIM Files to Excel and 3D Models with DataDrivenConstruction-5867](../workflows/workflow-automation/Convert CAD-BIM Files to Excel and 3D Models with DataDrivenConstruction-5867/) — 自动化工作流
+- [Convert HTML & PDF Files to PNG Images with CustomJS PDF Toolkit-3870](../workflows/workflow-automation/Convert HTML & PDF Files to PNG Images with CustomJS PDF Toolkit-3870/) — 图片生成、PDF 文档
+- [Convert HTML to PDF and Compress Files with CustomJS API-3869](../workflows/workflow-automation/Convert HTML to PDF and Compress Files with CustomJS API-3869/) — API 接口、PDF 文档
+- [Convert HTML to PDF and Return via Webhook using CustomJS API-3331](../workflows/workflow-automation/Convert HTML to PDF and Return via Webhook using CustomJS API-3331/) — API 接口、Webhook 集成、PDF 文档
+- [Convert JSON Objects to Base64 Strings with File Processing-6008](../workflows/workflow-automation/Convert JSON Objects to Base64 Strings with File Processing-6008/) — 自动化工作流
+- [Convert Multiple Binary Files to Base64 JSON Arrays with No Custom Code-9481](../workflows/workflow-automation/Convert Multiple Binary Files to Base64 JSON Arrays with No Custom Code-9481/) — 自动化工作流
+- [Convert Multiple Files to Base64 with JavaScript Code-6885](../workflows/workflow-automation/Convert Multiple Files to Base64 with JavaScript Code-6885/) — 自动化工作流
+- [Convert PDF Articles to Audio Podcasts with Google TTS & Cloudflare R2-9521](../workflows/workflow-automation/Convert PDF Articles to Audio Podcasts with Google TTS & Cloudflare R2-9521/) — 音频处理、PDF 文档、文本转语音
+- [Convert PDF to PNG with PDF.co API (Multi-Page Support)-3847](../workflows/workflow-automation/Convert PDF to PNG with PDF.co API (Multi-Page Support)-3847/) — API 接口、PDF 文档
+- [Convert PDF, DOC, and Images to Markdown using Datalab.to API-7887](../workflows/workflow-automation/Convert PDF, DOC, and Images to Markdown using Datalab.to API-7887/) — API 接口、图片生成、PDF 文档
+- [Convert Parquet, Feather, ORC & Avro Files with ParquetReader-3365](../workflows/workflow-automation/Convert Parquet, Feather, ORC & Avro Files with ParquetReader-3365/) — 自动化工作流
+- [Create PDF from HTML with Gotenberg-5149](../workflows/workflow-automation/Create PDF from HTML with Gotenberg-5149/) — PDF 文档
+- [Create a REST API for PDF Digital Signatures with Webhooks-3119](../workflows/workflow-automation/Create a REST API for PDF Digital Signatures with Webhooks-3119/) — API 接口、Webhook 集成、PDF 文档
+- [Create a master CV Google Sheet from uploaded CVs with easybits-15528](../workflows/workflow-automation/Create a master CV Google Sheet from uploaded CVs with easybits-15528/) — 表格处理
+- [Download a file and upload it to an FTP Server-663](../workflows/workflow-automation/Download a file and upload it to an FTP Server-663/) — 服务器管理
+- [Download and Merge Multiple PDFs from URLs with the CustomJS API-3281](../workflows/workflow-automation/Download and Merge Multiple PDFs from URLs with the CustomJS API-3281/) — API 接口、PDF 文档
+- [Dynamic Media Library with On-demand Downloads for Radarr-Sonarr and Plex-6980](../workflows/workflow-automation/Dynamic Media Library with On-demand Downloads for Radarr-Sonarr and Plex-6980/) — 自动化工作流
+- [Enrich Google Sheet contacts with Dropcontact-1304](../workflows/workflow-automation/Enrich Google Sheet contacts with Dropcontact-1304/) — 表格处理
+- [Export Google PageSpeed Insights data to CSV for multiple URLs-15548](../workflows/workflow-automation/Export Google PageSpeed Insights data to CSV for multiple URLs-15548/) — 自动化工作流
+- [Export Icon Metadata from Iconfinder to HTML & CSV with Previews-10404](../workflows/workflow-automation/Export Icon Metadata from Iconfinder to HTML & CSV with Previews-10404/) — 自动化工作流
+- [Export n8n Cloud execution data to CSV-2295](../workflows/workflow-automation/Export n8n Cloud execution data to CSV-2295/) — n8n 运维
+- [Fetch Keyword From Google Sheet and Classify Them Using AI-2945](../workflows/workflow-automation/Fetch Keyword From Google Sheet and Classify Them Using AI-2945/) — 表格处理
+- [Fetch Live ETF Metrics from JustETF to Excel with One-Click Updates-2519](../workflows/workflow-automation/Fetch Live ETF Metrics from JustETF to Excel with One-Click Updates-2519/) — 自动化工作流
+- [Fetch Odoo Customer Data and Export to JSON or Excel-10599](../workflows/workflow-automation/Fetch Odoo Customer Data and Export to JSON or Excel-10599/) — 自动化工作流
+- [Generate B2B Ideal Customer Profiles & Find Lookalike Companies with Implisense -11709](../workflows/workflow-automation/Generate B2B Ideal Customer Profiles & Find Lookalike Companies with Implisense -11709/) — 自动化工作流
+- [Generate Daily Bitcoin On-Chain Metrics PDF Report with NASDAQ Data-7836](../workflows/workflow-automation/Generate Daily Bitcoin On-Chain Metrics PDF Report with NASDAQ Data-7836/) — PDF 文档
+- [Generate Research Ideas from PDFs using InfraNodus GraphRAG Content Gap Analysis-5746](../workflows/workflow-automation/Generate Research Ideas from PDFs using InfraNodus GraphRAG Content Gap Analysis-5746/) — RAG 检索增强、HR 人事、PDF 文档
+- [Generate Research Questions from PDFs using InfraNodus Content Gap Analysis-5744](../workflows/workflow-automation/Generate Research Questions from PDFs using InfraNodus Content Gap Analysis-5744/) — PDF 文档、智能搜索
+- [Generate and Send Personalized Quotations PDF-14185](../workflows/workflow-automation/Generate and Send Personalized Quotations PDF-14185/) — PDF 文档
+- [Generate concert ticket PDFs with QR codes using PDF Generator API-14216](../workflows/workflow-automation/Generate concert ticket PDFs with QR codes using PDF Generator API-14216/) — API 接口、工单管理、PDF 文档
+- [Generate multiple profile picture avatars with free public APIs (no keys)-12125](../workflows/workflow-automation/Generate multiple profile picture avatars with free public APIs (no keys)-12125/) — API 接口
+- [Generate n8n Workflow Inventory Reports with JSON & Excel Export Options-10852](../workflows/workflow-automation/Generate n8n Workflow Inventory Reports with JSON & Excel Export Options-10852/) — 工作流管理、n8n 运维
+- [Google Spreadsheet to HTML - Variant with Spreadsheet File-1756](../workflows/workflow-automation/Google Spreadsheet to HTML - Variant with Spreadsheet File-1756/) — 表格处理
+- [Import CSV files from Filesystem into Postgres-2926](../workflows/workflow-automation/Import CSV files from Filesystem into Postgres-2926/) — 自动化工作流
+- [Import CSV into MySQL-1839](../workflows/workflow-automation/Import CSV into MySQL-1839/) — MySQL 管理、SQL 查询
+- [Manage files in S3-674](../workflows/workflow-automation/Manage files in S3-674/) — 自动化工作流
+- [Manipulate PDF with Adobe developer API-2424](../workflows/workflow-automation/Manipulate PDF with Adobe developer API-2424/) — API 接口、PDF 文档
+- [Merge Multiple Excel Files into a Single Multi-Sheet File with Summary Page-8373](../workflows/workflow-automation/Merge Multiple Excel Files into a Single Multi-Sheet File with Summary Page-8373/) — 表格处理、AI 摘要
+- [Merge Multiple PDF Files with CustomJS API-3873](../workflows/workflow-automation/Merge Multiple PDF Files with CustomJS API-3873/) — API 接口、PDF 文档
+- [Merge PDF files using ConvertAPI-2298](../workflows/workflow-automation/Merge PDF files using ConvertAPI-2298/) — API 接口、PDF 文档
+- [Monitor S3 Bucket Changes with Automated Integrity Auditing using Mistral AI-7547](../workflows/workflow-automation/Monitor S3 Bucket Changes with Automated Integrity Auditing using Mistral AI-7547/) — 系统监控、流程自动化
+- [PDF to Markdown Converter with LlamaCloud Parser-11811](../workflows/workflow-automation/PDF to Markdown Converter with LlamaCloud Parser-11811/) — PDF 文档
+- [Parse and Score Resumes with PDF Vector AI-8496](../workflows/workflow-automation/Parse and Score Resumes with PDF Vector AI-8496/) — 向量存储、PDF 文档
+- [Process Multiple Files with Forms- A Tutorial on Binary Data and Loops-5419](../workflows/workflow-automation/Process Multiple Files with Forms- A Tutorial on Binary Data and Loops-5419/) — 表单处理
+- [Read multiple files from disk-578](../workflows/workflow-automation/Read multiple files from disk-578/) — 自动化工作流
+- [Research Kuaishou creator profiles from keywords with JustOneAPI-16012](../workflows/workflow-automation/Research Kuaishou creator profiles from keywords with JustOneAPI-16012/) — API 接口、智能搜索
+- [Respond with file download to incoming HTTP request-1920](../workflows/workflow-automation/Respond with file download to incoming HTTP request-1920/) — 自动化工作流
+- [Reusable Subworkflow Zip Multiple Files Dynamically (Compress)-2690](../workflows/workflow-automation/Reusable Subworkflow Zip Multiple Files Dynamically (Compress)-2690/) — 工作流管理
+- [Screen Applicants With AI, notify HR and save them in a Google Sheet-2632](../workflows/workflow-automation/Screen Applicants With AI, notify HR and save them in a Google Sheet-2632/) — 消息通知、HR 人事、表格处理
+- [Search Douyin users by keyword and fetch profile details with JustOneAPI-15880](../workflows/workflow-automation/Search Douyin users by keyword and fetch profile details with JustOneAPI-15880/) — API 接口、智能搜索
+- [Search Xiaohongshu users by keyword and get profile details with JustOneAPI-15739](../workflows/workflow-automation/Search Xiaohongshu users by keyword and get profile details with JustOneAPI-15739/) — API 接口、智能搜索
+- [Search and download torrents using transmission-daemon-1381](../workflows/workflow-automation/Search and download torrents using transmission-daemon-1381/) — 智能搜索
+- [Sign PDF Documents with X.509 Certificates using PAdES Standards-10606](../workflows/workflow-automation/Sign PDF Documents with X.509 Certificates using PAdES Standards-10606/) — PDF 文档
+
+</details>
+
+<details>
+<summary><b>表单 & 问卷</b>（27 个）</summary>
+
+- [Automated Video Translation & Distribution with DubLab to Multiple Platforms-4751](../workflows/workflow-automation/Automated Video Translation & Distribution with DubLab to Multiple Platforms-4751/) — 视频生成、表单处理、流程自动化
+- [Build an endpoint to perform CRUD operations with multiple HTTP methods-2490](../workflows/workflow-automation/Build an endpoint to perform CRUD operations with multiple HTTP methods-2490/) — 表单处理
+- [Bytedance Seedream 3- Text-to-Image Transformation Template-6786](../workflows/workflow-automation/Bytedance Seedream 3- Text-to-Image Transformation Template-6786/) — 图片生成、表单处理
+- [College Football Analytics Platform with Comprehensive Data API Access-5493](../workflows/workflow-automation/College Football Analytics Platform with Comprehensive Data API Access-5493/) — API 接口、表单处理
+- [Conversing with Data- Transforming Text into SQL Queries and Visual Curves-3497](../workflows/workflow-automation/Conversing with Data- Transforming Text into SQL Queries and Visual Curves-3497/) — 表单处理、SQL 查询
+- [Convert Markdown Content to Contentful Rich Text with AI Formatting-4078](../workflows/workflow-automation/Convert Markdown Content to Contentful Rich Text with AI Formatting-4078/) — 表单处理
+- [Create Digital Checks with OnlineCheckWriter using Forms-8006](../workflows/workflow-automation/Create Digital Checks with OnlineCheckWriter using Forms-8006/) — 表单处理
+- [Discover & Enrich Decision-Makers with Apollo and Human Verification-3830](../workflows/workflow-automation/Discover & Enrich Decision-Makers with Apollo and Human Verification-3830/) — 自动化工作流
+- [Enrich creator handles with cross-platform social data from influencers.club-13227](../workflows/workflow-automation/Enrich creator handles with cross-platform social data from influencers.club-13227/) — 表单处理、社交平台
+- [Filter spam from webhook form submissions using honeypot and timing checks-14028](../workflows/workflow-automation/Filter spam from webhook form submissions using honeypot and timing checks-14028/) — Webhook 集成、表单处理
+- [Form with Dynamic Dropdown Field-2712](../workflows/workflow-automation/Form with Dynamic Dropdown Field-2712/) — 表单处理
+- [Generate Customizable Random Strings with Interactive Forms-4710](../workflows/workflow-automation/Generate Customizable Random Strings with Interactive Forms-4710/) — 表单处理
+- [Handling Job Application Submissions with AI and n8n Forms-2579](../workflows/workflow-automation/Handling Job Application Submissions with AI and n8n Forms-2579/) — 表单处理、求职招聘、n8n 运维
+- [Import workflows and map their credentials using a Multi-Form-2506](../workflows/workflow-automation/Import workflows and map their credentials using a Multi-Form-2506/) — 表单处理、工作流管理
+- [MCP Employee Performance & Productivity Insights Engine with Automated Manager-11855](../workflows/workflow-automation/MCP Employee Performance & Productivity Insights Engine with Automated Manager-11855/) — MCP 协议集成、表单处理、流程自动化
+- [Manage SMC Screener analyses with n8n forms and HTTP API-16153](../workflows/workflow-automation/Manage SMC Screener analyses with n8n forms and HTTP API-16153/) — API 接口、表单处理、n8n 运维
+- [Master Data Transformation with the Complete Set Node Guide-6292](../workflows/workflow-automation/Master Data Transformation with the Complete Set Node Guide-6292/) — 表单处理
+- [Monitor website performance with Google PageSpeed, Sheets and multi-channel aler-13009](../workflows/workflow-automation/Monitor website performance with Google PageSpeed, Sheets and multi-channel aler-13009/) — 系统监控、表单处理、表格处理
+- [N8N Contact Form Workflow-4337](../workflows/workflow-automation/N8N Contact Form Workflow-4337/) — 表单处理、工作流管理、n8n 运维
+- [Perform Multi-type DNS Lookups with Google's Free Public DNS Service-10200](../workflows/workflow-automation/Perform Multi-type DNS Lookups with Google's Free Public DNS Service-10200/) — 表单处理
+- [Perform a domain search  with Icypeas (single)-2012](../workflows/workflow-automation/Perform a domain search  with Icypeas (single)-2012/) — 表单处理、智能搜索
+- [Perform unit-aware calculations and conversions with CalcsLive-13502](../workflows/workflow-automation/Perform unit-aware calculations and conversions with CalcsLive-13502/) — 表单处理
+- [Receive the weather information of any city-807](../workflows/workflow-automation/Receive the weather information of any city-807/) — 表单处理、天气信息
+- [SQL to XML export with XSL template formatting-1947](../workflows/workflow-automation/SQL to XML export with XSL template formatting-1947/) — 表单处理、SQL 查询
+- [ScriptSentry- Detect Sensitive Information in JavaScript-5497](../workflows/workflow-automation/ScriptSentry- Detect Sensitive Information in JavaScript-5497/) — 表单处理
+- [Send Daily Mortgage Rate Updates from Mortgage News Daily to Messaging Platforms-8988](../workflows/workflow-automation/Send Daily Mortgage Rate Updates from Mortgage News Daily to Messaging Platforms-8988/) — 表单处理、新闻聚合
+- [Standardize US Phone Numbers with Multiple Format Options and Validation-3812](../workflows/workflow-automation/Standardize US Phone Numbers with Multiple Format Options and Validation-3812/) — 表单处理
+
+</details>
+
+<details>
+<summary><b>API 集成 & 自动化</b>（65 个）</summary>
+
+- [Analyze Meta Ads Creatives with Google Vision & Video Intelligence APIs-7303](../workflows/workflow-automation/Analyze Meta Ads Creatives with Google Vision & Video Intelligence APIs-7303/) — API 接口、视频生成
+- [Automate Sports Betting Data with the Odds API-2843](../workflows/workflow-automation/Automate Sports Betting Data with the Odds API-2843/) — API 接口、流程自动化
+- [Automate n8n Updates with Version Checking and Portainer Webhook-7061](../workflows/workflow-automation/Automate n8n Updates with Version Checking and Portainer Webhook-7061/) — Webhook 集成、流程自动化、n8n 运维
+- [Automated Background Removal from Images with APImage AI-6512](../workflows/workflow-automation/Automated Background Removal from Images with APImage AI-6512/) — API 接口、图片生成、流程自动化
+- [Automatically Replace and Relight the Background of Any Image using APImage-8619](../workflows/workflow-automation/Automatically Replace and Relight the Background of Any Image using APImage-8619/) — API 接口、图片生成
+- [BIN Code Lookup with apilayer API-6306](../workflows/workflow-automation/BIN Code Lookup with apilayer API-6306/) — API 接口
+- [Binance SM Indicators Webhook Tool-4747](../workflows/workflow-automation/Binance SM Indicators Webhook Tool-4747/) — Webhook 集成
+- [Binance Spot Trader - Limit & Market Orders via API-5036](../workflows/workflow-automation/Binance Spot Trader - Limit & Market Orders via API-5036/) — API 接口、市场数据
+- [Bypass Cloudflare Turnstile for Web Scraping with 2captcha-7151](../workflows/workflow-automation/Bypass Cloudflare Turnstile for Web Scraping with 2captcha-7151/) — API 接口
+- [ClickMeter Link Tracking & Analytics API with Complete Operation Support-5556](../workflows/workflow-automation/ClickMeter Link Tracking & Analytics API with Complete Operation Support-5556/) — API 接口
+- [Clone n8n Workflows between Instances using n8n API-3048](../workflows/workflow-automation/Clone n8n Workflows between Instances using n8n API-3048/) — API 接口、工作流管理、n8n 运维
+- [Collect Xiaohongshu note comments with JustOneAPI for feedback analysis-15809](../workflows/workflow-automation/Collect Xiaohongshu note comments with JustOneAPI for feedback analysis-15809/) — API 接口
+- [Collect and structure Kuaishou video comments with JustOneAPI-16043](../workflows/workflow-automation/Collect and structure Kuaishou video comments with JustOneAPI-16043/) — API 接口、视频生成
+- [Compare Your n8n Version with Latest Release using n8n API-7797](../workflows/workflow-automation/Compare Your n8n Version with Latest Release using n8n API-7797/) — API 接口、n8n 运维
+- [Content Summarizer via Webhook (ApyHub)-4603](../workflows/workflow-automation/Content Summarizer via Webhook (ApyHub)-4603/) — Webhook 集成
+- [Convert GIF to MP4 with FFmpegAPI-8321](../workflows/workflow-automation/Convert GIF to MP4 with FFmpegAPI-8321/) — API 接口
+- [Create Dynamic Workflows Programmatically via Webhooks & n8n API-4544](../workflows/workflow-automation/Create Dynamic Workflows Programmatically via Webhooks & n8n API-4544/) — API 接口、Webhook 集成、工作流管理
+- [Create Professional Image Watermarks with JSONCut API-9204](../workflows/workflow-automation/Create Professional Image Watermarks with JSONCut API-9204/) — API 接口、图片生成
+- [Create a Complete User Authentication System with PostgreSQL & Webhooks-10040](../workflows/workflow-automation/Create a Complete User Authentication System with PostgreSQL & Webhooks-10040/) — Webhook 集成、PostgreSQL、SQL 查询
+- [Create a Self-Hosted Blockchain Payment Processor with x402 and 1Shot API-7364](../workflows/workflow-automation/Create a Self-Hosted Blockchain Payment Processor with x402 and 1Shot API-7364/) — API 接口、支付集成
+- [Deduplicate Scraping AI Grants for Eligibility using AI-2619](../workflows/workflow-automation/Deduplicate Scraping AI Grants for Eligibility using AI-2619/) — API 接口
+- [Fetch Scriptures Dynamically from get Bible API-2818](../workflows/workflow-automation/Fetch Scriptures Dynamically from get Bible API-2818/) — API 接口
+- [Generate AI Stock Reports w- Fundamental, Technical, & News Analysis (Free APIs)-11772](../workflows/workflow-automation/Generate AI Stock Reports w- Fundamental, Technical, & News Analysis (Free APIs)-11772/) — API 接口、股票分析、新闻聚合
+- [Generate Product Creative Images with Google Nano-Banana Model via Defapi-8484](../workflows/workflow-automation/Generate Product Creative Images with Google Nano-Banana Model via Defapi-8484/) — API 接口、图片生成
+- [Generate product demo highlight reels using WayinVideo Find Moments API-14712](../workflows/workflow-automation/Generate product demo highlight reels using WayinVideo Find Moments API-14712/) — API 接口、视频生成
+- [Generate rotating user-agents and proxy IPs for scraping APIs-13637](../workflows/workflow-automation/Generate rotating user-agents and proxy IPs for scraping APIs-13637/) — AI 智能体、API 接口
+- [Generate stale page reports for Confluence spaces with REST API v1 and v2-12237](../workflows/workflow-automation/Generate stale page reports for Confluence spaces with REST API v1 and v2-12237/) — API 接口
+- [Get Douyin user published videos and first video details with JustOneAPI-15882](../workflows/workflow-automation/Get Douyin user published videos and first video details with JustOneAPI-15882/) — API 接口、视频生成
+- [Get Douyin video comments and replies with JustOneAPI-15885](../workflows/workflow-automation/Get Douyin video comments and replies with JustOneAPI-15885/) — API 接口、视频生成
+- [Get Real-time Stock Analysis and Rankings with Danelfin's AI Analytics API-6541](../workflows/workflow-automation/Get Real-time Stock Analysis and Rankings with Danelfin's AI Analytics API-6541/) — API 接口、股票分析
+- [Get Taobao and Tmall product reviews with JustOneAPI-15848](../workflows/workflow-automation/Get Taobao and Tmall product reviews with JustOneAPI-15848/) — API 接口
+- [Get Taobao and Tmall shop products and first product details with JustOneAPI-15867](../workflows/workflow-automation/Get Taobao and Tmall shop products and first product details with JustOneAPI-15867/) — API 接口
+- [Get Xiaohongshu keyword suggestions with JustOneAPI-15817](../workflows/workflow-automation/Get Xiaohongshu keyword suggestions with JustOneAPI-15817/) — API 接口
+- [Get Xiaohongshu note details from a keyword with JustOneAPI-15505](../workflows/workflow-automation/Get Xiaohongshu note details from a keyword with JustOneAPI-15505/) — API 接口
+- [Get Xiaohongshu user published notes with JustOneAPI-15792](../workflows/workflow-automation/Get Xiaohongshu user published notes with JustOneAPI-15792/) — API 接口
+- [Get enriched location, weather, and timezone data using free APIs-13411](../workflows/workflow-automation/Get enriched location, weather, and timezone data using free APIs-13411/) — API 接口、天气信息
+- [Home Assistant Event Triggering with AppDaemon Webhooks-6693](../workflows/workflow-automation/Home Assistant Event Triggering with AppDaemon Webhooks-6693/) — Webhook 集成
+- [IOT device control with MQTT and webhook-4211](../workflows/workflow-automation/IOT device control with MQTT and webhook-4211/) — Webhook 集成
+- [JSON String Validator via Webhook-4704](../workflows/workflow-automation/JSON String Validator via Webhook-4704/) — Webhook 集成
+- [Lookup IP Geolocation Details with IP-API.com via Webhook-4599](../workflows/workflow-automation/Lookup IP Geolocation Details with IP-API.com via Webhook-4599/) — API 接口、Webhook 集成
+- [Manage Adobe Acrobat e-signatures with webhooks-1588](../workflows/workflow-automation/Manage Adobe Acrobat e-signatures with webhooks-1588/) — Webhook 集成
+- [Manage Brevo contact lists with full CRUD and bulk membership control-13639](../workflows/workflow-automation/Manage Brevo contact lists with full CRUD and bulk membership control-13639/) — 自动化工作流
+- [Manage job records via webhook REST API with PostgreSQL-16081](../workflows/workflow-automation/Manage job records via webhook REST API with PostgreSQL-16081/) — API 接口、Webhook 集成、求职招聘
+- [Monetize Workflows with x402 Payment Protocol and 1Shot API-5389](../workflows/workflow-automation/Monetize Workflows with x402 Payment Protocol and 1Shot API-5389/) — API 接口、支付集成、工作流管理
+- [Monitor German Company Register & Financial Events with Implisense API & Notific-11749](../workflows/workflow-automation/Monitor German Company Register & Financial Events with Implisense API & Notific-11749/) — API 接口、系统监控、消息通知
+- [Monitor (PROD) workflows in real time with the n8n Public API dashboard-13665](../workflows/workflow-automation/Monitor [PROD] workflows in real time with the n8n Public API dashboard-13665/) — API 接口、系统监控、工作流管理
+- [Prevent duplicate webhook executions with AARI idempotency gate-13863](../workflows/workflow-automation/Prevent duplicate webhook executions with AARI idempotency gate-13863/) — Webhook 集成
+- [QR Code Generator via Webhook-4596](../workflows/workflow-automation/QR Code Generator via Webhook-4596/) — Webhook 集成
+- [Research Kuaishou creator videos from a keyword with JustOneAPI-16014](../workflows/workflow-automation/Research Kuaishou creator videos from a keyword with JustOneAPI-16014/) — API 接口、视频生成、智能搜索
+- [Resolve Xiaohongshu share links to final URLs with JustOneAPI-15816](../workflows/workflow-automation/Resolve Xiaohongshu share links to final URLs with JustOneAPI-15816/) — API 接口
+- [Retrieve Kuaishou video details from keywords with JustOneAPI-15971](../workflows/workflow-automation/Retrieve Kuaishou video details from keywords with JustOneAPI-15971/) — API 接口、视频生成
+- [Retrieve Xiaohongshu comment replies with JustOneAPI-15811](../workflows/workflow-automation/Retrieve Xiaohongshu comment replies with JustOneAPI-15811/) — API 接口
+- [Run Multiple Tasks in Parallel with Asynchronous Processing and Webhooks-8578](../workflows/workflow-automation/Run Multiple Tasks in Parallel with Asynchronous Processing and Webhooks-8578/) — Webhook 集成、HR 人事
+- [SSL Certificate Expiry Notifier (No Paid APIs)-4643](../workflows/workflow-automation/SSL Certificate Expiry Notifier (No Paid APIs)-4643/) — API 接口、消息通知
+- [Search Douyin videos by keyword and get the first video detail with JustOneAPI-15878](../workflows/workflow-automation/Search Douyin videos by keyword and get the first video detail with JustOneAPI-15878/) — API 接口、视频生成、智能搜索
+- [Search and Compare Flights with DeepSeek AI and Google Flights API-7322](../workflows/workflow-automation/Search and Compare Flights with DeepSeek AI and Google Flights API-7322/) — API 接口、智能搜索
+- [Secure GET Webhooks with Query Parameter Validation for Limited Authentication C-9570](../workflows/workflow-automation/Secure GET Webhooks with Query Parameter Validation for Limited Authentication C-9570/) — Webhook 集成、认证集成
+- [Send HTTP Requests to a list of URLs-2276](../workflows/workflow-automation/Send HTTP Requests to a list of URLs-2276/) — 自动化工作流
+- [Send sales data from Webhook to Mautic-467](../workflows/workflow-automation/Send sales data from Webhook to Mautic-467/) — Webhook 集成
+- [Send transactional SMS with the OVHcloud SMS API-16124](../workflows/workflow-automation/Send transactional SMS with the OVHcloud SMS API-16124/) — API 接口
+- [Serve Custom HTML Webpages with Webhooks-5173](../workflows/workflow-automation/Serve Custom HTML Webpages with Webhooks-5173/) — Webhook 集成
+- [Serve Inspirational Quotes On-Demand via Webhook using ZenQuotes API-4065](../workflows/workflow-automation/Serve Inspirational Quotes On-Demand via Webhook using ZenQuotes API-4065/) — API 接口、Webhook 集成
+- [Solve captchas via webhook with CapSolver-14894](../workflows/workflow-automation/Solve captchas via webhook with CapSolver-14894/) — Webhook 集成
+- [Store data received from Webhook in JSON-652](../workflows/workflow-automation/Store data received from Webhook in JSON-652/) — Webhook 集成
+- [Validate Seatable Webhooks with HMAC SHA256 Authentication-3439](../workflows/workflow-automation/Validate Seatable Webhooks with HMAC SHA256 Authentication-3439/) — Webhook 集成、认证集成
+
+</details>
+
+<details>
+<summary><b>通知 & 告警</b>（15 个）</summary>
+
+- [AI-Generated Weather Analysis with NWS Alerts, Radar Imagery, and Home Assistant-6188](../workflows/workflow-automation/AI-Generated Weather Analysis with NWS Alerts, Radar Imagery, and Home Assistant-6188/) — 告警通知、图片生成、天气信息
+- [Automate Daily GLPI Pending Ticket Notifications to Microsoft Teams-7018](../workflows/workflow-automation/Automate Daily GLPI Pending Ticket Notifications to Microsoft Teams-7018/) — 消息通知、工单管理、流程自动化
+- [Automated Stock Technical Analysis with xAI Grok & Multi-channel Notifications-11621](../workflows/workflow-automation/Automated Stock Technical Analysis with xAI Grok & Multi-channel Notifications-11621/) — 消息通知、股票分析、流程自动化
+- [Build a Weekly AI Trend Alerter with arXiv and Weaviate-5817](../workflows/workflow-automation/Build a Weekly AI Trend Alerter with arXiv and Weaviate-5817/) — 告警通知
+- [Daylight Saving Time Notification For Different Timezones-3276](../workflows/workflow-automation/Daylight Saving Time Notification For Different Timezones-3276/) — 消息通知
+- [Food Delivery Notifications and Easy Expense Tracking-2707](../workflows/workflow-automation/Food Delivery Notifications and Easy Expense Tracking-2707/) — 消息通知
+- [Food Menu Update Notifier-5877](../workflows/workflow-automation/Food Menu Update Notifier-5877/) — 消息通知
+- [Get notified when Meta Ads balance is low-2936](../workflows/workflow-automation/Get notified when Meta Ads balance is low-2936/) — 消息通知
+- [Monitor NASA asteroid threats with AI fact-check and multi-channel alerts-11289](../workflows/workflow-automation/Monitor NASA asteroid threats with AI fact-check and multi-channel alerts-11289/) — 系统监控、告警通知、HR 人事
+- [Multi-Channel Customer Sentiment Tracker with Real-Time Analytics and Alerting-10762](../workflows/workflow-automation/Multi-Channel Customer Sentiment Tracker with Real-Time Analytics and Alerting-10762/) — 告警通知
+- [Multi-Jurisdiction Smart Contract Compliance Monitor with Automated Alerts-6075](../workflows/workflow-automation/Multi-Jurisdiction Smart Contract Compliance Monitor with Automated Alerts-6075/) — 系统监控、告警通知、流程自动化
+- [Multiple Websites Monitoring with Notifications including Phone Calls-4833](../workflows/workflow-automation/Multiple Websites Monitoring with Notifications including Phone Calls-4833/) — 系统监控、消息通知
+- [Notify on menu orders via ntfy and Home Assistant TTS with daily BAC tracking-14487](../workflows/workflow-automation/Notify on menu orders via ntfy and Home Assistant TTS with daily BAC tracking-14487/) — 消息通知、文本转语音
+- [Parse DMARC reports, save them in database and notify on DKIM or SPF error-2369](../workflows/workflow-automation/Parse DMARC reports, save them in database and notify on DKIM or SPF error-2369/) — 消息通知、数据库操作
+- [Real-time ISS Overhead Alert with Weather Check and Multi-Channel Notifications-11470](../workflows/workflow-automation/Real-time ISS Overhead Alert with Weather Check and Multi-Channel Notifications-11470/) — 告警通知、消息通知、天气信息
+
+</details>
+
+<details>
+<summary><b>其他</b>（334 个）</summary>
+
+- [AI Crew to Automate Fundamental Stock Analysis - Q&A Workflow-2183](../workflows/workflow-automation/AI Crew to Automate Fundamental Stock Analysis - Q&A Workflow-2183/) — 股票分析、工作流管理、流程自动化
+- [AI Data Analyst Agent for Spreadsheets with NocoDB-2653](../workflows/workflow-automation/AI Data Analyst Agent for Spreadsheets with NocoDB-2653/) — AI 智能体、表格处理
+- [AI Prospect Researcher +ISCP only need Company Name and Domain-4882](../workflows/workflow-automation/AI Prospect Researcher +ISCP only need Company Name and Domain-4882/) — 智能搜索
+- [AI sticky generator for n8n templates-10800](../workflows/workflow-automation/AI sticky generator for n8n templates-10800/) — n8n 运维
+- [AI web researcher for sales-2324](../workflows/workflow-automation/AI web researcher for sales-2324/) — 智能搜索
+- [AI数字产品销售-3342](../workflows/workflow-automation/AI数字产品销售-3342/) — 自动化工作流
+- [AI文章摘要生成-2822](../workflows/workflow-automation/AI文章摘要生成-2822/) — 自动化工作流
+- [AI新闻研究团队-2778](../workflows/workflow-automation/AI新闻研究团队-2778/) — 自动化工作流
+- [AI新闻简报构建-4030](../workflows/workflow-automation/AI新闻简报构建-4030/) — 自动化工作流
+- [AI简历筛选ERPNext-2757](../workflows/workflow-automation/AI简历筛选ERPNext-2757/) — 自动化工作流
+- [AI网页抓取-2552](../workflows/workflow-automation/AI网页抓取-2552/) — 自动化工作流
+- [AI邮件处理+审批-2861](../workflows/workflow-automation/AI邮件处理+审批-2861/) — 自动化工作流
+- [AI邮件自动回复RAG-4748](../workflows/workflow-automation/AI邮件自动回复RAG-4748/) — RAG 检索增强
+- [AI销售线索ERPNext-2758](../workflows/workflow-automation/AI销售线索ERPNext-2758/) — 自动化工作流
+- [Access data from bubble application-879](../workflows/workflow-automation/Access data from bubble application-879/) — 自动化工作流
+- [Access execution data from an error workflow-2349](../workflows/workflow-automation/Access execution data from an error workflow-2349/) — 工作流管理
+- [Add TypeScript Intellisense Support to Code Nodes with JSDoc-5602](../workflows/workflow-automation/Add TypeScript Intellisense Support to Code Nodes with JSDoc-5602/) — 自动化工作流
+- [Advanced AI Demo (Presented at AI Developers #14 meetup)-2358](../workflows/workflow-automation/Advanced AI Demo (Presented at AI Developers #14 meetup)-2358/) — 自动化工作流
+- [Analyze Company Sustainability & Animal Welfare with OpenRouter AI & Multi-Sourc-6417](../workflows/workflow-automation/Analyze Company Sustainability & Animal Welfare with OpenRouter AI & Multi-Sourc-6417/) — 自动化工作流
+- [Analyze OpenObserve logs and traces with an AI MCP observability toolkit-15478](../workflows/workflow-automation/Analyze OpenObserve logs and traces with an AI MCP observability toolkit-15478/) — MCP 协议集成
+- [Analyze crypto markets with CoinGecko MCP and C1-12548](../workflows/workflow-automation/Analyze crypto markets with CoinGecko MCP and C1-12548/) — MCP 协议集成、加密货币、市场数据
+- [Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI-9605](../workflows/workflow-automation/Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI-9605/) — 自动化工作流
+- [Anomaly (images) detection tool (3-3 - anomaly)-2656](../workflows/workflow-automation/Anomaly (images) detection tool [3-3 - anomaly]-2656/) — 图片生成
+- [Anonymize Faces and License Plates in Media with BlurIt-8535](../workflows/workflow-automation/Anonymize Faces and License Plates in Media with BlurIt-8535/) — 自动化工作流
+- [AppSheet Intelligent Query Orchestrator- Query any data!-2932](../workflows/workflow-automation/AppSheet Intelligent Query Orchestrator- Query any data!-2932/) — 表格处理
+- [Ask a human for help when the AI doesn't know the answer-2095](../workflows/workflow-automation/Ask a human for help when the AI doesn't know the answer-2095/) — 自动化工作流
+- [Assign Requests Using AI and Send Reminders Based On NocoDB Kanban Board Status-3784](../workflows/workflow-automation/Assign Requests Using AI and Send Reminders Based On NocoDB Kanban Board Status-3784/) — 自动化工作流
+- [Audit Confluence space permissions and public links for compliance-12239](../workflows/workflow-automation/Audit Confluence space permissions and public links for compliance-12239/) — 自动化工作流
+- [Authenticate a user in a workflow with openid connect-1997](../workflows/workflow-automation/Authenticate a user in a workflow with openid connect-1997/) — 工作流管理、认证集成
+- [Auto Generate Descriptive Node Names with AI for Workflow Readability-10889](../workflows/workflow-automation/Auto Generate Descriptive Node Names with AI for Workflow Readability-10889/) — 工作流管理
+- [Auto Germany Apartment Search & Apply with Immobilienscout24 & Google Services-6150](../workflows/workflow-automation/Auto Germany Apartment Search & Apply with Immobilienscout24 & Google Services-6150/) — 智能搜索
+- [Auto Update n8n to Latest Version with Coolify-4360](../workflows/workflow-automation/Auto Update n8n to Latest Version with Coolify-4360/) — n8n 运维
+- [Auto-Retry Engine- Error Recovery Workflow-3144](../workflows/workflow-automation/Auto-Retry Engine- Error Recovery Workflow-3144/) — 工作流管理
+- [Auto-clip long videos into viral short clips with Vizard AI and social publishin-12054](../workflows/workflow-automation/Auto-clip long videos into viral short clips with Vizard AI and social publishin-12054/) — 视频生成、社交平台
+- [Auto-generate sticky notes and rename nodes-13868](../workflows/workflow-automation/Auto-generate sticky notes and rename nodes-13868/) — 自动化工作流
+- [Automate ABM Research to Outreach with Octave, AI, and Instantly.ai-7621](../workflows/workflow-automation/Automate ABM Research to Outreach with Octave, AI, and Instantly.ai-7621/) — 流程自动化、智能搜索
+- [Automate ASMR Glass Fruit Video Creation & Publishing with Veo, Shotstack & Post-10175](../workflows/workflow-automation/Automate ASMR Glass Fruit Video Creation & Publishing with Veo, Shotstack & Post-10175/) — 视频生成、流程自动化
+- [Automate Droplet Snapshots on DigitalOcean-2485](../workflows/workflow-automation/Automate Droplet Snapshots on DigitalOcean-2485/) — 流程自动化
+- [Automate Dutch Public Procurement Data Collection with TenderNed-10076](../workflows/workflow-automation/Automate Dutch Public Procurement Data Collection with TenderNed-10076/) — 流程自动化
+- [Automate Employee Date Tracking & Reminders for HR with JavaScript-5735](../workflows/workflow-automation/Automate Employee Date Tracking & Reminders for HR with JavaScript-5735/) — HR 人事、流程自动化
+- [Automate Face Swapping for GIFs with Fal.run AI and Google Services-4450](../workflows/workflow-automation/Automate Face Swapping for GIFs with Fal.run AI and Google Services-4450/) — 流程自动化
+- [Automate Google OAuth2 Credential Creation in n8n-2909](../workflows/workflow-automation/Automate Google OAuth2 Credential Creation in n8n-2909/) — 流程自动化、n8n 运维、认证集成
+- [Automate Job Discovery & AI Proposals across Upwork, Freelancer, Guru & PPH with-7782](../workflows/workflow-automation/Automate Job Discovery & AI Proposals across Upwork, Freelancer, Guru & PPH with-7782/) — 求职招聘、流程自动化
+- [Automate Marker.io Issues to ServiceNow Incidents with Full Technical Context-8247](../workflows/workflow-automation/Automate Marker.io Issues to ServiceNow Incidents with Full Technical Context-8247/) — 流程自动化
+- [Automate NPM Package Installation and Updates for Self-Hosted Environments-3293](../workflows/workflow-automation/Automate NPM Package Installation and Updates for Self-Hosted Environments-3293/) — 流程自动化
+- [Automate Patient Intake & Symptom Triage with AI, Cal.com and Google Services-6406](../workflows/workflow-automation/Automate Patient Intake & Symptom Triage with AI, Cal.com and Google Services-6406/) — 流程自动化
+- [Automate Personalized Assignment Reminders for Students with Canvas-11746](../workflows/workflow-automation/Automate Personalized Assignment Reminders for Students with Canvas-11746/) — 流程自动化
+- [Automate Power BI Dataset Refreshes with History Monitoring-7336](../workflows/workflow-automation/Automate Power BI Dataset Refreshes with History Monitoring-7336/) — 系统监控、流程自动化
+- [Automate Time Tracking Enforcement & Cleanup for Awork Tasks-4805](../workflows/workflow-automation/Automate Time Tracking Enforcement & Cleanup for Awork Tasks-4805/) — 流程自动化
+- [Automate URL Shortening with Bitly Using Llama3 Chat Interface-3885](../workflows/workflow-automation/Automate URL Shortening with Bitly Using Llama3 Chat Interface-3885/) — AI 对话、流程自动化
+- [Automate User Creation & Access Group Assignment in Curseduca-8201](../workflows/workflow-automation/Automate User Creation & Access Group Assignment in Curseduca-8201/) — 流程自动化
+- [Automate Video Translation from Multiple Sources with Rask AI-11496](../workflows/workflow-automation/Automate Video Translation from Multiple Sources with Rask AI-11496/) — 视频生成、流程自动化
+- [Automate demand forecasting & inventory ordering with AI, MySQL & optimal suppli-12158](../workflows/workflow-automation/Automate demand forecasting & inventory ordering with AI, MySQL & optimal suppli-12158/) — MySQL 管理、SQL 查询、流程自动化
+- [Automate n8n User Invitations from a Google Spreadsheet-3233](../workflows/workflow-automation/Automate n8n User Invitations from a Google Spreadsheet-3233/) — 表格处理、流程自动化、n8n 运维
+- [Automated Daily Customer Win-Back Campaign with AI Offers-4001](../workflows/workflow-automation/Automated Daily Customer Win-Back Campaign with AI Offers-4001/) — 流程自动化
+- [Automated Hugging Face Paper Summary Fetching & Categorization Workflow-2765](../workflows/workflow-automation/Automated Hugging Face Paper Summary Fetching & Categorization Workflow-2765/) — 工作流管理、流程自动化、AI 摘要
+- [Automated Job Hunt with Tavily-8616](../workflows/workflow-automation/Automated Job Hunt with Tavily-8616/) — 求职招聘、流程自动化
+- [Automated Nicereply Feedback Routing to MS Teams by Team and Sentiment-10113](../workflows/workflow-automation/Automated Nicereply Feedback Routing to MS Teams by Team and Sentiment-10113/) — 流程自动化
+- [Automated Press Pass Verification & Badge Creation with QR Codes & Multi-Channel-10793](../workflows/workflow-automation/Automated Press Pass Verification & Badge Creation with QR Codes & Multi-Channel-10793/) — 流程自动化
+- [Automated Product Health Monitor with Anomaly Detection & AI Root Cause Analysis-11117](../workflows/workflow-automation/Automated Product Health Monitor with Anomaly Detection & AI Root Cause Analysis-11117/) — 系统监控、流程自动化
+- [Automated Sonarr Missing Episode Finder with Quality & Language Filtering-5927](../workflows/workflow-automation/Automated Sonarr Missing Episode Finder with Quality & Language Filtering-5927/) — 流程自动化
+- [Automated Task Generation from Blueprints with Baserow & Weekend-Aware Schedulin-8602](../workflows/workflow-automation/Automated Task Generation from Blueprints with Baserow & Weekend-Aware Schedulin-8602/) — 流程自动化
+- [Automated URL Phishing & Threat Analysis with NixGuard AI-5937](../workflows/workflow-automation/Automated URL Phishing & Threat Analysis with NixGuard AI-5937/) — HR 人事、流程自动化
+- [Automated Workflow & Credential Restoration System for Self-Hosted Environments-9154](../workflows/workflow-automation/Automated Workflow & Credential Restoration System for Self-Hosted Environments-9154/) — 工作流管理、流程自动化
+- [Automated video creation using Google V3 and n8n workflow-4877](../workflows/workflow-automation/Automated video creation using Google V3 and n8n workflow-4877/) — 视频生成、工作流管理、流程自动化
+- [Automatic AI reply when mentioned in a Liveblocks comment-14299](../workflows/workflow-automation/Automatic AI reply when mentioned in a Liveblocks comment-14299/) — 自动化工作流
+- [Automatic Subscriber Creation in Beehiiv from Systeme.io Funnel Optins-5992](../workflows/workflow-automation/Automatic Subscriber Creation in Beehiiv from Systeme.io Funnel Optins-5992/) — 自动化工作流
+- [Automatically Correct Wrong Shipping Addresses in Billbee Orders-2609](../workflows/workflow-automation/Automatically Correct Wrong Shipping Addresses in Billbee Orders-2609/) — 自动化工作流
+- [Automatically Generate Burn-in Video Captions with json2video-3044](../workflows/workflow-automation/Automatically Generate Burn-in Video Captions with json2video-3044/) — 视频生成
+- [Automatically prune n8n execution history-2646](../workflows/workflow-automation/Automatically prune n8n execution history-2646/) — n8n 运维
+- [Automatically send daily Nikkei 225 closing price to LINE-10915](../workflows/workflow-automation/Automatically send daily Nikkei 225 closing price to LINE-10915/) — 自动化工作流
+- [Automatically solve reCAPTCHA v2 with CapSolver-13996](../workflows/workflow-automation/Automatically solve reCAPTCHA v2 with CapSolver-13996/) — 自动化工作流
+- [Automatically update n8n version-4335](../workflows/workflow-automation/Automatically update n8n version-4335/) — n8n 运维
+- [Automation of Creative Testing and Campaign Launching for Meta Ads-6038](../workflows/workflow-automation/Automation of Creative Testing and Campaign Launching for Meta Ads-6038/) — 自动化工作流
+- [Batch Process Data with Redis-powered Debouncing System-11045](../workflows/workflow-automation/Batch Process Data with Redis-powered Debouncing System-11045/) — 自动化工作流
+- [Beginner Manager Agent with Sub-Agent Tools-7158](../workflows/workflow-automation/Beginner Manager Agent with Sub-Agent Tools-7158/) — AI 智能体
+- [Benchmark Content Safety Guardrails with Automated Test Suite & Reports-10729](../workflows/workflow-automation/Benchmark Content Safety Guardrails with Automated Test Suite & Reports-10729/) — 流程自动化
+- [Binance SM 15min Indicators Tool-4743](../workflows/workflow-automation/Binance SM 15min Indicators Tool-4743/) — 自动化工作流
+- [Binance SM 1day Indicators Tool-4746](../workflows/workflow-automation/Binance SM 1day Indicators Tool-4746/) — 自动化工作流
+- [Binance SM 1hour Indicators Tool-4744](../workflows/workflow-automation/Binance SM 1hour Indicators Tool-4744/) — 自动化工作流
+- [Binance SM 4hour Indicators Tool-4745](../workflows/workflow-automation/Binance SM 4hour Indicators Tool-4745/) — 自动化工作流
+- [Breakdown Documents into Study Notes using Templating MistralAI and Qdrant-2339](../workflows/workflow-automation/Breakdown Documents into Study Notes using Templating MistralAI and Qdrant-2339/) — Qdrant 向量库
+- [Build & Sell AI Automations and Agents-3941](../workflows/workflow-automation/Build & Sell AI Automations and Agents-3941/) — AI 智能体
+- [Build Your Own Image Search Using AI Object Detection, CDN and ElasticSearch-2331](../workflows/workflow-automation/Build Your Own Image Search Using AI Object Detection, CDN and ElasticSearch-2331/) — 图片生成、智能搜索
+- [Build an employee training video knowledge base using the WayinVideo summaries A-14454](../workflows/workflow-automation/Build an employee training video knowledge base using the WayinVideo summaries A-14454/) — 视频生成
+- [Bulk Auto-Publish Videos to Social Networks with AI Copy and Client Approval-11638](../workflows/workflow-automation/Bulk Auto-Publish Videos to Social Networks with AI Copy and Client Approval-11638/) — 视频生成、社交平台
+- [CI Artifact Completeness Gate (Git Push, Sentry Artifact Verification, Commit)-11828](../workflows/workflow-automation/CI Artifact Completeness Gate (Git Push, Sentry Artifact Verification, Commit)-11828/) — 自动化工作流
+- [Calculate Embodied Carbon (CO2) for Revit-IFC Models using AI Classification-7653](../workflows/workflow-automation/Calculate Embodied Carbon (CO2) for Revit-IFC Models using AI Classification-7653/) — 自动化工作流
+- [Call Center Analytics with Dual-AI Verification using DeepSeek Models-5658](../workflows/workflow-automation/Call Center Analytics with Dual-AI Verification using DeepSeek Models-5658/) — 自动化工作流
+- [CallForge - 04 - AI Workflow for Gong.io Sales Calls-3034](../workflows/workflow-automation/CallForge - 04 - AI Workflow for Gong.io Sales Calls-3034/) — 工作流管理
+- [CallForge - 08 - Product AI Data Processor-3039](../workflows/workflow-automation/CallForge - 08 - Product AI Data Processor-3039/) — 自动化工作流
+- [Capture and Nurture Fraud-Proof Leads with AI Scoring, Sheets Tracking & Multi-C-8879](../workflows/workflow-automation/Capture and Nurture Fraud-Proof Leads with AI Scoring, Sheets Tracking & Multi-C-8879/) — 线索管理、表格处理
+- [Change Binary MimeType-Extension-5155](../workflows/workflow-automation/Change Binary MimeType-Extension-5155/) — 自动化工作流
+- [Chat Hub Web Search Agent with Tavily Search-13271](../workflows/workflow-automation/Chat Hub Web Search Agent with Tavily Search-13271/) — AI 对话、AI 智能体、智能搜索
+- [Chat with Postgresql Database-2859](../workflows/workflow-automation/Chat with Postgresql Database-2859/) — AI 对话、数据库操作、PostgreSQL
+- [Chat with Uncensored Dolphin Mixtral 8x22B using Novita AI-6746](../workflows/workflow-automation/Chat with Uncensored Dolphin Mixtral 8x22B using Novita AI-6746/) — AI 对话
+- [Check VPS resource usage every 15 minutes-2951](../workflows/workflow-automation/Check VPS resource usage every 15 minutes-2951/) — 自动化工作流
+- [Check dependencies before completing Awork tasks (Workaround)-4350](../workflows/workflow-automation/Check dependencies before completing Awork tasks (Workaround)-4350/) — 自动化工作流
+- [Check for preview for a link-935](../workflows/workflow-automation/Check for preview for a link-935/) — 自动化工作流
+- [Check if a Twitch Stream is Live-2684](../workflows/workflow-automation/Check if a Twitch Stream is Live-2684/) — 自动化工作流
+- [Classify support tickets by confidence and route with OpenRouter AI-13852](../workflows/workflow-automation/Classify support tickets by confidence and route with OpenRouter AI-13852/) — 工单管理
+- [Clean up stale Entra B2B guest accounts with Microsoft Graph, Teams, and SharePo-16118](../workflows/workflow-automation/Clean up stale Entra B2B guest accounts with Microsoft Graph, Teams, and SharePo-16118/) — 自动化工作流
+- [Clone NocoDB tables and data to another base-15373](../workflows/workflow-automation/Clone NocoDB tables and data to another base-15373/) — 自动化工作流
+- [Compare Lists and Identify Common Items & Differences Using Custom Keys-5033](../workflows/workflow-automation/Compare Lists and Identify Common Items & Differences Using Custom Keys-5033/) — 自动化工作流
+- [Complete Lesson Automation for Modern UK Teachers-4927](../workflows/workflow-automation/Complete Lesson Automation for Modern UK Teachers-4927/) — 自动化工作流
+- [Consolidate Data from 5 Sources for Automated Reporting with SQL, MongoDB & Goog-8890](../workflows/workflow-automation/Consolidate Data from 5 Sources for Automated Reporting with SQL, MongoDB & Goog-8890/) — SQL 查询、流程自动化
+- [Convert MP4 to GIF with FFmpeg and RenderIO-14757](../workflows/workflow-automation/Convert MP4 to GIF with FFmpeg and RenderIO-14757/) — 自动化工作流
+- [Convert POML to AI-Ready Prompts & Chat Messages with Zero Dependencies-7609](../workflows/workflow-automation/Convert POML to AI-Ready Prompts & Chat Messages with Zero Dependencies-7609/) — AI 对话
+- [Convert Revit Projects to Database with Drawings & Specifications using DDC Tool-7649](../workflows/workflow-automation/Convert Revit Projects to Database with Drawings & Specifications using DDC Tool-7649/) — 数据库操作
+- [Convert XML to JSON-160](../workflows/workflow-automation/Convert XML to JSON-160/) — 自动化工作流
+- [Convert boring images to stunning photos and videos-4275](../workflows/workflow-automation/Convert boring images to stunning photos and videos-4275/) — 图片生成、视频生成
+- [Convert n8n tags into folders and move workflows-3445](../workflows/workflow-automation/Convert n8n tags into folders and move workflows-3445/) — 工作流管理、n8n 运维
+- [Count the items returned by a node-1913](../workflows/workflow-automation/Count the items returned by a node-1913/) — 自动化工作流
+- [Create Consistent AI Characters with Google Nano Banana & Upscaling via Kie.ai-8492](../workflows/workflow-automation/Create Consistent AI Characters with Google Nano Banana & Upscaling via Kie.ai-8492/) — 自动化工作流
+- [Create Detailed Security Tickets from SentinelOne Threats with MITRE Analysis-7312](../workflows/workflow-automation/Create Detailed Security Tickets from SentinelOne Threats with MITRE Analysis-7312/) — HR 人事、工单管理
+- [Create High Quality UGC Images with Nano Banana (Cheaper & Faster)-8644](../workflows/workflow-automation/Create High Quality UGC Images with Nano Banana (Cheaper & Faster)-8644/) — 图片生成
+- [Create Human-like Activity Patterns with Randomized Workflow Scheduling & Time S-9351](../workflows/workflow-automation/Create Human-like Activity Patterns with Randomized Workflow Scheduling & Time S-9351/) — 工作流管理
+- [Create Nested Data Processing Loops Using n8n Sub-workflows-8556](../workflows/workflow-automation/Create Nested Data Processing Loops Using n8n Sub-workflows-8556/) — 工作流管理、n8n 运维
+- [Create Onfleet tasks from local Spreadsheets-1530](../workflows/workflow-automation/Create Onfleet tasks from local Spreadsheets-1530/) — 表格处理
+- [Create Smart URLs with BioURL.link's Geo, Device & Language Targeting-4667](../workflows/workflow-automation/Create Smart URLs with BioURL.link's Geo, Device & Language Targeting-4667/) — 自动化工作流
+- [Create Snapshot of Contabo VPS instances on a daily basis-2403](../workflows/workflow-automation/Create Snapshot of Contabo VPS instances on a daily basis-2403/) — 自动化工作流
+- [Create Viral Multimedia Ads with AI- NanoBanana, Seedance & Suno for Social Medi-8428](../workflows/workflow-automation/Create Viral Multimedia Ads with AI- NanoBanana, Seedance & Suno for Social Medi-8428/) — 社交平台
+- [Create a Simple Data Caching System with No External Dependencies-9369](../workflows/workflow-automation/Create a Simple Data Caching System with No External Dependencies-9369/) — 自动化工作流
+- [Create a collection and create, update, and get a bookmark in Raindrop-959](../workflows/workflow-automation/Create a collection and create, update, and get a bookmark in Raindrop-959/) — 自动化工作流
+- [Create a company in Salesmate-500](../workflows/workflow-automation/Create a company in Salesmate-500/) — 自动化工作流
+- [Create a contact in Drift-497](../workflows/workflow-automation/Create a contact in Drift-497/) — 自动化工作流
+- [Create a coupon on Paddle-659](../workflows/workflow-automation/Create a coupon on Paddle-659/) — 自动化工作流
+- [Create a customer and add them to a segment in Customer.io-646](../workflows/workflow-automation/Create a customer and add them to a segment in Customer.io-646/) — 自动化工作流
+- [Create a new Freshdesk ticket-448](../workflows/workflow-automation/Create a new Freshdesk ticket-448/) — 工单管理
+- [Create a table in CrateDB and insert data-597](../workflows/workflow-automation/Create a table in CrateDB and insert data-597/) — 自动化工作流
+- [Create a table in Quest DB and insert data-592](../workflows/workflow-automation/Create a table in Quest DB and insert data-592/) — 自动化工作流
+- [Create a table, and insert and update data in the table in Snowflake-824](../workflows/workflow-automation/Create a table, and insert and update data in the table in Snowflake-824/) — 自动化工作流
+- [Create a weekly Mealie dinner plan and generate a smart shopping list-14095](../workflows/workflow-automation/Create a weekly Mealie dinner plan and generate a smart shopping list-14095/) — 自动化工作流
+- [Create an array of objects-767](../workflows/workflow-automation/Create an array of objects-767/) — 自动化工作流
+- [Create and edit Grok Imagine Video clips via natural language chat-13182](../workflows/workflow-automation/Create and edit Grok Imagine Video clips via natural language chat-13182/) — AI 对话、视频生成
+- [Create instrumental tracks from song URLs with StemSplit-16055](../workflows/workflow-automation/Create instrumental tracks from song URLs with StemSplit-16055/) — 自动化工作流
+- [Create, update and get a task in Microsoft To Do-1114](../workflows/workflow-automation/Create, update and get a task in Microsoft To Do-1114/) — 自动化工作流
+- [Create, update, and get a monitor using UptimeRobot-1112](../workflows/workflow-automation/Create, update, and get a monitor using UptimeRobot-1112/) — 系统监控
+- [Create, update, and get an issue on Taiga-685](../workflows/workflow-automation/Create, update, and get an issue on Taiga-685/) — 自动化工作流
+- [Credit Card Payment Reminder & Tracking-For Taiwan Banks-2867](../workflows/workflow-automation/Credit Card Payment Reminder & Tracking-For Taiwan Banks-2867/) — 支付集成
+- [Customer Feedback Analysis with AI, QuickChart & HTML Report Generator-3642](../workflows/workflow-automation/Customer Feedback Analysis with AI, QuickChart & HTML Report Generator-3642/) — 自动化工作流
+- [Daily Crypto Yield Monitor- Track Top Binance Earn APY Rates with Earnings Calcu-11426](../workflows/workflow-automation/Daily Crypto Yield Monitor- Track Top Binance Earn APY Rates with Earnings Calcu-11426/) — 系统监控、加密货币
+- [Daily GBP exchange rate-4814](../workflows/workflow-automation/Daily GBP exchange rate-4814/) — 自动化工作流
+- [Daily Govt Exam Quiz by Gopal Debnath (mrtechyguru)-5284](../workflows/workflow-automation/Daily Govt Exam Quiz by Gopal Debnath (mrtechyguru)-5284/) — 自动化工作流
+- [Daily Import Validated Contacts from NocoDB to Brevo-7216](../workflows/workflow-automation/Daily Import Validated Contacts from NocoDB to Brevo-7216/) — 自动化工作流
+- [Daily Podcast Summary-2433](../workflows/workflow-automation/Daily Podcast Summary-2433/) — AI 摘要
+- [Daily Validated Business Ideas using n8n and Upwork-4715](../workflows/workflow-automation/Daily Validated Business Ideas using n8n and Upwork-4715/) — n8n 运维
+- [Deduplicate Data Records Using JavaScript Array Methods-5730](../workflows/workflow-automation/Deduplicate Data Records Using JavaScript Array Methods-5730/) — 自动化工作流
+- [Detect account and contact growth signals with Lusha bulk enrichment-13349](../workflows/workflow-automation/Detect account and contact growth signals with Lusha bulk enrichment-13349/) — 自动化工作流
+- [Discover company data by name with uProc-860](../workflows/workflow-automation/Discover company data by name with uProc-860/) — 自动化工作流
+- [Draft and revise technical articles with OpenRouter in a content pipeline-15952](../workflows/workflow-automation/Draft and revise technical articles with OpenRouter in a content pipeline-15952/) — 自动化工作流
+- [Dynamic Search Interface with Elasticsearch and Automated Report Generation-7235](../workflows/workflow-automation/Dynamic Search Interface with Elasticsearch and Automated Report Generation-7235/) — 流程自动化、智能搜索
+- [Effortless Job Hunting- Let this Automation Find Your Next Role-3051](../workflows/workflow-automation/Effortless Job Hunting- Let this Automation Find Your Next Role-3051/) — 求职招聘
+- [Enhance Your Workflow with 2Ndmoises_Generator AI-6943](../workflows/workflow-automation/Enhance Your Workflow with 2Ndmoises_Generator AI-6943/) — 工作流管理
+- [Enterprise Contract Lifecycle Management with AI Risk Analysis-8497](../workflows/workflow-automation/Enterprise Contract Lifecycle Management with AI Risk Analysis-8497/) — 自动化工作流
+- [Estimate 4D-5D construction costs from Revit BIM models with DDC CWICR-12177](../workflows/workflow-automation/Estimate 4D-5D construction costs from Revit BIM models with DDC CWICR-12177/) — 自动化工作流
+- [Evaluation Metric- Summarization-4428](../workflows/workflow-automation/Evaluation Metric- Summarization-4428/) — 自动化工作流
+- [Evaluation metric example- Categorization-4269](../workflows/workflow-automation/Evaluation metric example- Categorization-4269/) — 自动化工作流
+- [Evaluation metric example- Check if tool was called-4268](../workflows/workflow-automation/Evaluation metric example- Check if tool was called-4268/) — 自动化工作流
+- [Evaluation metric example- Correctness (judged by AI)-4271](../workflows/workflow-automation/Evaluation metric example- Correctness (judged by AI)-4271/) — 自动化工作流
+- [Evaluation metric example- String similarity-4274](../workflows/workflow-automation/Evaluation metric example- String similarity-4274/) — 自动化工作流
+- [Evaluations Metric- Answer Similarity-4423](../workflows/workflow-automation/Evaluations Metric- Answer Similarity-4423/) — 自动化工作流
+- [Explore n8n Nodes in a Visual Reference Library-3891](../workflows/workflow-automation/Explore n8n Nodes in a Visual Reference Library-3891/) — n8n 运维
+- [Extend n8n with additional tools-1605](../workflows/workflow-automation/Extend n8n with additional tools-1605/) — n8n 运维
+- [Generate 3D Models & Textures from Images with Hunyuan3D AI-7111](../workflows/workflow-automation/Generate 3D Models & Textures from Images with Hunyuan3D AI-7111/) — 图片生成
+- [Generate 9-16 Images from Content and Brand Guidelines-2662](../workflows/workflow-automation/Generate 9-16 Images from Content and Brand Guidelines-2662/) — 图片生成
+- [Generate AI B-roll clips from videos with Veo 3-15146](../workflows/workflow-automation/Generate AI B-roll clips from videos with Veo 3-15146/) — 视频生成
+- [Generate AI System Prompts for LLMs with Unli.dev-7696](../workflows/workflow-automation/Generate AI System Prompts for LLMs with Unli.dev-7696/) — 自动化工作流
+- [Generate AI camera moves with Seedance and build a previs review board-14891](../workflows/workflow-automation/Generate AI camera moves with Seedance and build a previs review board-14891/) — 自动化工作流
+- [Generate ASMR Rainforest Videos from Text with Seedream & Seedance on fal.ai-10433](../workflows/workflow-automation/Generate ASMR Rainforest Videos from Text with Seedream & Seedance on fal.ai-10433/) — 视频生成
+- [Generate Custom Text Content with IBM Granite 3.3 8B Instruct AI-6968](../workflows/workflow-automation/Generate Custom Text Content with IBM Granite 3.3 8B Instruct AI-6968/) — 自动化工作流
+- [Generate Dynamic Images with Text & Templates using ImageKit.-3519](../workflows/workflow-automation/Generate Dynamic Images with Text & Templates using ImageKit.-3519/) — 图片生成
+- [Generate Fact-Checked Research Reports with Llama AI and Web Search-11116](../workflows/workflow-automation/Generate Fact-Checked Research Reports with Llama AI and Web Search-11116/) — 智能搜索
+- [Generate Images with Realistic Inpainting using Simbrams Ri AI-7113](../workflows/workflow-automation/Generate Images with Realistic Inpainting using Simbrams Ri AI-7113/) — 图片生成
+- [Generate Interactive Wall Quantity Reports from Revit Models to HTML-5869](../workflows/workflow-automation/Generate Interactive Wall Quantity Reports from Revit Models to HTML-5869/) — 自动化工作流
+- [Generate Personalized Language Learning News Digests with LLaMA-3.1 & DeepSeek A-5660](../workflows/workflow-automation/Generate Personalized Language Learning News Digests with LLaMA-3.1 & DeepSeek A-5660/) — 新闻聚合
+- [Generate Real Estate Research Reports With Exa AI, PandaDoc and Instantly AI-14053](../workflows/workflow-automation/Generate Real Estate Research Reports With Exa AI, PandaDoc and Instantly AI-14053/) — 智能搜索
+- [Generate Text-to-Video & Image-to-Video Content with Seedance 1 Lite AI-7098](../workflows/workflow-automation/Generate Text-to-Video & Image-to-Video Content with Seedance 1 Lite AI-7098/) — 图片生成、视频生成
+- [Generate Videos from Text or Images with Sora 2 AI - No Watermark-9810](../workflows/workflow-automation/Generate Videos from Text or Images with Sora 2 AI - No Watermark-9810/) — 图片生成、视频生成
+- [Generate a Legal Website Accessibility Statement with AI and WAVE-4738](../workflows/workflow-automation/Generate a Legal Website Accessibility Statement with AI and WAVE-4738/) — 自动化工作流
+- [Generate addictive ASMR Veo 3 reels-15151](../workflows/workflow-automation/Generate addictive ASMR Veo 3 reels-15151/) — 自动化工作流
+- [Generate and Split Sample Data Records using JavaScript and Python-8230](../workflows/workflow-automation/Generate and Split Sample Data Records using JavaScript and Python-8230/) — 自动化工作流
+- [Generate and edit images with Havis AI Nano Banana 2-15586](../workflows/workflow-automation/Generate and edit images with Havis AI Nano Banana 2-15586/) — 图片生成
+- [Generate and refine technical drafts with OpenRouter writer and critic agents-15989](../workflows/workflow-automation/Generate and refine technical drafts with OpenRouter writer and critic agents-15989/) — AI 智能体
+- [Generate clean plates and automate object removal with Seedance AI-14387](../workflows/workflow-automation/Generate clean plates and automate object removal with Seedance AI-14387/) — 流程自动化
+- [Generate documents from saved templates and variables using Autype-13784](../workflows/workflow-automation/Generate documents from saved templates and variables using Autype-13784/) — 自动化工作流
+- [Generate merchandise proposals and market research from NASA APOD-11291](../workflows/workflow-automation/Generate merchandise proposals and market research from NASA APOD-11291/) — 市场数据、智能搜索
+- [Generate metaphor-based product video ads Veo 3-15149](../workflows/workflow-automation/Generate metaphor-based product video ads Veo 3-15149/) — 视频生成
+- [Generate multi-pass Seedance AI roto mattes with QC and Nuke handoff-14390](../workflows/workflow-automation/Generate multi-pass Seedance AI roto mattes with QC and Nuke handoff-14390/) — 自动化工作流
+- [Generate structured research briefs for content topics with OpenRouter-15950](../workflows/workflow-automation/Generate structured research briefs for content topics with OpenRouter-15950/) — 智能搜索
+- [Generate style-locked Seedance videos with an automated QC pipeline-14889](../workflows/workflow-automation/Generate style-locked Seedance videos with an automated QC pipeline-14889/) — 视频生成、流程自动化
+- [Generate text-, image-, and video-to-video clips with WAN 2.6 via KIE.AI-12253](../workflows/workflow-automation/Generate text-, image-, and video-to-video clips with WAN 2.6 via KIE.AI-12253/) — 图片生成、视频生成
+- [Generate text-to-video and image-to-video clips with Kling 2.6 via KIE.AI-12202](../workflows/workflow-automation/Generate text-to-video and image-to-video clips with Kling 2.6 via KIE.AI-12202/) — 图片生成、视频生成
+- [Generate video from an image with ByteDance Seedance 1.5 Pro via KIE.AI-12250](../workflows/workflow-automation/Generate video from an image with ByteDance Seedance 1.5 Pro via KIE.AI-12250/) — 图片生成、视频生成
+- [Generate weekly dinner meal plans and shopping lists using Mealie-13815](../workflows/workflow-automation/Generate weekly dinner meal plans and shopping lists using Mealie-13815/) — 自动化工作流
+- [Generating Keywords using Google Autosuggest-2155](../workflows/workflow-automation/Generating Keywords using Google Autosuggest-2155/) — 自动化工作流
+- [Get Any Image- Standard Fetch with BrightData Web Unblocker Failover-5905](../workflows/workflow-automation/Get Any Image- Standard Fetch with BrightData Web Unblocker Failover-5905/) — 图片生成
+- [Get DNS entries of any domain with uProc-862](../workflows/workflow-automation/Get DNS entries of any domain with uProc-862/) — 自动化工作流
+- [Get Real-time NFT Marketplace Insights with OpenSea Marketplace Agent Tool-3239](../workflows/workflow-automation/Get Real-time NFT Marketplace Insights with OpenSea Marketplace Agent Tool-3239/) — AI 智能体、市场数据
+- [Get all contacts from Keap-553](../workflows/workflow-automation/Get all contacts from Keap-553/) — 自动化工作流
+- [Get all releases in Sentry-643](../workflows/workflow-automation/Get all releases in Sentry-643/) — 自动化工作流
+- [Get all the contacts from GetResponse and update them-778](../workflows/workflow-automation/Get all the contacts from GetResponse and update them-778/) — 自动化工作流
+- [Get all the stories and publish them in Storyblok-768](../workflows/workflow-automation/Get all the stories and publish them in Storyblok-768/) — 自动化工作流
+- [Get all the tasks in Flow-506](../workflows/workflow-automation/Get all the tasks in Flow-506/) — 自动化工作流
+- [Get entries from a Cockpit collection-518](../workflows/workflow-automation/Get entries from a Cockpit collection-518/) — 自动化工作流
+- [Get new time entries from Toggl-517](../workflows/workflow-automation/Get new time entries from Toggl-517/) — 自动化工作流
+- [Get the current weather data for a city-460](../workflows/workflow-automation/Get the current weather data for a city-460/) — 天气信息
+- [Get workflows affected by 0.214.3 migration-1892](../workflows/workflow-automation/Get workflows affected by 0.214.3 migration-1892/) — 工作流管理
+- [Get your website indexed by Google automatically-2210](../workflows/workflow-automation/Get your website indexed by Google automatically-2210/) — 自动化工作流
+- [Google Spreadsheet to HTML - Variant with JS Function-1757](../workflows/workflow-automation/Google Spreadsheet to HTML - Variant with JS Function-1757/) — 表格处理
+- [Govern stale Entra ID guest accounts with SharePoint and Microsoft Teams-16041](../workflows/workflow-automation/Govern stale Entra ID guest accounts with SharePoint and Microsoft Teams-16041/) — 自动化工作流
+- [HR Job Posting and Evaluation with AI-2773](../workflows/workflow-automation/HR Job Posting and Evaluation with AI-2773/) — 求职招聘、HR 人事
+- [Hacker News Throwback Machine - See What Was Hot on This Day, Every Year!-2688](../workflows/workflow-automation/Hacker News Throwback Machine - See What Was Hot on This Day, Every Year!-2688/) — HR 人事、新闻聚合
+- [Homey Pro - Smarthouse integration with LLM-4058](../workflows/workflow-automation/Homey Pro - Smarthouse integration with LLM-4058/) — 自动化工作流
+- [Humanize AI-generated text using Rephrasy by detecting and rewriting only flagge-14545](../workflows/workflow-automation/Humanize AI-generated text using Rephrasy by detecting and rewriting only flagge-14545/) — HR 人事
+- [Hybrid Search with Qdrant & n8n, Legal AI- Indexing-7945](../workflows/workflow-automation/Hybrid Search with Qdrant & n8n, Legal AI- Indexing-7945/) — Qdrant 向量库、n8n 运维、智能搜索
+- [Hybrid Search with Qdrant & n8n, Legal AI- Retrieval-7946](../workflows/workflow-automation/Hybrid Search with Qdrant & n8n, Legal AI- Retrieval-7946/) — Qdrant 向量库、n8n 运维、智能搜索
+- [Implement Error-Proof Switch Node Fallbacks for Reliable Workflow Control-9571](../workflows/workflow-automation/Implement Error-Proof Switch Node Fallbacks for Reliable Workflow Control-9571/) — 工作流管理
+- [Implement Recursive Algorithms with Sub-workflows- Towers of Hanoi Demo-8656](../workflows/workflow-automation/Implement Recursive Algorithms with Sub-workflows- Towers of Hanoi Demo-8656/) — 工作流管理
+- [Import E.ON W1000 Energy Meter Data to Home Assistant with Spook Integration-9010](../workflows/workflow-automation/Import E.ON W1000 Energy Meter Data to Home Assistant with Spook Integration-9010/) — 自动化工作流
+- [Import Productboard Notes, Companies and Features into Snowflake-2576](../workflows/workflow-automation/Import Productboard Notes, Companies and Features into Snowflake-2576/) — 自动化工作流
+- [Influencer Brand Safety Auditor with Engagement Analysis-11808](../workflows/workflow-automation/Influencer Brand Safety Auditor with Engagement Analysis-11808/) — 自动化工作流
+- [Insert data into a new row for a table in Coda-482](../workflows/workflow-automation/Insert data into a new row for a table in Coda-482/) — 自动化工作流
+- [Inserting Brevo Contact Reports into NocoDB-9364](../workflows/workflow-automation/Inserting Brevo Contact Reports into NocoDB-9364/) — 自动化工作流
+- [Intelligent Legal Document Review and Compliance Automation-11861](../workflows/workflow-automation/Intelligent Legal Document Review and Compliance Automation-11861/) — 自动化工作流
+- [Intelligent Purchase Order Generator with AI Supplier Selection-10680](../workflows/workflow-automation/Intelligent Purchase Order Generator with AI Supplier Selection-10680/) — 自动化工作流
+- [Interactive Workflow Tutorial- Learn Data Flow, Execution Modes & Debugging Basi-6149](../workflows/workflow-automation/Interactive Workflow Tutorial- Learn Data Flow, Execution Modes & Debugging Basi-6149/) — 工作流管理
+- [Job Applying Agent-7889](../workflows/workflow-automation/Job Applying Agent-7889/) — AI 智能体、求职招聘
+- [Joining different datasets-1747](../workflows/workflow-automation/Joining different datasets-1747/) — 自动化工作流
+- [KNN (images) classifier tool (2-2 KNN)-2657](../workflows/workflow-automation/KNN (images) classifier tool [2-2 KNN]-2657/) — 图片生成
+- [Landing Page Analyzing Agent-7897](../workflows/workflow-automation/Landing Page Analyzing Agent-7897/) — AI 智能体
+- [Learn Anything from HN - Get Top Resource Recommendations from Hacker News-2697](../workflows/workflow-automation/Learn Anything from HN - Get Top Resource Recommendations from Hacker News-2697/) — 新闻聚合、推荐系统
+- [Learn Code Node (JavaScript) Fundamentals with an Interactive Hands-On Tutorial-5407](../workflows/workflow-automation/Learn Code Node (JavaScript) Fundamentals with an Interactive Hands-On Tutorial-5407/) — 自动化工作流
+- [Learn Data Synchronization- Warehouse Inventory Audit Tutorial-5999](../workflows/workflow-automation/Learn Data Synchronization- Warehouse Inventory Audit Tutorial-5999/) — HR 人事
+- [Learn How to use Binary Data in n8n (Video Included)-11235](../workflows/workflow-automation/Learn How to use Binary Data in n8n (Video Included)-11235/) — 视频生成、n8n 运维
+- [Learn JSON Basics with an Interactive Step-by-Step Tutorial for Beginners-5170](../workflows/workflow-automation/Learn JSON Basics with an Interactive Step-by-Step Tutorial for Beginners-5170/) — 自动化工作流
+- [Learn JavaScript Coding with an Interactive RPG-Style Tutorial Game-5731](../workflows/workflow-automation/Learn JavaScript Coding with an Interactive RPG-Style Tutorial Game-5731/) — 自动化工作流
+- [Learn JavaScript Data Processing with Code Node- Filtering, Analysis & Export Ex-5729](../workflows/workflow-automation/Learn JavaScript Data Processing with Code Node- Filtering, Analysis & Export Ex-5729/) — 自动化工作流
+- [Load data into Snowflake-1918](../workflows/workflow-automation/Load data into Snowflake-1918/) — 自动化工作流
+- [Load data into spreadsheet or database-980](../workflows/workflow-automation/Load data into spreadsheet or database-980/) — 表格处理、数据库操作
+- [Manage contacts in Automizy-720](../workflows/workflow-automation/Manage contacts in Automizy-720/) — 自动化工作流
+- [Manage contacts via Autopilot-990](../workflows/workflow-automation/Manage contacts via Autopilot-990/) — 自动化工作流
+- [Manage room members in Matrix-724](../workflows/workflow-automation/Manage room members in Matrix-724/) — 自动化工作流
+- [Market Intelligence Engine with AI Sentiment Detection & Competitor Analysis-10765](../workflows/workflow-automation/Market Intelligence Engine with AI Sentiment Detection & Competitor Analysis-10765/) — 市场数据
+- [Meetup Registration System with PostgreSQL Database & Interactive Giveaway Tool-5758](../workflows/workflow-automation/Meetup Registration System with PostgreSQL Database & Interactive Giveaway Tool-5758/) — 数据库操作、PostgreSQL、SQL 查询
+- [Merge data for multiple executions-1160](../workflows/workflow-automation/Merge data for multiple executions-1160/) — 自动化工作流
+- [Merge greetings with the users based on the language-655](../workflows/workflow-automation/Merge greetings with the users based on the language-655/) — 自动化工作流
+- [Migrate Customer Data from Odoo v15 to v18-5029](../workflows/workflow-automation/Migrate Customer Data from Odoo v15 to v18-5029/) — 自动化工作流
+- [Migrate large Hugging Face datasets to MongoDB with a looping subworkflow-12338](../workflows/workflow-automation/Migrate large Hugging Face datasets to MongoDB with a looping subworkflow-12338/) — 工作流管理
+- [Monitor Security Advisories-1974](../workflows/workflow-automation/Monitor Security Advisories-1974/) — 系统监控
+- [Monitor Workflow Audits and Failures with InfluxDB Dashboard-5873](../workflows/workflow-automation/Monitor Workflow Audits and Failures with InfluxDB Dashboard-5873/) — 系统监控、工作流管理
+- [Monitor n8n workflow health daily with Watchflow-14270](../workflows/workflow-automation/Monitor n8n workflow health daily with Watchflow-14270/) — 系统监控、工作流管理、n8n 运维
+- [Move data between JSON and spreadsheets-1739](../workflows/workflow-automation/Move data between JSON and spreadsheets-1739/) — 表格处理
+- [Multi-Chain Token Swap Relayer with Li.Fi-7206](../workflows/workflow-automation/Multi-Chain Token Swap Relayer with Li.Fi-7206/) — Token 管理
+- [Multi-Source News Curator with Mistral AI Analysis, Summaries & Custom Channels-6157](../workflows/workflow-automation/Multi-Source News Curator with Mistral AI Analysis, Summaries & Custom Channels-6157/) — 新闻聚合
+- [Multi-Tool Research Agent for Animal Advocacy with OpenRouter, Serper & Open Paw-5588](../workflows/workflow-automation/Multi-Tool Research Agent for Animal Advocacy with OpenRouter, Serper & Open Paw-5588/) — AI 智能体、智能搜索
+- [N8N Advanced URL Parsing and Shortening Workflow - Switchy.io Integration-2064](../workflows/workflow-automation/N8N Advanced URL Parsing and Shortening Workflow - Switchy.io Integration-2064/) — 工作流管理、n8n 运维
+- [N8N for Beginners- Looping over Items-2896](../workflows/workflow-automation/N8N for Beginners- Looping over Items-2896/) — n8n 运维
+- [Namesilo Bulk Domain Availability Checker-3047](../workflows/workflow-automation/Namesilo Bulk Domain Availability Checker-3047/) — 自动化工作流
+- [Narrative Chaining- AI-Generated Video Scene Extensions with Veo3-9145](../workflows/workflow-automation/Narrative Chaining- AI-Generated Video Scene Extensions with Veo3-9145/) — 视频生成
+- [Narrative Threat - Opportunity Detection (AskRally)-5234](../workflows/workflow-automation/Narrative Threat - Opportunity Detection (AskRally)-5234/) — HR 人事
+- [Natural Language Database Queries with Dual-Agent AI & PostgreSQL Integration-5012](../workflows/workflow-automation/Natural Language Database Queries with Dual-Agent AI & PostgreSQL Integration-5012/) — AI 智能体、数据库操作、PostgreSQL
+- [Network Vulnerability Scanner with NMAP and Automated CVE Reporting-11007](../workflows/workflow-automation/Network Vulnerability Scanner with NMAP and Automated CVE Reporting-11007/) — 流程自动化
+- [No AI suggestion available-14276](../workflows/workflow-automation/No AI suggestion available-14276/) — 自动化工作流
+- [OAuth2 Settings Finder with OpenRouter Chat Model and Llama 3.3-3279](../workflows/workflow-automation/OAuth2 Settings Finder with OpenRouter Chat Model and Llama 3.3-3279/) — AI 对话、认证集成
+- [Obsidian Notes Read Aloud using AI- Available as a Podcast Feed-2699](../workflows/workflow-automation/Obsidian Notes Read Aloud using AI- Available as a Podcast Feed-2699/) — 自动化工作流
+- [Optimize & Update Printify Title and Description Workflow-2583](../workflows/workflow-automation/Optimize & Update Printify Title and Description Workflow-2583/) — 工作流管理
+- [Optimize inactive Microsoft 365 premium licenses with Graph and Teams-16110](../workflows/workflow-automation/Optimize inactive Microsoft 365 premium licenses with Graph and Teams-16110/) — 自动化工作流
+- [Orchestrate iterative content drafting with research, writer and reviewer flows-15994](../workflows/workflow-automation/Orchestrate iterative content drafting with research, writer and reviewer flows-15994/) — 智能搜索
+- [Parse Ycombinator news page-1250](../workflows/workflow-automation/Parse Ycombinator news page-1250/) — 新闻聚合
+- [Pattern for Multiple Triggers Combined to Continue Workflow-2857](../workflows/workflow-automation/Pattern for Multiple Triggers Combined to Continue Workflow-2857/) — 工作流管理
+- [Pattern for Parallel Sub-Workflow Execution Followed by Wait-For-All Loop-2536](../workflows/workflow-automation/Pattern for Parallel Sub-Workflow Execution Followed by Wait-For-All Loop-2536/) — 工作流管理
+- [Phishing Analysis - URLScan.io and VirusTotal-1992](../workflows/workflow-automation/Phishing Analysis - URLScan.io and VirusTotal-1992/) — 自动化工作流
+- [Predict Housing Prices with a Simple Neural Network-9089](../workflows/workflow-automation/Predict Housing Prices with a Simple Neural Network-9089/) — 自动化工作流
+- [Preparing data to be sent to a service-1751](../workflows/workflow-automation/Preparing data to be sent to a service-1751/) — 自动化工作流
+- [Prevent Concurrent Workflow Runs Using Redis-3976](../workflows/workflow-automation/Prevent Concurrent Workflow Runs Using Redis-3976/) — 工作流管理
+- [Prevent Duplicate Processing with Redis Item State Tracking-6828](../workflows/workflow-automation/Prevent Duplicate Processing with Redis Item State Tracking-6828/) — 自动化工作流
+- [Prevent simultaneous workflow executions with Redis-2270](../workflows/workflow-automation/Prevent simultaneous workflow executions with Redis-2270/) — 工作流管理
+- [Product Visualization in Spaces with AI- Generate & Publish Videos to Social Med-7963](../workflows/workflow-automation/Product Visualization in Spaces with AI- Generate & Publish Videos to Social Med-7963/) — 视频生成、社交平台
+- [Production AI Playbook- Deterministic Steps & AI Steps (1 of 5)-13850](../workflows/workflow-automation/Production AI Playbook- Deterministic Steps & AI Steps (1 of 5)-13850/) — 自动化工作流
+- [Production AI Playbook- Human Oversight (1 of 3)-13847](../workflows/workflow-automation/Production AI Playbook- Human Oversight (1 of 3)-13847/) — 自动化工作流
+- [Production AI Playbook- Human Oversight (2 of 3)-13848](../workflows/workflow-automation/Production AI Playbook- Human Oversight (2 of 3)-13848/) — 自动化工作流
+- [Production AI Playbook- Human Oversight (3 of 3)-13849](../workflows/workflow-automation/Production AI Playbook- Human Oversight (3 of 3)-13849/) — 自动化工作流
+- [Programmatically Retrieve Embeddable Getty Images-2795](../workflows/workflow-automation/Programmatically Retrieve Embeddable Getty Images-2795/) — 图片生成
+- [Publish a post to a publication on Medium-594](../workflows/workflow-automation/Publish a post to a publication on Medium-594/) — 自动化工作流
+- [Pull Square Sales Summary Reports for Automated Reporting and Analysis-6358](../workflows/workflow-automation/Pull Square Sales Summary Reports for Automated Reporting and Analysis-6358/) — 流程自动化、AI 摘要
+- [Purge n8n execution history located in Mysql-700](../workflows/workflow-automation/Purge n8n execution history located in Mysql-700/) — MySQL 管理、SQL 查询、n8n 运维
+- [Qualify and Route Sales Leads with Mistral-Saba AI and MCDM Scoring-10757](../workflows/workflow-automation/Qualify and Route Sales Leads with Mistral-Saba AI and MCDM Scoring-10757/) — 线索管理
+- [Query n8n Credentials with AI SQL Agent-2347](../workflows/workflow-automation/Query n8n Credentials with AI SQL Agent-2347/) — AI 智能体、SQL 查询、n8n 运维
+- [Qwen-Max- Journal Paper Generation from Title-Abstract-10314](../workflows/workflow-automation/Qwen-Max- Journal Paper Generation from Title-Abstract-10314/) — 自动化工作流
+- [Real Estate Cold Call Scripts for Price Reduced FSBO Properties (Zillow Data)-3143](../workflows/workflow-automation/Real Estate Cold Call Scripts for Price Reduced FSBO Properties (Zillow Data)-3143/) — 自动化工作流
+- [Real-time Chat Translation with DeepL-4532](../workflows/workflow-automation/Real-time Chat Translation with DeepL-4532/) — AI 对话
+- [Receipt Scanning & Analysis Workflow-7990](../workflows/workflow-automation/Receipt Scanning & Analysis Workflow-7990/) — 工作流管理
+- [Receive and process incoming direct messages in Rocket.Chat-15775](../workflows/workflow-automation/Receive and process incoming direct messages in Rocket.Chat-15775/) — AI 对话
+- [Receive messages for a MQTT queue-657](../workflows/workflow-automation/Receive messages for a MQTT queue-657/) — 自动化工作流
+- [Receive messages from a topic via Kafka and send an SMS-814](../workflows/workflow-automation/Receive messages from a topic via Kafka and send an SMS-814/) — 自动化工作流
+- [Receive updates for specified tasks in Flow-508](../workflows/workflow-automation/Receive updates for specified tasks in Flow-508/) — 自动化工作流
+- [Receive updates when a customer is created in HelpScout-669](../workflows/workflow-automation/Receive updates when a customer is created in HelpScout-669/) — 自动化工作流
+- [Receive updates when a new account is added by an admin in ActiveCampaign-488](../workflows/workflow-automation/Receive updates when a new account is added by an admin in ActiveCampaign-488/) — 自动化工作流
+- [Receive updates when a new activity gets created and tweet about it-745](../workflows/workflow-automation/Receive updates when a new activity gets created and tweet about it-745/) — 自动化工作流
+- [Receive updates when an event occurs in Taiga-686](../workflows/workflow-automation/Receive updates when an event occurs in Taiga-686/) — 自动化工作流
+- [Recipe Recommendations with Qdrant and Mistral-2333](../workflows/workflow-automation/Recipe Recommendations with Qdrant and Mistral-2333/) — Qdrant 向量库、推荐系统
+- [Reconnect migrated workflows and datatables between n8n instances-14218](../workflows/workflow-automation/Reconnect migrated workflows and datatables between n8n instances-14218/) — 工作流管理、n8n 运维
+- [Recover Lost Binary Data Between Workflow Nodes with Code Node Pattern-8780](../workflows/workflow-automation/Recover Lost Binary Data Between Workflow Nodes with Code Node Pattern-8780/) — 工作流管理
+- [Redis Locking for Concurrent Task Handling-3444](../workflows/workflow-automation/Redis Locking for Concurrent Task Handling-3444/) — 自动化工作流
+- [Regional Prospecting for registered Companies in Germany-11750](../workflows/workflow-automation/Regional Prospecting for registered Companies in Germany-11750/) — 自动化工作流
+- [Remote IOT Sensor monitoring via MQTT and InfluxDB-4004](../workflows/workflow-automation/Remote IOT Sensor monitoring via MQTT and InfluxDB-4004/) — 系统监控
+- [Rename a key in n8n-582](../workflows/workflow-automation/Rename a key in n8n-582/) — n8n 运维
+- [Render custom text over images-365](../workflows/workflow-automation/Render custom text over images-365/) — 图片生成
+- [Research US legal regulations with CourtListener, LegiScan, OpenRouter and web s-12508](../workflows/workflow-automation/Research US legal regulations with CourtListener, LegiScan, OpenRouter and web s-12508/) — 智能搜索
+- [Retrieve and Filter Kagi News by Category-9318](../workflows/workflow-automation/Retrieve and Filter Kagi News by Category-9318/) — 新闻聚合
+- [Retry on fail except for known error-2719](../workflows/workflow-automation/Retry on fail except for known error-2719/) — 自动化工作流
+- [Route and analyze customer feedback with Qwen3-VL, Tally, PostgreSQL-13314](../workflows/workflow-automation/Route and analyze customer feedback with Qwen3-VL, Tally, PostgreSQL-13314/) — PostgreSQL、SQL 查询
+- [Run Apache Airflow DAG and Retrieve XCom Value-3026](../workflows/workflow-automation/Run Apache Airflow DAG and Retrieve XCom Value-3026/) — 自动化工作流
+- [Score and critique content drafts with OpenRouter and LangChain-15951](../workflows/workflow-automation/Score and critique content drafts with OpenRouter and LangChain-15951/) — 自动化工作流
+- [Search Taobao and Tmall products and get the first product detail with JustOneAP-15843](../workflows/workflow-automation/Search Taobao and Tmall products and get the first product detail with JustOneAP-15843/) — 智能搜索
+- [Send Matomo analytics data to A.I. to analyze then save results in Baserow-2561](../workflows/workflow-automation/Send Matomo analytics data to A.I. to analyze then save results in Baserow-2561/) — 自动化工作流
+- [Send an SMS using MSG91-511](../workflows/workflow-automation/Send an SMS using MSG91-511/) — 自动化工作流
+- [Send an SMS using the Mocean node-667](../workflows/workflow-automation/Send an SMS using the Mocean node-667/) — 自动化工作流
+- [Send daily weather updates to a phone number via Plivo-1005](../workflows/workflow-automation/Send daily weather updates to a phone number via Plivo-1005/) — 天气信息
+- [Send instant replies to new Yelp leads with LeadResponder.ai-12883](../workflows/workflow-automation/Send instant replies to new Yelp leads with LeadResponder.ai-12883/) — 线索管理
+- [Send n8n Error Reports to LINE-3141](../workflows/workflow-automation/Send n8n Error Reports to LINE-3141/) — n8n 运维
+- [Sentiment Analytics Visualizer-5204](../workflows/workflow-automation/Sentiment Analytics Visualizer-5204/) — 自动化工作流
+- [Set up cluster centres&thresholds for anomaly detection (2-3 - anomaly)-2655](../workflows/workflow-automation/Set up cluster centres&thresholds for anomaly detection [2-3 - anomaly]-2655/) — HR 人事
+- [SharePoint List Fetch with OAuth Token-2527](../workflows/workflow-automation/SharePoint List Fetch with OAuth Token-2527/) — Token 管理、认证集成
+- [Simple Eval for Legal Benchmarking-4712](../workflows/workflow-automation/Simple Eval for Legal Benchmarking-4712/) — 自动化工作流
+- [Simple Google indexing Workflow in N8N-2123](../workflows/workflow-automation/Simple Google indexing Workflow in N8N-2123/) — 工作流管理、n8n 运维
+- [Simple error workflow-10755](../workflows/workflow-automation/Simple error workflow-10755/) — 工作流管理
+- [Singapore Lottery Predictive Analytics and Pattern Mining System-10890](../workflows/workflow-automation/Singapore Lottery Predictive Analytics and Pattern Mining System-10890/) — 自动化工作流
+- [Split In Batches node noItemsLeft example-995](../workflows/workflow-automation/Split In Batches node noItemsLeft example-995/) — 自动化工作流
+- [Spot Workplace Discrimination Patterns with AI-2825](../workflows/workflow-automation/Spot Workplace Discrimination Patterns with AI-2825/) — 自动化工作流
+- [Standardized Workflow Design Pattern with Color-Coding System for Teams-9500](../workflows/workflow-automation/Standardized Workflow Design Pattern with Color-Coding System for Teams-9500/) — 工作流管理
+- [人工审核邮件回复-2907](../workflows/workflow-automation/人工审核邮件回复-2907/) — 自动化工作流
+- [弃购挽回分析-6045](../workflows/workflow-automation/弃购挽回分析-6045/) — 自动化工作流
+
+</details>
+
+
