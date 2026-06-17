@@ -70,6 +70,34 @@
 | Open ArgoCD ApplicationSet | 执行命令 |
 | Apply ArgoCD ApplicationSet | 执行命令 |
 
+
+
+## 功能说明
+
+自动部署流水线，代码提交后自动构建和发布，定时执行。
+
+定时触发、Webhook触发、手动触发，通过 Telegram 通知 实现自动化。
+
+> 适配等级：Tier B — 需手动替换部分海外服务节点
+
+## 前置准备
+
+导入前请准备以下服务的 API 凭证：
+
+- Telegram Bot Token → @BotFather 创建
+
+## 使用步骤
+
+1. 下载 `workflow.json`
+2. 在 n8n 中点击 **Import from File** 导入
+3. 按上方「前置准备」填入对应服务的 API Key
+4. 点击 **Execute Workflow** 测试运行
+
+## 统计
+
+- 节点总数：54
+- 触发方式：手动触发, Webhook 触发, 定时触发
+
 ## 触发方式
 - When clicking ‘Execute workflow’ 触发
 - Webhook 触发

@@ -36,7 +36,7 @@
 | Custom RSS Feed List | Code |
 | Call Loop Over Custom RSS Feed News List | 执行工作流 |
 | Loop Over Items | 分批处理 |
-| Remove Elements with Empty Content  (Custom Feed) | 过滤器 |
+| Remove Elements with Empty Content (Custom Feed) | 过滤器 |
 | If | IF 判断 |
 | Call Get Webpage Content to Data (Custom Feed) | 执行工作流 |
 | Custom Feed | RSS Feed |
@@ -101,6 +101,39 @@
 | Split Out News Results | 数据拆分 |
 | Call Search Queries with SerpAPI | 执行工作流 |
 | Call Video News - Get the Descriptions of Video Found through Feeds and Theme Search | 执行工作流 |
+
+
+
+## 功能说明
+
+AI 内容摘要工具，自动提炼长文关键信息，定时执行。
+
+定时触发、Webhook触发、手动触发，通过 Telegram 通知 实现自动化。
+
+> 适配等级：Tier A — 可直接使用（国内环境配好 API Key 即可）
+
+## 前置准备
+
+导入前请准备以下服务的 API 凭证：
+
+- DeepSeek API Key → https://platform.deepseek.com
+- Telegram Bot Token → @BotFather 创建
+- 邮箱 SMTP/IMAP 账号密码
+- 通义万相 API Key → https://dashscope.aliyun.com
+
+> AI 模型已替换为 DeepSeek（已替换 OpenAI/Claude/Gemini)请确保已注册并获取 API Key。
+
+## 使用步骤
+
+1. 下载 `workflow.json`
+2. 在 n8n 中点击 **Import from File** 导入
+3. 按上方「前置准备」填入对应服务的 API Key
+4. 点击 **Execute Workflow** 测试运行
+
+## 统计
+
+- 节点总数：86
+- 触发方式：定时触发, 手动触发, Webhook 触发
 
 ## 触发方式
 - Schedule 触发

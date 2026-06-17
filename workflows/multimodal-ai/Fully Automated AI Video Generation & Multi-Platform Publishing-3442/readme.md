@@ -50,7 +50,7 @@
 | Set API Keys | 数据设置 |
 | Validate list formatting | IF 判断 |
 | Get Audio from Video | OpenAI |
-| Generate Description for Videos  in Tiktok and Instagram | OpenAI |
+| Generate Description for Videos in Tiktok and Instagram | OpenAI |
 | Upload Video and Description to Tiktok | HTTP Request |
 | Upload Video and Description to Instagram | HTTP Request |
 | Upload Video and Description to Youtube | HTTP Request |
@@ -58,6 +58,37 @@
 | Upload Video and Description to Linkedin | HTTP Request |
 | Read Video from Google Drive | 读取二进制文件 |
 | Write video | 写入二进制文件 |
+
+
+
+## 功能说明
+
+AI 视频生成工作流，自动创作视频内容，定时执行。
+
+定时触发，通过 Discord + HTTP API 实现自动化。
+
+> 适配等级：Tier A — 可直接使用（国内环境配好 API Key 即可）
+
+## 前置准备
+
+导入前请准备以下服务的 API 凭证：
+
+- DeepSeek API Key → https://platform.deepseek.com
+- 通义万相 API Key → https://dashscope.aliyun.com
+
+> AI 模型已替换为 DeepSeek（已替换 OpenAI/Claude/Gemini)请确保已注册并获取 API Key。
+
+## 使用步骤
+
+1. 下载 `workflow.json`
+2. 在 n8n 中点击 **Import from File** 导入
+3. 按上方「前置准备」填入对应服务的 API Key
+4. 点击 **Execute Workflow** 测试运行
+
+## 统计
+
+- 节点总数：43
+- 触发方式：定时触发
 
 ## 触发方式
 - Once Per Day 触发

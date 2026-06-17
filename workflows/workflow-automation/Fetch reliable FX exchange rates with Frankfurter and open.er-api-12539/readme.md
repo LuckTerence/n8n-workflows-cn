@@ -22,7 +22,7 @@
 | Normalize Frankfurter | Code |
 | open.er-api.com | HTTP Request |
 | If base correct 1 | IF 判断 |
-| If base correct  2 | IF 判断 |
+| If base correct 2 | IF 判断 |
 | Fetch FX Rates | 执行工作流触发器 |
 | Stop and Error3 | 停止并报错 |
 | Normalize open.er-api.com | Code |
@@ -39,6 +39,32 @@
 | Coverage Complete 1? | IF 判断 |
 | Coverage Complete 2? | IF 判断 |
 | Final Output | 空操作 |
+
+
+
+## 功能说明
+
+API 集成接口，连接和编排多个第三方服务。
+
+手动触发，通过 HTTP API 实现自动化。
+
+> 适配等级：Tier A — 可直接使用（国内环境配好 API Key 即可）
+
+## 前置准备
+
+无需额外 API Key，导入即可运行。
+
+## 使用步骤
+
+1. 下载 `workflow.json`
+2. 在 n8n 中点击 **Import from File** 导入
+3. 按上方「前置准备」填入对应服务的 API Key
+4. 点击 **Execute Workflow** 测试运行
+
+## 统计
+
+- 节点总数：24
+- 触发方式：手动触发
 
 ## 触发方式
 - Fetch FX Rates 触发

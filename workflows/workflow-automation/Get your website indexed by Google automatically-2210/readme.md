@@ -32,6 +32,32 @@
 | Get content of each sitemap | HTTP Request |
 | Sort | 数据排序 |
 
+
+
+## 功能说明
+
+Get your website indexed by Google automatically。
+
+定时触发、手动触发，通过 HTTP API 实现自动化。
+
+> 适配等级：Tier A — 可直接使用（国内环境配好 API Key 即可）
+
+## 前置准备
+
+无需额外 API Key，导入即可运行。
+
+## 使用步骤
+
+1. 下载 `workflow.json`
+2. 在 n8n 中点击 **Import from File** 导入
+3. 按上方「前置准备」填入对应服务的 API Key
+4. 点击 **Execute Workflow** 测试运行
+
+## 统计
+
+- 节点总数：16
+- 触发方式：手动触发, 定时触发
+
 ## 触发方式
 - When clicking "Test workflow" 触发
 - Schedule Trigger 触发
