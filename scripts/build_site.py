@@ -19,12 +19,12 @@ CATEGORY_NAMES = {
 }
 
 CATEGORY_ICONS = {
-    "ai-agent": "🤖",
-    "devops": "⚙️",
-    "finance-analysis": "📊",
-    "knowledge-rag": "📚",
-    "multimodal-ai": "🎬",
-    "workflow-automation": "🔄",
+    "ai-agent": "",
+    "devops": "",
+    "finance-analysis": "",
+    "knowledge-rag": "",
+    "multimodal-ai": "",
+    "workflow-automation": "",
 }
 
 # Reuse the classification rules from build_index.py
@@ -179,7 +179,7 @@ def generate_data():
                 "name": wf_dir,
                 "category": cat,
                 "categoryName": CATEGORY_NAMES.get(cat, cat),
-                "categoryIcon": CATEGORY_ICONS.get(cat, "📁"),
+                "categoryIcon": CATEGORY_ICONS.get(cat, ""),
                 "subcategory": sub,
                 "tags": tags,
                 "tier": tier,
@@ -349,7 +349,7 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
 
 <aside class="sidebar">
   <div class="sidebar-header">
-    <h1>🧩 n8n-workflows-cn</h1>
+    <h1>n8n-workflows-cn</h1>
     <a href="https://github.com/LuckTerence/n8n-workflows-cn" target="_blank">GitHub →</a>
     <div style="margin-top:4px;font-size:12px;color:var(--muted)">{len(workflows)} 个工作流模板</div>
   </div>
@@ -361,21 +361,21 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
 <main class="main">
   <div class="toolbar">
     <input type="text" class="search-box" id="search" placeholder="搜索工作流...（名称、分类、标签）" oninput="doSearch()" autofocus>
-    <button class="badge" id="clear-btn" onclick="clearSearch()">✕ 清除</button>
-    <a href="../INDEX.md" target="_blank" class="badge">📋 完整索引</a>
+    <button class="badge" id="clear-btn" onclick="clearSearch()">x 清除</button>
+    <a href="../INDEX.md" target="_blank" class="badge">完整索引</a>
   </div>
   <div class="scenario-guide visible" id="scenario-guide">
-    <h3>🎯 按场景快速查找</h3>
+    <h3>按场景快速查找</h3>
     <div class="scenario-list">
       <a href="#!" class="scenario-chip" onclick="filterSub('ai-agent','入门教程');return false;" style="background:rgba(255,215,0,0.12);border-color:#ffd700;">新手推荐</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('ai-agent','对话机器人');return false;">💬 AI 客服机器人</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','Email & 邮件处理');return false;">📧 邮件自动化</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','销售 & CRM');return false;">🛒 电商 & 销售</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('finance-analysis','股票 & 市场');return false;">📈 股票分析</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('knowledge-rag','RAG 检索问答');return false;">📚 知识库问答</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('multimodal-ai','图像生成');return false;">🎨 AI 绘图</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('devops','监控 & 告警');return false;">🖥️ 运维监控</a>
-      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','内容采集 & 研究');return false;">🔍 内容采集</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('ai-agent','对话机器人');return false;">AI 客服机器人</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','Email & 邮件处理');return false;"> 邮件自动化</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','销售 & CRM');return false;"> 电商 & 销售</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('finance-analysis','股票 & 市场');return false;">股票分析</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('knowledge-rag','RAG 检索问答');return false;">知识库问答</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('multimodal-ai','图像生成');return false;">AI 绘图</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('devops','监控 & 告警');return false;">运维监控</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','内容采集 & 研究');return false;">内容采集</a>
     </div>
   </div>
   <div class="results-info" id="results-info">共 {len(workflows)} 个结果</div>
@@ -395,7 +395,7 @@ function render(items) {{
     
     if (items.length === 0) {{
         info.textContent = '没有找到匹配的工作流';
-        list.innerHTML = '<div style="text-align:center;padding:60px;color:var(--muted)">😕 试试换个搜索词或筛选条件？</div>';
+        list.innerHTML = '<div style="text-align:center;padding:60px;color:var(--muted)"> 试试换个搜索词或筛选条件？</div>';
         return;
     }}
     
@@ -407,7 +407,7 @@ function render(items) {{
                 <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:4px;">Tier ${{w.tier||'B'}}</span>
             </div>
             ${{w.desc ? `<div class="card-desc">${{w.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</div>` : ''}}
-            ${{w.apiNeeds && w.apiNeeds.length ? `<div class="card-apis">${{w.apiNeeds.map(a => '<span class="api-tag">🔑 '+a+'</span>').join(' ')}}</div>` : ''}}
+            ${{w.apiNeeds && w.apiNeeds.length ? `<div class="card-apis">${{w.apiNeeds.map(a => '<span class="api-tag">'+a+'</span>').join(' ')}}</div>` : ''}}
             <div class="card-meta">
                 <span class="tag cat-tag">${{w.categoryIcon}} ${{w.categoryName}}</span>
                 <span class="tag sub-tag">${{w.subcategory}}</span>

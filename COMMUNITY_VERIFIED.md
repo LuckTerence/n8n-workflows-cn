@@ -12,10 +12,10 @@
 
 | 分类 | 序号 | 工作流 | 验证人 | n8n 版本 | 状态 |
 |------|:--:|--------|--------|----------|:--:|
-| ai-agent | 1 | AI Agent聊天-1954 | | | ⬜ |
-| ai-agent | 2 | AI客服中心Telegram呼入-4044 | | | ⬜ |
-| devops | 1 | 定时启停n8n工作流-3229 | | | ⬜ |
-| finance-analysis | 1 | AI股票基本面分析-2183 | | | ⬜ |
-| workflow-automation | 1 | Gmail智能分类归档-3686 | | | ⬜ |
+| ai-agent | 1 | AI Agent聊天-1954 | | | |
+| ai-agent | 2 | AI客服中心Telegram呼入-4044 | | | |
+| devops | 1 | 定时启停n8n工作流-3229 | | | |
+| finance-analysis | 1 | AI股票基本面分析-2183 | | | |
+| workflow-automation | 1 | Gmail智能分类归档-3686 | | | |
 
-> ⬜ 未验证 | ✅ 已跑通 | ⚠️ 部分问题 | ❌ 无法使用
+> 未验证 | OK 已跑通 | 部分问题 | 无法使用

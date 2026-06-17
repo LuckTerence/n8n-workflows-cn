@@ -9,9 +9,9 @@
 
 ---
 
-> 🚀 **1,480 n8n workflow templates · adapted for DeepSeek / Feishu / WeChat Pay / Alibaba Cloud · 1,031 ready-to-use**
+> **1,480 n8n workflow templates · adapted for DeepSeek / Feishu / WeChat Pay / Alibaba Cloud · 1,031 ready-to-use**
 
-[🔍 Browse Online](https://luckterence.github.io/n8n-workflows-cn/) · [📋 Full Index](INDEX.md) · [🎯 Curated Picks](CURATED.md) · [⚡ Quick Start](#quick-start)
+[Browse Online](https://luckterence.github.io/n8n-workflows-cn/) · [Full Index](INDEX.md) · [Curated Picks](CURATED.md) · [Quick Start](#quick-start)
 
 ---
 
@@ -33,11 +33,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | Workflow | Description | Difficulty | Link |
 |----------|-------------|:----------:|------|
-| AI Agent Chat | Basic AI chat agent, 5 nodes, DeepSeek key ready | ⭐ | [📂 Open](workflows/ai-agent/AI%20Agent聊天-1954/) |
-| AI Helpdesk (Telegram) | Full Telegram customer service bot | ⭐⭐ | [📂 Open](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
-| Smart Email Classifier | AI auto-tags and archives emails | ⭐⭐ | [📂 Open](workflows/workflow-automation/Gmail智能分类归档-3686/) |
-| Stock Fundamental Analysis | Multi-dimensional stock analysis | ⭐⭐ | [📂 Open](workflows/finance-analysis/AI股票基本面分析-2183/) |
-| Auto Start/Stop n8n Flows | Manage n8n with n8n itself | ⭐ | [📂 Open](workflows/devops/定时启停n8n工作流-3229/) |
+| AI Agent Chat | Basic AI chat agent, 5 nodes, DeepSeek key ready |  | [ Open](workflows/ai-agent/AI%20Agent聊天-1954/) |
+| AI Helpdesk (Telegram) | Full Telegram customer service bot |  | [ Open](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
+| Smart Email Classifier | AI auto-tags and archives emails |  | [ Open](workflows/workflow-automation/Gmail智能分类归档-3686/) |
+| Stock Fundamental Analysis | Multi-dimensional stock analysis |  | [ Open](workflows/finance-analysis/AI股票基本面分析-2183/) |
+| Auto Start/Stop n8n Flows | Manage n8n with n8n itself |  | [ Open](workflows/devops/定时启停n8n工作流-3229/) |
 
 ## Workflow Categories
 

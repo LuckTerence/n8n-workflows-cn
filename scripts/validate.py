@@ -164,22 +164,22 @@ def main():
     print(f"{'='*60}\n")
 
     if errors:
-        print("❌ 错误:")
+        print("错误:")
         for e in errors:
             print(f"  • {e}")
         print()
 
     if warnings:
-        print("⚠️  警告:")
+        print(" 警告:")
         for w in warnings:
             print(f"  • {w}")
         print()
 
     if not errors:
-        print("✅ 所有验证通过！")
+        print("OK 所有验证通过！")
         return 0
     else:
-        print(f"❌ 发现 {len(errors)} 个错误")
+        print(f"发现 {len(errors)} 个错误")
         return 1
 
 

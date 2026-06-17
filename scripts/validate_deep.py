@@ -107,11 +107,11 @@ def main():
 
     print(f"\n{'='*60}")
     print(f"  深度验证: {len(all_r)//6} 工作流")
-    print(f"  ✅ 通过: {ok}  |  ❌ 错误: {len(errs)}  |  ⚠️ 警告: {len(warns)}")
+    print(f"  OK 通过: {ok}  |  错误: {len(errs)}  |  警告: {len(warns)}")
     print(f"{'='*60}\n")
 
     if errs:
-        print(f"❌ 结构错误 ({len(errs)}):")
+        print(f"结构错误 ({len(errs)}):")
         for _, t, d in errs[:15]:
             print(f"  [{t}] {d}")
         if len(errs) > 15:
@@ -120,7 +120,7 @@ def main():
 
     if warns:
         wc = Counter(t for _, t, _ in warns)
-        print(f"⚠️  警告分布:")
+        print(f" 警告分布:")
         for t, c in wc.most_common():
             print(f"  {t}: {c}")
 

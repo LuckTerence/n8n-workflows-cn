@@ -9,9 +9,9 @@
 
 ---
 
-> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1479 个开箱即用**
+> **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1479 个开箱即用**
 
-[🔍 在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [📋 完整索引](INDEX.md) · [🎯 精选合集](CURATED.md) · [⚡ 快速开始](#快速试试)
+[在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [完整索引](INDEX.md) · [精选合集](CURATED.md) · [快速开始](#快速试试)
 
 ---
 
@@ -38,19 +38,14 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 工作流 | 说明 | 适合 | 入口 |
 |--------|------|:--:|------|
-| AI Agent 聊天 | 基础 AI 对话，配 DeepSeek Key 直接跑 | 新手 | [📂](workflows/ai-agent/AI%20Agent聊天-1954/) |
-| 定时启停 n8n 工作流 | 用 n8n 管理 n8n 本身 | 新手 | [📂](workflows/devops/定时启停n8n工作流-3229/) |
-| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | 进阶 | [📂](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
-| Gmail 智能分类 | AI 自动给邮件打标签归档 | 进阶 | [📂](workflows/workflow-automation/Gmail智能分类归档-3686/) |
-| AI 股票基本面分析 | 多维度股票基本面分析 | 进阶 | [📂](workflows/finance-analysis/AI股票基本面分析-2183/) |
-| AI Agent 聊天 | 基础 AI 对话，5 个节点，配 DeepSeek Key 直接跑 | ⭐ | [📂 打开](workflows/ai-agent/AI%20Agent聊天-1954/) |
-| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | [📂 打开](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
-| Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | [📂 打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
-| AI 股票基本面分析 | 多维度股票基本面分析 | ⭐⭐ | [📂 打开](workflows/finance-analysis/AI股票基本面分析-2183/) |
-| 定时启停 n8n 工作流 | 学会用 n8n 管理 n8n 本身 | ⭐ | [📂 打开](workflows/devops/定时启停n8n工作流-3229/) |
+| AI Agent 聊天 | 基础 AI 对话，配 DeepSeek Key 直接跑 | 新手 | [打开](workflows/ai-agent/AI%20Agent聊天-1954/) |
+| 定时启停 n8n 工作流 | 用 n8n 管理 n8n 本身 | 新手 | [打开](workflows/devops/定时启停n8n工作流-3229/) |
+| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | 进阶 | [打开](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
+| Gmail 智能分类 | AI 自动给邮件打标签归档 | 进阶 | [打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
+| AI 股票基本面分析 | 多维度股票基本面分析 | 进阶 | [打开](workflows/finance-analysis/AI股票基本面分析-2183/) |
 
 
-> 💡 **需要切回海外节点？** 部分工作流的 Gmail/Slack/Google Sheets 等节点已替换为飞书/阿里云方案。如果你有海外账号想用原始节点：
+> **需要切回海外节点？** 部分工作流的 Gmail/Slack/Google Sheets 等节点已替换为飞书/阿里云方案。如果你有海外账号想用原始节点：
 > ```bash
 > python scripts/toggle_region.py overseas  # 恢复海外原始节点
 > python scripts/toggle_region.py cn        # 切回国内方案
@@ -216,7 +211,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 ## 在线浏览
 
-> **[🔍 工作流浏览站点](https://luckterence.github.io/n8n-workflows-cn/)** — 可搜索、可按分类筛选的在线浏览器，暗色主题。
+> **[工作流浏览站点](https://luckterence.github.io/n8n-workflows-cn/)** — 可搜索、可按分类筛选的在线浏览器，暗色主题。
 
 启用方式：仓库 Settings > Pages > Source 选 `Deploy from a branch`，分支 `main`，目录 `/docs`，保存后等几分钟即可访问。
 

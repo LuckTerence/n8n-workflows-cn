@@ -125,7 +125,7 @@ def main():
     
     print(f"Upgraded {len(results)} workflows to A-adapted:\n")
     for name, changes in sorted(results.items()):
-        print(f"  ✅ {name}")
+        print(f"  OK {name}")
         for c in set(changes):
             print(f"     • {c}")
     
