@@ -8,5 +8,5 @@
 
 此分类工作流数量较多，分为两个页面：
 
-- [Workflow Automation（上）](INDEX-workflow-automation-1.md) — AI 增强、消息平台、邮件、文件、社交媒体、API、数据采集
-- [Workflow Automation（下）](INDEX-workflow-automation-2.md) — CRM、财务、表单、电商、通知、日历、项目管理、其他
+- <a href="INDEX-workflow-automation-1.md">Workflow Automation（上）</a> —  — AI 增强、消息平台、邮件、文件、社交媒体、API、数据采集
+- <a href="INDEX-workflow-automation-2.md">Workflow Automation（下）</a> —  — CRM、财务、表单、电商、通知、日历、项目管理、其他

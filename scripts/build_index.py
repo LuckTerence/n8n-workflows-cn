@@ -352,7 +352,7 @@ def build():
             for wf_dir, desc in sorted(entries):
                 link = f"{prefix}workflows/{cat}/{wf_dir}/"
                 display_clean = wf_dir.replace("[", "(").replace("]", ")")
-                lines.append(f"- [{display_clean}]({link}) — {desc}")
+                lines.append(f'- <a href="{link}">{display_clean}</a> — {desc}')
             lines.append("")
             lines.append(f'</details>')
             lines.append("")
