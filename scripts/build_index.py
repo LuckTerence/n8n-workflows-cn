@@ -4,7 +4,7 @@
 import os
 import re
 
-BASE = "/Users/terencesai/WorkBuddy/2026-06-17-04-19-06/n8n-workflows-cn"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WF_DIR = os.path.join(BASE, "workflows")
 
 # ── Category metadata ──────────────────────────────────────────────
@@ -328,6 +328,37 @@ def build():
     # Sort categories by order
     ordered_cats = sorted(tree.keys(), key=lambda c: CATEGORIES[c]["order"])
 
+    def write_category_index(cat, prefix=""):
+        """Generate index lines for a single category with optional path prefix."""
+        meta = CATEGORIES[cat]
+        cat_workflows = tree[cat]
+        total = sum(len(v) for v in cat_workflows.values())
+        sub_order = {s: i for i, (s, _, _) in enumerate(RULES.get(cat, []))}
+        sorted_subs = sorted(cat_workflows.keys(), key=lambda s: sub_order.get(s, 999))
+
+        lines = []
+        lines.append(f"## {meta['name']}")
+        lines.append("")
+        lines.append(f"共 {total} 个工作流。{meta['desc']}。")
+        lines.append("")
+
+        for sub_name in sorted_subs:
+            entries = cat_workflows[sub_name]
+            if not entries:
+                continue
+            lines.append(f'<details>')
+            lines.append(f'<summary><b>{sub_name}</b>（{len(entries)} 个）</summary>')
+            lines.append("")
+            for wf_dir, desc in sorted(entries):
+                link = f"{prefix}workflows/{cat}/{wf_dir}/"
+                display_clean = wf_dir.replace("[", "(").replace("]", ")")
+                lines.append(f"- [{display_clean}]({link}) — {desc}")
+            lines.append("")
+            lines.append(f'</details>')
+            lines.append("")
+        return lines
+
+    # ── Main INDEX.md (repo root) ──
     lines = []
     lines.append("# 工作流索引")
     lines.append("")
@@ -338,52 +369,43 @@ def build():
 
     for cat in ordered_cats:
         meta = CATEGORIES[cat]
-        lines.append(f"- [{meta['name']}](#{meta['name'].lower().replace(' ', '-')})（{len([w for subs in tree[cat].values() for w in subs])} 个）— {meta['desc']}")
+        lines.append(f"- [{meta['name']}](index/INDEX-{cat}.md)（{sum(len(v) for v in tree[cat].values())} 个）— {meta['desc']}")
 
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("点击分类名称查看各分类的详细工作流列表。")
     lines.append("")
 
     for cat in ordered_cats:
-        meta = CATEGORIES[cat]
-        cat_workflows = tree[cat]
-        total = sum(len(v) for v in cat_workflows.values())
+        lines.extend(write_category_index(cat, prefix=""))
 
-        lines.append(f"## {meta['name']}")
-        lines.append("")
-        lines.append(f"共 {total} 个工作流。{meta['desc']}。")
-        lines.append("")
-
-        # Define sub-category ordering
-        sub_order = {s: i for i, (s, _, _) in enumerate(RULES.get(cat, []))}
-
-        sorted_subs = sorted(cat_workflows.keys(), key=lambda s: sub_order.get(s, 999))
-
-        for sub_name in sorted_subs:
-            entries = cat_workflows[sub_name]
-            if not entries:
-                continue
-
-            lines.append(f'<details>')
-            lines.append(f'<summary><b>{sub_name}</b>（{len(entries)} 个）</summary>')
-            lines.append("")
-
-            for wf_dir, desc in sorted(entries):
-                link = f"workflows/{cat}/{wf_dir}/"
-                # Clean up display name - use the dirname directly
-                display = wf_dir
-                # Ensure markdown link brackets aren't broken
-                display_clean = display.replace("[", "(").replace("]", ")")
-                lines.append(f"- [{display_clean}]({link}) — {desc}")
-
-            lines.append("")
-            lines.append(f'</details>')
-            lines.append("")
-
-    # Write output
     output_path = os.path.join(BASE, "INDEX.md")
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
-
     print(f"Written {len(workflows)} workflows to {output_path}")
+
+    # ── Per-category INDEX files (index/ directory) ──
+    os.makedirs(os.path.join(BASE, "index"), exist_ok=True)
+    for cat in ordered_cats:
+        meta = CATEGORIES[cat]
+        total = sum(len(v) for v in tree[cat].values())
+        cat_lines = []
+        cat_lines.append(f"# {meta['name']} — 工作流索引")
+        cat_lines.append("")
+        cat_lines.append(f"> {meta['desc']}，共 {total} 个工作流模板。")
+        cat_lines.append("")
+        cat_lines.append("[← 返回总索引](../INDEX.md)")
+        cat_lines.append("")
+        cat_lines.append("---")
+        cat_lines.append("")
+        cat_lines.extend(write_category_index(cat, prefix="../"))
+
+        cat_path = os.path.join(BASE, f"index/INDEX-{cat}.md")
+        with open(cat_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(cat_lines) + "\n")
+        print(f"  → index/INDEX-{cat}.md ({total} workflows)")
+
     print(f"File size: {len(lines)} lines")
 
 
