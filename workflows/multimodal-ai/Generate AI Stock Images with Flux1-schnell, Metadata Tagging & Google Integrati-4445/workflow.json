@@ -1482,17 +1482,6 @@
         ]
       ]
     },
-    "Split Out1": {
-      "main": [
-        [
-          {
-            "node": "Switch",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Check sheet": {
       "main": [
         [
@@ -1791,33 +1780,6 @@
         [
           {
             "node": "Google Sheets1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Schedule Trigger2": {
-      "main": [
-        [
-          {
-            "node": "Code",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Google Drive9",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Execute Workflow18": {
-      "main": [
-        [
-          {
-            "node": "Aggregate",
             "type": "main",
             "index": 0
           }

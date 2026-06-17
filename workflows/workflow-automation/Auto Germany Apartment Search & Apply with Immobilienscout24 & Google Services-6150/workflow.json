@@ -388,28 +388,6 @@
         ]
       ]
     },
-    "GeoID Lookup": {
-      "main": [
-        [
-          {
-            "node": "Fetch Listings",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Fetch Listings": {
-      "main": [
-        [
-          {
-            "node": "Filter Results",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Filter Results": {
       "main": [
         [

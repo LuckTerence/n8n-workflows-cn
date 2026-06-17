@@ -385,34 +385,11 @@
         ]
       ]
     },
-    "execution_id": {
-      "main": [
-        [
-          {
-            "node": "retry workflow automatically",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "login_details": {
       "main": [
         [
           {
             "node": "Log into n8n",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Loop Over Items": {
-      "main": [
-        [],
-        [
-          {
-            "node": "execution_id",
             "type": "main",
             "index": 0
           }

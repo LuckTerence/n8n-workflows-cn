@@ -102,17 +102,6 @@
   ],
   "pinData": {},
   "connections": {
-    "Schedule Trigger": {
-      "main": [
-        [
-          {
-            "node": "Get PRISM Elastic Alert",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Response is not empty": {
       "main": [
         [
@@ -125,17 +114,6 @@
         [
           {
             "node": "No Operation, do nothing",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Get PRISM Elastic Alert": {
-      "main": [
-        [
-          {
-            "node": "Response is not empty",
             "type": "main",
             "index": 0
           }

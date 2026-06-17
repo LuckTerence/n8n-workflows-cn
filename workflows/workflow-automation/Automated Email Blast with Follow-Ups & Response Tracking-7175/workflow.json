@@ -433,28 +433,6 @@
         ]
       ]
     },
-    "Send a message for followup 6": {
-      "main": [
-        [
-          {
-            "node": "HRMS api for upadte inqiery data direclty in db",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Send a message for followup 7": {
-      "main": [
-        [
-          {
-            "node": "HRMS api for upadte inqiery data direclty in db",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Update Sheet with Follow-Up Status": {
       "main": [
         [

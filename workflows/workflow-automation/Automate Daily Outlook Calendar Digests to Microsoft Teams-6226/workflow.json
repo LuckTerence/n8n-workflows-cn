@@ -168,33 +168,11 @@
         ]
       ]
     },
-    "Microsoft Outlook": {
-      "main": [
-        [
-          {
-            "node": "HTML format",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Schedule every midnight": {
       "main": [
         [
           {
             "node": "Create filter for \"TODAY\" value",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Create filter for \"TODAY\" value": {
-      "main": [
-        [
-          {
-            "node": "Microsoft Outlook",
             "type": "main",
             "index": 0
           }

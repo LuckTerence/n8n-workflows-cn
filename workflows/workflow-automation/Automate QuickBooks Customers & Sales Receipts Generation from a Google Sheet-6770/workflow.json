@@ -246,11 +246,6 @@
       "main": [
         [
           {
-            "node": "Create a customer",
-            "type": "main",
-            "index": 0
-          },
-          {
             "node": "Check Customer Existence",
             "type": "main",
             "index": 0
