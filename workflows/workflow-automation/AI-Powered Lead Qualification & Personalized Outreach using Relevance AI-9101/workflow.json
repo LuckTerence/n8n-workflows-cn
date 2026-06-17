@@ -494,227 +494,25 @@
     {
       "id": "cd908406-2c72-41cc-a7a3-45281a55fc8d",
       "name": "Update CRM",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         384,
         -704
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $json.Lead_email }}",
-            "Label": "={{ $json.label }}",
-            "Summary": "={{ $json.Summary }}",
-            "Industry": "={{ $json.Company_Industry }}",
-            "Job title": "={{ $json[\"Lead_job-title\"] }}",
-            "Lead Name": "={{ $json.Lead_Name }}",
-            "Red flags": "={{ $json.Red_flags }}",
-            "Lead score": "={{ $json.lead_score }}",
-            "Tech stack": "={{ JSON.stringify($json.Tech_stack) }}",
-            "Company URL": "={{ $json.Company_Website }}",
-            "Company Name": "={{ $json.Company_name }}",
-            "Company Size": "={{ $json.Company_size }}",
-            "Lead Socials": "={{ $json.contact_social_profiles }}",
-            "Growth signals": "={{ JSON.stringify($json.Growth_signals) }}",
-            "Company Socials": "={{ $json.company_socials }}",
-            "Lead confidence score": "={{ $json.confidence_score }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Lead Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Lead Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead score",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Lead score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Label",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Label",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Job title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Job title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead Socials",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Lead Socials",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Industry",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Industry",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Socials",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Socials",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Summary",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Red flags",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Red flags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Size",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Size",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Tech stack",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Tech stack",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Growth signals",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Growth signals",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead confidence score",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Lead confidence score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Outreach mail",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Outreach mail",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Lead Name"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1riKQHaVN8OE9TW8HApdIQmAxWM3GZFQbi5Ta5mR27Ao/edit#gid=0",
-          "cachedResultName": "Practice"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1riKQHaVN8OE9TW8HApdIQmAxWM3GZFQbi5Ta5mR27Ao",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1riKQHaVN8OE9TW8HApdIQmAxWM3GZFQbi5Ta5mR27Ao/edit?usp=drivesdk",
-          "cachedResultName": "CRM"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -727,28 +525,25 @@
     {
       "id": "a152149e-7db5-4578-8849-86ebe5fc6561",
       "name": "Notify team",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         912,
         -352
       ],
       "webhookId": "7151c78b-2c7f-4ed3-8dfc-05b6ba6c0b2a",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C095G55KJ3X",
-          "cachedResultName": "new-lead-notification"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "unfurl_links": false,
-          "includeLinkToWorkflow": false
-        },
-        "msg_type": "text",
-        "content": {
-          "text": "=*HOT Lead Alert*\n\nName: {{ $json.Lead_Name }}\nemail: {{ $json.Lead_email }}\nLead score: {{ $json.lead_score }}\nCompany website: {{ $json.Company_Website }}\n\nSend/ edit the draft mail here: https://mail.google.com/mail/u/0/#drafts?compose={{ $json.message.id }}\nCheck lead details here: <your_google_sheets_ID>"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -756,7 +551,7 @@
           "name": "Slack [Api.Gmail]"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1473,7 +1268,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Lead Qualification & Personalized Outreach using Relevance AI",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9101,
     "synced_at": "2026-06-17T14:19:25.426424",
     "foreign_services": [

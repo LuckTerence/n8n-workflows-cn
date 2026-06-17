@@ -8,23 +8,25 @@
     {
       "id": "c70236ea-91ab-4e47-b6f6-63a70ede5d3c",
       "name": "Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3280,
         816
       ],
       "parameters": {
-        "options": {
-          "fields": "=items(summary, start(dateTime))",
-          "timeMin": "={{$fromAI(\"date\",\"the date after which to fetch the messages in format YYYY-MM-DDTHH:MM:SS\")}}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "derekcheungsa@gmail.com",
-          "cachedResultName": "derekcheungsa@gmail.com"
-        },
-        "operation": "getAll"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -653,7 +655,7 @@
   "_cn_meta": {
     "title_zh": "Personal Life Manager with Telegram, Google Services & Voice-Enabled AI",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8237,
     "synced_at": "2026-06-17T14:20:07.075260",
     "foreign_services": [

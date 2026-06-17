@@ -23,78 +23,25 @@
     {
       "id": "260b66a2-0841-4dc7-9666-acbc9317fd91",
       "name": "URLs to Monitor",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1120,
         -120
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "URL": "={{ $json.result.host }}",
-            "KnownExpiryDate": "={{ $json.result.valid_till }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Website ",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Website ",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "KnownExpiryDate",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "KnownExpiryDate",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "URL"
           ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VfsX4cW2oKQ3ZHUjBvGk--d1X7509c6__b6gPvA5VpI/edit#gid=0",
-          "cachedResultName": "URLs to Check"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1VfsX4cW2oKQ3ZHUjBvGk--d1X7509c6__b6gPvA5VpI/edit?gid=0#gid=0"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -130,23 +77,25 @@
     {
       "id": "005564e9-5ecb-4ee9-aca0-69a660656b09",
       "name": "Fetch URLs",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         420,
         140
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1pnUfIkD90MUG99Fp0vRoAB-w-GPSAwRZw0-JsNl-h3s/edit?gid=0#gid=0"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1pnUfIkD90MUG99Fp0vRoAB-w-GPSAwRZw0-JsNl-h3s/edit?usp=sharing"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -383,7 +332,7 @@
   "_cn_meta": {
     "title_zh": "SLL Expiry Alert with SSL-Checker.io",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2694,
     "synced_at": "2026-06-17T14:19:08.652702",
     "foreign_services": [

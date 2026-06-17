@@ -126,18 +126,25 @@
     },
     {
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1480,
         -40
       ],
       "parameters": {
-        "range": "A:B",
-        "options": {
-          "valueInputMode": "USER_ENTERED"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetId": "xxx",
-        "operation": "append"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": "Google"
@@ -234,18 +241,25 @@
     },
     {
       "name": "Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1480,
         110
       ],
       "parameters": {
-        "range": "A:B",
-        "options": {
-          "valueInputMode": "USER_ENTERED"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetId": "xxx",
-        "operation": "append"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": "Google"
@@ -408,18 +422,25 @@
     },
     {
       "name": "Google Sheets2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1210,
         360
       ],
       "parameters": {
-        "range": "A:B",
-        "options": {
-          "valueInputMode": "USER_ENTERED"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetId": "xxx",
-        "operation": "append"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": "Google"
@@ -696,7 +717,7 @@
   "_cn_meta": {
     "title_zh": "Push Dialpad call information to Syncro",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 1490,
     "synced_at": "2026-06-17T14:20:45.592721",
     "foreign_services": [

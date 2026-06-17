@@ -34,34 +34,25 @@
     {
       "id": "5e6af8ff-2bc1-44b4-9523-3e55a785ee4d",
       "name": "Pull Target Domains",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -180,
         -60
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o/edit#gid=0",
-          "cachedResultName": "Target Domains"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o/edit?usp=drivesdk",
-          "cachedResultName": "Apollo Data"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -172,98 +163,25 @@
     {
       "id": "f0eaa1e7-299f-4ec8-ae26-90bbe1483a1e",
       "name": "Results To Results Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1340,
         -60
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $json.email }}",
-            "Title": "={{ $json.title }}",
-            "Company": "={{ $('Loop Targets').item.json['Domain To Enrich'] }}",
-            "Last Name": "={{ $json.lastName }}",
-            "Linkedin ": "={{ $json.linkedinUrl }}",
-            "First Name": "={{ $json.firstName }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Company",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "First Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "First Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Last Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Last Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Linkedin ",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Linkedin ",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 308352805,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o/edit#gid=308352805",
-          "cachedResultName": "Results"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qSlCPA-FqrQZUS7DIqYaZbhdhxZDxIM3xYrswJKEZ-o/edit?usp=drivesdk",
-          "cachedResultName": "Apollo Data"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -392,7 +310,7 @@
   "_cn_meta": {
     "title_zh": "Domain to Email Extraction using Apollo API",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3581,
     "synced_at": "2026-06-17T14:08:39.110068",
     "foreign_services": [

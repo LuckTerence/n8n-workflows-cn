@@ -310,28 +310,16 @@
     {
       "id": "cd3eaa81-0f94-484b-b0c2-ecf0ca4541dc",
       "name": "Get folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         20,
         -860
       ],
       "parameters": {
-        "filter": {
-          "driveId": {
-            "__rl": true,
-            "mode": "list",
-            "value": "My Drive",
-            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-            "cachedResultName": "My Drive"
-          },
-          "folderId": {
-            "__rl": true,
-            "mode": "id",
-            "value": "=test-whatsapp"
-          }
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -344,25 +332,16 @@
     {
       "id": "b39ecd2d-4d5b-4885-86a9-2cfe9f6074ef",
       "name": "Download Files",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         240,
         -860
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "options": {
-          "googleFileConversion": {
-            "conversion": {
-              "docsToFormat": "text/plain"
-            }
-          }
-        },
-        "operation": "download"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -863,7 +842,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Email Automation for Business: Summarize & Respond with RAG",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2852,
     "synced_at": "2026-06-17T14:16:11.152810",
     "foreign_services": [

@@ -300,71 +300,50 @@
     {
       "id": "da00d68a-3cf0-4ab2-821d-a720436b598d",
       "name": "Save to Google Sheets - Grading",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1936,
         752
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "status": "Pending Peer Review",
-            "ai_score": "={{ $('Store Evaluation Results').item.json.total_score }}",
-            "analysis": "={{ $('Store Evaluation Results').item.json.ai_evaluation.analysis }}",
-            "student_id": "={{ $('Store Evaluation Results').item.json.student_id }}",
-            "course_code": "={{ $('Store Evaluation Results').item.json.course_code }}",
-            "documentation": "={{ $('Store Evaluation Results').item.json.ai_evaluation.documentation }}",
-            "implementation": "={{ $('Store Evaluation Results').item.json.ai_evaluation.implementation }}",
-            "evaluation_date": "={{ $('Store Evaluation Results').item.json.evaluation_date }}",
-            "problem_solving": "={{ $('Store Evaluation Results').item.json.ai_evaluation.problem_solving }}",
-            "assignment_title": "={{ $('Store Evaluation Results').item.json.assignment_title }}",
-            "technical_accuracy": "={{ $('Store Evaluation Results').item.json.ai_evaluation.technical_accuracy }}"
-          },
-          "mappingMode": "defineBelow"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "Peer Evaluations"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "engineering-grades-sheet-id"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "05f1584b-1ee8-49d0-9aa4-8b59523265fe",
       "name": "Check Review Deadlines",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1152,
         192
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "Pending Peer Review",
-              "lookupColumn": "status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "Peer Evaluations"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "engineering-grades-sheet-id"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },

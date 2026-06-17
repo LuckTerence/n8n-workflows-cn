@@ -53,82 +53,25 @@
     {
       "id": "ee782134-e2d4-4f8b-a9d9-a09a919577ab",
       "name": "append row in CRM",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         480,
         -280
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "date": "={{ $('Gumroad Sale Trigger').item.json.sale_timestamp }}",
-            "email": "={{ $('Gumroad Sale Trigger').item.json.email }}",
-            "country": "={{ $('Gumroad Sale Trigger').item.json.ip_country }}",
-            "product name": "={{ $('Gumroad Sale Trigger').item.json.product_name }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "country",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "country",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XYMstoZ4j3O5T-UYz21ky7P5bkUtzYXQGYCQTRVWCI4/edit?usp=drivesdk",
-          "cachedResultName": "Gumroad sales CRM"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -275,7 +218,7 @@
   "_cn_meta": {
     "title_zh": "Capture Gumroad sales, add buyer to MailerLite group, log to Google Sheets CRM",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3676,
     "synced_at": "2026-06-17T14:16:25.761747",
     "foreign_services": [

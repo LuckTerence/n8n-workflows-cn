@@ -200,19 +200,16 @@
     {
       "id": "f6e24007-39e5-47e4-88fc-a7bf3a994fa6",
       "name": "Download Transcript",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -60,
         70
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "={{ $json.input }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -512,7 +509,7 @@
   "_cn_meta": {
     "title_zh": "Evaluation Metric: Summarization",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4428,
     "synced_at": "2026-06-17T14:08:46.532005",
     "foreign_services": [

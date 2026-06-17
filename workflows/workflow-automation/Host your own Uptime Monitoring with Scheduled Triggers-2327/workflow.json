@@ -79,27 +79,25 @@
     {
       "id": "50307dca-fa88-4a19-91a4-456866e529d4",
       "name": "Get Sites",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1700,
         420
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4/edit#gid=0",
-          "cachedResultName": "dashboard"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4/edit?usp=drivesdk",
-          "cachedResultName": "n8n uptime"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -112,24 +110,24 @@
     {
       "id": "4b0cb0cc-282b-4be9-a4ca-0c4eb10d896e",
       "name": "Send Chat Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3100,
         340
       ],
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C06RS1WPUQ6",
-          "cachedResultName": "general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=From: n8n uptime\nDate: {{ $('Calculate Status').item.json[\"date\"] }}\n\n{{ $('Calculate Status').item.json.Property }} is {{ $('Calculate Status').item.json[\"DOWN_FROM_UP\"] ? 'DOWN' : 'UP' }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -137,7 +135,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.1,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -180,100 +178,25 @@
     {
       "id": "63343e68-be07-4d89-8363-140299dcf0b6",
       "name": "Log Uptime Event",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2940,
         520
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "date": "={{ $json.date }}",
-            "period": "={{ new Date($json.date).format(\"yyyy-MM\") }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "period",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "period",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Property",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Property",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "UP_FROM_UP",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "UP_FROM_UP",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DOWN_FROM_DOWN",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DOWN_FROM_DOWN",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "UP_FROM_DOWN",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "UP_FROM_DOWN",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DOWN_FROM_UP",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DOWN_FROM_UP",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": []
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Calculate Status').item.json.Property }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4/edit?usp=drivesdk",
-          "cachedResultName": "n8n uptime"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -286,59 +209,25 @@
     {
       "id": "fe97a18b-902c-4fab-bf73-69b5b9e41a11",
       "name": "Update Site Status",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3100,
         520
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "={{ $json[\"DOWN_FROM_UP\"] || $json[\"DOWN_FROM_DOWN\"] ? 'DOWN' : 'UP' }}",
-            "Property": "={{ $json.Property }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Property",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Property",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Property"
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4/edit#gid=0",
-          "cachedResultName": "dashboard"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1t2RT3lxyxXj3X1y6klWvyhEJEazpkT3Hpi2ttEJRVT4/edit?usp=drivesdk",
-          "cachedResultName": "n8n uptime"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -721,7 +610,7 @@
   "_cn_meta": {
     "title_zh": "Host your own Uptime Monitoring with Scheduled Triggers",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2327,
     "synced_at": "2026-06-17T14:12:58.610827",
     "foreign_services": [

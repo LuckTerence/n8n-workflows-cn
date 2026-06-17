@@ -120,7 +120,7 @@
     {
       "id": "352f497d-9b66-40c5-8a0a-cfac715db269",
       "name": "Notify Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "onError": "continueErrorOutput",
       "position": [
         1200,
@@ -128,12 +128,18 @@
       ],
       "webhookId": "d2b03044-781c-477d-bff7-92065a35efd3",
       "parameters": {
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🎫 New {{$json[\"priority\"]}} Priority Ticket"
-        }
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -141,7 +147,7 @@
           "name": "O2 Personal Account"
         }
       },
-      "typeVersion": 2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -410,7 +416,7 @@
   "_cn_meta": {
     "title_zh": "Multi-Channel Customer Support Automation Suite",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5135,
     "synced_at": "2026-06-17T14:14:27.677994",
     "foreign_services": [

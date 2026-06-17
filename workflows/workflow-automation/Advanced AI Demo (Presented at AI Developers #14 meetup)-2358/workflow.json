@@ -7,27 +7,26 @@
     {
       "id": "fb774d11-da48-4481-ad4e-8c93274f123e",
       "name": "Send message",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2340,
         580
       ],
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C079GL6K3U6",
-          "cachedResultName": "general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=Data from webhook:  {{ $json.query.email }}"
-        }
+        "options": {}
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -970,7 +969,7 @@
   "_cn_meta": {
     "title_zh": "Advanced AI Demo (Presented at AI Developers #14 meetup)",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2358,
     "synced_at": "2026-06-17T14:06:39.001542",
     "foreign_services": [

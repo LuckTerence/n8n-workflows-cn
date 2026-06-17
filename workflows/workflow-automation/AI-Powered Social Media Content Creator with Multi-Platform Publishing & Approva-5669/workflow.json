@@ -884,19 +884,16 @@
     {
       "id": "f66196c1-fc5b-4a0e-8b47-3f486ffb7a83",
       "name": "Get Social Post from Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -880,
         140
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.output.response }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -1455,7 +1452,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Social Media Content Creator with Multi-Platform Publishing & Approval",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5669,
     "synced_at": "2026-06-17T14:21:52.869542",
     "foreign_services": [

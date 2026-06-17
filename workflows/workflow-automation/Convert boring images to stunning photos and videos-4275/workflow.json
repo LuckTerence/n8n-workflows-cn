@@ -95,7 +95,7 @@
         280
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -130,7 +130,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -237,7 +238,7 @@
         640
       ],
       "parameters": {
-        "url": "https://api.replicate.com/v1/models/pixverse/pixverse-v4/predictions",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {},
         "jsonBody": "={\n  \"input\": {\n    \"prompt\": \"{{ $json.message.caption || 'a creative enhancement of this image' }}\",\n    \"quality\": \"720p\",\n    \"image\": \"https://api.telegram.org/file/bot{{$credentials.telegramBot.botToken}}/{{ $json.result.file_path }}\"\n}}",
@@ -251,7 +252,8 @@
               "value": "=Bearer {{$credentials.replicateApi.apiKey}}"
             }
           ]
-        }
+        },
+        "notes": "原 Replicate → 通义万相"
       },
       "description": "Sends the original image to Replicate for AI-powered variation",
       "typeVersion": 4.2

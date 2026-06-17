@@ -86,98 +86,25 @@
     {
       "id": "bcaec2e1-ab42-4e97-a5c8-8e9a1c4090c8",
       "name": "Update video url",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1776,
         1024
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "VIDEO URL": "={{ $json.output.result }}",
-            "row_number": "={{ $('Get prompts').item.json.row_number }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "START",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "START",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PROMPT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PROMPT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DURATION",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DURATION",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "VIDEO URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "VIDEO URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "MERGE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "MERGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
-          "cachedResultName": "Extend and merge video"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -339,26 +266,16 @@
     {
       "id": "04530e5e-6fa0-4cb8-86b7-1bf39b6197d1",
       "name": "Upload Video2",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2592,
         1008
       ],
       "parameters": {
-        "name": "={{ $now.format('yyyyLLddHHmmss') }}-{{ $('Get Clip Url').item.json.video.file_name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
-          "cachedResultName": "Fal.run"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -541,34 +458,25 @@
     {
       "id": "cbf2490c-8ea2-4af6-ad72-a27503bf3044",
       "name": "Get videos to merge",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2016,
         1024
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "MERGE"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
-          "cachedResultName": "Extend and merge video"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -657,110 +565,25 @@
     {
       "id": "a99141d9-b745-4516-b448-7128825308c6",
       "name": "Update video url2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2064,
         1568
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "MERGE": "x",
-            "VIDEO URL": "=",
-            "row_number": "={{ $('Get prompts').item.json.row_number }}",
-            "FINAL VIDEO": "={{ $json.video.url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "START",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "START",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PROMPT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PROMPT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DURATION",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DURATION",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "VIDEO URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "VIDEO URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "MERGE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "MERGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "FINAL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "FINAL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
-          "cachedResultName": "Extend and merge video"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1024,34 +847,25 @@
     {
       "id": "16b1b296-b956-4c00-9455-bf641be349f3",
       "name": "Get video",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         304,
         496
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "VIDEO URL"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14zlCDJFLrJIhcq7HwFGdKAHIwvjmkwP-FSTHmLTj0ow/edit?usp=drivesdk",
-          "cachedResultName": "Extend and merge video"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1388,7 +1202,7 @@
   "_cn_meta": {
     "title_zh": "Extend and Merge UGC Viral Videos Using Kling 2.1, Then Publish on Social Media",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11710,
     "synced_at": "2026-06-17T14:21:48.362453",
     "foreign_services": [

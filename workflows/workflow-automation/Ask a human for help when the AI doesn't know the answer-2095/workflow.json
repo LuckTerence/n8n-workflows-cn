@@ -222,24 +222,25 @@
     {
       "id": "b9c552ce-4c58-48dd-b168-5e277de89954",
       "name": "Message Slack for help",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         80,
         620
       ],
       "webhookId": "c54bea4c-bdb6-4f42-9f82-525857df5a9a",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "name",
-          "value": "#general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "={{ \"A user had a question the bot couldn't answer. Here's their message: \" + $('When Executed by Another Workflow').first().json.chatInput }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -247,7 +248,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -425,7 +426,7 @@
   "_cn_meta": {
     "title_zh": "Ask a human for help when the AI doesn't know the answer",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2095,
     "synced_at": "2026-06-17T14:06:42.112529",
     "foreign_services": [

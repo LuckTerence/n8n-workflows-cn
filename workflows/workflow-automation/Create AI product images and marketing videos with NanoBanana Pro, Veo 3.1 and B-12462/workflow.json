@@ -155,24 +155,16 @@
     {
       "id": "d6b15a51-e5f7-460f-a5ec-3e96ae089ab6",
       "name": "Upload to Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         1184
       ],
       "parameters": {
-        "name": "={{ \n  \"image_top_left_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -198,24 +190,16 @@
     {
       "id": "1feb8bed-9156-460a-91f0-40e0968fa77b",
       "name": "Upload to Google Drive1",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         1376
       ],
       "parameters": {
-        "name": "={{ \n  \"image_top_center_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -228,24 +212,16 @@
     {
       "id": "fc3cc7b3-9f4a-44a5-9dba-00e115b750d9",
       "name": "Upload to Google Drive2",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         1568
       ],
       "parameters": {
-        "name": "={{ \n  \"image_top_right_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -258,24 +234,16 @@
     {
       "id": "314f4ca9-10a2-4110-8b4c-8ef426db8ca8",
       "name": "Upload to Google Drive3",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         1760
       ],
       "parameters": {
-        "name": "={{ \n  \"image_bottom_left_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -288,24 +256,16 @@
     {
       "id": "bde757be-c869-42ab-b4a5-ffc0b58f518f",
       "name": "Upload to Google Drive4",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         1952
       ],
       "parameters": {
-        "name": "={{ \n  \"image_bottom_center_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -318,24 +278,16 @@
     {
       "id": "3e24fa2c-0e84-49f4-acd8-8b40ce8d56d5",
       "name": "Upload to Google Drive5",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1744,
         2144
       ],
       "parameters": {
-        "name": "={{ \n  \"image_bottom_right_\" +\n  new Date().toISOString()\n    .slice(0,19)\n    .replace(\"T\", \"_\")\n    .replace(/:/g, \"-\")\n}}.png",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -348,179 +300,25 @@
     {
       "id": "e218c4bf-7cc4-4a24-b787-d99ad4961f49",
       "name": "Update url image_top_left",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         1184
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_1": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -533,179 +331,25 @@
     {
       "id": "37cca6f3-f484-4cf6-9cfa-fbe3880d26da",
       "name": "Update url image_top_center",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         1376
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_2": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -718,179 +362,25 @@
     {
       "id": "925c029f-6a93-4c9c-bf04-4596dea35842",
       "name": "Update url image_top_right",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         1568
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_3": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -903,179 +393,25 @@
     {
       "id": "692d6144-0031-464e-90af-d2701cbb58b6",
       "name": "Update url image_bottom_left",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         1760
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_4": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1088,179 +424,25 @@
     {
       "id": "3fdea09a-5260-4342-a878-7bd99594933f",
       "name": "Update url image_bottom_center",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         1952
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_5": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1273,179 +455,25 @@
     {
       "id": "4bff23d7-e944-4aff-95bd-b1911aa535fc",
       "name": "Update url image_bottom_right",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1952,
         2144
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "new_image_6": "={{ $json.webContentLink }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1740,239 +768,25 @@
     {
       "id": "7d98612b-7643-46b4-abff-8e2f94f1640b",
       "name": "Update video 2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         1472
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "video_2": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1985,239 +799,25 @@
     {
       "id": "6a3e34fe-2697-4175-8bb9-6f3e93f7e6d4",
       "name": "Update video 5",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         2080
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "video_5": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -2230,239 +830,25 @@
     {
       "id": "0ade2e46-7157-4901-907f-2e575f50f1b0",
       "name": "Update video 4",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         1872
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "video_4": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -2475,239 +861,25 @@
     {
       "id": "7e15685d-fdb7-4bec-a5f6-ccb95f4e81c2",
       "name": "Update video 3",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         1664
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "video_3": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -2720,239 +892,25 @@
     {
       "id": "3393dba0-470a-4997-a0e7-91649816e116",
       "name": "Update video 1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         1264
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "video_1": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').first().json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -3011,250 +969,25 @@
     {
       "id": "67c7c244-e7e8-4d56-919e-e98d95a09d1b",
       "name": "Update URL Final video",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3616,
         2144
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "status": "done",
-            "Final video": "={{ $json.video.url }}",
-            "image_contactsheet": "={{ $('Set Image URL').item.json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "new_image_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "new_image_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_4",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_5",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_6",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "video_6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Final video",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Final video",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_contactsheet"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -3358,24 +1091,25 @@
     {
       "id": "3c25a229-96d3-4520-bea9-f2e812bb7c82",
       "name": "Search new image",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         288,
         1664
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultUrl": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -3817,25 +1551,16 @@
     {
       "id": "e1858aae-e735-4b7b-93c3-3a4dca8ba3df",
       "name": "Upload file",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1968,
         64
       ],
       "parameters": {
-        "name": "={{$binary.image.fileName}}\n",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google DRIVE Document ID___>"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "inputDataFieldName": "image"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -3863,99 +1588,25 @@
     {
       "id": "084cbc5f-db93-4463-aff6-fc48f52c29b9",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3936,
         288
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "status": "nano_done",
-            "image_1": "={{ $('Aggregate descriptions').item.json.image1Url }}",
-            "image_2": "={{ $('Aggregate descriptions').item.json.image2Url }}",
-            "image_3": "={{ $('Aggregate descriptions').item.json.image3Url }}",
-            "description_all": "={{ $('Aggregate descriptions').item.json.allDescriptions }}",
-            "image_nanobanana": "={{ $json.images[0].url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>\n"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -3995,24 +1646,25 @@
     {
       "id": "5565af9e-f320-4816-be23-d047d0b61f69",
       "name": "Get image nanobanana",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1456,
         896
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultUrl": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -4114,121 +1766,25 @@
     {
       "id": "05441a54-658f-4e13-b838-1f65f3322119",
       "name": "Update database",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3056,
         896
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "status": "ContactSheet_done",
-            "row_number": 0,
-            "image_nanobanana": "={{ $('Get image nanobanana').item.json.image_nanobanana }}",
-            "image_contactsheet": "={{ $json.images[0].url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_1",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_2",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_3",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "image_3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description_all",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "description_all",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_nanobanana",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_nanobanana",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_contactsheet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_contactsheet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "image_nanobanana"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Sheet Tab Name__>"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -5072,7 +2628,7 @@
   "_cn_meta": {
     "title_zh": "Create AI product images and marketing videos with NanoBanana Pro, Veo 3.1 and Blotato",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 12462,
     "synced_at": "2026-06-17T14:20:23.965028",
     "foreign_services": [

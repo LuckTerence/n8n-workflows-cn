@@ -772,56 +772,126 @@
     {
       "id": "ea7c1010-8de9-46da-a9f9-75d0dbd25d0a",
       "name": "Create Event with Attendee",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3660,
         280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+      },
       "typeVersion": 1.3
     },
     {
       "id": "9ea7a1d6-a78d-4299-930c-2e8428861f55",
       "name": "Create Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3780,
         280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+      },
       "typeVersion": 1.3
     },
     {
       "id": "019a38f2-4447-4b31-8fc5-41cf0ca90a29",
       "name": "Get Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3900,
         280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+      },
       "typeVersion": 1.3
     },
     {
       "id": "c3352115-f872-46a8-a880-bd45d9e082b9",
       "name": "Delete Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4020,
         280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+      },
       "typeVersion": 1.3
     },
     {
       "id": "d6c48e3b-7e3f-4924-a41d-e772e3e1b208",
       "name": "Update Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4140,
         280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
+      },
       "typeVersion": 1.3
     },
     {

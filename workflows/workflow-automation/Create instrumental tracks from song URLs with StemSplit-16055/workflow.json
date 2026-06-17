@@ -331,28 +331,16 @@
     {
       "id": "a1000000-0000-4000-8000-000000000017",
       "name": "Upload to Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1740,
         40
       ],
       "parameters": {
-        "name": "={{ $('Normalize form data').item.json.safeFileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root",
-          "cachedResultName": "/ (Root folder)"
-        },
-        "resource": "file",
-        "operation": "upload",
-        "inputDataFieldName": "data"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -537,7 +525,7 @@
   "_cn_meta": {
     "title_zh": "Create instrumental tracks from song URLs with StemSplit",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 16055,
     "synced_at": "2026-06-17T14:12:29.266101",
     "foreign_services": [

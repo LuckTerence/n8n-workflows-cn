@@ -320,26 +320,16 @@
     {
       "id": "45fc8958-c402-4236-932a-c22a9c8740e5",
       "name": "Google Drive: Archive Lighting Ref",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3488,
         1152
       ],
       "parameters": {
-        "name": "=={{ $json.shotCode }}_lighting_{{ $now.toFormat('yyyyMMdd_HHmmss') }}.mp4",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_GOOGLE_DRIVE_FOLDER_ID",
-          "cachedResultName": "Previs Archive Folder"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -509,28 +499,27 @@
     {
       "id": "d222ad6e-e474-4331-92b3-4f5f40ac36b2",
       "name": "Slack: Publish Previs Board1",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3888,
         624
       ],
       "webhookId": "fe1bf20c-7798-44e8-b0a5-aafb7ae59509",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_SLACK_CHANNEL_ID",
-          "cachedResultName": "your-channel-name"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🎬 *AI Previs Board Ready — {{ $json.shotCode }}*\n\n📋 *Sequence:* {{ $json.sequenceCode }} | *Complexity:* {{ $json.complexity }}\n🎯 *Shot Intent:* {{ $json.shotIntent }}\n📝 *Script:* {{ $json.scriptSnippet }}\n🎥 *Lens:* {{ $json.lensSpecs }}\n\n*── 3 Camera Options for Supervisor Review ──*\n{{ $json.moveCards }}\n\n👆 *Supervisor — reply with Option A, B, or C. Your choice will be auto-attached to the shot task in Jira.*\n\n_AI previs generated in {{ $json.totalMoves }} camera variations. Generated: {{ $json.generatedAt }}_"
-        }
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -552,28 +541,27 @@
     {
       "id": "30233fa0-16ff-4328-9b00-0e7a978b1680",
       "name": "Slack: Error Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         880,
         1680
       ],
       "webhookId": "36b019e6-a01f-483e-8300-214089e84f91",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C0ANFAL4WJ2",
-          "cachedResultName": "social"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=❌ *AI-Assisted Clean Plate & Object Removal\n\nError: {{ $json.message }}\nTime: {{ new Date().toISOString() }}"
-        }
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -820,7 +808,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI camera moves with Seedance and build a previs review board",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14891,
     "synced_at": "2026-06-17T14:09:19.948381",
     "foreign_services": [

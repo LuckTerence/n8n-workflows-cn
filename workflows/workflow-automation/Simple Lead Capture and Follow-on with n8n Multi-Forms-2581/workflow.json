@@ -226,161 +226,25 @@
     {
       "id": "e7143922-7de1-448d-9abb-72034437f79c",
       "name": "Capture More Info",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1140,
         200
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "job_level": "={{ $('About You').item.json['Job Level'] }}",
-            "last_name": "={{ $('About You').item.json['Last Name'] }}",
-            "first_name": "={{ $('About You').item.json['First Name'] }}",
-            "execution_id": "={{ $execution.id }}",
-            "job_function": "={{ $('About You').item.json['Job Function'].join(', ') }}",
-            "product_goals": "={{ $('Your Interests').item.json['Describe briefly what you\\'d like to get out of our product?'] }}",
-            "country_region": "={{ $('About You').item.json['Country/Region'] }}",
-            "enrol_betatesters": "={{ $json['Would you like to be considered for our beta testers list?'] }}",
-            "product_experience": "={{ $('Your Interests').item.json['How familiar are you with no-code automation?'] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "execution_id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "execution_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "first_name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "first_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "last_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_level",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "job_level",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_function",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "job_function",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "country_region",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "country_region",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_experience",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product_experience",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_goals",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product_goals",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "enrol_betatesters",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "enrol_betatesters",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "execution_id"
           ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit?usp=drivesdk",
-          "cachedResultName": "Newsletter Signup"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -393,146 +257,25 @@
     {
       "id": "0cacb296-0d12-44e5-a749-65aa2e89a42d",
       "name": "Capture Email",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         60,
         160
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "date": "={{ $json.submittedAt }}",
-            "email": "={{ $json.Email }}",
-            "execution_id": "={{ $execution.id }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "execution_id",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "execution_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "first_name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "first_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "last_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_level",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "job_level",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_function",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "job_function",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "country_region",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "country_region",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_experience",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "product_experience",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_goals",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "product_goals",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "enrol_betatesters",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "enrol_betatesters",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": []
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15W1PiFjCoiEBHHKKCRVMLmpKg4AWIy9w1dQ2Dq8qxPs/edit?usp=drivesdk",
-          "cachedResultName": "Newsletter Signup"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -627,26 +370,25 @@
     {
       "id": "8035269e-224f-4036-9e8a-9447cfa87252",
       "name": "Notify New Signup!",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         240,
         160
       ],
       "webhookId": "1a9cb618-a2fd-4ee8-b3cf-4140b65d55c1",
       "parameters": {
-        "select": "channel",
-        "blocksUi": "={\n\t\"blocks\": [\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"{{ $('Sign Up Form').first().json.Email.extractEmail() }} *just signed up to the newsletter!*\"\n\t\t\t}\n\t\t}\n\t]\n}",
-        "channelId": {
-          "__rl": true,
-          "mode": "name",
-          "value": "#general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"={\\n\\t\\\"blocks\\\": [\\n\\t\\t{\\n\\t\\t\\t\\\"type\\\": \\\"section\\\",\\n\\t\\t\\t\\\"text\\\": {\\n\\t\\t\\t\\t\\\"type\\\": \\\"mrkdwn\\\",\\n\\t\\t\\t\\t\\\"text\\\": \\\"{{ $('Sign Up Form').first().json.Email.extractEmail() }} *just signed up to the newsletter!*\\\"\\n\\t\\t\\t}\\n\\t\\t}\\n\\t]\\n}\"}]}}"
+            }
+          ]
         },
-        "messageType": "block",
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=A user signed up to the newsletter!"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -654,7 +396,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -746,7 +488,7 @@
   "_cn_meta": {
     "title_zh": "Simple Lead Capture and Follow-on with n8n Multi-Forms",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2581,
     "synced_at": "2026-06-17T14:19:39.449429",
     "foreign_services": [

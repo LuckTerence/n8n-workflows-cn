@@ -289,31 +289,25 @@
     {
       "id": "47e41e13-e6e7-4959-bb08-1f1f4da01b34",
       "name": "Check Availability",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -464,
         1056
       ],
       "parameters": {
-        "options": {
-          "timezone": {
-            "__rl": true,
-            "mode": "list",
-            "value": "Asia/Kolkata",
-            "cachedResultName": "Asia/Kolkata"
-          }
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End_Time', ``, 'string') }}",
-        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start_Time', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
-        },
-        "resource": "calendar",
-        "descriptionType": "manual",
-        "toolDescription": "Check if a slot is available on my calendar"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -326,34 +320,25 @@
     {
       "id": "bd20eb61-ade0-4b4b-ba89-943dfa11ac05",
       "name": "Get all Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -368,
         1136
       ],
       "parameters": {
-        "options": {
-          "orderBy": "startTime",
-          "timeZone": {
-            "__rl": true,
-            "mode": "list",
-            "value": "Asia/Kolkata",
-            "cachedResultName": "Asia/Kolkata"
-          },
-          "recurringEventHandling": "expand"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
-        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', `Should be a future date and time`, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
-        },
-        "operation": "getAll",
-        "returnAll": true,
-        "descriptionType": "manual",
-        "toolDescription": "Get future events on Google Calendar"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -366,23 +351,25 @@
     {
       "id": "ace1f669-dd08-48df-81bc-30c852e1424d",
       "name": "Delete Calendar Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -288,
         1248
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the event id of the event to delete`, 'string') }}",
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "delete",
-        "descriptionType": "manual",
-        "toolDescription": "Delete Calendar Event"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -395,36 +382,25 @@
     {
       "id": "e24ed479-8a75-4c21-9f25-51d603b35574",
       "name": "Reschedule Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -160,
         1264
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the id of the event to reschedule or update`, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
-        },
-        "operation": "update",
-        "updateFields": {
-          "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-          "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-          "attendeesUi": {
-            "values": {
-              "mode": "replace",
-              "attendees": [
-                "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('attendees0_Attendees', ``, 'string') }}"
-              ]
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          },
-          "sendUpdates": "all"
+          ]
         },
-        "descriptionType": "manual",
-        "toolDescription": "Update an event on Google Calendar",
-        "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -437,23 +413,25 @@
     {
       "id": "8e9a40fd-9f34-44e0-b256-f15eb0a73ba2",
       "name": "Get Event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -80,
         1152
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Pass the event id`, 'string') }}",
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "get",
-        "descriptionType": "manual",
-        "toolDescription": "Get an event in Google Calendar"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -466,28 +444,25 @@
     {
       "id": "991c7d7f-3bcf-4006-8a56-8e606ff49307",
       "name": "Create an event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         16,
         1040
       ],
       "parameters": {
-        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "jitesh.com@gmail.com",
-          "cachedResultName": "jitesh.com@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "descriptionType": "manual",
-        "toolDescription": "Create an event on Google Calendar",
-        "additionalFields": {
-          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
-          "visibility": "default",
-          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
-        },
-        "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -1931,7 +1906,7 @@
   "_cn_meta": {
     "title_zh": "Jarvis: Productivity AI Agent for Tasks, Calendar, Email & Expense using MCPs",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8500,
     "synced_at": "2026-06-17T14:21:16.376042",
     "foreign_services": [

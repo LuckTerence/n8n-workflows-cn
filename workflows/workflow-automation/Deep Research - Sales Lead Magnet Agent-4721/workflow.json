@@ -340,25 +340,16 @@
     {
       "id": "f704a1c4-04ed-40cf-a9d2-49f60c2fa249",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4880,
         280
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.documentId }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "share",
-        "permissionsUi": {
-          "permissionsValues": {
-            "role": "reader",
-            "type": "anyone"
-          }
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -868,7 +859,7 @@
   "_cn_meta": {
     "title_zh": "Deep Research - Sales Lead Magnet Agent",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4721,
     "synced_at": "2026-06-17T14:12:36.583834",
     "foreign_services": [

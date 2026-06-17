@@ -3,7 +3,7 @@
 
 Midjourney+GPT-4o生成3D模型多视角图
 
-> 分类：多模态 AI | 适配等级：B（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 分类：多模态 AI | 适配等级：A（AI模型已适配，部分外服节点需手动替换为国内服务）
 > 原始来源：https://n8nworkflows.xyz/workflows/3628
 
 ---

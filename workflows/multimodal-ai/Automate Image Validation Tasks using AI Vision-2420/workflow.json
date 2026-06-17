@@ -68,19 +68,16 @@
     {
       "id": "7fb3b829-88a7-42ec-abfd-3ddaa042c916",
       "name": "Download Photos",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         680,
         380
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "={{ $json.url }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -293,7 +290,7 @@
   "_cn_meta": {
     "title_zh": "Automate Image Validation Tasks using AI Vision",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2420,
     "synced_at": "2026-06-17T14:19:43.721681",
     "foreign_services": [

@@ -99,68 +99,25 @@
     {
       "id": "a04dac9d-5477-41a3-8696-1871c1cccf53",
       "name": "Create Product Data Object1",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3280,
         -940
       ],
       "parameters": {
-        "title": "={{ $('Execute Workflow Trigger').item.json.metaData.title }}",
-        "options": {
-          "icon": "💬"
-        },
-        "resource": "databasePage",
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1775b6e0-c94f-80ac-9885-d9695af5bc89",
-          "cachedResultUrl": "https://www.notion.so/1775b6e0c94f80ac9885d9695af5bc89",
-          "cachedResultName": "AI use-case database"
-        },
-        "propertiesUi": {
-          "propertyValues": [
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "key": "Company|title",
-              "title": "={{ $json.metaData.CompanyName }}"
-            },
-            {
-              "key": "Department|multi_select",
-              "multiSelectValue": "={{ $json.AIoutput.AI_ML_References.Details.Department }}"
-            },
-            {
-              "key": "Dev status|select",
-              "selectValue": "={{ $json.AIoutput.AI_ML_References.Details.DevelopmentStatus }}"
-            },
-            {
-              "key": "Employees|select",
-              "selectValue": "={{ $json.sfOpp[0].Employees }}"
-            },
-            {
-              "key": "Engagement with n8n|select",
-              "selectValue": "Prospect"
-            },
-            {
-              "key": "Requires agents|checkbox",
-              "checkboxValue": "={{ $json.AIoutput.AI_ML_References.Details.RequiresAgents }}"
-            },
-            {
-              "key": "More info|url",
-              "urlValue": "={{ $json.metaData.url }}"
-            },
-            {
-              "key": "Requires RAG|checkbox",
-              "checkboxValue": "={{ $json.AIoutput.AI_ML_References.Details.RequiresRAG }}"
-            },
-            {
-              "key": "Requires chat|select",
-              "selectValue": "={{ $json.AIoutput.AI_ML_References.Details.RequiresChat }}"
-            },
-            {
-              "key": "Use case|rich_text",
-              "textContent": "={{ $json.AIoutput.AI_ML_References.Context }}"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
-        }
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -207,46 +164,25 @@
     {
       "id": "750c2853-3653-4557-b636-354fd91f846b",
       "name": "Create Product Feedback Data Object",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3440,
         -480
       ],
       "parameters": {
-        "title": "={{ $('Execute Workflow Trigger').item.json.metaData.title }}",
-        "options": {
-          "icon": "💬"
-        },
-        "resource": "databasePage",
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1375b6e0-c94f-80a8-93c9-c623b76dd14a",
-          "cachedResultUrl": "https://www.notion.so/1375b6e0c94f80a893c9c623b76dd14a",
-          "cachedResultName": "Product Feedback"
-        },
-        "propertiesUi": {
-          "propertyValues": [
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "key": "Sentiment|multi_select",
-              "multiSelectValue": "={{ $json.Sentiment }}"
-            },
-            {
-              "key": "Feedback|title",
-              "title": "={{ $json.Feedback }}"
-            },
-            {
-              "key": "Feedback Date|date",
-              "date": "={{ $('Execute Workflow Trigger').item.json.metaData.started }}"
-            },
-            {
-              "key": "Sales Call Summaries|relation",
-              "relationValue": [
-                "={{ $('Execute Workflow Trigger').item.json.notionData[0].id }}"
-              ]
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
-        }
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -447,32 +383,25 @@
     {
       "id": "50116044-d468-4f07-a711-8373c1b26e94",
       "name": "Update Call with AI Data Summary",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3180,
         -40
       ],
       "parameters": {
-        "pageId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Execute Workflow Trigger').item.json.notionData[0].id }}"
-        },
-        "options": {},
-        "resource": "databasePage",
-        "operation": "update",
-        "propertiesUi": {
-          "propertyValues": [
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "key": "AI Related|checkbox",
-              "checkboxValue": "={{ $json.AIoutput.AI_ML_References.Exist }}"
-            },
-            {
-              "key": "AI Summary|rich_text",
-              "textContent": "={{ $json.AIoutput.AI_ML_References.Context }}"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
-        }
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {

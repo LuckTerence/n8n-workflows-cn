@@ -148,25 +148,25 @@
     {
       "id": "aaf2d679-2f7a-492d-a5ea-b79ba9193ab3",
       "name": "Read Active Campaigns1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         9984,
         8176
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": false
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Workflow Configuration1').first().json.activeCampaignsSheet }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.7
     },
@@ -323,28 +323,25 @@
     {
       "id": "8e8ac742-5aba-44e1-a671-695b7c7a7e34",
       "name": "Append to Daily Content Plan1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         11840,
         7712
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "mappingMode": "autoMapInputData"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Workflow Configuration1').first().json.dailyContentPlanSheet }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Google Sheets Document ID__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.7
     },
@@ -784,7 +781,7 @@
   "_cn_meta": {
     "title_zh": "Automate social media content planning with Llama 3.3 AI, trending topics & Google Suite",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11880,
     "synced_at": "2026-06-17T14:21:56.146648",
     "foreign_services": [

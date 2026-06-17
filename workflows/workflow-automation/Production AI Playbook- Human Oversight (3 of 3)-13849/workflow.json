@@ -154,36 +154,25 @@
     {
       "id": "cad71c5b-918c-40a1-ada5-4baf93396386",
       "name": "Slack Approval Request",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -672,
         1104
       ],
       "webhookId": "5a62cc50-e4a5-436f-884b-a99d070f1124",
       "parameters": {
-        "user": {
-          "__rl": true,
-          "mode": "list",
-          "value": "U0AB7QP5H1B",
-          "cachedResultName": "elvissaravia"
-        },
-        "message": "=*Content Approval Required*\n\n*Original:*\n{{ $('On form submission1').item.json['Content Body'].substring(0,300) }}\n\n*AI Enhanced:*\n{{ $json.output.substring(0,300) }}",
-        "options": {
-          "limitWaitTime": {
-            "values": {
-              "resumeUnit": "minutes",
-              "resumeAmount": 2
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"=*Content Approval Required*\\n\\n*Original:*\\n{{ $('On form submission1').item.json['Content Body'].substring(0,300) }}\\n\\n*AI Enhanced:*\\n{{ $json.output.substring(0,300) }}\"}]}}"
             }
-          }
+          ]
         },
-        "operation": "sendAndWait",
-        "authentication": "oAuth2",
-        "approvalOptions": {
-          "values": {
-            "approvalType": "double",
-            "disapproveLabel": "Reject"
-          }
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -191,7 +180,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -672,7 +661,7 @@
   "_cn_meta": {
     "title_zh": "Production AI Playbook: Human Oversight (3 of 3)",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13849,
     "synced_at": "2026-06-17T14:10:49.818542",
     "foreign_services": [

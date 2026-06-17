@@ -621,26 +621,25 @@
     {
       "id": "268fb051-179d-4a6a-8294-e731a913e861",
       "name": "Slack notification",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2944,
         -1104
       ],
       "webhookId": "75be4a33-93cb-462c-b6d2-5ea41f0353c2",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C09V1228324",
-          "cachedResultName": "tous-n8n"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "Alert: risk of churn"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -648,7 +647,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",

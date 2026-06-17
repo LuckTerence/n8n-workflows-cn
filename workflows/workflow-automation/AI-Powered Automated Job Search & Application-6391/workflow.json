@@ -318,140 +318,25 @@
     {
       "id": "efe315eb-d796-4e23-8870-0bfad16f35b1",
       "name": "Upate sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3120,
         -360
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "status": "draft",
-            "job_url": "={{ $('🧪 Extract Job Info').item.json.job_url }}",
-            "cover_letter": "={{ $json.output }}",
-            "tailored_resume": "={{ $('8️⃣Rewrite Resume').item.json.output }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "job_title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "job_description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "job_url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "job_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "company",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "resume",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "resume",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "tailored_resume",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "tailored_resume",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "cover_letter",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "cover_letter",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "status"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1612746852,
-          "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL#gid=1612746852",
-          "cachedResultName": "update sheet"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "cachedResultUrl": "YOUR_GOOGLE_SHEET_URL",
-          "cachedResultName": "Job Search Automation Product Database"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -777,7 +662,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Automated Job Search & Application",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6391,
     "synced_at": "2026-06-17T14:06:12.417753",
     "foreign_services": [

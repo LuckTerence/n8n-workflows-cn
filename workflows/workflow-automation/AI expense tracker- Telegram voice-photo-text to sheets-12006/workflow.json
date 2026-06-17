@@ -10,32 +10,26 @@
     {
       "id": "789a3e35-547d-47ff-9fce-4287f1a51ee0",
       "name": "Google Sheets: Get Rows (Dedup lookup)",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "maxTries": 2,
       "position": [
         560,
         -64
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "={{ $json.update_id }}",
-              "lookupColumn": "Update_ID"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.sheet_gid_log }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -315,125 +309,25 @@
     {
       "id": "1cd58e0a-904a-4ac6-88dc-e35b6f3cbfc2",
       "name": "Google Sheets → Append row(s)",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3072,
         -80
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Date": "={{ $json.date }}",
-            "Item": "={{ $json.item }}",
-            "Amount": "={{ $json.amount }}",
-            "Category": "={{ $json.category }}",
-            "Currency": "={{ $json.currency }}",
-            "Raw_Input": "={{ $json.raw_input }}",
-            "Update_ID": "={{ $json.update_id }}",
-            "Message_ID": "={{ $json.message_id }}",
-            "Payment_Method": "={{ $json.payment_method }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Update_ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Update_ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Message_ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Message_ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Item",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Item",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Amount",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Amount",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Payment_Method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Payment_Method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Category",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Category",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Currency",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Currency",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Raw_Input",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Raw_Input",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.sheet_gid_log }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -961,64 +855,25 @@
     {
       "id": "9551f85a-3dd3-413c-a5b9-155a3065611e",
       "name": "Google Sheets → Append or update row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1168,
         -944
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "ts": "={{ new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' }) }}",
-            "amount": "={{ $json.amount }}",
-            "raw_text": "={{ $json.raw_text }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "ts",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "ts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "amount",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "amount",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "raw_text",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "raw_text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ Number($('CONFIG - User Settings').item.json.sheet_gid_budget) }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1055,30 +910,25 @@
     {
       "id": "179743fe-7387-48b4-a2e0-50a5b9479ad4",
       "name": "GS - Get Daily Report Range",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4512,
         -80
       ],
       "parameters": {
-        "options": {
-          "dataLocationOnSheet": {
-            "values": {
-              "range": "D1:I2",
-              "rangeDefinition": "specifyRangeA1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ Number($('CONFIG - User Settings').item.json.sheet_gid_dashboard) }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('CONFIG - User Settings').item.json.spreadsheet_id }}"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1972,7 +1822,7 @@
   "_cn_meta": {
     "title_zh": "AI expense tracker: Telegram voice-photo-text to sheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 12006,
     "synced_at": "2026-06-17T14:11:39.943781",
     "foreign_services": [

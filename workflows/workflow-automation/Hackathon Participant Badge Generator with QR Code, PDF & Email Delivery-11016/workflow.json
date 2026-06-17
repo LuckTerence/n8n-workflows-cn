@@ -172,149 +172,25 @@
     {
       "id": "416e76d5-1ff1-4d86-b937-dfcb69e3b9fa",
       "name": "Log to Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1296,
         288
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $('Validate Input').item.json.name }}",
-            "Role": "={{ $('Validate Input').item.json.role }}",
-            "Team": "={{ $('Validate Input').item.json.team }}",
-            "Email": "={{ $('Validate Input').item.json.email }}",
-            "Event": "={{ $('Validate Input').item.json.event }}",
-            "Status": "Sent",
-            "PDF URL": "={{ $('HTML to PDF').item.json.pdf_url }}",
-            "Badge ID": "={{ $('Generate Badge ID & URL').item.json.badgeId }}",
-            "Timestamp": "={{ $now }}",
-            "Verify URL": "={{ $('Generate Badge ID & URL').item.json.verifyUrl }}",
-            "Issued Date": "={{ $('Generate Badge ID & URL').item.json.issuedAt }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Team",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Team",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Role",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Role",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Event",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Event",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Badge ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Badge ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Verify URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Verify URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Issued Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Issued Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PDF URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PDF URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_DOCUMENT_ID/edit#gid=0",
-          "cachedResultName": "YOUR_SHEET_NAME"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_DOCUMENT_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_DOCUMENT_ID/edit?usp=drivesdk",
-          "cachedResultName": "YOUR_DOCUMENT_NAME"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -513,7 +389,7 @@
   "_cn_meta": {
     "title_zh": "Hackathon Participant Badge Generator with QR Code, PDF & Email Delivery",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11016,
     "synced_at": "2026-06-17T14:16:01.017853",
     "foreign_services": [

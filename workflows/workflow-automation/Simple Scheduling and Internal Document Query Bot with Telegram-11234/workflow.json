@@ -242,27 +242,26 @@
     {
       "id": "f0979cce-8c53-46c7-8391-b72f1aa719bd",
       "name": "Update an event in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         592,
         208
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "aulaconstrucaobots.ia@gmail.com",
-          "cachedResultName": "aulaconstrucaobots.ia@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "update",
-        "updateFields": {
-          "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-          "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
-          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -275,22 +274,25 @@
     {
       "id": "68956788-cc31-4c85-94b5-b5a5c2c4f74c",
       "name": "Get many events in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         208,
         208
       ],
       "parameters": {
-        "options": {},
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
-        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "aulaconstrucaobots.ia@gmail.com",
-          "cachedResultName": "aulaconstrucaobots.ia@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -303,23 +305,25 @@
     {
       "id": "27a882b6-9938-4cf4-b0ea-e147ed1c6bbd",
       "name": "Delete an event in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         400,
         208
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
-        "options": {
-          "sendUpdates": ""
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "aulaconstrucaobots.ia@gmail.com",
-          "cachedResultName": "aulaconstrucaobots.ia@gmail.com"
-        },
-        "operation": "delete"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -332,24 +336,25 @@
     {
       "id": "cc028ab9-0ed8-484b-a5bf-29c3f005374c",
       "name": "Create an event in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         32,
         208
       ],
       "parameters": {
-        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "aulaconstrucaobots.ia@gmail.com",
-          "cachedResultName": "aulaconstrucaobots.ia@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {
-          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
-          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -621,7 +626,7 @@
   "_cn_meta": {
     "title_zh": "Simple Scheduling and Internal Document Query Bot with Telegram",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11234,
     "synced_at": "2026-06-17T14:11:31.176065",
     "foreign_services": [

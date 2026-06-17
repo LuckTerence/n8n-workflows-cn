@@ -55,7 +55,7 @@
     {
       "id": "c0ac70b6-0545-4681-af88-e3baae9d658e",
       "name": "(Optional) Send Slack Alert for High-Risk Events",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         40,
@@ -63,14 +63,20 @@
       ],
       "webhookId": "292c465e-1f1e-4c22-9947-ccffafbf45e2",
       "parameters": {
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🚨 *NixGuard IP Analysis* 🚨\n\n*AI Summary:*\n{{ $json.ai_summary }}"
-        }
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "typeVersion": 2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -207,7 +213,7 @@
   "_cn_meta": {
     "title_zh": "Automated URL Phishing & Threat Analysis with NixGuard AI",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5937,
     "synced_at": "2026-06-17T14:12:13.238024",
     "foreign_services": [

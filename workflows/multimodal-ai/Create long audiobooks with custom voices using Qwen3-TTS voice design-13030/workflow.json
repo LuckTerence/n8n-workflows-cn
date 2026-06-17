@@ -79,34 +79,25 @@
     {
       "id": "5dab72a8-326f-4483-a83f-0c68546508fe",
       "name": "Get scripts",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -416,
         416
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "Temp URL"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit?usp=drivesdk",
-          "cachedResultName": "Audiobooks"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -119,109 +110,25 @@
     {
       "id": "08e31150-9ab1-4a21-8076-a8321152cf05",
       "name": "Update Temp URL",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         368,
         432
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Temp URL": "={{ $json.output }}",
-            "To Merge": "x",
-            "row_number": "={{ $('Loop Over Items').item.json.row_number }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Text",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Speaker",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Speaker",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Voice Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Voice Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Style Instruction",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Style Instruction",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Temp URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Temp URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "To Merge",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "To Merge",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1f4rB-i3cVDzKLi6nv8EMvjjyg9n4rgkOVx28_EI1NBI/edit?usp=drivesdk",
-          "cachedResultName": "Audiobooks"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -375,26 +282,16 @@
     {
       "id": "889c8e2c-9a08-49b9-a820-1bfd194e8934",
       "name": "Upload Audiobook",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1696,
         16
       ],
       "parameters": {
-        "name": "={{ $now.format('yyyyLLddHHmmss') }}-{{ $json.audio.file_name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1aHRwLWyrqfzoVC8HoB-YMrBvQ4tLC-NZ",
-          "cachedResultName": "Fal.run"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -413,7 +310,7 @@
         432
       ],
       "parameters": {
-        "url": "https://api.replicate.com/v1/models/qwen/qwen3-tts/predictions",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {},
         "jsonBody": "={\n  \"input\": {\n    \"mode\": \"voice_design\",\n    \"text\": \"{{ $json.Text }}\",\n    \"language\": \"auto\",\n     \"speaker\": \"{{ $json.Speaker }}\",\n    \"voice_description\": \"{{ $json['Voice Description'] }}\",\n    \"style_instruction\":\"{{ $json['Style Instruction'] }}\"\n  }\n} ",
@@ -429,7 +326,8 @@
               "value": "wait"
             }
           ]
-        }
+        },
+        "notes": "原 Replicate → 通义万相"
       },
       "credentials": {
         "httpBearerAuth": {
@@ -704,7 +602,7 @@
   "_cn_meta": {
     "title_zh": "Create long audiobooks with custom voices using Qwen3-TTS voice design",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13030,
     "synced_at": "2026-06-17T14:19:55.381335",
     "foreign_services": [

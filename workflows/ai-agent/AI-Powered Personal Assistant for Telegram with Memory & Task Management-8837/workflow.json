@@ -424,29 +424,25 @@
     {
       "id": "c9717320-f73e-495f-851b-579a56ffca33",
       "name": "Get Memories",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         60,
         480
       ],
       "parameters": {
-        "base": {
-          "mode": "list",
-          "value": "={{ $json.settings.AIRTABLE_BASE_ID }}"
-        },
-        "sort": {
-          "property": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "field": "Time"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "table": {
-          "mode": "list",
-          "value": "={ $json.settings.AIRTABLE_TABLE_MEMORY }"
-        },
         "options": {},
-        "operation": "search"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -609,21 +605,25 @@
     {
       "id": "2dfd5a1d-11c7-4127-a42e-01c4aed85a36",
       "name": "Get Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         640
       ],
       "parameters": {
-        "limit": "={{ $fromAI(\"Limit\") }}",
-        "options": {},
-        "timeMax": "={{ $fromAI(\"Before\") }}",
-        "timeMin": "={{ $fromAI(\"After\") }}",
-        "calendar": {
-          "mode": "id",
-          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -636,24 +636,25 @@
     {
       "id": "bf874e10-c9a2-403c-8d46-94c80e82e76e",
       "name": "Create Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         960
       ],
       "parameters": {
-        "end": "={{ $fromAI(\"End\") }}",
-        "start": "={{ $fromAI(\"Start\") }}",
-        "calendar": {
-          "mode": "id",
-          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {
-          "color": "={{ $fromAI(\"Color\") }}",
-          "summary": "={{ $fromAI(\"Title\") }}",
-          "location": "={{ $fromAI(\"Location\") }}",
-          "description": "={{ $fromAI(\"Description\") }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -666,19 +667,25 @@
     {
       "id": "feb5b5c7-87e8-496e-8e39-5ecebc9159ea",
       "name": "Delete Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         1120
       ],
       "parameters": {
-        "eventId": "={{ $fromAI(\"EventID\") }}",
-        "options": {},
-        "calendar": {
-          "mode": "id",
-          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "delete"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -691,27 +698,25 @@
     {
       "id": "d35e34d1-2546-4d89-b29c-494c8941aa8d",
       "name": "Update Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         1260
       ],
       "parameters": {
-        "eventId": "={{ $fromAI(\"EventID\") }}",
-        "calendar": {
-          "mode": "id",
-          "value": "={{ $json.settings.GCAL_ID || 'primary' }}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "update",
-        "updateFields": {
-          "end": "={{ $fromAI(\"End\") }}",
-          "color": "={{ $fromAI(\"Color\") }}",
-          "start": "={{ $fromAI(\"Start\") }}",
-          "summary": "={{ $fromAI(\"Title\") }}",
-          "location": "={{ $fromAI(\"Location\") }}",
-          "description": "={{ $fromAI(\"Description\") }}",
-          "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -932,26 +937,25 @@
     {
       "id": "24b6f50f-2502-415a-a3de-8760044094dc",
       "name": "Create Recurring Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         800
       ],
       "parameters": {
-        "end": "={{ $fromAI(\"End\") }}",
-        "start": "={{ $fromAI(\"Start\") }}",
-        "calendar": {
-          "mode": "id",
-          "value": "={{ $json.settings.GCAL_ID || 'primary' }}",
-          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {
-          "color": "={{ $fromAI(\"Color\") }}",
-          "summary": "={{ $fromAI(\"Title\") }}",
-          "location": "={{ $fromAI(\"Location\") }}",
-          "description": "={{ $fromAI(\"Description\") }}",
-          "repeatUntil": "={{ $fromAI(\"RepeatUntil\") }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -1300,7 +1304,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Personal Assistant for Telegram with Memory & Task Management",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8837,
     "synced_at": "2026-06-17T14:16:44.754004",
     "description_zh": "Telegram 机器人"

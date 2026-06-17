@@ -29,28 +29,25 @@
     {
       "id": "d5b54189-9981-4b23-afa1-d8c2007ce94d",
       "name": "Fetch Contact Data ",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         140,
         -485
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 686562196,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit#gid=686562196",
-          "cachedResultName": "Sheet3"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit?usp=drivesdk",
-          "cachedResultName": "PageRankChecker"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -239,221 +236,25 @@
     {
       "id": "715c5558-6bdb-4b8b-afc1-ae62bbf175f0",
       "name": "Update Sheet with Follow-Up Status",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1240,
         -460
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Reply": "={{ $('Route by Follow-Up Stage').item.json.Reply }}",
-            "Follow-up": "={{ $('Route by Follow-Up Stage').item.json['Follow-up'] + 1}}",
-            "Send Mail": "=yes (Follow-up = {{ $('Route by Follow-Up Stage').item.json['Follow-up'] }}) ",
-            "User Name": "={{ $('Route by Follow-Up Stage').item.json['User Name'] }}",
-            "Inquiry ID": "={{ $('Route by Follow-Up Stage').item.json['Inquiry ID'] }}",
-            "User Email": "={{ $('Route by Follow-Up Stage').item.json['User Email'] }}",
-            "Follow-up Type": "Email",
-            "Submission Date": "={{ new Date($now).toISOString().split('T')[0] }}",
-            "Next Follow-up Date": "={{ new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "User Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "User Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "User Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "User Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Inquiry ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Inquiry ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Reply",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Reply",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Follow-up",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Follow-up",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Send Mail",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Send Mail",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Follow-up Type",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Follow-up Type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Communication Mode",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Communication Mode",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Comment",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Comment",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Requirement Doc",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Requirement Doc",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Workflow Diagram",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Workflow Diagram",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Test Cases",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Test Cases",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Call Schedule",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Call Schedule",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Submission Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Submission Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Next Follow-up Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Next Follow-up Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "User Name"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 686562196,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit#gid=686562196",
-          "cachedResultName": "Sheet3"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit?usp=drivesdk",
-          "cachedResultName": "PageRankChecker"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -487,103 +288,25 @@
     {
       "id": "91e87156-bd84-4df5-ad9e-11089af50c02",
       "name": "Update Sheet with Response ",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         140,
         -200
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "reply": "=yes",
-            "user email": "={{ $json.from }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "user name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "user name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "user email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "user email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "reply",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "reply",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "followup",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "followup",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Send mail",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Send mail",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "user email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 686562196,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit#gid=686562196",
-          "cachedResultName": "Sheet3"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1eO0pcfO3SFEofhUXjRy8Ps_XqfNpVnu5W8fwVSAy4Ds/edit?usp=drivesdk",
-          "cachedResultName": "PageRankChecker"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -750,7 +473,7 @@
   "_cn_meta": {
     "title_zh": "Automated Email Blast with Follow-Ups & Response Tracking",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7175,
     "synced_at": "2026-06-17T14:12:05.837963",
     "foreign_services": [

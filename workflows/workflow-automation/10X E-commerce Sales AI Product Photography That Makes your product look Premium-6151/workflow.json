@@ -7,25 +7,16 @@
     {
       "id": "1c1f5f21-2517-4644-bb67-4d9887f3b2c6",
       "name": "Get Images from Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -460,
         -2520
       ],
       "parameters": {
-        "filter": {
-          "folderId": {
-            "__rl": true,
-            "mode": "list",
-            "value": "YOUR_GOOGLE_DRIVE_FOLDER_ID",
-            "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_FOLDER_ID",
-            "cachedResultName": "Product Images"
-          }
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder",
-        "returnAll": true,
-        "queryString": ".png"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -47,28 +38,16 @@
     {
       "id": "aef4b599-cd45-48c9-8a31-8a6f31fc7680",
       "name": "Save Enhanced Image",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1300,
         -2520
       ],
       "parameters": {
-        "name": "enhanced-{{ $('Get Images from Google Drive').item.json.name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_OUTPUT_FOLDER_ID",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/YOUR_OUTPUT_FOLDER_ID",
-          "cachedResultName": "Enhanced Products"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -200,21 +179,16 @@
     {
       "id": "81ca6ccb-855e-4b04-934c-8167feea9fea",
       "name": "Download Binary Image Files2",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -180,
         -2520
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "options": {
-          "binaryPropertyName": "imageData"
-        },
-        "operation": "download"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -307,7 +281,7 @@
   "_cn_meta": {
     "title_zh": "10X E-commerce Sales AI Product Photography That Makes your product look Premium",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6151,
     "synced_at": "2026-06-17T14:16:33.988512",
     "foreign_services": [

@@ -399,12 +399,26 @@
     {
       "id": "4a85b3bc-e56c-4d8e-8d52-2061bbdc3374",
       "name": "News to Monitor",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -900,
         380
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -790,7 +804,7 @@
     "title_zh": "AI新闻研究团队",
     "description_zh": "24小时AI自动化新闻简报",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2778,
     "synced_at": "2026-06-17T11:37:02.791320",
     "upgraded_at": "2026-06-17",

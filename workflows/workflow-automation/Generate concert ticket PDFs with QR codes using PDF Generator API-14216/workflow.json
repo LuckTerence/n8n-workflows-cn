@@ -226,36 +226,25 @@
     {
       "id": "node-sheets",
       "name": "Log Ticket Sale",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2016,
         384
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hlzNCuQQH_1qq7fQiwRcxq84rKeR9bOVnf8o8hb4wug/edit?usp=drivesdk",
-          "cachedResultName": "Concert Tickets"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -268,24 +257,25 @@
     {
       "id": "node-slack",
       "name": "Notify Event Organizer",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2288,
         384
       ],
       "webhookId": "a7801711-2ba0-41b9-9dec-af02009f594e",
       "parameters": {
-        "user": {
-          "__rl": true,
-          "mode": "id",
-          "value": "U02P412345"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "select": "user",
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "={{ '🎫 New ticket issued!\\n*' + $('Prepare Ticket Data').item.json.tierBadge + '* — ' + $('Prepare Ticket Data').item.json.eventName + '\\n\\n👤 *Attendee:* ' + $('Prepare Ticket Data').item.json.attendeeName + '\\n📧 ' + $('Prepare Ticket Data').item.json.attendeeEmail + '\\n💺 *Seat:* ' + $('Prepare Ticket Data').item.json.seatNumber + '\\n🎟 *Ticket ID:* ' + $('Prepare Ticket Data').item.json.ticketId + '\\n\\n📄 PDF: ' + $('Generate Concert Ticket PDF').item.json.response }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -293,7 +283,7 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -381,7 +371,7 @@
   "_cn_meta": {
     "title_zh": "Generate concert ticket PDFs with QR codes using PDF Generator API",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14216,
     "synced_at": "2026-06-17T14:15:59.160621",
     "foreign_services": [

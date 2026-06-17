@@ -138,147 +138,75 @@
     {
       "id": "c2c21691-fd21-4afe-a60d-08c6399372e5",
       "name": "Select Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         400,
         200
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit",
-          "cachedResultName": "Your Customer Reviews Sheet"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "4a4b2f78-d043-4853-980d-f24c3f5139dd",
       "name": "Update Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1180,
         520
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Sentiment": "={{ $json.sentimentAnalysis.category }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Review title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Review title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Review text",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Review text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Sentiment",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Sentiment",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "sentimentAnalysis",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "sentimentAnalysis",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
-        "options": {
-          "cellFormat": "USER_ENTERED"
-        },
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit",
-          "cachedResultName": "Your Customer Reviews Sheet"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "e8af1018-02ea-4961-be63-4ac7e0b2db4a",
       "name": "Read Data from Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         980,
         180
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit",
-          "cachedResultName": "Your Customer Reviews Sheet"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "executeOnce": true,
       "typeVersion": 4.5
@@ -478,7 +406,7 @@
   "_cn_meta": {
     "title_zh": "Sentiment Analytics Visualizer",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5204,
     "synced_at": "2026-06-17T14:13:46.803484",
     "foreign_services": [

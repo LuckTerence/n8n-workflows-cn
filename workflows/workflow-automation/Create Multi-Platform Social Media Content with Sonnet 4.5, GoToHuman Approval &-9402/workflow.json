@@ -159,99 +159,25 @@
     {
       "id": "1600d02f-593b-4546-b6f2-7f6cf5401ca0",
       "name": "Update row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         896,
         560
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "POST": "={{ $json.responseValues.text.value }}",
-            "APPROVED": "x",
-            "row_number": "={{ $('Loop Over Items').item.json.row_number }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "IDEA",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "IDEA",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PLATFORM",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PLATFORM",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "POST",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "POST",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "APPROVED",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "APPROVED",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI/edit?usp=drivesdk",
-          "cachedResultName": "Editorial Plan"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -396,34 +322,25 @@
     {
       "id": "44185926-44fb-4810-b541-e9e792ea38c2",
       "name": "Get ideas",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -368,
         0
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "APPROVED"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WLdKRpPxwLzvD27uHZIlY5Lcc5i-79PmapcWyYzJevI/edit?usp=drivesdk",
-          "cachedResultName": "Editorial Plan"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -634,7 +551,7 @@
   "_cn_meta": {
     "title_zh": "Create Multi-Platform Social Media Content with Sonnet 4.5, GoToHuman Approval & Sheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9402,
     "synced_at": "2026-06-17T14:21:57.937974",
     "foreign_services": [

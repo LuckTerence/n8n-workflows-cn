@@ -236,23 +236,25 @@
     {
       "id": "e1f1c422-e20c-43b1-8dc9-41fb960a15a5",
       "name": "Google Sheets App",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3837,
         -760
       ],
       "parameters": {
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -580,18 +582,25 @@
     {
       "id": "cc712ce4-bb83-4635-8701-27dc5274b2bf",
       "name": "googleCalendarTool App",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         600,
         540
       ],
       "parameters": {
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {}
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {

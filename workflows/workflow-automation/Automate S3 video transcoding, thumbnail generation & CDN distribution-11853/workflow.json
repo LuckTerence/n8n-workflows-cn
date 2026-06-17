@@ -389,49 +389,52 @@
     {
       "id": "2ff7a3a5-a318-4930-a3ac-c0fa3653d334",
       "name": "Log Processing Metrics1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2480,
         1232
       ],
       "parameters": {
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "31dc01fb-e496-4520-b480-5c0007c02e94",
       "name": "Send Slack Notification1",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2480,
         1424
       ],
       "webhookId": "7881dad8-5dfc-448d-b61f-4edc70148eef",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "name",
-          "value": "#video-processing"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=*Video Processing Complete*\n*Job ID:* {{ $json.job_id }}\n*File:* {{ $json.original.filename }}\n*Resolution:* {{ $json.original.resolution }}\n*Duration:* {{ $json.original.duration }}"
-        }
+        "options": {}
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -714,7 +717,7 @@
   "_cn_meta": {
     "title_zh": "Automate S3 video transcoding, thumbnail generation & CDN distribution",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11853,
     "synced_at": "2026-06-17T14:06:59.209651",
     "foreign_services": [

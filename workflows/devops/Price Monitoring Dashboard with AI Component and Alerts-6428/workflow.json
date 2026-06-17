@@ -144,164 +144,25 @@
     {
       "id": "google-sheets-storage",
       "name": "Google Sheets Price Log",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2000,
         600
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "product_id",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Product ID",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Product Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "brand",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Brand",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "current_price",
-              "type": "number",
-              "display": true,
-              "required": false,
-              "displayName": "Current Price",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "original_price",
-              "type": "number",
-              "display": true,
-              "required": false,
-              "displayName": "Original Price",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "discount_percentage",
-              "type": "number",
-              "display": true,
-              "required": false,
-              "displayName": "Discount %",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "source",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Source",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "rating",
-              "type": "number",
-              "display": true,
-              "required": false,
-              "displayName": "Rating",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "availability",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Availability",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "is_on_sale",
-              "type": "boolean",
-              "display": true,
-              "required": false,
-              "displayName": "On Sale",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "market_position",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Market Position",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "tracking_priority",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Priority",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "scraped_at",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Scraped At",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
-            },
-            {
-              "id": "product_url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Product URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": false
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "product_id"
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/edit#gid=0",
-          "cachedResultName": "Price Data"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/edit#gid=0",
-          "cachedResultName": "Price Monitoring Sheet"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -364,26 +225,24 @@
     {
       "id": "slack-price-alert",
       "name": "Slack Price Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2000,
         400
       ],
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "name",
-          "value": "C1234567890"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "includeLinkPreviews": true
-        },
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "💰 **PRICE ALERT** 💰\n\n**{{ $json.product_name }}** by {{ $json.brand }}\n\n💸 **Current Price**: ${{ $json.current_price }}\n{% if $json.original_price %}🏷️ **Original Price**: ${{ $json.original_price }}\n✨ **Discount**: {{ $json.discount_percentage }}% OFF{% endif %}\n\n**Source**: {{ $json.source }}\n{% if $json.rating %}⭐ **Rating**: {{ $json.rating }}/5 ({{ $json.review_count }} reviews){% endif %}\n📦 **Availability**: {{ $json.availability }}\n\n**Why this matters:**\n{% if $json.change_significance == 'high' %}🚨 **SIGNIFICANT PRICE DROP** - This is a major price change!\n{% elif $json.discount_percentage >= 25 %}🔥 **HUGE DISCOUNT** - Over 25% off!\n{% elif $json.is_on_sale %}💯 **ON SALE** - Great time to buy!\n{% endif %}\n\n**Market Intelligence:**\n📊 Market Position: {{ $json.market_position | title }}\n🎯 Customer Satisfaction: {{ $json.customer_satisfaction | title }}\n💎 Value Score: {{ $json.value_score }}/10\n\n🛒 [**Buy Now**]({{ $json.product_url }})\n\n*Priority: {{ $json.tracking_priority }} | Tracked at {{ $json.scraped_at | date('short') }}*"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -391,7 +250,7 @@
           "name": ""
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -604,7 +463,7 @@
   "_cn_meta": {
     "title_zh": "Price Monitoring Dashboard with AI Component and Alerts",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6428,
     "synced_at": "2026-06-17T14:19:02.366086",
     "foreign_services": [

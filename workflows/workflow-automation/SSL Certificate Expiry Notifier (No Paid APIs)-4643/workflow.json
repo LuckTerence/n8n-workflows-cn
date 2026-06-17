@@ -23,89 +23,25 @@
     {
       "id": "b8c160c6-29a3-4b7d-ab78-e126206627b1",
       "name": "URLs to Monitor",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         60,
         140
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "URL": "={{ $json.result.host }}",
-            "Days Left": "={{ $json.result.days_left }}",
-            "Valid From": "={{ $json.result.valid_from }}",
-            "Valid Till": "={{ $json.result.valid_till }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Valid From",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Valid From",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Valid Till",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Valid Till",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Days Left",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Days Left",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "URL"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1TakDfkHpgB8qQcvy98mgUfEsEZGnIVNlkwqnsWhGDwI/edit?gid=0#gid=0",
-          "__regex": "https:\\/\\/docs\\.google\\.com\\/spreadsheets\\/d\\/[0-9a-zA-Z\\-_]+.*\\#gid=([0-9]+)"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1TakDfkHpgB8qQcvy98mgUfEsEZGnIVNlkwqnsWhGDwI/edit?gid=0#gid=0"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -119,23 +55,25 @@
     {
       "id": "21c4d282-5bb4-4d34-8cad-28e4e91843be",
       "name": "Fetch URLs",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -640,
         400
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1TakDfkHpgB8qQcvy98mgUfEsEZGnIVNlkwqnsWhGDwI/edit?gid=0#gid=0"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1TakDfkHpgB8qQcvy98mgUfEsEZGnIVNlkwqnsWhGDwI/edit?gid=0#gid=0"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -400,7 +338,7 @@
   "_cn_meta": {
     "title_zh": "SSL Certificate Expiry Notifier (No Paid APIs)",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4643,
     "synced_at": "2026-06-17T14:11:11.119309",
     "foreign_services": [

@@ -269,108 +269,25 @@
     {
       "id": "430f7f49-c0b8-4e0e-b217-d5b5831062e0",
       "name": "Save Yelp Data to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1820,
         -3260
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "URL": "={{ $json.url }}",
-            "name": "={{ $json.name }}",
-            "address": "={{ $json.address }}",
-            "Phone No": "={{ $json.phone_number }}",
-            "categories": "={{ $json.categories }}",
-            "overall_rating": "={{ $json.name }}",
-            "Company Website": "={{ $json.website }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "overall_rating",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "overall_rating",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "categories",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "categories",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Phone No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Phone No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "address",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "address",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Website",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1hJD3mDpa93IvPrnvo29FFfqQWEAjGHA_wGG5hfIlqlk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit?usp=drivesdk",
-          "cachedResultName": "Lead Generator Finder"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -397,27 +314,25 @@
     {
       "id": "1fa4c014-2c1b-4d9a-978f-cf16423fc88d",
       "name": "Read Yelp Sheet Websites",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2020,
         -3540
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1hJD3mDpa93IvPrnvo29FFfqQWEAjGHA_wGG5hfIlqlk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit?usp=drivesdk",
-          "cachedResultName": "Lead Generator Finder"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -660,101 +575,25 @@
     {
       "id": "0b535959-7c31-44c9-8d2d-4f3428f4e8dc",
       "name": "Save Trustpilot Data to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1460,
         -2840
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $json.company_email }}",
-            "Rating": "={{ $json.review_rating }}",
-            "Address": "={{ $json.company_location }}",
-            "Company Name": "={{ $json.company_name }}",
-            "Phone Number": "={{ $json.company_phone }}",
-            "Company About": "={{ $json.company_about }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Phone Number",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Phone Number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Address",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Address",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Rating",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Rating",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company About",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company About",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 972788573,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit#gid=972788573",
-          "cachedResultName": "Mail Scrap"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1xkNBckPDGf4YR74bJQN07tAr3qlEoA-70pQc63nBqZ8",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit?usp=drivesdk",
-          "cachedResultName": "Job Finder sheet"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -768,35 +607,25 @@
     {
       "id": "7e4768b9-0932-4b7c-bdf5-5348cbecb2eb",
       "name": "Read Emails from Trustpilot Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1680,
         -2840
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "=demo@example.com",
-              "lookupColumn": "Email"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 972788573,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit#gid=972788573",
-          "cachedResultName": "Mail Scrap"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1xkNBckPDGf4YR74bJQN07tAr3qlEoA-70pQc63nBqZ8",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/GOOGLE_SHEET_ID_PLACEHOLDER/edit?usp=drivesdk",
-          "cachedResultName": "Job Finder sheet"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1340,7 +1169,7 @@
   "_cn_meta": {
     "title_zh": "Generate Sales Leads with Yelp & Trustpilot Scraping + AI-Powered Email Outreach",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4912,
     "synced_at": "2026-06-17T14:16:17.877123",
     "foreign_services": [

@@ -276,12 +276,26 @@
     {
       "id": "7a025bac-e13e-4c18-9e60-9c6c71fa93f6",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1920,
         752
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.7
     },
     {
@@ -468,7 +482,7 @@
   "_cn_meta": {
     "title_zh": "Automated Stock Technical Analysis with xAI Grok & Multi-channel Notifications",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11621,
     "synced_at": "2026-06-17T14:12:11.502324",
     "foreign_services": [

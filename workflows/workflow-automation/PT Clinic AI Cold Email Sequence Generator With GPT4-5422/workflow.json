@@ -22,12 +22,26 @@
     {
       "id": "a8eaf027-a13a-4083-b331-800b354ff482",
       "name": "📊 Fetch PT Prospects",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -600,
         260
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.6
     },
     {
@@ -116,12 +130,26 @@
     {
       "id": "bbb0b293-69ab-4a1d-8ce4-ba25d56e7ebf",
       "name": "💾 Save to Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         660,
         260
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.6
     },
     {
@@ -288,7 +316,7 @@
   "_cn_meta": {
     "title_zh": "PT Clinic AI Cold Email Sequence Generator With GPT4",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5422,
     "synced_at": "2026-06-17T14:16:18.470445",
     "foreign_services": [

@@ -86,25 +86,25 @@
     {
       "id": "f8db0af5-71c2-4ea4-a576-9b9bd3d56544",
       "name": "get_calendar_events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         976,
         416
       ],
       "parameters": {
-        "options": {},
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', ``, 'string') }}",
-        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "k.armbruster91@gmail.com",
-          "cachedResultName": "Kevin (Home)"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll",
-        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}",
-        "descriptionType": "manual",
-        "toolDescription": "Use this get_calendar_events tool to fetch existing appointments for a specified period."
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -117,23 +117,25 @@
     {
       "id": "b266622e-0ed4-4d2d-b7b7-8a519f63112e",
       "name": "create_calendar_event",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1184,
         416
       ],
       "parameters": {
-        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "k.armbruster91@gmail.com",
-          "cachedResultName": "Kevin (Home)"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {
-          "summary": "={{ $('Set Defaults').item.json['Blocker name'] }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -588,7 +590,7 @@
   "_cn_meta": {
     "title_zh": "Automatically Add Travel Time Blockers to Calendar using Google Directions API",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6700,
     "synced_at": "2026-06-17T14:21:04.133668",
     "foreign_services": [

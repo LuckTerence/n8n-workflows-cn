@@ -351,85 +351,25 @@
     {
       "id": "10a35ef9-ab86-4010-9fcc-3cd765384e93",
       "name": "Append Item to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         940,
         -180
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "link",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "duration",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "duration",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": []
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit#gid=0",
-          "cachedResultName": "Blad1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit?usp=drivesdk",
-          "cachedResultName": "obsidian-n8n"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -442,27 +382,25 @@
     {
       "id": "62dd3faf-22db-40f9-892c-2cf9368a9496",
       "name": "Get Items from Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -660,
         460
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit#gid=0",
-          "cachedResultName": "Blad1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1F73a7uuzLAq916w2JFndumv0JhnCAvOTN-Cn_OOP3uA/edit?usp=drivesdk",
-          "cachedResultName": "obsidian-n8n"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -810,7 +748,7 @@
   "_cn_meta": {
     "title_zh": "Obsidian Notes Read Aloud using AI: Available as a Podcast Feed",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2699,
     "synced_at": "2026-06-17T14:20:44.996730",
     "foreign_services": [

@@ -492,52 +492,32 @@
     {
       "id": "ad87317d-3ed0-4fdf-aea5-7b2fa60fb59f",
       "name": "Upload Voice Audio",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1080,
         1460
       ],
       "parameters": {
-        "name": "={{ $('Load Google Sheet').item.json.id }}-voiceover.mp3",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
-          "cachedResultName": "Resume Studio"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
     {
       "id": "eec529e9-2601-4f7b-b415-63d2ebba1574",
       "name": "Set Access Permissions",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1260,
         1460
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "share",
-        "permissionsUi": {
-          "permissionsValues": {
-            "role": "writer",
-            "type": "anyone",
-            "allowFileDiscovery": true
-          }
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -627,37 +607,25 @@
     {
       "id": "4de1f1c7-52ad-4e00-ad22-b4c3c0f718d8",
       "name": "Load Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -180,
         1220
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "for production",
-              "lookupColumn": "production"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit?usp=drivesdk",
-          "cachedResultName": "Sheet Template"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5,
       "alwaysOutputData": true
@@ -768,26 +736,16 @@
     {
       "id": "b0d0fe6f-39c2-4da6-9fcf-b0151ed2c351",
       "name": "Upload Final Video",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2300,
         1140
       ],
       "parameters": {
-        "name": "=POV-{{ $('Render Final Video').item.json.id }}.mp4",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1w1EQ8xyth6w7AbX2wpDI3vInfYeRy8vH",
-          "cachedResultName": "Resume Studio"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -820,26 +778,16 @@
     {
       "id": "74de5f28-f081-4ec5-a47e-681eb845f701",
       "name": "Set Permissions",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2440,
         1140
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "share",
-        "permissionsUi": {
-          "permissionsValues": {
-            "role": "writer",
-            "type": "anyone",
-            "allowFileDiscovery": true
-          }
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -852,360 +800,25 @@
     {
       "id": "a2c07158-e949-4b5b-a92e-f4b021742831",
       "name": "Update Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2600,
         1140
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "id": "={{ $('Load Google Sheet').first().json.id }}",
-            "width": "={{ $('Get Raw File').item.json.width }}",
-            "height": "={{ $('Get Raw File').item.json.height }}",
-            "model1": "={{ $('Generate Video Captions').item.json.model }}",
-            "model2": "={{ $('Pair Videos with Audio').item.json.model }}",
-            "model3": "={{ $('Generate Script').item.json.model }}",
-            "duration": "={{ $('Get Raw File').item.json.duration }}",
-            "fluxCost": "0.075",
-            "frameRate": "={{ $('Get Raw File').item.json.frame_rate }}",
-            "klingCost": "2.3",
-            "production": "done",
-            "publishing": "for publishing",
-            "final_output": "={{ $('Upload Final Video').item.json.webContentLink }}",
-            "prompt1 input tokens": "={{ $('Generate Video Captions').item.json.usage.prompt_tokens }}",
-            "prompt2 input tokens": "={{ $('Pair Videos with Audio').item.json.input_tokens }}",
-            "prompt3 input tokens": "={{ $('Generate Script').item.json.usage.prompt_tokens }}",
-            "prompt1 output tokens": "={{ $('Generate Video Captions').item.json.usage.completion_tokens }}",
-            "prompt2 output tokens": "={{ $('Pair Videos with Audio').item.json.output_tokens }}",
-            "prompt3 output tokens": "={{ $('Generate Script').item.json.usage.completion_tokens }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "idea",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "idea",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "caption",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "caption",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "production",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "production",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "environment_prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "environment_prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "publishing",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "publishing",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "final_output",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "final_output",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "width",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "width",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "height",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "height",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "duration",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "duration",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "frameRate",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "frameRate",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model1",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt1 input tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt1 input tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt1 output tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt1 output tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model1 cost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model1 cost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt2 input tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt2 input tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt2 output tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt2 output tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model2 cost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model2 cost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt3 input tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt3 input tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt3 output tokens",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt3 output tokens",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model3 cost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model3 cost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "cmCost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "cmCost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "upgradeCmCost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "upgradeCmCost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fluxCost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "fluxCost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "klingCost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "klingCost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "totalCost",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "totalCost",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "datePosted",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "datePosted",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cjd8p_yx-M-3gWLEd5TargtoB35cW-3y66AOTNMQrrM/edit?usp=drivesdk",
-          "cachedResultName": "Sheet Template"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {

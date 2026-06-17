@@ -76,12 +76,26 @@
     {
       "id": "94ba99bf-a33b-4311-a4e6-86490e1bb9ad",
       "name": "Check Paper URL Existed",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1540,
         -280
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+      },
       "typeVersion": 2.2,
       "alwaysOutputData": true
     },
@@ -132,25 +146,52 @@
     {
       "id": "f491cd7f-598e-46fd-b80c-04cfa9766dfd",
       "name": "Store Abstract Notion",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -320,
         -320
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+      },
       "typeVersion": 2.2
     },
     {
       "id": "5282406e-3c5e-4b9b-85f3-a323942461e4",
       "name": "Send Analysis Result Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -320,
         -100
       ],
       "webhookId": "2d3704c1-25b0-4a42-81da-11b1165bb77b",
-      "parameters": {},
-      "typeVersion": 2.3,
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -315,7 +356,7 @@
   "_cn_meta": {
     "title_zh": "Automated Hugging Face Paper Summary Fetching & Categorization Workflow",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2765,
     "synced_at": "2026-06-17T14:14:00.361432",
     "foreign_services": [

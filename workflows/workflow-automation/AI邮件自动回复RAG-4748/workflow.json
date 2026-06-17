@@ -187,12 +187,17 @@
     {
       "id": "92c8079b-f3c7-4949-b5e9-b01c4cf9395f",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1280,
         -720
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -253,12 +258,26 @@
     {
       "id": "2315b4c2-e4df-4934-9b16-40e362397da1",
       "name": "Notion",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1360,
         180
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
+      },
       "typeVersion": 2.2
     },
     {
@@ -671,7 +690,7 @@
     "title_zh": "AI邮件自动回复RAG",
     "description_zh": "RAG增强的邮件自动回复系统",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4748,
     "synced_at": "2026-06-17T11:36:59.420983",
     "upgraded_at": "2026-06-17",

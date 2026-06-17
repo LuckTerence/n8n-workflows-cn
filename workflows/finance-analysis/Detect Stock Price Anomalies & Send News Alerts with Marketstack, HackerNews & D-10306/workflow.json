@@ -137,26 +137,25 @@
     {
       "id": "478fdb62-dde4-40e3-9e0b-2676330f91c0",
       "name": "Send Alert to Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1696,
         96
       ],
       "webhookId": "e0a002a8-b1df-41ff-a431-459120a37e77",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "CKUCBTG0H",
-          "cachedResultName": "general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🌐 *Original (English)*  \n{{ $json.message }}\n\n---\n\n🇯🇵 *Translated (Japanese)*  \n{{ $json.text }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -164,7 +163,7 @@
           "name": "Slack account 8"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -175,26 +174,25 @@
     {
       "id": "7ea2b37e-e074-400d-9e3b-28ac0bc9c816",
       "name": "Send Normal Report to Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         352,
         -96
       ],
       "webhookId": "b0f44cfc-ae30-4339-9428-c4fb468f900e",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "CKUCBTG0H",
-          "cachedResultName": "general"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=✅ 異常なし この銘柄の終値は安定しています。 現在値：{{ $('Calculate Deviation').item.json.latest }}（平均 {{ $('Calculate Deviation').item.json.mean }} ± {{ $('Calculate Deviation').item.json.sigma }})"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -202,7 +200,7 @@
           "name": "Slack account 8"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -629,7 +627,7 @@
   "_cn_meta": {
     "title_zh": "Detect Stock Price Anomalies & Send News Alerts with Marketstack, HackerNews & DeepL",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10306,
     "synced_at": "2026-06-17T14:21:36.535294",
     "foreign_services": [

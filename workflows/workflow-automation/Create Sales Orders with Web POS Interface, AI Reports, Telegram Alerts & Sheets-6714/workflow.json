@@ -33,127 +33,25 @@
     {
       "id": "75d42049-e27a-4208-82ef-4a121812563e",
       "name": "Append or update row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         40
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "SALES ID": "={{ $json[\"SALES ID\"] }}",
-            "SALES QTY": "={{ $json[\"SALES QTY\"] }}",
-            "SALES DATE": "={{ $json[\"SALES DATE\"] }}",
-            "SALES DISCOUNT": "={{ $json[\"SALES DISCOUNT\"] }}",
-            "SALES PRICE (USD)": "={{ $json[\"SALES PRICE (USD)\"] }}",
-            "SALES PRODUCT NAME": "={{ $json[\"SALES PRODUCT NAME\"] }}",
-            "SALES CUSTOMER NAME": "={{ $json[\"SALES CUSTOMER NAME\"] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "SALES ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "SALES ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES CUSTOMER NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES CUSTOMER NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES PRODUCT NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES PRODUCT NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES CATEGORY NAME",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "SALES CATEGORY NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES PRICE (USD)",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES PRICE (USD)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES QTY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES QTY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES DISCOUNT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SALES DISCOUNT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SALES TOTAL",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "SALES TOTAL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "SALES ID"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1157363351
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_ID"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -183,23 +81,25 @@
     {
       "id": "84791b6d-a9b2-42b5-8c26-616c66adadd6",
       "name": "Get products data",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -960,
         220
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_ID"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -523,7 +423,7 @@
   "_cn_meta": {
     "title_zh": "Create Sales Orders with Web POS Interface, AI Reports, Telegram Alerts & Sheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6714,
     "synced_at": "2026-06-17T14:12:28.102664",
     "foreign_services": [

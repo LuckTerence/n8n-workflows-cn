@@ -221,111 +221,25 @@
     {
       "id": "eb052f76-0c33-418a-a6a2-c9a1835e46ab",
       "name": "Log to Google Sheets (Success)",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1008,
         256
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Reward Sent",
-            "Campaign": "={{ $('Set Coupon Template').item.json.campaign }}",
-            "Timestamp": "={{ $now.toISO() }}",
-            "Coupon Code": "={{ $('Set Coupon Template').item.json.coupon_code }}",
-            "Referrer Name": "={{ $('Set Coupon Template').item.json.referrer_name }}",
-            "Referrer Email": "={{ $('Set Coupon Template').item.json.referrer_email }}",
-            "Coupon Image URL": "={{ $('HTML/CSS to Image').item.json.image_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Referrer Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Referrer Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Referrer Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Referrer Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Coupon Code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Coupon Code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Coupon Image URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Coupon Image URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Campaign",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Campaign",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Referrer Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_ID/edit#gid/YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_ID/edit?usp=drivesdk",
-          "cachedResultName": "Referral_Reward_Tracker"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -398,111 +312,25 @@
     {
       "id": "3435d390-9873-4c19-87a1-c6a5dbb92cbd",
       "name": "Log to Google Sheets (Failed)",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         400,
         464
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Email Verification Failed",
-            "Campaign": "={{ $('Webhook Trigger').item.json.body.campaign }}",
-            "Timestamp": "={{ $now.toISO() }}",
-            "Referrer Name": "={{ $('Webhook Trigger').item.json.body.referrer_name }}",
-            "Referrer Email": "={{ $('Webhook Trigger').item.json.body.referrer_email }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Referrer Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Referrer Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Referrer Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Referrer Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Coupon Code",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Coupon Code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Coupon Image URL",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Coupon Image URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Campaign",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Campaign",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Referrer Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_ID/edit#gid/YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_ID/edit?usp=drivesdk",
-          "cachedResultName": "Referral_Reward_Tracker"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -661,7 +489,7 @@
   "_cn_meta": {
     "title_zh": "Automated Referral Reward System with Email Verification and Visual Coupons",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10161,
     "synced_at": "2026-06-17T14:07:12.327049",
     "foreign_services": [

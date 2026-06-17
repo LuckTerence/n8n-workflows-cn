@@ -1394,7 +1394,7 @@
   "_cn_meta": {
     "title_zh": "Local Document Question Answering with Ollama AI, Agentic RAG & PGVector",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10157,
     "synced_at": "2026-06-17T14:15:14.078866",
     "foreign_services": [

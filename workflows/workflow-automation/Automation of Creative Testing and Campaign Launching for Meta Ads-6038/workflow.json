@@ -46,26 +46,16 @@
     {
       "id": "b1f789fc-f8a1-4e54-bdc7-094d81f440a5",
       "name": "Files search",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -176,
         112
       ],
       "parameters": {
-        "filter": {},
-        "options": {
-          "fields": [
-            "id",
-            "name",
-            "mimeType",
-            "webViewLink",
-            "thumbnailLink"
-          ]
-        },
-        "resource": "fileFolder",
-        "returnAll": true,
-        "queryString": "(mimeType='image/jpeg' or mimeType='image/png' or mimeType='video/mp4') and '13WeDNsMdihc79WNZYOGxZvXU9ea7N4X_' in parents and trashed=false",
-        "searchMethod": "query"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -79,15 +69,16 @@
     {
       "id": "241c082a-a8b8-429c-9c51-5bfc02bad341",
       "name": "Download Files",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         48,
         112
       ],
       "parameters": {
-        "fileId": "={{ $json.id }}",
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -526,114 +517,25 @@
     {
       "id": "a9ae4171-32f9-4c18-8500-966fa0874a2b",
       "name": "Save Full Report to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3120,
         128
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "AdID": "={{ $json.id }}",
-            "Type": "={{ $('Merge').item.json.mimeType }}",
-            "AdsetID": "={{ $('Create Ad Set').item.json.id }}",
-            "FileName": "={{ $('Merge').item.json.original_file_name }}",
-            "Timestamp": "={{$now.toFormat('ddMMyyyy')}}",
-            "CampaignID": "={{ $('Create Campaign').item.json.id }}",
-            "CreativeID": "={{ $('Merge').item.json.creative_id }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "FileName",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "FileName",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CreativeID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CreativeID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Type",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CampaignID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CampaignID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "AdsetID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "AdsetID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "AdID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "AdID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "CreativeID"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw/edit#gid=0",
-          "cachedResultName": "Creatives"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gwBOLHpez5fFX9C2m6PoZcsw5LLcjjbR7448jn6cimw/edit?usp=drivesdk",
-          "cachedResultName": "AutoTest_of_Creatives_v2"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1015,7 +917,7 @@
   "_cn_meta": {
     "title_zh": "Automation of Creative Testing and Campaign Launching for Meta Ads",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6038,
     "synced_at": "2026-06-17T14:20:20.081954",
     "foreign_services": [

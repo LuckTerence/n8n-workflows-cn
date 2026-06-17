@@ -38,35 +38,25 @@
     {
       "id": "bf50ca10-4021-4e6f-9c08-56fd84ce13ed",
       "name": "Check if ID Already Exists",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         200,
         20
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "={{ $json.order_id }}",
-              "lookupColumn": "Invoice ID"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit#gid=0",
-          "cachedResultName": "Invoices"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit?usp=drivesdk",
-          "cachedResultName": "Uppfy Shop Invoices"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -212,25 +202,16 @@
     {
       "id": "cebf6d0d-d43f-4e50-abc0-79ff8da1817a",
       "name": "Upload PDF to GDrive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         420,
         320
       ],
       "parameters": {
-        "name": "={{ $('Set Fields').item.json.order_id }} - {{ $('Set Fields').item.json.customer_name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root",
-          "cachedResultName": "/ (Root folder)"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -269,103 +250,25 @@
     {
       "id": "883e32b6-a812-44c8-b525-97e819af90bd",
       "name": "Append Details to Invoices Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         860,
         320
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Unpaid",
-            "Invoice ID": "={{ $('Set Fields').item.json.order_id }}",
-            "Invoice URL": "={{ $('Upload PDF to GDrive').item.json.webViewLink }}",
-            "Invoice Amt.": "=${{ $('Set Fields').item.json.total }}",
-            "Customer Name": "={{ $('Set Fields').item.json.customer_name }}",
-            "Customer Email": "={{ $('Set Fields').item.json.customer_email }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Invoice ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Invoice ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Customer Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Customer Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Invoice Amt.",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Invoice Amt.",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Invoice URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Invoice URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Invoice ID"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit#gid=0",
-          "cachedResultName": "Invoices"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1QW_Lg1aoEBku8GaxwPbZfBY5ITAuSdvoAXRyNdCEujM/edit?usp=drivesdk",
-          "cachedResultName": "Uppfy Shop Invoices"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -555,7 +458,7 @@
   "_cn_meta": {
     "title_zh": "Generate Invoices, Save to Drive and Send Email to Customer with JS + G Sheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4105,
     "synced_at": "2026-06-17T14:15:55.999752",
     "foreign_services": [

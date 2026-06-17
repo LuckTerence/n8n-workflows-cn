@@ -375,23 +375,25 @@
     {
       "id": "39db5553-77e5-4a12-9b98-716d16bcb445",
       "name": "Get Instance Information",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1040,
         1136
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "resource": "databasePage",
-        "operation": "getAll",
-        "returnAll": true,
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "306785c0-cfab-80a8-9236-f9c9b14042b5",
-          "cachedResultUrl": "https://www.notion.so/306785c0cfab80a89236f9c9b14042b5",
-          "cachedResultName": "Granite n8n Keys"
-        }
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {

@@ -402,24 +402,25 @@
     {
       "id": "945b53d9-813f-4705-b249-ffc6b1a86ff7",
       "name": "Log to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         336,
         656
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultName": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -625,7 +626,7 @@
   "_cn_meta": {
     "title_zh": "Create AI Dream Videos with Analysis using Veo3 and Telegram",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11575,
     "synced_at": "2026-06-17T14:12:26.827305",
     "foreign_services": [

@@ -304,98 +304,25 @@
     {
       "id": "ba6f6d2f-9a13-4bb4-80fb-72f5c4124473",
       "name": "Save summary PDF",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2580,
         -800
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
-            "DATE": "={{ $now.format('dd/LL/yyyy') }}",
-            "TYPE": "pdf",
-            "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
-            "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
-            "SUMMARY": "={{ $json.output.content }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUBJECT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUBJECT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TYPE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TYPE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUMMARY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUMMARY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
-          "cachedResultName": "Analyze Email + Attachments"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -444,26 +371,16 @@
     {
       "id": "dc5858b7-c30b-413b-a1d0-143a068f2c87",
       "name": "Upload attachments",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1440,
         480
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLddhhiiss')}}-{{ $binary.data.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1CV5PgqBQIVFEacmbApdCApjNEtoNPzXQ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1CV5PgqBQIVFEacmbApdCApjNEtoNPzXQ",
-          "cachedResultName": "Analyze attachments"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -546,98 +463,25 @@
     {
       "id": "99b4c22c-a29b-4b72-bc4a-bed5c1320386",
       "name": "Save summary image",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2020,
         20
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
-            "DATE": "={{ $now.format('dd/LL/yyyy') }}",
-            "TYPE": "image",
-            "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
-            "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
-            "SUMMARY": "={{ $json.content }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUBJECT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUBJECT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TYPE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TYPE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUMMARY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUMMARY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
-          "cachedResultName": "Analyze Email + Attachments"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -650,98 +494,25 @@
     {
       "id": "2b32c086-c436-436e-93c3-da88e6f08247",
       "name": "Save summary text",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2020,
         1040
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "ID": "={{ $('Email Trigger (IMAP)').item.json.metadata[\"x-message-id\"] }}",
-            "DATE": "={{ $now.format('dd/LL/yyyy') }}",
-            "TYPE": "email",
-            "EMAIL": "={{ $('Email Trigger (IMAP)').item.json.from }}",
-            "SUBJECT": "={{ $('Email Trigger (IMAP)').item.json.subject }}",
-            "SUMMARY": "={{ $json.response.text }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUBJECT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUBJECT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TYPE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TYPE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUMMARY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUMMARY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rBa0RI6XFfMerylVCV0dlKhJT_f4UAd8S6jyYX4aRRo/edit?usp=drivesdk",
-          "cachedResultName": "Analyze Email + Attachments"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1198,7 +969,7 @@
     "title_zh": "AI邮件附件分析",
     "description_zh": "分析PDF/图片附件保存到Drive+Telegram",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3169,
     "synced_at": "2026-06-17T11:37:04.650552",
     "upgraded_at": "2026-06-17",

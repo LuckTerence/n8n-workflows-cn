@@ -112,202 +112,25 @@
     {
       "id": "9f92040a-2117-4710-8047-eddf7f299f3e",
       "name": "Add Contacts",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1180,
         520
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "City": "={{ $('Split Out Batched Decision Maker Response').item.json.city }}",
-            "Name": "={{ $('Split Out Batched Decision Maker Response').item.json.name }}",
-            "State": "={{ $('Split Out Batched Decision Maker Response').item.json.state }}",
-            "Company": "={{ $('Split Out Batched Decision Maker Response').item.json.organization.name }}",
-            "Country": "={{ $('Split Out Batched Decision Maker Response').item.json.country }}",
-            "Job Title": "={{ $('Split Out Batched Decision Maker Response').item.json.title }}",
-            "Date Added": "={{ $now.toUTC().toFormat('yyyy-MM-dd') }}\n",
-            "Start Date": "={{ $('Split Out Batched Decision Maker Response').item.json.employment_history[0].start_date }}",
-            "Company Domain": "={{ $('Split Out Batched Decision Maker Response').item.json.organization.primary_domain }}",
-            "LinkedIn Profile URL": "={{ $('Split Out Batched Decision Maker Response').item.json.linkedin_url }}",
-            "GPT Department Classification": "={{ $json.message.content }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Job Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Job Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Start Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Start Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "GPT Department Classification",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "GPT Department Classification",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn Profile URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "LinkedIn Profile URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Domain",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "City",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "City",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "State",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "State",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Country",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Country",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email Address",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email Address",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email Verified",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email Verified",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date Added",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Date Added",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Last Contacted Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Last Contacted Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Lead Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Follow-Up Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Follow-Up Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "LinkedIn Profile URL"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 404191424,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit#gid=404191424",
-          "cachedResultName": "Contacts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI/edit?usp=drivesdk",
-          "cachedResultName": "Copy of Company Decision Maker Discovery"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -348,192 +171,25 @@
     {
       "id": "3d9c30f1-8b06-4b38-9d79-295d84bf150e",
       "name": "Enrich Contacts",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1840,
         420
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "=",
-            "Job Title": "=",
-            "Start Date": "=",
-            "Email Address": "={{ $json.email }}",
-            "Email Verified": "={{ $json.email_status === 'verified' ? 'Yes' : 'No' }}\n",
-            "LinkedIn Profile URL": "={{ $json.linkedin_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Job Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Job Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Start Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Start Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "GPT Department Classification",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "GPT Department Classification",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn Profile URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "LinkedIn Profile URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "City",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "City",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "State",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "State",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Country",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Country",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email Address",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email Address",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email Verified",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email Verified",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date Added",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Date Added",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Last Contacted Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Last Contacted Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Lead Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Follow-Up Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Follow-Up Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "LinkedIn Profile URL"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 404191424,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI/edit#gid=404191424",
-          "cachedResultName": "Contacts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI/edit?usp=drivesdk",
-          "cachedResultName": "Copy of Company Decision Maker Discovery"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -616,258 +272,52 @@
     {
       "id": "2afafc0c-b991-4f1c-869b-294dae2b41e5",
       "name": "Add Company Website",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1120,
         640
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Phone": "=",
-            "Domain": "={{ $json.organizations[0].primary_domain }}",
-            "Twitter": "=",
-            "Website": "={{ $json.organizations[0].website_url }}",
-            "Facebook": "=",
-            "Industry": "=",
-            "LinkedIn": "=",
-            "Revenue ($)": "=",
-            "Company Name": "={{ $json.organizations[0].name }}",
-            "Founded Year": "=",
-            "Headquarters": "=",
-            "Total Funding": "=",
-            "Company Description": "=",
-            "Latest Funding Stage": "=",
-            "Company Size (Employees)": "=",
-            "Lastest Funding Round Date": "="
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Website",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Twitter",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Twitter",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Facebook",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Facebook",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Phone",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Phone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Industry",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Industry",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Size (Employees)",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Size (Employees)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Headquarters",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Headquarters",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Founded Year",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Founded Year",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Revenue ($)",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Revenue ($)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Total Funding",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Total Funding",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Latest Funding Stage",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Latest Funding Stage",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lastest Funding Round Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Lastest Funding Round Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "GPT Company Summary",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "GPT Company Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Domain"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit#gid=0",
-          "cachedResultName": "Companies"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI/edit?usp=drivesdk",
-          "cachedResultName": "Copy of Company Decision Maker Discovery"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "b56cb966-8a67-433a-aea7-1e338fede0c1",
       "name": "Approve Company Website",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -800,
         600
       ],
       "webhookId": "830f75dd-f56e-4086-90ac-72ca14e226ce",
       "parameters": {
-        "select": "channel",
-        "message": "Please review the Companies tab of the spreadsheet (https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit?gid=0#gid=0) to verify that the correct domain names were retrieved. If needed, simply find and paste correct website URL of the company in the Website column (the Domain column will be populated automatically).",
-        "options": {},
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08PU1SKSKF",
-          "cachedResultName": "n8n-messages"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"Please review the Companies tab of the spreadsheet (https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit?gid=0#gid=0) to verify that the correct domain names were r\"}]}}"
+            }
+          ]
         },
-        "operation": "sendAndWait",
-        "authentication": "oAuth2"
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -878,234 +328,25 @@
     {
       "id": "1cc56d46-ae09-4f6a-97c7-da53acce7cb4",
       "name": "Add Company Details",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         140,
         800
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Phone": "={{ $json.organization.sanitized_phone ?? '' }}",
-            "Domain": "={{ $('Apollo Organization Enrichment').item.json.organization.primary_domain }}",
-            "Status": "Processed",
-            "Twitter": "={{ $('Apollo Organization Enrichment').item.json.organization.twitter_url }}",
-            "Website": "={{ $('Apollo Organization Enrichment').item.json.organization.website_url }}",
-            "Facebook": "={{ $('Apollo Organization Enrichment').item.json.organization.facebook_url }}",
-            "Industry": "={{ $('Apollo Organization Enrichment').item.json.organization.industries.join(\", \") }}",
-            "LinkedIn": "={{ $('Apollo Organization Enrichment').item.json.organization.linkedin_url }}",
-            "Revenue ($)": "={{ $('Apollo Organization Enrichment').item.json.organization.annual_revenue ?? '' }}",
-            "Company Name": "={{ $('Apollo Organization Enrichment').item.json.organization.name }}",
-            "Founded Year": "={{ $('Apollo Organization Enrichment').item.json.organization.founded_year }}",
-            "Headquarters": "={{ $('Apollo Organization Enrichment').item.json.organization.raw_address }}",
-            "Total Funding": "={{ $('Apollo Organization Enrichment').item.json.organization.total_funding }}",
-            "Company Description": "={{ $('Apollo Organization Enrichment').item.json.organization.short_description }}",
-            "GPT Company Summary": "={{ $json.message.content }}",
-            "Latest Funding Stage": "={{ $('Apollo Organization Enrichment').item.json.organization.latest_funding_stage }}",
-            "Company Size (Employees)": "={{ $('Apollo Organization Enrichment').item.json.organization.estimated_num_employees }}",
-            "Lastest Funding Round Date": "={{ \n  $('Apollo Organization Enrichment').item.json.organization.latest_funding_round_date &&\n  DateTime.fromISO($('Apollo Organization Enrichment').item.json.organization.latest_funding_round_date).isValid\n    ? DateTime.fromISO($('Apollo Organization Enrichment').item.json.organization.latest_funding_round_date).toFormat('yyyy-MM-dd')\n    : ''\n}}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Website",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Twitter",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Twitter",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Facebook",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Facebook",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Phone",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Phone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Industry",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Industry",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Size (Employees)",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company Size (Employees)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Headquarters",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Headquarters",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Founded Year",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Founded Year",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Revenue ($)",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Revenue ($)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Total Funding",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Total Funding",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Latest Funding Stage",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Latest Funding Stage",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lastest Funding Round Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Lastest Funding Round Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "GPT Company Summary",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "GPT Company Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Domain"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit#gid=0",
-          "cachedResultName": "Companies"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KqKFZ7Uxrt1MivBjLklGdPRMgNBhEc0slpthoSjt2wI/edit?usp=drivesdk",
-          "cachedResultName": "Copy of Company Decision Maker Discovery"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -1371,30 +612,27 @@
     {
       "id": "a9ff1d43-7eb8-4bad-87b5-bff8d1e7df99",
       "name": "Send Weekly Report",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1360,
         1420
       ],
       "webhookId": "4323a085-01ed-415e-98d0-d176b96767aa",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08PU1SKSKF",
-          "cachedResultName": "n8n-messages"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "includeLinkToWorkflow": true
-        },
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={{ $json.message }}"
-        }
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1405,35 +643,25 @@
     {
       "id": "ebe891a3-c999-4fdf-923e-4cbcdd73c17e",
       "name": "Retrieve Verified Leads",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1800,
         1420
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "Yes",
-              "lookupColumn": "Email Verified"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1337643228,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit#gid=1337643228",
-          "cachedResultName": "Contacts (Verified)"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Nt7cBLwwIr7kRCj6VL3wQDqfkfbL3j_dwlHHpExrL_s/edit?usp=drivesdk",
-          "cachedResultName": "Company Decision Maker Discovery"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5,
       "alwaysOutputData": true
@@ -1791,7 +1019,7 @@
   "_cn_meta": {
     "title_zh": "Discover & Enrich Decision-Makers with Apollo and Human Verification",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3830,
     "synced_at": "2026-06-17T14:08:37.908946",
     "foreign_services": [

@@ -310,26 +310,25 @@
     {
       "id": "a802b7e3-031a-4ed0-8137-ed9c4a8d63cb",
       "name": "root cause summary",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2912,
         -80
       ],
       "webhookId": "3133419b-c60f-4490-af90-15a8bfe14060",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "yourvalue",
-          "cachedResultName": "product-health-monitor"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={   \"text\": \"*Product Health – Root Cause Analysis*\\n\\nIncident:\\n- Metric: {{ $json.metric_name }}\\n- Date: {{ $json.date_start }}\\n- Severity: {{ $json.severity }}\\n\\nAI Summary:\\n{{ $json.ai_summary }}\",   \"mrkdwn\": true }"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -337,7 +336,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -568,20 +567,25 @@
     {
       "id": "df08d817-79cd-4799-8e15-1470aaedfe91",
       "name": "Update notions",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         800,
         0
       ],
       "parameters": {
-        "pageId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://www.notion.so/"
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "resource": "databasePage",
-        "operation": "update"
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -594,26 +598,25 @@
     {
       "id": "2c680c1d-25c7-4fc7-9d2a-60afd028063d",
       "name": "slack notification",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         992,
         0
       ],
       "webhookId": "yourwebhookid",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "yourvalue",
-          "cachedResultName": "product-health-monitor"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={   \"text\": \":rotating_light: *Product Health – Revenue Anomaly Detected*\\n\\n*Metric:* {{ $json.metric_name }}\\n*Date:* {{ $json.date }}\\n*Severity:* {{ $json.severity }}\\n*Baseline:* {{ $json.baseline_value }}\\n*Current:* {{ $json.actual_value }}\\n*Delta (%):* {{ $json.delta_pct }}\",   \"mrkdwn\": true }"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -621,7 +624,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -715,26 +718,25 @@
     {
       "id": "46fa29f5-e74d-49ad-a6e5-1cb9ceb3eb8a",
       "name": "Slack notification",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         832,
         320
       ],
       "webhookId": "7e6afeb8-8ebb-4bb2-b856-eb6efed30d9d",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "yourvalue",
-          "cachedResultName": "product-health-monitor"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={   \"text\": \":warning: *Product Health – Feature Usage Drop*\\n\\n*Metric:* {{ $json.metric_name }}\\n*Date:* {{ $json.date }}\\n*Severity:* {{ $json.severity }}\\n*Baseline accounts:* {{ $json.baseline_value }}\\n*Current accounts:* {{ $json.actual_value }}\\n*Delta (%):* {{ $json.delta_pct }}\",   \"mrkdwn\": true }"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -742,7 +744,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -867,30 +869,25 @@
     {
       "id": "36eac13a-bab7-4b21-b572-0299d00ff1c1",
       "name": "Notions database creation",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2240,
         320
       ],
       "parameters": {
-        "title": "=\"title\": \"=Daily Report – {{ new Date().toISOString().slice(0,10) }}\"",
-        "blockUi": {
-          "blockValues": [
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "textContent": "={{$json.text}}"
-            },
-            {
-              "textContent": "={{ $json.incidents.length }}"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
         "options": {},
-        "resource": "databasePage",
-        "databaseId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://www.notion.so/"
-        }
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -1248,7 +1245,7 @@
   "_cn_meta": {
     "title_zh": "Automated Product Health Monitor with Anomaly Detection & AI Root Cause Analysis",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11117,
     "synced_at": "2026-06-17T14:12:10.299771",
     "foreign_services": [

@@ -256,20 +256,27 @@
     {
       "id": "416661ac-8068-44fd-b95f-6b978834eed9",
       "name": "Post to Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         280,
         320
       ],
       "webhookId": "b50cadef-1223-47fa-bf5f-1512b4c323f0",
       "parameters": {
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "={{ $json.slackMessage }}"
-        }
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "typeVersion": 2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -453,7 +460,7 @@
   "_cn_meta": {
     "title_zh": "Automated Property Lead Generation with BatchData and CRM Integration",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3665,
     "synced_at": "2026-06-17T14:19:31.713562",
     "foreign_services": [

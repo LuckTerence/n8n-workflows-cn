@@ -658,7 +658,7 @@
   "_cn_meta": {
     "title_zh": "Generate GLPI Support Performance Reports with SLA Tracking & Email Delivery",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9210,
     "synced_at": "2026-06-17T14:12:46.826628",
     "foreign_services": [

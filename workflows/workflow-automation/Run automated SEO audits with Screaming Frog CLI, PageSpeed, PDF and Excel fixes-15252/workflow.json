@@ -408,26 +408,16 @@
     {
       "id": "90567f5b-2fb3-4301-9770-b201a179e1e1",
       "name": "Upload file",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3568,
         4496
       ],
       "parameters": {
-        "name": "={{ $json.spreadsheet_title }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
-          "cachedResultName": "SEO Audits"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -541,26 +531,16 @@
     {
       "id": "93a0017c-e728-416c-91d9-66f7e4d204ba",
       "name": "Upload to Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3568,
         4256
       ],
       "parameters": {
-        "name": "={{ $json.data.filename }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1d1CBQ2dcOMftF-OEMCHFg-TzWGwr8fjl",
-          "cachedResultName": "SEO Audits"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -660,68 +640,25 @@
     {
       "id": "f9e55f1d-238a-4871-9a14-d88856d6faa5",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4240,
         4256
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Website": "={{ $('Arrange Data').first().json.website }}",
-            "Excel Link": "={{ $json.webViewLink[0] }}",
-            "Report Link": "={{ $json.webViewLink[1] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Website",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Report Link",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Report Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Excel Link",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Excel Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kNbCGSczXC5RXFx3QuP7Hr_m4ltfJvYNC-3vhiF1j9k/edit?usp=drivesdk",
-          "cachedResultName": "SF Audit Logs"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -807,31 +744,25 @@
     {
       "id": "8191d939-93bb-4902-b517-12a427c843c1",
       "name": "Send Failed Message",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1120,
         4464
       ],
       "webhookId": "1a97f597-6f22-4298-9d64-c117ea968461",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Input Cleaner').item.json.channel_id }}"
-        },
-        "otherOptions": {
-          "thread_ts": {
-            "replyValues": {
-              "thread_ts": "={{ $('Input Cleaner').item.json.message_id }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
             }
-          },
-          "includeLinkToWorkflow": false
+          ]
         },
-        "msg_type": "text",
-        "content": {
-          "text": "API is Down or the SF is Carshed Try again"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -839,7 +770,7 @@
           "name": "SF Audit"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -850,31 +781,25 @@
     {
       "id": "d7ad489d-462c-482a-b5ea-dba000dd2325",
       "name": "Send Report",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4240,
         4448
       ],
       "webhookId": "1a97f597-6f22-4298-9d64-c117ea968461",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Data').item.json.channel_id }}"
-        },
-        "otherOptions": {
-          "thread_ts": {
-            "replyValues": {
-              "thread_ts": "={{ $('Data').item.json.message_id }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
             }
-          },
-          "includeLinkToWorkflow": false
+          ]
         },
-        "msg_type": "text",
-        "content": {
-          "text": "=PDF Report:  {{ $json.webViewLink[1] }}\n\nFixes CSV: {{ $json.webViewLink[0] }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -882,7 +807,7 @@
           "name": "SF Audit"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1352,7 +1277,7 @@
   "_cn_meta": {
     "title_zh": "Run automated SEO audits with Screaming Frog CLI, PageSpeed, PDF and Excel fixes",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 15252,
     "synced_at": "2026-06-17T14:16:08.761249",
     "foreign_services": [

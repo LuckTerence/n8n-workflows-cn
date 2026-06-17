@@ -392,145 +392,25 @@
     {
       "id": "1ca5c39f-f21d-455a-b63a-702e7e3ba02b",
       "name": "Write results to airtable",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3040,
         -220
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appM2JWvA5AstsGdn",
-          "cachedResultUrl": "https://airtable.com/appM2JWvA5AstsGdn",
-          "cachedResultName": "HN Who is hiring?"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblGvcOjqbliwM7AS",
-          "cachedResultUrl": "https://airtable.com/appM2JWvA5AstsGdn/tblGvcOjqbliwM7AS",
-          "cachedResultName": "Table 1"
-        },
-        "columns": {
-          "value": {
-            "type": "={{ $json.output.type }}",
-            "title": "={{ $json.output.title }}",
-            "salary": "={{ $json.output.salary }}",
-            "company": "={{ $json.output.company }}",
-            "location": "={{ $json.output.location }}",
-            "apply_url": "={{ $json.output.apply_url }}",
-            "company_url": "={{ $json.output.company_url }}",
-            "description": "={{ $json.output.description }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "company",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "location",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "location",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "type",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "salary",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "salary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "apply_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "apply_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "company_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "company_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "posted_date",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "posted_date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "create"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -749,7 +629,7 @@
   "_cn_meta": {
     "title_zh": "Hacker News Job Listing Scraper and Parser",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2924,
     "synced_at": "2026-06-17T14:06:25.185148",
     "description_zh": "数据采集、求职招聘、新闻聚合"

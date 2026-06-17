@@ -91,88 +91,25 @@
     {
       "id": "a996aa35-8f0d-4e1a-997b-4aadd402f65c",
       "name": "Log Jobs to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         740,
         0
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $json.url }}",
-            "title": "={{ $json.title }}",
-            "budget": "={{ $json.budget }}",
-            "datePosted": "={{ $json.datePosted }}",
-            "description": "={{ $json.description }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "budget",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "budget",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "datePosted",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "datePosted",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dEU6uMB4ehiGXjIExjtFQHvUjANRODawKMBGKDaTcEc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1dEU6uMB4ehiGXjIExjtFQHvUjANRODawKMBGKDaTcEc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dEU6uMB4ehiGXjIExjtFQHvUjANRODawKMBGKDaTcEc/edit?usp=drivesdk",
-          "cachedResultName": "Upwork Scraper"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -467,7 +404,7 @@
   "_cn_meta": {
     "title_zh": "Automated Job Hunter: Upwork Opportunity Aggregator & AI-Powered Notifier",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4733,
     "synced_at": "2026-06-17T14:06:19.829679",
     "foreign_services": [

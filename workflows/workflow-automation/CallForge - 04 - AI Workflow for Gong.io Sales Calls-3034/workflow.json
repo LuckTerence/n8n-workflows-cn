@@ -29,84 +29,25 @@
     {
       "id": "d85f05bd-c680-4b41-b67a-8126b3ed29b0",
       "name": "Create Notion DB Page",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3240,
         60
       ],
       "parameters": {
-        "title": "={{ $json.metaData.title }}",
-        "options": {
-          "icon": "📞"
-        },
-        "resource": "databasePage",
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1a85b6e0-c94f-81a3-aa21-e3ccf8296d72",
-          "cachedResultUrl": "https://www.notion.so/1a85b6e0c94f81a3aa21e3ccf8296d72",
-          "cachedResultName": "Sales Call Summaries Demo"
-        },
-        "propertiesUi": {
-          "propertyValues": [
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "key": "Call Date|date",
-              "date": "={{ $json.metaData.started }}"
-            },
-            {
-              "key": "Recording URL|url",
-              "urlValue": "={{ $json.metaData.url }}"
-            },
-            {
-              "key": "Company|rich_text",
-              "textContent": "={{ $json.metaData.CompanyName }}"
-            },
-            {
-              "key": "Call Name|title",
-              "title": "={{ $json.metaData.title }}"
-            },
-            {
-              "key": "Gong Call ID|rich_text",
-              "textContent": "={{ $json.metaData.GongCallID }}"
-            },
-            {
-              "key": "SF Opp ID|rich_text",
-              "textContent": "={{ $json.sfOpp[0].SFOppId }}"
-            },
-            {
-              "key": "SF Opp Stage|select",
-              "selectValue": "={{ $json.sfOpp[0].sfStage }}"
-            },
-            {
-              "key": "SF Company ID|rich_text",
-              "textContent": "={{ $json.sfOpp[0].companyAccountId }}"
-            },
-            {
-              "key": "SF Opp Won|checkbox",
-              "checkboxValue": "={{ $json.sfOpp[0].IsWon }}"
-            },
-            {
-              "key": "SF Opp Closed|checkbox",
-              "checkboxValue": "={{ $json.sfOpp[0].IsClosed }}"
-            },
-            {
-              "key": "Company Size|select",
-              "selectValue": "={{ $json.sfOpp[0].Employees }}"
-            },
-            {
-              "key": "Sales Rep|multi_select",
-              "multiSelectValue": "={{ $json.Attendees.internalNames }}"
-            },
-            {
-              "key": "SF Opp Link|url",
-              "urlValue": "=https://data-drive-1632.lightning.force.com/lightning/r/Opportunity/{{ $json.sfOpp[0].SFOppId }}/view"
-            },
-            {
-              "key": "SF Company Link|url",
-              "urlValue": "=https://data-drive-1632.lightning.force.com/lightning/r/Account/{{ $json.sfOpp[0].companyAccountId }}/view"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
-        }
+        },
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -233,25 +174,25 @@
     {
       "id": "67d4605b-f6d5-41ff-bbe1-90e002456fc1",
       "name": "Post Slack Receipt",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2260,
         -220
       ],
       "webhookId": "11dd0884-adc7-40f4-a8a3-f3082a0324fc",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C080KBCK1TL",
-          "cachedResultName": "project-call-forge-alerts"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=Queu Started, Processing {{ $json.data.length }} calls."
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -259,7 +200,7 @@
           "name": "Knowledge Ninja n8n labs auth"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -289,26 +230,25 @@
     {
       "id": "59848476-c4ec-47ec-9b1c-f206c0749b1e",
       "name": "Update Slack Progress",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4580,
         -40
       ],
       "webhookId": "d69dcd59-add1-4fd1-99c0-eee5c6a7fc4f",
       "parameters": {
-        "ts": "={{ $('Loop Over Calls').item.json.slackdata[0].message.ts }}",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "C080KBCK1TL"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"={{ $('Loop Over Calls').item.json.slackdata[0].message.ts }}\"}]}}"
+            }
+          ]
         },
-        "operation": "update",
-        "otherOptions": {},
-        "updateFields": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=Queu Started, Processing calls.\nProgress: {{$node[\"Loop Over Calls\"].context[\"currentRunIndex\"]+1;}}/{{ $('Reduce down to One object').item.json.data.length }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -316,7 +256,7 @@
           "name": "Knowledge Ninja n8n labs auth"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -356,23 +296,25 @@
     {
       "id": "1d23b540-696c-4d3e-8c23-fac6a84bc6f3",
       "name": "Get all older Calls",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1220,
         100
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "resource": "databasePage",
-        "operation": "getAll",
-        "returnAll": true,
-        "databaseId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1a85b6e0-c94f-81a3-aa21-e3ccf8296d72",
-          "cachedResultUrl": "https://www.notion.so/1a85b6e0c94f81a3aa21e3ccf8296d72",
-          "cachedResultName": "Sales Call Summaries Demo"
-        }
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -516,25 +458,25 @@
     {
       "id": "21884d73-45fd-4bb0-b3b6-e225383b5f62",
       "name": "Post Completed Calls Message",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3840,
         -480
       ],
       "webhookId": "9d4f5a56-5be9-4373-8961-3627498713dd",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C080KBCK1TL",
-          "cachedResultName": "project-call-forge-alerts"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=Queu Processed, {{ $json.data.length }} calls successfully added to Database."
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -542,7 +484,7 @@
           "name": "Knowledge Ninja n8n labs auth"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -766,7 +708,7 @@
   "_cn_meta": {
     "title_zh": "CallForge - 04 - AI Workflow for Gong.io Sales Calls",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3034,
     "synced_at": "2026-06-17T14:16:25.194898",
     "foreign_services": [

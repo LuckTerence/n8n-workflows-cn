@@ -70,25 +70,16 @@
     {
       "id": "d615090d-236d-444a-add9-f9a429019088",
       "name": "Give Access to folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -420,
         80
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create Folder').item.json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "share",
-        "permissionsUi": {
-          "permissionsValues": {
-            "role": "reader",
-            "type": "anyone"
-          }
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -117,25 +108,16 @@
     {
       "id": "ee55f4d4-475f-4220-843a-4ad8b16bbad8",
       "name": "Upload Remove BG image",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         240,
         180
       ],
       "parameters": {
-        "name": "=(no-bg){{ $('Create Folder').item.json.name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create Folder').item.json.id }}"
-        },
-        "inputDataFieldName": "=no-bg.png"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -161,25 +143,16 @@
     {
       "id": "88d1f349-959a-498f-8f2f-ab45d3d9b25f",
       "name": "Upload Video",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2220,
         180
       ],
       "parameters": {
-        "name": "=Video-file",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create Folder').item.json.id }}"
-        },
-        "inputDataFieldName": "Video-file"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -192,27 +165,16 @@
     {
       "id": "bf26fc49-f91c-40f1-83d3-d2330f242f56",
       "name": "Create Folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -640,
         80
       ],
       "parameters": {
-        "name": "={{ $json.slug }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root",
-          "cachedResultUrl": "https://drive.google.com/drive",
-          "cachedResultName": "/ (Root folder)"
-        },
-        "resource": "folder"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -368,24 +330,16 @@
     {
       "id": "4c10c26e-3caa-45f0-bf12-9779cd82d87c",
       "name": "Upload Original Image",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         20,
         -20
       ],
       "parameters": {
-        "name": "={{ $('Create Folder').item.json.name }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create Folder').item.json.id }}"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -398,91 +352,25 @@
     {
       "id": "1b9c83e7-5d77-4477-9518-d72a6c2f624a",
       "name": "Insert New Product",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         240,
         -20
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Slug": "={{ $('Create Slug').item.json.slug }}",
-            "Product Title": "={{ $('On Form Submission').item.json['Product Title'] }}",
-            "Original Image": "={{ $json.webViewLink }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Original Image",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Original Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "BG Remove Image",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "BG Remove Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Product Title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Product Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Video Link",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Video Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Slug",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Slug",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
-          "cachedResultName": "3D Product Video"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -495,92 +383,25 @@
     {
       "id": "b3492513-e591-4106-a806-9fb1c43f513b",
       "name": "Update Remove BG URL",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         460,
         180
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Slug": "={{ $('Create Folder').item.json.name }}",
-            "BG Remove Image": "={{ $json.webViewLink }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Original Image",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Original Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "BG Remove Image",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "BG Remove Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Product Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Product Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Video Link",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Video Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Slug",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Slug",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Slug"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
-          "cachedResultName": "3D Product Video"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -647,92 +468,25 @@
     {
       "id": "b2c905dc-2743-4b5d-b850-facecd489166",
       "name": "Update Video Link",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2440,
         180
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Slug": "={{ $('Create Folder').item.json.name }}",
-            "Video Link": "={{ $('Get Video Link').item.json.video.url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Original Image",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Original Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "BG Remove Image",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "BG Remove Image",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Product Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Product Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Video Link",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Video Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Slug",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Slug",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Slug"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/18k1Gq2X2J3_cbwJ9XyJoysVuhIpWhgc1cmlTKBnB3Yw/edit?usp=drivesdk",
-          "cachedResultName": "3D Product Video"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -995,7 +749,7 @@
     "title_zh": "电商3D视频生成",
     "description_zh": "2D图片生成3D产品展示视频",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4987,
     "synced_at": "2026-06-17T11:37:10.198363",
     "upgraded_at": "2026-06-17",

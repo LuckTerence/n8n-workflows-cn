@@ -176,12 +176,26 @@
     {
       "id": "1ed17726-588b-4a3c-913b-480c21c689b3",
       "name": "Call Script Database Airtable",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -460,
         -740
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+      },
       "typeVersion": 2.1
     },
     {
@@ -388,7 +402,7 @@
   "_cn_meta": {
     "title_zh": "Real Estate Cold Call Scripts for Price Reduced FSBO Properties (Zillow Data)",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3143,
     "synced_at": "2026-06-17T14:10:54.838640",
     "description_zh": "自动化工作流"

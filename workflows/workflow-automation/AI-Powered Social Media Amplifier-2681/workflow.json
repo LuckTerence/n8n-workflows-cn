@@ -136,151 +136,25 @@
     {
       "id": "48856b3b-a951-4e7f-a0b8-410a71e9b0a7",
       "name": "Update X Status",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1500,
         1400
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "app7fh2kmMzPKS4RZ",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ",
-          "cachedResultName": "Twitter Agent"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblf0cODJFdvDj7vU",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ/tblf0cODJFdvDj7vU",
-          "cachedResultName": "My Tweets"
-        },
-        "columns": {
-          "value": {
-            "id": "={{ $('Create Item').item.json.id }}",
-            "TDone": true
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true
-            },
-            {
-              "id": "Post",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Post",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Url",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Tweet",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Tweet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Last Modified",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "Last Modified",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TDone",
-              "type": "boolean",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "TDone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LDone",
-              "type": "boolean",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "LDone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
           ]
         },
-        "options": {
-          "typecast": true
-        },
-        "operation": "update"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -314,151 +188,25 @@
     {
       "id": "4aab4cc2-4a51-432a-aa21-ba469c027ac6",
       "name": "Update L Status",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1520,
         1680
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "app7fh2kmMzPKS4RZ",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ",
-          "cachedResultName": "Twitter Agent"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblf0cODJFdvDj7vU",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ/tblf0cODJFdvDj7vU",
-          "cachedResultName": "My Tweets"
-        },
-        "columns": {
-          "value": {
-            "id": "={{ $('Create Item').item.json.id }}",
-            "LDone": true
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true
-            },
-            {
-              "id": "Post",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Post",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Url",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Tweet",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Tweet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Last Modified",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "Last Modified",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TDone",
-              "type": "boolean",
-              "display": true,
-              "removed": true,
-              "readOnly": false,
-              "required": false,
-              "displayName": "TDone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LDone",
-              "type": "boolean",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "LDone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
           ]
         },
-        "options": {
-          "typecast": true
-        },
-        "operation": "update"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -471,37 +219,25 @@
     {
       "id": "72dd9714-c11d-4417-8710-89e416ac44c9",
       "name": "Search Item",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1100,
         1240
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "app7fh2kmMzPKS4RZ",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ",
-          "cachedResultName": "Twitter Agent"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblf0cODJFdvDj7vU",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ/tblf0cODJFdvDj7vU",
-          "cachedResultName": "My Tweets"
-        },
-        "options": {
-          "fields": [
-            "Title",
-            "Url",
-            "Tweet",
-            "Date",
-            "Post"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
           ]
         },
-        "operation": "search",
-        "filterByFormula": "={Post}= {{ $json.Post }}"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -515,107 +251,25 @@
     {
       "id": "f89fbada-0e53-44f0-a09b-119869fabd10",
       "name": "Create Item",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         580,
         1660
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "app7fh2kmMzPKS4RZ",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ",
-          "cachedResultName": "Twitter Agent"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblf0cODJFdvDj7vU",
-          "cachedResultUrl": "https://airtable.com/app7fh2kmMzPKS4RZ/tblf0cODJFdvDj7vU",
-          "cachedResultName": "My Tweets"
-        },
-        "columns": {
-          "value": {
-            "Url": "={{ $('Filter Unposted Items').item.json.url }}",
-            "Post": "={{ $('Filter Unposted Items').item.json.Post }}",
-            "Title": "={{ $('Filter Unposted Items').item.json.title }}",
-            "Tweet": "={{ $json.message.content.twitter }}",
-            "LinkedIn": "={{ $json.message.content.linkedin }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Post",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Post",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Tweet",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Tweet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": []
+          ]
         },
         "options": {},
-        "operation": "create"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -1124,7 +778,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Social Media Amplifier",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2681,
     "synced_at": "2026-06-17T14:21:42.935553",
     "description_zh": "社交平台"

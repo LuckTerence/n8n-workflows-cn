@@ -251,20 +251,16 @@
     {
       "id": "b71a28a6-fb07-45ef-bd88-0a4823523718",
       "name": "brand goals",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2272,
         224
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "",
-          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -277,20 +273,16 @@
     {
       "id": "52656d86-ec0f-4fee-9e38-5c471f94ac70",
       "name": "brand profile",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2272,
         -16
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "",
-          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -464,24 +456,16 @@
     {
       "id": "c6b6132c-761c-4dd1-b794-07710f313be4",
       "name": "Upload file",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         736,
         176
       ],
       "parameters": {
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root",
-          "cachedResultName": "/ (Root folder)"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -785,7 +769,7 @@
   "_cn_meta": {
     "title_zh": "Generate Social Media Campaign Images with Mistral AI & Pollinations.ai",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8770,
     "synced_at": "2026-06-17T14:20:39.965838",
     "foreign_services": [

@@ -53,58 +53,25 @@
     {
       "id": "876e4ca3-c607-4443-a4ec-cb83fe84e6c3",
       "name": "Success",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1220,
         260
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Caida": "=",
-            "Funcional": "=Funciona: {{ $('Split Out').item.json.urls }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Funcional",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Funcional",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Caida",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Caida",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920/edit?usp=drivesdk",
-          "cachedResultName": "Prova2"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -117,57 +84,25 @@
     {
       "id": "c99e1ec7-0b11-4278-8f97-d6b9cef798cd",
       "name": "Error",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1220,
         460
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Caida": "=Caida: {{ $json.urls }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Funcional",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Funcional",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Caida",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Caida",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13EHjUGc0wHYbBYZFPqlGuSE1pnttvokU1y3gJCWz920/edit?usp=drivesdk",
-          "cachedResultName": "Prova2"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -535,7 +470,7 @@
   "_cn_meta": {
     "title_zh": "Automatic monitoring of multiple URLs with downtime alerts",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5298,
     "synced_at": "2026-06-17T14:17:57.702225",
     "foreign_services": [

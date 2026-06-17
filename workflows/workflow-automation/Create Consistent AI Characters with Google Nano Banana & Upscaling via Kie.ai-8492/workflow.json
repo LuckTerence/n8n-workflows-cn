@@ -198,27 +198,16 @@
     {
       "id": "362f0a3d-80c2-49a8-bfeb-047e064c2847",
       "name": "Create folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         352,
         96
       ],
       "parameters": {
-        "name": "={{ $json.folderName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1GND1exvlAXTzESNvWmFs6FFMx90KLzlC",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1GND1exvlAXTzESNvWmFs6FFMx90KLzlC",
-          "cachedResultName": "prompt"
-        },
-        "resource": "folder"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -315,73 +304,25 @@
     {
       "id": "c0697025-d8d9-4924-bf4a-ee681eb2243c",
       "name": "Add Fields",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1248,
         96
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Scene",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Scene",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Temp Image Url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Temp Image Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.sheets[0].properties.sheetId }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.spreadsheetId }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -394,15 +335,25 @@
     {
       "id": "ea0ee131-ab31-4f4c-9362-28b63a4aa864",
       "name": "Create spreadsheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         576,
         96
       ],
       "parameters": {
-        "title": "={{ $json.name }}",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "resource": "spreadsheet"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -415,30 +366,16 @@
     {
       "id": "daabc7bb-31e2-4400-b354-de4a827dfd7b",
       "name": "Move Sheet",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         800,
         96
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.spreadsheetId }}"
-        },
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create folder').item.json.id }}"
-        },
-        "operation": "move"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -452,80 +389,25 @@
     {
       "id": "fbd9795a-0a48-42f2-932f-4cd4116c3863",
       "name": "Update Image Status",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1632,
         1520
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "image created",
-            "row_number": 2,
-            "Temp Image Url": "={{ $('Get Binary').item.json.resultUrls[0] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Prompt",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Temp Image Url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Temp Image Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.sheets[0].properties.sheetId }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.spreadsheetId }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -554,80 +436,25 @@
     {
       "id": "c6bc1ee9-0644-4e2a-ad7e-cf3d36c6a22c",
       "name": "Story Status Update",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         944,
         416
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Prompt": "={{ $json.prompt }}",
-            "Status": "prompt created",
-            "row_number": 2
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Temp Image Url",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Temp Image Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.sheets[0].properties.sheetId }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create spreadsheet').item.json.spreadsheetId }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -967,28 +794,16 @@
     {
       "id": "1dc88e2e-1a9e-4971-8c6c-00d1800ecddf",
       "name": "Upload file",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1328,
         1520
       ],
       "parameters": {
-        "name": "={{ $('Set TaskId for upscale').item.json.taskId }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1GND1exvlAXTzESNvWmFs6FFMx90KLzlC",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1GND1exvlAXTzESNvWmFs6FFMx90KLzlC",
-          "cachedResultName": "prompt"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -1002,30 +817,16 @@
     {
       "id": "29dc5464-d9a1-4f65-80eb-a9807962bd67",
       "name": "Move Images",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1472,
         1520
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Create folder').item.json.id }}"
-        },
-        "operation": "move"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -1409,7 +1210,7 @@
   "_cn_meta": {
     "title_zh": "Create Consistent AI Characters with Google Nano Banana & Upscaling via Kie.ai",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8492,
     "synced_at": "2026-06-17T14:08:09.089022",
     "foreign_services": [

@@ -218,71 +218,25 @@
     {
       "id": "23a42e29-2815-4cad-90db-67afcb7cedda",
       "name": "📋 Load Previous Snapshot",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1664,
         720
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "={{ $json.name }}",
-              "lookupColumn": "Name"
-            },
-            {
-              "lookupValue": "={{ $json.url }}",
-              "lookupColumn": "url"
-            },
-            {
-              "lookupValue": "={{ $json.selector }}",
-              "lookupColumn": "selector"
-            },
-            {
-              "lookupValue": "={{ $json.pageTitle }}",
-              "lookupColumn": "page title"
-            },
-            {
-              "lookupValue": "={{ $json.metaDescription }}",
-              "lookupColumn": "meta description"
-            },
-            {
-              "lookupValue": "={{ $json.cleanText }}",
-              "lookupColumn": "clean text"
-            },
-            {
-              "lookupValue": "={{ $json.contentHash }}",
-              "lookupColumn": "content hash"
-            },
-            {
-              "lookupValue": "={{ $json.contentLength }}",
-              "lookupColumn": "content lenght"
-            },
-            {
-              "lookupValue": "={{ $json.fetchedAt }}",
-              "lookupColumn": "fetched at"
-            },
-            {
-              "lookupValue": "={{ $json.httpStatus }}",
-              "lookupColumn": "http status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 299160514,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
-          "cachedResultName": "website"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
-          "cachedResultName": "Website Monitor"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6,
       "alwaysOutputData": true
@@ -336,301 +290,25 @@
     {
       "id": "e525973e-572e-4ba6-9d9b-206a59f4dc57",
       "name": "💾 Save Snapshot",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2320,
         656
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $json.name }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "selector",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "selector",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "page title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "page title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "meta description",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "meta description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "clean text",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "clean text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content hash",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "content hash",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content lenght",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "content lenght",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fetched at",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "fetched at",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "http status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "http status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "pageTitle",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "pageTitle",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "metaDescription",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "metaDescription",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "cleanText",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "cleanText",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "contentHash",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "contentHash",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "contentLength",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "contentLength",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fetchedAt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "fetchedAt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "httpStatus",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "httpStatus",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "hasChanged",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "hasChanged",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "isFirstRun",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "isFirstRun",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "changePercentage",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "changePercentage",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "diffSummary",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "diffSummary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "addedLines",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "addedLines",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "removedLines",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "removedLines",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lastChecked",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "lastChecked",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "comparedAt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "comparedAt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "Name"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": true
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 299160514,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
-          "cachedResultName": "website"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
-          "cachedResultName": "Website Monitor"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6
     },
@@ -674,290 +352,25 @@
     {
       "id": "8c5ef23c-9c33-449b-b90c-2fad25cc69a7",
       "name": "💾 Save (No Change)",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2320,
         832
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "selector",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "selector",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "page title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "page title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "meta description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "meta description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "clean text",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "clean text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content hash",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "content hash",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content lenght",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "content lenght",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fetched at",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "fetched at",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "http status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "http status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "pageTitle",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "pageTitle",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "metaDescription",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "metaDescription",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "cleanText",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "cleanText",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "contentHash",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "contentHash",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "contentLength",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "contentLength",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fetchedAt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "fetchedAt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "httpStatus",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "httpStatus",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "hasChanged",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "hasChanged",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "isFirstRun",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "isFirstRun",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "changePercentage",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "changePercentage",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "diffSummary",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "diffSummary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "addedLines",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "addedLines",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "removedLines",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "removedLines",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lastChecked",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "lastChecked",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "comparedAt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "comparedAt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "Name"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 299160514,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=299160514",
-          "cachedResultName": "website"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit",
-          "cachedResultName": "Website Monitor"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6
     },
@@ -1099,7 +512,7 @@
   "_cn_meta": {
     "title_zh": "Monitor website changes and send diff alerts via Telegram and email",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13455,
     "synced_at": "2026-06-17T14:13:20.013293",
     "foreign_services": [

@@ -68,27 +68,25 @@
     {
       "id": "2a66ddc7-5fde-4e2b-9ad6-7c68968214ae",
       "name": "Get all rows",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         80,
         -180
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15A3ZWzIBfONL4U_1XGJvtsS8HtMQ69qrpxd5C5L6Akg/edit?usp=drivesdk",
-          "cachedResultName": "n8n-submission"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -367,7 +365,7 @@
   "_cn_meta": {
     "title_zh": "Automate n8n User Invitations from a Google Spreadsheet",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3233,
     "synced_at": "2026-06-17T14:07:05.535791",
     "foreign_services": [

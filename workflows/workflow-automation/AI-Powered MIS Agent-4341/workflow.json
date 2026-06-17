@@ -47,13 +47,18 @@
     {
       "id": "807f7bbd-f4c0-48bf-b46b-dd43ea6462f0",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "onError": "continueRegularOutput",
       "position": [
         20,
         -640
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -179,67 +184,97 @@
     {
       "id": "17f0444c-ee85-45e2-a8a7-ed45532c9c14",
       "name": "Google Drive1",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -860,
         380
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "251c918e-d86e-46d8-864b-16d307d139ec",
       "name": "Google Drive2",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -860,
         540
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "972db37a-9fd1-47f6-af08-7f07f3ed318f",
       "name": "Google Drive3",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -460,
         380
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "adb37b79-efef-4056-8022-34cfa56065ee",
       "name": "Google Drive4",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -460,
         540
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "e850a716-626c-40c0-b05f-d0dfdb972095",
       "name": "Google Drive5",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -860,
         740
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "7b71d7d4-c89a-4ca5-a66b-9d58f2da35d4",
       "name": "Google Drive6",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -460,
         740
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -282,13 +317,18 @@
     {
       "id": "1bc1fee2-c256-4d52-8e2a-1981c0ea3bea",
       "name": "Google Drive10",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "onError": "continueRegularOutput",
       "position": [
         20,
         -260
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -461,35 +501,50 @@
     {
       "id": "4582656d-856e-4c41-8c50-b3a3f20791db",
       "name": "Daily Sales Folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         500,
         2260
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3,
       "alwaysOutputData": false
     },
     {
       "id": "d4719c21-129a-43cb-81b5-0addba3ffaa9",
       "name": "Address Folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         500,
         2080
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "b0bca736-a81e-48a0-a70f-f9265f2652ff",
       "name": "customer_info folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         500,
         2440
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -532,12 +587,17 @@
     {
       "id": "aa7ee570-4f05-41af-90eb-01168d505c3e",
       "name": "Master",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         500,
         2620
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -555,23 +615,51 @@
     {
       "id": "ca561379-c751-467f-a5a7-20faf2acc5ed",
       "name": "Google Sheets2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -780,
         3060
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
       "id": "0fe2bb72-5c7d-4845-9f36-8651a149baa0",
       "name": "Google Sheets6",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -780,
         3360
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -721,12 +809,17 @@
     {
       "id": "52ac95d1-740a-4c5c-a1d5-5a75c2df3277",
       "name": "Google Drive7",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         940,
         3200
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -776,12 +869,26 @@
     {
       "id": "144eedc9-3636-445e-8f5a-5cfddf0085f8",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -660,
         3760
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -833,12 +940,17 @@
     {
       "id": "64eff3a5-d12f-4599-900b-f187902f5b5b",
       "name": "Google Drive8",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         160,
         3760
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -888,12 +1000,26 @@
     {
       "id": "395e894a-fe4d-499f-b7fd-fa03ca40a7c0",
       "name": "Google Sheets3",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -840,
         4040
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -1246,23 +1372,33 @@
     {
       "id": "24ae13bd-d9c6-4570-ad45-a27b2471dd0e",
       "name": "Knowledge_base",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1220,
         320
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
       "id": "5b91eafa-20fa-44ee-bbc5-80a937e60e47",
       "name": "Download files",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1380,
         320
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -1415,12 +1551,26 @@
     {
       "id": "f0d44a66-1cbf-405c-b0df-a8d533f33376",
       "name": "Google Sheets4",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2980,
         2360
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -1525,12 +1675,17 @@
     {
       "id": "0f2dcf21-1519-449b-8628-7b11ae47ee0a",
       "name": "Google Drive9",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2280,
         2200
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -19575,7 +19730,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered MIS Agent",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4341,
     "synced_at": "2026-06-17T14:06:35.809055",
     "foreign_services": [

@@ -15,19 +15,25 @@
     },
     {
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         960,
         560
       ],
       "parameters": {
-        "range": "A:C",
-        "options": {
-          "usePathForKeyRow": true
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetId": "qwertz",
-        "operation": "append",
-        "authentication": "oAuth2"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -151,20 +157,26 @@
     },
     {
       "name": "Google Sheets2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "notes": "Append data to sheet",
       "position": [
         1760,
         1420
       ],
       "parameters": {
-        "range": "A:C",
-        "options": {
-          "usePathForKeyRow": true
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "sheetId": "qwertz",
-        "operation": "append",
-        "authentication": "oAuth2"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -343,7 +355,7 @@
   "_cn_meta": {
     "title_zh": "Move data between JSON and spreadsheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 1739,
     "synced_at": "2026-06-17T14:10:31.180919",
     "foreign_services": [

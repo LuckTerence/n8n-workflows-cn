@@ -825,24 +825,25 @@
     {
       "id": "2dde2c80-830d-49a8-ac89-72722d703ba0",
       "name": "Escalation Alert to Support Team",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -160,
         -10752
       ],
       "webhookId": "bc3c3f99-065a-4071-982f-080cf3631267",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.slackSupportChannelId }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "={{ '🚨 Escalation Alert\nUser: ' + $json.userId + '\nPriority: ' + $json.priority + '\nReason: ' + ($json.confidence < 0.7 ? 'Low confidence' : 'Negative sentiment') + '\nMessage: ' + $json.message }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -850,7 +851,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -874,38 +875,25 @@
     {
       "id": "dfcb156f-79c8-417e-80b7-c7c51dd8afce",
       "name": "Log Conversation to Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         720,
         -11888
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "userId": "={{ $json.userId }}",
-            "channel": "={{ $json.channel }}",
-            "message": "={{ $json.message }}",
-            "category": "={{ $json.category }}",
-            "sentiment": "={{ $json.sentiment }}",
-            "timestamp": "={{ $json.timestamp }}",
-            "aiResponse": "={{ $json.aiResponse }}",
-            "confidence": "={{ $json.confidence }}"
-          },
-          "mappingMode": "defineBelow"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Workflow Configuration').first().json.googleSheetsLogSheet }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.googleSheetsDocId }}"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -935,24 +923,25 @@
     {
       "id": "b60e07af-f9ae-4aa3-862b-c5157794f815",
       "name": "Fetch Weekly Metrics",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2416,
         -10576
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "={{ $('Workflow Configuration').first().json.googleSheetsMetricsSheet }}"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.googleSheetsDocId }}"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -1121,24 +1110,25 @@
     {
       "id": "8e1ab4da-3c5b-4044-a60d-476f3efeafb1",
       "name": "Send Weekly Summary",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1504,
         -10576
       ],
       "webhookId": "65f00275-f796-4e5d-ba8c-275a5ed6e694",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.slackWeeklySummaryChannelId }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "={{ '📊 Weekly Support Summary\nTotal conversations: ' + $json.totalCount + '\nAvg confidence: ' + $json.avgConfidence + '\nEscalations: ' + $json.escalations }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -1146,7 +1136,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -2204,7 +2194,7 @@
   "_cn_meta": {
     "title_zh": "Enhance Customer Support with RAG-Powered AI",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11807,
     "synced_at": "2026-06-17T14:15:08.275482",
     "foreign_services": [

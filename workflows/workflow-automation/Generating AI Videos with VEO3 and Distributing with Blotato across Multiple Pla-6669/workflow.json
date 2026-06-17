@@ -468,22 +468,25 @@
     {
       "id": "7d148aac-728d-4686-9935-bea9158f2e9b",
       "name": "Read Video Parameters from Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -300,
         -100
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -651,89 +654,25 @@
     {
       "id": "2a8539e3-f8cd-4322-bd19-c2006840d1c8",
       "name": "Save Caption Video to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         400
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Title": "={{ $('AI Agent: Generate Video Script').item.json.output.title }}",
-            "Prompt": "={{ $('AI Agent: Generate Video Script').item.json.output.final_prompt }}",
-            "CAPTION": "={{ $json.message.content }}",
-            "Subject": "={{ $('Telegram Trigger: Receive Video Idea').item.json.message.text }}",
-            "URL VIDEO": "={{ $('Download Video from VEO3').item.json.data.response.resultUrls[0] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Subject",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Subject",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CAPTION",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CAPTION",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -987,7 +926,7 @@
   "_cn_meta": {
     "title_zh": "Generating AI Videos with VEO3 and Distributing with Blotato across Multiple Platforms",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6669,
     "synced_at": "2026-06-17T14:09:46.545444",
     "foreign_services": [

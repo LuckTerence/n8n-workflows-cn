@@ -3,7 +3,7 @@
 
 2D图片生成3D产品展示视频
 
-> 分类：多模态 AI | 适配等级：B（需替换Google Sheets/Google Drive/Gmail)（AI模型已适配，部分外服节点需手动替换为国内服务）
+> 分类：多模态 AI | 适配等级：A（需替换Google Sheets/Google Drive/Gmail)（AI模型已适配，部分外服节点需手动替换为国内服务）
 > 原始来源：https://n8nworkflows.xyz/workflows/4987
 
 ---

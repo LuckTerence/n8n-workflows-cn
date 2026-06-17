@@ -154,160 +154,25 @@
     {
       "id": "4a120e5d-b849-4a29-b7f3-12c653552367",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1960,
         -220
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "CITY": "={{ $('Merge').item.json.output.city }}",
-            "DATA": "={{ $now.format('dd/LL/yyyy') }}",
-            "NAME": "={{ $('On form submission').item.json.Nome }}",
-            "VOTE": "={{ $json.output.vote }}",
-            "EMAIL": "={{ $('On form submission').item.json.Email }}",
-            "SKILLS": "={{ $('Merge').item.json.output.Skills }}",
-            "TELEFONO": "={{ $('Merge').item.json.output.telephone }}",
-            "SUMMARIZE": "={{ $('Summarization Chain').item.json.response.text }}",
-            "EDUCATIONAL": "={{ $('Merge').item.json.output[\"Educational qualification\"] }}",
-            "JOB HISTORY": "={{ $('Merge').item.json.output[\"Job History\"] }}",
-            "DATA NASCITA": "={{ $('Merge').item.json.output.birthdate }}",
-            "CONSIDERATION": "={{ $json.output.consideration }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATA",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATA",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PHONE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "PHONE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CITY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "CITY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DATA NASCITA",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATA NASCITA",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EDUCATIONAL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EDUCATIONAL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "JOB HISTORY",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "JOB HISTORY",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SKILLS",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SKILLS",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SUMMARIZE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SUMMARIZE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "VOTE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "VOTE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CONSIDERATION",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "CONSIDERATION",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ssz5RvN1Hr20Q31pnYnbjCLu1MGBvoLttBAjXunMRQE/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ssz5RvN1Hr20Q31pnYnbjCLu1MGBvoLttBAjXunMRQE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ssz5RvN1Hr20Q31pnYnbjCLu1MGBvoLttBAjXunMRQE/edit?usp=drivesdk",
-          "cachedResultName": "Ricerca WebDev"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -374,27 +239,16 @@
     {
       "id": "181c1249-b05c-4c35-8cac-5f9738cc1fe6",
       "name": "Upload CV",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -160,
         -380
       ],
       "parameters": {
-        "name": "=CV-{{ $now.format('yyyyLLdd') }}-{{ $json.CV[0].filename }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tzeSpx4D3EAGXa3Wg-gqGbdaUk6LIZTV",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1tzeSpx4D3EAGXa3Wg-gqGbdaUk6LIZTV",
-          "cachedResultName": "CV"
-        },
-        "inputDataFieldName": "CV"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -674,7 +528,7 @@
   "_cn_meta": {
     "title_zh": "AI Automated HR Workflow for CV Analysis and Candidate Evaluation",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2860,
     "synced_at": "2026-06-17T14:06:08.900616",
     "foreign_services": [

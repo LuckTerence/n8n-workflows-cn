@@ -154,61 +154,25 @@
     {
       "id": "f4964366-293e-4889-999d-e5ee35b9eac2",
       "name": "Save extracted data to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1000,
         -80
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Site": "={{ $('Watch for New Screenshot URLs in Google Sheets').item.json.Site }}",
-            "product": "={{ $json.results }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Site",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Site",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Site"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1So9Yh1Xa5Z_ebQ2i_YwQ4p6Q-kwR1zTVzvjUTE4RveU/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1So9Yh1Xa5Z_ebQ2i_YwQ4p6Q-kwR1zTVzvjUTE4RveU",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1So9Yh1Xa5Z_ebQ2i_YwQ4p6Q-kwR1zTVzvjUTE4RveU/edit?usp=drivesdk",
-          "cachedResultName": "URL-n8n"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -331,7 +295,7 @@
   "_cn_meta": {
     "title_zh": "Extract Product Info from Website Screenshots with Dumpling AI + Sheets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5169,
     "synced_at": "2026-06-17T14:08:59.125864",
     "foreign_services": [

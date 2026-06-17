@@ -58,7 +58,7 @@
         380
       ],
       "parameters": {
-        "url": "https://api.replicate.com/v1/predictions",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 60000
@@ -80,7 +80,8 @@
               "value": "application/json"
             }
           ]
-        }
+        },
+        "notes": "原 Replicate → 通义万相"
       },
       "typeVersion": 4.2
     },

@@ -49,27 +49,25 @@
     {
       "id": "3f030536-2965-47e4-bc89-f4415b8af6e0",
       "name": "Get previous keywords",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         224,
         64
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1681593026,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit#gid=1681593026",
-          "cachedResultName": "Keywords"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit?usp=drivesdk",
-          "cachedResultName": "New Ranked Keywords with ai_overview from Google with DataForSEO"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -83,27 +81,25 @@
     {
       "id": "97efbef3-7ee4-45e0-887f-0e99b23b2c02",
       "name": "Get targets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         944,
         64
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit#gid=0",
-          "cachedResultName": "Targets"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit?usp=drivesdk",
-          "cachedResultName": "New Ranked Keywords with ai_overview from Google with DataForSEO"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -116,108 +112,25 @@
     {
       "id": "fbe1c1e5-1180-431d-9026-6e9fed5e6f01",
       "name": "Append keyword in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         368,
         928
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Url": "={{ $json.ranked_serp_element.serp_item.url }}",
-            "Date": "={{ new Date().toLocaleDateString('en-CA') }}",
-            "Rank": "={{ $json.ranked_serp_element.serp_item.rank_absolute }}",
-            "Target": "={{ $('Get targets').item.json.Domain }}",
-            "Keyword": "={{ $json.keyword_data.keyword }}",
-            "Search Volume": "={{ $json.keyword_data.keyword_info.search_volume }}",
-            "SERP Item Types": "={{ $json.keyword_data.serp_info.serp_item_types.join(', ') }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Target",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Target",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keyword",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Keyword",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Rank",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Rank",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Search Volume",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Search Volume",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "SERP Item Types",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "SERP Item Types",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1681593026,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1uCvVHKk8rWeQ_FKpZkBfrCB26Q6UebwwzsOdU7EmUYU/edit#gid=1681593026",
-          "cachedResultName": "Keywords"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit?usp=drivesdk",
-          "cachedResultName": "New Ranked Keywords with ai_overview from Google with DataForSEO"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -346,28 +259,25 @@
     {
       "id": "f6a6d32f-eb63-4e2f-8008-b17765afc8cc",
       "name": "Clear sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         672,
         64
       ],
       "parameters": {
-        "operation": "clear",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1681593026,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit#gid=1681593026",
-          "cachedResultName": "Keywords"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1w8bTZ0hfQ0A0e-GZ3s5oDR8-lWqpepU-FJN_Uv4fWwE/edit?usp=drivesdk",
-          "cachedResultName": "New Ranked Keywords with ai_overview from Google with DataForSEO"
-        },
-        "keepFirstRow": true
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -824,7 +734,7 @@
   "_cn_meta": {
     "title_zh": "Get new ranked Google AI Overview keywords via email with DataForSEO",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13431,
     "synced_at": "2026-06-17T14:09:58.954986",
     "foreign_services": [

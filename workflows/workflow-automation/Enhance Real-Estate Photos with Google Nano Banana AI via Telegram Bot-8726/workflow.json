@@ -206,23 +206,16 @@
     {
       "id": "b191aac9-9a9b-407f-a02e-d448fed08e4d",
       "name": "Upload file",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         80,
         16
       ],
       "parameters": {
-        "name": "Image",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -379,7 +372,7 @@
   "_cn_meta": {
     "title_zh": "Enhance Real-Estate Photos with Google Nano Banana AI via Telegram Bot",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8726,
     "synced_at": "2026-06-17T14:08:42.215935",
     "foreign_services": [

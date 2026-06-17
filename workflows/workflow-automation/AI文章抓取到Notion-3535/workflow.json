@@ -373,7 +373,7 @@
     "title_zh": "AI文章抓取到Notion",
     "description_zh": "Gemini+浏览器抓取文章摘要保存",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3535,
     "synced_at": "2026-06-17T11:37:06.069068",
     "upgraded_at": "2026-06-17",

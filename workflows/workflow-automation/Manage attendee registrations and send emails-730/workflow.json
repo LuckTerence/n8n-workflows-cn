@@ -18,17 +18,25 @@
     },
     {
       "name": "Add to Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         600,
         300
       ],
       "parameters": {
-        "range": "Attendees!A:F",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetId": "1nlnsTQKGgQZN-Rtd07K9bn0ROm0aFBC2O4kzM2YaTBI",
-        "operation": "append",
-        "authentication": "oAuth2"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": "google-sheets"
@@ -90,16 +98,25 @@
     },
     {
       "name": "Get Session Details",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1200,
         500
       ],
       "parameters": {
-        "range": "Sessions!A:F",
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetId": "1nlnsTQKGgQZN-Rtd07K9bn0ROm0aFBC2O4kzM2YaTBI",
-        "authentication": "oAuth2"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": "google-sheets"
@@ -292,7 +309,7 @@
   "_cn_meta": {
     "title_zh": "Manage attendee registrations and send emails",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 730,
     "synced_at": "2026-06-17T14:10:22.419323",
     "foreign_services": [

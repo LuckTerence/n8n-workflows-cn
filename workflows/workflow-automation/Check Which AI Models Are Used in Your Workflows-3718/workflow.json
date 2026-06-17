@@ -81,27 +81,25 @@
     {
       "id": "9693eb8b-4ce5-4d4b-984d-a77098896bc3",
       "name": "Google Sheets-Clear Sheet Data",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -440,
         -220
       ],
       "parameters": {
-        "operation": "clear",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI/edit#gid=0",
-          "cachedResultName": "data"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI/edit?usp=drivesdk",
-          "cachedResultName": "n8n-check-workflow-use-what-ai-model"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -238,97 +236,25 @@
     {
       "id": "d4301765-8855-46fe-b2a2-06b03577a3b9",
       "name": "Google Sheets-Save node and workflow data",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         700,
         80
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "node_name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "node_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "modelId_value",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "modelId_value",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "modelId_name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "modelId_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "workflow_name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "workflow_name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "workflow_id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "workflow_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "workflow_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "workflow_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI/edit#gid=0",
-          "cachedResultName": "data"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1iMh0C-Niu1ko4-u2BHo0cgGeVQKcYHflBzRxtbWJiRI/edit?usp=drivesdk",
-          "cachedResultName": "n8n-check-workflow-use-what-ai-model"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -493,7 +419,7 @@
   "_cn_meta": {
     "title_zh": "Check Which AI Models Are Used in Your Workflows",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3718,
     "synced_at": "2026-06-17T14:14:05.561728",
     "foreign_services": [

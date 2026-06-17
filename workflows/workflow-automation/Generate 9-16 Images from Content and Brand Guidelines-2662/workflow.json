@@ -145,28 +145,25 @@
     {
       "id": "f8e46822-cf7e-4697-bee4-99221b6063a7",
       "name": "Get Brand Guidelines",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         480,
         -960
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appRDq3E42JNtruIP",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP",
-          "cachedResultName": "Content Manager"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblF8Ye2g0gPdpsaI",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP/tblF8Ye2g0gPdpsaI",
-          "cachedResultName": "Brand Guidelines"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "search"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -179,33 +176,25 @@
     {
       "id": "c6609f11-d04d-4e83-8fc0-af3c0e2cc9bd",
       "name": "Get SEO Keywords",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         940,
         -960
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appRDq3E42JNtruIP",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP",
-          "cachedResultName": "Content Manager"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblU1fgGH1LXwnWRb",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP/tblU1fgGH1LXwnWRb",
-          "cachedResultName": "SEO Keywords"
-        },
-        "options": {
-          "fields": [
-            "Keyword",
-            "RelatedContent"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
           ]
         },
-        "operation": "search"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -285,28 +274,25 @@
     {
       "id": "75da86d6-22d4-42d6-8451-ea75db76ae57",
       "name": "Get Content",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1140,
         -740
       ],
       "parameters": {
-        "id": "={{ $json.RelatedContent }}",
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appRDq3E42JNtruIP",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP",
-          "cachedResultName": "Content Manager"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblU1fgGH1LXwnWRb",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP/tblU1fgGH1LXwnWRb",
-          "cachedResultName": "SEO Keywords"
-        },
-        "options": {}
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -840,209 +826,25 @@
     {
       "id": "3ee7e646-8690-4a7c-9820-ce2985b02e7a",
       "name": "Add Asset Info",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3400,
         -1020
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appRDq3E42JNtruIP",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP",
-          "cachedResultName": "Content Manager"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblqoaJ7bRLBgENED",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP/tblqoaJ7bRLBgENED",
-          "cachedResultName": "Assets"
-        },
-        "columns": {
-          "value": {
-            "Asset URL": "={{ $json.body.generations_by_pk.generated_images[0].url }}",
-            "File Size": 0,
-            "Asset Name": "=TN - {{ $('Get Content').item.json.Title }}",
-            "Asset Type": "Image"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true
-            },
-            {
-              "id": "Asset Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Asset Type",
-              "type": "options",
-              "display": true,
-              "options": [
-                {
-                  "name": "Image",
-                  "value": "Image"
-                },
-                {
-                  "name": "Video",
-                  "value": "Video"
-                },
-                {
-                  "name": "Document",
-                  "value": "Document"
-                }
-              ],
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset Type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Upload Date",
-              "type": "dateTime",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Upload Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "File Size",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "File Size",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Asset URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Usage Rights",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Usage Rights",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Thumbnail",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Thumbnail",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Videos",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Videos",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Social Media Posts",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Social Media Posts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Blog Posts",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Blog Posts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Related Campaigns",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Related Campaigns",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedules",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Schedules",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Content Calendar",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Content Calendar",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
           ]
         },
         "options": {},
-        "operation": "create"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -1055,209 +857,25 @@
     {
       "id": "88cd8514-9a54-47bf-b822-8c01ef05c08e",
       "name": "Add Asset Info1",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3600,
         -420
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "appRDq3E42JNtruIP",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP",
-          "cachedResultName": "Content Manager"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblqoaJ7bRLBgENED",
-          "cachedResultUrl": "https://airtable.com/appRDq3E42JNtruIP/tblqoaJ7bRLBgENED",
-          "cachedResultName": "Assets"
-        },
-        "columns": {
-          "value": {
-            "Asset URL": "={{ $json.body.generations_by_pk.generated_images[0].url }}",
-            "File Size": 0,
-            "Asset Name": "=Scene - {{ $('Loop Over Items').item.json.script }}",
-            "Asset Type": "Image"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true
-            },
-            {
-              "id": "Asset Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Asset Type",
-              "type": "options",
-              "display": true,
-              "options": [
-                {
-                  "name": "Image",
-                  "value": "Image"
-                },
-                {
-                  "name": "Video",
-                  "value": "Video"
-                },
-                {
-                  "name": "Document",
-                  "value": "Document"
-                }
-              ],
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset Type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Upload Date",
-              "type": "dateTime",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Upload Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "File Size",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "File Size",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Asset URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Asset URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Usage Rights",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Usage Rights",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Thumbnail",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Thumbnail",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Videos",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Videos",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Social Media Posts",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Social Media Posts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Associated Blog Posts",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Associated Blog Posts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Related Campaigns",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Related Campaigns",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedules",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Schedules",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Content Calendar",
-              "type": "array",
-              "display": true,
-              "removed": false,
-              "readOnly": false,
-              "required": false,
-              "displayName": "Content Calendar",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
           ]
         },
         "options": {},
-        "operation": "create"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -1984,7 +1602,7 @@
   "_cn_meta": {
     "title_zh": "Generate 9:16 Images from Content and Brand Guidelines",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2662,
     "synced_at": "2026-06-17T14:09:15.201267",
     "description_zh": "图片生成"

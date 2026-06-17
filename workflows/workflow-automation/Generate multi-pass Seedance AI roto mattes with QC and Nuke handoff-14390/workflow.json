@@ -153,14 +153,27 @@
     {
       "id": "42f82c86-dd07-4bf7-8e18-b2e06d3096a7",
       "name": "Slack: QC Failed — Manual Roto Required",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3264,
         1056
       ],
       "webhookId": "cd34fa9d-0d92-434c-9a27-a13759b30529",
-      "parameters": {},
-      "typeVersion": 2.3,
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -182,14 +195,27 @@
     {
       "id": "58f71bc7-df89-42c9-9fc7-5f9727e88082",
       "name": "Slack: Error Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1040,
         1472
       ],
       "webhookId": "d388d3fb-6bcf-4985-b774-158006b682e4",
-      "parameters": {},
-      "typeVersion": 2.3,
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -573,7 +599,7 @@
   "_cn_meta": {
     "title_zh": "Generate multi-pass Seedance AI roto mattes with QC and Nuke handoff",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14390,
     "synced_at": "2026-06-17T14:09:42.233092",
     "foreign_services": [

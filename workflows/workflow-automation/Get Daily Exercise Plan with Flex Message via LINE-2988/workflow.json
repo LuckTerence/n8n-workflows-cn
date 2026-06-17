@@ -32,72 +32,25 @@
     {
       "id": "529d9ed9-3ae5-41cb-983e-874aa37ee1c7",
       "name": "YogaLog",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2240,
         -100
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Date": "={{ $('Trigger 2130 YogaPosesToday').first().json.timestamp }}",
-            "JSON": "={{ $('CombineAll').item.json.LineBody }}",
-            "Text": "={{ $('RewritePosesToday').item.json.text }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Text",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "JSON",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "JSON",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Date"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 325576327,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=325576327",
-          "cachedResultName": "YogaLog"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
-          "cachedResultName": "SerenityAI"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -228,73 +181,25 @@
     {
       "id": "ff7bd540-c89b-43d1-bb07-bb060a6b4ba6",
       "name": "YogaLog2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2980,
         20
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Date": "={{ $('Trigger 2130 YogaPosesToday').first().json.timestamp }}",
-            "Pose": "={{ $json.name }}",
-            "Sequence": "={{ $json.sequence }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Sequence",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Sequence",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Pose",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Pose",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Date"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 2060471945,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=2060471945",
-          "cachedResultName": "YogaLog2"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
-          "cachedResultName": "SerenityAI"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -363,34 +268,25 @@
     {
       "id": "acee6e43-f094-4f30-bffb-6c56b0425327",
       "name": "Get PoseName",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         40,
         -20
       ],
       "parameters": {
-        "options": {
-          "dataLocationOnSheet": {
-            "values": {
-              "range": "B18:D28",
-              "rangeDefinition": "specifyRangeA1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 2035276041,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit#gid=2035276041",
-          "cachedResultName": "NotePad"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1s_yzDNbbtXhfoOKUlmBHwhgWkR2FuoiKz4WQOu4tQmk/edit?usp=drivesdk",
-          "cachedResultName": "SerenityAI"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1022,7 +918,7 @@
   "_cn_meta": {
     "title_zh": "Get Daily Exercise Plan with Flex Message via LINE",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2988,
     "synced_at": "2026-06-17T14:09:49.653519",
     "foreign_services": [

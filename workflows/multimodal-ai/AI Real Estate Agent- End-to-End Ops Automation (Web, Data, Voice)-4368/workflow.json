@@ -209,12 +209,26 @@
     {
       "id": "1cdeaf35-c50d-4c16-b1af-38f8f0ba5924",
       "name": "Real Estate Data",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1800,
         500
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -462,12 +476,26 @@
     {
       "id": "ebc6a20f-a395-4cf4-bccb-9f408a8d39d0",
       "name": "Google Sheets - Log Lead",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2180,
         2220
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 1
     },
     {
@@ -484,12 +512,26 @@
     {
       "id": "2247fdc7-b4e7-45c8-80b8-0bc62fd0dfcb",
       "name": "Google Sheets - Log Summary",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2800,
         2220
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 1
     },
     {
@@ -1015,7 +1057,7 @@
   "_cn_meta": {
     "title_zh": "AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4368,
     "synced_at": "2026-06-17T14:19:40.076176",
     "foreign_services": [

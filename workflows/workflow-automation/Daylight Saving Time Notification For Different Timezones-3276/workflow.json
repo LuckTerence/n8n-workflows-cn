@@ -137,25 +137,25 @@
     {
       "id": "612e2e06-0283-4acd-8d85-cba16acb7126",
       "name": "Send Notification On Upcoming Change",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         660,
         240
       ],
       "webhookId": "871515be-56fc-4de7-835b-119d394fea47",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=Tomorrow is Daylight Saving Time change in zone {{ $json.timezone }} - remember to adjust meeting times!"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -163,7 +163,7 @@
           "name": "Slack Oauth"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -325,7 +325,7 @@
   "_cn_meta": {
     "title_zh": "Daylight Saving Time Notification For Different Timezones",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3276,
     "synced_at": "2026-06-17T14:08:34.753488",
     "foreign_services": [

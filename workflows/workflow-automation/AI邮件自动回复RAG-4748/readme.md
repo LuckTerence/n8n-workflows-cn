@@ -3,7 +3,7 @@
 
 RAG增强的邮件自动回复系统
 
-> 分类：工作流自动化 | 适配等级：B（需替换Google Docs/Google Drive/Gmail/Notion/Pinecone)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
+> 分类：工作流自动化 | 适配等级：A（需替换Google Docs/Google Drive/Gmail/Notion/Pinecone)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
 > 原始来源：https://n8nworkflows.xyz/workflows/4748
 
 ---

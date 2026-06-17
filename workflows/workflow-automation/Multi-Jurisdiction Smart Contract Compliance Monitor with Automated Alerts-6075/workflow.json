@@ -338,27 +338,25 @@
     {
       "id": "16",
       "name": "Log Compliance Check",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1040,
         570
       ],
       "parameters": {
-        "values": {
-          "values": [
-            "={{ $json.regulatory_update.title }}",
-            "={{ $json.regulatory_update.jurisdiction }}",
-            "={{ $json.risk_score }}",
-            "={{ $json.risk_level }}",
-            "={{ $json.impact_assessment.contract_count }}",
-            "={{ $json.recommended_action }}",
-            "={{ $json.analyzed_at }}"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
           ]
         },
-        "resource": "sheet",
-        "operation": "appendRow",
-        "sheetName": "Compliance Monitoring Log",
-        "documentId": "your-google-sheet-id"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 1
     }
@@ -508,7 +506,7 @@
   "_cn_meta": {
     "title_zh": "Multi-Jurisdiction Smart Contract Compliance Monitor with Automated Alerts",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6075,
     "synced_at": "2026-06-17T14:13:22.023071",
     "foreign_services": [

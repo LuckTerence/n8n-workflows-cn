@@ -506,26 +506,25 @@
     {
       "id": "f2907960-eb66-4e47-99b1-450c106e0263",
       "name": "Send Slack Report",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4416,
         144
       ],
       "webhookId": "b9cda600-4382-4f0c-8d67-841d2cd6b3dd",
       "parameters": {
-        "user": {
-          "__rl": true,
-          "mode": "list",
-          "value": "U0AS8B0F3S4",
-          "cachedResultName": "guptadivyanshu765"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "select": "user",
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={{ $json.output.slack_report }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -533,7 +532,7 @@
           "name": "Slack OAuth2 API"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -544,26 +543,25 @@
     {
       "id": "311a44bf-76b1-4652-8374-c8dfc125de3b",
       "name": "Send Slack Report_01",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4240,
         1232
       ],
       "webhookId": "b9cda600-4382-4f0c-8d67-841d2cd6b3dd",
       "parameters": {
-        "user": {
-          "__rl": true,
-          "mode": "list",
-          "value": "U0AS8B0F3S4",
-          "cachedResultName": "guptadivyanshu765"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "select": "user",
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={{ $json['slack report'] }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -571,7 +569,7 @@
           "name": "Slack OAuth2 API"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -995,7 +993,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered NPM Package Intelligence Agent",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 15410,
     "synced_at": "2026-06-17T14:06:36.480321",
     "foreign_services": [

@@ -107,12 +107,26 @@
     {
       "id": "3cdce2c1-3c8b-4265-9ce8-84a2cb333cce",
       "name": "Update Datatbase",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -592,
         -48
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4
     },
     {
@@ -130,12 +144,26 @@
     {
       "id": "adb9239e-a0ee-48f4-8892-7c17af4f355b",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         528,
         -320
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.7
     },
     {
@@ -377,7 +405,7 @@
   "_cn_meta": {
     "title_zh": "Automate Job Discovery & AI Proposals across Upwork, Freelancer, Guru & PPH with OpenRouter",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7782,
     "synced_at": "2026-06-17T14:06:17.126369",
     "foreign_services": [

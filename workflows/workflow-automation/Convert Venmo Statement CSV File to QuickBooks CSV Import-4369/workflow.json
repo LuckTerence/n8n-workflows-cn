@@ -81,12 +81,17 @@
     {
       "id": "fe679f92-da12-4878-aa9f-a7f03b549f58",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1200,
         0
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     }
   ],

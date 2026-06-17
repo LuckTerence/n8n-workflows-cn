@@ -127,28 +127,32 @@
     {
       "id": "7",
       "name": "Fetch Schufa (Google Drive)",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1450,
         100
       ],
       "parameters": {
-        "fileId": "={{$json[\"GDRIVE_SCHUFA_FILE_ID\"]}}",
-        "authentication": "oAuth2"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 1
     },
     {
       "id": "8",
       "name": "Fetch Salary Slips (Google Drive)",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1450,
         500
       ],
       "parameters": {
-        "fileId": "={{$json[\"GDRIVE_SALARY_FILE_ID\"]}}",
-        "authentication": "oAuth2"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 1
     },
@@ -192,25 +196,25 @@
     {
       "id": "11",
       "name": "Log to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2050,
         300
       ],
       "parameters": {
-        "range": "A:E",
-        "values": [
-          [
-            "={{$json[\"title\"]}}",
-            "={{$json[\"address\"]}}",
-            "={{$json[\"price\"]}}",
-            "={{new Date().toISOString()}}",
-            "={{$json[\"exposeId\"]}}"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
           ]
-        ],
-        "sheetId": "={{$json[\"GOOGLE_SHEET_ID\"]}}",
-        "authentication": "oAuth2",
-        "valueInputMode": "USER_ENTERED"
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 1
     },
@@ -484,7 +488,7 @@
   "_cn_meta": {
     "title_zh": "Auto Germany Apartment Search & Apply with Immobilienscout24 & Google Services",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6150,
     "synced_at": "2026-06-17T14:06:44.537528",
     "foreign_services": [

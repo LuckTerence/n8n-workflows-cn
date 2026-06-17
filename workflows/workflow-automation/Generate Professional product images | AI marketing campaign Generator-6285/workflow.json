@@ -70,28 +70,16 @@
     {
       "id": "990382e9-78e4-4b8b-91d8-04b01eedbb60",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -800,
         -360
       ],
       "parameters": {
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        },
-        "inputDataFieldName": "Product_Image"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -248,28 +236,16 @@
     {
       "id": "9480167f-4aa6-4aa5-aab8-7831818e987f",
       "name": "Google Drive2",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         -180
       ],
       "parameters": {
-        "name": "Instagram Story",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -282,28 +258,16 @@
     {
       "id": "36e0e136-68b7-4448-8ef9-7f05c30ab68a",
       "name": "Google Drive3",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         60
       ],
       "parameters": {
-        "name": "Website banner ",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -316,28 +280,16 @@
     {
       "id": "3e22f2ac-d741-4f7e-a0f3-65c893b88019",
       "name": "Google Drive4",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         360
       ],
       "parameters": {
-        "name": "Ad_Creative",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -350,28 +302,16 @@
     {
       "id": "8d4c01ab-a74a-4d62-b35f-f396d9527262",
       "name": "Google Drive5",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         680
       ],
       "parameters": {
-        "name": "Testimonials",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -399,28 +339,16 @@
     {
       "id": "e9026e1b-077f-4aea-8687-35369570dace",
       "name": "Google Drive6",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         380,
         -500
       ],
       "parameters": {
-        "name": "Instagram_Post",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1W5eLd9HAPWO_6TuTDW2MPMsQDknGrHoZ",
-          "cachedResultName": "Product Images "
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -541,7 +469,7 @@
         -500
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 90000
@@ -579,7 +507,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -598,7 +527,7 @@
         -180
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 90000
@@ -636,7 +565,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -655,7 +585,7 @@
         60
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 90000
@@ -693,7 +623,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -712,7 +643,7 @@
         360
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 90000
@@ -750,7 +681,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -769,7 +701,7 @@
         680
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "timeout": 90000
@@ -807,7 +739,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -1205,7 +1138,7 @@
   "_cn_meta": {
     "title_zh": "Generate Professional product images | AI marketing campaign Generator",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6285,
     "synced_at": "2026-06-17T14:20:38.012646",
     "foreign_services": [

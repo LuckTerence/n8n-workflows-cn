@@ -171,21 +171,25 @@
     {
       "id": "0394bc79-5900-43fb-a8f6-f26d6c31a9cb",
       "name": "Get an event in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -672,
         1648
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Ver si hay disponibilidad ese día y hora en el calendario`, 'string') }}",
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "bfbpki3lq30nv2hs07kdrudmco@group.calendar.google.com",
-          "cachedResultName": "alpa y muton"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "get"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -274,29 +278,25 @@
     {
       "id": "a9f6708f-7028-4a5f-9dfe-3e188a3b7d20",
       "name": "Create an event in Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1088,
         2704
       ],
       "parameters": {
-        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', ``, 'string') }}",
-        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "bfbpki3lq30nv2hs07kdrudmco@group.calendar.google.com",
-          "cachedResultName": "alpa y muton"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "additionalFields": {
-          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', ``, 'string') }}",
-          "attendees": [
-            "alessiapavone1991@gmail.com",
-            "jc.caverogracia@gmail.com"
-          ],
-          "description": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Description', ``, 'string') }}"
-        },
-        "useDefaultReminders": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Use_Default_Reminders', ``, 'boolean') }}"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -417,21 +417,25 @@
     {
       "id": "acaf744a-3e24-4e79-9d12-eb75b8f3eb9f",
       "name": "Get an event in Google Calendar1",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -656,
         2176
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', `Ver si hay disponibilidad ese día y hora en el calendario`, 'string') }}",
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "bfbpki3lq30nv2hs07kdrudmco@group.calendar.google.com",
-          "cachedResultName": "alpa y muton"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "get"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -3533,7 +3537,7 @@
   "_cn_meta": {
     "title_zh": "Automated Property & Restaurant Bookings with AI Voice Calls via Telegram",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9850,
     "synced_at": "2026-06-17T14:19:47.595613",
     "foreign_services": [

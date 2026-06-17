@@ -533,29 +533,25 @@
     {
       "id": "6bba8b1d-6bdc-4a53-9910-49e795c5a23b",
       "name": "Send Slack Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         192,
         576
       ],
       "webhookId": "d0454b22-335a-4e80-aa15-19c3e1ce50c2",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.slackChannel }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "attachments": [
-          {
-            "text": "={{ $json.alertTitle }}\n{{ $json.alertMessage }}\nTimestamp: {{ $json.timestamp }}",
-            "color": "={{ $json.color }}",
-            "fallback": "Alert Notification"
-          }
-        ],
-        "messageType": "attachment",
-        "otherOptions": {},
-        "authentication": "oAuth2"
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -563,7 +559,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1097,7 +1093,7 @@
   "_cn_meta": {
     "title_zh": "Real-Time Oil Price Crisis Detection with Qwq-32b AI and Multi-Channel Alerts",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10763,
     "synced_at": "2026-06-17T14:19:05.634286",
     "foreign_services": [

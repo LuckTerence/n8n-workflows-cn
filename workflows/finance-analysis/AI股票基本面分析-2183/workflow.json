@@ -34,21 +34,16 @@
     {
       "id": "9dc8f2a7-eeff-4a35-be52-05c42b71eee4",
       "name": "Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1140,
         140
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1LZezppYrWpMStr4qJXtoIX-Dwzvgehll",
-          "cachedResultUrl": "https://drive.google.com/file/d/1LZezppYrWpMStr4qJXtoIX-Dwzvgehll/view?usp=drivesdk",
-          "cachedResultName": "crowdstrike.pdf"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -447,7 +442,7 @@
     "title_zh": "AI股票基本面分析",
     "description_zh": "自动分析股票基本面并生成Q&A报告",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2183,
     "synced_at": "2026-06-17T11:37:00.122741",
     "foreign_services": [

@@ -147,22 +147,17 @@
     {
       "id": "d768bfc1-496d-4acd-aaee-0ce7c4c6d284",
       "name": "Download Video File",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "notes": "Downloads the uploaded video file from Google Drive and prepares it for AI analysis.",
       "position": [
         540,
         1040
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "options": {
-          "binaryPropertyName": "data"
-        },
-        "operation": "download"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -192,7 +187,7 @@
     {
       "id": "6f223750-f307-41f7-9509-254b8e6f310f",
       "name": "Send Summary to Team",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "notes": "Posts the AI-generated video summary and key topics to Slack channel for team review.",
       "position": [
         1520,
@@ -200,21 +195,18 @@
       ],
       "webhookId": "054803e2-58f0-4bd9-97d5-cb4d02f71550",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08S3SR2LUW",
-          "cachedResultName": "workflow-testing"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "mrkdwn": true,
-          "includeLinkToWorkflow": false
-        },
-        "msg_type": "text",
-        "content": {
-          "text": "=🎥 *New Video Summary Ready!*\n\n📄 **Summary:**\n{{ $json.body.response.content }}\n\n🔍 **Key Topics:**\n{{ $json.body.response.topics }}\n\n✅ Processing complete!"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -222,7 +214,7 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -270,7 +262,7 @@
   "_cn_meta": {
     "title_zh": "AI Video Summarization with VLM Run - Automated Content Analysis for Teams",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5108,
     "synced_at": "2026-06-17T14:11:39.156076",
     "foreign_services": [

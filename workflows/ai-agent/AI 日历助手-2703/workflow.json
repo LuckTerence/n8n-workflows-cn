@@ -56,25 +56,25 @@
     {
       "id": "5cdece35-bd69-4c77-b240-963df8781d64",
       "name": "Google Calendar - Get Events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         960,
         800
       ],
       "parameters": {
-        "options": {
-          "timeMax": "={{ $fromAI('end_date') }}",
-          "timeMin": "={{ $fromAI('start_date') }}"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultName": ""
-        },
-        "operation": "getAll",
-        "descriptionType": "manual",
-        "toolDescription": "Use this tool when you’re asked to retrieve events data."
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -87,28 +87,25 @@
     {
       "id": "634e6472-099c-4f0e-b9eb-67956c4881b8",
       "name": "Google Calendar - Create events",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1380,
         800
       ],
       "parameters": {
-        "end": "={{ $fromAI('end_date') }} ",
-        "start": "={{ $fromAI('start_date') }} ",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "descriptionType": "manual",
-        "toolDescription": "Use this Google Calendar tool when you are asked to create an event.",
-        "additionalFields": {
-          "summary": "={{ $fromAI('event_title') }} ",
-          "attendees": [],
-          "description": "={{ $fromAI('event_description') }} "
-        },
-        "useDefaultReminders": false
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -322,7 +319,7 @@
     "title_zh": "AI 日历助手",
     "description_zh": "Telegram Bot AI 日程管理",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2703,
     "synced_at": "2026-06-17T11:21:10.346871",
     "upgraded_at": "2026-06-17",

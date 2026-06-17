@@ -32,12 +32,17 @@
     {
       "id": "da9591a1-87fd-4b4e-bcae-ec2fc5264b9a",
       "name": "Download Resume (PDF File)",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         220,
         0
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -98,12 +103,26 @@
     {
       "id": "5fb3753e-b5b9-4a8f-942b-986cd571764d",
       "name": "Upload Job Posts Organised in a Spreadsheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1700,
         0
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -208,7 +227,7 @@
   "_cn_meta": {
     "title_zh": "Effortless Job Hunting: Let this Automation Find Your Next Role",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3051,
     "synced_at": "2026-06-17T14:06:23.910030",
     "foreign_services": [

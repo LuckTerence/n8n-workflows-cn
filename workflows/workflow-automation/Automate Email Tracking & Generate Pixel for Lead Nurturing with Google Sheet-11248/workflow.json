@@ -93,34 +93,25 @@
     {
       "id": "813526d1-3e10-4c06-adfd-3d332b4bda4a",
       "name": "Get CRM",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         0,
         -544
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupColumn": "EMAIL 1 SEND"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
-          "cachedResultName": "Lead nurturing"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -212,267 +203,25 @@
     {
       "id": "a1063c9e-ea92-46c0-b97e-da0933d37fc4",
       "name": "Update CRM",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1296,
         -528
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "row_number": "={{ $('Get CRM').item.json.row_number }}",
-            "EMAIL 1 DATE": "={{$now.format('dd/LL/yyyy')}}",
-            "EMAIL 1 SEND": "={{ $json.id }}",
-            "PIXEL EMAIL 1": "={{ $('Generate Pixel').item.json.pixel }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "FIRST NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "FIRST NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LAST NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "LAST NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 1 SEND",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL 1 SEND",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 1 DATE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "EMAIL 1 DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PIXEL EMAIL 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PIXEL EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "OPEN EMAIL 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "OPEN EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CLICK EMAIL 1",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CLICK EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "REPLY TO EMAIL 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "REPLY TO EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 2 SEND",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "EMAIL 2 SEND",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 2 DATE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "EMAIL 2 DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PIXEL EMAIL 2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "PIXEL EMAIL 2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "OPEN EMAIL 2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "OPEN EMAIL 2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CLICK EMAIL 2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CLICK EMAIL 2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "REPLY TO EMAIL 2",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "REPLY TO EMAIL 2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 3 SEND",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "EMAIL 3 SEND",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 3 DATE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "EMAIL 3 DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PIXEL EMAIL 3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "PIXEL EMAIL 3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "OPEN EMAIL 3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "OPEN EMAIL 3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "CLICK EMAIL 3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "CLICK EMAIL 3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "REPLY TO EMAIL 3",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "REPLY TO EMAIL 3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
-          "cachedResultName": "Lead nurturing"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -569,126 +318,25 @@
     {
       "id": "575935b6-4709-4146-93ee-c6bd47215cad",
       "name": "Update Open email 1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         720,
         160
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "OPEN EMAIL 1": "yes",
-            "PIXEL EMAIL 1": "={{ $json.pixel }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "DATE",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DATE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "FIRST NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "FIRST NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "LAST NAME",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "LAST NAME",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "EMAIL 1 SEND",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "EMAIL 1 SEND",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "PIXEL EMAIL 1",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "PIXEL EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "OPEN EMAIL 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "OPEN EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "REPLY TO EMAIL 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "REPLY TO EMAIL 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "PIXEL EMAIL 1"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit#gid=0",
-          "cachedResultName": "Foglio1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zgmgqTW3IVfI9BqCGyXHvDj1F80Yn8ibuwAjT-cxSmM/edit?usp=drivesdk",
-          "cachedResultName": "Lead nurturing"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -928,7 +576,7 @@
   "_cn_meta": {
     "title_zh": "Automate Email Tracking & Generate Pixel for Lead Nurturing with Google Sheet",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11248,
     "synced_at": "2026-06-17T14:11:59.344613",
     "foreign_services": [

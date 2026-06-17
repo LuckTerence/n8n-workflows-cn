@@ -203,25 +203,25 @@
     {
       "id": "35e4d17c-e9de-4597-a49b-7c95cc63190c",
       "name": "Send High Risk Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         240,
         112
       ],
       "webhookId": "0e4ecfee-a7a5-4a3b-bbf7-72e14e77449d",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.fraudAlertChannel }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🚨 *HIGH RISK TRANSACTION DETECTED*\n\n*Transaction ID:* {{ $('Transaction Webhook').first().json.transactionId }}\n*Risk Score:* {{ $json.riskScore }}/100\n*Customer ID:* {{ $('Transaction Webhook').first().json.customerId }}\n*Amount:* {{ $('Transaction Webhook').first().json.amount }} {{ $('Transaction Webhook').first().json.currency }}\n*Merchant:* {{ $('Transaction Webhook').first().json.merchant }}\n\n*Fraud Indicators:*\n{{ $json.fraudIndicators.join(\"\\n\") }}\n\n*Recommendation:* {{ $json.recommendation }}\n*Reasoning:* {{ $json.reasoning }}\n\n⚠️ Transaction has been HELD for review."
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -229,7 +229,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -257,165 +257,25 @@
     {
       "id": "a9c65075-c614-4481-8484-2ac2c9288def",
       "name": "Log High Risk Incident",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         912,
         112
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "amount": "={{ $json.amount }}",
-            "status": "={{ $json.status }}",
-            "currency": "={{ $json.currency }}",
-            "merchant": "={{ $json.merchant }}",
-            "reasoning": "={{ $json.reasoning }}",
-            "riskLevel": "={{ $json.riskLevel }}",
-            "riskScore": "={{ $json.riskScore }}",
-            "customerId": "={{ $json.customerId }}",
-            "logTimestamp": "={{ $json.logTimestamp }}",
-            "transactionId": "={{ $json.transactionId }}",
-            "recommendation": "={{ $json.recommendation }}",
-            "fraudIndicators": "={{ $json.fraudIndicators }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "logTimestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "logTimestamp",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "transactionId",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "transactionId",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "customerId",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "customerId",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "amount",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "amount",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "currency",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "currency",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "merchant",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "merchant",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "riskScore",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "riskScore",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "riskLevel",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "riskLevel",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fraudIndicators",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "fraudIndicators",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "recommendation",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "recommendation",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "reasoning",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "reasoning",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "logTimestamp",
-            "transactionId",
-            "customerId",
-            "amount",
-            "currency",
-            "merchant",
-            "riskScore",
-            "riskLevel",
-            "fraudIndicators",
-            "recommendation",
-            "reasoning",
-            "status"
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "High Risk Incidents"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.incidentLogSheetId }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -428,106 +288,25 @@
     {
       "id": "056b21e8-4144-4117-b99f-ed2eb02f7da2",
       "name": "Log Low Risk Transaction",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         0,
         352
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "amount": "={{ $('Transaction Webhook').first().json.amount }}",
-            "status": "APPROVED",
-            "currency": "={{ $('Transaction Webhook').first().json.currency }}",
-            "merchant": "={{ $('Transaction Webhook').first().json.merchant }}",
-            "riskLevel": "={{ $json.riskLevel }}",
-            "riskScore": "={{ $json.riskScore }}",
-            "timestamp": "={{ $now.toISO() }}",
-            "customerId": "={{ $('Transaction Webhook').first().json.customerId }}",
-            "transactionId": "={{ $('Transaction Webhook').first().json.transactionId }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "timestamp",
-              "required": false,
-              "displayName": "timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "transactionId",
-              "required": false,
-              "displayName": "transactionId",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "customerId",
-              "required": false,
-              "displayName": "customerId",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "amount",
-              "required": false,
-              "displayName": "amount",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "currency",
-              "required": false,
-              "displayName": "currency",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "merchant",
-              "required": false,
-              "displayName": "merchant",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "riskScore",
-              "required": false,
-              "displayName": "riskScore",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "riskLevel",
-              "required": false,
-              "displayName": "riskLevel",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "transactionId"
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Low Risk Transactions"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.incidentLogSheetId }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -837,7 +616,7 @@
   "_cn_meta": {
     "title_zh": "Intelligent Real-Time Financial Fraud Detection and Risk Scoring Engine",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11862,
     "synced_at": "2026-06-17T14:21:40.181364",
     "foreign_services": [

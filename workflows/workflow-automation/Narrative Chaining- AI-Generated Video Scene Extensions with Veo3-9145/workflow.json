@@ -313,35 +313,25 @@
     {
       "id": "cd97d8fc-6f46-4f4a-a20e-00def5dc01d1",
       "name": "Get input",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         304,
         48
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "for production",
-              "lookupColumn": "status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
-          "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -495,85 +485,25 @@
     {
       "id": "b04e2a3a-365a-41d6-ac63-4843bb2b4272",
       "name": "Add scene",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1232,
         560
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "scene": "={{ $('Looper').item.json.step }}",
-            "prompt": "={{ $('ExtendRobo AI Agent').item.json.output.video_prompt }}",
-            "sceneURL": "={{ $json.data.response.resultUrls[0] }}",
-            "row_number": 0
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "scene",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "scene",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "sceneURL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "sceneURL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "scene"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 423194450,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1x65wzvPcZAahQsegZ8h99Qh3boI5xRNymx-gtlE9QEU/edit#gid=423194450",
-          "cachedResultName": "Sheet2"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
-          "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -715,34 +645,25 @@
     {
       "id": "2a476a33-9514-4122-9833-70ad865086c5",
       "name": "Get scenes",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1616,
         656
       ],
       "parameters": {
-        "options": {
-          "dataLocationOnSheet": {
-            "values": {
-              "range": "C:C",
-              "rangeDefinition": "specifyRangeA1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 423194450,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=423194450",
-          "cachedResultName": "Sheet2"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
-          "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -769,145 +690,25 @@
     {
       "id": "7e850ef2-14ce-473f-a595-6d12f55656f9",
       "name": "Update log",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2176,
         656
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "id": "={{ $('Get input').item.json.id }}",
-            "status": "done",
-            "outputURL": "={{ $json.video.url }}",
-            "row_number": 0
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "videoURL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "videoURL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "clips to add",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "clips to add",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "aspect ratio",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "aspect ratio",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "narrative theme",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "narrative theme",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "model",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "model",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "any special requests",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "any special requests",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "outputURL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "outputURL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1x65wzvPcZAahQsegZ8h99Qh3boI5xRNymx-gtlE9QEU/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
-          "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -961,29 +762,25 @@
     {
       "id": "092668d1-5aed-4366-bd7f-b44cf6aaf417",
       "name": "Clear scenes",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         416,
         48
       ],
       "parameters": {
-        "clear": "specificRange",
-        "range": "B2:C20",
-        "operation": "clear",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 423194450,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit#gid=423194450",
-          "cachedResultName": "Sheet2"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tNGBG0fTJWynnmiNN_uu1mt1l47HiVhE1CR3Z3_Zt34/edit?usp=drivesdk",
-          "cachedResultName": "Copy of [Template] Veo3 - Narrative Chaining by RoboNuggets"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1336,7 +1133,7 @@
   "_cn_meta": {
     "title_zh": "Narrative Chaining: AI-Generated Video Scene Extensions with Veo3",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9145,
     "synced_at": "2026-06-17T14:10:34.867341",
     "foreign_services": [

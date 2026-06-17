@@ -737,94 +737,25 @@
     {
       "id": "dff24e45-8e57-4dfc-8b65-9d315b406bd2",
       "name": "Save to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         5040,
         760
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "name": "{{ $('Start Interview').first().json['What is your name?'] }}",
-            "session_id": "={{ $('UUID').first().json.data }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "session_id",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "session_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "type",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "type",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "question",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "question",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "answer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "answer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": []
+          ]
         },
-        "options": {
-          "useAppend": true
-        },
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1695693704,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wKjVdm7HeufJkHrUJn_bW9bFI_blm0laoI_jgXKDe0Q/edit#gid=1695693704",
-          "cachedResultName": "transcripts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1wKjVdm7HeufJkHrUJn_bW9bFI_blm0laoI_jgXKDe0Q",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wKjVdm7HeufJkHrUJn_bW9bFI_blm0laoI_jgXKDe0Q/edit?usp=drivesdk",
-          "cachedResultName": "AI Researcher with n8n Forms"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1254,7 +1185,7 @@
   "_cn_meta": {
     "title_zh": "Conversational Interviews with AI Agents and n8n Forms",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2566,
     "synced_at": "2026-06-17T14:17:28.256948",
     "foreign_services": [

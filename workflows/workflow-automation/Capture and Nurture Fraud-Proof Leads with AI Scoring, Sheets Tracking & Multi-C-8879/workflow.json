@@ -87,126 +87,25 @@
     {
       "id": "c9eb3b49-87fc-4fb3-97c8-69cfb56bd3aa",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1472,
         112
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "IP": "={{ $json.ip }}",
-            "Name": "={{ $json.name }}",
-            "Email": "={{ $json.email }}",
-            "Company": "={{ $json.company }}",
-            "Industry": "={{ $json.industry }}",
-            "Job Role": "={{ $json.jobRole }}",
-            "Timestamp": "={{ $json.timestamp }}",
-            "Lead Score": "={{ $json.leadScore }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Company",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Job Role",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Job Role",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Industry",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Industry",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "IP",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "IP",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Lead Score",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Lead Score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15JAabnn5NBtiFom_EKkIMONKz-yiLZGvWz5y6YqNOwY/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15JAabnn5NBtiFom_EKkIMONKz-yiLZGvWz5y6YqNOwY",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15JAabnn5NBtiFom_EKkIMONKz-yiLZGvWz5y6YqNOwY/edit?usp=drivesdk",
-          "cachedResultName": "Leads Data"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -274,24 +173,25 @@
     {
       "id": "df4d6346-aa12-40c1-8b89-287f7c18ac5e",
       "name": "Notify Sales Team",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1808,
         -144
       ],
       "webhookId": "efdd5363-8cd7-4027-8497-6760b8c6744c",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "name",
-          "value": "#leads"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=New high-quality lead!  Name: {{ $json.Name }} Email: {{ $json.Email }} Lead Score: {{ $json[\"Lead Score\"] }} IP: {{ $json.IP }} Timestamp: {{ $json.Timestamp }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -299,7 +199,7 @@
           "name": "Slack account - Akshita"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -951,7 +851,7 @@
   "_cn_meta": {
     "title_zh": "Capture and Nurture Fraud-Proof Leads with AI Scoring, Sheets Tracking & Multi-Channel Alerts",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8879,
     "synced_at": "2026-06-17T14:12:20.827672",
     "foreign_services": [

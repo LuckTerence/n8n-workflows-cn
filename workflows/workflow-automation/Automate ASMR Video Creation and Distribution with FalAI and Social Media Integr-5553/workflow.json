@@ -117,22 +117,25 @@
     {
       "id": "cf7c47e0-4be7-4087-b88d-660b5d5b8c91",
       "name": "Get Past Objects",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         680,
         20
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -298,25 +301,25 @@
     {
       "id": "35324a74-b928-470f-b8fa-e659faafff40",
       "name": "Delete First Row",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1700,
         400
       ],
       "parameters": {
-        "operation": "delete",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "",
-          "cachedResultUrl": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -329,25 +332,25 @@
     {
       "id": "cbb33a74-8520-40d0-9e9b-8b45442831aa",
       "name": "Append Object",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1880,
         440
       ],
       "parameters": {
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "url",
-          "value": "",
-          "cachedResultUrl": "",
-          "cachedResultName": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -833,7 +836,7 @@
   "_cn_meta": {
     "title_zh": "Automate ASMR Video Creation and Distribution with FalAI and Social Media Integration",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5553,
     "synced_at": "2026-06-17T14:21:43.535608",
     "foreign_services": [

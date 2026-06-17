@@ -88,22 +88,25 @@
     {
       "id": "96128999-d7e1-44cd-b9d3-7550e4333414",
       "name": "Reads lastname,firstname and company from your sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1000,
         1320
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.1
     },
@@ -194,7 +197,7 @@
   "_cn_meta": {
     "title_zh": "Batch verify emails in Google Sheet with Icypeas",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2016,
     "synced_at": "2026-06-17T14:07:22.643821",
     "foreign_services": [

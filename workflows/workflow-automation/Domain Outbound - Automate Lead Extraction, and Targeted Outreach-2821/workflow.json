@@ -7,12 +7,26 @@
     {
       "id": "f7bb1a9e-0f0f-4bec-85d4-539317088cc1",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2540,
         1000
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -744,7 +758,7 @@
   "_cn_meta": {
     "title_zh": "Domain Outbound : Automate Lead Extraction, and Targeted Outreach",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2821,
     "synced_at": "2026-06-17T14:19:35.915493",
     "foreign_services": [

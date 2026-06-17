@@ -77,32 +77,25 @@
     {
       "id": "0fa959ab-ea9a-48af-bbf7-ae4046164785",
       "name": "Store Audit Request",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1056,
         240
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "username"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Audit Requests"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Google Sheet ID for Audit Requests__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -192,25 +185,25 @@
     {
       "id": "594f9e24-a9aa-4878-8264-8eedc70932cf",
       "name": "Send Audit Report to Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2496,
         240
       ],
       "webhookId": "082bad77-b43f-4440-a399-091a4a5c138d",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Slack Channel ID__>"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🛡️ **Influencer Brand Safety Audit Report**\n\n👤 **Influencer:** @{{ $('Calculate Engagement Rate').item.json.username }}\n\n📊 **Numerical Analysis:**\n• Followers: {{ $('Calculate Engagement Rate').item.json.followers.toLocaleString() }}\n• Engagement Rate: {{ $('Calculate Engagement Rate').item.json.engagementRate }}\n• Average Engagement: {{ $('Calculate Engagement Rate').item.json.avgEngagement }}\n• Health Status: `{{ $('Calculate Engagement Rate').item.json.status }}`\n\n🤖 **AI Safety Assessment:**\n• Safety Score: *{{ $json.safety_score }}*\n• Risk Flags: {{ $json.risk_flags.length > 0 ? $json.risk_flags.join(\", \") : \"None detected\" }}\n• Competitor Mentions: {{ $json.competitor_check }}\n• Engagement Assessment: {{ $json.engagement_assessment }}\n\n📝 **Content Summary:**\n{{ $json.content_summary }}\n\n✅ **Recommendation:** *{{ $json.recommendation }}*"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -218,7 +211,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -229,28 +222,25 @@
     {
       "id": "16ce7ada-0ec0-4786-8a17-c6146e43a7ab",
       "name": "Store Audit Results",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2736,
         240
       ],
       "parameters": {
-        "columns": {
-          "value": null,
-          "mappingMode": "autoMapInputData"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Audit Results"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Google Sheet ID for Audit Results__>"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -450,7 +440,7 @@
   "_cn_meta": {
     "title_zh": "Influencer Brand Safety Auditor with Engagement Analysis",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11808,
     "synced_at": "2026-06-17T14:12:59.787802",
     "foreign_services": [

@@ -593,25 +593,25 @@
     {
       "id": "d62439d4-c362-41e6-a191-a47fcb47f5cb",
       "name": "Send Slack Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4240,
         416
       ],
       "webhookId": "b2064a92-a8d1-423d-8990-e33e4b2c80c5",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "<__PLACEHOLDER_VALUE__Slack channel ID or name__>"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🚨 *New AI Trend Alert*\n\n{{ $json.message }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -619,7 +619,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -1361,7 +1361,7 @@
   "_cn_meta": {
     "title_zh": "Market Intelligence Engine with AI Sentiment Detection & Competitor Analysis",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10765,
     "synced_at": "2026-06-17T14:13:03.590500",
     "foreign_services": [

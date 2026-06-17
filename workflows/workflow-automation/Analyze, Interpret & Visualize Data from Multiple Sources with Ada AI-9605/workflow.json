@@ -155,27 +155,25 @@
     {
       "id": "809b1798-dcf6-42cc-8d8d-d258fa6d67fd",
       "name": "Get data from Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         0,
         992
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 332281959,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM/edit#gid=332281959",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1IhUFreWCZFLAUaCP9ELBnvakg1xSs4CgqnSnMvgkGmM/edit?usp=drivesdk",
-          "cachedResultName": "example_data"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -695,7 +693,7 @@
   "_cn_meta": {
     "title_zh": "Analyze, Interpret & Visualize Data from Multiple Sources with Ada AI",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9605,
     "synced_at": "2026-06-17T14:11:57.853198",
     "foreign_services": [

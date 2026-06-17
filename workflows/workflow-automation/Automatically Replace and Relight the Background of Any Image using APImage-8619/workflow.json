@@ -197,25 +197,16 @@
     {
       "id": "2f066144-49d7-4f26-8278-fc778e4f37d4",
       "name": "Store the output image (node can be exchanged)",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1020,
         380
       ],
       "parameters": {
-        "name": "data",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root",
-          "cachedResultName": "/ (Root folder)"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     }
@@ -259,7 +250,7 @@
   "_cn_meta": {
     "title_zh": "Automatically Replace and Relight the Background of Any Image using APImage",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8619,
     "synced_at": "2026-06-17T14:07:17.816917",
     "foreign_services": [

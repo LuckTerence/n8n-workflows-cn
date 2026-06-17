@@ -180,25 +180,25 @@
     {
       "id": "46c2cc1d-6723-43d2-a328-345fd6a7e333",
       "name": "Notify Organizers (Slack)",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2352,
         -96
       ],
       "webhookId": "",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_SLACK_CHANNEL_ID",
-          "cachedResultName": "YOUR_SLACK_CHANNEL_NAME"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=✅ *New Press Pass Issued*\n\n*Journalist:* {{ $('Webhook Trigger').item.json.body.name }}\n*Outlet:* {{ $('Webhook Trigger').item.json.body.media_outlet }}\n*Email:* {{ $('Webhook Trigger').item.json.body.email }}\n*Press ID:* `{{ $('Generate Press ID & QR').item.json.press_id }}`\n\n📸 Badge: {{ $('HTML/CSS to Image').item.json.image_url }}\n🔍 Verify: {{ $('Generate Press ID & QR').item.json.verification_url }}\n\n_Issued: {{ $('Generate Press ID & QR').item.json.issued_date }}_\n_Valid Until: {{ $('Generate Press ID & QR').item.json.valid_until }}_"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -206,7 +206,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -217,188 +217,25 @@
     {
       "id": "28277e80-b94d-49b6-b64d-afc7701b3e2e",
       "name": "Log to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2384,
         192
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $('Webhook Trigger').item.json.body.name }}",
-            "Email": "={{ $('Webhook Trigger').item.json.body.email }}",
-            "Phone": "={{ $('Webhook Trigger').item.json.body.phone }}",
-            "Press ID": "={{ $('Generate Press ID & QR').item.json.press_id }}",
-            "Photo URL": "={{ $('Webhook Trigger').item.json.body.photo_url }}",
-            "Timestamp": "={{ $now.toISO() }}",
-            "Event Name": "={{ $('Webhook Trigger').item.json.body.event_name }}",
-            "Issued Date": "={{ $('Generate Press ID & QR').item.json.issued_date }}",
-            "QR Code URL": "={{ $('Generate Press ID & QR').item.json.qr_code_url }}",
-            "Valid Until": "={{ $('Generate Press ID & QR').item.json.valid_until }}",
-            "Media Outlet": "={{ $('Webhook Trigger').item.json.body.media_outlet }}",
-            "Badge Image URL": "={{ $('HTML/CSS to Image').item.json.image_url }}",
-            "Verification URL": "={{ $('Generate Press ID & QR').item.json.verification_url }}",
-            "Verification Status": "YES",
-            "Webhook Execution Mode": "={{ $('Webhook Trigger').item.json.executionMode }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Press ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Press ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Phone",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Phone",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Media Outlet",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Media Outlet",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Verification Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Verification Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Event Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Event Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Issued Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Issued Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Valid Until",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Valid Until",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Badge Image URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Badge Image URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "QR Code URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "QR Code URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Verification URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Verification URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Photo URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Photo URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Webhook Execution Mode",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Webhook Execution Mode",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit#gid=YOUR_GOOGLE_SHEETS_SHEET_ID",
-          "cachedResultName": "YOUR_GOOGLE_SHEETS_SHEET_NAME"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_DOCUMENT_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit?usp=drivesdk",
-          "cachedResultName": "YOUR_GOOGLE_SHEETS_DOCUMENT_NAME"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -671,7 +508,7 @@
   "_cn_meta": {
     "title_zh": "Automated Press Pass Verification & Badge Creation with QR Codes & Multi-Channel Distribution",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10793,
     "synced_at": "2026-06-17T14:07:11.088324",
     "foreign_services": [

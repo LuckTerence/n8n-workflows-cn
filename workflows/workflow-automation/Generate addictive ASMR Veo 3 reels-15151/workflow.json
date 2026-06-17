@@ -161,12 +161,26 @@
     {
       "id": "13229623-1b86-4b65-8258-37da6d4cfdfa",
       "name": "Read Sheet1 Data",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         4496,
         3792
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.6
     },
     {
@@ -820,7 +834,7 @@
   "_cn_meta": {
     "title_zh": "Generate addictive ASMR Veo 3 reels",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 15151,
     "synced_at": "2026-06-17T14:09:36.194802",
     "foreign_services": [

@@ -254,141 +254,25 @@
     {
       "id": "74a0fe09-9c5e-4181-a38b-e15404d256e3",
       "name": "Save to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         640,
         280
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Fit Score": "={{ $json['Fit Score'] }}",
-            "Candidate Name": "={{ $json['Candidate Name'] }}",
-            "Interview Date": "={{ $json['Interview Date'] }}",
-            "Duration (minutes)": "={{ $json['Duration (minutes)'] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Candidate Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Candidate Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Interview Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Interview Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Duration (minutes)",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Duration (minutes)",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Fit Score",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Fit Score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Recommendation",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Recommendation",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Strengths",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Strengths",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Concerns",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Concerns",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Summary",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Next Steps",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Next Steps",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Call ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Call ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Analyzed On",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Analyzed On",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0/edit#gid=0",
-          "cachedResultName": "Interview Results"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0/edit?usp=drivesdk",
-          "cachedResultName": "BeyondPresence HR Interview System Template"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6
     },
@@ -487,91 +371,25 @@
     {
       "id": "60847f4e-5e0d-41a6-bee1-96e6bb733fce",
       "name": "Save to Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         180,
         -320
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Agent ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Agent ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Agent Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Agent Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Interview Link",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Interview Link",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Job Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Job Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "System Prompt",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "System Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Welcome Message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Welcome Message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1902016160,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0/edit#gid=1902016160",
-          "cachedResultName": "Interview Agents"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1dXLpP5bRRirBsln4YIQtFgb1MiP-0yR8IDRzse5k7X0/edit?usp=drivesdk",
-          "cachedResultName": "BeyondPresence HR Interview System Template"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6
     }
@@ -708,7 +526,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered HR Interview System with BeyondPresence",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4514,
     "synced_at": "2026-06-17T14:06:13.065627",
     "foreign_services": [

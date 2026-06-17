@@ -3,7 +3,7 @@
 
 （待补充中文描述）
 
-> 分类：金融分析 | 适配等级：B（需替换Google Sheets/Slack/Gmail)（基本改完，配置 API Key 应该就能跑）
+> 分类：金融分析 | 适配等级：A（需替换Google Sheets/Slack/Gmail)（基本改完，配置 API Key 应该就能跑）
 > 原始来源：https://n8nworkflows.xyz/workflows/11862
 
 ---

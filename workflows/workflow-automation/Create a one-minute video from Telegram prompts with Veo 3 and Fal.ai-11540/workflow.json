@@ -223,26 +223,16 @@
     {
       "id": "5fd1a00c-6ff5-4bfe-a956-fb3640324b12",
       "name": "Upload video1",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         448
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -378,26 +368,16 @@
     {
       "id": "c64ee3de-6785-4715-b5f5-b0448101fc34",
       "name": "Upload video4",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         1600
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -457,26 +437,16 @@
     {
       "id": "b213b834-7688-4d04-9e38-88951e494c4e",
       "name": "Upload video5",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         1984
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -536,78 +506,48 @@
     {
       "id": "0ec09468-6229-4596-900f-7ea9b48febf7",
       "name": "Upload video",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         832
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
     {
       "id": "251816ef-bb11-49a9-bd4f-1ff2315aedac",
       "name": "Upload video3",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         1216
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
     {
       "id": "4f33e393-cd51-4e36-bc7b-abb0c362b326",
       "name": "Upload video6",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         2368
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -690,26 +630,16 @@
     {
       "id": "b55583ee-82c4-42a3-b33e-1a362dbdcdc6",
       "name": "Upload video7",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         2752
       ],
       "parameters": {
-        "name": "={{$now.format('yyyyLLdd')}}{{ $json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1VkLZo09_BmiR1z_OHsh27hwFVH6-voiZ",
-          "cachedResultName": "VEO VIDEOS"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -1020,122 +950,25 @@
     {
       "id": "5f2af6a1-4aad-4fc8-a67d-54e9209154a3",
       "name": "Save to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -592,
         608
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Script": "={{ $('AI Agent').item.json.output.items[0].script }}",
-            "Prompt 1": "={{ $('AI Agent').item.json.output.items[0].prompt1 }}",
-            "Prompt 2": "={{ $('AI Agent').item.json.output.items[0].prompt2 }}",
-            "Prompt 3": "={{ $('AI Agent').item.json.output.items[0].prompt3 }}",
-            "Prompt 4": "={{ $('AI Agent').item.json.output.items[0].prompt4 }}",
-            "Prompt 5": "={{ $('AI Agent').item.json.output.items[0].prompt5 }}",
-            "Prompt 6": "={{ $('AI Agent').item.json.output.items[0].prompt6 }}",
-            "Prompt 7": "={{ $('AI Agent').item.json.output.items[0].prompt7 }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Script",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Script",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 1",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 1",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 2",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 2",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 3",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 3",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 4",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 4",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 5",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 5",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 6",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Prompt 6",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt 7",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Prompt 7",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Script"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tcRujkSHOF6Swtm-Xd7C9lLozJ5R3NvVkW_v7Ei7-zc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1tcRujkSHOF6Swtm-Xd7C9lLozJ5R3NvVkW_v7Ei7-zc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tcRujkSHOF6Swtm-Xd7C9lLozJ5R3NvVkW_v7Ei7-zc/edit?usp=drivesdk",
-          "cachedResultName": "VEO Videos"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.7
     },
@@ -1738,7 +1571,7 @@
   "_cn_meta": {
     "title_zh": "Create a one-minute video from Telegram prompts with Veo 3 and Fal.ai",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11540,
     "synced_at": "2026-06-17T14:08:21.530734",
     "foreign_services": [

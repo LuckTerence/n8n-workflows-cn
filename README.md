@@ -9,7 +9,7 @@
 
 ---
 
-> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 985 个开箱即用**
+> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1458 个开箱即用**
 
 [🔍 在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [📋 完整索引](INDEX.md) · [🎯 精选合集](CURATED.md) · [⚡ 快速开始](#快速试试)
 
@@ -173,8 +173,8 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 }
 ```
 
-- **Tier A**（985 个）— 外服节点已替换，配 API Key 就能跑
-- **Tier B**（495 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
+- **Tier A**（1458 个）— 外服节点已替换，配 API Key 就能跑
+- **Tier B**（22 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
 
 > 注意：Tier 标准基于代码审查，标注为 A 不代表在所有 n8n 版本中都能 100% 跑通。欢迎实测后提 issue 或 PR 帮忙完善。
 

@@ -41,16 +41,27 @@
     {
       "id": "f433fd2a-5b2b-4935-b779-b95c64e056ff",
       "name": "Alert on slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         448,
         112
       ],
       "webhookId": "82ae5db9-4695-4749-aa94-b9e771b7d095",
       "parameters": {
-        "otherOptions": {}
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -177,7 +188,7 @@
   "_cn_meta": {
     "title_zh": "Simple error workflow",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10755,
     "synced_at": "2026-06-17T14:14:44.793031",
     "foreign_services": [

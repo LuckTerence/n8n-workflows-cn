@@ -113,28 +113,25 @@
     {
       "id": "d066cccc-3930-48ef-8c77-9d079ced82f2",
       "name": "Search records",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1104,
         -432
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": "app4JwaENq0JKC1sm",
-          "cachedResultUrl": "https://airtable.com/app4JwaENq0JKC1sm",
-          "cachedResultName": "Testing"
-        },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": "tblzRTsHDIBzqUnxY",
-          "cachedResultUrl": "https://airtable.com/app4JwaENq0JKC1sm/tblzRTsHDIBzqUnxY",
-          "cachedResultName": "User Date Dummy"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "search"
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -270,23 +267,25 @@
     {
       "id": "19eba4f8-0022-4bc8-a19f-3985be32061f",
       "name": "Get Data From Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1104,
         -240
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.googleSheetId }}"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.googleDocId }}"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -618,7 +617,7 @@
   "_cn_meta": {
     "title_zh": "Standardized Workflow Design Pattern with Color-Coding System for Teams",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9500,
     "synced_at": "2026-06-17T14:14:46.259812",
     "foreign_services": [

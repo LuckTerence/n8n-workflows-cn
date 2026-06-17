@@ -204,45 +204,25 @@
     {
       "id": "update-order-status",
       "name": "Update Order Status",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1780,
         100
       ],
       "parameters": {
-        "tableId": "orders",
-        "resource": "database",
-        "columnsUi": {
-          "columns": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "initiated",
-              "column": "call_status"
-            },
-            {
-              "value": "={{ $json.id }}",
-              "column": "call_id"
-            },
-            {
-              "value": "={{ new Date().toISOString() }}",
-              "column": "call_timestamp"
-            },
-            {
-              "value": "calling",
-              "column": "confirmation_status"
-            },
-            {
-              "value": "={{ $('Format Order Data').item.json.customer_timezone }}",
-              "column": "customer_timezone"
-            },
-            {
-              "value": "={{ $('Format Order Data').item.json.call_context.customer_local_time }}",
-              "column": "customer_local_time"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "operation": "update",
-        "updateKey": "order_id",
-        "dataToSend": "defineBelow"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -255,49 +235,25 @@
     {
       "id": "schedule-call-later",
       "name": "Schedule Call for Later",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1120,
         400
       ],
       "parameters": {
-        "tableId": "orders",
-        "resource": "database",
-        "columnsUi": {
-          "columns": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "scheduled",
-              "column": "confirmation_status"
-            },
-            {
-              "value": "={{ $json.customer_timezone }}",
-              "column": "customer_timezone"
-            },
-            {
-              "value": "={{ $json.next_call_time }}",
-              "column": "next_call_time"
-            },
-            {
-              "value": "={{ $json.scheduling_info.customer_local_time }}",
-              "column": "customer_local_time"
-            },
-            {
-              "value": "Outside calling hours (10 AM - 3 PM local time)",
-              "column": "scheduled_reason"
-            },
-            {
-              "value": "0",
-              "column": "call_attempts"
-            },
-            {
-              "value": "={{ new Date().toISOString() }}",
-              "column": "last_updated"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "operation": "update",
-        "updateKey": "order_id",
-        "dataToSend": "defineBelow"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -330,18 +286,25 @@
     {
       "id": "get-scheduled-calls",
       "name": "Get Scheduled Calls",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         460,
         800
       ],
       "parameters": {
-        "options": {
-          "filterByFormula": "AND({confirmation_status} = 'scheduled', {next_call_time} <= NOW(), {call_attempts} < 3)"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "tableId": "orders",
-        "resource": "database",
-        "operation": "list"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -416,61 +379,25 @@
     {
       "id": "update-final-status",
       "name": "Update Final Status",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         900,
         500
       ],
       "parameters": {
-        "tableId": "orders",
-        "resource": "database",
-        "columnsUi": {
-          "columns": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ $json.confirmation_status }}",
-              "column": "confirmation_status"
-            },
-            {
-              "value": "={{ $json.customer_response }}",
-              "column": "customer_response"
-            },
-            {
-              "value": "={{ $json.confidence_score }}",
-              "column": "confidence_score"
-            },
-            {
-              "value": "={{ $json.call_duration }}",
-              "column": "call_duration"
-            },
-            {
-              "value": "={{ $json.transcript }}",
-              "column": "call_transcript"
-            },
-            {
-              "value": "={{ $json.issues.join(', ') }}",
-              "column": "issues_reported"
-            },
-            {
-              "value": "={{ $json.requires_followup }}",
-              "column": "requires_followup"
-            },
-            {
-              "value": "={{ $json.call_quality }}",
-              "column": "call_quality"
-            },
-            {
-              "value": "={{ $json.call_cost }}",
-              "column": "call_cost"
-            },
-            {
-              "value": "={{ $json.processed_at }}",
-              "column": "last_updated"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "operation": "update",
-        "updateKey": "order_id",
-        "dataToSend": "defineBelow"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -633,33 +560,25 @@
     {
       "id": "increment-call-attempts",
       "name": "Increment Call Attempts",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         680,
         800
       ],
       "parameters": {
-        "tableId": "orders",
-        "resource": "database",
-        "columnsUi": {
-          "columns": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ ($json.call_attempts || 0) + 1 }}",
-              "column": "call_attempts"
-            },
-            {
-              "value": "={{ new Date().toISOString() }}",
-              "column": "last_attempt"
-            },
-            {
-              "value": "calling",
-              "column": "confirmation_status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "operation": "update",
-        "updateKey": "order_id",
-        "dataToSend": "defineBelow"
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "credentials": {
         "airtableTokenApi": {
@@ -929,7 +848,7 @@
   "_cn_meta": {
     "title_zh": "Automate Order Confirmations with VAPI Voice AI & Timezone Intelligence",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7380,
     "synced_at": "2026-06-17T14:19:44.352319",
     "description_zh": "API 接口、语音处理、流程自动化"

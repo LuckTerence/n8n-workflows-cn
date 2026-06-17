@@ -242,71 +242,25 @@
     {
       "id": "629b2dc4-8b5c-420b-b62d-d0c1653900a2",
       "name": "Log Critical to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -16,
         32
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappings": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ $json.timestamp }}",
-              "column": "Timestamp"
-            },
-            {
-              "value": "={{ $json.id }}",
-              "column": "Transaction_ID"
-            },
-            {
-              "value": "={{ $json.amount }}",
-              "column": "Amount"
-            },
-            {
-              "value": "={{ $json.vendor }}",
-              "column": "Vendor"
-            },
-            {
-              "value": "={{ $json.adjusted_risk_score }}",
-              "column": "Adjusted_Risk_Score"
-            },
-            {
-              "value": "={{ $json.risk_category }}",
-              "column": "Risk_Category"
-            },
-            {
-              "value": "={{ $json.country }}",
-              "column": "Country"
-            },
-            {
-              "value": "={{ $json.velocity_anomaly }}",
-              "column": "Velocity_Anomaly"
-            },
-            {
-              "value": "PENDING_REVIEW",
-              "column": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Critical_Alerts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1a2b3c4d5e6f7g8h"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -319,63 +273,25 @@
     {
       "id": "60e0ded9-8df3-4db0-a8a8-272100b3867d",
       "name": "Log High Priority to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -16,
         224
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappings": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ $json.timestamp }}",
-              "column": "Timestamp"
-            },
-            {
-              "value": "={{ $json.id }}",
-              "column": "Transaction_ID"
-            },
-            {
-              "value": "={{ $json.amount }}",
-              "column": "Amount"
-            },
-            {
-              "value": "={{ $json.vendor }}",
-              "column": "Vendor"
-            },
-            {
-              "value": "={{ $json.adjusted_risk_score }}",
-              "column": "Adjusted_Risk_Score"
-            },
-            {
-              "value": "={{ $json.risk_category }}",
-              "column": "Risk_Category"
-            },
-            {
-              "value": "NEEDS_REVIEW",
-              "column": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "High_Priority_Alerts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1a2b3c4d5e6f7g8h"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -388,59 +304,25 @@
     {
       "id": "6fad427f-102f-4bbe-9c3e-9b6553e0c595",
       "name": "Log Medium Priority to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -16,
         416
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappings": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ $json.timestamp }}",
-              "column": "Timestamp"
-            },
-            {
-              "value": "={{ $json.id }}",
-              "column": "Transaction_ID"
-            },
-            {
-              "value": "={{ $json.amount }}",
-              "column": "Amount"
-            },
-            {
-              "value": "={{ $json.vendor }}",
-              "column": "Vendor"
-            },
-            {
-              "value": "={{ $json.adjusted_risk_score }}",
-              "column": "Adjusted_Risk_Score"
-            },
-            {
-              "value": "LOGGED",
-              "column": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Medium_Alerts"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1a2b3c4d5e6f7g8h"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -503,24 +385,25 @@
     {
       "id": "5519d3bd-91b2-4973-b67a-3473a40f81c9",
       "name": "Send Critical Slack Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         32
       ],
       "webhookId": "958f0a30-86ee-4f34-a20a-be9d8c12536e",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "C01234ABCDE"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=🚨 *CRITICAL TRANSACTION ALERT* 🚨\n\n*Amount:* ${{ $json.amount }}\n*Vendor:* {{ $json.vendor }}\n*Risk Score:* {{ $json.adjusted_risk_score }}/10\n*Transaction ID:* {{ $json.id }}\n*Country:* {{ $json.country || 'Domestic' }}\n\n<!channel> *IMMEDIATE REVIEW REQUIRED*"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -528,7 +411,7 @@
           "name": "Slack account - test "
         }
       },
-      "typeVersion": 2.1,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -539,24 +422,25 @@
     {
       "id": "89b36305-1002-4eec-8875-b505fcf680a7",
       "name": "Send High Priority Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         432,
         224
       ],
       "webhookId": "a27b86e7-85fc-4a23-906e-b75ce190dfab",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "C01234ABCDE"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=⚠️ *High Priority Transaction*\n\n*Amount:* ${{ $json.amount }}\n*Vendor:* {{ $json.vendor }}\n*Risk Score:* {{ $json.adjusted_risk_score }}/10\n*ID:* {{ $json.id }}\n\nReview within 2 hours."
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -564,7 +448,7 @@
           "name": "Slack account - test "
         }
       },
-      "typeVersion": 2.1,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -607,71 +491,25 @@
     {
       "id": "ae35c4f8-6ef1-49e4-ba55-8f2b4b0e246b",
       "name": "Log Summary to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1104,
         128
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappings": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "value": "={{ $json.summary_timestamp }}",
-              "column": "Timestamp"
-            },
-            {
-              "value": "={{ $json.total_transactions }}",
-              "column": "Total_Transactions"
-            },
-            {
-              "value": "={{ $json.critical_alerts }}",
-              "column": "Critical_Count"
-            },
-            {
-              "value": "={{ $json.high_priority_alerts }}",
-              "column": "High_Count"
-            },
-            {
-              "value": "={{ $json.medium_priority_alerts }}",
-              "column": "Medium_Count"
-            },
-            {
-              "value": "={{ $json.total_amount }}",
-              "column": "Total_Amount"
-            },
-            {
-              "value": "={{ $json.average_risk_score }}",
-              "column": "Avg_Risk_Score"
-            },
-            {
-              "value": "={{ $json.international_transactions }}",
-              "column": "International_Count"
-            },
-            {
-              "value": "={{ $json.velocity_anomalies }}",
-              "column": "Velocity_Anomalies"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Daily_Summary"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1a2b3c4d5e6f7g8h"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -1081,7 +919,7 @@
   "_cn_meta": {
     "title_zh": "Monitor Bank Transactions with Multi-Channel Alerts for Accounting Teams",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10110,
     "synced_at": "2026-06-17T14:13:05.925306",
     "foreign_services": [

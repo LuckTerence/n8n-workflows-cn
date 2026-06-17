@@ -49,27 +49,25 @@
     {
       "id": "b1fe6bd4-f20b-4e13-83ce-58aa80372fe5",
       "name": "Read Image URLs",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -300,
         480
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I/edit#gid=0",
-          "cachedResultName": "Product Images"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I/edit?usp=drivesdk",
-          "cachedResultName": "Image Generation"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -161,7 +159,7 @@
         500
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/edits",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -192,7 +190,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -220,26 +219,16 @@
     {
       "id": "b6cb024c-1f67-4df2-8bb1-1a3740212b4d",
       "name": "Upload to Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1600,
         500
       ],
       "parameters": {
-        "name": "={{ $('Analyze Images').item.json.content }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1mAV3g0eR5XZ2wknZTbcfZOkLlq8GZryP",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1mAV3g0eR5XZ2wknZTbcfZOkLlq8GZryP",
-          "cachedResultName": "Product Images"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -252,83 +241,25 @@
     {
       "id": "7e855dc6-0a1b-44f3-83b8-64d76693de87",
       "name": "Insert Image URL in Table",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1820,
         500
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Output": "={{ $json.webViewLink }}",
-            "Prompt": "={{ $('Product Photography Prompt').item.json.text }}",
-            "Image-URL": "={{ $('Read Image URLs').item.json['Image-URL'] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Image-URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Image-URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Prompt",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Output",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Output",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Image-URL"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I/edit#gid=0",
-          "cachedResultName": "Product Images"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17zQUytFekDK305wvgxYdEYm4N5QEQ1mrwsfccNn872I/edit?usp=drivesdk",
-          "cachedResultName": "Image Generation"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -452,7 +383,7 @@
         -120
       ],
       "parameters": {
-        "url": "https://api.openai.com/v1/images/generations",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {},
         "sendBody": true,
@@ -469,7 +400,8 @@
             }
           ]
         },
-        "nodeCredentialType": "openAiApi"
+        "nodeCredentialType": "openAiApi",
+        "notes": "原 OpenAI DALL-E → 通义万相。请填入 dashscope API Key。"
       },
       "credentials": {
         "openAiApi": {
@@ -636,7 +568,7 @@
   "_cn_meta": {
     "title_zh": "Automated Generation of AI Advertising Photos for Product Marketing",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3700,
     "synced_at": "2026-06-17T14:20:15.791916",
     "foreign_services": [

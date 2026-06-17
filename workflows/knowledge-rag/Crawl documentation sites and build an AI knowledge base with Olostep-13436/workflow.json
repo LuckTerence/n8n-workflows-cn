@@ -65,27 +65,16 @@
     {
       "id": "7401b2b1-a43d-4a29-a8fe-40e9abc3e8bc",
       "name": "Create Parent Folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -48,
         464
       ],
       "parameters": {
-        "name": "={{ $json.Service }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ogVqaOeuMSGOs_jUclfs8Mj6oKX71EhZ",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1ogVqaOeuMSGOs_jUclfs8Mj6oKX71EhZ",
-          "cachedResultName": "api workflow"
-        },
-        "resource": "folder"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -176,24 +165,17 @@
     {
       "id": "aa4f21b0-caad-48f5-9c4a-d63b264fd957",
       "name": "Search files and folders",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "maxTries": 2,
       "position": [
         1296,
         608
       ],
       "parameters": {
-        "limit": 1,
-        "filter": {
-          "folderId": {
-            "__rl": true,
-            "mode": "id",
-            "value": "={{ $json.parent_id }}"
-          }
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder",
-        "queryString": "={{ $json.url.split('/') [$json.counter] }}"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -242,26 +224,17 @@
     {
       "id": "f3722176-6062-4b55-b9da-cc8960d8f650",
       "name": "Create folder",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "maxTries": 2,
       "position": [
         1696,
         688
       ],
       "parameters": {
-        "name": "={{ $('counter').item.json.url.split('/') [$('counter').item.json.counter] }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('counter').item.json.parent_id }}"
-        },
-        "resource": "folder"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -1183,7 +1156,7 @@
   "_cn_meta": {
     "title_zh": "Crawl documentation sites and build an AI knowledge base with Olostep",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13436,
     "synced_at": "2026-06-17T14:15:04.388681",
     "foreign_services": [

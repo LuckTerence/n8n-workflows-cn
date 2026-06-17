@@ -209,151 +209,50 @@
     {
       "id": "8d769939-c3b6-472b-85cc-15af3e28590a",
       "name": "Add Generated Content to Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2384,
         1312
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Title": "={{ $('Set Data1').item.json['Topic Title'] }}",
-            "Content": "={{ $('Set Data1').item.json.Content }}",
-            "Generation Date": "={{ $now }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Content",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Content",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Generation Date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Generation Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1579104486,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit#gid=1579104486",
-          "cachedResultName": "Generated Content"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit?usp=drivesdk",
-          "cachedResultName": "Content Topics"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
     {
       "id": "8304abe7-1eba-484d-a673-4e3d1c655ba3",
       "name": "Update Topic Status on Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2080,
         1312
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Completed",
-            "row_number": "={{ $('Get Topic from Google Sheets').item.json.row_number }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Topic",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Topic",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Output",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Output",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit#gid=0",
-          "cachedResultName": "Topic List"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1CyELzPxCDHAXJVu-p2_QRiGRGYwjPtJpeGwWXvlWjLw/edit?usp=drivesdk",
-          "cachedResultName": "Content Topics"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -753,7 +652,7 @@
   "_cn_meta": {
     "title_zh": "Google Form, AI, SEO, GEO Optimization, Human Approval",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8768,
     "synced_at": "2026-06-17T14:10:02.102529",
     "foreign_services": [

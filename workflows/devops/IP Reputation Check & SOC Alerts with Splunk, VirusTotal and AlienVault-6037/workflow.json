@@ -204,26 +204,25 @@
     {
       "id": "7aa90c7f-4766-4a7b-9e70-09ad884901e4",
       "name": "Slack IP Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         640,
         980
       ],
       "webhookId": "c246176e-5a7c-4223-9c41-196ed03ceaa2",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C0913JPTZBJ",
-          "cachedResultName": "n8n-trigger"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "={{ $json.summary.VirusTotal.Status === 'Safe' ? '✅' : '🚨' }} IP {{ $json.summary.VirusTotal.IP }}\nStatus: *{{ $json.summary.Status }}*\nEvent: {{ $json.summary.VirusTotal.Description }}\n"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -231,7 +230,7 @@
           "name": "Slack account 3"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -461,7 +460,7 @@
   "_cn_meta": {
     "title_zh": "IP Reputation Check & SOC Alerts with Splunk, VirusTotal and AlienVault",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6037,
     "synced_at": "2026-06-17T14:18:43.397979",
     "foreign_services": [

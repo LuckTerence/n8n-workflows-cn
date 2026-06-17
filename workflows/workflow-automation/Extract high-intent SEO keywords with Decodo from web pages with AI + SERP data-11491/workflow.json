@@ -98,33 +98,25 @@
     {
       "id": "47b3a83e-ec11-47b7-9eaa-6ed5b2057ccb",
       "name": "Get row(s) in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         864,
         492
       ],
       "parameters": {
-        "options": {
-          "dataLocationOnSheet": {
-            "values": {
-              "rangeDefinition": "specifyRange"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          }
+          ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIVyGQXXVR92IhlvaQfdlGqJEU0lsJHHmlZONyMzU9c/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1mIVyGQXXVR92IhlvaQfdlGqJEU0lsJHHmlZONyMzU9c",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1mIVyGQXXVR92IhlvaQfdlGqJEU0lsJHHmlZONyMzU9c/edit?usp=drivesdk",
-          "cachedResultName": "urls_to_scrape"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -215,115 +207,25 @@
     {
       "id": "1e82b9a5-ddc6-4b4e-84df-0dc201ebdd00",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2560,
         492
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "notes": "={{ $('Code in JavaScript').item.json.notes }}",
-            "status": "={{ $('Code in JavaScript').item.json.overall_status }}",
-            "brand_url": "={{ $('Get row(s) in sheet').item.json.urls }}",
-            "quick_wins": "={{ $('Code in JavaScript').item.json.quick_wins }}",
-            "top_issues": "={{ $('Code in JavaScript').item.json.top_issues }}",
-            "meta_description": "={{ $('Code in JavaScript').item.json.meta_description_recommendation }}",
-            "title_recommendation": "={{ $('Code in JavaScript').item.json.title_recommendation }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "brand_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "brand_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "top_issues",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "top_issues",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "quick_wins",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "quick_wins",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "title_recommendation",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "title_recommendation",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "meta_description",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "meta_description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "notes",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "notes",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LPYN31Dtt5ZFF39yB4mJDvRG40Ga2sow_MlLcNx_DOg/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1LPYN31Dtt5ZFF39yB4mJDvRG40Ga2sow_MlLcNx_DOg",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LPYN31Dtt5ZFF39yB4mJDvRG40Ga2sow_MlLcNx_DOg/edit?usp=drivesdk",
-          "cachedResultName": "SEO Analyzer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -546,7 +448,7 @@
   "_cn_meta": {
     "title_zh": "Extract high-intent SEO keywords with Decodo from web pages with AI + SERP data",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11491,
     "synced_at": "2026-06-17T14:20:29.835336",
     "foreign_services": [

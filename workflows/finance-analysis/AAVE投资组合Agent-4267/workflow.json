@@ -226,27 +226,25 @@
     {
       "id": "b57ddee3-7b92-4e89-9f58-37855a86ab31",
       "name": "Wallet Addresses to Monitor",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         980,
         0
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rTPT4-e8AER5xJkm297ibk3e4wVhDd5zSi66kTOCW0U/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1rTPT4-e8AER5xJkm297ibk3e4wVhDd5zSi66kTOCW0U",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1rTPT4-e8AER5xJkm297ibk3e4wVhDd5zSi66kTOCW0U/edit?usp=drivesdk",
-          "cachedResultName": "Aave Wallet Address"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -587,7 +585,7 @@
     "title_zh": "AAVE投资组合Agent",
     "description_zh": "Telegram+Email+GPT-4o加密投资分析",
     "category": "finance-analysis",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4267,
     "synced_at": "2026-06-17T11:37:16.681725",
     "upgraded_at": "2026-06-17",

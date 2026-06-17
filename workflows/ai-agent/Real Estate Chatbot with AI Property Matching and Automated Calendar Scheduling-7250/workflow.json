@@ -222,21 +222,25 @@
     {
       "id": "295a3776-061c-4324-8639-af282d771072",
       "name": "update_Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2280,
         1600
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "e3ce404900cffc797cca497fa68efabe30620d0b30b96ff59b64e5b25dfc226b@group.calendar.google.com",
-          "cachedResultName": "ABA"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "update",
-        "updateFields": {}
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "typeVersion": 1.3
     },
@@ -302,21 +306,25 @@
     {
       "id": "f4e1a9d0-bc00-4ec5-88a7-961f0934d361",
       "name": "Google Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2540,
         1600
       ],
       "parameters": {
-        "eventId": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Event_ID', ``, 'string') }}",
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "e3ce404900cffc797cca497fa68efabe30620d0b30b96ff59b64e5b25dfc226b@group.calendar.google.com",
-          "cachedResultName": "ABA"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "delete"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "typeVersion": 1.3
     },
@@ -345,23 +353,25 @@
     {
       "id": "7c53569c-f2b9-4f97-a2d4-c235e3336d9a",
       "name": "Google Calendar1",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2740,
         1580
       ],
       "parameters": {
-        "options": {},
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', `use the appointment end time when it is scheduled`, 'string') }}",
-        "timeMin": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('After', `use the appointment start time when it is scheduled`, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "e3ce404900cffc797cca497fa68efabe30620d0b30b96ff59b64e5b25dfc226b@group.calendar.google.com",
-          "cachedResultName": "ABA"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll",
-        "returnAll": true
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "typeVersion": 1.3
     },
@@ -385,49 +395,50 @@
     {
       "id": "695bdf40-f667-423a-b437-bf8af335847a",
       "name": "get_Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         100,
         1220
       ],
       "parameters": {
-        "options": {},
-        "timeMax": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Before', `Three days after the \"after\"`, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "e3ce404900cffc797cca497fa68efabe30620d0b30b96ff59b64e5b25dfc226b@group.calendar.google.com",
-          "cachedResultName": "ABA"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll",
-        "returnAll": true
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "typeVersion": 1.3
     },
     {
       "id": "1eb80e21-84bc-4b81-a21d-669c90837a24",
       "name": "create_Calendar1",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2100,
         1620
       ],
       "parameters": {
-        "end": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('End', `end the event an hour after the start of the event`, 'string') }}",
-        "start": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Start', `start an event at the time of appointment scheduled in indian standard time`, 'string') }}",
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "e3ce404900cffc797cca497fa68efabe30620d0b30b96ff59b64e5b25dfc226b@group.calendar.google.com",
-          "cachedResultName": "ABA"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "descriptionType": "manual",
-        "toolDescription": "create an event after the confirmation mail from the user, add title description about the property and user details and return the event id to the agent",
-        "additionalFields": {
-          "color": "7",
-          "summary": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Summary', `with buyer name`, 'string') }}",
-          "location": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Location', ``, 'string') }}"
-        }
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "typeVersion": 1.3
     },
@@ -1006,7 +1017,7 @@
   "_cn_meta": {
     "title_zh": "Real Estate Chatbot with AI Property Matching and Automated Calendar Scheduling",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7250,
     "synced_at": "2026-06-17T14:17:37.191387",
     "foreign_services": [

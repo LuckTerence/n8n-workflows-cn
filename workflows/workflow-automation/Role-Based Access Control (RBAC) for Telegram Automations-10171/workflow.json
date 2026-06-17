@@ -464,22 +464,25 @@
     {
       "id": "5777c1eb-aa86-4e23-848b-bc91ec133345",
       "name": "Get row(s) in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1184,
         208
       ],
       "parameters": {
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -492,42 +495,50 @@
     {
       "id": "16445f51-bcfa-4f60-b4d7-27c06c011f30",
       "name": "Get a record",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1184,
         368
       ],
       "parameters": {
-        "base": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "table": {
-          "__rl": true,
-          "mode": "list",
-          "value": ""
-        },
-        "options": {}
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
       },
       "typeVersion": 2.1
     },
     {
       "id": "9ebab38a-64ae-4cf9-a67b-f7393e4e435d",
       "name": "Get a database page",
-      "type": "n8n-nodes-base.notion",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1184,
         544
       ],
       "parameters": {
-        "pageId": {
-          "__rl": true,
-          "mode": "url",
-          "value": ""
+        "url": "https://open.feishu.cn/open-apis/docx/v1/documents/你的文档ID",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "resource": "databasePage",
-        "operation": "get"
+        "options": {},
+        "notes": "原 Notion 节点已替换为飞书文档 HTTP 请求。"
       },
       "credentials": {
         "notionApi": {
@@ -776,7 +787,7 @@
   "_cn_meta": {
     "title_zh": "Role-Based Access Control (RBAC) for Telegram Automations",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10171,
     "synced_at": "2026-06-17T14:14:39.095320",
     "foreign_services": [

@@ -32,24 +32,16 @@
     {
       "id": "d768709c-4dd1-4698-a653-5aafd58e2126",
       "name": "Google Drive: Upload Image",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -512,
         -144
       ],
       "parameters": {
-        "name": "={{ $('Trigger: Receive Idea via Telegram').item.json.message.photo[2].file_unique_id }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -766,24 +758,16 @@
     {
       "id": "5731a023-3925-4f52-abe8-7a559438ecb8",
       "name": "Upload Final Video to Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         704,
         784
       ],
       "parameters": {
-        "name": "={{ $('Trigger: Receive Idea via Telegram').item.json.message.photo[2].file_unique_id }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -796,23 +780,25 @@
     {
       "id": "1ff9308c-e41c-4fc2-868a-5e5a88cda8f6",
       "name": "Read Brand Settings",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1008,
         1184
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -879,101 +865,25 @@
     {
       "id": "a365514a-114f-4919-a84f-c921796717dd",
       "name": "Save Ad Data to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -336,
         1184
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "STATUS": "CREATE",
-            "ADS TEXT": "={{ $json.message.content }}",
-            "ID IMAGE": "={{ $node[\"Trigger: Receive Idea via Telegram\"].json.message.photo[2].file_unique_id }}\n",
-            "URL IMAGE": "={{ $node[\"Download Edited Image\"].json.images[0].url }}\n",
-            "URL VIDEO": "={{ $node[\"Set: Video URL\"].json.url_video }}\n",
-            "URL FINAL VIDEO": "={{ $node[\"Download Final Video\"].json.video.url }}\n"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "ID IMAGE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "ID IMAGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL IMAGE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL IMAGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL FINAL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL FINAL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ADS TEXT",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "ADS TEXT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "STATUS",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "STATUS",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "ID IMAGE"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1018,108 +928,25 @@
     {
       "id": "0de87c01-99eb-4f3c-8b7d-46fedccfa680",
       "name": "Save Publishing Status to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         496,
         1184
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "STATUS": "Published",
-            "ID IMAGE": "={{ $node[\"Trigger: Receive Idea via Telegram\"].json.message.photo[2].file_unique_id }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "ID IMAGE",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "ID IMAGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL IMAGE",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "URL IMAGE",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "URL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL FINAL VIDEO",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "URL FINAL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ADS TEXT",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "ADS TEXT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "STATUS",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "STATUS",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "ID IMAGE"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1565,7 +1392,7 @@
   "_cn_meta": {
     "title_zh": "Create Viral Multimedia Ads with AI: NanoBanana, Seedance & Suno for Social Media",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 8428,
     "synced_at": "2026-06-17T14:20:25.836096",
     "foreign_services": [

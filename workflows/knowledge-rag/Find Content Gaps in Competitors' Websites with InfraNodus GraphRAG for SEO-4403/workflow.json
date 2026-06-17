@@ -297,27 +297,25 @@
     {
       "id": "4c82a7bf-aa76-4d43-83dc-de54679b5f10",
       "name": "Read a Google Sheets File",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -200,
         240
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1122486654,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
-          "cachedResultName": "Empty"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
-          "cachedResultName": "Visual Text Analysis Tools"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -330,40 +328,25 @@
     {
       "id": "5c8a772c-573d-4115-ab61-54a492f69907",
       "name": "Update Google Sheets with Content Insights",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2000,
         240
       ],
       "parameters": {
-        "options": {},
-        "fieldsUi": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "column": "Graph Summary",
-              "fieldValue": "={{ $json.graphSummary }}"
-            },
-            {
-              "column": "Topical Summary",
-              "fieldValue": "={{ $json.aiAdvice[0].text }}"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1122486654,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
-          "cachedResultName": "Empty"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?gid=1287901638#gid=1287901638"
-        },
-        "valueToMatchOn": "={{ $json.URL }}",
-        "columnToMatchOn": "URL"
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -469,28 +452,25 @@
     {
       "id": "e1814824-cb3d-46d3-8747-57bce510493f",
       "name": "Get the content from Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2800,
         600
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1122486654,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
-          "cachedResultName": "Empty"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
-          "cachedResultName": "Visual Text Analysis Tools"
-        },
-        "combineFilters": "OR"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -795,67 +775,25 @@
     {
       "id": "5a14b12b-9645-4a16-a377-e707562af837",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1760,
         1060
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Category",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Category",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1122486654,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit#gid=1122486654",
-          "cachedResultName": "Empty"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1l4RBfavkqZLz8JdwrgNsSwD8xERlDm6BrA2gXFPm0Dg/edit?usp=drivesdk",
-          "cachedResultName": "Visual Text Analysis Tools"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1182,7 +1120,7 @@
   "_cn_meta": {
     "title_zh": "Find Content Gaps in Competitors' Websites with InfraNodus GraphRAG for SEO",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4403,
     "synced_at": "2026-06-17T14:15:10.168577",
     "foreign_services": [

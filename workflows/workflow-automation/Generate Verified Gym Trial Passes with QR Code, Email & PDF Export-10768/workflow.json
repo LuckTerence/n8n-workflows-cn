@@ -188,121 +188,25 @@
     {
       "id": "db0868f4-deda-4798-834c-508cf752591b",
       "name": "Log to Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3472,
         64
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $('Webhook').item.json.body.name }}",
-            "Email": "={{ $('Webhook').item.json.body.email }}",
-            "Status": "Active",
-            "Pass ID": "={{ $('Generate Pass Details').item.json.pass_id }}",
-            "Issued At": "={{ $('Generate Pass Details').item.json.issued_at }}",
-            "Start Date": "={{ $('Generate Pass Details').item.json.start_date_formatted }}",
-            "Valid Till": "={{ $('Generate Pass Details').item.json.valid_till_formatted }}",
-            "Email Verified": "true"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Pass ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Pass ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Start Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Start Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Valid Till",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Valid Till",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Issued At",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Issued At",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email Verified",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email Verified",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Pass ID"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_NAME",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit#gid=YOUR_GOOGLE_SHEET_NAME",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEET_ID/edit?usp=drivesdk",
-          "cachedResultName": "Gym Trial Passes 2025"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -633,7 +537,7 @@
   "_cn_meta": {
     "title_zh": "Generate Verified Gym Trial Passes with QR Code, Email & PDF Export",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10768,
     "synced_at": "2026-06-17T14:15:57.935578",
     "foreign_services": [

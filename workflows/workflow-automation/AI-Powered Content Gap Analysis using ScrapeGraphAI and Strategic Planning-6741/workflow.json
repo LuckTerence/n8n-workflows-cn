@@ -162,251 +162,25 @@
     {
       "id": "c085935b-5499-4624-aaed-165975b68c00",
       "name": "Google Sheets Editorial Calendar",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2128,
         656
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "content_id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "content_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "topic",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "topic",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "priority",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "priority",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "opportunity_score",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "opportunity_score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content_format",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "content_format",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "target_word_count",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "target_word_count",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "estimated_hours",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "estimated_hours",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "primary_keywords",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "primary_keywords",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "secondary_keywords",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "secondary_keywords",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "publication_date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "publication_date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "research_start",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "research_start",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "writing_start",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "writing_start",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "review_date",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "review_date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "seo_difficulty",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "seo_difficulty",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "target_audience",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "target_audience",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "content_outline",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "content_outline",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "success_metrics",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "success_metrics",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "assigned_writer",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "assigned_writer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "progress",
-              "type": "number",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "progress",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "notes",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "notes",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": []
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "Content_Gap_Analysis"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "url",
-          "value": ""
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.5
     },
@@ -674,7 +448,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Content Gap Analysis using ScrapeGraphAI and Strategic Planning",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 6741,
     "synced_at": "2026-06-17T14:11:42.666653",
     "foreign_services": [

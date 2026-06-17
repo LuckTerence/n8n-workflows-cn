@@ -716,37 +716,25 @@
     {
       "id": "a1864a19-f8c6-4e7e-9138-4dfdd236b721",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2094,
         120
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "To do",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -759,99 +747,25 @@
     {
       "id": "171ccfa2-ab2c-4acd-91c5-8e2a270c7e0e",
       "name": "Google Sheets1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2392,
         120
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "To do",
-            "Keterangan": "={{ $('AI Agent2').item.json.output }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Status"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -864,100 +778,25 @@
     {
       "id": "8a49881a-e6d9-425c-a47f-d27953ce3e7a",
       "name": "Google Sheets2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2612,
         120
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Done",
-            "Keterangan": "={{ $json.Keterangan }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Keterangan"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -970,37 +809,25 @@
     {
       "id": "6da4c1a5-061c-4d77-ac09-d339d284275d",
       "name": "Google Sheets3",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2094,
         720
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "To do",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1013,99 +840,25 @@
     {
       "id": "fa15fa27-7254-4952-9a08-207fab278dfd",
       "name": "Google Sheets4",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2340,
         720
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "To do",
-            "Keterangan": "={{ $('AI Agent2').item.json.output }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Status"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1118,100 +871,25 @@
     {
       "id": "ffd9cfc8-34f3-4276-8dbc-bbb4924f587b",
       "name": "Google Sheets5",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2600,
         720
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Done",
-            "Keterangan": "={{ $json.Keterangan }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Keterangan"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1224,37 +902,25 @@
     {
       "id": "a02c8a9d-bad5-405b-8279-d724e48db6b0",
       "name": "Google Sheets6",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2392,
         420
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "To do",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1267,99 +933,25 @@
     {
       "id": "f6da4aec-6b74-40da-ad11-96488f6fa1e7",
       "name": "Google Sheets7",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2612,
         420
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "To do",
-            "Keterangan": "={{ $('AI Agent1').item.json.output }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Status"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1372,100 +964,25 @@
     {
       "id": "e3043a9b-4b8c-41f7-a0dd-8c92b3a1ed7b",
       "name": "Google Sheets8",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2840,
         420
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Done",
-            "Keterangan": "={{ $json.Keterangan }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Keterangan"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1591,37 +1108,25 @@
     {
       "id": "fbd9230e-d021-4b7f-a964-8dec0b07b28c",
       "name": "Google Sheets10",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -980,
         420
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "To do",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1634,37 +1139,25 @@
     {
       "id": "3f29ab18-ba93-4c63-9fd6-41095b641a14",
       "name": "Google Sheets9",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -100,
         800
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "To do",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1677,101 +1170,25 @@
     {
       "id": "57c1f7f4-4a44-4c27-8aaf-81dcccef9940",
       "name": "Google Sheets11",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         120,
         800
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "={{ $json.Status }}",
-            "Keterangan": "={{ $json.Keterangan }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Status"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1784,99 +1201,25 @@
     {
       "id": "9cfc50dc-5aed-46e6-b5f6-5f6d2fbe0a52",
       "name": "Google Sheets12",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         360,
         800
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "Done",
-            "Keterangan": "={{ $json.Keterangan }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "No",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "No",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Domain",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Domain",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Customer",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Customer",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Keterangan",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Keterangan",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Keterangan"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15q0yJ4rbMdFTLUrMb9UDtYjCK_sh23OQxE8VTv0k2Tc/edit?usp=drivesdk",
-          "cachedResultName": "Domain Customer"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -2360,7 +1703,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Domain & IP Security Check Automation",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7189,
     "synced_at": "2026-06-17T14:17:38.673473",
     "foreign_services": [

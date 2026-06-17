@@ -508,26 +508,25 @@
     {
       "id": "192b95c6-cdfe-4b5e-94e1-94deb728b0e2",
       "name": "Slack Post Message On Channel",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         1200,
         1180
       ],
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "CCGJA1F1N",
-          "cachedResultName": "powiadomienia"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=DMARC evaluation failed for {{ $json.domain }} on  {{ $json.mail_count }} mails with disposition:  {{ $json.evaluated_disposition }}. DKIM:  {{ $json.evaluated_dkim }} SPF:  {{ $json.evaluated_spf }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -535,7 +534,7 @@
           "name": "Slack Oauth"
         }
       },
-      "typeVersion": 2.2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -726,7 +725,7 @@
   "_cn_meta": {
     "title_zh": "Parse DMARC reports, save them in database and notify on DKIM or SPF error",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2369,
     "synced_at": "2026-06-17T14:13:27.180222",
     "foreign_services": [

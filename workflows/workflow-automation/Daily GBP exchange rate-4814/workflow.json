@@ -91,66 +91,25 @@
     {
       "id": "63b058fd-c9a7-44ee-8356-d1731448922e",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         880,
         0
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Date": "={{ $('HTTP Request').item.json.date }}",
-            "Rate": "={{ $('HTTP Request').item.json.rates.USD }}",
-            "Currency": "={{ $('HTTP Request').item.json.base }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Currency",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Currency",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Rate",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Rate",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cO7Qo4g8o5zaXi54KmqzZYDDHw0yFLJ_-BPyNnLfOG8/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "1cO7Qo4g8o5zaXi54KmqzZYDDHw0yFLJ_-BPyNnLfOG8"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -205,7 +164,7 @@
   "_cn_meta": {
     "title_zh": "Daily GBP exchange rate",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4814,
     "synced_at": "2026-06-17T14:08:30.068428",
     "foreign_services": [

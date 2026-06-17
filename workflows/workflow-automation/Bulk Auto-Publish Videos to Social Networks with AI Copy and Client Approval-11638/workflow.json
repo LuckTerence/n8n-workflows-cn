@@ -240,18 +240,16 @@
     {
       "id": "8d8a2adc-b83f-4e09-9fd4-520ad2cf6c00",
       "name": "Fetch Videos from Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         800,
         384
       ],
       "parameters": {
-        "filter": {},
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder",
-        "returnAll": true,
-        "queryString": "='{{ $json.drive_folder_id }}' in parents and trashed = false",
-        "searchMethod": "query"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -323,19 +321,16 @@
     {
       "id": "e5844599-a45e-41df-bc14-c9ee5314fd48",
       "name": "Download from Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1760,
         368
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -460,206 +455,25 @@
     {
       "id": "f58e58d3-88a4-4f92-9d06-c9bc829ef206",
       "name": "Save Draft to Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2736,
         368
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Video ID",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Video ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Video Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Video Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Index",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Index",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedule Date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Schedule Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedule DateTime",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Schedule DateTime",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TikTok Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TikTok Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Hashtags",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "TikTok Hashtags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Instagram Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Instagram Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Hashtags",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Instagram Hashtags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "YouTube Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Description",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "YouTube Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Tags",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "YouTube Tags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Summary",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Profile",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Profile",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Platforms",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Platforms",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Created At",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Created At",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
-        "options": {
-          "cellFormat": "USER_ENTERED"
-        },
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "VideosTable"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Campaign Settings').first().json.sheet_id }}"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -707,23 +521,25 @@
     {
       "id": "8271992f-6325-401d-b3ba-cfcb5ee43121",
       "name": "Load Content Queue",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         800,
         1040
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "name",
-          "value": "VideosTable"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.sheet_id }}"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -782,19 +598,16 @@
     {
       "id": "fff9142c-bca7-4bb2-b44d-64924ac9b695",
       "name": "Get Video File",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1520,
         1040
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json['Video ID'] }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -996,241 +809,25 @@
     {
       "id": "3cd7eafd-2a62-4fa4-9599-99012580bb04",
       "name": "Mark as Scheduled",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2576,
         1024
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Status": "scheduled",
-            "Video ID": "={{ $('Get Video File').item.json[\"Video ID\"] }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Video ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Video ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Video Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Video Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Index",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Index",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedule Date",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Schedule Date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Schedule DateTime",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Schedule DateTime",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "TikTok Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Description",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "TikTok Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "TikTok Hashtags",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "TikTok Hashtags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Instagram Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Description",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Instagram Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Hashtags",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Instagram Hashtags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "YouTube Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Description",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "YouTube Description",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "YouTube Tags",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "YouTube Tags",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Summary",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Summary",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Profile",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Profile",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Platforms",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Platforms",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Created At",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Created At",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Video ID"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 1275860196,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cegJHxj7Kx4Tg8gMr3uixpzToNc62VEvuuz37iFvnRw/edit#gid=1275860196",
-          "cachedResultName": "VideosTable"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Publisher Config').item.json.sheet_id }}"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1626,7 +1223,7 @@
   "_cn_meta": {
     "title_zh": "Bulk Auto-Publish Videos to Social Networks with AI Copy and Client Approval",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11638,
     "synced_at": "2026-06-17T14:07:29.851137",
     "foreign_services": [

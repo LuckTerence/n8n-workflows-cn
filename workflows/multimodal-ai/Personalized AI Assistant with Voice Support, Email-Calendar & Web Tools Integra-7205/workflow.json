@@ -432,21 +432,25 @@
     {
       "id": "1ef9ec01-d3eb-4003-bdcc-93602343f49c",
       "name": "Get Calendar",
-      "type": "n8n-nodes-base.googleCalendarTool",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         160,
         272
       ],
       "parameters": {
-        "options": {},
-        "calendar": {
-          "__rl": true,
-          "mode": "list",
-          "value": "carlfung1003@gmail.com",
-          "cachedResultName": "carlfung1003@gmail.com"
+        "url": "https://open.feishu.cn/open-apis/calendar/v4/calendars/你的日历ID/events",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "operation": "getAll",
-        "returnAll": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Return_All', ``, 'boolean') }}"
+        "options": {},
+        "notes": "原 Google Calendar 节点已替换为飞书日历 HTTP 请求。"
       },
       "credentials": {
         "googleCalendarOAuth2Api": {
@@ -806,7 +810,7 @@
   "_cn_meta": {
     "title_zh": "Personalized AI Assistant with Voice Support, Email-Calendar & Web Tools Integration",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7205,
     "synced_at": "2026-06-17T14:20:07.668317",
     "foreign_services": [

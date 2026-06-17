@@ -372,27 +372,25 @@
     {
       "id": "77b9008d-ff45-4ce9-866d-178fa4d0f2c4",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         420,
         340
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g/edit#gid=0",
-          "cachedResultName": "Hoja 1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1xFcJSzQyhPOaC-zeX2dJ7LaUxpg-vxiN3EAOBxLTQ4g/edit?usp=drivesdk",
-          "cachedResultName": "RATE"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -437,98 +435,25 @@
     {
       "id": "fe249d41-6cf2-4bee-bc02-16abb9c58339",
       "name": "Success",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1420,
         -380
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $('Split Out').item.json.Currency }}\",\n    \"Rate\": \"{{ $('Split Out').item.json.Rate }}\",\n    \"RateDate\": \"{{ $('Split Out').item.json.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "=Enviado correctamente a SAP, pero sin contenido",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "=204"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -541,98 +466,25 @@
     {
       "id": "54807d8b-df01-4932-8f65-750853fe828c",
       "name": "Fallo",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1420,
         -200
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "={{ $json.error.message }}",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "={{ $json.error.status }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -645,98 +497,25 @@
     {
       "id": "b32f9a30-3ba4-4b45-9bb5-edd3feca7277",
       "name": "Success1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1860,
         -100
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $('Comprobar Fecha').item.json.message.content.Currency }}\",\n    \"Rate\": \"{{ $('Comprobar Fecha').item.json.message.content.Rate }}\",\n    \"RateDate\": \"{{ $('Comprobar Fecha').item.json.message.content.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "=Enviado correctamente a SAP, pero sin contenido",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "=204"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -791,98 +570,25 @@
     {
       "id": "88eed1d3-bf5e-4338-b829-a7031134bcba",
       "name": "Fallo1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1860,
         120
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "={{ $json.error.message }}",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "={{ $json.error.status }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -895,98 +601,25 @@
     {
       "id": "6def1d6b-c496-4cb4-91e3-683fe346ffcf",
       "name": "Success2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         900,
         220
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $('Google Sheets').item.json.Currency }}\",\n    \"Rate\": \"{{ $('Google Sheets').item.json.Rate }}\",\n    \"RateDate\": \"{{ $('Google Sheets').item.json.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "=Enviado correctamente a SAP, pero sin contenido",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "=204"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -999,98 +632,25 @@
     {
       "id": "68da45f2-3480-4133-b71c-a2116eff7e25",
       "name": "Fallo2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         900,
         440
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $json.Currency }}\",\n    \"Rate\": \"{{ $json.Rate }}\",\n    \"RateDate\": \"{{ $json.RateDate }}\"\n}",
-            "method": "POST",
-            "message": "={{ $json.error.message }}",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "={{ $json.error.status }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1103,98 +663,25 @@
     {
       "id": "d4bcbae9-d8b8-4e0d-aabb-290adb3a3a84",
       "name": "Success3",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         660,
         580
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $('Webhook').item.json.body.currency }}\",\n    \"Rate\": \"{{ $('Webhook').item.json.body.rate }}\",\n    \"RateDate\": \"{{ $('Webhook').item.json.body.rateDate }}\"\n}",
-            "method": "POST",
-            "message": "=Enviado correctamente a SAP, pero sin contenido",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "=204"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1207,98 +694,25 @@
     {
       "id": "029f31d2-3c97-4a66-83f9-e2405053d32c",
       "name": "Fallo3",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         660,
         780
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "url": "={{ $vars.url_sap }}SBOBobService_SetCurrencyRate",
-            "json": "={\n    \"Currency\": \"{{ $('Webhook').item.json.body.currency }}\",\n    \"Rate\": \"{{ $('Webhook').item.json.body.rate }}\",\n    \"RateDate\": \"{{ $('Webhook').item.json.body.rateDate }}\"\n}",
-            "method": "POST",
-            "message": "={{ $json.error.message }}",
-            "workflow": "SAPB1-1SBOBobService_SetCurrencyRate",
-            "status_code": "={{ $json.error.status }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "workflow",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "workflow",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "method",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "method",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "json",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "json",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status_code",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status_code",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit#gid=0",
-          "cachedResultName": "Hoja 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1D0qRdFRf8EHH4gAf9JD3tLDofOf8lqcBBXzMl7cmpDM/edit?usp=drivesdk",
-          "cachedResultName": "LOGS_N8N"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1523,7 +937,7 @@
   "_cn_meta": {
     "title_zh": "Flexible Currency Rate Uploads for SAP B1 with AI Validation & Multiple Sources",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4931,
     "synced_at": "2026-06-17T14:20:34.248333",
     "foreign_services": [

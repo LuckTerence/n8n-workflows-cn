@@ -1136,7 +1136,7 @@
   "_cn_meta": {
     "title_zh": "Proxmox AI Agent with n8n and Generative AI Integration",
     "category": "ai-agent",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2749,
     "synced_at": "2026-06-17T14:17:13.412727",
     "foreign_services": [

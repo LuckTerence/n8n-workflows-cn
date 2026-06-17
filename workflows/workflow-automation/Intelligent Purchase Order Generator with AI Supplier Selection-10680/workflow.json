@@ -223,24 +223,16 @@
     {
       "id": "f63b61f7-855c-4a78-b418-1edccec085e4",
       "name": "Archive in Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         288,
         -112
       ],
       "parameters": {
-        "name": "={{ $('Generate PO Document').item.json.fileName }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "root"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "typeVersion": 3
     },
@@ -490,7 +482,7 @@
   "_cn_meta": {
     "title_zh": "Intelligent Purchase Order Generator with AI Supplier Selection",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10680,
     "synced_at": "2026-06-17T14:16:38.393711",
     "foreign_services": [

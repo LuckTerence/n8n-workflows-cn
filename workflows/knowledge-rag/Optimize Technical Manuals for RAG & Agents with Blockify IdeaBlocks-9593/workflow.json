@@ -181,26 +181,16 @@
     {
       "id": "71e3e38e-b653-47d5-9924-3dd9d28cb401",
       "name": "Upload Blockified Manual",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1664,
         416
       ],
       "parameters": {
-        "name": "=blockified-manual.txt",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1yVqBHUS7RZqNY1cj6IYUOQ_eLVDjA7y5",
-          "cachedResultUrl": "https://drive.google.com/drive/folders/1yVqBHUS7RZqNY1cj6IYUOQ_eLVDjA7y5",
-          "cachedResultName": "n8n-blockify-manual-extraction"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -403,25 +393,16 @@
     {
       "id": "88d04eda-7ba3-4f32-a943-019622e513f2",
       "name": "Search files and folders",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -3216,
         448
       ],
       "parameters": {
-        "filter": {
-          "folderId": {
-            "__rl": true,
-            "mode": "list",
-            "value": "root",
-            "cachedResultUrl": "https://drive.google.com/drive",
-            "cachedResultName": "/ (Root folder)"
-          }
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder",
-        "returnAll": true,
-        "searchMethod": "query"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -447,19 +428,16 @@
     {
       "id": "5591235c-65fe-4b78-9f60-df81e4c8ddc5",
       "name": "Download Document to Blockify",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2768,
         304
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -835,7 +813,7 @@
   "_cn_meta": {
     "title_zh": "Optimize Technical Manuals for RAG & Agents with Blockify IdeaBlocks",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9593,
     "synced_at": "2026-06-17T14:15:14.766066",
     "foreign_services": [

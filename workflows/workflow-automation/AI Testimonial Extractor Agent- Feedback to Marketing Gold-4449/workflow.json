@@ -183,95 +183,25 @@
     {
       "id": "c72c0de6-cc21-4b9c-8bf8-b7aa6fd90d7b",
       "name": "Save Extracted Testimonial",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         320,
         580
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Feedback",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Feedback",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Testimony",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Testimony",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "text",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "text",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [
-            "Testimony"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 352165437,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s/edit#gid=352165437",
-          "cachedResultName": "Form Responses 1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/14nmSXdGURNj3a1uQsxNcspdN5HrjGl8TA8t-hdQUF2s/edit?usp=drivesdk",
-          "cachedResultName": "Testimonial"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -366,7 +296,7 @@
   "_cn_meta": {
     "title_zh": "AI Testimonial Extractor Agent: Feedback to Marketing Gold",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4449,
     "synced_at": "2026-06-17T14:20:11.387487",
     "foreign_services": [

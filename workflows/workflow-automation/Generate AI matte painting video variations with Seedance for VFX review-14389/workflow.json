@@ -154,14 +154,27 @@
     {
       "id": "1039b5c8-04e6-4511-a718-ddf0f0a7a5f4",
       "name": "Slack: Notify Supervisor",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         3200,
         464
       ],
       "webhookId": "3c22fc78-6103-4d15-a8ad-c0b88e83565a",
-      "parameters": {},
-      "typeVersion": 2.3,
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -281,14 +294,27 @@
     {
       "id": "e78f7c71-c47d-4eac-aace-a8ddad7c56e2",
       "name": "Slack: Error Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         528,
         1168
       ],
       "webhookId": "cf88c462-1bf9-4763-852c-0fbad1c5ffd6",
-      "parameters": {},
-      "typeVersion": 2.3,
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -536,7 +562,7 @@
   "_cn_meta": {
     "title_zh": "Generate AI matte painting video variations with Seedance for VFX review",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14389,
     "synced_at": "2026-06-17T14:09:22.087998",
     "foreign_services": [

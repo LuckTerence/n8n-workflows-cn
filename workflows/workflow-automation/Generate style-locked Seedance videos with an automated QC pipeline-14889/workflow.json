@@ -141,28 +141,27 @@
     {
       "id": "0cee6a18-b757-47df-8d78-00a0e333c007",
       "name": "Slack: Post Style QC Report1",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2560,
         496
       ],
       "webhookId": "bcec948c-c766-4973-81dd-e2ec370e0a55",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_SLACK_CHANNEL_ID",
-          "cachedResultName": "your-channel-name"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🎨 *Style QC Report – {{ $json.shotCode }} ({{ $json.showName }})*\n\n📺 *Episode:* {{ $json.episodeId }} | *Vendor:* {{ $json.vendorName }}\n🎬 *Shot:* {{ $json.newShotDescription }}\n📊 *Results:* ✅ {{ $json.totalApproved }} Approved | ❌ {{ $json.totalRejected }} Rejected\n\n*✅ Approved for Editorial:*\n{{ $json.slackApproved || 'None passed QC' }}\n\n*❌ Rejected (do not deliver):*\n{{ $json.slackRejected }}\n\n🖼️ *Hero Reference:* <{{ $json.heroReferenceUrl }}|View Approved Style Ref>\n\n_Style QC ran automatically against show profile. Approved variants pushed to editorial._\n_Generated: {{ $json.generatedAt }}_"
-        }
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -440,28 +439,27 @@
     {
       "id": "b9ca3aa7-423c-4898-a944-c77494de122f",
       "name": "Slack: Error Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -64,
         1328
       ],
       "webhookId": "af9d2efb-dc7f-48cc-9391-2a30bdd2d19c",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C0ANFAL4WJ2",
-          "cachedResultName": "social"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=❌ *Style Look Transfer Workflow Failed*\n\nError: {{ $json.message }}\nTime: {{ new Date().toISOString() }}"
-        }
+        "options": {}
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -670,7 +668,7 @@
   "_cn_meta": {
     "title_zh": "Generate style-locked Seedance videos with an automated QC pipeline",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 14889,
     "synced_at": "2026-06-17T14:16:28.925729",
     "foreign_services": [

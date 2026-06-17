@@ -29,25 +29,16 @@
     {
       "id": "011910a9-c2a0-49eb-b1eb-8043e0c2accc",
       "name": "Search Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -220,
         -120
       ],
       "parameters": {
-        "filter": {
-          "folderId": {
-            "__rl": true,
-            "mode": "list",
-            "value": "13tqp0SaI_v4jG1CFLAZo96isx-UBno4v",
-            "cachedResultUrl": "https://drive.google.com/drive/folders/13tqp0SaI_v4jG1CFLAZo96isx-UBno4v",
-            "cachedResultName": "GraphRAG"
-          }
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "resource": "fileFolder",
-        "returnAll": true,
-        "queryString": "*"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -73,19 +64,16 @@
     {
       "id": "6456b7ac-f936-425a-a0ac-62fe118e985a",
       "name": "Retrieve File",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         500,
         -80
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -795,7 +783,7 @@
   "_cn_meta": {
     "title_zh": "Chat with PDF - MD - Text Files using GraphRAG (no vector store needed)",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4755,
     "synced_at": "2026-06-17T14:15:00.904726",
     "foreign_services": [

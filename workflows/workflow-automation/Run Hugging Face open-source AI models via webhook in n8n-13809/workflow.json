@@ -275,7 +275,7 @@
   "_cn_meta": {
     "title_zh": "Run Hugging Face open-source AI models via webhook in n8n",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 13809,
     "synced_at": "2026-06-17T14:14:40.342153",
     "foreign_services": [

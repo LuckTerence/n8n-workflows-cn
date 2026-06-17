@@ -137,28 +137,25 @@
     {
       "id": "3d8f97ea-4a0d-4939-898f-8a0ca9415e7d",
       "name": "Send to Slack with Block",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         800,
         60
       ],
       "webhookId": "0e812732-74d2-4924-8db3-6b9234965937",
       "parameters": {
-        "select": "channel",
-        "blocksUi": "={\n\t\"blocks\": [\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"Ubereat 訂餐資訊:\\n\\n*商家:* {{ $json.shop }}\\n*金額:* {{ $json.price }}\\n*日期:* {{ $json.date }}\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"divider\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"Moze 記帳請點我\"\n\t\t\t},\n\t\t\t\"accessory\": {\n\t\t\t\t\"type\": \"button\",\n\t\t\t\t\"text\": {\n\t\t\t\t\t\"type\": \"plain_text\",\n\t\t\t\t\t\"text\": \"記帳\",\n\t\t\t\t\t\"emoji\": true\n\t\t\t\t},\n\t\t\t\t\"value\": \"click\",\n\t\t\t\t\"url\": \"moze3://expense?amount={{ $json.price }}&account=信用卡&subcategory=外送&store={{ $json.shop }}&date={{ $json.date }}&&project=生活開銷&&time={{ $json.time }}\",\n\t\t\t\t\"action_id\": \"button-action\"\n\t\t\t}\n\t\t}\n\t]\n}",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C0883CJM1UH",
-          "cachedResultName": "外送記帳自動化"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"={\\n\\t\\\"blocks\\\": [\\n\\t\\t{\\n\\t\\t\\t\\\"type\\\": \\\"section\\\",\\n\\t\\t\\t\\\"text\\\": {\\n\\t\\t\\t\\t\\\"type\\\": \\\"mrkdwn\\\",\\n\\t\\t\\t\\t\\\"text\\\": \\\"Ubereat 訂餐資訊:\\\\n\\\\n*商家:* {{ $json.shop }}\\\\n*金額:* {{ $json.price }}\\\\n*日期:* {{ $json.date }}\\\"\\n\\t\\t\\t}\\n\\t\\t},\\n\\t\\t{\\n\\t\\t\\t\\\"ty\"}]}}"
+            }
+          ]
         },
-        "messageType": "block",
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=Ubereat 訂餐資訊: \n商家:  {{ $json.shop }}\n金額: {{ $json.price }}\n日期: {{ $json.date }}\n\n記帳網址:\nmoze3://expense?amount={{ $json.price }}&account=信用卡&subcategory=外送&store={{ $json.shop }}&date={{ $json.date }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -166,7 +163,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -253,7 +250,7 @@
   "_cn_meta": {
     "title_zh": "Food Delivery Notifications and Easy Expense Tracking",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2707,
     "synced_at": "2026-06-17T14:12:43.063329",
     "foreign_services": [

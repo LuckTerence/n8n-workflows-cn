@@ -287,24 +287,16 @@
     {
       "id": "19358bdb-61ce-454e-bf40-6e0760429c6e",
       "name": "upload_source_image",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         768,
         272
       ],
       "parameters": {
-        "name": "=Source Image #{{ $runIndex + 1 }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://drive.google.com/drive/u/0/folders/1_BnKHFYsaar9LvYRQ9B9FJ11lEoK7jyx"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -317,24 +309,16 @@
     {
       "id": "bb63dd72-17b0-4416-9939-d9b8b359acd6",
       "name": "upload_output_video",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         960,
         560
       ],
       "parameters": {
-        "name": "=Output Video #{{ $runIndex + 1 }}",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://drive.google.com/drive/u/0/folders/1_BnKHFYsaar9LvYRQ9B9FJ11lEoK7jyx"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -586,7 +570,7 @@
   "_cn_meta": {
     "title_zh": "AI Video Generator for eCommerce Product Catalogs with Veo 3.1",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10063,
     "synced_at": "2026-06-17T14:16:35.219483",
     "foreign_services": [

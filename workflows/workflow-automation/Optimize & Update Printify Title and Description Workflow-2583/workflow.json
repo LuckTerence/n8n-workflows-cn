@@ -313,158 +313,25 @@
     {
       "id": "b38cdb40-9784-43d6-b1d2-4d30340d2c1f",
       "name": "GS - Add Product Option",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1880,
         -100
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "xid": "={{ Math.random().toString(36).substr(2, 12) }}",
-            "date": "={{ new Date().toISOString().split('T')[0] }}",
-            "time": "={{ new Date().toLocaleTimeString('en-US', { hour12: false }) }}",
-            "status": "Product Processing"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "xid",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "xid",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "time",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "time",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "original_title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "original_title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product_title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "original_desc",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "original_desc",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_desc",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product_desc",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "image_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_url",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "video_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": []
+          ]
         },
-        "options": {
-          "useAppend": true
-        },
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ql9TGAzZCSdSqrHvkZLcsBPoNMAjNpPVsELkumP2heM/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1A6Phr6QwnMltm1_O6dVGAzmSPlOwuwp7RbCiLSvd9l0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1A6Phr6QwnMltm1_O6dVGAzmSPlOwuwp7RbCiLSvd9l0/edit?usp=drivesdk",
-          "cachedResultName": "Printify - AlexK1919"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -477,178 +344,25 @@
     {
       "id": "da735862-b67d-443e-8f45-e425ef518145",
       "name": "Update Product Option",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2440,
         -100
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "xid": "={{ $('GS - Add Product Option').item.json.xid }}",
-            "status": "Option added",
-            "keyword": "={{ $json.message.content.keyword }}",
-            "product_id": "={{ $('Split - id, title, desc').item.json.id }}",
-            "product_desc": "={{ $json.message.content.description }}",
-            "original_desc": "={{ $('Split - id, title, desc').item.json.description }}",
-            "product_title": "={{ $json.message.content.title }}",
-            "original_title": "={{ $('Split - id, title, desc').item.json.title }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "xid",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "xid",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "upload",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "upload",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "date",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "date",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "time",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "time",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "product_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "keyword",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "keyword",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "original_title",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "original_title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product_title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "original_desc",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "original_desc",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_desc",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product_desc",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "product_url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "product_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "image_url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "image_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "video_url",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "video_url",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "xid"
           ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1A6Phr6QwnMltm1_O6dVGAzmSPlOwuwp7RbCiLSvd9l0/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1A6Phr6QwnMltm1_O6dVGAzmSPlOwuwp7RbCiLSvd9l0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1A6Phr6QwnMltm1_O6dVGAzmSPlOwuwp7RbCiLSvd9l0/edit?usp=drivesdk",
-          "cachedResultName": "Printify - AlexK1919"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1140,7 +854,7 @@
   "_cn_meta": {
     "title_zh": "Optimize & Update Printify Title and Description Workflow",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2583,
     "synced_at": "2026-06-17T14:14:30.764652",
     "foreign_services": [

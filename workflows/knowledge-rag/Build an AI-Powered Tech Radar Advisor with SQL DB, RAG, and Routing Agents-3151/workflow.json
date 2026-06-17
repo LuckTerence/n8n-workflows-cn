@@ -10,21 +10,16 @@
     {
       "id": "7e0c4881-be31-4883-acbc-ceee87edfa38",
       "name": "Download Doc File From Google Drive",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1220,
         420
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
-        "options": {
-          "fileName": "={{ $json.name }}"
-        },
-        "operation": "download"
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
+        "options": {},
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -158,27 +153,25 @@
     {
       "id": "afdd7545-69cb-4d41-bb46-70e17ce49109",
       "name": "Google Sheets - Tech Radar",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         960,
         20
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk/edit?usp=drivesdk",
-          "cachedResultName": "Tech Constellation Compass"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -298,27 +291,25 @@
     {
       "id": "e3af8196-a012-423f-80c8-840a3912e289",
       "name": "Google Sheets - Read TechRadar",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2620,
         400
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1R8nj0SXWWmkMaLg0iHt6K0RuTsbUZ5TvMmZwkQkDAyk/edit?usp=drivesdk",
-          "cachedResultName": "Tech Constellation Compass"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1451,7 +1442,7 @@
   "_cn_meta": {
     "title_zh": "Build an AI-Powered Tech Radar Advisor with SQL DB, RAG, and Routing Agents",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3151,
     "synced_at": "2026-06-17T14:14:48.590866",
     "foreign_services": [

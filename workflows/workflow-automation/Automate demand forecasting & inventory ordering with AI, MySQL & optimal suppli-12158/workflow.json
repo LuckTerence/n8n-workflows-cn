@@ -593,25 +593,27 @@
     {
       "id": "e1aed4dd-850f-4422-b034-629a88cce140",
       "name": "Slack Anomaly Alert",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         5616,
         144
       ],
       "webhookId": "54eeb605-34a3-4957-ad9a-9af9c444a61e",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "value": "C1234567890"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=⚠️ **AI Prediction Anomaly Detected**\nProduct ID: {{ $json.productId }}\nConfidence Score: {{ $json.confidenceScore }}\nPredicted Qty: {{ $json.forecastQuantity }}\n\nManager review required."
-        }
+        "options": {}
       },
-      "typeVersion": 2.1,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -886,7 +888,7 @@
   "_cn_meta": {
     "title_zh": "Automate demand forecasting & inventory ordering with AI, MySQL & optimal supplier selection",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 12158,
     "synced_at": "2026-06-17T14:07:04.947016",
     "foreign_services": [

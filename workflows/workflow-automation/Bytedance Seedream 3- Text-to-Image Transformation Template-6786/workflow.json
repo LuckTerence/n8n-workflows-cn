@@ -117,7 +117,7 @@
         -128
       ],
       "parameters": {
-        "url": "https://api.replicate.com/v1/predictions",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "method": "POST",
         "options": {
           "response": {
@@ -142,7 +142,8 @@
               "value": "wait"
             }
           ]
-        }
+        },
+        "notes": "原 Replicate → 通义万相"
       },
       "typeVersion": 4.1
     },
@@ -170,7 +171,7 @@
         -128
       ],
       "parameters": {
-        "url": "=https://api.replicate.com/v1/predictions/{{ $('Create Image Prediction').item.json.id }}",
+        "url": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text2image/image-synthesis",
         "options": {
           "response": {
             "response": {
@@ -187,7 +188,8 @@
               "value": "=Bearer {{ $('Set API Token').item.json.api_token }}"
             }
           ]
-        }
+        },
+        "notes": "原 Replicate → 通义万相"
       },
       "typeVersion": 4.1
     },

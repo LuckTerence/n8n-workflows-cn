@@ -327,22 +327,27 @@
     {
       "id": "0d0d4e2e-b040-45d1-8a4c-e775520a4bbc",
       "name": "Send Slack Notification",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -60,
         860
       ],
       "webhookId": "dc308b09-6aea-41be-96c4-c322cfc8ed8f",
       "parameters": {
-        "select": "channel",
-        "channelId": "high-value-leads",
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=High-value lead alert: {{ $json.leadId }}\nProperty Value: ${{ $json.propertyData.estimatedValue }}\nScore: {{ $json.score }}\nQualification Notes: {{ $json.qualificationNotes }}"
-        }
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
+        },
+        "options": {}
       },
-      "typeVersion": 2,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -466,7 +471,7 @@
   "_cn_meta": {
     "title_zh": "Automated Real Estate Property Lead Scoring with BatchData",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3664,
     "synced_at": "2026-06-17T14:19:32.371333",
     "foreign_services": [

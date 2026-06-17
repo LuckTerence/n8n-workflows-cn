@@ -77,19 +77,16 @@
     {
       "id": "876db6b5-6615-4e9d-8e1a-2d8220b2019f",
       "name": "Download Image File",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -20,
         60
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -151,21 +148,16 @@
     {
       "id": "1b86cadf-9f46-4980-a923-00577bfc59f4",
       "name": "Update Image File",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1120,
         80
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Download Image File').item.json.id }}"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "update",
-        "changeFileContent": true,
-        "newUpdatedFileName": "={{ $('Download Image File').item.json.name }}"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -299,7 +291,7 @@
   "_cn_meta": {
     "title_zh": "Automated AI image tagging and writing the keywords into the image file",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 2995,
     "synced_at": "2026-06-17T14:07:06.754834",
     "foreign_services": [

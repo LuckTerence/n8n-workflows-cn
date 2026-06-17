@@ -178,21 +178,16 @@
     {
       "id": "e7daf635-0e3c-4003-9c67-d193e89a10f3",
       "name": "Download File From Drive1",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -2736,
         672
       ],
       "parameters": {
-        "fileId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1TPAxQq0fXVrgr7VbP7_RVV33v6r0sYk9",
-          "cachedResultUrl": "https://drive.google.com/file/d/1TPAxQq0fXVrgr7VbP7_RVV33v6r0sYk9/view?usp=drivesdk",
-          "cachedResultName": "lama_parse_example.pdf"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "operation": "download"
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -366,7 +361,7 @@
   "_cn_meta": {
     "title_zh": "PDF to Markdown Converter with LlamaCloud Parser",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11811,
     "synced_at": "2026-06-17T14:16:04.685032",
     "foreign_services": [

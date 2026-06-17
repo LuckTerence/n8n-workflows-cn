@@ -126,25 +126,25 @@
     {
       "id": "f5965b4a-4ab1-4e5f-868c-2dc11c59fc28",
       "name": "Send Summary to Slack",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1060,
         0
       ],
       "webhookId": "c2e00b18-42bd-49b7-bc4c-05d60633a7c8",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08TTV0CC3E",
-          "cachedResultName": "all-nathing"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "msg_type": "text",
-        "content": {
-          "text": "=🔍 AI Research Summary: \nTitle: {{ $('Filter Relevant Articles').item.json.article.title }}\nLink: {{ $('Filter Relevant Articles').item.json.url }}\nSummary: {{ $json.output }}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackApi": {
@@ -152,7 +152,7 @@
           "name": "Slack account 2"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -311,7 +311,7 @@
   "_cn_meta": {
     "title_zh": "Firecrawl AI-Powered Market Intelligence Bot: Automated News Insights Delivery",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 4588,
     "synced_at": "2026-06-17T14:12:42.487932",
     "foreign_services": [

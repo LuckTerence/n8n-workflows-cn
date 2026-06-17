@@ -21,24 +21,25 @@
     {
       "id": "1e0a06c3-a7da-44ca-a47d-4821bf599049",
       "name": "Read Stock Watchlist",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -128,
         176
       ],
       "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
         "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=YOUR_GOOGLE_SHEET_ID_HERE"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "=YOUR_GOOGLE_SHEET_ID_HERE"
-        },
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -181,25 +182,25 @@
     {
       "id": "6c24ea09-602b-4347-8501-bbaf943332d9",
       "name": "Update Alert History",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         992,
         176
       ],
       "parameters": {
-        "columns": {
-          "value": {},
-          "schema": [],
-          "mappingMode": "autoMapInputData",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": "Sheet1",
-        "documentId": "YOUR_GOOGLE_SHEET_ID_HERE",
-        "authentication": "serviceAccount"
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleApi": {
@@ -436,7 +437,7 @@
   "_cn_meta": {
     "title_zh": "Real-Time Stock Monitor with Smart Alerts via Email & Telegram for Indian & US Markets",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 7701,
     "synced_at": "2026-06-17T14:13:31.487092",
     "foreign_services": [

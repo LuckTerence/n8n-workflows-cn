@@ -129,29 +129,25 @@
     {
       "id": "e4951ebb-486c-474a-8cc2-87d63f485448",
       "name": "send_and_wait",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         720,
         640
       ],
       "webhookId": "3729d6f7-237a-42c2-85a9-8135eeb08d0e",
       "parameters": {
-        "select": "channel",
-        "message": "=Please approve or deny the above story in order to proceed with the video.",
-        "options": {},
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08KC39K8DR",
-          "cachedResultName": "ai-tools-content"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"=Please approve or deny the above story in order to proceed with the video.\"}]}}"
+            }
+          ]
         },
-        "operation": "sendAndWait",
-        "authentication": "oAuth2",
-        "approvalOptions": {
-          "values": {
-            "approvalType": "double"
-          }
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -159,7 +155,7 @@
           "name": "Slack (OAuth)"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -404,26 +400,16 @@
     {
       "id": "ab3b734e-af1c-40c2-9a7d-db0f1afd1f6d",
       "name": "upload_video",
-      "type": "n8n-nodes-base.googleDrive",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1540,
         1220
       ],
       "parameters": {
-        "name": "=scene_{{ $runIndex + 1 }}.mp4",
-        "driveId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "My Drive",
-          "cachedResultUrl": "https://drive.google.com/drive/my-drive",
-          "cachedResultName": "My Drive"
-        },
+        "url": "https://oss-cn-hangzhou.aliyuncs.com/你的Bucket/文件路径",
+        "method": "PUT",
         "options": {},
-        "folderId": {
-          "__rl": true,
-          "mode": "url",
-          "value": "https://drive.google.com/drive/folders/1Lf84YrGu456naiaclZRp1ARMZdQUKJj8"
-        }
+        "notes": "原 Google Drive 节点已替换为阿里云 OSS HTTP 请求。请填入你的 OSS 凭证。"
       },
       "credentials": {
         "googleDriveOAuth2Api": {
@@ -436,28 +422,25 @@
     {
       "id": "060008bc-569b-4a83-b956-914d6c7f0afa",
       "name": "send_completion_msg",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1540,
         980
       ],
       "webhookId": "5442cf5d-27cf-49c8-8916-dda0fcff1a96",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08KC39K8DR",
-          "cachedResultName": "ai-tools-content"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "includeLinkToWorkflow": false
-        },
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=*Video Generation Complete!*\n\nVideo Title: {{ $('narrative_writer').item.json.output.vlogTitle }}\nVideo Concept: {{ $('narrative_writer').item.json.output.concept }}\n\nGoogle Drive Link: https://drive.google.com/drive/folders/1Lf84YrGu456naiaclZRp1ARMZdQUKJj8"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -465,7 +448,7 @@
           "name": "Slack (OAuth)"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -492,28 +475,25 @@
     {
       "id": "c17f5174-5dbe-4a15-abd4-0ab55a023d53",
       "name": "send_narrative_msg",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         320,
         640
       ],
       "webhookId": "6722ef92-cbb7-49e1-af4d-c313e81cec64",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "C08KC39K8DR",
-          "cachedResultName": "ai-tools-content"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {
-          "includeLinkToWorkflow": false
-        },
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=*Title:* {{$node[\"narrative_writer\"].json.output.vlogTitle}}\n*Concept:* {{$node[\"narrative_writer\"].json.output.concept}}\n\n{{ $node[\"narrative_writer\"].json.output.scenes\n  .map(scene => `*Scene ${scene.sceneNumber}* | ${scene.timestamp}\n> ${scene.narrative}`)\n  .join(\"\\n\\n\")\n}}"
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -521,7 +501,7 @@
           "name": "Slack (OAuth)"
         }
       },
-      "typeVersion": 2.3,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -914,7 +894,7 @@
   "_cn_meta": {
     "title_zh": "Generate Viral Bigfoot Vlog Videos with Veo 3",
     "category": "devops",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5312,
     "synced_at": "2026-06-17T14:18:37.115175",
     "foreign_services": [

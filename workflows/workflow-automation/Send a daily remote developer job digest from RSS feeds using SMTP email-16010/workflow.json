@@ -563,7 +563,7 @@
   "_cn_meta": {
     "title_zh": "Send a daily remote developer job digest from RSS feeds using SMTP email",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 16010,
     "synced_at": "2026-06-17T14:06:30.550645",
     "foreign_services": [

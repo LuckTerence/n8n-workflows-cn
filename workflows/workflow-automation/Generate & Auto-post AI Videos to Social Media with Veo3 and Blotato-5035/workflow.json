@@ -56,23 +56,25 @@
     {
       "id": "6d125a85-b626-4981-8cfc-bcac4ea0ca89",
       "name": "Get my video",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         520,
         1440
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -361,94 +363,25 @@
     {
       "id": "38c75425-36a5-45c7-98cb-ed5eb20af249",
       "name": "Google Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         640,
         1920
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "STATUS": "Publish",
-            "row_number": "={{ $('Get my video').item.json.row_number }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "PROMPT",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "PROMPT",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "DESCRIPTION",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "DESCRIPTION",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "URL VIDEO",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "URL VIDEO",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Titre",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Titre",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "STATUS",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "STATUS",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "row_number"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -564,96 +497,25 @@
     {
       "id": "432c7648-f9f9-4807-abf5-64d8f9a6bafb",
       "name": "Google Sheets: Save Script Idea",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1020,
         560
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "id": "==ROW()-1",
-            "idea": "={{ $json.output[0].Idea }}",
-            "caption": "={{ $json.output[0].Caption }}",
-            "production": "={{ $json.output[0].Status }}",
-            "environment_prompt": "={{ $json.output[0].Environment }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "idea",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "idea",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "caption",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "caption",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "production",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "production",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "environment_prompt",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "environment_prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "final_output",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "final_output",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -791,106 +653,25 @@
     {
       "id": "3555e042-a420-49fe-889e-62455616ed7c",
       "name": "Google Sheets: Log Final Video Output",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1340,
         1100
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "idea": "={{ $('Google Sheets: Save Script Idea').first().json.idea }}",
-            "production": "done",
-            "final_output": "={{ $json.video.url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "idea",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "idea",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "caption",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "caption",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "production",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "production",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "environment_prompt",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "environment_prompt",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "final_output",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "final_output",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "idea"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "="
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1133,7 +914,7 @@
   "_cn_meta": {
     "title_zh": "Generate & Auto-post AI Videos to Social Media with Veo3 and Blotato",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 5035,
     "synced_at": "2026-06-17T14:21:48.986835",
     "foreign_services": [

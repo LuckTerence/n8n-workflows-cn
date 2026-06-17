@@ -900,7 +900,7 @@
   "_cn_meta": {
     "title_zh": "Automated CVE Scanning of Bug Bounty Programs with Nuclei and Project Discovery",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10054,
     "synced_at": "2026-06-17T14:07:07.985582",
     "foreign_services": [

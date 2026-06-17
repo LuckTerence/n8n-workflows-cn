@@ -356,25 +356,25 @@
     {
       "id": "af2df0d0-e747-4836-b6de-392a914fd728",
       "name": "Notify Engineer",
-      "type": "n8n-nodes-base.slack",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         208,
         464
       ],
       "webhookId": "884b8ae9-133e-403a-974e-84926ae77ac2",
       "parameters": {
-        "select": "channel",
-        "channelId": {
-          "__rl": true,
-          "mode": "id",
-          "value": "={{ $('Workflow Configuration').first().json.slackChannel }}"
+        "url": "https://open.feishu.cn/open-apis/bot/v2/hook/你的飞书机器人Webhook地址",
+        "method": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "{\"msg_type\": \"interactive\", \"card\": {\"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"n8n 通知\"}}, \"elements\": [{\"tag\": \"markdown\", \"content\": \"\"}]}}"
+            }
+          ]
         },
-        "otherOptions": {},
-        "authentication": "oAuth2",
-        "msg_type": "text",
-        "content": {
-          "text": "=🚨 *Engineer Attention Required*\n\n*Ticket:* {{ $json.title }}\n*Category:* {{ $json.category }}\n*Priority:* {{ $json.priority }}\n*Complexity:* {{ $json.complexity }}\n\n*AI-Generated Solution:*\n{{ $json.solution }}\n\n*Diagnostic Info:*\n```{{ JSON.stringify($json.diagnosticInfo, null, 2) }}```\n\nPlease review and take action."
-        }
+        "options": {}
       },
       "credentials": {
         "slackOAuth2Api": {
@@ -382,7 +382,7 @@
           "name": "Slack account"
         }
       },
-      "typeVersion": 2.4,
+      "typeVersion": 4.2,
       "_cn_adapted": {
         "action": "替换",
         "from": "Slack",
@@ -892,7 +892,7 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Ticket Triage with Multi-Model Classification & Knowledge Base",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A",
     "source_id": 11854,
     "synced_at": "2026-06-17T14:14:50.198463",
     "foreign_services": [

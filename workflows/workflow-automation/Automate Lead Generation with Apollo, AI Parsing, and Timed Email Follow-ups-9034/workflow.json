@@ -25,37 +25,25 @@
     {
       "id": "0ce9db68-c58b-4b09-8e85-fc7a49ea6307",
       "name": "Get row(s) in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -16,
         576
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "not sent",
-              "lookupColumn": "Status"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for content creators"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -143,144 +131,25 @@
     {
       "id": "5e7a9e77-3743-4d98-ba28-a11761c0a329",
       "name": "Update row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         784,
         576
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $('Get row(s) in sheet').item.json.Email }}",
-            "Status": "sent",
-            "Date sent": "={{ new Date().toLocaleString() }}\n\n\n\n"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Full Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Full Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Personal LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Personal LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Website",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Company Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Followed up",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Followed up",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date sent",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Date sent",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for content creators"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -323,134 +192,25 @@
     {
       "id": "44668354-7b56-4ebd-b2f9-63c50c8527cd",
       "name": "Add to Google Sheet1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         960,
         144
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $('If').item.json.output.email }}",
-            "Title": "={{ $('If').item.json.output.title }}",
-            "Status": "not sent",
-            "Full Name": "={{ $('If').item.json.output.fullName }}",
-            "Followed up": "not sent",
-            "Company Name": "={{ $('If').item.json.output.companyName }}",
-            "Company Website": "={{ $('If').item.json.output.companyWebsite }}",
-            "Personal LinkedIn": "={{ $('If').item.json.output.LinkedIn }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Full Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Full Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Personal LinkedIn",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Personal LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Website",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Followed up",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Followed up",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Date sent",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Date sent",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for marketing & advertisment"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -539,112 +299,25 @@
     {
       "id": "44589449-d7bd-4d54-9754-916040cd5257",
       "name": "Add to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2848,
         208
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $json.output.email }}",
-            "Title": "={{ $json.output.title }}",
-            "Full Name": "={{ $json.output.fullName }}",
-            "Company Name": "={{ $json.output.companyName }}",
-            "Company Website": "={{ $json.output.companyWebsite }}",
-            "Personal LinkedIn": "={{ $json.output.LinkedIn }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Full Name",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Full Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Personal LinkedIn",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Personal LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Website",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Company Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for marketing & advertisment"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -899,37 +572,25 @@
     {
       "id": "ed24a32a-e6fc-44d3-95b0-7b8a81ce0c59",
       "name": "Get row(s) in sheet1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -32,
         1072
       ],
       "parameters": {
-        "options": {
-          "returnFirstMatch": true
-        },
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "not sent",
-              "lookupColumn": "Followed up"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for content creators"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -989,133 +650,25 @@
     {
       "id": "c131a939-28ee-424c-bf9f-7c31a94e007b",
       "name": "Update row in sheet1",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1344,
         1072
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Email": "={{ $('Get row(s) in sheet1').item.json.Email }}",
-            "Followed up": "sent"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Full Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Full Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Title",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Title",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Personal LinkedIn",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Personal LinkedIn",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Name",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Company Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Company Website",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Company Website",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Followed up",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Followed up",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for content creators"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1210,27 +763,25 @@
     {
       "id": "06e93388-90b4-4fc9-81be-c2acc070f759",
       "name": "Get row(s) in sheet2",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -592,
         96
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DoHVISCYbW5HOarrKFILxqo_-gXJ3k0wFvOA--EXeDc/edit?usp=drivesdk",
-          "cachedResultName": "Leads for marketing & advertisment"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1772,7 +1323,7 @@
   "_cn_meta": {
     "title_zh": "Automate Lead Generation with Apollo, AI Parsing, and Timed Email Follow-ups",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9034,
     "synced_at": "2026-06-17T14:19:29.677479",
     "foreign_services": [

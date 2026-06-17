@@ -43,35 +43,25 @@
     {
       "id": "3f91cf1a-9f1e-412f-a0c6-dbc89aff9296",
       "name": "Get row(s) in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -3024,
         -640
       ],
       "parameters": {
-        "options": {},
-        "filtersUI": {
-          "values": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "lookupValue": "={{ $json.link }}",
-              "lookupColumn": "URL"
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
           ]
         },
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk/edit#gid=0",
-          "cachedResultName": "Arkusz1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk/edit?usp=drivesdk",
-          "cachedResultName": "Artykuły RSS"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -177,115 +167,25 @@
     {
       "id": "66784d91-6263-44db-8723-176527cd93aa",
       "name": "Append row in sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1040,
         -640
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "URL": "={{ $('RSS Feed Trigger').first().json.link }}",
-            "Image URL": "={{ $json.public_image_url }}",
-            "FB Post ID": "={{ $json.facebook_post_id }}",
-            "FB Post URL": "={{ $json.facebook_post_url }}",
-            "Treść posta ": "={{ $('Basic LLM Chain').first().json.text }}",
-            "Instagram Post ID": "={{ $json.instagram_post_id }}",
-            "Instagram Post URL": "={{ $json.instagram_post_url }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Treść posta ",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Treść posta ",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Image URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Image URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "FB Post URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "FB Post URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "FB Post ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "FB Post ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Post URL",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Instagram Post URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Instagram Post ID",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Instagram Post ID",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk/edit#gid=0",
-          "cachedResultName": "Arkusz1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1VdLMMjlMb03BhUJHt1q51yG8yJOK0Cvv5pJJa8tBMLk/edit?usp=drivesdk",
-          "cachedResultName": "Artykuły RSS"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1200,7 +1100,7 @@
   "_cn_meta": {
     "title_zh": "Automate RSS-to-Social Media with AI Summaries and Image Generation",
     "category": "multimodal-ai",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9208,
     "synced_at": "2026-06-17T14:19:46.193564",
     "foreign_services": [

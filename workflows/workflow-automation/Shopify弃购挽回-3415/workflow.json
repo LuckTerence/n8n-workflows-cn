@@ -56,12 +56,26 @@
     {
       "id": "75a6bdf0-a76d-4e69-b0f1-43fb9858e13c",
       "name": "Log to Google Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         2840,
         -140
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 3
     },
     {
@@ -101,13 +115,27 @@
     {
       "id": "a2650e46-464b-4781-93a5-03a3e5464bf7",
       "name": "Mark as \"Recovered Naturally\"",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         800,
         840
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
+      },
       "typeVersion": 4.5
     },
     {
@@ -384,13 +412,27 @@
     {
       "id": "cb906b46-aa88-4373-8106-4c33fba5f0e8",
       "name": "Airtable",
-      "type": "n8n-nodes-base.airtable",
+      "type": "n8n-nodes-base.httpRequest",
       "disabled": true,
       "position": [
         1120,
         840
       ],
-      "parameters": {},
+      "parameters": {
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
+        },
+        "options": {},
+        "notes": "原 Airtable 节点已替换为飞书多维表格 HTTP 请求。"
+      },
       "typeVersion": 2.1
     },
     {
@@ -1482,7 +1524,7 @@
     "title_zh": "Shopify弃购挽回",
     "description_zh": "Gmail+Sheets+Twilio自动挽回弃购",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 3415,
     "synced_at": "2026-06-17T11:37:17.432489",
     "upgraded_at": "2026-06-17",

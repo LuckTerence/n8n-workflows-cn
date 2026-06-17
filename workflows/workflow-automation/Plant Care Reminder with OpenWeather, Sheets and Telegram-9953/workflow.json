@@ -25,27 +25,25 @@
     {
       "id": "2992a320-5790-4bc4-b1bb-f1d9ba49afb8",
       "name": "Read plants",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -880,
         160
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit#gid=0",
-          "cachedResultName": "plants"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit?usp=drivesdk",
-          "cachedResultName": "Plants Scheudle"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -58,27 +56,25 @@
     {
       "id": "85ab0cc8-f43a-4001-bf29-b3810e79fa43",
       "name": "Read settings",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -1248,
         144
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 278009058,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit#gid=278009058",
-          "cachedResultName": "settings"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit?usp=drivesdk",
-          "cachedResultName": "Plants Scheudle"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -450,78 +446,25 @@
     {
       "id": "7e0b8569-ed69-4a6b-bbed-b569b31a85c7",
       "name": "Append Log",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -672,
         720
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "ts": "={{$now}}",
-            "action": "={{ $('Prepare Data').item.json.action }}",
-            "plant_id": "={{$json[\"id\"]}}",
-            "message_id": "={{$json[\"id\"]}}-{{ $('Prepare Data').item.json.action }}-{{$now}}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "ts",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "ts",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "plant_id",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "plant_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "action",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "action",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "message_id",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "message_id",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "append",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": 129180157,
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit#gid=129180157",
-          "cachedResultName": "log"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit?usp=drivesdk",
-          "cachedResultName": "Plants Scheudle"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -613,192 +556,25 @@
     {
       "id": "17a256b5-2768-40d4-bc45-15ab858dcdcc",
       "name": "Update Water",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -864,
         608
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "id": "={{ $json.id }}",
-            "last_water": "={{ $json.today }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "plant",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "plant",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "species",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "species",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "indoor",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "indoor",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lat",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "lat",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lon",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "lon",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_water",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "last_water",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "water_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "water_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_fert",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "last_fert",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fert_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "fert_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_repot",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "last_repot",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "repot_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "repot_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "weather_delay",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "weather_delay",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "thirst_level",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "thirst_level",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit#gid=0",
-          "cachedResultName": "plants"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit?usp=drivesdk",
-          "cachedResultName": "Plants Scheudle"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -811,193 +587,25 @@
     {
       "id": "feb23de6-b31d-4473-9500-d889ec5f9c94",
       "name": "Update Fert",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         -864,
         816
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "id": "={{ $json.id }}",
-            "last_fert": "={{ $json.today }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "id",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "id",
-              "defaultMatch": true,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "plant",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "plant",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "species",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "species",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "indoor",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "indoor",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lat",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "lat",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "lon",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "lon",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_water",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "last_water",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "water_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "water_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_fert",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "last_fert",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "fert_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "fert_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "last_repot",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "last_repot",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "repot_freq",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "repot_freq",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "weather_delay",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "weather_delay",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "thirst_level",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "thirst_level",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "row_number",
-              "type": "number",
-              "display": true,
-              "removed": true,
-              "readOnly": true,
-              "required": false,
-              "displayName": "row_number",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "id"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "update",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit#gid=0",
-          "cachedResultName": "plants"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ZjZAoHTvqzNeqtxqsgshe4YhU07Ad5DEC5SLEdiK_Lk/edit?usp=drivesdk",
-          "cachedResultName": "Plants Scheudle"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -1342,7 +950,7 @@
   "_cn_meta": {
     "title_zh": "Plant Care Reminder with OpenWeather, Sheets and Telegram",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 9953,
     "synced_at": "2026-06-17T14:21:18.749812",
     "foreign_services": [

@@ -9,27 +9,25 @@
     {
       "id": "45400d45-c09e-432e-9ad9-819fa5db5b56",
       "name": "Get Past Objects",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         224,
         416
       ],
       "parameters": {
-        "options": {},
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hNzWblAWsI_5u4RUK7kC3tSbR9riex94ZUuslhhDb8o/edit#gid=0",
-          "cachedResultName": "Sheet1"
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
+            }
+          ]
         },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "1hNzWblAWsI_5u4RUK7kC3tSbR9riex94ZUuslhhDb8o",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1hNzWblAWsI_5u4RUK7kC3tSbR9riex94ZUuslhhDb8o/edit?usp=drivesdk",
-          "cachedResultName": "VEO ASMR"
-        }
+        "options": {},
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "typeVersion": 4.6
     },
@@ -1166,7 +1164,7 @@
   "_cn_meta": {
     "title_zh": "Automate ASMR Glass Fruit Video Creation & Publishing with Veo, Shotstack & Postiz",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10175,
     "synced_at": "2026-06-17T14:06:49.643415",
     "foreign_services": [

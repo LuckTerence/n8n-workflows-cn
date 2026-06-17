@@ -238,121 +238,25 @@
     {
       "id": "59b0cbd3-9d4b-4bdf-ad9a-4f23ed2ff912",
       "name": "Log to Google Sheets - Valid",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         1584,
         320
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $('Webhook - RSVP Form Submission').item.json.body.name }}",
-            "Email": "={{ $('IF Email Valid?').item.json.email }}",
-            "Event": "={{ $('Webhook - RSVP Form Submission').item.json.body.event }}",
-            "Status": "Confirmed",
-            "Badge_URL": "={{ $('HTML/CSS to Image').item.json.image_url }}",
-            "Timestamp": "={{ new Date().toISOString() }}",
-            "Designation": "={{ $('Webhook - RSVP Form Submission').item.json.body.designation }}",
-            "Organization": "={{ $('Webhook - RSVP Form Submission').item.json.body.organization }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Event",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Event",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Designation",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Designation",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Organization",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Organization",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Badge_URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Badge_URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_DOCUMENT_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit?usp=drivesdk",
-          "cachedResultName": "Event_RSVP_Tracker"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -426,131 +330,25 @@
     {
       "id": "0e63afe4-3614-4e11-96f7-fe44a50c90c8",
       "name": "Log Invalid to Sheets",
-      "type": "n8n-nodes-base.googleSheets",
+      "type": "n8n-nodes-base.httpRequest",
       "position": [
         752,
         560
       ],
       "parameters": {
-        "columns": {
-          "value": {
-            "Name": "={{ $('Webhook - RSVP Form Submission').item.json.body.name }}",
-            "Email": "={{ $('Webhook - RSVP Form Submission').item.json.body.email }}",
-            "Event": "={{ $('Webhook - RSVP Form Submission').item.json.body.event }}",
-            "Status": "Failed - Invalid Email",
-            "Badge_URL": "N/A",
-            "Timestamp": "={{ new Date().toISOString() }}",
-            "Designation": "={{ $('Webhook - RSVP Form Submission').item.json.body.designation }}",
-            "Organization": "={{ $('Webhook - RSVP Form Submission').item.json.body.organization }}"
-          },
-          "schema": [
+        "url": "https://open.feishu.cn/open-apis/bitable/v1/apps/你的多维表格AppToken/tables/你的表格ID/records",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
             {
-              "id": "Timestamp",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Timestamp",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Name",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Name",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Email",
-              "type": "string",
-              "display": true,
-              "removed": false,
-              "required": false,
-              "displayName": "Email",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Event",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Event",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Designation",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Designation",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Organization",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Organization",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Badge_URL",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Badge_URL",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Status",
-              "type": "string",
-              "display": true,
-              "required": false,
-              "displayName": "Status",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Validation_Score",
-              "type": "string",
-              "display": true,
-              "removed": true,
-              "required": false,
-              "displayName": "Validation_Score",
-              "defaultMatch": false,
-              "canBeUsedToMatch": true
+              "name": "Authorization",
+              "value": "Bearer 你的飞书应用Token"
             }
-          ],
-          "mappingMode": "defineBelow",
-          "matchingColumns": [
-            "Email"
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
+          ]
         },
         "options": {},
-        "operation": "appendOrUpdate",
-        "sheetName": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gid=0",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit#gid=0",
-          "cachedResultName": "Sheet1"
-        },
-        "documentId": {
-          "__rl": true,
-          "mode": "list",
-          "value": "YOUR_GOOGLE_SHEETS_DOCUMENT_ID",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/YOUR_GOOGLE_SHEETS_DOCUMENT_ID/edit?usp=drivesdk",
-          "cachedResultName": "Event_RSVP_Tracker"
-        }
+        "notes": "原 Google Sheets 节点已替换为飞书多维表格 HTTP 请求。请填入你的飞书应用凭证。"
       },
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -731,7 +529,7 @@
   "_cn_meta": {
     "title_zh": "Automate Event RSVPs with Email Validation & Badge Generation using VerifiEmail & HTMLCssToImage",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A",
     "source_id": 10169,
     "synced_at": "2026-06-17T14:06:52.993266",
     "foreign_services": [
