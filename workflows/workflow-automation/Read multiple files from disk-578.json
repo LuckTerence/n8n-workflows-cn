@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        270,
+        320
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "name": "Read Binary Files",
+      "type": "n8n-nodes-base.readBinaryFiles",
+      "position": [
+        470,
+        320
+      ],
+      "parameters": {
+        "fileSelector": "/data/lol/*.jpg"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Read Binary Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "_cn_meta": {
+    "title_zh": "Read multiple files from disk",
+    "category": "workflow-automation",
+    "tier": "A",
+    "source_id": 578,
+    "synced_at": "2026-06-17T14:20:47.336264"
+  }
+}
