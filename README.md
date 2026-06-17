@@ -168,7 +168,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 ```
 
 - **Tier A** — 基本改完了，配置 API Key 应该就能跑
-- **Tier B** — 核心链路通了，边角节点可能要自己调
+- **Tier B** — 核心链路通了，边角节点可能要自己调（[升级指南](UPGRADE_GUIDE.md)）
 - **Tier C** — 搭了框架，具体参数需按场景配置
 
 ## 目录结构
@@ -200,7 +200,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [x] CI/CD 自动验证 — GitHub Actions 检查工作流合法性
 - [x] 工作流浏览站点 — 搭个 GitHub Pages，方便搜索筛选
 - [x] 精选合集 — 按场景整理推荐组合
-- [ ] 完善适配 — 把更多 Tier B/C 提升到 Tier A
+- [ ] 完善适配 — 把更多 Tier B 提升到 Tier A（[升级指南](UPGRADE_GUIDE.md)）
 
 ## 参与进来
 
