@@ -1,0 +1,7 @@
+# Extract University Term Dates from Excel using CloudFlare Markdown Conversion
+
+https://n8nworkflows.xyz/workflows/3505
+
+**分类**: workflow-automation
+**节点数**: 18
+**适配等级**: A-adapted

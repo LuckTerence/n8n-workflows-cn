@@ -1,0 +1,7 @@
+# Domain-Specific Web Content Crawler with Depth Control & Text Extraction
+
+https://n8nworkflows.xyz/workflows/8852
+
+**分类**: workflow-automation
+**节点数**: 18
+**适配等级**: A

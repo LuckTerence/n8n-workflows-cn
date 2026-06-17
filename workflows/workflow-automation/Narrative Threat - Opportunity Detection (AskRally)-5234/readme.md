@@ -1,0 +1,7 @@
+# Narrative Threat - Opportunity Detection (AskRally)
+
+https://n8nworkflows.xyz/workflows/5234
+
+**分类**: workflow-automation
+**节点数**: 12
+**适配等级**: A-adapted
