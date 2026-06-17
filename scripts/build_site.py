@@ -5,7 +5,7 @@ import json
 import os
 import re
 
-BASE = "/Users/terencesai/WorkBuddy/2026-06-17-04-19-06/n8n-workflows-cn"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WF_DIR = os.path.join(BASE, "workflows")
 DOCS_DIR = os.path.join(BASE, "docs")
 
@@ -136,6 +136,28 @@ def generate_data():
             name_lower = wf_dir.lower()
             sub = classify(cat, name_lower)
             tags = make_tags(name_lower)
+
+            # Read tier from _cn_meta
+            tier = "B"
+            wf_json = os.path.join(wf_path, "workflow.json")
+            if os.path.exists(wf_json):
+                try:
+                    with open(wf_json, "r", encoding="utf-8") as f:
+                        meta = json.load(f).get("_cn_meta", {})
+                        tier = meta.get("tier", "B")
+                except Exception:
+                    pass
+
+            # Read description_zh
+            desc = ""
+            if os.path.exists(wf_json):
+                try:
+                    with open(wf_json, "r", encoding="utf-8") as f:
+                        meta = json.load(f).get("_cn_meta", {})
+                        desc = meta.get("description_zh", "")
+                except Exception:
+                    pass
+
             workflows.append({
                 "name": wf_dir,
                 "category": cat,
@@ -143,6 +165,8 @@ def generate_data():
                 "categoryIcon": CATEGORY_ICONS.get(cat, "📁"),
                 "subcategory": sub,
                 "tags": tags,
+                "tier": tier,
+                "desc": desc,
                 "path": f"../workflows/{cat}/{wf_dir}/",
                 "readme": f"../workflows/{cat}/{wf_dir}/readme.md",
             })
@@ -282,6 +306,23 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
     .sidebar {{ display: none; }}
 }}
 .github-corner {{ position: absolute; top: 0; right: 0; }}
+.scenario-guide {{
+    padding: 16px 20px; border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(33,150,243,0.06) 0%, transparent 100%);
+    display: none;
+}}
+.scenario-guide.visible {{ display: block; }}
+.scenario-guide h3 {{ font-size: 14px; font-weight: 600; margin-bottom: 10px; color: var(--accent2); }}
+.scenario-list {{ display: flex; gap: 8px; flex-wrap: wrap; }}
+.scenario-chip {{
+    padding: 6px 14px; background: var(--tag-bg); border: 1px solid var(--border);
+    border-radius: 8px; font-size: 13px; color: var(--text); cursor: pointer;
+    transition: all .15s; text-decoration: none; white-space: nowrap;
+}}
+.scenario-chip:hover {{ background: var(--accent2); color: #fff; border-color: var(--accent2); }}
+.tier-a {{ color: #4caf50; font-weight: 600; }}
+.tier-b {{ color: #ff9800; font-weight: 600; }}
+.card-desc {{ font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.5; }}
 </style>
 </head>
 <body>
@@ -301,7 +342,20 @@ body {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, s
   <div class="toolbar">
     <input type="text" class="search-box" id="search" placeholder="搜索工作流...（名称、分类、标签）" oninput="doSearch()" autofocus>
     <button class="badge" id="clear-btn" onclick="clearSearch()">✕ 清除</button>
-    <a href="INDEX.md" target="_blank" class="badge">📋 完整索引</a>
+    <a href="../INDEX.md" target="_blank" class="badge">📋 完整索引</a>
+  </div>
+  <div class="scenario-guide visible" id="scenario-guide">
+    <h3>🎯 按场景快速查找</h3>
+    <div class="scenario-list">
+      <a href="#!" class="scenario-chip" onclick="filterSub('ai-agent','对话机器人');return false;">💬 AI 客服机器人</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','Email & 邮件处理');return false;">📧 邮件自动化</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','销售 & CRM');return false;">🛒 电商 & 销售</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('finance-analysis','股票 & 市场');return false;">📈 股票分析</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('knowledge-rag','RAG 检索问答');return false;">📚 知识库问答</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('multimodal-ai','图像生成');return false;">🎨 AI 绘图</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('devops','监控 & 告警');return false;">🖥️ 运维监控</a>
+      <a href="#!" class="scenario-chip" onclick="filterSub('workflow-automation','内容采集 & 研究');return false;">🔍 内容采集</a>
+    </div>
   </div>
   <div class="results-info" id="results-info">共 {len(workflows)} 个结果</div>
   <div class="list" id="list"></div>
@@ -329,7 +383,9 @@ function render(items) {{
         <div class="card">
             <div class="card-title">
                 <a href="${{w.path}}" target="_blank">${{w.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</a>
+                <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:6px;">Tier ${{w.tier||'B'}}</span>
             </div>
+            ${{w.desc ? `<div class="card-desc">${{w.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</div>` : ''}}
             <div class="card-meta">
                 <span class="tag cat-tag">${{w.categoryIcon}} ${{w.categoryName}}</span>
                 <span class="tag sub-tag">${{w.subcategory}}</span>
@@ -358,12 +414,14 @@ function getFiltered() {{
 function doSearch() {{
     currentQuery = document.getElementById('search').value.trim();
     document.getElementById('clear-btn').style.display = currentQuery ? 'inline-block' : 'none';
+    document.getElementById('scenario-guide').classList.toggle('visible', !currentQuery && !currentCat);
     render(getFiltered());
 }}
 
 function filterSub(cat, sub) {{
     currentCat = cat;
     currentSub = sub;
+    document.getElementById('scenario-guide').classList.remove('visible');
     updateActiveNav();
     render(getFiltered());
 }}
@@ -374,6 +432,7 @@ function clearSearch() {{
     currentSub = null;
     document.getElementById('search').value = '';
     document.getElementById('clear-btn').style.display = 'none';
+    document.getElementById('scenario-guide').classList.add('visible');
     updateActiveNav();
     render(DATA);
 }}

@@ -167,9 +167,11 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 }
 ```
 
-- **Tier A** — 基本改完了，配置 API Key 应该就能跑
-- **Tier B** — 核心链路通了，边角节点可能要自己调（[升级指南](UPGRADE_GUIDE.md)）
+- **Tier A** — 外服节点已替换为国内方案，配置 API Key 应该就能跑
+- **Tier B** — 核心链路通了，边角节点可能需要自己调（参考[升级指南](UPGRADE_GUIDE.md)）
 - **Tier C** — 搭了框架，具体参数需按场景配置
+
+> 注意：Tier 标准基于代码审查，标注为 A 不代表在所有 n8n 版本中都能 100% 跑通。欢迎实测后提 issue 或 PR 帮忙完善。
 
 ## 目录结构
 

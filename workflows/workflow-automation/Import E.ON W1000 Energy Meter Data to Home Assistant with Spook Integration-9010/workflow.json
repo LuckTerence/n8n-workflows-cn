@@ -1306,7 +1306,7 @@
   "_cn_meta": {
     "title_zh": "Import E.ON W1000 Energy Meter Data to Home Assistant with Spook Integration",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "A",
     "source_id": 9010,
     "synced_at": "2026-06-17T14:14:20.355034"
   }

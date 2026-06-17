@@ -304,7 +304,7 @@
   "_cn_meta": {
     "title_zh": "Automate UniFi Controller Updates via SSH with Telegram Notifications",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "A",
     "source_id": 8599,
     "synced_at": "2026-06-17T14:07:03.578333"
   }

@@ -179,9 +179,10 @@
 每完成一个工作流的替换后：
 
 1. 在 n8n 中导入并测试核心链路
-2. 更新 `workflow.json` 中的 `_cn_meta.tier` 为 `"A-adapted"`
+2. 更新 `workflow.json` 中的 `_cn_meta.tier` 为 `"A"`
 3. 在 `readme.md` 的「适配修改」章节补充替换说明
-4. 提交 PR
+4. 修改 `workflow.json` 中 `_cn_meta.tier` 从 `"B"` 改为 `"A"`
+5. 提交 PR
 
 ## 优先级建议
 
@@ -199,4 +200,4 @@
 
 ---
 
-> 💡 如果你完成了某些工作流的升级，欢迎提 PR。只要核心链路在替换后能跑通，就可以标记为 Tier A-adapted。
+> 💡 如果你完成了某些工作流的升级，欢迎提 PR。只要核心链路在替换后能跑通，就可以标记为 Tier A。

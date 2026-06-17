@@ -12,7 +12,7 @@ VALID_CATEGORIES = {
     "ai-agent", "devops", "finance-analysis",
     "knowledge-rag", "multimodal-ai", "workflow-automation",
 }
-VALID_TIERS = {"A", "A-adapted", "B", "B-adapted", "C", "C-adapted"}
+VALID_TIERS = {"A", "B", "C"}
 
 errors = []
 warnings = []

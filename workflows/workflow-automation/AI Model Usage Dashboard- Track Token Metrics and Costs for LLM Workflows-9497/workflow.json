@@ -1216,7 +1216,7 @@
   "_cn_meta": {
     "title_zh": "AI Model Usage Dashboard: Track Token Metrics and Costs for LLM Workflows",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "A",
     "source_id": 9497,
     "synced_at": "2026-06-17T14:11:38.560104"
   }

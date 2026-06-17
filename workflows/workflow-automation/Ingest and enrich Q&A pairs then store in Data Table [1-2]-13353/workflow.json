@@ -413,7 +413,7 @@
   "_cn_meta": {
     "title_zh": "Ingest and enrich Q&A pairs then store in Data Table [1-2]",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "A",
     "source_id": 13353,
     "synced_at": "2026-06-17T14:10:09.248036"
   }
