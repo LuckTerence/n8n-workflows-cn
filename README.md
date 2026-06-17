@@ -46,7 +46,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 需要说明一下：这些模板的适配程度不一样，有的改得比较完整，有的只动了核心节点。具体可以看每个工作流目录下的 `readme.md`。
 
-> 点击查看 [完整索引（按子分类折叠浏览）](INDEX.md)
+> 点击查看 [完整索引（按子分类折叠浏览）](INDEX.md) · [精选合集（场景推荐）](CURATED.md) · [在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/)
 
 ### AI Agent（93 个）
 
@@ -197,10 +197,10 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 ## 接下来想做的
 
-- [ ] CI/CD 自动验证 — GitHub Actions 检查工作流和新版本 n8n 的兼容性
+- [x] CI/CD 自动验证 — GitHub Actions 检查工作流合法性
 - [x] 工作流浏览站点 — 搭个 GitHub Pages，方便搜索筛选
-- [ ] 精选合集 — 按场景整理推荐组合
-- [ ] 完善适配 — 把更多 Tier C 提升到 Tier A
+- [x] 精选合集 — 按场景整理推荐组合
+- [ ] 完善适配 — 把更多 Tier B/C 提升到 Tier A
 
 ## 参与进来
 
