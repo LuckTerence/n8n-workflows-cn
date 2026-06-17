@@ -4,7 +4,6 @@
 GPT-4o RAG语音助手WhatsApp
 
 > 分类：AI Agent | 适配等级：A（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
-> 节点数：63 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3947
 
 ---

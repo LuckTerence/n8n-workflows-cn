@@ -4,7 +4,6 @@
 自动检测图片中的不当内容
 
 > 分类：多模态 AI | 适配等级：A（基本改完，配置 API Key 应该就能跑）
-> 节点数：2 | 难度：⭐ 入门
 > 原始来源：https://n8nworkflows.xyz/workflows/5661
 
 ---

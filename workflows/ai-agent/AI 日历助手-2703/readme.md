@@ -4,7 +4,6 @@
 Telegram Bot AI 日程管理
 
 > 分类：AI Agent | 适配等级：A（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
-> 节点数：5 | 难度：⭐ 入门
 > 原始来源：https://n8nworkflows.xyz/workflows/2703
 
 ---
@@ -35,4 +34,3 @@ Telegram 消息触发
 
 ## 统计
 
-- 节点数：5 · 分类：ai-agent

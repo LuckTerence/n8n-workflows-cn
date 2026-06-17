@@ -4,7 +4,6 @@
 n8n API自动启停
 
 > 分类：DevOps | 适配等级：A（基本改完，配置 API Key 应该就能跑）
-> 节点数：5 | 难度：⭐ 入门
 > 原始来源：https://n8nworkflows.xyz/workflows/3229
 
 ---

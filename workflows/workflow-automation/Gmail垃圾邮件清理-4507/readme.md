@@ -4,7 +4,6 @@
 AI识别垃圾/促销邮件自动删除
 
 > 分类：工作流自动化 | 适配等级：A（需替换Gmail)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
-> 节点数：5 | 难度：⭐ 入门
 > 原始来源：https://n8nworkflows.xyz/workflows/4507
 
 ---

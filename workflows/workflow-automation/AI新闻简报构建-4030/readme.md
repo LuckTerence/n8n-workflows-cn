@@ -4,7 +4,6 @@
 Dumpling AI爬站+GPT-4o摘要+简报
 
 > 分类：工作流自动化 | 适配等级：A（需替换Google Sheets/Gmail)（GPT-4o→DeepSeek，Gmail需手动替换）
-> 节点数：7 | 难度：⭐⭐ 进阶
 > 原始来源：https://n8nworkflows.xyz/workflows/4030
 
 ---

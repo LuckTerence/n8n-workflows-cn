@@ -4,7 +4,6 @@
 查询分类+Qdrant
 
 > 分类：知识库 RAG | 适配等级：A（AI模型已适配，部分外服节点需手动替换为国内服务）
-> 节点数：29 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3459
 
 ---

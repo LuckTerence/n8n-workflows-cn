@@ -4,7 +4,6 @@
 GPT-4o驱动的SaaS产品销售自动化
 
 > 分类：工作流自动化 | 适配等级：A（需替换Gmail)（AI模型已替换为DeepSeek，部分边角节点可能仍需手动调整）
-> 节点数：28 | 难度：⭐⭐⭐ 高级
 > 原始来源：https://n8nworkflows.xyz/workflows/3342
 
 ---

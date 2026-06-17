@@ -4,7 +4,6 @@
 本地Ollama+天气查询+维基百科
 
 > 分类：AI Agent | 适配等级：A（基本改完，配置 API Key 应该就能跑）
-> 节点数：6 | 难度：⭐⭐ 进阶
 > 原始来源：https://n8nworkflows.xyz/workflows/2931
 
 ---

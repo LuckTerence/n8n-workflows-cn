@@ -403,8 +403,6 @@ function render(items) {{
             <div class="card-title">
                 <a href="${{w.path}}" target="_blank">${{w.name.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</a>
                 <span class="tier-${{(w.tier||'B').toLowerCase()}}" style="font-size:11px;margin-left:4px;">Tier ${{w.tier||'B'}}</span>
-                <span style="font-size:11px;margin-left:4px;color:var(--muted);">${{w.difficulty||''}}</span>
-                <span style="font-size:10px;color:var(--muted);margin-left:2px;">(${{w.nodeCount||0}}节)</span>
             </div>
             ${{w.desc ? `<div class="card-desc">${{w.desc.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}}</div>` : ''}}
             <div class="card-meta">

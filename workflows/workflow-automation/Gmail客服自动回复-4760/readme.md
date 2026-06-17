@@ -4,7 +4,6 @@
 Ollama+Pinecone RAG
 
 > 分类：工作流自动化 | 适配等级：A（需替换Pinecone/Gmail)（AI模型已本地化Ollama，Pinecone/Gmail需手动替换）
-> 节点数：10 | 难度：⭐⭐ 进阶
 > 原始来源：https://n8nworkflows.xyz/workflows/4760
 
 ---

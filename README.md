@@ -36,13 +36,13 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 **推荐从这几个开始：**
 
-| 工作流 | 说明 | 难度 | 节点 | 入口 |
-|--------|------|:--:|:--:|------|
-| AI Agent 聊天 | 基础 AI 对话，配 DeepSeek Key 直接跑 | ⭐ | 5 | [📂](workflows/ai-agent/AI%20Agent聊天-1954/) |
-| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | 12 | [📂](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
-| Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | 8 | [📂](workflows/workflow-automation/Gmail智能分类归档-3686/) |
-| AI 股票基本面分析 | 多维度股票基本面分析 | ⭐⭐ | 10 | [📂](workflows/finance-analysis/AI股票基本面分析-2183/) |
-| 定时启停 n8n 工作流 | 用 n8n 管理 n8n 本身 | ⭐ | 5 | [📂](workflows/devops/定时启停n8n工作流-3229/) |
+| 工作流 | 说明 | 入口 |
+|--------|------|------|
+| AI Agent 聊天 | 基础 AI 对话，配 DeepSeek Key 直接跑 | [📂](workflows/ai-agent/AI%20Agent聊天-1954/) |
+| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | [📂](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
+| Gmail 智能分类 | AI 自动给邮件打标签归档 | [📂](workflows/workflow-automation/Gmail智能分类归档-3686/) |
+| AI 股票基本面分析 | 多维度股票基本面分析 | [📂](workflows/finance-analysis/AI股票基本面分析-2183/) |
+| 定时启停 n8n 工作流 | 用 n8n 管理 n8n 本身 | [📂](workflows/devops/定时启停n8n工作流-3229/) |
 | AI Agent 聊天 | 基础 AI 对话，5 个节点，配 DeepSeek Key 直接跑 | ⭐ | [📂 打开](workflows/ai-agent/AI%20Agent聊天-1954/) |
 | AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | [📂 打开](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
 | Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | [📂 打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
