@@ -2,6 +2,26 @@
 
 https://n8nworkflows.xyz/workflows/10849
 
-**分类**: workflow-automation
-**节点数**: 17
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Filter Only URLs | 过滤器 |
+| Extract Q&A from URL | Airtop |
+| Apply Safety Guardrails | guardrails |
+| OpenRouter Model | OpenRouter Chat Model |
+| Send Safe Response | Telegram |
+| Send Violation Alert | Telegram |
+| Tavily Web Search | tavilyTool |
+| Telegram Trigger1 | Telegram 触发器 |
+| Main agent | AI Agent |
+
+## 触发方式
+- Telegram Trigger1 触发
+
+## 统计
+- 节点总数：9
+- 触发节点：1
+- 处理节点：6
+- 输出节点：2
+- 分类：workflow-automation

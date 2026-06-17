@@ -2,6 +2,29 @@
 
 https://n8nworkflows.xyz/workflows/10306
 
-**分类**: finance-analysis
-**节点数**: 26
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Daily Check | 定时触发器 |
+| Get Stock Data | marketstack |
+| Calculate Deviation | Code |
+| Is Anomaly? (status != "normal") | IF 判断 |
+| Get Related News | hackerNews |
+| Translate News | deepL |
+| Send Alert to Slack | Slack |
+| Send Normal Report to Slack | Slack |
+| Merge Original + Translated | 数据合并 |
+| Add Symbol Field | 数据设置 |
+| Compose Slack Message | Code |
+| Build News Keyword | Code |
+
+## 触发方式
+- Daily Check 触发
+
+## 统计
+- 节点总数：12
+- 触发节点：1
+- 处理节点：9
+- 输出节点：2
+- 分类：finance-analysis

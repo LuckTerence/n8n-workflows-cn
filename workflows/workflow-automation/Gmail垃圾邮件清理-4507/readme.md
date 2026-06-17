@@ -2,6 +2,22 @@
 
 https://n8nworkflows.xyz/workflows/4507
 
-**分类**: workflow-automation
-**节点数**: 6
-**适配等级**: B
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Gmail Trigger | Gmail 触发器 |
+| OpenAI Chat Model | OpenAI Chat Model |
+| If | IF 判断 |
+| Validator of Email | AI Agent |
+| Delate Email | Gmail |
+
+## 触发方式
+- Gmail Trigger 触发
+
+## 统计
+- 节点总数：5
+- 触发节点：1
+- 处理节点：4
+- 输出节点：0
+- 分类：workflow-automation

@@ -2,6 +2,34 @@
 
 https://n8nworkflows.xyz/workflows/5624
 
-**分类**: ai-agent
-**节点数**: 21
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| U.S. EPA Enforcement and Compliance History Online (ECHO) - Clean Air Act MCP Server | MCP 触发器 |
+| Download Air Quality Data | HTTP Request 工具 |
+| Request Air Quality Data | HTTP Request 工具 |
+| Search Air Quality Facilities | HTTP Request 工具 |
+| Query Air Quality Facilities | HTTP Request 工具 |
+| Get Facility Details | HTTP Request 工具 |
+| Request Facility Details | HTTP Request 工具 |
+| Get Air Quality GeoJSON | HTTP Request 工具 |
+| Request Air Quality GeoJSON | HTTP Request 工具 |
+| Get Info Clusters Data | HTTP Request 工具 |
+| Request Info Clusters Data | HTTP Request 工具 |
+| Get Air Quality Map | HTTP Request 工具 |
+| Request Air Quality Map | HTTP Request 工具 |
+| Search by Query ID | HTTP Request 工具 |
+| Query by Query ID | HTTP Request 工具 |
+| Get Air Quality Metadata | HTTP Request 工具 |
+| Request Air Quality Metadata | HTTP Request 工具 |
+
+## 触发方式
+- U.S. EPA Enforcement and Compliance History Online (ECHO) - Clean Air Act MCP Server 触发
+
+## 统计
+- 节点总数：17
+- 触发节点：1
+- 处理节点：0
+- 输出节点：16
+- 分类：ai-agent

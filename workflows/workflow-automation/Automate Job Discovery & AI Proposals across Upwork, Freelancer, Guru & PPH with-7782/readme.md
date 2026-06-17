@@ -2,6 +2,33 @@
 
 https://n8nworkflows.xyz/workflows/7782
 
-**分类**: workflow-automation
-**节点数**: 16
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| RSS Feed Trigger | rssFeedReadTrigger |
+| Loop Over Items | 分批处理 |
+| Extract Title & Budget | Code |
+| Decode URL & Source | Code |
+| Set Variables | 数据设置 |
+| OpenRouter Chat Model | OpenRouter Chat Model |
+| Filter | 过滤器 |
+| Send a message | Email 发送 |
+| Update Datatbase | Google Sheets |
+| AI Proposal Agent | AI Agent |
+| Append row in sheet | Google Sheets |
+| Wait | 等待 |
+| Aggregate | 数据聚合 |
+| HTML Aggregated email | HTML |
+| Limit | 数据限制 |
+| Build a single HTML string | Code |
+
+## 触发方式
+- RSS Feed Trigger 触发
+
+## 统计
+- 节点总数：16
+- 触发节点：1
+- 处理节点：14
+- 输出节点：1
+- 分类：workflow-automation

@@ -2,6 +2,27 @@
 
 https://n8nworkflows.xyz/workflows/2697
 
-**分类**: workflow-automation
-**节点数**: 10
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Google Gemini Chat Model | OpenAI Chat Model |
+| Basic LLM Chain | LLM Chain |
+| SearchAskHN | hackerNews |
+| FindHNComments | HTTP Request |
+| CombineIntoSingleText | 数据聚合 |
+| SplitOutChildrenIDs | 数据拆分 |
+| GetTopicFromToLearn | 表单触发器 |
+| SendEmailWithTopResources | Email 发送 |
+| Convert2HTML | Markdown |
+| Finished | 空操作 |
+
+## 触发方式
+- GetTopicFromToLearn 触发
+
+## 统计
+- 节点总数：10
+- 触发节点：1
+- 处理节点：7
+- 输出节点：2
+- 分类：workflow-automation

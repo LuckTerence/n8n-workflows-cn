@@ -2,6 +2,24 @@
 
 https://n8nworkflows.xyz/workflows/8498
 
-**分类**: knowledge-rag
-**节点数**: 11
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Webhook | Webhook |
+| Validate Request | Code |
+| Valid Request? | IF 判断 |
+| PDF Vector - Ask Question | pdfVector |
+| Format Success Response | Code |
+| Format Error Response | Code |
+| Send Response | 响应 Webhook |
+
+## 触发方式
+- Webhook 触发
+
+## 统计
+- 节点总数：7
+- 触发节点：1
+- 处理节点：5
+- 输出节点：1
+- 分类：knowledge-rag

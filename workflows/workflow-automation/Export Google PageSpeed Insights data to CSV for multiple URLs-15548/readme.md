@@ -2,6 +2,36 @@
 
 https://n8nworkflows.xyz/workflows/15548
 
-**分类**: workflow-automation
-**节点数**: 44
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Parse & Normalise URLs | Code |
+| Early Exit Check | IF 判断 |
+| Respond - No Valid URLs | Code |
+| Split Valid URLs | 列表操作 |
+| Reachability Check | HTTP Request |
+| Filter Reachable | Code |
+| Second Early Exit | IF 判断 |
+| Split Reachable URLs | 列表操作 |
+| Loop | 分批处理 |
+| PageSpeed API | HTTP Request |
+| Extract PageSpeed Data | Code |
+| Upload to Uguu | HTTP Request |
+| Respond to Chat | 聊天 |
+| When chat message received | Chat 触发器 |
+| Wait | 等待 |
+| Convert to File | 转换为文件 |
+| Aggregate | 数据聚合 |
+| Extract Link | Code |
+| Final Chat | 聊天 |
+
+## 触发方式
+- When chat message received 触发
+
+## 统计
+- 节点总数：19
+- 触发节点：1
+- 处理节点：13
+- 输出节点：5
+- 分类：workflow-automation

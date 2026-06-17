@@ -2,6 +2,20 @@
 
 https://n8nworkflows.xyz/workflows/2013
 
-**分类**: workflow-automation
-**节点数**: 6
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| When clicking "Execute Workflow" | 手动触发 |
+| Authenticates to your Icypeas account | Code |
+| Run email search (single) | HTTP Request |
+
+## 触发方式
+- When clicking "Execute Workflow" 触发
+
+## 统计
+- 节点总数：3
+- 触发节点：1
+- 处理节点：1
+- 输出节点：1
+- 分类：workflow-automation

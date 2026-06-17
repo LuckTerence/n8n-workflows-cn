@@ -2,6 +2,30 @@
 
 https://n8nworkflows.xyz/workflows/2917
 
-**分类**: ai-agent
-**节点数**: 22
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Reply | Telegram |
+| Receive Message | Telegram 触发器 |
+| Wait 10 Seconds | 等待 |
+| Add to Queued Messages | Supabase |
+| No Operation, do nothing | 空操作 |
+| Aggregate | 数据聚合 |
+| Delete Queued Messages | Supabase |
+| OpenAI Chat Model | OpenAI Chat Model |
+| Sort by Message ID | 数据排序 |
+| Get Queued Messages | Supabase |
+| Check Most Recent Message | IF 判断 |
+| AI Agent | AI Agent |
+| Postgres Chat Memory | PostgreSQL 聊天记忆 |
+
+## 触发方式
+- Receive Message 触发
+
+## 统计
+- 节点总数：13
+- 触发节点：1
+- 处理节点：11
+- 输出节点：1
+- 分类：ai-agent

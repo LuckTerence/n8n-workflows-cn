@@ -2,6 +2,32 @@
 
 https://n8nworkflows.xyz/workflows/3050
 
-**分类**: ai-agent
-**节点数**: 30
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| When chat message received | Chat 触发器 |
+| AI Agent | AI Agent |
+| OpenAI Chat Model | OpenAI Chat Model |
+| Calculator | 计算器工具 |
+| Code | Code |
+| When Executed by Another Workflow | 执行工作流触发器 |
+| Records by date | 工作流工具 |
+| Aggregate | 数据聚合 |
+| Google Sheets request | HTTP Request |
+| Get transactions by product name | Google Sheets 工具 |
+| Get all transactions | Google Sheets 工具 |
+| Buffer Memory | 记忆缓冲区 |
+| Filter by status | 过滤器 |
+| Get transactions by status | Google Sheets 工具 |
+
+## 触发方式
+- When chat message received 触发
+- When Executed by Another Workflow 触发
+
+## 统计
+- 节点总数：14
+- 触发节点：2
+- 处理节点：11
+- 输出节点：1
+- 分类：ai-agent

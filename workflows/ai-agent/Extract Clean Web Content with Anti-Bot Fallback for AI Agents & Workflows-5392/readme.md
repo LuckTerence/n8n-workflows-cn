@@ -2,6 +2,30 @@
 
 https://n8nworkflows.xyz/workflows/5392
 
-**分类**: ai-agent
-**节点数**: 15
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Content Extractor | webpageContentExtractor |
+| Try Antibot Evasion | IF 判断 |
+| Scrape.do | HTTP Request |
+| Server Error | 停止并报错 |
+| Not 404 | IF 判断 |
+| Not Found | 停止并报错 |
+| Simple Scraper | HTTP Request |
+| Full Text | IF 判断 |
+| Fulltext Output | 数据设置 |
+| Summary Output | 数据设置 |
+| Is Binary | IF 判断 |
+| ContentType Error | 停止并报错 |
+| Workflow Call | 执行工作流触发器 |
+
+## 触发方式
+- Workflow Call 触发
+
+## 统计
+- 节点总数：13
+- 触发节点：1
+- 处理节点：10
+- 输出节点：2
+- 分类：ai-agent

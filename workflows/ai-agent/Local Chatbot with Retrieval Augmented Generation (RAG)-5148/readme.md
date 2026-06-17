@@ -2,6 +2,29 @@
 
 https://n8nworkflows.xyz/workflows/5148
 
-**分类**: ai-agent
-**节点数**: 13
-**适配等级**: A
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| On form submission | 表单触发器 |
+| Qdrant Vector Store | Qdrant 向量存储 |
+| Embeddings Ollama | Ollama Embeddings |
+| Default Data Loader | 文档加载器 |
+| Recursive Character Text Splitter | 文本分割器 |
+| When chat message received | Chat 触发器 |
+| AI Agent | AI Agent |
+| Ollama Chat Model | Ollama Chat Model |
+| Simple Memory | 记忆缓冲区 |
+| Qdrant Vector Store1 | Qdrant 向量存储 |
+| Embeddings Ollama1 | Ollama Embeddings |
+
+## 触发方式
+- On form submission 触发
+- When chat message received 触发
+
+## 统计
+- 节点总数：11
+- 触发节点：2
+- 处理节点：9
+- 输出节点：0
+- 分类：ai-agent

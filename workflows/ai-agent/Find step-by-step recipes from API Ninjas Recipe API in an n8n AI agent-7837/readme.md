@@ -2,6 +2,22 @@
 
 https://n8nworkflows.xyz/workflows/7837
 
-**分类**: ai-agent
-**节点数**: 6
-**适配等级**: A-adapted
+## 节点清单
+
+| 节点 | 类型 |
+|------|------|
+| Chat Trigger - Receive Message | Chat 触发器 |
+| AI Agent - Route to Tools | AI Agent |
+| LLM - OpenAI Chat | OpenAI Chat Model |
+| Recipe Tool - Fetch from API Ninjas | HTTP Request 工具 |
+| Memory - Recent Messages (Window) | 记忆缓冲区 |
+
+## 触发方式
+- Chat Trigger - Receive Message 触发
+
+## 统计
+- 节点总数：5
+- 触发节点：1
+- 处理节点：3
+- 输出节点：1
+- 分类：ai-agent
