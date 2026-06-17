@@ -56,13 +56,17 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| 对话机器人 | 30 | 各类 AI 聊天机器人、多轮对话、情感支持 |
-| MCP 工具 & 集成 | 18 | 为 AI Agent 暴露各种 API 工具的 MCP Server |
-| 消息平台机器人 | 6 | Telegram、WhatsApp、LINE 上的 AI 机器人 |
-| 多智能体 | 4 | 多个 Agent 协作、辩论、编排 |
-| 搜索 & 研究 Agent | 2 | 联网搜索、信息检索 |
-| 入门教程 | 2 | Build Your First AI Agent 系列 |
-| 其他（客服/金融/HR/代码/日程等） | 31 | 各垂直场景的 Agent 应用 |
+| [对话机器人](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=对话机器人) | 26 | 各类 AI 聊天机器人、多轮对话、情感支持 |
+| [MCP 工具 & 集成](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=MCP%20工具%20%26%20集成) | 19 | 为 AI Agent 暴露各种 API 工具的 MCP Server |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=其他) | 26 | 客服/金融/HR/代码/日程等垂直场景 Agent |
+| [消息平台机器人](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=消息平台机器人) | 5 | Telegram、WhatsApp、LINE 上的 AI 机器人 |
+| [多智能体](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=多智能体) | 5 | 多个 Agent 协作、辩论、编排 |
+| [个人助理](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=个人助理) | 3 | AI 驱动的个人效率助手 |
+| [入门教程](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=入门教程) | 2 | Build Your First AI Agent 系列 |
+| [金融 Agent](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=金融%20Agent) | 2 | 金融分析、投资 Agent |
+| [Agent 框架](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=Agent%20框架) | 2 | LangChain、自定义 Agent 框架 |
+| [搜索 & 研究 Agent](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=搜索%20%26%20研究%20Agent) | 2 | 联网搜索、信息检索 |
+| [多模态 Agent](https://luckterence.github.io/n8n-workflows-cn/?cat=ai-agent&sub=多模态%20Agent) | 1 | 支持图像/语音的多模态 Agent |
 
 ### DevOps（153 个）
 
@@ -70,13 +74,15 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| API 集成 & Webhook | 48 | 各种第三方服务的 API 连接器、Webhook 转发 |
-| 监控 & 告警 | 45 | 服务器监控、日志分析、异常告警通知 |
-| MCP Server 构建 | 23 | 构建各类工具 MCP Server |
-| CI/CD & 部署 | 20 | 自动构建、测试、部署流水线 |
-| 服务器 & 云 | 5 | 云资源管理、SSH 运维 |
-| 备份 & 恢复 | 5 | 数据库备份、快照管理 |
-| 其他（安全/网络/成本等） | 7 | 代码管理、认证、FinOps |
+| [API 集成 & Webhook](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=API%20集成%20%26%20Webhook) | 78 | 各种第三方服务的 API 连接器、Webhook 转发 |
+| [监控 & 告警](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=监控%20%26%20告警) | 25 | 服务器监控、日志分析、异常告警通知 |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=其他) | 15 | 安全、网络、成本等场景 |
+| [MCP Server 构建](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=MCP%20Server%20构建) | 10 | 构建各类工具 MCP Server |
+| [服务器 & 云](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=服务器%20%26%20云) | 9 | 云资源管理、SSH 运维 |
+| [CI/CD & 部署](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=CI/CD%20%26%20部署) | 6 | 自动构建、测试、部署流水线 |
+| [备份 & 恢复](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=备份%20%26%20恢复) | 5 | 数据库备份、快照管理 |
+| [安全 & 认证](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=安全%20%26%20认证) | 3 | 安全扫描、OAuth 集成 |
+| [代码管理](https://luckterence.github.io/n8n-workflows-cn/?cat=devops&sub=代码管理) | 2 | Git 操作、代码同步 |
 
 ### Finance Analysis（25 个）
 
@@ -84,9 +90,10 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| 股票 & 市场 | 22 | A 股/美股分析、技术指标、市场数据采集 |
-| AI 投顾 | 2 | AI 驱动的投资建议 |
-| 风控 & 合规 | 1 | 欺诈检测 |
+| [股票 & 市场](https://luckterence.github.io/n8n-workflows-cn/?cat=finance-analysis&sub=股票%20%26%20市场) | 20 | A 股/美股分析、技术指标、市场数据采集 |
+| [AI 投顾](https://luckterence.github.io/n8n-workflows-cn/?cat=finance-analysis&sub=AI%20投顾) | 2 | AI 驱动的投资建议 |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=finance-analysis&sub=其他) | 2 | 其他金融场景 |
+| [风控 & 合规](https://luckterence.github.io/n8n-workflows-cn/?cat=finance-analysis&sub=风控%20%26%20合规) | 1 | 欺诈检测、合规检查 |
 
 ### Knowledge RAG（47 个）
 
@@ -94,8 +101,9 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| RAG 检索问答 | 26 | 基于文档的知识库问答 |
-| 向量数据库 | 20 | Qdrant、Milvus、Pinecone 集成 |
+| [RAG 检索问答](https://luckterence.github.io/n8n-workflows-cn/?cat=knowledge-rag&sub=RAG%20检索问答) | 36 | 基于文档的知识库问答 |
+| [向量数据库](https://luckterence.github.io/n8n-workflows-cn/?cat=knowledge-rag&sub=向量数据库) | 8 | Qdrant、Milvus、Pinecone 集成 |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=knowledge-rag&sub=其他) | 3 | 其他 RAG 场景 |
 
 ### Multimodal AI（52 个）
 
@@ -103,11 +111,12 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| 语音 & 音频 | 28 | TTS 语音合成、Whisper 转录、配音 |
-| 图像生成 | 9 | Stable Diffusion、DALL-E、Flux |
-| 视频生成 | 5 | 文生视频、动画制作 |
-| 3D 生成 | 3 | 三维模型生成 |
-| 其他（翻译/数字人/音乐等） | 7 | 多模态编辑、虚拟人 |
+| [语音 & 音频](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=语音%20%26%20音频) | 25 | TTS 语音合成、Whisper 转录、配音 |
+| [图像生成](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=图像生成) | 14 | Stable Diffusion、DALL-E、Flux |
+| [视频生成](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=视频生成) | 5 | 文生视频、动画制作 |
+| [图像分析](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=图像分析) | 4 | 图片识别、OCR、内容审核 |
+| [3D 生成](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=3D%20生成) | 3 | 三维模型生成 |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=multimodal-ai&sub=其他) | 1 | 翻译/数字人/音乐等 |
 
 ### Workflow Automation（1110 个）
 
@@ -115,21 +124,21 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 
 | 子分类 | 数量 | 包含内容 |
 |--------|:----:|----------|
-| Email & 邮件处理 | 162 | 邮件自动发送、收件箱处理、Newsletter |
-| 数据 & 文档处理 | 127 | 表格处理、PDF 解析、数据库操作 |
-| 即时通讯 & 聊天 | 121 | Telegram/WhatsApp/Discord 消息机器人 |
-| API 集成 & 自动化 | 113 | 通用自动化流程、定时任务、数据同步 |
-| 图片 & 视频 | 95 | 图片生成、视频剪辑、视觉效果 |
-| 内容采集 & 研究 | 84 | 网页抓取、新闻聚合、SEO 内容生成 |
-| 销售 & CRM | 61 | 客户管理、销售漏斗、工单系统 |
-| 财务 & 支付 | 61 | 发票处理、费用报销、交易分析 |
-| AI 增强工作流 | 48 | 嵌入 AI 能力的业务流程 |
-| 项目管理 & DevOps | 29 | 任务跟踪、Bug 管理、开发流程 |
-| 社交媒体 & 内容 | 29 | 多平台内容发布、社交监听 |
-| HR & 招聘 | 26 | 简历筛选、面试安排、入职流程 |
-| 短信 & 通知 | 13 | 短信发送、推送通知 |
-| 电商 & 订单 | 12 | 订单处理、库存管理、商品信息 |
-| 其他（日程/营销/表单/教育/合规等） | 40 | 各类细分场景 |
+| [AI 增强工作流](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=AI%20增强工作流) | 119 | 嵌入 AI 能力的业务流程 |
+| [消息平台 & Bot](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=消息平台%20%26%20Bot) | 116 | Telegram/WhatsApp/Discord 消息机器人 |
+| [邮件 & 通讯](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=邮件%20%26%20通讯) | 112 | 邮件自动发送、收件箱处理、Newsletter |
+| [文件 & 存储](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=文件%20%26%20存储) | 70 | 文件处理、存储管理、格式转换 |
+| [社交媒体 & 内容](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=社交媒体%20%26%20内容) | 68 | 多平台内容发布、社交监听 |
+| [API 集成 & 自动化](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=API%20集成%20%26%20自动化) | 65 | 通用自动化流程、定时任务、数据同步 |
+| [数据采集 & 爬虫](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=数据采集%20%26%20爬虫) | 54 | 网页抓取、新闻聚合、SEO 内容生成 |
+| [CRM & 客服](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=CRM%20%26%20客服) | 50 | 客户管理、销售漏斗、工单系统 |
+| [ERP & 财务](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=ERP%20%26%20财务) | 37 | 发票处理、费用报销、交易分析 |
+| [其他](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=其他) | 334 | 日程/营销/HR/教育/合规等各类场景 |
+| [表单 & 问卷](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=表单%20%26%20问卷) | 27 | 表单收集、问卷调查 |
+| [电商 & 营销](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=电商%20%26%20营销) | 18 | 订单处理、营销自动化、库存管理 |
+| [通知 & 告警](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=通知%20%26%20告警) | 15 | 推送通知、异常告警、状态监控 |
+| [日历 & 日程](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=日历%20%26%20日程) | 13 | 日历事件、日程安排 |
+| [项目管理](https://luckterence.github.io/n8n-workflows-cn/?cat=workflow-automation&sub=项目管理) | 12 | 任务跟踪、Bug 管理、开发流程 |
 
 ## 做了哪些替换
 

@@ -415,6 +415,7 @@ function doSearch() {{
     currentQuery = document.getElementById('search').value.trim();
     document.getElementById('clear-btn').style.display = currentQuery ? 'inline-block' : 'none';
     document.getElementById('scenario-guide').classList.toggle('visible', !currentQuery && !currentCat);
+    updateURL();
     render(getFiltered());
 }}
 
@@ -423,6 +424,7 @@ function filterSub(cat, sub) {{
     currentSub = sub;
     document.getElementById('scenario-guide').classList.remove('visible');
     updateActiveNav();
+    updateURL();
     render(getFiltered());
 }}
 
@@ -434,7 +436,34 @@ function clearSearch() {{
     document.getElementById('clear-btn').style.display = 'none';
     document.getElementById('scenario-guide').classList.add('visible');
     updateActiveNav();
+    updateURL();
     render(DATA);
+}}
+
+function updateURL() {{
+    const params = new URLSearchParams();
+    if (currentCat) params.set('cat', currentCat);
+    if (currentSub) params.set('sub', currentSub);
+    if (currentQuery) params.set('q', currentQuery);
+    const url = params.toString() ? '?' + params.toString() : window.location.pathname;
+    history.replaceState(null, '', url);
+}}
+
+function applyURLParams() {{
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    const sub = params.get('sub');
+    const q = params.get('q');
+    if (cat || sub) document.getElementById('scenario-guide').classList.remove('visible');
+    if (cat) currentCat = cat;
+    if (sub) currentSub = sub;
+    if (q) {{
+        currentQuery = q;
+        document.getElementById('search').value = q;
+        document.getElementById('clear-btn').style.display = 'inline-block';
+    }}
+    if (cat || sub) updateActiveNav();
+    render(getFiltered());
 }}
 
 function updateActiveNav() {{
@@ -449,8 +478,7 @@ function toggleCat(el) {{
     el.nextElementSibling.classList.toggle('collapsed');
 }}
 
-// Initial render
-render(DATA);
+applyURLParams();
 </script>
 </body>
 </html>'''
