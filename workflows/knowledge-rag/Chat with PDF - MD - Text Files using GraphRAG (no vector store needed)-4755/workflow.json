@@ -788,7 +788,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "AI 对话、RAG 检索增强、向量存储",
+    "description_zh": "对话、RAG、HR",
     "replacements": {
       "011910a9-c2a0-49eb-b1eb-8043e0c2accc": {
         "type": "n8n-nodes-base.googleDrive",

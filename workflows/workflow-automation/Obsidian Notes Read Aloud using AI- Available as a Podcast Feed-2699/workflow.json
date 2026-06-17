@@ -753,7 +753,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Obsidian）",
     "replacements": {
       "10a35ef9-ab86-4010-9fcc-3cd765384e93": {
         "type": "n8n-nodes-base.googleSheets",

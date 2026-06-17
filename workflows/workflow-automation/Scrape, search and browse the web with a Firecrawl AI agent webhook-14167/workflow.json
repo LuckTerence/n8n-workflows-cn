@@ -606,6 +606,6 @@
     "tier": "A",
     "source_id": 14167,
     "synced_at": "2026-06-17T14:22:20.846198",
-    "description_zh": "AI 智能体、Webhook 集成、数据采集"
+    "description_zh": "Agent（Scrape）"
   }
 }

@@ -817,7 +817,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "邮件自动化、语音处理",
+    "description_zh": "邮件、语音",
     "replacements": {
       "1ef9ec01-d3eb-4003-bdcc-93602343f49c": {
         "type": "n8n-nodes-base.googleCalendarTool",

@@ -1200,7 +1200,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "API 接口、视频生成",
+    "description_zh": "视频（Analyze）",
     "replacements": {
       "6dd566d0-2f05-495f-b1e6-8d9e58a116a6": {
         "type": "n8n-nodes-base.googleSheets",

@@ -999,7 +999,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "AI 智能体",
+    "description_zh": "AI 智能体（Powered）",
     "replacements": {
       "f2907960-eb66-4e47-99b1-450c106e0263": {
         "type": "n8n-nodes-base.slack",

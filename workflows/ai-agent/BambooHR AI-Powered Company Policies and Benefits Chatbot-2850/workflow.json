@@ -1443,6 +1443,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "AI 聊天机器人、AI 对话、HR 人事"
+    "description_zh": "聊天机器人、对话、HR（Bamboohr）"
   }
 }

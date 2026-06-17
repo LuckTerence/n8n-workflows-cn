@@ -1022,7 +1022,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Discover）",
     "replacements": {
       "9f92040a-2117-4710-8047-eddf7f299f3e": {
         "type": "n8n-nodes-base.googleSheets",

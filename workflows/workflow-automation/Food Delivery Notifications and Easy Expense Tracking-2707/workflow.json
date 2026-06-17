@@ -258,7 +258,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "消息通知",
+    "description_zh": "消息通知（Food）",
     "replacements": {
       "3d8f97ea-4a0d-4939-898f-8a0ca9415e7d": {
         "type": "n8n-nodes-base.slack",

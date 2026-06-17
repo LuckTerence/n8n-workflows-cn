@@ -319,6 +319,6 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "Webhook 集成"
+    "description_zh": "Webhook 集成（Prevent）"
   }
 }

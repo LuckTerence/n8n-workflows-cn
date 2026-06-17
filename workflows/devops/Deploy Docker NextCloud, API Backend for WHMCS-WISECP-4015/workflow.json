@@ -2496,6 +2496,6 @@
     "tier": "A",
     "source_id": 4015,
     "synced_at": "2026-06-17T14:18:20.065228",
-    "description_zh": "API 接口、自动部署、Docker 管理"
+    "description_zh": "部署（Deploy）"
   }
 }

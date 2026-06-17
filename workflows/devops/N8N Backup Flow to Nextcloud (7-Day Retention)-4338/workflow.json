@@ -436,6 +436,6 @@
     "tier": "A",
     "source_id": 4338,
     "synced_at": "2026-06-17T14:18:54.247348",
-    "description_zh": "自动备份、n8n 运维"
+    "description_zh": "备份（Backup）"
   }
 }

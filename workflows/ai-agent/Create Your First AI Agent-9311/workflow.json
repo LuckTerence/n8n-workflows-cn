@@ -412,7 +412,7 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Slack→飞书群机器人",
-    "description_zh": "AI 智能体",
+    "description_zh": "AI 智能体（Create）",
     "replacements": {
       "87a16b40-ae21-48b1-b1a5-1017c67f9a10": {
         "type": "n8n-nodes-base.googleSheets",

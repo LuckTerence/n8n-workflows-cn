@@ -335,7 +335,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "Telegram 机器人、图片生成",
+    "description_zh": "Telegram、图像（Process）",
     "replacements": {
       "2388741c-fa37-43fa-81f0-29d5d72b2070": {
         "type": "n8n-nodes-base.googleDrive",

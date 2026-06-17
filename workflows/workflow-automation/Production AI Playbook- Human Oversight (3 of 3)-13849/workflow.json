@@ -669,7 +669,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Production）",
     "replacements": {
       "cad71c5b-918c-40a1-ada5-4baf93396386": {
         "type": "n8n-nodes-base.slack",

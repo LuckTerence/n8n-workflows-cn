@@ -343,6 +343,6 @@
     "tier": "A",
     "source_id": 15220,
     "synced_at": "2026-06-17T14:15:54.742141",
-    "description_zh": "API 接口、语音处理、发票处理"
+    "description_zh": "语音、发票（Extract）"
   }
 }

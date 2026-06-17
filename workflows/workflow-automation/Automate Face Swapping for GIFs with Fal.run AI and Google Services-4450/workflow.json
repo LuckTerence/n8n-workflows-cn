@@ -402,7 +402,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "流程自动化",
+    "description_zh": "流程自动化（Automate·Face）",
     "replacements": {
       "ed206741-c053-400e-a284-67b3a0998646": {
         "type": "n8n-nodes-base.googleSheets",

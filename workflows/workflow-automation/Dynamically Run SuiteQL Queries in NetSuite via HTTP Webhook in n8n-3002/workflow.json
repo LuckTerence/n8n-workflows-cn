@@ -97,6 +97,6 @@
     "tier": "A",
     "source_id": 3002,
     "synced_at": "2026-06-17T14:13:53.316280",
-    "description_zh": "Webhook 集成、n8n 运维"
+    "description_zh": "Dynamically Run SuiteQL Querie"
   }
 }

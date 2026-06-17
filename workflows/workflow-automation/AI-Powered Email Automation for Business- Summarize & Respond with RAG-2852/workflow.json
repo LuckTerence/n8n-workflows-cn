@@ -847,7 +847,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "RAG 检索增强、邮件自动化",
+    "description_zh": "邮件、RAG",
     "replacements": {
       "cd3eaa81-0f94-484b-b0c2-ecf0ca4541dc": {
         "type": "n8n-nodes-base.googleDrive",

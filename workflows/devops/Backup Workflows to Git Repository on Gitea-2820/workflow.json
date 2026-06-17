@@ -623,6 +623,6 @@
     "tier": "A",
     "source_id": 2820,
     "synced_at": "2026-06-17T14:18:00.275938",
-    "description_zh": "自动备份、工作流管理"
+    "description_zh": "备份（Backup）"
   }
 }

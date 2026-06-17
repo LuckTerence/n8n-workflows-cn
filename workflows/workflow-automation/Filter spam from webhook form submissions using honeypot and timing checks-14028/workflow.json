@@ -294,6 +294,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Webhook 集成、表单处理"
+    "description_zh": "Filter spam from webhook form "
   }
 }

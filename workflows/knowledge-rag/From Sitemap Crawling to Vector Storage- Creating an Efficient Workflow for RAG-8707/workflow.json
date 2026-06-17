@@ -1307,6 +1307,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "RAG 检索增强、向量存储、网页爬取"
+    "description_zh": "RAG（From）"
   }
 }

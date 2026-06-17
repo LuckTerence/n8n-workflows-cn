@@ -319,6 +319,6 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "AI 智能体、SQL 查询、n8n 运维"
+    "description_zh": "Agent（Query）"
   }
 }

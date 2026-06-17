@@ -428,7 +428,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、告警通知、表格处理",
+    "description_zh": "Telegram（Create·Sales）",
     "replacements": {
       "75d42049-e27a-4208-82ef-4a121812563e": {
         "type": "n8n-nodes-base.googleSheets",

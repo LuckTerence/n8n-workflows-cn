@@ -1417,7 +1417,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "Telegram 机器人、Pinecone 向量库",
+    "description_zh": "Telegram（Multi）",
     "replacements": {
       "fe91a6d9-f4ed-4592-9df6-25a73aafdc1d": {
         "type": "n8n-nodes-base.googleDrive",

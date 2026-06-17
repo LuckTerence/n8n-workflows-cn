@@ -648,6 +648,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "MCP 协议集成、PostgreSQL、SQL 查询"
+    "description_zh": "Build your own PostgreSQL MCP "
   }
 }

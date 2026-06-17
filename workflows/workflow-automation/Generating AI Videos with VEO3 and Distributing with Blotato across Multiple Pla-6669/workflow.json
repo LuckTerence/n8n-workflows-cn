@@ -932,7 +932,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Notion→飞书文档/语雀",
-    "description_zh": "视频生成",
+    "description_zh": "视频生成（Generating）",
     "replacements": {
       "7d148aac-728d-4686-9935-bea9158f2e9b": {
         "type": "n8n-nodes-base.googleSheets",

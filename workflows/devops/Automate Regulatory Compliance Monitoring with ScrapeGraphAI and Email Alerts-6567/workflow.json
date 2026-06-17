@@ -338,6 +338,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "邮件自动化、系统监控、告警通知"
+    "description_zh": "邮件、监控（Automate）"
   }
 }

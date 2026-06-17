@@ -600,7 +600,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "市场数据、智能搜索",
+    "description_zh": "Generate merchandise proposals",
     "replacements": {
       "cb306cd3-c787-4e95-b42e-41da0b267e44": {
         "type": "n8n-nodes-base.slack",

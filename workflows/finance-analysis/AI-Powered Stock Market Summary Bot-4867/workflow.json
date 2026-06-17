@@ -564,7 +564,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "股票分析、市场数据、AI 摘要",
+    "description_zh": "股票（Powered）",
     "replacements": {
       "97f8d2af-02a9-4f93-8bf7-ee083b13dccf": {
         "type": "n8n-nodes-base.slack",

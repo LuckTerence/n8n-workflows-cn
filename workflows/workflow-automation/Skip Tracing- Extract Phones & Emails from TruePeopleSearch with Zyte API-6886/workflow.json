@@ -1295,7 +1295,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、API 接口、智能搜索",
+    "description_zh": "邮件（Skip）",
     "replacements": {
       "51cd4bd2-631a-44e8-a609-11658182fee2": {
         "type": "n8n-nodes-base.googleSheets",

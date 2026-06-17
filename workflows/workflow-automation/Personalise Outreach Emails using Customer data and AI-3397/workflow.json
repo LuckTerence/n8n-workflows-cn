@@ -559,7 +559,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "邮件自动化",
+    "description_zh": "邮件自动化（Personalise）",
     "replacements": {
       "e73c8a55-c85f-45a1-9735-1cea61caff3e": {
         "type": "n8n-nodes-base.hubspot",

@@ -599,6 +599,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "AI 智能体、Telegram 机器人"
+    "description_zh": "Agent、Telegram（Allow）"
   }
 }

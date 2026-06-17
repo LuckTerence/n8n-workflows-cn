@@ -547,6 +547,6 @@
     "tier": "A",
     "source_id": 2657,
     "synced_at": "2026-06-17T14:10:12.240103",
-    "description_zh": "图片生成"
+    "description_zh": "图片生成（KNN）"
   }
 }

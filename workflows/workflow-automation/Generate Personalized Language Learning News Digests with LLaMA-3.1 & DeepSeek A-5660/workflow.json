@@ -278,7 +278,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "新闻聚合",
+    "description_zh": "新闻聚合（Generate）",
     "replacements": {
       "fb2857cc-ade3-4f7f-9fbc-a710dd92510e": {
         "type": "n8n-nodes-base.googleSheets",

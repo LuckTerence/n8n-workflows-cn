@@ -702,7 +702,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "LINE 集成、流程自动化",
+    "description_zh": "Automate Peer Review Assignmen",
     "replacements": {
       "e5e4c276-b2c4-4296-967f-0681c32375c4": {
         "type": "n8n-nodes-base.discord",

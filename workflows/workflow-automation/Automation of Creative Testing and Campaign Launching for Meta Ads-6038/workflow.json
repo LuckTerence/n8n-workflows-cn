@@ -922,7 +922,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Automation）",
     "replacements": {
       "b1f789fc-f8a1-4e54-bdc7-094d81f440a5": {
         "type": "n8n-nodes-base.googleDrive",

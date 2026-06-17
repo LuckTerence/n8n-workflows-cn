@@ -303,7 +303,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、市场数据",
+    "description_zh": "Agent（Testimonial）",
     "replacements": {
       "c72c0de6-cc21-4b9c-8bf8-b7aa6fd90d7b": {
         "type": "n8n-nodes-base.googleSheets",

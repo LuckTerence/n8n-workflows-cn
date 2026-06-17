@@ -277,7 +277,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "流程自动化",
+    "description_zh": "流程自动化（Automate·Patient）",
     "replacements": {
       "554a8f4d-26d5-49ab-9b88-c6ba4af51d2c": {
         "type": "n8n-nodes-base.googleSheets",

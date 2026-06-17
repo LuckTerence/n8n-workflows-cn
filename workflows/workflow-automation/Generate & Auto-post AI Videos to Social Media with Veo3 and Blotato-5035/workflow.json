@@ -917,7 +917,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "视频生成、社交平台",
+    "description_zh": "视频（Generate·Auto）",
     "replacements": {
       "6d125a85-b626-4981-8cfc-bcac4ea0ca89": {
         "type": "n8n-nodes-base.googleSheets",

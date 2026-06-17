@@ -214,6 +214,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "流程自动化、n8n 运维、认证集成"
+    "description_zh": "Automate Google OAuth2 Credent"
   }
 }

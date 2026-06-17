@@ -269,7 +269,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "视频生成、流程自动化",
+    "description_zh": "视频（Video）",
     "replacements": {
       "d768bfc1-496d-4acd-aaee-0ce7c4c6d284": {
         "type": "n8n-nodes-base.googleDrive",

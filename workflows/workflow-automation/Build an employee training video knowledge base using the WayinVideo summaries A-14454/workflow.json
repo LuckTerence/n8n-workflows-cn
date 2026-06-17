@@ -344,7 +344,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "视频生成",
+    "description_zh": "视频生成（Build）",
     "replacements": {
       "fbcc3551-2649-465f-8a5d-701dc665b371": {
         "type": "n8n-nodes-base.googleSheets",

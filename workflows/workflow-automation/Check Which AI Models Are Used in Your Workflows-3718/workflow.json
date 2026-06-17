@@ -424,7 +424,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "工作流管理",
+    "description_zh": "工作流管理（Check）",
     "replacements": {
       "9693eb8b-4ce5-4d4b-984d-a77098896bc3": {
         "type": "n8n-nodes-base.googleSheets",

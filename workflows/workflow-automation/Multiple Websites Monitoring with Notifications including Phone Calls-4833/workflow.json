@@ -772,7 +772,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、消息通知",
+    "description_zh": "监控（Multiple）",
     "replacements": {
       "6f17ae5e-5451-4b78-99b1-20fa16255ead": {
         "type": "n8n-nodes-base.googleSheets",

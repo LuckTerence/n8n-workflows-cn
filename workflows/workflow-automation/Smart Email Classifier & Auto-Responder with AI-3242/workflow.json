@@ -762,7 +762,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "邮件自动化",
+    "description_zh": "邮件自动化（Smart）",
     "replacements": {
       "a0554154-1ca0-450f-b429-75b6a3b479de": {
         "type": "n8n-nodes-base.googleCalendarTool",

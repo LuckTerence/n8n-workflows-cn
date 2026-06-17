@@ -658,7 +658,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表单处理、SEO 优化",
+    "description_zh": "SEO（Google）",
     "replacements": {
       "8d769939-c3b6-472b-85cc-15af3e28590a": {
         "type": "n8n-nodes-base.googleSheets",

@@ -491,7 +491,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、告警通知、加密货币",
+    "description_zh": "加密货币、监控",
     "replacements": {
       "29541d43-fc8a-45c8-8911-b97ab3e4c080": {
         "type": "n8n-nodes-base.googleSheets",

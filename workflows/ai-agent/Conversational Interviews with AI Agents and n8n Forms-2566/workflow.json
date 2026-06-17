@@ -1191,7 +1191,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、表单处理、面试系统",
+    "description_zh": "Agent（Conversational）",
     "replacements": {
       "dff24e45-8e57-4dfc-8b65-9d315b406bd2": {
         "type": "n8n-nodes-base.googleSheets",

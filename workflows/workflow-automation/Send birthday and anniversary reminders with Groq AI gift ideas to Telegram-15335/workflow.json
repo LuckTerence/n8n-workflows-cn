@@ -358,7 +358,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人",
+    "description_zh": "Telegram 机器人（Send·Birthday）",
     "replacements": {
       "2edf1594-3e7b-4f35-afe5-6537072f6696": {
         "type": "n8n-nodes-base.googleSheets",

@@ -2460,7 +2460,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
-    "description_zh": "AI 智能体、SEO 优化、博客内容",
+    "description_zh": "Agent、SEO",
     "replacements": {
       "f4d5e013-191f-4811-8b05-6681cf5674d9": {
         "type": "n8n-nodes-base.airtable",

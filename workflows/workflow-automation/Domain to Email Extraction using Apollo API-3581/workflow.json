@@ -315,7 +315,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、API 接口",
+    "description_zh": "邮件（Domain）",
     "replacements": {
       "5e6af8ff-2bc1-44b4-9523-3e55a785ee4d": {
         "type": "n8n-nodes-base.googleSheets",

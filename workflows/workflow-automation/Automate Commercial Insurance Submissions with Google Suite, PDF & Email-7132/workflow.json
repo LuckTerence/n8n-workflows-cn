@@ -762,7 +762,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "邮件自动化、PDF 文档、流程自动化",
+    "description_zh": "邮件（Automate·Commercial）",
     "replacements": {
       "2286d1dc-7153-476b-8dd1-69f3efbeb1b1": {
         "type": "n8n-nodes-base.googleSheets",

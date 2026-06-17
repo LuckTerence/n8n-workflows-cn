@@ -622,7 +622,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "工作流管理",
+    "description_zh": "工作流管理（Standardized）",
     "replacements": {
       "d066cccc-3930-48ef-8c77-9d079ced82f2": {
         "type": "n8n-nodes-base.airtable",

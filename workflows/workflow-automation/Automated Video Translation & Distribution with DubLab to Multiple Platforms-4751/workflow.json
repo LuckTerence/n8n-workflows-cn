@@ -604,7 +604,7 @@
     "tier": "A",
     "source_id": 4751,
     "synced_at": "2026-06-17T14:19:22.039041",
-    "description_zh": "视频生成、表单处理、流程自动化",
+    "description_zh": "视频（Automated·Video）",
     "replacements": {
       "9e0c84a5-5ddc-4628-a391-5771a5f10fa3": {
         "type": "n8n-nodes-base.dropbox",

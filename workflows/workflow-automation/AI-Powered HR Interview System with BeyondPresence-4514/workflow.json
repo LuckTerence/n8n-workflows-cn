@@ -531,7 +531,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "面试系统、HR 人事",
+    "description_zh": "HR（Powered）",
     "replacements": {
       "74a0fe09-9c5e-4181-a38b-e15404d256e3": {
         "type": "n8n-nodes-base.googleSheets",

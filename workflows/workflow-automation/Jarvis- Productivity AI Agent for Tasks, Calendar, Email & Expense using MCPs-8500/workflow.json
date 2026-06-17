@@ -1908,7 +1908,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、MCP 协议集成、邮件自动化",
+    "description_zh": "Agent、邮件（Jarvis）",
     "replacements": {
       "47e41e13-e6e7-4959-bb08-1f1f4da01b34": {
         "type": "n8n-nodes-base.googleCalendarTool",

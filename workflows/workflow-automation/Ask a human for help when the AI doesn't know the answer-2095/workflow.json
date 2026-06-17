@@ -432,7 +432,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Ask）",
     "replacements": {
       "b9c552ce-4c58-48dd-b168-5e277de89954": {
         "type": "n8n-nodes-base.slack",

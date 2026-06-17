@@ -1073,7 +1073,7 @@
       "Supabase"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
-    "description_zh": "网页爬取",
+    "description_zh": "网页爬取（Create）",
     "replacements": {
       "2beb0004-5196-44d6-aec6-0a493f49a0e4": {
         "type": "n8n-nodes-base.googleDrive",

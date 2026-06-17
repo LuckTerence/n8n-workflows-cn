@@ -601,6 +601,6 @@
     "tier": "A",
     "source_id": 3632,
     "synced_at": "2026-06-17T14:18:04.100687",
-    "description_zh": "MCP 协议集成、SQL 查询、服务器管理"
+    "description_zh": "Build your own SQLite MCP serv"
   }
 }

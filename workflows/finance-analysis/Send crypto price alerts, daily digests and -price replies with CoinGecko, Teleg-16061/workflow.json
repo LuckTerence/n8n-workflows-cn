@@ -1361,7 +1361,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "告警通知、加密货币",
+    "description_zh": "加密货币（Send）",
     "replacements": {
       "dabb7d9e-caad-407e-b264-b1ffe00561d1": {
         "type": "n8n-nodes-base.googleSheets",

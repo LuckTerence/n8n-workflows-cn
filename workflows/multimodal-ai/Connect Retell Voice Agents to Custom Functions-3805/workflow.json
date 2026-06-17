@@ -1588,6 +1588,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "AI 智能体、语音处理"
+    "description_zh": "Agent、语音（Connect）"
   }
 }

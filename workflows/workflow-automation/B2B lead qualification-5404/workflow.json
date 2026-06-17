@@ -266,7 +266,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "线索管理",
+    "description_zh": "线索管理（lead）",
     "replacements": {
       "d8e5a345-a452-41ca-a7d1-e0d05a1fe565": {
         "type": "n8n-nodes-base.googleSheets",

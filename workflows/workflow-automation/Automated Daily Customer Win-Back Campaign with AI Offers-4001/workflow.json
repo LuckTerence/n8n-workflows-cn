@@ -537,7 +537,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "流程自动化",
+    "description_zh": "流程自动化（Automated·Daily）",
     "replacements": {
       "8f52666a-7247-4058-a775-2be80e3b4c0e": {
         "type": "n8n-nodes-base.googleSheets",

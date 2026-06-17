@@ -1101,7 +1101,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "告警通知",
+    "description_zh": "告警通知（Real）",
     "replacements": {
       "6bba8b1d-6bdc-4a53-9910-49e795c5a23b": {
         "type": "n8n-nodes-base.slack",

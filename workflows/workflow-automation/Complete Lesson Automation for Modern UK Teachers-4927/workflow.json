@@ -636,7 +636,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Zoom→腾讯会议",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Complete）",
     "replacements": {
       "d2ffe355-de47-4a96-a2aa-744485c9a25e": {
         "type": "n8n-nodes-base.googleDrive",

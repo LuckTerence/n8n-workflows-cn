@@ -85,6 +85,6 @@
     "tier": "A",
     "source_id": 3331,
     "synced_at": "2026-06-17T14:15:40.354491",
-    "description_zh": "API 接口、Webhook 集成、PDF 文档"
+    "description_zh": "Convert HTML to PDF and Return"
   }
 }

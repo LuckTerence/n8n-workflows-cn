@@ -672,6 +672,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "API 接口"
+    "description_zh": "API 接口（Generate）"
   }
 }

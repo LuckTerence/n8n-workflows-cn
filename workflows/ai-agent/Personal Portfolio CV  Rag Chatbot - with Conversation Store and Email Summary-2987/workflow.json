@@ -958,7 +958,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "AI 聊天机器人、AI 对话、RAG 检索增强",
+    "description_zh": "聊天机器人、对话、邮件",
     "replacements": {
       "912b1222-7c03-41a3-8c30-d93ed47b8141": {
         "type": "n8n-nodes-base.googleDrive",

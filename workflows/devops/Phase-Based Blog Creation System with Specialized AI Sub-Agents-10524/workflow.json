@@ -630,7 +630,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "AI 智能体、博客内容",
+    "description_zh": "Agent（Phase）",
     "replacements": {
       "5e41b4bc-d2cd-4259-bce0-98b9306426d5": {
         "type": "n8n-nodes-base.googleSheets",

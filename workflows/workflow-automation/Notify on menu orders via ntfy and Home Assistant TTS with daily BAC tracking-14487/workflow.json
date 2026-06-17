@@ -352,6 +352,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "消息通知、文本转语音"
+    "description_zh": "Notify on menu orders via ntfy"
   }
 }

@@ -208,6 +208,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "Webhook 集成、认证集成"
+    "description_zh": "Secure GET Webhooks with Query"
   }
 }

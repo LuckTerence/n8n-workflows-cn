@@ -221,7 +221,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "HR 人事、流程自动化",
+    "description_zh": "(REAL-WORLD USE)1 | Webhook |",
     "replacements": {
       "c0ac70b6-0545-4681-af88-e3baae9d658e": {
         "type": "n8n-nodes-base.slack",

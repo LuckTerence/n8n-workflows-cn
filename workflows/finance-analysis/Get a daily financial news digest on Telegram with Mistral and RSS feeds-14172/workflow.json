@@ -941,7 +941,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、新闻聚合",
+    "description_zh": "Telegram（Get）",
     "replacements": {
       "a4144121-78d9-46b9-9243-624c3c74e701": {
         "type": "n8n-nodes-base.googleSheets",

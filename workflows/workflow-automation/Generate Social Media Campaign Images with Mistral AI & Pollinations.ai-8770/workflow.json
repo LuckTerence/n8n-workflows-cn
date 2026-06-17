@@ -773,7 +773,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成、社交平台",
+    "description_zh": "图像（Generate·Social）",
     "replacements": {
       "b71a28a6-fb07-45ef-bd88-0a4823523718": {
         "type": "n8n-nodes-base.googleDrive",

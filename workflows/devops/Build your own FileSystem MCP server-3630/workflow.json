@@ -462,6 +462,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "MCP 协议集成、服务器管理"
+    "description_zh": "Build your own FileSystem MCP "
   }
 }

@@ -633,7 +633,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "告警通知、股票分析、市场数据",
+    "description_zh": "股票（Detect）",
     "replacements": {
       "478fdb62-dde4-40e3-9e0b-2676330f91c0": {
         "type": "n8n-nodes-base.slack",

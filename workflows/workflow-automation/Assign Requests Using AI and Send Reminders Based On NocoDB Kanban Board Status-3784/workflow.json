@@ -952,7 +952,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Assign）",
     "replacements": {
       "c31d46a2-d1f2-4573-a4dd-f07a7f9b2e52": {
         "type": "n8n-nodes-base.slack",

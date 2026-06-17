@@ -490,7 +490,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Intelligent）",
     "replacements": {
       "f63b61f7-855c-4a78-b418-1edccec085e4": {
         "type": "n8n-nodes-base.googleDrive",

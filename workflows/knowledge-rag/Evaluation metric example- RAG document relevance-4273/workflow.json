@@ -690,7 +690,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "RAG 检索增强",
+    "description_zh": "RAG 检索增强（Evaluation）",
     "replacements": {
       "eefe3a5a-722a-4cce-b84b-65c0520a225f": {
         "type": "n8n-nodes-base.googleSheets",

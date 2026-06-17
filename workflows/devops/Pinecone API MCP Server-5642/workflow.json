@@ -474,6 +474,6 @@
     "foreign_services": [
       "Pinecone"
     ],
-    "description_zh": "MCP 协议集成、API 接口、Pinecone 向量库"
+    "description_zh": "Pinecone API MCP Server"
   }
 }

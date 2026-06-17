@@ -235,7 +235,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "向量存储、PDF 文档",
+    "description_zh": "Extract & Validate Legal Citat",
     "replacements": {
       "google-drive": {
         "type": "n8n-nodes-base.googleDrive",

@@ -1226,7 +1226,7 @@
     "tier": "A",
     "source_id": 13314,
     "synced_at": "2026-06-17T14:13:38.025921",
-    "description_zh": "PostgreSQL、SQL 查询",
+    "description_zh": "Route and analyze customer fee",
     "replacements": {
       "d28b483f-6532-41bc-89d1-a44ae3055fae": {
         "type": "n8n-nodes-base.discord",

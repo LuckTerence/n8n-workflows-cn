@@ -2392,6 +2392,6 @@
     "tier": "A",
     "source_id": 9660,
     "synced_at": "2026-06-17T14:11:18.102582",
-    "description_zh": "Token 管理、认证集成"
+    "description_zh": "Self-Hosted JWT Authentication"
   }
 }

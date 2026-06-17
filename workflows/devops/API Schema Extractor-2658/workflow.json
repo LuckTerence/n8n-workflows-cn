@@ -2958,7 +2958,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "API 接口",
+    "description_zh": "API 接口（Schema）",
     "replacements": {
       "8f127f7a-e351-4b30-82dd-1f785be4a765": {
         "type": "n8n-nodes-base.googleSheets",

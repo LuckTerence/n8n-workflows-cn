@@ -616,6 +616,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "工单管理"
+    "description_zh": "工单管理（Classify）"
   }
 }

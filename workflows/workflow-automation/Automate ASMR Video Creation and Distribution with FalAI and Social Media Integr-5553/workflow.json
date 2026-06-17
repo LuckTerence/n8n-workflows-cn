@@ -841,7 +841,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "视频生成、社交平台、流程自动化",
+    "description_zh": "视频（Automate·Asmr）",
     "replacements": {
       "cf7c47e0-4be7-4087-b88d-660b5d5b8c91": {
         "type": "n8n-nodes-base.googleSheets",

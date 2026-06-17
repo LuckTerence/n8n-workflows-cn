@@ -1876,7 +1876,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "股票分析、图片生成",
+    "description_zh": "股票、图像",
     "replacements": {
       "874d35db-a40a-4ee4-a789-c260a193eda1": {
         "type": "n8n-nodes-base.googleSheets",

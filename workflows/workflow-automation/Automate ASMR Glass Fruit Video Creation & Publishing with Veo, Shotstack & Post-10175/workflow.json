@@ -1170,7 +1170,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "视频生成、流程自动化",
+    "description_zh": "视频（Automate·Asmr）",
     "replacements": {
       "45400d45-c09e-432e-9ad9-819fa5db5b56": {
         "type": "n8n-nodes-base.googleSheets",

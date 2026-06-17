@@ -699,7 +699,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、告警通知、HR 人事",
+    "description_zh": "监控、HR",
     "replacements": {
       "1847ddc7-4dca-4768-ad82-f98984b6f67c": {
         "type": "n8n-nodes-base.slack",

@@ -923,7 +923,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "系统监控、告警通知",
+    "description_zh": "监控（Monitor）",
     "replacements": {
       "629b2dc4-8b5c-420b-b62d-d0c1653900a2": {
         "type": "n8n-nodes-base.googleSheets",

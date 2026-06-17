@@ -134,6 +134,6 @@
     "tier": "A",
     "source_id": 4704,
     "synced_at": "2026-06-17T14:14:23.118599",
-    "description_zh": "Webhook 集成"
+    "description_zh": "Webhook 集成（JSON）"
   }
 }

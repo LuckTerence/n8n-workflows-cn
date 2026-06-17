@@ -534,6 +534,6 @@
     "tier": "A",
     "source_id": 8836,
     "synced_at": "2026-06-17T14:22:16.277520",
-    "description_zh": "数据采集"
+    "description_zh": "数据采集（Scrape）"
   }
 }

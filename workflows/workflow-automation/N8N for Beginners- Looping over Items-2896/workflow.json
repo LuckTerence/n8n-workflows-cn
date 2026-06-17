@@ -481,6 +481,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "n8n 运维"
+    "description_zh": "n8n 运维（for）"
   }
 }

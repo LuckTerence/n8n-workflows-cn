@@ -516,6 +516,6 @@
     "tier": "A",
     "source_id": 3048,
     "synced_at": "2026-06-17T14:14:06.152289",
-    "description_zh": "API 接口、工作流管理、n8n 运维"
+    "description_zh": "Clone n8n Workflows between In"
   }
 }

@@ -1190,7 +1190,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成、表单处理、社交平台",
+    "description_zh": "视频（Automate·Video）",
     "replacements": {
       "392546ef-1ee4-4f95-b3b8-bb82a424a121": {
         "type": "n8n-nodes-base.googleDrive",

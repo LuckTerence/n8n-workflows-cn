@@ -630,6 +630,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "告警通知"
+    "description_zh": "告警通知（Analyze）"
   }
 }

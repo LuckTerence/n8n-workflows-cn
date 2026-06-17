@@ -317,7 +317,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "市场数据、网页爬取、新闻聚合",
+    "description_zh": "Firecrawl AI-Powered Market In",
     "replacements": {
       "f5965b4a-4ab1-4e5f-868c-2dc11c59fc28": {
         "type": "n8n-nodes-base.slack",

@@ -478,7 +478,7 @@
       "Twilio",
       "Slack"
     ],
-    "description_zh": "线索管理、流程自动化",
+    "description_zh": "Automated Real Estate Property",
     "replacements": {
       "0d0d4e2e-b040-45d1-8a4c-e775520a4bbc": {
         "type": "n8n-nodes-base.slack",

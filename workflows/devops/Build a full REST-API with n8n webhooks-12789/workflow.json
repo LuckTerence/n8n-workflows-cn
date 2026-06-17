@@ -1584,6 +1584,6 @@
     "tier": "A",
     "source_id": 12789,
     "synced_at": "2026-06-17T14:18:00.926557",
-    "description_zh": "API 接口、Webhook 集成、n8n 运维"
+    "description_zh": "Build a full REST-API with n8n"
   }
 }

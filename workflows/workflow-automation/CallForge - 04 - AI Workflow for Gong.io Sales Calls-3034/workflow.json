@@ -713,7 +713,7 @@
       "Notion",
       "Slack"
     ],
-    "description_zh": "工作流管理",
+    "description_zh": "工作流管理（CallForge）",
     "replacements": {
       "d85f05bd-c680-4b41-b67a-8126b3ed29b0": {
         "type": "n8n-nodes-base.notion",

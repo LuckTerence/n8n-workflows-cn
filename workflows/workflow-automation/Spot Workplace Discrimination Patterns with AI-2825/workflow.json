@@ -1883,6 +1883,6 @@
     "foreign_services": [
       "Twilio"
     ],
-    "description_zh": "自动化工作流"
+    "description_zh": "自动化工作流（Spot）"
   }
 }

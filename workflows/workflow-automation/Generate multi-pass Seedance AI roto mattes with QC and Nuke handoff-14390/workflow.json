@@ -608,7 +608,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Generate·Multi）",
     "replacements": {
       "42f82c86-dd07-4bf7-8e18-b2e06d3096a7": {
         "type": "n8n-nodes-base.slack",

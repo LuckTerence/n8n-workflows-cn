@@ -286,6 +286,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "邮件自动化、语音处理、发票处理"
+    "description_zh": "邮件、语音、发票（Send）"
   }
 }

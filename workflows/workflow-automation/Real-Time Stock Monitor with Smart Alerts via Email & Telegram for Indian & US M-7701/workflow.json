@@ -443,7 +443,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram 机器人、邮件自动化、系统监控",
+    "description_zh": "邮件、Telegram、股票",
     "replacements": {
       "1e0a06c3-a7da-44ca-a47d-4821bf599049": {
         "type": "n8n-nodes-base.googleSheets",

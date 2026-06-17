@@ -471,7 +471,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "智能搜索",
+    "description_zh": "智能搜索（Germany）",
     "replacements": {
       "7": {
         "type": "n8n-nodes-base.googleDrive",

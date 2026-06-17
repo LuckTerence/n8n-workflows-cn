@@ -785,7 +785,7 @@
     "tier": "A",
     "source_id": 14862,
     "synced_at": "2026-06-17T14:12:06.448590",
-    "description_zh": "外汇交易、新闻聚合、流程自动化",
+    "description_zh": "Automated Forex Portfolio Mana",
     "replacements": {
       "f908d750-b0aa-4fbb-926b-dd17cf79ebe3": {
         "type": "n8n-nodes-base.discord",

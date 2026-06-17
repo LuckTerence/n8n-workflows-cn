@@ -1571,7 +1571,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "Telegram 机器人、视频生成",
+    "description_zh": "Telegram、视频（Create·One）",
     "replacements": {
       "5fd1a00c-6ff5-4bfe-a956-fb3640324b12": {
         "type": "n8n-nodes-base.googleDrive",

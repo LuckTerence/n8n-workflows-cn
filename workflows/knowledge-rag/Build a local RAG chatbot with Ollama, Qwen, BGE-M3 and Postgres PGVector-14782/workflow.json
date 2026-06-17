@@ -939,6 +939,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "AI 聊天机器人、AI 对话、RAG 检索增强"
+    "description_zh": "聊天机器人、对话、RAG（Build）"
   }
 }

@@ -1135,7 +1135,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "视频生成",
+    "description_zh": "视频生成（Narrative）",
     "replacements": {
       "cd97d8fc-6f46-4f4a-a20e-00def5dc01d1": {
         "type": "n8n-nodes-base.googleSheets",

@@ -731,7 +731,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "消息通知、数据库操作",
+    "description_zh": "Parse DMARC reports, save them",
     "replacements": {
       "192b95c6-cdfe-4b5e-94e1-94deb728b0e2": {
         "type": "n8n-nodes-base.slack",

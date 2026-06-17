@@ -421,7 +421,7 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档",
-    "description_zh": "SEO 优化、智能搜索",
+    "description_zh": "SEO（Powered）",
     "replacements": {
       "44d6ebd9-ad12-4838-aee0-9b8a4a847a6b": {
         "type": "n8n-nodes-base.googleSheets",

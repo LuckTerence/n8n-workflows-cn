@@ -1405,7 +1405,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "求职招聘、HR 人事",
+    "description_zh": "HR（HR）",
     "replacements": {
       "5005e9ba-a68a-4795-8a65-22374a182bdb": {
         "type": "n8n-nodes-base.airtable",

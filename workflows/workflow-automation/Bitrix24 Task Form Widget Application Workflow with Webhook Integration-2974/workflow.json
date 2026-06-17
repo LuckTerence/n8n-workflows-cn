@@ -786,6 +786,6 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "Webhook 集成、表单处理、工作流管理"
+    "description_zh": "Bitrix24 Task Form Widget Appl"
   }
 }

@@ -977,7 +977,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Personal）",
     "replacements": {
       "7d4ce33f-a3e9-4476-8815-13a970847909": {
         "type": "n8n-nodes-base.googleCalendarTool",

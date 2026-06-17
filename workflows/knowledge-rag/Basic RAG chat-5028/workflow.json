@@ -332,6 +332,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "AI 对话、RAG 检索增强"
+    "description_zh": "对话、RAG"
   }
 }

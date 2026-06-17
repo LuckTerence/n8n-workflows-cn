@@ -1022,6 +1022,6 @@
     "foreign_services": [
       "Pinecone"
     ],
-    "description_zh": "向量存储、Pinecone 向量库"
+    "description_zh": "Dynamic Website Assistant with"
   }
 }

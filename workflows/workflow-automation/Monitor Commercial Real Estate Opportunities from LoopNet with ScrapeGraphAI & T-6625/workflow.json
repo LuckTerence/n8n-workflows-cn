@@ -346,7 +346,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "系统监控、数据采集",
+    "description_zh": "监控（Monitor）",
     "replacements": {
       "501df296-9ece-4f93-ac15-d6b753c10813": {
         "type": "n8n-nodes-base.googleSheets",

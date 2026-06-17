@@ -642,6 +642,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "网页爬取"
+    "description_zh": "网页爬取（Generate）"
   }
 }

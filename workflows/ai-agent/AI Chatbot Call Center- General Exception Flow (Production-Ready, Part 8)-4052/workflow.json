@@ -96,7 +96,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "AI 聊天机器人、AI 对话",
+    "description_zh": "聊天机器人、对话（Chatbot）",
     "replacements": {
       "42f2e2c9-40f7-4201-86c5-892b212863d3": {
         "type": "n8n-nodes-base.slack",

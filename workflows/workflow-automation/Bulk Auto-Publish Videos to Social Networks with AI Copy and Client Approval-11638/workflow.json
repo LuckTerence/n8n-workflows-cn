@@ -1225,7 +1225,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频生成、社交平台",
+    "description_zh": "视频（Bulk）",
     "replacements": {
       "8d8a2adc-b83f-4e09-9fd4-520ad2cf6c00": {
         "type": "n8n-nodes-base.googleDrive",

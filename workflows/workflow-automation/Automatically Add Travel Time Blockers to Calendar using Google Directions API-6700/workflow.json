@@ -595,7 +595,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "API 接口",
+    "description_zh": "API 接口（Automatically）",
     "replacements": {
       "f8db0af5-71c2-4ea4-a576-9b9bd3d56544": {
         "type": "n8n-nodes-base.googleCalendarTool",

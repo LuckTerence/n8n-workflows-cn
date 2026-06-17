@@ -239,6 +239,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "表单处理"
+    "description_zh": "表单处理（Classify）"
   }
 }

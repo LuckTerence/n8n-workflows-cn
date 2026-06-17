@@ -1316,7 +1316,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "告警通知、消息通知、天气信息",
+    "description_zh": "Real-time ISS Overhead Alert w",
     "replacements": {
       "b2df9e60-6761-49f5-b3a0-0e08c8eb51c9": {
         "type": "n8n-nodes-base.googleSheets",

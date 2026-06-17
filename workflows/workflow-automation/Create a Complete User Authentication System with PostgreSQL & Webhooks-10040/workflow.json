@@ -423,6 +423,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "Webhook 集成、PostgreSQL、SQL 查询"
+    "description_zh": "Create a Complete User Authent"
   }
 }

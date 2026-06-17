@@ -656,7 +656,7 @@
     "tier": "A",
     "source_id": 2424,
     "synced_at": "2026-06-17T14:16:02.245922",
-    "description_zh": "API 接口、PDF 文档",
+    "description_zh": "Manipulate PDF with Adobe deve",
     "replacements": {
       "abf20778-db50-4787-a5f4-7af5d5c76efe": {
         "type": "n8n-nodes-base.dropbox",

@@ -346,7 +346,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "AI 智能体、API 接口、市场数据",
+    "description_zh": "Agent、语音（Automate）",
     "replacements": {
       "9797586c-4313-4ce1-b58b-ec3e31cb705e": {
         "type": "n8n-nodes-base.googleSheets",

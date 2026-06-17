@@ -1283,7 +1283,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "MCP 协议集成、API 接口、服务器管理",
+    "description_zh": "Build your own CUSTOM API MCP ",
     "replacements": {
       "679a2413-448f-43d8-98fc-7fd8b83775e7": {
         "type": "n8n-nodes-base.googleSheets",

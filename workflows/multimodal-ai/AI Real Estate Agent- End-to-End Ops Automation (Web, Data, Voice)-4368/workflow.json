@@ -1063,7 +1063,7 @@
       "Google Docs"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Twilio→腾讯云短信",
-    "description_zh": "AI 智能体、语音处理",
+    "description_zh": "Agent、语音（Real）",
     "replacements": {
       "1cdeaf35-c50d-4c16-b1af-38f8f0ba5924": {
         "type": "n8n-nodes-base.googleSheets",

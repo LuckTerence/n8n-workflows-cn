@@ -1557,7 +1557,7 @@
       "Notion",
       "Supabase"
     ],
-    "description_zh": "API 接口、表单处理、工作流管理",
+    "description_zh": "Selectively import workflows b",
     "replacements": {
       "39db5553-77e5-4a12-9b98-716d16bcb445": {
         "type": "n8n-nodes-base.notion",

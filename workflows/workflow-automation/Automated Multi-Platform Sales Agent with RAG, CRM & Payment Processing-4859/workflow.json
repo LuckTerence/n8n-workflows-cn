@@ -1867,7 +1867,7 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "AI 智能体、RAG 检索增强、表单处理",
+    "description_zh": "Agent、RAG、CRM",
     "replacements": {
       "ea7c1010-8de9-46da-a9f9-75d0dbd25d0a": {
         "type": "n8n-nodes-base.googleCalendarTool",

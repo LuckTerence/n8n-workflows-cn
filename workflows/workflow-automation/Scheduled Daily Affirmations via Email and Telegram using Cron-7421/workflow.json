@@ -233,6 +233,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "Telegram 机器人、邮件自动化"
+    "description_zh": "邮件、Telegram（Scheduled）"
   }
 }

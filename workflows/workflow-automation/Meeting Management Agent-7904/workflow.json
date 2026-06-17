@@ -386,7 +386,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "AI 智能体",
+    "description_zh": "AI 智能体（Meeting）",
     "replacements": {
       "08d4ae43-8bc4-43b8-b40f-2e251485d406": {
         "type": "n8n-nodes-base.googleCalendarTool",

@@ -398,7 +398,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "工作流管理",
+    "description_zh": "工作流管理（Receipt）",
     "replacements": {
       "a1c817d0-dccc-4666-9728-5f74107d5c1e": {
         "type": "n8n-nodes-base.googleSheets",

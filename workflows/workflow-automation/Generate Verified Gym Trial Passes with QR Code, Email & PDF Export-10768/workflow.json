@@ -544,7 +544,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、PDF 文档",
+    "description_zh": "邮件（Generate·Verified）",
     "replacements": {
       "db0868f4-deda-4798-834c-508cf752591b": {
         "type": "n8n-nodes-base.googleSheets",

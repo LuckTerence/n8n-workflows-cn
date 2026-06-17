@@ -1230,7 +1230,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "告警通知",
+    "description_zh": "告警通知（Multi）",
     "replacements": {
       "b51e28a7-1e7a-4c8e-bd41-f1f477f5442d": {
         "type": "n8n-nodes-base.slack",

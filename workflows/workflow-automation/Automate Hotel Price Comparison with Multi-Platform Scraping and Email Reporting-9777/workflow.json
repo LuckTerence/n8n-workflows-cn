@@ -560,7 +560,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化、API 接口、表单处理",
+    "description_zh": "邮件（Automate·Hotel）",
     "replacements": {
       "c7984244-c4d7-4343-88d6-422e1f54a06f": {
         "type": "n8n-nodes-base.googleSheets",

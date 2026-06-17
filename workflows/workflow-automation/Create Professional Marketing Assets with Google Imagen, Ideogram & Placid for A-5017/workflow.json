@@ -839,7 +839,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "市场数据、图片生成",
+    "description_zh": "图像（Create·Professional）",
     "replacements": {
       "e041720f-c176-48b3-b82b-eef0c93dbefe": {
         "type": "n8n-nodes-base.googleDrive",

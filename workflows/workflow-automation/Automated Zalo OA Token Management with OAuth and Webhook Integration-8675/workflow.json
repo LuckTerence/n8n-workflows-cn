@@ -292,6 +292,6 @@
     "tier": "A",
     "source_id": 8675,
     "synced_at": "2026-06-17T14:14:01.657227",
-    "description_zh": "Webhook 集成、流程自动化、Token 管理"
+    "description_zh": "Automated Zalo OA Token Manage"
   }
 }

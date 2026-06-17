@@ -494,7 +494,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流",
+    "description_zh": "自动化工作流（Extract·Organizations）",
     "replacements": {
       "1a016850-c310-43a6-9925-538086367d4f": {
         "type": "n8n-nodes-base.googleDrive",

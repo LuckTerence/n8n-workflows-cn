@@ -506,7 +506,7 @@
     "tier": "A",
     "source_id": 2490,
     "synced_at": "2026-06-17T14:07:29.238879",
-    "description_zh": "表单处理",
+    "description_zh": "表单处理（Build）",
     "replacements": {
       "2e820357-250c-41a7-9daa-4eb77e7eded6": {
         "type": "n8n-nodes-base.airtable",

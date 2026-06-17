@@ -532,6 +532,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "API 接口、Webhook 集成、自动备份"
+    "description_zh": "备份（Route）"
   }
 }

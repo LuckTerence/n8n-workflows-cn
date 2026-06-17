@@ -571,7 +571,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "市场数据、流程自动化",
+    "description_zh": "Automated Generation of AI Adv",
     "replacements": {
       "b1fe6bd4-f20b-4e13-83ce-58aa80372fe5": {
         "type": "n8n-nodes-base.googleSheets",

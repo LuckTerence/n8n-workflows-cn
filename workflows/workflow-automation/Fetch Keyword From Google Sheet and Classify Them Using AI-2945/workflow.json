@@ -263,7 +263,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "表格处理",
+    "description_zh": "表格处理（Fetch）",
     "replacements": {
       "900ac097-c6de-41c0-8270-c9de60424d5f": {
         "type": "n8n-nodes-base.googleSheets",
