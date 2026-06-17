@@ -1,5 +1,7 @@
 # n8n-workflows-cn
 
+[English](README_EN.md) | 中文
+
 [![Workflows](https://img.shields.io/badge/Workflows-1480-brightgreen)](INDEX.md)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
@@ -7,42 +9,35 @@
 
 ---
 
-## 项目介绍
+> 🚀 **1480 个 n8n 工作流模板 · 全部替换为 DeepSeek / 飞书 / 微信支付 / 阿里云 · 1031 个开箱即用**
 
-这是一个 n8n 工作流模板合集，源自 [nusquama/n8nworkflows.xyz](https://github.com/nusquama/n8nworkflows.xyz) 社区收集的 1480 个模板。
+[🔍 在线浏览站点](https://luckterence.github.io/n8n-workflows-cn/) · [📋 完整索引](INDEX.md) · [🎯 精选合集](CURATED.md) · [⚡ 快速开始](#快速试试)
 
-**做了什么：** 原始模板里的服务大多是 OpenAI、Slack、Google Workspace 等海外产品。我把这些逐个替换成了国内常用的服务（DeepSeek、通义千问、飞书、微信支付、阿里云等），并给每个工作流加了中文说明和适配记录。
+---
 
-**适合谁：** 如果你用 n8n 做自动化，但不想折腾海外账号和支付，这个仓库可能能帮你省点时间。
+## 这是什么
 
-**数据概览：**
+把 [nusquama/n8nworkflows.xyz](https://github.com/nusquama/n8nworkflows.xyz) 社区收集的 1480 个 n8n 模板里的海外服务（OpenAI、Slack、Google Workspace 等），逐个替换成了国内常用服务（DeepSeek、通义千问、飞书、微信支付、阿里云等），并给每个工作流加了中文说明。
 
-| | |
-|---|---|
-| 工作流总数 | 1480 |
-| 大分类 | 6 个（AI Agent、DevOps、金融分析、知识库 RAG、多模态 AI、工作流自动化） |
-| 细分场景 | 60+ 个（对话机器人、邮件处理、监控告警、股票分析……） |
-| 替换服务 | 14 项（OpenAI → DeepSeek、Slack → 飞书、Gmail → QQ邮箱……） |
-| 立即可用 | 1031 个（Tier A，无外服依赖） |
-| 待替换 | 449 个（Tier B，含 Gmail/Google 等需手动换成国内服务） |
-| 格式 | 每个工作流 = `workflow.json`（可在 n8n 里 Import）+ `readme.md`（说明文档） |
-
-## 起因
-
-自己用 n8n 的时候经常遇到：打开一个模板全是 OpenAI / Claude 节点没账号没法用、Slack 和 Google Sheets 这些用不上的服务占一半、每次手动改 Base URL 调消息格式很费时间。所以就整理了这份笔记，也能帮到有类似困扰的朋友。
+**适合谁：用 n8n 做自动化，但不想折腾海外账号和支付的开发者。**
 
 ## 快速试试
 
 ```bash
-# 1. 启动 n8n（Docker）
+# 一行启动 n8n
 docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
-
-# 2. 打开 http://localhost:5678，点击 Import from File
-
-# 3. 导入任意 workflow.json，填入 API Key 就能跑
+# 打开 http://localhost:5678 → Import from File → 导入任意 workflow.json → 填 API Key 即用
 ```
 
-> 可以从 `workflows/ai-agent/AI Agent聊天-1954/workflow.json` 开始试，基础的 AI 聊天 Agent，5 个节点。
+**推荐从这几个开始：**
+
+| 工作流 | 说明 | 难度 | 入口 |
+|--------|------|:--:|------|
+| AI Agent 聊天 | 基础 AI 对话，5 个节点，配 DeepSeek Key 直接跑 | ⭐ | [📂 打开](workflows/ai-agent/AI%20Agent聊天-1954/) |
+| AI 客服中心 Telegram | 完整 Telegram 客服机器人 | ⭐⭐ | [📂 打开](workflows/ai-agent/AI客服中心Telegram呼入-4044/) |
+| Gmail 智能分类 | AI 自动给邮件打标签归档 | ⭐⭐ | [📂 打开](workflows/workflow-automation/Gmail智能分类归档-3686/) |
+| AI 股票基本面分析 | 多维度股票基本面分析 | ⭐⭐ | [📂 打开](workflows/finance-analysis/AI股票基本面分析-2183/) |
+| 定时启停 n8n 工作流 | 学会用 n8n 管理 n8n 本身 | ⭐ | [📂 打开](workflows/devops/定时启停n8n工作流-3229/) |
 
 ## 工作流分类
 
