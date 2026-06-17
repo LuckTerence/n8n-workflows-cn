@@ -1772,8 +1772,16 @@
   "_cn_meta": {
     "title_zh": "Automate Lead Generation with Apollo, AI Parsing, and Timed Email Follow-ups",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9034,
-    "synced_at": "2026-06-17T14:19:29.677479"
+    "synced_at": "2026-06-17T14:19:29.677479",
+    "foreign_services": [
+      "Zoom",
+      "Gmail",
+      "Google Sheets",
+      "Stripe",
+      "Slack"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议"
   }
 }

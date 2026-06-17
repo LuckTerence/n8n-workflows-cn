@@ -332,8 +332,12 @@
   "_cn_meta": {
     "title_zh": "Email Summary Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2722,
-    "synced_at": "2026-06-17T14:16:16.159238"
+    "synced_at": "2026-06-17T14:16:16.159238",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

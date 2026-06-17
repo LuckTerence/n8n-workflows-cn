@@ -1409,8 +1409,14 @@
   "_cn_meta": {
     "title_zh": "Create Consistent AI Characters with Google Nano Banana & Upscaling via Kie.ai",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8492,
-    "synced_at": "2026-06-17T14:08:09.089022"
+    "synced_at": "2026-06-17T14:08:09.089022",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

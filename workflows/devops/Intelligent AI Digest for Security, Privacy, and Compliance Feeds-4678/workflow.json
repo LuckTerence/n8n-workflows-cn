@@ -1283,8 +1283,12 @@
   "_cn_meta": {
     "title_zh": "Intelligent AI Digest for Security, Privacy, and Compliance Feeds",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4678,
-    "synced_at": "2026-06-17T14:18:46.116945"
+    "synced_at": "2026-06-17T14:18:46.116945",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

@@ -828,8 +828,15 @@
   "_cn_meta": {
     "title_zh": "Auto-generate sticky notes and rename nodes",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13868,
-    "synced_at": "2026-06-17T14:20:59.031382"
+    "synced_at": "2026-06-17T14:20:59.031382",
+    "foreign_services": [
+      "Notion",
+      "Google Sheets",
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀"
   }
 }

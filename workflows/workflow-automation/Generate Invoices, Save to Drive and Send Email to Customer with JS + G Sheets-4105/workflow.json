@@ -555,8 +555,13 @@
   "_cn_meta": {
     "title_zh": "Generate Invoices, Save to Drive and Send Email to Customer with JS + G Sheets",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4105,
-    "synced_at": "2026-06-17T14:15:55.999752"
+    "synced_at": "2026-06-17T14:15:55.999752",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

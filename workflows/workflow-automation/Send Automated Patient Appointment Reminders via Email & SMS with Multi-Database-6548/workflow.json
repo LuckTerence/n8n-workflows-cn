@@ -504,8 +504,13 @@
   "_cn_meta": {
     "title_zh": "Send Automated Patient Appointment Reminders via Email & SMS with Multi-Database Support",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6548,
-    "synced_at": "2026-06-17T14:21:23.986144"
+    "synced_at": "2026-06-17T14:21:23.986144",
+    "foreign_services": [
+      "Twilio",
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信"
   }
 }

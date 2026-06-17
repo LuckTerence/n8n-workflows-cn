@@ -635,8 +635,12 @@
   "_cn_meta": {
     "title_zh": "Generate AI-Ready llms.txt Files from Screaming Frog Website Crawls",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3219,
-    "synced_at": "2026-06-17T14:22:10.361977"
+    "synced_at": "2026-06-17T14:22:10.361977",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS"
   }
 }

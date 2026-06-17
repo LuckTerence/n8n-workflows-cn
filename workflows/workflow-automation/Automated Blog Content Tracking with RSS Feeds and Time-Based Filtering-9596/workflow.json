@@ -493,8 +493,12 @@
   "_cn_meta": {
     "title_zh": "Automated Blog Content Tracking with RSS Feeds and Time-Based Filtering",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9596,
-    "synced_at": "2026-06-17T14:12:03.846454"
+    "synced_at": "2026-06-17T14:12:03.846454",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

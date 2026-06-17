@@ -1439,6 +1439,9 @@
     "category": "ai-agent",
     "tier": "A",
     "source_id": 2850,
-    "synced_at": "2026-06-17T14:17:23.245164"
+    "synced_at": "2026-06-17T14:17:23.245164",
+    "foreign_services": [
+      "Supabase"
+    ]
   }
 }

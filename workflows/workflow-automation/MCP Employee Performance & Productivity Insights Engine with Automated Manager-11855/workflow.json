@@ -725,8 +725,13 @@
   "_cn_meta": {
     "title_zh": "MCP Employee Performance & Productivity Insights Engine with Automated Manager",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11855,
-    "synced_at": "2026-06-17T14:06:27.020080"
+    "synced_at": "2026-06-17T14:06:27.020080",
+    "foreign_services": [
+      "Zoom",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Zoom→腾讯会议"
   }
 }

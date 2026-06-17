@@ -1248,8 +1248,15 @@
   "_cn_meta": {
     "title_zh": "Automated Product Health Monitor with Anomaly Detection & AI Root Cause Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11117,
-    "synced_at": "2026-06-17T14:12:10.299771"
+    "synced_at": "2026-06-17T14:12:10.299771",
+    "foreign_services": [
+      "Notion",
+      "Slack",
+      "Supabase",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase"
   }
 }

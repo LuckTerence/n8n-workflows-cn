@@ -458,8 +458,12 @@
   "_cn_meta": {
     "title_zh": "Automated Job Hunt with Tavily",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8616,
-    "synced_at": "2026-06-17T14:06:18.760471"
+    "synced_at": "2026-06-17T14:06:18.760471",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

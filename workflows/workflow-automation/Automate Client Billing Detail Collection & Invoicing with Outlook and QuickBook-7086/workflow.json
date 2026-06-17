@@ -449,8 +449,12 @@
   "_cn_meta": {
     "title_zh": "Automate Client Billing Detail Collection & Invoicing with Outlook and QuickBooks",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7086,
-    "synced_at": "2026-06-17T14:06:50.237685"
+    "synced_at": "2026-06-17T14:06:50.237685",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

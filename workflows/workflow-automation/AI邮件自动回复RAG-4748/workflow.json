@@ -671,9 +671,17 @@
     "title_zh": "AI邮件自动回复RAG",
     "description_zh": "RAG增强的邮件自动回复系统",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "B",
     "source_id": 4748,
     "synced_at": "2026-06-17T11:36:59.420983",
-    "upgraded_at": "2026-06-17"
+    "upgraded_at": "2026-06-17",
+    "foreign_services": [
+      "Google Docs",
+      "Google Drive",
+      "Gmail",
+      "Notion",
+      "Pinecone"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Pinecone→Milvus/腾讯云向量库"
   }
 }

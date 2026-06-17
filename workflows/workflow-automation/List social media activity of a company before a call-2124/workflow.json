@@ -686,8 +686,12 @@
   "_cn_meta": {
     "title_zh": "List social media activity of a company before a call",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2124,
-    "synced_at": "2026-06-17T14:21:51.628852"
+    "synced_at": "2026-06-17T14:21:51.628852",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

@@ -1183,8 +1183,16 @@
   "_cn_meta": {
     "title_zh": "Crawl documentation sites and build an AI knowledge base with Olostep",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13436,
-    "synced_at": "2026-06-17T14:15:04.388681"
+    "synced_at": "2026-06-17T14:15:04.388681",
+    "foreign_services": [
+      "Google Docs",
+      "Google Drive",
+      "Supabase",
+      "Notion",
+      "Pinecone"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库"
   }
 }

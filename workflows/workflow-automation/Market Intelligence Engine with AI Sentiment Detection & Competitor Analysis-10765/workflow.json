@@ -1361,8 +1361,13 @@
   "_cn_meta": {
     "title_zh": "Market Intelligence Engine with AI Sentiment Detection & Competitor Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10765,
-    "synced_at": "2026-06-17T14:13:03.590500"
+    "synced_at": "2026-06-17T14:13:03.590500",
+    "foreign_services": [
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人"
   }
 }

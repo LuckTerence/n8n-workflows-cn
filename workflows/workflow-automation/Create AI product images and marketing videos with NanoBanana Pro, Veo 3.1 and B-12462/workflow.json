@@ -5072,8 +5072,14 @@
   "_cn_meta": {
     "title_zh": "Create AI product images and marketing videos with NanoBanana Pro, Veo 3.1 and Blotato",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12462,
-    "synced_at": "2026-06-17T14:20:23.965028"
+    "synced_at": "2026-06-17T14:20:23.965028",
+    "foreign_services": [
+      "Notion",
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀"
   }
 }

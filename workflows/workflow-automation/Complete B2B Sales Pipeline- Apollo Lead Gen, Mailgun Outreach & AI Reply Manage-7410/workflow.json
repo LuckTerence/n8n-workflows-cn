@@ -2445,8 +2445,13 @@
   "_cn_meta": {
     "title_zh": "Complete B2B Sales Pipeline: Apollo Lead Gen, Mailgun Outreach & AI Reply Management",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7410,
-    "synced_at": "2026-06-17T14:19:34.752204"
+    "synced_at": "2026-06-17T14:19:34.752204",
+    "foreign_services": [
+      "Supabase",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase"
   }
 }

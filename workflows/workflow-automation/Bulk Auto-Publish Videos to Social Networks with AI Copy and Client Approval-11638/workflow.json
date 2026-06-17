@@ -1626,8 +1626,13 @@
   "_cn_meta": {
     "title_zh": "Bulk Auto-Publish Videos to Social Networks with AI Copy and Client Approval",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11638,
-    "synced_at": "2026-06-17T14:07:29.851137"
+    "synced_at": "2026-06-17T14:07:29.851137",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

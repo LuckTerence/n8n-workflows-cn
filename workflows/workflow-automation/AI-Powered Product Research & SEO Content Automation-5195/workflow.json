@@ -485,8 +485,13 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Product Research & SEO Content Automation",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5195,
-    "synced_at": "2026-06-17T14:11:45.101772"
+    "synced_at": "2026-06-17T14:11:45.101772",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Docs"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档"
   }
 }

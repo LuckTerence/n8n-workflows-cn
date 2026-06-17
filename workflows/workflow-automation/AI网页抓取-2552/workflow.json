@@ -261,9 +261,13 @@
     "title_zh": "AI网页抓取",
     "description_zh": "Jina+Google Sheets+OpenAI自动抓取网页数据",
     "category": "workflow-automation",
-    "tier": "A-adapted",
+    "tier": "B",
     "source_id": 2552,
     "synced_at": "2026-06-17T11:36:55.495115",
-    "upgraded_at": "2026-06-17"
+    "upgraded_at": "2026-06-17",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

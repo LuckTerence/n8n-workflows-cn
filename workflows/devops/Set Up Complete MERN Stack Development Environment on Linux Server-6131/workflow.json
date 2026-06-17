@@ -568,8 +568,13 @@
   "_cn_meta": {
     "title_zh": "Set Up Complete MERN Stack Development Environment on Linux Server",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6131,
-    "synced_at": "2026-06-17T14:19:18.998798"
+    "synced_at": "2026-06-17T14:19:18.998798",
+    "foreign_services": [
+      "Stripe",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Stripe→微信支付"
   }
 }

@@ -402,8 +402,12 @@
   "_cn_meta": {
     "title_zh": "Daily Validated Business Ideas using n8n and Upwork",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4715,
-    "synced_at": "2026-06-17T14:08:34.138961"
+    "synced_at": "2026-06-17T14:08:34.138961",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

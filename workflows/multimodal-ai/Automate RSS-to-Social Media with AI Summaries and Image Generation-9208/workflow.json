@@ -1200,8 +1200,13 @@
   "_cn_meta": {
     "title_zh": "Automate RSS-to-Social Media with AI Summaries and Image Generation",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9208,
-    "synced_at": "2026-06-17T14:19:46.193564"
+    "synced_at": "2026-06-17T14:19:46.193564",
+    "foreign_services": [
+      "Google Sheets",
+      "Supabase"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase"
   }
 }

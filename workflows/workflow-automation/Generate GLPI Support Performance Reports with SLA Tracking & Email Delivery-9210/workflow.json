@@ -658,8 +658,12 @@
   "_cn_meta": {
     "title_zh": "Generate GLPI Support Performance Reports with SLA Tracking & Email Delivery",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9210,
-    "synced_at": "2026-06-17T14:12:46.826628"
+    "synced_at": "2026-06-17T14:12:46.826628",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

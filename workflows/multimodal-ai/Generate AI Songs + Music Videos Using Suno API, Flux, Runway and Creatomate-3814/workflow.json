@@ -1375,8 +1375,13 @@
   "_cn_meta": {
     "title_zh": "Generate AI Songs + Music Videos Using Suno API, Flux, Runway and Creatomate",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3814,
-    "synced_at": "2026-06-17T14:19:59.187163"
+    "synced_at": "2026-06-17T14:19:59.187163",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS"
   }
 }

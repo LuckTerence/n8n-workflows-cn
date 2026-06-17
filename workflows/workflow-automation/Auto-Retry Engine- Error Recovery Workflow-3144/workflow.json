@@ -456,8 +456,13 @@
   "_cn_meta": {
     "title_zh": "Auto-Retry Engine: Error Recovery Workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3144,
-    "synced_at": "2026-06-17T14:13:57.848553"
+    "synced_at": "2026-06-17T14:13:57.848553",
+    "foreign_services": [
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人"
   }
 }

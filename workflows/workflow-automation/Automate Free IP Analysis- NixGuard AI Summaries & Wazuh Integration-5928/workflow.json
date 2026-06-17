@@ -207,8 +207,13 @@
   "_cn_meta": {
     "title_zh": "Automate Free IP Analysis: NixGuard AI Summaries & Wazuh Integration",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5928,
-    "synced_at": "2026-06-17T14:11:59.966399"
+    "synced_at": "2026-06-17T14:11:59.966399",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

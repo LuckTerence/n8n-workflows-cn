@@ -293,8 +293,12 @@
   "_cn_meta": {
     "title_zh": "Automate Image Validation Tasks using AI Vision",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2420,
-    "synced_at": "2026-06-17T14:19:43.721681"
+    "synced_at": "2026-06-17T14:19:43.721681",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

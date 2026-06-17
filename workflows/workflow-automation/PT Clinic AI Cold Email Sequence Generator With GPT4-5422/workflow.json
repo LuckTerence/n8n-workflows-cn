@@ -288,8 +288,12 @@
   "_cn_meta": {
     "title_zh": "PT Clinic AI Cold Email Sequence Generator With GPT4",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5422,
-    "synced_at": "2026-06-17T14:16:18.470445"
+    "synced_at": "2026-06-17T14:16:18.470445",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

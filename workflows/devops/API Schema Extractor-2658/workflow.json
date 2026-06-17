@@ -3804,8 +3804,13 @@
   "_cn_meta": {
     "title_zh": "API Schema Extractor",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2658,
-    "synced_at": "2026-06-17T14:17:39.554681"
+    "synced_at": "2026-06-17T14:17:39.554681",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

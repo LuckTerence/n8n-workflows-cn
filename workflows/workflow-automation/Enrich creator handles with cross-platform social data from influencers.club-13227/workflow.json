@@ -541,6 +541,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 13227,
-    "synced_at": "2026-06-17T14:08:43.459035"
+    "synced_at": "2026-06-17T14:08:43.459035",
+    "foreign_services": [
+      "Supabase"
+    ]
   }
 }

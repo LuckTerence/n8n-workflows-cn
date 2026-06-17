@@ -746,8 +746,13 @@
   "_cn_meta": {
     "title_zh": "Simple Lead Capture and Follow-on with n8n Multi-Forms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2581,
-    "synced_at": "2026-06-17T14:19:39.449429"
+    "synced_at": "2026-06-17T14:19:39.449429",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

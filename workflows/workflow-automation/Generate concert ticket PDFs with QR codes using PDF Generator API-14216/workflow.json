@@ -381,8 +381,14 @@
   "_cn_meta": {
     "title_zh": "Generate concert ticket PDFs with QR codes using PDF Generator API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14216,
-    "synced_at": "2026-06-17T14:15:59.160621"
+    "synced_at": "2026-06-17T14:15:59.160621",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

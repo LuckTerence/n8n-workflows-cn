@@ -674,8 +674,13 @@
   "_cn_meta": {
     "title_zh": "AI Automated HR Workflow for CV Analysis and Candidate Evaluation",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2860,
-    "synced_at": "2026-06-17T14:06:08.900616"
+    "synced_at": "2026-06-17T14:06:08.900616",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

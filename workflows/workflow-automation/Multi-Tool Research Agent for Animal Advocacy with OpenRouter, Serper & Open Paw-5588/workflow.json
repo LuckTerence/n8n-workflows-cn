@@ -851,6 +851,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 5588,
-    "synced_at": "2026-06-17T14:13:23.318929"
+    "synced_at": "2026-06-17T14:13:23.318929",
+    "foreign_services": [
+      "Zoom"
+    ]
   }
 }

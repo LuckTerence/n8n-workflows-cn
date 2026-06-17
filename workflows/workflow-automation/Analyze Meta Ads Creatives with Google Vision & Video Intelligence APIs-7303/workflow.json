@@ -1481,8 +1481,12 @@
   "_cn_meta": {
     "title_zh": "Analyze Meta Ads Creatives with Google Vision & Video Intelligence APIs",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7303,
-    "synced_at": "2026-06-17T14:11:52.969206"
+    "synced_at": "2026-06-17T14:11:52.969206",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

@@ -1106,8 +1106,13 @@
   "_cn_meta": {
     "title_zh": "No AI suggestion available",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14276,
-    "synced_at": "2026-06-17T14:10:36.102015"
+    "synced_at": "2026-06-17T14:10:36.102015",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

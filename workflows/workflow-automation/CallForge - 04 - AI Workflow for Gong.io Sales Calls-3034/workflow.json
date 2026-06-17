@@ -768,6 +768,10 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3034,
-    "synced_at": "2026-06-17T14:16:25.194898"
+    "synced_at": "2026-06-17T14:16:25.194898",
+    "foreign_services": [
+      "Notion",
+      "Slack"
+    ]
   }
 }

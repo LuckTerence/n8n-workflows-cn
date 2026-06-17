@@ -365,8 +365,15 @@
   "_cn_meta": {
     "title_zh": "Generate and Send Personalized Quotations PDF",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14185,
-    "synced_at": "2026-06-17T14:09:36.833004"
+    "synced_at": "2026-06-17T14:09:36.833004",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Docs",
+      "Google Drive",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档"
   }
 }

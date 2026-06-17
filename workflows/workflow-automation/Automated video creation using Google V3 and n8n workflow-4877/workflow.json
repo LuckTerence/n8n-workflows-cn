@@ -594,8 +594,13 @@
   "_cn_meta": {
     "title_zh": "Automated video creation using Google V3 and n8n workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4877,
-    "synced_at": "2026-06-17T14:14:02.328515"
+    "synced_at": "2026-06-17T14:14:02.328515",
+    "foreign_services": [
+      "Zoom",
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Zoom→腾讯会议"
   }
 }

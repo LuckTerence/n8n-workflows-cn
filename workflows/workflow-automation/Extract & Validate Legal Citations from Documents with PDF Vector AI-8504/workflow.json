@@ -227,8 +227,12 @@
   "_cn_meta": {
     "title_zh": "Extract & Validate Legal Citations from Documents with PDF Vector AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8504,
-    "synced_at": "2026-06-17T14:15:49.166460"
+    "synced_at": "2026-06-17T14:15:49.166460",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

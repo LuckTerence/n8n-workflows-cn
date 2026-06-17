@@ -586,8 +586,12 @@
   "_cn_meta": {
     "title_zh": "AI Video Generator for eCommerce Product Catalogs with Veo 3.1",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10063,
-    "synced_at": "2026-06-17T14:16:35.219483"
+    "synced_at": "2026-06-17T14:16:35.219483",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

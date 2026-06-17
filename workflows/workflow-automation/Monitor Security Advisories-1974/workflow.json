@@ -462,8 +462,13 @@
   "_cn_meta": {
     "title_zh": "Monitor Security Advisories",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 1974,
-    "synced_at": "2026-06-17T14:13:12.353803"
+    "synced_at": "2026-06-17T14:13:12.353803",
+    "foreign_services": [
+      "Google Sheets",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格"
   }
 }

@@ -1140,8 +1140,12 @@
   "_cn_meta": {
     "title_zh": "Optimize & Update Printify Title and Description Workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2583,
-    "synced_at": "2026-06-17T14:14:30.764652"
+    "synced_at": "2026-06-17T14:14:30.764652",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

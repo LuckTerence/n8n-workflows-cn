@@ -898,6 +898,10 @@
     "category": "devops",
     "tier": "A",
     "source_id": 3354,
-    "synced_at": "2026-06-17T14:17:58.282911"
+    "synced_at": "2026-06-17T14:17:58.282911",
+    "foreign_services": [
+      "Notion",
+      "Slack"
+    ]
   }
 }

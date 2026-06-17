@@ -618,8 +618,12 @@
   "_cn_meta": {
     "title_zh": "Error Handling System with PostgreSQL Logging and Rate-Limited Notifications",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3882,
-    "synced_at": "2026-06-17T14:18:26.712678"
+    "synced_at": "2026-06-17T14:18:26.712678",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

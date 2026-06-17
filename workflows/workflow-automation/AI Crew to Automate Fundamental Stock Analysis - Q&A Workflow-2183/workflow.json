@@ -450,8 +450,13 @@
   "_cn_meta": {
     "title_zh": "AI Crew to Automate Fundamental Stock Analysis - Q&A Workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2183,
-    "synced_at": "2026-06-17T14:11:37.981571"
+    "synced_at": "2026-06-17T14:11:37.981571",
+    "foreign_services": [
+      "Google Drive",
+      "Supabase"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase"
   }
 }

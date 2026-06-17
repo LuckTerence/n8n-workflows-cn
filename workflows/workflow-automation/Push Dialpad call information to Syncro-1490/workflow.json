@@ -696,8 +696,12 @@
   "_cn_meta": {
     "title_zh": "Push Dialpad call information to Syncro",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 1490,
-    "synced_at": "2026-06-17T14:20:45.592721"
+    "synced_at": "2026-06-17T14:20:45.592721",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

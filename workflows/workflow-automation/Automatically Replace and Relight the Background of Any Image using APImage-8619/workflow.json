@@ -259,8 +259,14 @@
   "_cn_meta": {
     "title_zh": "Automatically Replace and Relight the Background of Any Image using APImage",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8619,
-    "synced_at": "2026-06-17T14:07:17.816917"
+    "synced_at": "2026-06-17T14:07:17.816917",
+    "foreign_services": [
+      "Notion",
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀"
   }
 }

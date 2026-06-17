@@ -392,8 +392,12 @@
   "_cn_meta": {
     "title_zh": "Domain to Email Extraction using Apollo API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3581,
-    "synced_at": "2026-06-17T14:08:39.110068"
+    "synced_at": "2026-06-17T14:08:39.110068",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

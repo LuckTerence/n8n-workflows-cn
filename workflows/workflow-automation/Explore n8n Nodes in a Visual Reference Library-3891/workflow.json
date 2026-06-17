@@ -1861,8 +1861,18 @@
   "_cn_meta": {
     "title_zh": "Explore n8n Nodes in a Visual Reference Library",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3891,
-    "synced_at": "2026-06-17T14:08:50.205137"
+    "synced_at": "2026-06-17T14:08:50.205137",
+    "foreign_services": [
+      "Google Docs",
+      "Google Drive",
+      "Gmail",
+      "Supabase",
+      "Notion",
+      "Google Sheets",
+      "Pinecone"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库"
   }
 }

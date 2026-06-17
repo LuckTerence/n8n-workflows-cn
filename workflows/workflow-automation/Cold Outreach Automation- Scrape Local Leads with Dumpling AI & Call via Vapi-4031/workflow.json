@@ -432,8 +432,12 @@
   "_cn_meta": {
     "title_zh": "Cold Outreach Automation: Scrape Local Leads with Dumpling AI & Call via Vapi",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4031,
-    "synced_at": "2026-06-17T14:19:34.146550"
+    "synced_at": "2026-06-17T14:19:34.146550",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

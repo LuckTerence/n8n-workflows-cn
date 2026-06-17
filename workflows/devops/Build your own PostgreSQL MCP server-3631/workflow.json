@@ -644,6 +644,9 @@
     "category": "devops",
     "tier": "A",
     "source_id": 3631,
-    "synced_at": "2026-06-17T14:18:03.470255"
+    "synced_at": "2026-06-17T14:18:03.470255",
+    "foreign_services": [
+      "Supabase"
+    ]
   }
 }

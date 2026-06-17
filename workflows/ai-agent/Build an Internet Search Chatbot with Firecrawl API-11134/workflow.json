@@ -405,8 +405,12 @@
   "_cn_meta": {
     "title_zh": "Build an Internet Search Chatbot with Firecrawl API",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11134,
-    "synced_at": "2026-06-17T14:17:26.930511"
+    "synced_at": "2026-06-17T14:17:26.930511",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

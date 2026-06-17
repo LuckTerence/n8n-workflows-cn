@@ -519,8 +519,12 @@
   "_cn_meta": {
     "title_zh": "Smart Email Auto-Responder Template using AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3277,
-    "synced_at": "2026-06-17T14:16:19.079428"
+    "synced_at": "2026-06-17T14:16:19.079428",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

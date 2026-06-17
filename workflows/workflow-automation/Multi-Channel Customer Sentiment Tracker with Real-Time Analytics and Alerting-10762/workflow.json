@@ -1280,8 +1280,13 @@
   "_cn_meta": {
     "title_zh": "Multi-Channel Customer Sentiment Tracker with Real-Time Analytics and Alerting",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10762,
-    "synced_at": "2026-06-17T14:13:21.406329"
+    "synced_at": "2026-06-17T14:13:21.406329",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

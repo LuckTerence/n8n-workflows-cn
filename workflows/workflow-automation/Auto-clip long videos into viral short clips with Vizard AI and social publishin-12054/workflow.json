@@ -910,8 +910,12 @@
   "_cn_meta": {
     "title_zh": "Auto-clip long videos into viral short clips with Vizard AI and social publishing",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12054,
-    "synced_at": "2026-06-17T14:06:48.428176"
+    "synced_at": "2026-06-17T14:06:48.428176",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

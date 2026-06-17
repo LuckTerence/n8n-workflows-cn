@@ -598,8 +598,13 @@
   "_cn_meta": {
     "title_zh": "Enterprise Contract Lifecycle Management with AI Risk Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8497,
-    "synced_at": "2026-06-17T14:12:38.888258"
+    "synced_at": "2026-06-17T14:12:38.888258",
+    "foreign_services": [
+      "Slack",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人"
   }
 }

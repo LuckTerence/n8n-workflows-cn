@@ -643,6 +643,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3039,
-    "synced_at": "2026-06-17T14:07:36.064814"
+    "synced_at": "2026-06-17T14:07:36.064814",
+    "foreign_services": [
+      "Notion"
+    ]
   }
 }

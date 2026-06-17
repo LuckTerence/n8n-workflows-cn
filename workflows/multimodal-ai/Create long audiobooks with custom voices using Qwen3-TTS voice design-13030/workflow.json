@@ -704,8 +704,13 @@
   "_cn_meta": {
     "title_zh": "Create long audiobooks with custom voices using Qwen3-TTS voice design",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13030,
-    "synced_at": "2026-06-17T14:19:55.381335"
+    "synced_at": "2026-06-17T14:19:55.381335",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

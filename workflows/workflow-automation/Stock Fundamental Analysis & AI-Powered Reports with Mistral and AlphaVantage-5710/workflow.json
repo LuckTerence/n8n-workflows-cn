@@ -724,8 +724,12 @@
   "_cn_meta": {
     "title_zh": "Stock Fundamental Analysis & AI-Powered Reports with Mistral and AlphaVantage",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5710,
-    "synced_at": "2026-06-17T14:13:51.426791"
+    "synced_at": "2026-06-17T14:13:51.426791",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

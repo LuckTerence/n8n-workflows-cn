@@ -1097,8 +1097,13 @@
   "_cn_meta": {
     "title_zh": "Real-Time Oil Price Crisis Detection with Qwq-32b AI and Multi-Channel Alerts",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10763,
-    "synced_at": "2026-06-17T14:19:05.634286"
+    "synced_at": "2026-06-17T14:19:05.634286",
+    "foreign_services": [
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人"
   }
 }

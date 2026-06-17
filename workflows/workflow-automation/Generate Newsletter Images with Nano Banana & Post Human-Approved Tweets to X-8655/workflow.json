@@ -525,8 +525,12 @@
   "_cn_meta": {
     "title_zh": "Generate Newsletter Images with Nano Banana & Post Human-Approved Tweets to X",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8655,
-    "synced_at": "2026-06-17T14:22:01.561278"
+    "synced_at": "2026-06-17T14:22:01.561278",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

@@ -159,8 +159,13 @@
   "_cn_meta": {
     "title_zh": "Daily Govt Exam Quiz by Gopal Debnath (mrtechyguru)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5284,
-    "synced_at": "2026-06-17T14:08:30.641257"
+    "synced_at": "2026-06-17T14:08:30.641257",
+    "foreign_services": [
+      "Twilio",
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Twilio→腾讯云短信"
   }
 }

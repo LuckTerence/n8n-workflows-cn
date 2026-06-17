@@ -828,8 +828,12 @@
   "_cn_meta": {
     "title_zh": "Create Professional Marketing Assets with Google Imagen, Ideogram & Placid for Ads & Social",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5017,
-    "synced_at": "2026-06-17T14:20:24.599550"
+    "synced_at": "2026-06-17T14:20:24.599550",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

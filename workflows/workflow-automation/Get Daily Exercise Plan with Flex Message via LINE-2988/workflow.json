@@ -1022,8 +1022,12 @@
   "_cn_meta": {
     "title_zh": "Get Daily Exercise Plan with Flex Message via LINE",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2988,
-    "synced_at": "2026-06-17T14:09:49.653519"
+    "synced_at": "2026-06-17T14:09:49.653519",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

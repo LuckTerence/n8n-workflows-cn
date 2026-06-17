@@ -211,8 +211,12 @@
   "_cn_meta": {
     "title_zh": "Generate SEO Keywords with AI: Topic to Keyword List in Seconds",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3544,
-    "synced_at": "2026-06-17T14:20:38.578802"
+    "synced_at": "2026-06-17T14:20:38.578802",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

@@ -1015,8 +1015,14 @@
   "_cn_meta": {
     "title_zh": "AI Real Estate Agent: End-to-End Ops Automation (Web, Data, Voice)",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4368,
-    "synced_at": "2026-06-17T14:19:40.076176"
+    "synced_at": "2026-06-17T14:19:40.076176",
+    "foreign_services": [
+      "Twilio",
+      "Google Sheets",
+      "Google Docs"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Twilio→腾讯云短信"
   }
 }

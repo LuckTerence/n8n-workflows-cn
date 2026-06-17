@@ -1342,8 +1342,12 @@
   "_cn_meta": {
     "title_zh": "Plant Care Reminder with OpenWeather, Sheets and Telegram",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9953,
-    "synced_at": "2026-06-17T14:21:18.749812"
+    "synced_at": "2026-06-17T14:21:18.749812",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

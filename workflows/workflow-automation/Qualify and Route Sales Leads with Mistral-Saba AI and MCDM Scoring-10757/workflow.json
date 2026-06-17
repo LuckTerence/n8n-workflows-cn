@@ -1096,8 +1096,12 @@
   "_cn_meta": {
     "title_zh": "Qualify and Route Sales Leads with Mistral-Saba AI and MCDM Scoring",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10757,
-    "synced_at": "2026-06-17T14:20:46.197336"
+    "synced_at": "2026-06-17T14:20:46.197336",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

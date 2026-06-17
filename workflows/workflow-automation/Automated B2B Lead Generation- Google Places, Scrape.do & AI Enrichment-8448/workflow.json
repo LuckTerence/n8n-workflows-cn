@@ -663,8 +663,12 @@
   "_cn_meta": {
     "title_zh": "Automated B2B Lead Generation: Google Places, Scrape.do & AI Enrichment",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8448,
-    "synced_at": "2026-06-17T14:19:31.140426"
+    "synced_at": "2026-06-17T14:19:31.140426",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

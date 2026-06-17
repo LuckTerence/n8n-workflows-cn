@@ -447,8 +447,12 @@
   "_cn_meta": {
     "title_zh": "Fetch Keyword From Google Sheet and Classify Them Using AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2945,
-    "synced_at": "2026-06-17T14:09:05.544771"
+    "synced_at": "2026-06-17T14:09:05.544771",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

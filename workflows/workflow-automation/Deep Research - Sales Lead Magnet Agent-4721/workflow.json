@@ -868,8 +868,13 @@
   "_cn_meta": {
     "title_zh": "Deep Research - Sales Lead Magnet Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4721,
-    "synced_at": "2026-06-17T14:12:36.583834"
+    "synced_at": "2026-06-17T14:12:36.583834",
+    "foreign_services": [
+      "Google Docs",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档"
   }
 }

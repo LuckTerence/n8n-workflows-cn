@@ -23,6 +23,8 @@
 | 大分类 | 6 个（AI Agent、DevOps、金融分析、知识库 RAG、多模态 AI、工作流自动化） |
 | 细分场景 | 60+ 个（对话机器人、邮件处理、监控告警、股票分析……） |
 | 替换服务 | 14 项（OpenAI → DeepSeek、Slack → 飞书、Gmail → QQ邮箱……） |
+| 立即可用 | 1031 个（Tier A，无外服依赖） |
+| 待替换 | 449 个（Tier B，含 Gmail/Google 等需手动换成国内服务） |
 | 格式 | 每个工作流 = `workflow.json`（可在 n8n 里 Import）+ `readme.md`（说明文档） |
 
 ## 起因
@@ -167,9 +169,8 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 }
 ```
 
-- **Tier A** — 外服节点已替换为国内方案，配置 API Key 应该就能跑
-- **Tier B** — 核心链路通了，边角节点可能需要自己调（参考[升级指南](UPGRADE_GUIDE.md)）
-- **Tier C** — 搭了框架，具体参数需按场景配置
+- **Tier A**（1031 个）— 外服节点已替换，配 API Key 就能跑
+- **Tier B**（449 个）— 含 Gmail/Google Sheets 等国内用不了的服务，需手动替换（[升级指南](UPGRADE_GUIDE.md)）
 
 > 注意：Tier 标准基于代码审查，标注为 A 不代表在所有 n8n 版本中都能 100% 跑通。欢迎实测后提 issue 或 PR 帮忙完善。
 

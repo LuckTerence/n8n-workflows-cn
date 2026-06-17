@@ -1451,8 +1451,16 @@
   "_cn_meta": {
     "title_zh": "Build an AI-Powered Tech Radar Advisor with SQL DB, RAG, and Routing Agents",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3151,
-    "synced_at": "2026-06-17T14:14:48.590866"
+    "synced_at": "2026-06-17T14:14:48.590866",
+    "foreign_services": [
+      "Google Docs",
+      "Google Drive",
+      "Gmail",
+      "Pinecone",
+      "Google Sheets"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库"
   }
 }

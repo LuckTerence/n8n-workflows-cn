@@ -324,8 +324,13 @@
   "_cn_meta": {
     "title_zh": "Basic RAG chat",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5028,
-    "synced_at": "2026-06-17T14:14:54.494852"
+    "synced_at": "2026-06-17T14:14:54.494852",
+    "foreign_services": [
+      "Pinecone",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库"
   }
 }

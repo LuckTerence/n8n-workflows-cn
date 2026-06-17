@@ -863,8 +863,12 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Email Automation for Business: Summarize & Respond with RAG",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2852,
-    "synced_at": "2026-06-17T14:16:11.152810"
+    "synced_at": "2026-06-17T14:16:11.152810",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

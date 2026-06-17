@@ -361,8 +361,15 @@
   "_cn_meta": {
     "title_zh": "Food Image Analysis for Calorie Estimation with Vision AI and Telegram",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9619,
-    "synced_at": "2026-06-17T14:12:43.635708"
+    "synced_at": "2026-06-17T14:12:43.635708",
+    "foreign_services": [
+      "Notion",
+      "Google Sheets",
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀"
   }
 }

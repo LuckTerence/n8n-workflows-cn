@@ -675,8 +675,12 @@
   "_cn_meta": {
     "title_zh": "Generate Fact-Checked Research Reports with Llama AI and Web Search",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11116,
-    "synced_at": "2026-06-17T14:12:45.651691"
+    "synced_at": "2026-06-17T14:12:45.651691",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

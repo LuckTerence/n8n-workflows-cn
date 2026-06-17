@@ -220,8 +220,13 @@
     "title_zh": "AI图片生成Telegram推送",
     "description_zh": "自动生成AI图片推送到Telegram",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4049,
-    "synced_at": "2026-06-17T11:37:10.846025"
+    "synced_at": "2026-06-17T11:37:10.846025",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

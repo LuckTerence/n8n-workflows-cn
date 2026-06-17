@@ -546,8 +546,13 @@
   "_cn_meta": {
     "title_zh": "Extract high-intent SEO keywords with Decodo from web pages with AI + SERP data",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11491,
-    "synced_at": "2026-06-17T14:20:29.835336"
+    "synced_at": "2026-06-17T14:20:29.835336",
+    "foreign_services": [
+      "Google Sheets",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

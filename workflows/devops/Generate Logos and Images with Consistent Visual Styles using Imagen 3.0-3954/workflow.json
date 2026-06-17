@@ -695,8 +695,12 @@
   "_cn_meta": {
     "title_zh": "Generate Logos and Images with Consistent Visual Styles using Imagen 3.0",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3954,
-    "synced_at": "2026-06-17T14:18:34.699010"
+    "synced_at": "2026-06-17T14:18:34.699010",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

@@ -1347,8 +1347,12 @@
   "_cn_meta": {
     "title_zh": "Build your own CUSTOM API MCP server",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3638,
-    "synced_at": "2026-06-17T14:18:01.520377"
+    "synced_at": "2026-06-17T14:18:01.520377",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

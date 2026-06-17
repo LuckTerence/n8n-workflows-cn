@@ -379,8 +379,13 @@
   "_cn_meta": {
     "title_zh": "Enhance Real-Estate Photos with Google Nano Banana AI via Telegram Bot",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8726,
-    "synced_at": "2026-06-17T14:08:42.215935"
+    "synced_at": "2026-06-17T14:08:42.215935",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

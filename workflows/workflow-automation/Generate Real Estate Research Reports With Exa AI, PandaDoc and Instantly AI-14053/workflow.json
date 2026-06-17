@@ -645,8 +645,13 @@
   "_cn_meta": {
     "title_zh": "Generate Real Estate Research Reports With Exa AI, PandaDoc and Instantly AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14053,
-    "synced_at": "2026-06-17T14:12:47.964143"
+    "synced_at": "2026-06-17T14:12:47.964143",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

@@ -1551,6 +1551,10 @@
     "category": "devops",
     "tier": "A",
     "source_id": 13425,
-    "synced_at": "2026-06-17T14:19:12.533021"
+    "synced_at": "2026-06-17T14:19:12.533021",
+    "foreign_services": [
+      "Notion",
+      "Supabase"
+    ]
   }
 }

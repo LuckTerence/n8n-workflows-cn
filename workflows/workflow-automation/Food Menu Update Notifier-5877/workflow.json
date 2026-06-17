@@ -932,8 +932,13 @@
   "_cn_meta": {
     "title_zh": "Food Menu Update Notifier",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5877,
-    "synced_at": "2026-06-17T14:09:12.025985"
+    "synced_at": "2026-06-17T14:09:12.025985",
+    "foreign_services": [
+      "Twilio",
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信"
   }
 }

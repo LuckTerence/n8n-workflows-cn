@@ -355,8 +355,12 @@
   "_cn_meta": {
     "title_zh": "Evaluation metric example: Categorization",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4269,
-    "synced_at": "2026-06-17T14:08:47.108423"
+    "synced_at": "2026-06-17T14:08:47.108423",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

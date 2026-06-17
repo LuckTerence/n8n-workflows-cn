@@ -208,8 +208,13 @@
   "_cn_meta": {
     "title_zh": "Effortless Job Hunting: Let this Automation Find Your Next Role",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3051,
-    "synced_at": "2026-06-17T14:06:23.910030"
+    "synced_at": "2026-06-17T14:06:23.910030",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS"
   }
 }

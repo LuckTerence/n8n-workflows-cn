@@ -380,8 +380,14 @@
   "_cn_meta": {
     "title_zh": "Generate product demo highlight reels using WayinVideo Find Moments API",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 14712,
-    "synced_at": "2026-06-17T14:09:43.432084"
+    "synced_at": "2026-06-17T14:09:43.432084",
+    "foreign_services": [
+      "Zoom",
+      "Google Drive",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Zoom→腾讯会议"
   }
 }

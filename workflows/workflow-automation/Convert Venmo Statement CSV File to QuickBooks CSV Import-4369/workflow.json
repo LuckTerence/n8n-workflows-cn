@@ -167,8 +167,12 @@
   "_cn_meta": {
     "title_zh": "Convert Venmo Statement CSV File to QuickBooks CSV Import",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4369,
-    "synced_at": "2026-06-17T14:08:01.574158"
+    "synced_at": "2026-06-17T14:08:01.574158",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

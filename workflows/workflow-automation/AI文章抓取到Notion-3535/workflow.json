@@ -376,6 +376,9 @@
     "tier": "A-adapted",
     "source_id": 3535,
     "synced_at": "2026-06-17T11:37:06.069068",
-    "upgraded_at": "2026-06-17"
+    "upgraded_at": "2026-06-17",
+    "foreign_services": [
+      "Notion"
+    ]
   }
 }

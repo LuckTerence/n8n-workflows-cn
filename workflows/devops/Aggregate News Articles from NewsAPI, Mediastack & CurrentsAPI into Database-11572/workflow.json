@@ -1398,8 +1398,12 @@
   "_cn_meta": {
     "title_zh": "Aggregate News Articles from NewsAPI, Mediastack & CurrentsAPI into Database",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11572,
-    "synced_at": "2026-06-17T14:17:41.977165"
+    "synced_at": "2026-06-17T14:17:41.977165",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

@@ -2204,8 +2204,14 @@
   "_cn_meta": {
     "title_zh": "Enhance Customer Support with RAG-Powered AI",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11807,
-    "synced_at": "2026-06-17T14:15:08.275482"
+    "synced_at": "2026-06-17T14:15:08.275482",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack",
+      "Supabase"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Supabase→腾讯云CloudBase"
   }
 }

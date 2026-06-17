@@ -436,8 +436,13 @@
   "_cn_meta": {
     "title_zh": "Fetch Threads analytics for your latest posts and email an HTML report",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13509,
-    "synced_at": "2026-06-17T14:12:41.871118"
+    "synced_at": "2026-06-17T14:12:41.871118",
+    "foreign_services": [
+      "Notion",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Notion→飞书文档/语雀"
   }
 }

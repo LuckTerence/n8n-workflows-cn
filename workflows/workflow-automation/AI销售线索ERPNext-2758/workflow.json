@@ -734,8 +734,13 @@
     "title_zh": "AI销售线索ERPNext",
     "description_zh": "AI驱动的销售线索管理和跟进",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2758,
-    "synced_at": "2026-06-17T11:37:15.187203"
+    "synced_at": "2026-06-17T11:37:15.187203",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Docs"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档"
   }
 }

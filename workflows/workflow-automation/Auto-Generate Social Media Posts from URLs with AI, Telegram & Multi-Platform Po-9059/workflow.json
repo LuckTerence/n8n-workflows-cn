@@ -1532,8 +1532,13 @@
   "_cn_meta": {
     "title_zh": "Auto-Generate Social Media Posts from URLs with AI, Telegram & Multi-Platform Posting",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9059,
-    "synced_at": "2026-06-17T14:21:54.200251"
+    "synced_at": "2026-06-17T14:21:54.200251",
+    "foreign_services": [
+      "Google Sheets",
+      "Supabase"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase"
   }
 }

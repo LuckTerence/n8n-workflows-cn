@@ -682,8 +682,12 @@
   "_cn_meta": {
     "title_zh": "Evaluation metric example: RAG document relevance",
     "category": "knowledge-rag",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4273,
-    "synced_at": "2026-06-17T14:15:08.960765"
+    "synced_at": "2026-06-17T14:15:08.960765",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

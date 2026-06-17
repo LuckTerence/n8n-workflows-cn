@@ -311,8 +311,13 @@
   "_cn_meta": {
     "title_zh": "Query n8n Credentials with AI SQL Agent",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2347,
-    "synced_at": "2026-06-17T14:10:52.994185"
+    "synced_at": "2026-06-17T14:10:52.994185",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

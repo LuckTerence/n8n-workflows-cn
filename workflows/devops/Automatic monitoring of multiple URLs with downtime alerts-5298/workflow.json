@@ -535,8 +535,13 @@
   "_cn_meta": {
     "title_zh": "Automatic monitoring of multiple URLs with downtime alerts",
     "category": "devops",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5298,
-    "synced_at": "2026-06-17T14:17:57.702225"
+    "synced_at": "2026-06-17T14:17:57.702225",
+    "foreign_services": [
+      "Google Sheets",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

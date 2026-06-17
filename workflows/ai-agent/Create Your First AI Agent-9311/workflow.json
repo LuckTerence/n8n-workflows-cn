@@ -439,8 +439,14 @@
   "_cn_meta": {
     "title_zh": "Create Your First AI Agent",
     "category": "ai-agent",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9311,
-    "synced_at": "2026-06-17T14:16:54.192648"
+    "synced_at": "2026-06-17T14:16:54.192648",
+    "foreign_services": [
+      "Slack",
+      "Google Sheets",
+      "Google Docs"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Slack→飞书群机器人"
   }
 }

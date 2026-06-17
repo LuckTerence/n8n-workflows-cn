@@ -255,8 +255,12 @@
   "_cn_meta": {
     "title_zh": "Google Autocomplete Keyword Scraper",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3836,
-    "synced_at": "2026-06-17T14:22:11.609216"
+    "synced_at": "2026-06-17T14:22:11.609216",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS"
   }
 }

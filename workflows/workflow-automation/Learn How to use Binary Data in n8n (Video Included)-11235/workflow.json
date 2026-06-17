@@ -558,8 +558,12 @@
   "_cn_meta": {
     "title_zh": "Learn How to use Binary Data in n8n (Video Included)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11235,
-    "synced_at": "2026-06-17T14:10:16.520508"
+    "synced_at": "2026-06-17T14:10:16.520508",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

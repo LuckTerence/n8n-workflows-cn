@@ -382,8 +382,13 @@
   "_cn_meta": {
     "title_zh": "Extract and Organize Receipt Data for Expense Tracking with VLM Run and Google",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5051,
-    "synced_at": "2026-06-17T14:15:53.539871"
+    "synced_at": "2026-06-17T14:15:53.539871",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

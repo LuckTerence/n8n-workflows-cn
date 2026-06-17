@@ -367,8 +367,12 @@
   "_cn_meta": {
     "title_zh": "Automate n8n User Invitations from a Google Spreadsheet",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3233,
-    "synced_at": "2026-06-17T14:07:05.535791"
+    "synced_at": "2026-06-17T14:07:05.535791",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

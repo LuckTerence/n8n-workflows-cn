@@ -386,6 +386,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 8602,
-    "synced_at": "2026-06-17T14:21:03.541884"
+    "synced_at": "2026-06-17T14:21:03.541884",
+    "foreign_services": [
+      "Slack"
+    ]
   }
 }

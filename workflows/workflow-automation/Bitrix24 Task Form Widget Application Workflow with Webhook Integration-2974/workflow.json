@@ -782,6 +782,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2974,
-    "synced_at": "2026-06-17T14:14:04.958760"
+    "synced_at": "2026-06-17T14:14:04.958760",
+    "foreign_services": [
+      "Stripe"
+    ]
   }
 }

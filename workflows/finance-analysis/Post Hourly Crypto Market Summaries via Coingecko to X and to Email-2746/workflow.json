@@ -134,8 +134,12 @@
   "_cn_meta": {
     "title_zh": "Post Hourly Crypto Market Summaries via Coingecko to X and to Email",
     "category": "finance-analysis",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2746,
-    "synced_at": "2026-06-17T14:21:40.773510"
+    "synced_at": "2026-06-17T14:21:40.773510",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

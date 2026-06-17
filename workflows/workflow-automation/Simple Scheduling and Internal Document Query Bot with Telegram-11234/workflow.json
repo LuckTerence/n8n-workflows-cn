@@ -621,8 +621,15 @@
   "_cn_meta": {
     "title_zh": "Simple Scheduling and Internal Document Query Bot with Telegram",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11234,
-    "synced_at": "2026-06-17T14:11:31.176065"
+    "synced_at": "2026-06-17T14:11:31.176065",
+    "foreign_services": [
+      "Pinecone",
+      "Google Sheets",
+      "Google Docs",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库"
   }
 }

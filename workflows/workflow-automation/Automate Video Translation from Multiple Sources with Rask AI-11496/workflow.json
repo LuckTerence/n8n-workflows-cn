@@ -564,8 +564,12 @@
   "_cn_meta": {
     "title_zh": "Automate Video Translation from Multiple Sources with Rask AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11496,
-    "synced_at": "2026-06-17T14:19:21.414859"
+    "synced_at": "2026-06-17T14:19:21.414859",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS"
   }
 }

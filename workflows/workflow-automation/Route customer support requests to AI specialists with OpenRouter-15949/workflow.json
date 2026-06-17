@@ -435,6 +435,10 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 15949,
-    "synced_at": "2026-06-17T14:11:09.263972"
+    "synced_at": "2026-06-17T14:11:09.263972",
+    "foreign_services": [
+      "Slack",
+      "Stripe"
+    ]
   }
 }

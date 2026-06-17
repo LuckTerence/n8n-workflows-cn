@@ -328,8 +328,12 @@
   "_cn_meta": {
     "title_zh": "Narrative Threat - Opportunity Detection (AskRally)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5234,
-    "synced_at": "2026-06-17T14:10:35.439629"
+    "synced_at": "2026-06-17T14:10:35.439629",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

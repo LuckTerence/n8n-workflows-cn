@@ -470,6 +470,9 @@
     "category": "devops",
     "tier": "A",
     "source_id": 5642,
-    "synced_at": "2026-06-17T14:19:00.291196"
+    "synced_at": "2026-06-17T14:19:00.291196",
+    "foreign_services": [
+      "Pinecone"
+    ]
   }
 }

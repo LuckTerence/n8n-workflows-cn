@@ -3533,8 +3533,12 @@
   "_cn_meta": {
     "title_zh": "Automated Property & Restaurant Bookings with AI Voice Calls via Telegram",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 9850,
-    "synced_at": "2026-06-17T14:19:47.595613"
+    "synced_at": "2026-06-17T14:19:47.595613",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

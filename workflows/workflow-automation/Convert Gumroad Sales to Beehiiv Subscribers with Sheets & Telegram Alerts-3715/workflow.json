@@ -368,8 +368,12 @@
   "_cn_meta": {
     "title_zh": "Convert Gumroad Sales to Beehiiv Subscribers with Sheets & Telegram Alerts",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3715,
-    "synced_at": "2026-06-17T14:20:23.162041"
+    "synced_at": "2026-06-17T14:20:23.162041",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

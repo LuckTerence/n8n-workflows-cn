@@ -858,8 +858,14 @@
   "_cn_meta": {
     "title_zh": "Generate text-to-video and image-to-video clips with Kling 2.6 via KIE.AI",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 12202,
-    "synced_at": "2026-06-17T14:09:44.677130"
+    "synced_at": "2026-06-17T14:09:44.677130",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS"
   }
 }

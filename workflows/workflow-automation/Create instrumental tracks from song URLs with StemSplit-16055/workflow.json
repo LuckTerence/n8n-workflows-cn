@@ -537,8 +537,13 @@
   "_cn_meta": {
     "title_zh": "Create instrumental tracks from song URLs with StemSplit",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 16055,
-    "synced_at": "2026-06-17T14:12:29.266101"
+    "synced_at": "2026-06-17T14:12:29.266101",
+    "foreign_services": [
+      "Google Drive",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

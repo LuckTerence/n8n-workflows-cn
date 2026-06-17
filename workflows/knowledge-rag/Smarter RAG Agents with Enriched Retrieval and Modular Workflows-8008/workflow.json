@@ -1009,6 +1009,10 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 8008,
-    "synced_at": "2026-06-17T14:15:22.855063"
+    "synced_at": "2026-06-17T14:15:22.855063",
+    "foreign_services": [
+      "Notion",
+      "Supabase"
+    ]
   }
 }

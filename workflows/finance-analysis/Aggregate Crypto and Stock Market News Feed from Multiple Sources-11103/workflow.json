@@ -1220,6 +1220,9 @@
     "category": "finance-analysis",
     "tier": "A",
     "source_id": 11103,
-    "synced_at": "2026-06-17T14:21:29.499226"
+    "synced_at": "2026-06-17T14:21:29.499226",
+    "foreign_services": [
+      "Slack"
+    ]
   }
 }

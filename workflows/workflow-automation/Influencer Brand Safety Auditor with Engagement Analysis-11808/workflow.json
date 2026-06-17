@@ -450,8 +450,13 @@
   "_cn_meta": {
     "title_zh": "Influencer Brand Safety Auditor with Engagement Analysis",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 11808,
-    "synced_at": "2026-06-17T14:12:59.787802"
+    "synced_at": "2026-06-17T14:12:59.787802",
+    "foreign_services": [
+      "Google Sheets",
+      "Slack"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人"
   }
 }

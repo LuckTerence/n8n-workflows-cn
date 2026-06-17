@@ -259,8 +259,12 @@
   "_cn_meta": {
     "title_zh": "Automated Daily Outlook Calendar Meeting Digest",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4420,
-    "synced_at": "2026-06-17T14:21:02.964808"
+    "synced_at": "2026-06-17T14:21:02.964808",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

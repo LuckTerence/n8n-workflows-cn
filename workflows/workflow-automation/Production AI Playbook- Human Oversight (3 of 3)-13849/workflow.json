@@ -672,8 +672,13 @@
   "_cn_meta": {
     "title_zh": "Production AI Playbook: Human Oversight (3 of 3)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13849,
-    "synced_at": "2026-06-17T14:10:49.818542"
+    "synced_at": "2026-06-17T14:10:49.818542",
+    "foreign_services": [
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人"
   }
 }

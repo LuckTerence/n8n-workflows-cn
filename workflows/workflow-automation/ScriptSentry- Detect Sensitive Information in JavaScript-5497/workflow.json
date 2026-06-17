@@ -344,8 +344,12 @@
   "_cn_meta": {
     "title_zh": "ScriptSentry: Detect Sensitive Information in JavaScript",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5497,
-    "synced_at": "2026-06-17T14:11:13.135371"
+    "synced_at": "2026-06-17T14:11:13.135371",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

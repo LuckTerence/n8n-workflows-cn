@@ -970,8 +970,14 @@
   "_cn_meta": {
     "title_zh": "Advanced AI Demo (Presented at AI Developers #14 meetup)",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2358,
-    "synced_at": "2026-06-17T14:06:39.001542"
+    "synced_at": "2026-06-17T14:06:39.001542",
+    "foreign_services": [
+      "Pinecone",
+      "Slack",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Pinecone→Milvus/腾讯云向量库"
   }
 }

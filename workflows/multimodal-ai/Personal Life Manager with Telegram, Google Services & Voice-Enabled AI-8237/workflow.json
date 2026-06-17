@@ -653,8 +653,12 @@
   "_cn_meta": {
     "title_zh": "Personal Life Manager with Telegram, Google Services & Voice-Enabled AI",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 8237,
-    "synced_at": "2026-06-17T14:20:07.075260"
+    "synced_at": "2026-06-17T14:20:07.075260",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

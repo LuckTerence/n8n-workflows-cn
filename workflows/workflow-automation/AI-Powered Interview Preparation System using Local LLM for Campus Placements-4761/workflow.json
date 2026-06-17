@@ -477,8 +477,12 @@
   "_cn_meta": {
     "title_zh": "AI-Powered Interview Preparation System using Local LLM for Campus Placements",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 4761,
-    "synced_at": "2026-06-17T14:06:13.666918"
+    "synced_at": "2026-06-17T14:06:13.666918",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

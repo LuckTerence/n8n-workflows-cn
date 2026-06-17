@@ -327,8 +327,12 @@
   "_cn_meta": {
     "title_zh": "Send weekly SQL Server health reports via email",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 15256,
-    "synced_at": "2026-06-17T14:13:45.261198"
+    "synced_at": "2026-06-17T14:13:45.261198",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

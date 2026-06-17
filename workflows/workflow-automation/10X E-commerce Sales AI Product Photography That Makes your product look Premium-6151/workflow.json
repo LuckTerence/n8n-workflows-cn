@@ -307,8 +307,12 @@
   "_cn_meta": {
     "title_zh": "10X E-commerce Sales AI Product Photography That Makes your product look Premium",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 6151,
-    "synced_at": "2026-06-17T14:16:33.988512"
+    "synced_at": "2026-06-17T14:16:33.988512",
+    "foreign_services": [
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

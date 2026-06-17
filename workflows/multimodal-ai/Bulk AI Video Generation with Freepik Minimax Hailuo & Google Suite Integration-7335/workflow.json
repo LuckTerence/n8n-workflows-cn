@@ -483,8 +483,13 @@
   "_cn_meta": {
     "title_zh": "Bulk AI Video Generation with Freepik Minimax Hailuo & Google Suite Integration",
     "category": "multimodal-ai",
-    "tier": "A",
+    "tier": "B",
     "source_id": 7335,
-    "synced_at": "2026-06-17T14:19:49.430137"
+    "synced_at": "2026-06-17T14:19:49.430137",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS"
   }
 }

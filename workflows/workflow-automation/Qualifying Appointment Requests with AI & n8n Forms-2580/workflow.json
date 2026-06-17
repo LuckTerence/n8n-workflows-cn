@@ -773,8 +773,12 @@
   "_cn_meta": {
     "title_zh": "Qualifying Appointment Requests with AI & n8n Forms",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 2580,
-    "synced_at": "2026-06-17T14:10:52.380866"
+    "synced_at": "2026-06-17T14:10:52.380866",
+    "foreign_services": [
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信"
   }
 }

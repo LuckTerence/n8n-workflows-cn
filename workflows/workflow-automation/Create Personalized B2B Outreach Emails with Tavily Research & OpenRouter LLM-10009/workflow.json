@@ -675,8 +675,12 @@
   "_cn_meta": {
     "title_zh": "Create Personalized B2B Outreach Emails with Tavily Research & OpenRouter LLM",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 10009,
-    "synced_at": "2026-06-17T14:19:35.342413"
+    "synced_at": "2026-06-17T14:19:35.342413",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

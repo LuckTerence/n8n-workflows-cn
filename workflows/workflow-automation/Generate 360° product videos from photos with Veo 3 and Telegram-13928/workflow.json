@@ -852,8 +852,12 @@
   "_cn_meta": {
     "title_zh": "Generate 360° product videos from photos with Veo 3 and Telegram",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13928,
-    "synced_at": "2026-06-17T14:16:37.576052"
+    "synced_at": "2026-06-17T14:16:37.576052",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格"
   }
 }

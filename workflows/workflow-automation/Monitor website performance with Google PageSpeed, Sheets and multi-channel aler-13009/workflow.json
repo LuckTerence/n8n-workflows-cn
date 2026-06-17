@@ -463,8 +463,13 @@
   "_cn_meta": {
     "title_zh": "Monitor website performance with Google PageSpeed, Sheets and multi-channel alerts",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 13009,
-    "synced_at": "2026-06-17T14:13:20.610579"
+    "synced_at": "2026-06-17T14:13:20.610579",
+    "foreign_services": [
+      "Google Sheets",
+      "Gmail"
+    ],
+    "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格"
   }
 }

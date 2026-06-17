@@ -1870,6 +1870,9 @@
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 13357,
-    "synced_at": "2026-06-17T14:09:41.516006"
+    "synced_at": "2026-06-17T14:09:41.516006",
+    "foreign_services": [
+      "Notion"
+    ]
   }
 }

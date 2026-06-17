@@ -573,8 +573,12 @@
   "_cn_meta": {
     "title_zh": "AI Prompt Generator Workflow",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 5045,
-    "synced_at": "2026-06-17T14:13:54.626161"
+    "synced_at": "2026-06-17T14:13:54.626161",
+    "foreign_services": [
+      "Google Sheets"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格"
   }
 }

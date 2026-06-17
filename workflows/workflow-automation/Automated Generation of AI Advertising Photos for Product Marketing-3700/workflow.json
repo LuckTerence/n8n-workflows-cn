@@ -636,8 +636,13 @@
   "_cn_meta": {
     "title_zh": "Automated Generation of AI Advertising Photos for Product Marketing",
     "category": "workflow-automation",
-    "tier": "A",
+    "tier": "B",
     "source_id": 3700,
-    "synced_at": "2026-06-17T14:20:15.791916"
+    "synced_at": "2026-06-17T14:20:15.791916",
+    "foreign_services": [
+      "Google Sheets",
+      "Google Drive"
+    ],
+    "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS"
   }
 }

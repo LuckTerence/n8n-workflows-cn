@@ -935,6 +935,9 @@
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 14782,
-    "synced_at": "2026-06-17T14:14:56.634644"
+    "synced_at": "2026-06-17T14:14:56.634644",
+    "foreign_services": [
+      "Supabase"
+    ]
   }
 }
