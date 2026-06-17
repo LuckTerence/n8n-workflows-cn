@@ -481,6 +481,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "n8n 运维（for）"
+    "description_zh": "N8N for Beginners- Looping over Items（自动化）"
   }
 }

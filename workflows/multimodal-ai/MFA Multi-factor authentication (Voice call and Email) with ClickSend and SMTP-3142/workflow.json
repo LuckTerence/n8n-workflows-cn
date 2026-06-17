@@ -617,6 +617,6 @@
     "tier": "A",
     "source_id": 3142,
     "synced_at": "2026-06-17T14:20:06.482907",
-    "description_zh": "邮件、语音"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Mfa）"
   }
 }

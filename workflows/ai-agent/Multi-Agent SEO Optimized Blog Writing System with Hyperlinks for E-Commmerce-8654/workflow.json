@@ -2460,7 +2460,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
-    "description_zh": "Agent、SEO",
+    "description_zh": "多智能体协作系统，多个 AI Agent 协同完成任务，Webhook 触发",
     "replacements": {
       "f4d5e013-191f-4811-8b05-6681cf5674d9": {
         "type": "n8n-nodes-base.airtable",

@@ -258,7 +258,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "图像（Automatically）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Automatically）",
     "replacements": {
       "2f066144-49d7-4f26-8278-fc778e4f37d4": {
         "type": "n8n-nodes-base.googleDrive",

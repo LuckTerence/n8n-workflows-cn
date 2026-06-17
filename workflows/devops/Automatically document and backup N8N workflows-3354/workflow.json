@@ -839,7 +839,7 @@
       "Notion",
       "Slack"
     ],
-    "description_zh": "备份（Automatically）",
+    "description_zh": "自动备份系统，定时备份数据或配置，定时执行",
     "replacements": {
       "86edfe55-9a88-49ed-82de-df0c44a65d53": {
         "type": "n8n-nodes-base.notion",

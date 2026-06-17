@@ -462,6 +462,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Build your own FileSystem MCP "
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Your）"
   }
 }

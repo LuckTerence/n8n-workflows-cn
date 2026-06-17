@@ -531,7 +531,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Zoom→腾讯会议",
-    "description_zh": "视频（Automated·Video）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Video）",
     "replacements": {
       "ebd26e9d-956e-49d5-9819-f560c443163f": {
         "type": "n8n-nodes-base.googleSheets",

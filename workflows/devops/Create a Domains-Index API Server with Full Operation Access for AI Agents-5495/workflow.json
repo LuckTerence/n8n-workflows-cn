@@ -767,6 +767,6 @@
     "tier": "A",
     "source_id": 5495,
     "synced_at": "2026-06-17T14:18:11.267886",
-    "description_zh": "Agent（Create）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（Domains）"
   }
 }

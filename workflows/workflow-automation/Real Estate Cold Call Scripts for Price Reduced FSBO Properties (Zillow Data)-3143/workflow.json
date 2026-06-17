@@ -404,7 +404,7 @@
     "tier": "A",
     "source_id": 3143,
     "synced_at": "2026-06-17T14:10:54.838640",
-    "description_zh": "自动化工作流（Real）",
+    "description_zh": "Real Estate Cold Call Scripts for Price Reduced FS（AI 增强）",
     "replacements": {
       "1ed17726-588b-4a3c-913b-480c21c689b3": {
         "type": "n8n-nodes-base.airtable",

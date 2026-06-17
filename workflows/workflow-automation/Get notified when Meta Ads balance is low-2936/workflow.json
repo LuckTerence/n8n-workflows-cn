@@ -290,6 +290,6 @@
     "tier": "A",
     "source_id": 2936,
     "synced_at": "2026-06-17T14:20:41.780460",
-    "description_zh": "消息通知（Get）"
+    "description_zh": "通知推送系统，多渠道消息分发，定时执行（Notified）"
   }
 }

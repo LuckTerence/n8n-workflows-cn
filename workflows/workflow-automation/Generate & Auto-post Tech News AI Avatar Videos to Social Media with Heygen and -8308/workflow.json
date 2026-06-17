@@ -967,6 +967,6 @@
     "tier": "A",
     "source_id": 8308,
     "synced_at": "2026-06-17T14:21:49.593437",
-    "description_zh": "视频（Generate·Auto）"
+    "description_zh": "AI 视频生成工作流，自动创作视频内容，定时执行（Auto）"
   }
 }

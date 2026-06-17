@@ -692,7 +692,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "告警通知（Generate）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Financial）",
     "replacements": {
       "d7b63343-be96-4c39-aa56-b3839fb6bfa7": {
         "type": "n8n-nodes-base.googleDrive",

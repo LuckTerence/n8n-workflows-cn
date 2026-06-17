@@ -1396,7 +1396,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "社交平台（Create）",
+    "description_zh": "社交媒体管理，多平台内容发布和监听（Viral）",
     "replacements": {
       "d768709c-4dd1-4698-a653-5aafd58e2126": {
         "type": "n8n-nodes-base.googleDrive",

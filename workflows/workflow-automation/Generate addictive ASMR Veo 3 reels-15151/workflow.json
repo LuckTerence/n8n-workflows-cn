@@ -840,7 +840,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Generate·Addictive）",
+    "description_zh": "Generate addictive ASMR Veo 3 reels（AI 增强）",
     "replacements": {
       "13229623-1b86-4b65-8258-37da6d4cfdfa": {
         "type": "n8n-nodes-base.googleSheets",

@@ -298,7 +298,7 @@
     "tier": "A",
     "source_id": 2843,
     "synced_at": "2026-06-17T14:06:59.828896",
-    "description_zh": "Automate Sports Betting Data w",
+    "description_zh": "API 集成接口，连接和编排多个第三方服务，定时执行",
     "replacements": {
       "28393bd9-17ed-48b1-ba6f-f62b51ce137c": {
         "type": "n8n-nodes-base.airtable",

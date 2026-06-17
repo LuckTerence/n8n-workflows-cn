@@ -411,7 +411,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "Automate Job Discovery & AI Pr",
+    "description_zh": "Automate Job Discovery & AI Proposals across Upwor（AI 增强）",
     "replacements": {
       "3cdce2c1-3c8b-4265-9ce8-84a2cb333cce": {
         "type": "n8n-nodes-base.googleSheets",

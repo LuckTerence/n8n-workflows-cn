@@ -196,7 +196,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "工作流管理（Simple）",
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停（Simple）",
     "replacements": {
       "f433fd2a-5b2b-4935-b779-b95c64e056ff": {
         "type": "n8n-nodes-base.slack",

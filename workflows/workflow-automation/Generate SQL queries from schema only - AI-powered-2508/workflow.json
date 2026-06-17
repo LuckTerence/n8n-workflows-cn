@@ -768,6 +768,6 @@
     "tier": "A",
     "source_id": 2508,
     "synced_at": "2026-06-17T14:09:32.406090",
-    "description_zh": "SQL 查询"
+    "description_zh": "数据库操作工具，自动查询或写入数据库（Sql）"
   }
 }

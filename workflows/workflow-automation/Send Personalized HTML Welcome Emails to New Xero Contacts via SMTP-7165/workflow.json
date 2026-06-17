@@ -202,6 +202,6 @@
     "tier": "A",
     "source_id": 7165,
     "synced_at": "2026-06-17T14:11:20.362104",
-    "description_zh": "邮件自动化（Send·Personalized）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Personalized）"
   }
 }

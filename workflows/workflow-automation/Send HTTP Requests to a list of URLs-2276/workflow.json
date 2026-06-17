@@ -128,6 +128,6 @@
     "tier": "A",
     "source_id": 2276,
     "synced_at": "2026-06-17T14:11:19.796739",
-    "description_zh": "自动化工作流（Send·Http）"
+    "description_zh": "Send HTTP Requests to a list of URLs（自动化）"
   }
 }

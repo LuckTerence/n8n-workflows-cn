@@ -518,7 +518,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "邮件、Telegram、监控",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，定时执行（Monitor）",
     "replacements": {
       "23a42e29-2815-4cad-90db-67afcb7cedda": {
         "type": "n8n-nodes-base.googleSheets",

@@ -385,6 +385,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "API 接口（Get·Xiaohongshu）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（Xiaohongshu）"
   }
 }

@@ -319,6 +319,6 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "Webhook 集成（Prevent）"
+    "description_zh": "Prevent duplicate webhook executions with AARI ide（自动化）"
   }
 }

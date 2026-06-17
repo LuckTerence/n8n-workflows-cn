@@ -536,6 +536,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Audit）"
+    "description_zh": "Audit Confluence space permissions and public link（自动化）"
   }
 }

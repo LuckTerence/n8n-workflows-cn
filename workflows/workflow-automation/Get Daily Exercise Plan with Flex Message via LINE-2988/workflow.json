@@ -922,7 +922,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Get·Daily）",
+    "description_zh": "Get Daily Exercise Plan with Flex Message via LINE（AI 增强）",
     "replacements": {
       "529d9ed9-3ae5-41cb-983e-874aa37ee1c7": {
         "type": "n8n-nodes-base.googleSheets",

@@ -129,6 +129,6 @@
     "tier": "A",
     "source_id": 3060,
     "synced_at": "2026-06-17T14:15:27.412661",
-    "description_zh": "Automate Actions After PDF Gen"
+    "description_zh": "PDF 文档处理，解析或生成 PDF 文件，Webhook 触发（Actions）"
   }
 }

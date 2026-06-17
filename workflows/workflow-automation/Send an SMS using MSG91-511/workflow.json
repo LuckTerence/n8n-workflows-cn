@@ -50,6 +50,6 @@
     "tier": "A",
     "source_id": 511,
     "synced_at": "2026-06-17T14:11:24.020359",
-    "description_zh": "自动化工作流（Send·Sms）"
+    "description_zh": "Send an SMS using MSG91（自动化）"
   }
 }

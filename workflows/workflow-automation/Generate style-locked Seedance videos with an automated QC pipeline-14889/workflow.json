@@ -676,7 +676,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "视频（Generate·Style）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容，Webhook 触发",
     "replacements": {
       "0cee6a18-b757-47df-8d78-00a0e333c007": {
         "type": "n8n-nodes-base.slack",

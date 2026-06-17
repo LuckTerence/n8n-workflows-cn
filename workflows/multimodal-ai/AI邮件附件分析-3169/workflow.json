@@ -963,7 +963,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI邮件附件分析",
-    "description_zh": "分析PDF/图片附件保存到Drive+Telegram",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（AI邮件附件分析）",
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 3169,

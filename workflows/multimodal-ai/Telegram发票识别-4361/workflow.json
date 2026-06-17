@@ -638,7 +638,7 @@
   },
   "_cn_meta": {
     "title_zh": "Telegram发票识别",
-    "description_zh": "Tesseract+Llama OCR提取",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Telegram）",
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 4361,

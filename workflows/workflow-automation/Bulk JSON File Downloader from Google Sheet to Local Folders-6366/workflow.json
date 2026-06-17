@@ -320,7 +320,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "表格处理（Bulk）",
+    "description_zh": "文件处理工具，自动转换或管理文件（Bulk）",
     "replacements": {
       "5ba7a93e-0de3-4f15-b617-dd51fa420f5b": {
         "type": "n8n-nodes-base.googleSheets",

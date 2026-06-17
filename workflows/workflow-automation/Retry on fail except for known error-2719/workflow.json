@@ -442,6 +442,6 @@
     "tier": "A",
     "source_id": 2719,
     "synced_at": "2026-06-17T14:11:08.682012",
-    "description_zh": "自动化工作流（Retry）"
+    "description_zh": "Retry on fail except for known error（自动化）"
   }
 }

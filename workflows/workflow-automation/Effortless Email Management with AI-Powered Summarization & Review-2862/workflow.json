@@ -886,7 +886,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "邮件自动化（Effortless）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Effortless）",
     "replacements": {
       "db494d2d-5390-4f83-9b87-3409fef31a7d": {
         "type": "n8n-nodes-base.googleDrive",

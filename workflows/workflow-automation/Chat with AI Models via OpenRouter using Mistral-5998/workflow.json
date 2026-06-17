@@ -141,6 +141,6 @@
     "tier": "A",
     "source_id": 5998,
     "synced_at": "2026-06-17T14:07:38.366149",
-    "description_zh": "AI 对话（Chat）"
+    "description_zh": "Chat with AI Models via OpenRouter using Mistral（自动化）"
   }
 }

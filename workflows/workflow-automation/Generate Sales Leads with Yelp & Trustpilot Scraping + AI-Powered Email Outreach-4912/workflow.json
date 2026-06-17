@@ -1173,7 +1173,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Generate·Sales）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Sales）",
     "replacements": {
       "430f7f49-c0b8-4e0e-b217-d5b5831062e0": {
         "type": "n8n-nodes-base.googleSheets",

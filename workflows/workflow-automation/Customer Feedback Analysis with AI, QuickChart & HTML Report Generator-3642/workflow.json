@@ -882,7 +882,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Customer）",
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈（Customer）",
     "replacements": {
       "d4f30c2d-60c5-4b25-a6ba-945c59fe29a8": {
         "type": "n8n-nodes-base.googleSheets",

@@ -3541,7 +3541,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "Telegram、语音（Automated）",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程，Webhook 触发（Property）",
     "replacements": {
       "0394bc79-5900-43fb-a8f6-f26d6c31a9cb": {
         "type": "n8n-nodes-base.googleCalendarTool",

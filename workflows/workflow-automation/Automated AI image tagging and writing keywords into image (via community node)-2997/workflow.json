@@ -257,7 +257,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图像（Automated·Image）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Image）",
     "replacements": {
       "1df51279-b3bd-49bd-9711-951eb4164290": {
         "type": "n8n-nodes-base.googleDrive",

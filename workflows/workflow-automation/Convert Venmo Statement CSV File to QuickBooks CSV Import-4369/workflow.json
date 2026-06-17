@@ -182,7 +182,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流（Convert·Venmo）",
+    "description_zh": "文件处理工具，自动转换或管理文件（Venmo）",
     "replacements": {
       "c4c05bb0-db83-4459-829e-aa163e0c3d0f": {
         "type": "n8n-nodes-base.dropbox",

@@ -1369,7 +1369,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "市场数据（Market）",
+    "description_zh": "Market Intelligence Engine with AI Sentiment Detec（AI 增强）",
     "replacements": {
       "d62439d4-c362-41e6-a191-a47fcb47f5cb": {
         "type": "n8n-nodes-base.slack",

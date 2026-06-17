@@ -630,6 +630,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "告警通知（Analyze）"
+    "description_zh": "监控告警系统，异常检测并发送通知，Webhook 触发（Analyze）"
   }
 }

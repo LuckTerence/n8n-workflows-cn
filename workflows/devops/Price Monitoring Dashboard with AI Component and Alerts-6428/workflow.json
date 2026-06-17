@@ -470,7 +470,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "监控（Price）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Price）",
     "replacements": {
       "google-sheets-storage": {
         "type": "n8n-nodes-base.googleSheets",

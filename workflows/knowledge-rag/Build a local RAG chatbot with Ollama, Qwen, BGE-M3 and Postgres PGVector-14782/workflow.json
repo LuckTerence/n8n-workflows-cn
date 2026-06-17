@@ -939,6 +939,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "聊天机器人、对话、RAG（Build）"
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答，Webhook 触发（Local）"
   }
 }

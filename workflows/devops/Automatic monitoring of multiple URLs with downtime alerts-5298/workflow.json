@@ -476,7 +476,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "监控（Automatic）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Automatic）",
     "replacements": {
       "876e4ca3-c607-4443-a4ec-cb83fe84e6c3": {
         "type": "n8n-nodes-base.googleSheets",

@@ -468,7 +468,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "告警通知（IP）",
+    "description_zh": "监控告警系统，异常检测并发送通知，Webhook 触发（Reputation）",
     "replacements": {
       "7aa90c7f-4766-4a7b-9e70-09ad884901e4": {
         "type": "n8n-nodes-base.slack",

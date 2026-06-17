@@ -571,7 +571,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "图像（Generate·Newsletter）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Newsletter）",
     "replacements": {
       "facaea24-1375-4e65-ab62-8ed01fad19b1": {
         "type": "n8n-nodes-base.googleSheets",

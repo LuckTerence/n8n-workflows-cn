@@ -1232,7 +1232,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Find high-mismatch local busin",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Find）",
     "replacements": {
       "9bd29ec0-5738-445b-aa8c-68f2f8667aaf": {
         "type": "n8n-nodes-base.slack",

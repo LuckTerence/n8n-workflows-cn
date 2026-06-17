@@ -441,6 +441,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "工作流管理（Retry）"
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停，定时执行（Auto）"
   }
 }

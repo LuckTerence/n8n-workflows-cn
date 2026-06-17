@@ -1224,6 +1224,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "股票、加密货币"
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，定时执行（Aggregate）"
   }
 }

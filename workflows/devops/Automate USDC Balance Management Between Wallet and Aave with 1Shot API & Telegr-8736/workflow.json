@@ -776,6 +776,6 @@
     "tier": "A",
     "source_id": 8736,
     "synced_at": "2026-06-17T14:17:48.063740",
-    "description_zh": "Automate USDC Balance Manageme"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务，定时执行"
   }
 }

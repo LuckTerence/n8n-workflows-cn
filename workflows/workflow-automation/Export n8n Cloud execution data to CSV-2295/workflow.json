@@ -151,6 +151,6 @@
     "tier": "A",
     "source_id": 2295,
     "synced_at": "2026-06-17T14:08:51.501779",
-    "description_zh": "n8n 运维（Export）"
+    "description_zh": "Export n8n Cloud execution data to CSV（自动化）"
   }
 }

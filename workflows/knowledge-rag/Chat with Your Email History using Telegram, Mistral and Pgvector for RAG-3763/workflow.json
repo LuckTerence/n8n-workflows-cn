@@ -589,6 +589,6 @@
     "tier": "A",
     "source_id": 3763,
     "synced_at": "2026-06-17T14:15:01.519310",
-    "description_zh": "对话、邮件、Telegram"
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答（Chat）"
   }
 }

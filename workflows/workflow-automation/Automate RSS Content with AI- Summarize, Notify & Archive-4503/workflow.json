@@ -473,7 +473,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "Automate RSS Content with AI- ",
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，定时执行（Rss）",
     "replacements": {
       "9f1a6dbe-0918-4909-b4fe-d361adee2c47": {
         "type": "n8n-nodes-base.googleSheets",

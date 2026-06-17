@@ -1172,7 +1172,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "视频（Generate·Animal）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图，定时执行",
     "replacements": {
       "aae97fab-71ef-48c0-8684-9f3019ef37f7": {
         "type": "n8n-nodes-base.googleSheets",

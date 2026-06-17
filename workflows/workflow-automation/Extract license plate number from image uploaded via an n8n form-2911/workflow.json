@@ -185,6 +185,6 @@
     "tier": "A",
     "source_id": 2911,
     "synced_at": "2026-06-17T14:09:03.832752",
-    "description_zh": "图像（Extract）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（License）"
   }
 }

@@ -1210,6 +1210,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "AI 对话（Extract）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Sitemap）"
   }
 }

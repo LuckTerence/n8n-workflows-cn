@@ -529,7 +529,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流（Simple）",
+    "description_zh": "Simple Eval for Legal Benchmarking（AI 增强）",
     "replacements": {
       "9e76d679-6f4b-419b-af36-771aba5b9e98": {
         "type": "n8n-nodes-base.googleDrive",

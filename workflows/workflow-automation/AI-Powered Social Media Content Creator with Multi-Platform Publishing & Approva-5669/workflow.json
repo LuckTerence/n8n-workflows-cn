@@ -1459,7 +1459,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "AI-Powered Social Media Conten",
+    "description_zh": "社交媒体管理，多平台内容发布和监听（Powered）",
     "replacements": {
       "f66196c1-fc5b-4a0e-8b47-3f486ffb7a83": {
         "type": "n8n-nodes-base.googleDrive",

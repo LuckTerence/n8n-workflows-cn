@@ -737,7 +737,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "对话（Chat）",
+    "description_zh": "Chat with a Google Sheet using AI（AI 增强）",
     "replacements": {
       "536225e9-e33c-4819-a2dc-994d8f7c3f30": {
         "type": "n8n-nodes-base.googleSheets",

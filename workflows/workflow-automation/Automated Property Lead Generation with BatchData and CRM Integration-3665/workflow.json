@@ -466,7 +466,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "CRM（Automated）",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，定时执行（Property）",
     "replacements": {
       "416661ac-8068-44fd-b95f-6b978834eed9": {
         "type": "n8n-nodes-base.slack",

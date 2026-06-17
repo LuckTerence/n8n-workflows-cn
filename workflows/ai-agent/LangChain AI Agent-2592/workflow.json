@@ -259,7 +259,7 @@
   },
   "_cn_meta": {
     "title_zh": "LangChain AI Agent",
-    "description_zh": "基于LangChain节点的Telegram机器人",
+    "description_zh": "LangChain AI Agent（AI 增强）",
     "category": "ai-agent",
     "tier": "A",
     "source_id": 2592,

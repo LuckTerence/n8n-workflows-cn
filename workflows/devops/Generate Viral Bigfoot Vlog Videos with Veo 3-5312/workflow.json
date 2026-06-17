@@ -902,7 +902,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Stripe→微信支付",
-    "description_zh": "视频生成（Generate·Viral）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Viral）",
     "replacements": {
       "e4951ebb-486c-474a-8cc2-87d63f485448": {
         "type": "n8n-nodes-base.slack",

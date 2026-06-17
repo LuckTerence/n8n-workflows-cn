@@ -98,6 +98,6 @@
     "tier": "A",
     "source_id": 6693,
     "synced_at": "2026-06-17T14:14:17.019438",
-    "description_zh": "Webhook 集成（Home）"
+    "description_zh": "Home Assistant Event Triggering with AppDaemon Web（自动化）"
   }
 }

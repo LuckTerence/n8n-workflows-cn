@@ -853,6 +853,6 @@
       "Notion",
       "Slack"
     ],
-    "description_zh": "自动化工作流（Classify）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，Webhook 触发（Classify）"
   }
 }

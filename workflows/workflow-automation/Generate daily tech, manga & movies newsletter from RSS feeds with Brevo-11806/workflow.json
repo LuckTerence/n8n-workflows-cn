@@ -845,7 +845,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "新闻聚合（Generate）",
+    "description_zh": "内容管理工具，自动生成或发布内容，定时执行（Daily）",
     "replacements": {
       "509f8c1d-5f27-44df-b43c-4a09d4623a72": {
         "type": "n8n-nodes-base.googleSheets",

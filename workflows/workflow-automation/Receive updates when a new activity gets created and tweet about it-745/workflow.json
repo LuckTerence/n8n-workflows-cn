@@ -58,6 +58,6 @@
     "tier": "A",
     "source_id": 745,
     "synced_at": "2026-06-17T14:11:00.756653",
-    "description_zh": "自动化工作流（Receive）"
+    "description_zh": "Receive updates when a new activity gets created a（自动化）"
   }
 }

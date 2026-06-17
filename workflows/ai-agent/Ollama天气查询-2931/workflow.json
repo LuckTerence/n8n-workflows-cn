@@ -234,7 +234,7 @@
   },
   "_cn_meta": {
     "title_zh": "Ollama天气查询",
-    "description_zh": "本地Ollama+天气查询+维基百科",
+    "description_zh": "Ollama天气查询",
     "category": "ai-agent",
     "tier": "A",
     "source_id": 2931,

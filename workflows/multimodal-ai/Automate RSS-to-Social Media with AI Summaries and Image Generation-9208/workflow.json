@@ -1106,7 +1106,7 @@
       "Supabase"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Supabase→腾讯云CloudBase",
-    "description_zh": "图像（Automate·Rss）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Rss）",
     "replacements": {
       "3f91cf1a-9f1e-412f-a0c6-dbc89aff9296": {
         "type": "n8n-nodes-base.googleSheets",

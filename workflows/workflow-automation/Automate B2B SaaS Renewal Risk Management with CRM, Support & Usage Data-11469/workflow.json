@@ -1342,7 +1342,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人",
-    "description_zh": "CRM（Automate）",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，定时执行（Saas）",
     "replacements": {
       "929935d7-d621-459d-9c88-3462be51ecb0": {
         "type": "n8n-nodes-base.hubspot",

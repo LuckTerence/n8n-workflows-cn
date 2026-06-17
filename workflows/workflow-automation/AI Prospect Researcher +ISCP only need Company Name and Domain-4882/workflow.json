@@ -801,7 +801,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "智能搜索（Prospect）",
+    "description_zh": "联网搜索工具，AI 驱动的信息检索和分析（Prospect）",
     "replacements": {
       "4e9ac35a-8ecb-4e51-a46b-3e12d46fb621": {
         "type": "n8n-nodes-base.googleSheets",

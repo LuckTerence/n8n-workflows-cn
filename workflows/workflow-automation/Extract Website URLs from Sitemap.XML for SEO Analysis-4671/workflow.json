@@ -319,6 +319,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "SEO 优化（Extract）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Website）"
   }
 }

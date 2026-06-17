@@ -235,7 +235,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI图片生成Telegram推送",
-    "description_zh": "自动生成AI图片推送到Telegram",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Telegram）",
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 4049,

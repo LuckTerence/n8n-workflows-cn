@@ -97,6 +97,6 @@
     "tier": "A",
     "source_id": 3002,
     "synced_at": "2026-06-17T14:13:53.316280",
-    "description_zh": "Dynamically Run SuiteQL Querie"
+    "description_zh": "Dynamically Run SuiteQL Queries in NetSuite via HT（自动化）"
   }
 }

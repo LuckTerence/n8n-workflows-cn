@@ -1893,6 +1893,6 @@
     "tier": "A",
     "source_id": 15412,
     "synced_at": "2026-06-17T14:06:11.235355",
-    "description_zh": "AI Job Crawler with Suitabilit"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Job）"
   }
 }

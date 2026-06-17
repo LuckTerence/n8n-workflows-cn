@@ -554,6 +554,6 @@
     "tier": "A",
     "source_id": 7018,
     "synced_at": "2026-06-17T14:06:51.000774",
-    "description_zh": "Automate Daily GLPI Pending Ti"
+    "description_zh": "通知推送系统，多渠道消息分发，定时执行（Daily）"
   }
 }

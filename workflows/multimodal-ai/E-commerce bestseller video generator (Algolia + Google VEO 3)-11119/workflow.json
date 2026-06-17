@@ -977,6 +977,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase",
-    "description_zh": "视频生成（commerce）"
+    "description_zh": "AI 视频生成工作流，自动创作视频内容，定时执行（Commerce）"
   }
 }

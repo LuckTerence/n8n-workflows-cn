@@ -856,6 +856,6 @@
     "tier": "A",
     "source_id": 4115,
     "synced_at": "2026-06-17T14:21:30.104264",
-    "description_zh": "加密货币（Analyze）"
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，Webhook 触发"
   }
 }

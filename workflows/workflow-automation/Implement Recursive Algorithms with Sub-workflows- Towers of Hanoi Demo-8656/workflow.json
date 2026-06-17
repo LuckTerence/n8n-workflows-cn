@@ -707,6 +707,6 @@
     "tier": "A",
     "source_id": 8656,
     "synced_at": "2026-06-17T14:14:19.677714",
-    "description_zh": "工作流管理（Implement）"
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停（Implement）"
   }
 }

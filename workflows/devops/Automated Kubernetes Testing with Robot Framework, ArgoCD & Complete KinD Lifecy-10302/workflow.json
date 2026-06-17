@@ -2011,6 +2011,6 @@
     "tier": "B",
     "source_id": 10302,
     "synced_at": "2026-06-17T14:17:53.163461",
-    "description_zh": "Automated Kubernetes Testing w"
+    "description_zh": "自动部署流水线，代码提交后自动构建和发布，定时执行"
   }
 }

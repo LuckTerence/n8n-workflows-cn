@@ -1321,6 +1321,6 @@
     "tier": "A",
     "source_id": 2780,
     "synced_at": "2026-06-17T14:15:24.252489",
-    "description_zh": "自动化工作流（Data）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，Webhook 触发（Data）"
   }
 }

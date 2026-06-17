@@ -389,7 +389,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Cold Outreach Automation- Scra",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Cold）",
     "replacements": {
       "072baaf9-81d8-4989-9354-822f02b2f922": {
         "type": "n8n-nodes-base.googleSheets",

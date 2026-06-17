@@ -317,7 +317,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram（Convert）",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Gumroad）",
     "replacements": {
       "6e464a73-a5c0-4a5d-95ce-c3cc2547a373": {
         "type": "n8n-nodes-base.googleSheets",

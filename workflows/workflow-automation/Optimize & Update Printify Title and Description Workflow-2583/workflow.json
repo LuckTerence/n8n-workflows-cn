@@ -859,7 +859,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "工作流管理（Optimize）",
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停（Optimize）",
     "replacements": {
       "b38cdb40-9784-43d6-b1d2-4d30340d2c1f": {
         "type": "n8n-nodes-base.googleSheets",

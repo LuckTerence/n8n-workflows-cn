@@ -500,6 +500,6 @@
     "tier": "A",
     "source_id": 15775,
     "synced_at": "2026-06-17T14:10:56.067658",
-    "description_zh": "AI 对话（Receive）"
+    "description_zh": "Receive and process incoming direct messages in Ro（自动化）"
   }
 }

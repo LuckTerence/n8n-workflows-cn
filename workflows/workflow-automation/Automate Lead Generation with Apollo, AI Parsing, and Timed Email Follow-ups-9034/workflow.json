@@ -1327,7 +1327,7 @@
       "Slack"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议",
-    "description_zh": "邮件（Automate·Lead）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，定时执行（Lead）",
     "replacements": {
       "0ce9db68-c58b-4b09-8e85-fc7a49ea6307": {
         "type": "n8n-nodes-base.googleSheets",

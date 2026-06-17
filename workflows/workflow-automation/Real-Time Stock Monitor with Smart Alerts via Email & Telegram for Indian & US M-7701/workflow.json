@@ -443,7 +443,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件、Telegram、股票",
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警（Real）",
     "replacements": {
       "1e0a06c3-a7da-44ca-a47d-4821bf599049": {
         "type": "n8n-nodes-base.googleSheets",

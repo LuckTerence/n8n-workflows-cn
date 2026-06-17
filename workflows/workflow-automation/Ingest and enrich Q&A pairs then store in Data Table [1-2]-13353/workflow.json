@@ -416,6 +416,6 @@
     "tier": "A",
     "source_id": 13353,
     "synced_at": "2026-06-17T14:10:09.248036",
-    "description_zh": "自动化工作流（Ingest）"
+    "description_zh": "Ingest and enrich Q&A pairs then store in Data Tab（AI 增强）"
   }
 }

@@ -573,7 +573,7 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "自动化工作流（CallForge）",
+    "description_zh": "电商自动化，订单处理或商品管理（Callforge）",
     "replacements": {
       "a04dac9d-5477-41a3-8696-1871c1cccf53": {
         "type": "n8n-nodes-base.notion",

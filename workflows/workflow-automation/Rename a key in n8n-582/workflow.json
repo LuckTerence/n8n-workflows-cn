@@ -80,6 +80,6 @@
     "tier": "A",
     "source_id": 582,
     "synced_at": "2026-06-17T14:11:03.343085",
-    "description_zh": "n8n 运维（Rename）"
+    "description_zh": "Rename a key in n8n（自动化）"
   }
 }

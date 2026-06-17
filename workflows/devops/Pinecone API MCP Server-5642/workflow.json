@@ -474,6 +474,6 @@
     "foreign_services": [
       "Pinecone"
     ],
-    "description_zh": "Pinecone API MCP Server"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Pinecone）"
   }
 }

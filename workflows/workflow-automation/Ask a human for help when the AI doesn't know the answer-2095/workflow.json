@@ -432,7 +432,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Ask）",
+    "description_zh": "Ask a human for help when the AI doesn't know the （AI 增强）",
     "replacements": {
       "b9c552ce-4c58-48dd-b168-5e277de89954": {
         "type": "n8n-nodes-base.slack",

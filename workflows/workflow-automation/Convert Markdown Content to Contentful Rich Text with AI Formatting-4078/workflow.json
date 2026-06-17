@@ -311,6 +311,6 @@
     "tier": "A",
     "source_id": 4078,
     "synced_at": "2026-06-17T14:07:57.038983",
-    "description_zh": "表单处理（Convert）"
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈（Markdown）"
   }
 }

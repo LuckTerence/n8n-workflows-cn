@@ -1612,7 +1612,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "视频（Generate·Viral）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Viral）",
     "replacements": {
       "bee496d6-fc2d-4f1c-812f-9d6be08154a7": {
         "type": "n8n-nodes-base.googleSheets",

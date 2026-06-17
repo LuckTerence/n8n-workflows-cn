@@ -1089,6 +1089,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "Telegram 机器人（Create·Witty）"
+    "description_zh": "Telegram 机器人，消息驱动自动化流程，定时执行（Witty）"
   }
 }

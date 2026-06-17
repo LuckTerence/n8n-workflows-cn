@@ -648,6 +648,6 @@
     "tier": "A",
     "source_id": 14894,
     "synced_at": "2026-06-17T14:14:45.506946",
-    "description_zh": "Webhook 集成（Solve）"
+    "description_zh": "Solve captchas via webhook with CapSolver（自动化）"
   }
 }

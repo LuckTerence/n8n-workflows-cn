@@ -423,6 +423,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "Create a Complete User Authent"
+    "description_zh": "内容管理工具，自动生成或发布内容，Webhook 触发"
   }
 }

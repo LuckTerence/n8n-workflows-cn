@@ -422,7 +422,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "n8n 运维（Daily）",
+    "description_zh": "Daily Validated Business Ideas using n8n and Upwor（AI 增强）",
     "replacements": {
       "ab2fa6ee-5816-4567-a5a8-0b4ab82544c5": {
         "type": "n8n-nodes-base.googleSheets",

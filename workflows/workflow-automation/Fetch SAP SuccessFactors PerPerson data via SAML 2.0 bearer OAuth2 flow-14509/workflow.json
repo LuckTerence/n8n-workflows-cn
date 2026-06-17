@@ -343,6 +343,6 @@
     "tier": "A",
     "source_id": 14509,
     "synced_at": "2026-06-17T14:09:07.456357",
-    "description_zh": "认证集成"
+    "description_zh": "Fetch SAP SuccessFactors PerPerson data via SAML 2（自动化）"
   }
 }

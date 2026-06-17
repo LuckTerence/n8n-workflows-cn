@@ -669,7 +669,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "AI-Powered Automated Job Searc",
+    "description_zh": "联网搜索工具，AI 驱动的信息检索和分析，Webhook 触发（Powered）",
     "replacements": {
       "efe315eb-d796-4e23-8870-0bfad16f35b1": {
         "type": "n8n-nodes-base.googleSheets",

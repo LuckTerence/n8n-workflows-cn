@@ -1867,7 +1867,7 @@
     "foreign_services": [
       "Stripe"
     ],
-    "description_zh": "Agent、RAG、CRM",
+    "description_zh": "多智能体协作系统，多个 AI Agent 协同完成任务，Webhook 触发",
     "replacements": {
       "ea7c1010-8de9-46da-a9f9-75d0dbd25d0a": {
         "type": "n8n-nodes-base.googleCalendarTool",

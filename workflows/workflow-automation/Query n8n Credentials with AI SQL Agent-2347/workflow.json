@@ -319,6 +319,6 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Agent（Query）"
+    "description_zh": "数据库操作工具，自动查询或写入数据库（Query）"
   }
 }

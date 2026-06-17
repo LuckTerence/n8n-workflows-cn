@@ -1291,7 +1291,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Import·Productboard）",
+    "description_zh": "电商自动化，订单处理或商品管理，定时执行",
     "replacements": {
       "3eb88f88-8fad-4aaf-b6f9-6f7d87e30018": {
         "type": "n8n-nodes-base.slack",

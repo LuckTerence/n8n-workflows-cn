@@ -379,6 +379,6 @@
     "tier": "A",
     "source_id": 7080,
     "synced_at": "2026-06-17T14:12:16.187512",
-    "description_zh": "AI 摘要"
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，定时执行（Automatically）"
   }
 }

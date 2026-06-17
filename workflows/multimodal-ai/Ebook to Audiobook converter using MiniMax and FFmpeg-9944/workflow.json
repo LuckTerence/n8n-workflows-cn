@@ -492,7 +492,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "音频处理",
+    "description_zh": "AI 语音处理工作流，语音合成或转录（Ebook）",
     "replacements": {
       "d7b3d611-98d0-44fc-8ded-597f1e5ad916": {
         "type": "n8n-nodes-base.googleDrive",

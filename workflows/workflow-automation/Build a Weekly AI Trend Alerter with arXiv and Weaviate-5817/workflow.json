@@ -1343,6 +1343,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "告警通知（Build）"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Weekly）"
   }
 }

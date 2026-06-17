@@ -590,7 +590,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信",
-    "description_zh": "邮件（Send·Patient）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Patient）",
     "replacements": {
       "8045beb6-3991-4be1-b4bb-dd9639180a48": {
         "type": "n8n-nodes-base.googleSheets",

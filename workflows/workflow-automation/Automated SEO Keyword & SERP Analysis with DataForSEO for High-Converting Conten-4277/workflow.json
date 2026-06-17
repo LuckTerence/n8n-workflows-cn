@@ -1245,7 +1245,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "SEO（Automated）",
+    "description_zh": "SEO 优化工具，关键词分析和内容优化（Seo）",
     "replacements": {
       "8d7a1074-df18-4127-9338-4667c38bea52": {
         "type": "n8n-nodes-base.googleSheets",

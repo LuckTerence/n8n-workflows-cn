@@ -632,7 +632,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Telegram、视频（Create·Dream）",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Dream）",
     "replacements": {
       "945b53d9-813f-4705-b249-ffc6b1a86ff7": {
         "type": "n8n-nodes-base.googleSheets",

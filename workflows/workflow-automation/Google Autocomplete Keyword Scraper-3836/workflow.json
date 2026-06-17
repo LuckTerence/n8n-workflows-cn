@@ -262,6 +262,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "数据采集（Google）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Google）"
   }
 }

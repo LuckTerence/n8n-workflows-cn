@@ -555,6 +555,6 @@
     "tier": "A",
     "source_id": 7436,
     "synced_at": "2026-06-17T14:17:50.994936",
-    "description_zh": "Automated GLPI Ticket Deadline"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Glpi）"
   }
 }

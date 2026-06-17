@@ -331,7 +331,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "消息通知（Daylight）",
+    "description_zh": "通知推送系统，多渠道消息分发，定时执行（Daylight）",
     "replacements": {
       "612e2e06-0283-4acd-8d85-cba16acb7126": {
         "type": "n8n-nodes-base.slack",

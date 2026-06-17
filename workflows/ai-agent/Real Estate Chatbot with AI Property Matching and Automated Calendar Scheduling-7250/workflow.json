@@ -1020,7 +1020,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase",
-    "description_zh": "聊天机器人、对话（Real）",
+    "description_zh": "AI 聊天机器人，支持多轮对话和智能回复，Webhook 触发（Real）",
     "replacements": {
       "295a3776-061c-4324-8639-af282d771072": {
         "type": "n8n-nodes-base.googleCalendarTool",

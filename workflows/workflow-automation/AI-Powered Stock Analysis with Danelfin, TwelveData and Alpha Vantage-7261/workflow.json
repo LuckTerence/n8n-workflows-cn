@@ -1456,6 +1456,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Supabase→腾讯云CloudBase",
-    "description_zh": "股票分析"
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警（Powered）"
   }
 }

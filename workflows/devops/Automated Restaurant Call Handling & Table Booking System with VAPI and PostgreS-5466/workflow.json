@@ -247,6 +247,6 @@
     "tier": "A",
     "source_id": 5466,
     "synced_at": "2026-06-17T14:17:54.678842",
-    "description_zh": "Automated Restaurant Call Hand"
+    "description_zh": "日历日程管理，自动创建事件或发送提醒，Webhook 触发"
   }
 }

@@ -838,6 +838,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "自动化工作流（generate）"
+    "description_zh": "Auto-generate sticky notes and rename nodes（AI 增强）"
   }
 }

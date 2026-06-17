@@ -815,7 +815,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流（Generate·Camera）",
+    "description_zh": "Generate AI camera moves with Seedance and build a（AI 增强）",
     "replacements": {
       "45fc8958-c402-4236-932a-c22a9c8740e5": {
         "type": "n8n-nodes-base.googleDrive",

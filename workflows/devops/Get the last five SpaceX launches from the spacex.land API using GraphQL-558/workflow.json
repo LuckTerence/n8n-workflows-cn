@@ -48,6 +48,6 @@
     "tier": "A",
     "source_id": 558,
     "synced_at": "2026-06-17T14:18:40.289292",
-    "description_zh": "API 接口（Get·The）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（The）"
   }
 }

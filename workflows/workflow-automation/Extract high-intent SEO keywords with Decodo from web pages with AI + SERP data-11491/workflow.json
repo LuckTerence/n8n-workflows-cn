@@ -454,7 +454,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "SEO 优化（Extract）",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（High）",
     "replacements": {
       "47b3a83e-ec11-47b7-9eaa-6ed5b2057ccb": {
         "type": "n8n-nodes-base.googleSheets",

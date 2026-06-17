@@ -371,7 +371,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI文章抓取到Notion",
-    "description_zh": "Gemini+浏览器抓取文章摘要保存",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Notion）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3535,

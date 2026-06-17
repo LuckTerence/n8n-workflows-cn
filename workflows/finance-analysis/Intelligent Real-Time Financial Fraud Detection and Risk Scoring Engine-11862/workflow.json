@@ -623,7 +623,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "自动化工作流（Intelligent）",
+    "description_zh": "Intelligent Real-Time Financial Fraud Detection an（AI 增强）",
     "replacements": {
       "35e4d17c-e9de-4597-a49b-7c95cc63190c": {
         "type": "n8n-nodes-base.slack",

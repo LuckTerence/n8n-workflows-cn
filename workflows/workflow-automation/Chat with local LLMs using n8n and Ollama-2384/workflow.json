@@ -119,6 +119,6 @@
     "tier": "A",
     "source_id": 2384,
     "synced_at": "2026-06-17T14:07:40.817533",
-    "description_zh": "对话（Chat）"
+    "description_zh": "Chat with local LLMs using n8n and Ollama（AI 增强）"
   }
 }

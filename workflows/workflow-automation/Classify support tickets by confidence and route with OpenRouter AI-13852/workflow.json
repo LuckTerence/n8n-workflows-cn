@@ -616,6 +616,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "工单管理（Classify）"
+    "description_zh": "Classify support tickets by confidence and route w（AI 增强）"
   }
 }

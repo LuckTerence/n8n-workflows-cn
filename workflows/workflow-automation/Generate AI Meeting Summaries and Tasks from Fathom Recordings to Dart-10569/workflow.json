@@ -625,6 +625,6 @@
     "tier": "A",
     "source_id": 10569,
     "synced_at": "2026-06-17T14:21:12.009925",
-    "description_zh": "自动化工作流（Generate·Meeting）"
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，Webhook 触发"
   }
 }

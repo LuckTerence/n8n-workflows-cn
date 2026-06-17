@@ -797,6 +797,6 @@
     "tier": "A",
     "source_id": 5547,
     "synced_at": "2026-06-17T14:16:53.613046",
-    "description_zh": "Agent（Connect）"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Connect）"
   }
 }

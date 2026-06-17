@@ -496,6 +496,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流（Extract·University）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（University）"
   }
 }

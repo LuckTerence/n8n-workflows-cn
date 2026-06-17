@@ -581,6 +581,6 @@
     "tier": "A",
     "source_id": 16081,
     "synced_at": "2026-06-17T14:06:27.619069",
-    "description_zh": "Manage job records via webhook"
+    "description_zh": "内容管理工具，自动生成或发布内容，Webhook 触发"
   }
 }

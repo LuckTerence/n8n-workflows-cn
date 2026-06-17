@@ -270,7 +270,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "Parse and Score Resumes with P",
+    "description_zh": "AI 招聘助手，简历筛选或面试流程自动化（Parse）",
     "replacements": {
       "google-drive": {
         "type": "n8n-nodes-base.googleDrive",

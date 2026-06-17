@@ -1614,6 +1614,6 @@
     "tier": "A",
     "source_id": 7653,
     "synced_at": "2026-06-17T14:07:35.466999",
-    "description_zh": "自动化工作流（Calculate）"
+    "description_zh": "Calculate Embodied Carbon (CO2) for Revit-IFC Mode（AI 增强）"
   }
 }

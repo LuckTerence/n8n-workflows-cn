@@ -260,7 +260,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI 数据库对话 Agent",
-    "description_zh": "用自然语言查询 PostgreSQL 数据库",
+    "description_zh": "数据库操作工具，自动查询或写入数据库（Agent）",
     "category": "ai-agent",
     "tier": "A",
     "tags": [

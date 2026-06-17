@@ -952,7 +952,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI文章摘要生成",
-    "description_zh": "WordPress文章AI摘要",
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，定时执行（AI文章摘要生成）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2822,

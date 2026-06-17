@@ -439,7 +439,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI股票基本面分析",
-    "description_zh": "自动分析股票基本面并生成Q&A报告",
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，Webhook 触发",
     "category": "finance-analysis",
     "tier": "A",
     "source_id": 2183,

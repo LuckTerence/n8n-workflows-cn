@@ -541,6 +541,6 @@
     "tier": "A",
     "source_id": 15630,
     "synced_at": "2026-06-17T14:20:50.470699",
-    "description_zh": "邮件（Route）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Route）"
   }
 }

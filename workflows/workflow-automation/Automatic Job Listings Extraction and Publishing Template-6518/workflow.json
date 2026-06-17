@@ -2137,7 +2137,7 @@
       "Supabase"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
-    "description_zh": "求职招聘",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Automatic）",
     "replacements": {
       "27e265ef-0178-463c-894f-638b05f36ab6": {
         "type": "n8n-nodes-base.googleDrive",

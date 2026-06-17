@@ -1279,7 +1279,7 @@
       "Slack"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Stripe→微信支付、Zoom→腾讯会议、Notion→飞书文档/语雀",
-    "description_zh": "线索管理（Powered）",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据（Powered）",
     "replacements": {
       "cd908406-2c72-41cc-a7a3-45281a55fc8d": {
         "type": "n8n-nodes-base.googleSheets",

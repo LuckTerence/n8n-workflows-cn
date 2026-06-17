@@ -536,7 +536,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "面试系统",
+    "description_zh": "AI-Powered Interview Preparation System using Loca（AI 增强）",
     "replacements": {
       "bd8a55e4-a326-4eb6-96a0-8ec079fa1552": {
         "type": "n8n-nodes-base.googleSheets",

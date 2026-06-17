@@ -478,7 +478,7 @@
       "Twilio",
       "Slack"
     ],
-    "description_zh": "Automated Real Estate Property",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，Webhook 触发（Real）",
     "replacements": {
       "0d0d4e2e-b040-45d1-8a4c-e775520a4bbc": {
         "type": "n8n-nodes-base.slack",

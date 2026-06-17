@@ -545,6 +545,6 @@
     "foreign_services": [
       "Supabase"
     ],
-    "description_zh": "Enrich creator handles with cr"
+    "description_zh": "社交媒体管理，多平台内容发布和监听，定时执行（Enrich）"
   }
 }

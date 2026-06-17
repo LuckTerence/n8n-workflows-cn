@@ -194,6 +194,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Notion→飞书文档/语雀",
-    "description_zh": "图像（Automated·Background）"
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Background）"
   }
 }

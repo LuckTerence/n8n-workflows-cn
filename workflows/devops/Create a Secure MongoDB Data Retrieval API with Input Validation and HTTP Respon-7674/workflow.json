@@ -454,6 +454,6 @@
     "tier": "A",
     "source_id": 7674,
     "synced_at": "2026-06-17T14:18:11.884901",
-    "description_zh": "API 接口（Create）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务，Webhook 触发（Secure）"
   }
 }

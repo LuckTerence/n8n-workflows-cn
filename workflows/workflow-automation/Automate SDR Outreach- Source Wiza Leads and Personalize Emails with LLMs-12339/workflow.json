@@ -2177,6 +2177,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "邮件（Automate·Sdr）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Sdr）"
   }
 }

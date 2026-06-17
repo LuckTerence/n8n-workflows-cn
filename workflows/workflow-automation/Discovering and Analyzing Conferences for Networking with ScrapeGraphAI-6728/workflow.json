@@ -247,6 +247,6 @@
     "tier": "A",
     "source_id": 6728,
     "synced_at": "2026-06-17T14:22:08.435590",
-    "description_zh": "数据采集（Discovering）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Discovering）"
   }
 }

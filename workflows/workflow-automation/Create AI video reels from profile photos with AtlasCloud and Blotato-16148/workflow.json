@@ -744,6 +744,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "视频生成（Create）"
+    "description_zh": "AI 图像生成工作流，文生图或图生图，Webhook 触发（Video）"
   }
 }

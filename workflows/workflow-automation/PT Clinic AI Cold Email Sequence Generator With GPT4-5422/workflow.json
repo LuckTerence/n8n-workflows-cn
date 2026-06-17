@@ -321,7 +321,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化（PT）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Clinic）",
     "replacements": {
       "a8eaf027-a13a-4083-b331-800b354ff482": {
         "type": "n8n-nodes-base.googleSheets",

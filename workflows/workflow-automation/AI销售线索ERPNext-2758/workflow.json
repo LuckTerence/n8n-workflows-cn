@@ -732,7 +732,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI销售线索ERPNext",
-    "description_zh": "AI驱动的销售线索管理和跟进",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，Webhook 触发（Erpnext）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2758,

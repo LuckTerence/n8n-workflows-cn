@@ -1405,6 +1405,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "Aggregate News Articles from N"
+    "description_zh": "内容管理工具，自动生成或发布内容，定时执行（Aggregate）"
   }
 }

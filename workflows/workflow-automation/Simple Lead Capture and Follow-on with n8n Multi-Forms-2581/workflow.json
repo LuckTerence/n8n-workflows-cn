@@ -494,7 +494,7 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Simple Lead Capture and Follow",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据（Simple）",
     "replacements": {
       "e7143922-7de1-448d-9abb-72034437f79c": {
         "type": "n8n-nodes-base.googleSheets",

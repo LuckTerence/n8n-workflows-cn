@@ -252,7 +252,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Send Daily Mortgage Rate Updat",
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈，定时执行",
     "replacements": {
       "03ad32b4-a10b-40bb-8c82-df36afc1ece2": {
         "type": "n8n-nodes-base.discord",

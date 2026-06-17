@@ -360,7 +360,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "PDF 文档（CV）",
+    "description_zh": "AI 招聘助手，简历筛选或面试流程自动化（Resume）",
     "replacements": {
       "d21fe4dd-0879-4e5a-a70d-10f09b25eee2": {
         "type": "n8n-nodes-base.googleDrive",

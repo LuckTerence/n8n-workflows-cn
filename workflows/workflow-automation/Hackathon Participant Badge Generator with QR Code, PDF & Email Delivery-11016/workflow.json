@@ -396,7 +396,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Hackathon）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Hackathon）",
     "replacements": {
       "416e76d5-1ff1-4d86-b937-dfcb69e3b9fa": {
         "type": "n8n-nodes-base.googleSheets",

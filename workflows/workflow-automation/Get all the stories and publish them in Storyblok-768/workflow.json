@@ -84,6 +84,6 @@
     "tier": "A",
     "source_id": 768,
     "synced_at": "2026-06-17T14:09:56.545984",
-    "description_zh": "自动化工作流（Get·All）"
+    "description_zh": "Get all the stories and publish them in Storyblok（自动化）"
   }
 }

@@ -268,6 +268,6 @@
     "tier": "A",
     "source_id": 6265,
     "synced_at": "2026-06-17T14:17:51.711395",
-    "description_zh": "HR（Automated·Gold）"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Gold）"
   }
 }

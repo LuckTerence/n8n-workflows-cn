@@ -1783,7 +1783,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
-    "description_zh": "视频（Fully）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容，定时执行（Fully）",
     "replacements": {
       "ad87317d-3ed0-4fdf-aea5-7b2fa60fb59f": {
         "type": "n8n-nodes-base.googleDrive",

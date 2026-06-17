@@ -606,7 +606,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "语音（Create）",
+    "description_zh": "AI 语音处理工作流，语音合成或转录（Long）",
     "replacements": {
       "5dab72a8-326f-4483-a83f-0c68546508fe": {
         "type": "n8n-nodes-base.googleSheets",

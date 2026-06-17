@@ -978,7 +978,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "自动化工作流（Advanced）",
+    "description_zh": "Advanced AI Demo (Presented at AI Developers #14 m（AI 增强）",
     "replacements": {
       "fb774d11-da48-4481-ad4e-8c93274f123e": {
         "type": "n8n-nodes-base.slack",

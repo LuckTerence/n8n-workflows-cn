@@ -590,7 +590,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Automated B2B Lead Generation-",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Lead）",
     "replacements": {
       "3cc6fa78-f210-49e8-a49a-b5735ef7c262": {
         "type": "n8n-nodes-base.googleSheets",

@@ -819,7 +819,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人、Notion→飞书文档/语雀",
-    "description_zh": "流程自动化（Generate）",
+    "description_zh": "Generate clean plates and automate object removal （自动化）",
     "replacements": {
       "5df88f1b-96ec-4489-9f21-221a04a4e4dd": {
         "type": "n8n-nodes-base.googleDrive",

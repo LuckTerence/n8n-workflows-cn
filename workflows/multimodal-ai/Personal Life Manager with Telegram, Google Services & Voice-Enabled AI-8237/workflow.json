@@ -661,7 +661,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "Telegram、语音（Personal）",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Personal）",
     "replacements": {
       "c70236ea-91ab-4e47-b6f6-63a70ede5d3c": {
         "type": "n8n-nodes-base.googleCalendarTool",

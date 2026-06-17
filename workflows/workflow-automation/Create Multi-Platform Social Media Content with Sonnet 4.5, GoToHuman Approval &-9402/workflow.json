@@ -556,7 +556,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Create Multi-Platform Social M",
+    "description_zh": "社交媒体管理，多平台内容发布和监听，定时执行（Multi）",
     "replacements": {
       "1600d02f-593b-4546-b6f2-7f6cf5401ca0": {
         "type": "n8n-nodes-base.googleSheets",

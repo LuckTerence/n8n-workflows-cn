@@ -31,6 +31,6 @@
     "tier": "A",
     "source_id": 517,
     "synced_at": "2026-06-17T14:09:59.512045",
-    "description_zh": "自动化工作流（Get·New）"
+    "description_zh": "Get new time entries from Toggl（自动化）"
   }
 }

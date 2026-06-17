@@ -192,6 +192,6 @@
     "tier": "A",
     "source_id": 13354,
     "synced_at": "2026-06-17T14:17:36.350065",
-    "description_zh": "聊天机器人、Agent、对话（Question）"
+    "description_zh": "AI 聊天机器人，支持多轮对话和智能回复（Question）"
   }
 }

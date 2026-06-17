@@ -410,7 +410,7 @@
   },
   "_cn_meta": {
     "title_zh": "fal.ai图片生成",
-    "description_zh": "基于fal.ai的文本生成图片",
+    "description_zh": "AI 图像生成工作流，文生图或图生图，Webhook 触发（Fal）",
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 4108,

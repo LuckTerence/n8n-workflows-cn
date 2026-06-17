@@ -51,6 +51,6 @@
     "tier": "A",
     "source_id": 667,
     "synced_at": "2026-06-17T14:11:24.635782",
-    "description_zh": "自动化工作流（Send·Sms）"
+    "description_zh": "Send an SMS using the Mocean node（自动化）"
   }
 }

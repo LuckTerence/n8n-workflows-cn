@@ -855,6 +855,6 @@
     "foreign_services": [
       "Zoom"
     ],
-    "description_zh": "Agent（Multi）"
+    "description_zh": "多智能体协作系统，多个 AI Agent 协同完成任务（Multi）"
   }
 }

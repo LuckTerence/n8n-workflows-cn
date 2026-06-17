@@ -523,7 +523,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格",
-    "description_zh": "监控（Monitor）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Monitor）",
     "replacements": {
       "32a2b196-121f-4188-85df-54708df4bd01": {
         "type": "n8n-nodes-base.googleSheets",

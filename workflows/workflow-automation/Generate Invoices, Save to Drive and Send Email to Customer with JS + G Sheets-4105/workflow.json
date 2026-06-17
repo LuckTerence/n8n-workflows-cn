@@ -463,7 +463,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "邮件、语音、发票（Generate）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Invoices）",
     "replacements": {
       "bf50ca10-4021-4e6f-9c08-56fd84ce13ed": {
         "type": "n8n-nodes-base.googleSheets",

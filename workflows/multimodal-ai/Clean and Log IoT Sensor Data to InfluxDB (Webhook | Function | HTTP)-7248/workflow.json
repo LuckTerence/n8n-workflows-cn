@@ -172,6 +172,6 @@
     "tier": "A",
     "source_id": 7248,
     "synced_at": "2026-06-17T14:19:50.500774",
-    "description_zh": "Webhook 集成（Clean）"
+    "description_zh": "AI 图像生成工作流，文生图或图生图，Webhook 触发（Clean）"
   }
 }

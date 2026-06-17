@@ -582,7 +582,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Slack→飞书群机器人",
-    "description_zh": "自动化工作流（Enterprise）",
+    "description_zh": "Enterprise Contract Lifecycle Management with AI R（自动化）",
     "replacements": {
       "notify-legal": {
         "type": "n8n-nodes-base.slack",

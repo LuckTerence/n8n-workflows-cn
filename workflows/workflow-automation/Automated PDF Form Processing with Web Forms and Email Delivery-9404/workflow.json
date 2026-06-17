@@ -335,6 +335,6 @@
     "tier": "A",
     "source_id": 9404,
     "synced_at": "2026-06-17T14:15:34.001312",
-    "description_zh": "邮件（Automated·Pdf）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Pdf）"
   }
 }

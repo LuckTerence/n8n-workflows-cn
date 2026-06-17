@@ -534,7 +534,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件自动化（Modular）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Modular）",
     "replacements": {
       "c411a82d-0b86-49da-a11f-47ec79f9f7ff": {
         "type": "n8n-nodes-base.googleSheets",

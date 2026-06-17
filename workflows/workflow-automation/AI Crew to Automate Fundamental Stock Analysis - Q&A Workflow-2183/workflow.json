@@ -452,7 +452,7 @@
       "Supabase"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Supabase→腾讯云CloudBase",
-    "description_zh": "股票（Crew）",
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，Webhook 触发",
     "replacements": {
       "9dc8f2a7-eeff-4a35-be52-05c42b71eee4": {
         "type": "n8n-nodes-base.googleDrive",

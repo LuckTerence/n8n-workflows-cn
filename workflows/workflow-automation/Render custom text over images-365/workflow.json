@@ -134,6 +134,6 @@
     "tier": "A",
     "source_id": 365,
     "synced_at": "2026-06-17T14:11:03.908587",
-    "description_zh": "图片生成（Render）"
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Render）"
   }
 }

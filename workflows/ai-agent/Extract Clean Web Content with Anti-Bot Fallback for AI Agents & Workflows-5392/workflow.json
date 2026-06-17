@@ -546,6 +546,6 @@
     "tier": "A",
     "source_id": 5392,
     "synced_at": "2026-06-17T14:17:01.637948",
-    "description_zh": "Agent（Extract）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Clean）"
   }
 }

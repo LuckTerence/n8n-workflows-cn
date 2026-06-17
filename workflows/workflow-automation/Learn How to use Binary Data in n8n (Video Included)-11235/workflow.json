@@ -556,7 +556,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "视频（Learn）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Learn）",
     "replacements": {
       "d1a50ca7-a270-4b3b-9424-d8d9b747792e": {
         "type": "n8n-nodes-base.googleDrive",

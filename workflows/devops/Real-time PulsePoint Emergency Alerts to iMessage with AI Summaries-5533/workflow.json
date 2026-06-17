@@ -318,6 +318,6 @@
     "tier": "A",
     "source_id": 5533,
     "synced_at": "2026-06-17T14:19:06.263215",
-    "description_zh": "告警通知（Real）"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Real）"
   }
 }

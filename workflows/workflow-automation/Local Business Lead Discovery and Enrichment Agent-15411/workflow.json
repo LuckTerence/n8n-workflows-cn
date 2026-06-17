@@ -939,6 +939,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase",
-    "description_zh": "Agent（Local）"
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，定时执行（Local）"
   }
 }

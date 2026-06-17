@@ -549,6 +549,6 @@
     "tier": "A",
     "source_id": 7946,
     "synced_at": "2026-06-17T14:10:06.834576",
-    "description_zh": "Hybrid Search with Qdrant & n8"
+    "description_zh": "联网搜索工具，AI 驱动的信息检索和分析（Hybrid）"
   }
 }

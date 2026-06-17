@@ -894,7 +894,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Automate demand forecasting & ",
+    "description_zh": "电商自动化，订单处理或商品管理，定时执行",
     "replacements": {
       "e1aed4dd-850f-4422-b034-629a88cce140": {
         "type": "n8n-nodes-base.slack",

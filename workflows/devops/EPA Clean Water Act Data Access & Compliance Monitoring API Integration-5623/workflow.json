@@ -959,6 +959,6 @@
     "tier": "A",
     "source_id": 5623,
     "synced_at": "2026-06-17T14:18:24.154242",
-    "description_zh": "监控（EPA）"
+    "description_zh": "监控告警系统，异常检测并发送通知（Epa）"
   }
 }

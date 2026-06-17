@@ -203,7 +203,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Perform）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Perform）",
     "replacements": {
       "56abf128-57b3-4038-a262-38b09b3e3faf": {
         "type": "n8n-nodes-base.googleSheets",

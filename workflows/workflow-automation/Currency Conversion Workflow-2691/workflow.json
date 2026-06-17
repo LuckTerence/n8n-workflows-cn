@@ -178,6 +178,6 @@
     "tier": "A",
     "source_id": 2691,
     "synced_at": "2026-06-17T14:14:11.855018",
-    "description_zh": "工作流管理（Currency）"
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停，Webhook 触发（Currency）"
   }
 }

@@ -1253,7 +1253,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Slack→飞书群机器人、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase",
-    "description_zh": "监控（Automated·Product）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Product）",
     "replacements": {
       "a802b7e3-031a-4ed0-8137-ed9c4a8d63cb": {
         "type": "n8n-nodes-base.slack",

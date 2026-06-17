@@ -1176,6 +1176,6 @@
     "foreign_services": [
       "Pinecone"
     ],
-    "description_zh": "邮件（Automated·Email）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Email）"
   }
 }

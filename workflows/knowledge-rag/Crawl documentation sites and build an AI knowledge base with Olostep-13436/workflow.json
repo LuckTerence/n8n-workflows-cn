@@ -1164,7 +1164,7 @@
       "Pinecone"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "网页爬取（Crawl）",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Crawl）",
     "replacements": {
       "7401b2b1-a43d-4a29-a8fe-40e9abc3e8bc": {
         "type": "n8n-nodes-base.googleDrive",

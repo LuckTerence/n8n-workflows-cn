@@ -449,6 +449,6 @@
     "tier": "A",
     "source_id": 7398,
     "synced_at": "2026-06-17T14:12:25.671940",
-    "description_zh": "系统监控（Comprehensive）"
+    "description_zh": "监控告警系统，异常检测并发送通知（Comprehensive）"
   }
 }

@@ -2201,7 +2201,7 @@
       "Supabase"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人、Supabase→腾讯云CloudBase",
-    "description_zh": "RAG 检索增强（Enhance）",
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答，定时执行（Enhance）",
     "replacements": {
       "2dde2c80-830d-49a8-ac89-72722d703ba0": {
         "type": "n8n-nodes-base.slack",

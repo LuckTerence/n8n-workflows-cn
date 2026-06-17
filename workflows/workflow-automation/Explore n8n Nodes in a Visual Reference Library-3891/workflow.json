@@ -1882,7 +1882,7 @@
       "Pinecone"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档、Notion→飞书文档/语雀、Supabase→腾讯云CloudBase、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "n8n 运维（Explore）",
+    "description_zh": "Explore n8n Nodes in a Visual Reference Library（AI 增强）",
     "replacements": {
       "73276937-34bc-4943-87c3-1a6d57edac79": {
         "type": "n8n-nodes-base.dropbox",

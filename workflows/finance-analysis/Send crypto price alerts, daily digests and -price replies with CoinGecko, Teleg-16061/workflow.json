@@ -1361,7 +1361,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "加密货币（Send）",
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，定时执行（Crypto）",
     "replacements": {
       "dabb7d9e-caad-407e-b264-b1ffe00561d1": {
         "type": "n8n-nodes-base.googleSheets",

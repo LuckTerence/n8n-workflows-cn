@@ -742,7 +742,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信",
-    "description_zh": "消息通知（Food）",
+    "description_zh": "通知推送系统，多渠道消息分发，定时执行（Food）",
     "replacements": {
       "90184fe7-7c85-4e1c-8a50-db72dfbbeab6": {
         "type": "n8n-nodes-base.googleSheets",

@@ -524,6 +524,6 @@
     "tier": "A",
     "source_id": 6895,
     "synced_at": "2026-06-17T14:19:48.242757",
-    "description_zh": "语音（Book）"
+    "description_zh": "AI 语音处理工作流，语音合成或转录，Webhook 触发（Book）"
   }
 }

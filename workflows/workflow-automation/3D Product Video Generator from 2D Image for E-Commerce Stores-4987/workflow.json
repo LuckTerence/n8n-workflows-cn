@@ -755,7 +755,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图像、视频（Product）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Product）",
     "replacements": {
       "d615090d-236d-444a-add9-f9a429019088": {
         "type": "n8n-nodes-base.googleDrive",

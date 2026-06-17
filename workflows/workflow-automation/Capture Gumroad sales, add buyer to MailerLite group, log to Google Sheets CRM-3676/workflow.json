@@ -224,7 +224,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "CRM（Capture）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Capture）",
     "replacements": {
       "ee782134-e2d4-4f8b-a9d9-a09a919577ab": {
         "type": "n8n-nodes-base.googleSheets",

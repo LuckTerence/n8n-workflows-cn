@@ -589,6 +589,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Redis）"
+    "description_zh": "Redis Locking for Concurrent Task Handling（自动化）"
   }
 }

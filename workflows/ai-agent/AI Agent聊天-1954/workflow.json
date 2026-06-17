@@ -135,7 +135,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI Agent聊天",
-    "description_zh": "基础AI Agent对话模板",
+    "description_zh": "AI 聊天机器人，支持多轮对话和智能回复（Agent）",
     "category": "ai-agent",
     "tier": "A",
     "source_id": 1954,

@@ -474,7 +474,7 @@
   },
   "_cn_meta": {
     "title_zh": "Gmail智能分类归档",
-    "description_zh": "AI自动分类邮件并归档",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Gmail）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 3686,

@@ -379,7 +379,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Generate concert ticket PDFs w",
+    "description_zh": "PDF 文档处理，解析或生成 PDF 文件（Concert）",
     "replacements": {
       "node-sheets": {
         "type": "n8n-nodes-base.googleSheets",

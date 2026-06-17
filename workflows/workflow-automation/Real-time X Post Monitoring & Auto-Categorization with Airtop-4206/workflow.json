@@ -309,6 +309,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "系统监控（Real）"
+    "description_zh": "监控告警系统，异常检测并发送通知（Real）"
   }
 }

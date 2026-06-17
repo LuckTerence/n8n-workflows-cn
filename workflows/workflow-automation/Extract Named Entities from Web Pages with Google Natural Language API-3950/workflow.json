@@ -181,6 +181,6 @@
     "tier": "A",
     "source_id": 3950,
     "synced_at": "2026-06-17T14:08:56.857354",
-    "description_zh": "API 接口（Extract）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，Webhook 触发（Named）"
   }
 }

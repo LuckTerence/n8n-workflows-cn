@@ -183,6 +183,6 @@
     "tier": "A",
     "source_id": 5285,
     "synced_at": "2026-06-17T14:21:16.967373",
-    "description_zh": "Telegram 机器人（Location）"
+    "description_zh": "Telegram 机器人，消息驱动自动化流程，Webhook 触发（Location）"
   }
 }

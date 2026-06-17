@@ -239,6 +239,6 @@
     "tier": "A",
     "source_id": 5539,
     "synced_at": "2026-06-17T14:17:05.426583",
-    "description_zh": "Agent（IP）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（Geolocation）"
   }
 }

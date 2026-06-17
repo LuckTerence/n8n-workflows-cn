@@ -1885,6 +1885,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Supabase→腾讯云CloudBase",
-    "description_zh": "股票（Automate）"
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，定时执行（Stock）"
   }
 }

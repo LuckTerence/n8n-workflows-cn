@@ -765,7 +765,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Domain Outbound - Automate Lea",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Domain）",
     "replacements": {
       "f7bb1a9e-0f0f-4bec-85d4-539317088cc1": {
         "type": "n8n-nodes-base.googleSheets",

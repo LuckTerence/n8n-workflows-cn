@@ -547,6 +547,6 @@
     "tier": "A",
     "source_id": 2657,
     "synced_at": "2026-06-17T14:10:12.240103",
-    "description_zh": "图片生成（KNN）"
+    "description_zh": "AI 图像生成工作流，文生图或图生图（Knn）"
   }
 }

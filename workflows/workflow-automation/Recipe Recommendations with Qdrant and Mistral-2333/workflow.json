@@ -976,6 +976,6 @@
     "tier": "A",
     "source_id": 2333,
     "synced_at": "2026-06-17T14:11:02.107487",
-    "description_zh": "Recipe Recommendations with Qd"
+    "description_zh": "Recipe Recommendations with Qdrant and Mistral（AI 增强）"
   }
 }

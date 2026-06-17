@@ -859,7 +859,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Capture and Nurture Fraud-Proo",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据，定时执行（Capture）",
     "replacements": {
       "c9eb3b49-87fc-4fb3-97c8-69cfb56bd3aa": {
         "type": "n8n-nodes-base.googleSheets",

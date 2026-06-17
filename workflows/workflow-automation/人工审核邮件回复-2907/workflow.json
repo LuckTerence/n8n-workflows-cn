@@ -429,7 +429,7 @@
   },
   "_cn_meta": {
     "title_zh": "人工审核邮件回复",
-    "description_zh": "AI生成回复+人工确认后再发送",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（人工审核邮件回复）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2907,

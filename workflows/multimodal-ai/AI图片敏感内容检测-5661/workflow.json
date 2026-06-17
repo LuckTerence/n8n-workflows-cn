@@ -169,7 +169,7 @@
   "triggerCount": 0,
   "_cn_meta": {
     "title_zh": "AI图片敏感内容检测",
-    "description_zh": "自动检测图片中的不当内容",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（AI图片敏感内容检测）",
     "category": "multimodal-ai",
     "tier": "A",
     "source_id": 5661,

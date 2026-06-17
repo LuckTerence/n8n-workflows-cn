@@ -155,6 +155,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "视频生成（Generate·Videos）"
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Videos）"
   }
 }

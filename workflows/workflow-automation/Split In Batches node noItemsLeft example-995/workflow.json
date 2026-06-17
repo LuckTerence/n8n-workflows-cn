@@ -135,6 +135,6 @@
     "tier": "A",
     "source_id": 995,
     "synced_at": "2026-06-17T14:11:33.602434",
-    "description_zh": "自动化工作流（Split）"
+    "description_zh": "Split In Batches node noItemsLeft example（自动化）"
   }
 }

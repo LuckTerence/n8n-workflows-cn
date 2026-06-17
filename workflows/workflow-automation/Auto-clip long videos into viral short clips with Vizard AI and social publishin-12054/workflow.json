@@ -646,7 +646,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "视频（clip）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Auto）",
     "replacements": {
       "58229a8e-c25a-4ec4-bdc6-612eb9587acc": {
         "type": "n8n-nodes-base.googleSheets",

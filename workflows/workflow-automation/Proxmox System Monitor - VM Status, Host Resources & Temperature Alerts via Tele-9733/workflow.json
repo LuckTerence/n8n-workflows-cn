@@ -544,6 +544,6 @@
     "tier": "A",
     "source_id": 9733,
     "synced_at": "2026-06-17T14:13:29.676576",
-    "description_zh": "监控（Proxmox）"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Proxmox）"
   }
 }

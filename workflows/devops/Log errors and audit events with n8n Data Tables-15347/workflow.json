@@ -648,6 +648,6 @@
     "tier": "A",
     "source_id": 15347,
     "synced_at": "2026-06-17T14:18:50.341106",
-    "description_zh": "n8n 运维（Log）"
+    "description_zh": "Log errors and audit events with n8n Data Tables（自动化）"
   }
 }

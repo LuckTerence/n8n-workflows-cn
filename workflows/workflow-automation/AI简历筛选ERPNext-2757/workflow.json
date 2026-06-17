@@ -1077,7 +1077,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI简历筛选ERPNext",
-    "description_zh": "自动筛选候选人关联ERPNext",
+    "description_zh": "AI 招聘助手，简历筛选或面试流程自动化，Webhook 触发",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2757,

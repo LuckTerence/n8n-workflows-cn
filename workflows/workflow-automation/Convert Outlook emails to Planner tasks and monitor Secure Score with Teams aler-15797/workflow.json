@@ -1164,6 +1164,6 @@
     "tier": "A",
     "source_id": 15797,
     "synced_at": "2026-06-17T14:21:07.739062",
-    "description_zh": "邮件、监控（Convert）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，定时执行（Outlook）"
   }
 }

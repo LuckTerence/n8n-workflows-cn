@@ -222,6 +222,6 @@
     "tier": "A",
     "source_id": 5651,
     "synced_at": "2026-06-17T14:18:53.318415",
-    "description_zh": "Mobility API MCP Server"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Mobility）"
   }
 }

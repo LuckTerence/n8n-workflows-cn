@@ -901,7 +901,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "工单管理（Powered）",
+    "description_zh": "AI-Powered Ticket Triage with Multi-Model Classifi（AI 增强）",
     "replacements": {
       "af2df0d0-e747-4836-b6de-392a914fd728": {
         "type": "n8n-nodes-base.slack",

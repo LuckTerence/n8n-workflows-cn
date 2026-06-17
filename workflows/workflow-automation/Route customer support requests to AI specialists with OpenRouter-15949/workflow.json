@@ -440,6 +440,6 @@
       "Slack",
       "Stripe"
     ],
-    "description_zh": "自动化工作流（Route）"
+    "description_zh": "Route customer support requests to AI specialists （AI 增强）"
   }
 }

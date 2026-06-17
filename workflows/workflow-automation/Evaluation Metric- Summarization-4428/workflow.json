@@ -516,7 +516,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "自动化工作流（Evaluation）",
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，Webhook 触发",
     "replacements": {
       "f6e24007-39e5-47e4-88fc-a7bf3a994fa6": {
         "type": "n8n-nodes-base.googleDrive",

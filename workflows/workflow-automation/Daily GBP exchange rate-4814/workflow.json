@@ -171,7 +171,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Daily）",
+    "description_zh": "Daily GBP exchange rate（自动化）",
     "replacements": {
       "63b058fd-c9a7-44ee-8356-d1731448922e": {
         "type": "n8n-nodes-base.googleSheets",

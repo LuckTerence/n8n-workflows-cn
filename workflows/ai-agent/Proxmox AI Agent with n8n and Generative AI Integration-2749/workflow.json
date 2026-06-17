@@ -1143,6 +1143,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "Agent（Proxmox）"
+    "description_zh": "Proxmox AI Agent with n8n and Generative AI Integr（AI 增强）"
   }
 }

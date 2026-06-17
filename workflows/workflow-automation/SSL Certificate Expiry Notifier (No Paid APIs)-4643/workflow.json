@@ -344,7 +344,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "SSL Certificate Expiry Notifie",
+    "description_zh": "通知推送系统，多渠道消息分发，定时执行（Ssl）",
     "replacements": {
       "b8c160c6-29a3-4b7d-ab78-e126206627b1": {
         "type": "n8n-nodes-base.googleSheets",

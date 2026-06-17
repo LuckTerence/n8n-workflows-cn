@@ -794,7 +794,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Twilio→腾讯云短信、Notion→飞书文档/语雀",
-    "description_zh": "邮件、Telegram（Gumroad）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Gumroad）",
     "replacements": {
       "a3d30169-6b1a-45ae-8d99-e30f1d13cd8b": {
         "type": "n8n-nodes-base.googleSheets",

@@ -578,6 +578,6 @@
     "tier": "A",
     "source_id": 7662,
     "synced_at": "2026-06-17T14:14:52.274563",
-    "description_zh": "Automated Document Compliance "
+    "description_zh": "数据库操作工具，自动查询或写入数据库，Webhook 触发"
   }
 }

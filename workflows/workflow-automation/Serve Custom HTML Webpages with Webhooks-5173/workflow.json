@@ -96,6 +96,6 @@
     "tier": "A",
     "source_id": 5173,
     "synced_at": "2026-06-17T14:14:42.987165",
-    "description_zh": "Webhook 集成（Serve）"
+    "description_zh": "Serve Custom HTML Webpages with Webhooks（自动化）"
   }
 }

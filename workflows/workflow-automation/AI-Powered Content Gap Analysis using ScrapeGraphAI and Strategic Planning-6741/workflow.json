@@ -454,7 +454,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "数据采集（Powered）",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Powered）",
     "replacements": {
       "c085935b-5499-4624-aaed-165975b68c00": {
         "type": "n8n-nodes-base.googleSheets",

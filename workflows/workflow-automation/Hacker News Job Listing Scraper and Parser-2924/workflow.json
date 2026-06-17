@@ -631,7 +631,7 @@
     "tier": "A",
     "source_id": 2924,
     "synced_at": "2026-06-17T14:06:25.185148",
-    "description_zh": "Hacker News Job Listing Scrape",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Hacker）",
     "replacements": {
       "1ca5c39f-f21d-455a-b63a-702e7e3ba02b": {
         "type": "n8n-nodes-base.airtable",

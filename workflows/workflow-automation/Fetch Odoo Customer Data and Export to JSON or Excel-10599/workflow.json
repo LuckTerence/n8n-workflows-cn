@@ -400,6 +400,6 @@
     "tier": "A",
     "source_id": 10599,
     "synced_at": "2026-06-17T14:09:06.842748",
-    "description_zh": "自动化工作流（Fetch）"
+    "description_zh": "Fetch Odoo Customer Data and Export to JSON or Exc（自动化）"
   }
 }

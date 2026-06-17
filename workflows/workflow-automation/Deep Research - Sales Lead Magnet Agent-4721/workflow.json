@@ -866,7 +866,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS、Google Docs→飞书文档",
-    "description_zh": "Agent（Deep）",
+    "description_zh": "客户关系管理工具，自动管理销售线索和客户数据（Deep）",
     "replacements": {
       "f704a1c4-04ed-40cf-a9d2-49f60c2fa249": {
         "type": "n8n-nodes-base.googleDrive",

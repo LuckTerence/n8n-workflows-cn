@@ -484,7 +484,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Create）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Personalized）",
     "replacements": {
       "357f24f2-50ce-4100-9f09-ed8e1dcaf29a": {
         "type": "n8n-nodes-base.googleSheets",

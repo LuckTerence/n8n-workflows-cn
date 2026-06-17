@@ -738,6 +738,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "Auto n8n Updater (Docker)"
+    "description_zh": "自动部署流水线，代码提交后自动构建和发布，定时执行"
   }
 }

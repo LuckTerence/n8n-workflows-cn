@@ -606,6 +606,6 @@
     "tier": "A",
     "source_id": 14167,
     "synced_at": "2026-06-17T14:22:20.846198",
-    "description_zh": "Agent（Scrape）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，Webhook 触发（Scrape）"
   }
 }

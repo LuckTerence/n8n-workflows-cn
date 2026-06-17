@@ -233,7 +233,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "求职招聘",
+    "description_zh": "联网搜索工具，AI 驱动的信息检索和分析（Effortless）",
     "replacements": {
       "da9591a1-87fd-4b4e-bcae-ec2fc5264b9a": {
         "type": "n8n-nodes-base.googleDrive",

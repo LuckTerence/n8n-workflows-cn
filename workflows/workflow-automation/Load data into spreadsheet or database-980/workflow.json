@@ -107,6 +107,6 @@
     "tier": "A",
     "source_id": 980,
     "synced_at": "2026-06-17T14:20:43.591164",
-    "description_zh": "Load data into spreadsheet or "
+    "description_zh": "数据库操作工具，自动查询或写入数据库（Load）"
   }
 }

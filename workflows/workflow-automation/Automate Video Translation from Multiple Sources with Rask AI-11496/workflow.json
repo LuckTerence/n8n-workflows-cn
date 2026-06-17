@@ -571,6 +571,6 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS",
-    "description_zh": "视频（Automate·Video）"
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Video）"
   }
 }

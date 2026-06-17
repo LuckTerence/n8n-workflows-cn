@@ -686,7 +686,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI邮件自动回复RAG",
-    "description_zh": "RAG增强的邮件自动回复系统",
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答（Rag）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4748,

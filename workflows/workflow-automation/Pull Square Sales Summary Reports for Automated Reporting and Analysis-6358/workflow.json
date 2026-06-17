@@ -326,6 +326,6 @@
       "Slack"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Slack→飞书群机器人",
-    "description_zh": "Pull Square Sales Summary Repo"
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息"
   }
 }

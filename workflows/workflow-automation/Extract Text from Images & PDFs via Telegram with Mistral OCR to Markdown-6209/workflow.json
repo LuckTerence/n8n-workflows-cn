@@ -1432,6 +1432,6 @@
     "tier": "A",
     "source_id": 6209,
     "synced_at": "2026-06-17T14:15:50.965262",
-    "description_zh": "Telegram、图像（Extract·Text）"
+    "description_zh": "Telegram 机器人，消息驱动自动化流程，Webhook 触发（Text）"
   }
 }

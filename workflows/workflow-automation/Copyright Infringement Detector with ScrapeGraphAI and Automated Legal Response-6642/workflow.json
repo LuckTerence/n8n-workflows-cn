@@ -331,6 +331,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Copyright Infringement Detecto"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Copyright）"
   }
 }

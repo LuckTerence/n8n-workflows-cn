@@ -235,7 +235,7 @@
   },
   "_cn_meta": {
     "title_zh": "Gmail客服自动回复",
-    "description_zh": "Ollama+Pinecone RAG",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Gmail）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4760,

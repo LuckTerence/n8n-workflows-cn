@@ -156,7 +156,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI Linux管理员",
-    "description_zh": "用AI管理Linux VPS实例",
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停（Linux）",
     "category": "devops",
     "tier": "A",
     "source_id": 3020,

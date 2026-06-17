@@ -273,6 +273,6 @@
     "tier": "A",
     "source_id": 5638,
     "synced_at": "2026-06-17T14:17:18.326133",
-    "description_zh": "Agent（Star）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（Star）"
   }
 }

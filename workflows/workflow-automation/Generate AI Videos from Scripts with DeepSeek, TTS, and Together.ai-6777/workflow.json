@@ -2772,7 +2772,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
-    "description_zh": "视频（Generate·Videos）",
+    "description_zh": "AI 视频生成工作流，自动创作视频内容（Videos）",
     "replacements": {
       "4ea7537f-f72c-4f2f-96ed-4cb6a14d6e0f": {
         "type": "n8n-nodes-base.googleSheets",

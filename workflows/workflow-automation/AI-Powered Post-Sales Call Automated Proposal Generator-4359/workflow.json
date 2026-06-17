@@ -376,7 +376,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Zoom→腾讯会议",
-    "description_zh": "流程自动化（Powered）",
+    "description_zh": "内容管理工具，自动生成或发布内容（Powered）",
     "replacements": {
       "7e52e4c7-49da-499a-a9ea-3e421611fb87": {
         "type": "n8n-nodes-base.googleDrive",

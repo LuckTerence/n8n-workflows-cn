@@ -656,7 +656,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "API 接口（Deduplicate）",
+    "description_zh": "API 集成接口，连接和编排多个第三方服务，定时执行",
     "replacements": {
       "2dffda98-18c6-4c7b-8fc3-0e6539642ea2": {
         "type": "n8n-nodes-base.airtable",

@@ -665,7 +665,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Phishing）",
+    "description_zh": "Phishing Analysis - URLScan.io and VirusTotal（自动化）",
     "replacements": {
       "5a1e0490-6971-4490-a806-46da5e226365": {
         "type": "n8n-nodes-base.slack",

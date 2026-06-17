@@ -456,7 +456,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成（Create）",
+    "description_zh": "AI 图像生成工作流，文生图或图生图（High）",
     "replacements": {
       "": {
         "type": "n8n-nodes-base.googleDrive",

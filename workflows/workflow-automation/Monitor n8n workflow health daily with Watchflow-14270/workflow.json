@@ -305,6 +305,6 @@
     "tier": "A",
     "source_id": 14270,
     "synced_at": "2026-06-17T14:13:17.675319",
-    "description_zh": "监控（Monitor）"
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Monitor）"
   }
 }

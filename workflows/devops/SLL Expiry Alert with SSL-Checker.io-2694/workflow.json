@@ -338,7 +338,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "告警通知（SLL）",
+    "description_zh": "监控告警系统，异常检测并发送通知，定时执行（Sll）",
     "replacements": {
       "260b66a2-0841-4dc7-9666-acbc9317fd91": {
         "type": "n8n-nodes-base.googleSheets",

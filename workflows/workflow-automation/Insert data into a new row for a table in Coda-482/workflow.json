@@ -90,6 +90,6 @@
     "tier": "A",
     "source_id": 482,
     "synced_at": "2026-06-17T14:10:09.824038",
-    "description_zh": "自动化工作流（Insert）"
+    "description_zh": "Insert data into a new row for a table in Coda（自动化）"
   }
 }

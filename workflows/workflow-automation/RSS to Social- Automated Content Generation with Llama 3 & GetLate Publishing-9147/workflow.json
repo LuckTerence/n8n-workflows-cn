@@ -1579,7 +1579,7 @@
     "tier": "A",
     "source_id": 9147,
     "synced_at": "2026-06-17T14:10:54.223751",
-    "description_zh": "RSS to Social- Automated Conte",
+    "description_zh": "社交媒体管理，多平台内容发布和监听，定时执行（Rss）",
     "replacements": {
       "0d441755-0a8c-40d2-8771-bce33ed96328": {
         "type": "n8n-nodes-base.airtable",

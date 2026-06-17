@@ -532,6 +532,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "备份（Route）"
+    "description_zh": "自动备份系统，定时备份数据或配置，Webhook 触发"
   }
 }

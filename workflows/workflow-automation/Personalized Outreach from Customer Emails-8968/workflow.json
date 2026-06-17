@@ -541,7 +541,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "邮件自动化（Personalized）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Personalized）",
     "replacements": {
       "e091dea6-9880-48fd-a7ca-7b4fadce66ce": {
         "type": "n8n-nodes-base.hubspot",

@@ -801,7 +801,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI新闻研究团队",
-    "description_zh": "24小时AI自动化新闻简报",
+    "description_zh": "内容管理工具，自动生成或发布内容，定时执行（AI新闻研究团队）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2778,

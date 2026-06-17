@@ -603,6 +603,6 @@
     "tier": "A",
     "source_id": 12233,
     "synced_at": "2026-06-17T14:22:03.468238",
-    "description_zh": "数据采集（Aggregate）"
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据，定时执行（Aggregate）"
   }
 }

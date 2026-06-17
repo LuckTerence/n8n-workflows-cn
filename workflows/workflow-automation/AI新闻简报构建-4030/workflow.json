@@ -318,7 +318,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI新闻简报构建",
-    "description_zh": "Dumpling AI爬站+GPT-4o摘要+简报",
+    "description_zh": "内容管理工具，自动生成或发布内容（AI新闻简报构建）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 4030,

@@ -358,6 +358,6 @@
     "tier": "A",
     "source_id": 13445,
     "synced_at": "2026-06-17T14:18:31.741791",
-    "description_zh": "自动部署"
+    "description_zh": "自动部署流水线，代码提交后自动构建和发布，Webhook 触发（Gate）"
   }
 }

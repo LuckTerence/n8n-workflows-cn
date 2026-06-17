@@ -389,6 +389,6 @@
     "tier": "A",
     "source_id": 8044,
     "synced_at": "2026-06-17T14:14:51.543494",
-    "description_zh": "RAG（Automate）"
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答，定时执行（Token）"
   }
 }

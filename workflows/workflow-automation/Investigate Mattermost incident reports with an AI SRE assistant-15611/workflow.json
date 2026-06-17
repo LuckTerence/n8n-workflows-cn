@@ -772,6 +772,6 @@
     "tier": "A",
     "source_id": 15611,
     "synced_at": "2026-06-17T14:13:01.548378",
-    "description_zh": "自动化工作流（Investigate）"
+    "description_zh": "Investigate Mattermost incident reports with an AI（AI 增强）"
   }
 }

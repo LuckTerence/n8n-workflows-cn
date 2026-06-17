@@ -412,6 +412,6 @@
     "tier": "A",
     "source_id": 1947,
     "synced_at": "2026-06-17T14:11:10.486842",
-    "description_zh": "SQL to XML export with XSL tem"
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈，Webhook 触发（Sql）"
   }
 }

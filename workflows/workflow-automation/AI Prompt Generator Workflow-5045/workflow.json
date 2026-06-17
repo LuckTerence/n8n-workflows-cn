@@ -580,6 +580,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "工作流管理（Prompt）"
+    "description_zh": "n8n 工作流管理工具，编排控制工作流的启停（Prompt）"
   }
 }

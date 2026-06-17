@@ -267,6 +267,6 @@
     "tier": "A",
     "source_id": 13777,
     "synced_at": "2026-06-17T14:15:59.742776",
-    "description_zh": "PDF 文档（Generate·Styled）"
+    "description_zh": "PDF 文档处理，解析或生成 PDF 文件（Styled）"
   }
 }

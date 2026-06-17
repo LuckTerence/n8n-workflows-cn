@@ -681,7 +681,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "图片生成（Parse）",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（Parse）",
     "replacements": {
       "7abfb1f8-f6c8-4fd0-a78e-9d4b97a4d6bc": {
         "type": "n8n-nodes-base.googleDrive",

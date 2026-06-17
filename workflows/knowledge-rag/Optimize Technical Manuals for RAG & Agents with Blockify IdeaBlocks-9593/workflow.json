@@ -817,7 +817,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Drive→阿里云OSS、Google Drive→阿里云OSS",
-    "description_zh": "Agent、RAG（Optimize）",
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答，定时执行（Optimize）",
     "replacements": {
       "71e3e38e-b653-47d5-9924-3dd9d28cb401": {
         "type": "n8n-nodes-base.googleDrive",

@@ -28,6 +28,6 @@
     "tier": "A",
     "source_id": 686,
     "synced_at": "2026-06-17T14:11:01.386048",
-    "description_zh": "自动化工作流（Receive）"
+    "description_zh": "Receive updates when an event occurs in Taiga（自动化）"
   }
 }

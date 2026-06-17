@@ -830,6 +830,6 @@
     "tier": "A",
     "source_id": 12539,
     "synced_at": "2026-06-17T14:09:08.749147",
-    "description_zh": "API 接口（Fetch）"
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（Reliable）"
   }
 }

@@ -1697,7 +1697,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Powered）",
+    "description_zh": "AI-Powered Domain & IP Security Check Automation（AI 增强）",
     "replacements": {
       "a1864a19-f8c6-4e7e-9138-4dfdd236b721": {
         "type": "n8n-nodes-base.googleSheets",

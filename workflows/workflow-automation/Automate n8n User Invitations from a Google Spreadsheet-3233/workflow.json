@@ -371,7 +371,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Automate n8n User Invitations ",
+    "description_zh": "Automate n8n User Invitations from a Google Spread（自动化）",
     "replacements": {
       "2a66ddc7-5fde-4e2b-9ad6-7c68968214ae": {
         "type": "n8n-nodes-base.googleSheets",

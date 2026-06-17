@@ -79,6 +79,6 @@
     "tier": "A",
     "source_id": 700,
     "synced_at": "2026-06-17T14:10:51.712728",
-    "description_zh": "Purge n8n execution history lo"
+    "description_zh": "数据库操作工具，自动查询或写入数据库（Purge）"
   }
 }

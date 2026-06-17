@@ -361,6 +361,6 @@
     "tier": "A",
     "source_id": 2588,
     "synced_at": "2026-06-17T14:20:11.997788",
-    "description_zh": "邮件自动化（Assign）"
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Assign）"
   }
 }

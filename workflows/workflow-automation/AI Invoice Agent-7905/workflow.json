@@ -469,7 +469,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Agent、语音、发票",
+    "description_zh": "AI 语音处理工作流，语音合成或转录（Invoice）",
     "replacements": {
       "89a82cb6-c972-4a06-9f7e-29e3f322ad89": {
         "type": "n8n-nodes-base.googleSheets",

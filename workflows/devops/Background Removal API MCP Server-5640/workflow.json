@@ -255,6 +255,6 @@
     "tier": "A",
     "source_id": 5640,
     "synced_at": "2026-06-17T14:17:59.697171",
-    "description_zh": "Background Removal API MCP Ser"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Background）"
   }
 }

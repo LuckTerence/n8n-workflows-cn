@@ -196,7 +196,7 @@
   },
   "_cn_meta": {
     "title_zh": "AI网页抓取",
-    "description_zh": "Jina+Google Sheets+OpenAI自动抓取网页数据",
+    "description_zh": "数据采集工具，自动抓取网页或 API 数据（AI网页抓取）",
     "category": "workflow-automation",
     "tier": "A",
     "source_id": 2552,

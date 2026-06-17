@@ -355,6 +355,6 @@
     "tier": "A",
     "source_id": 9318,
     "synced_at": "2026-06-17T14:11:08.100857",
-    "description_zh": "新闻聚合（Retrieve）"
+    "description_zh": "内容管理工具，自动生成或发布内容（Retrieve）"
   }
 }

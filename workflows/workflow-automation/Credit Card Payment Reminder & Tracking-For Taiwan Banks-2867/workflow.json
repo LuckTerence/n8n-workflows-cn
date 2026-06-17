@@ -798,7 +798,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "支付集成",
+    "description_zh": "财务自动化，发票处理或支付流程管理，Webhook 触发",
     "replacements": {
       "6c3b6c00-a0ac-474f-92a1-fcdea66516d7": {
         "type": "n8n-nodes-base.googleSheets",

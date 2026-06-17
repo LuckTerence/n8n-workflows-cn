@@ -361,7 +361,7 @@
       "Notion",
       "Slack"
     ],
-    "description_zh": "Automated Hugging Face Paper S",
+    "description_zh": "AI 内容摘要工具，自动提炼长文关键信息，定时执行（Hugging）",
     "replacements": {
       "94ba99bf-a33b-4311-a4e6-86490e1bb9ad": {
         "type": "n8n-nodes-base.notion",

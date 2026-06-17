@@ -428,7 +428,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Automate External Attack Surfa",
+    "description_zh": "API 集成接口，连接和编排多个第三方服务（External）",
     "replacements": {
       "9831dc5f-bf30-4f97-9302-14b14ad49628": {
         "type": "n8n-nodes-base.googleSheets",

@@ -1241,7 +1241,7 @@
   },
   "_cn_meta": {
     "title_zh": "自适应RAG策略",
-    "description_zh": "查询分类+Qdrant",
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答（Rag）",
     "category": "knowledge-rag",
     "tier": "A",
     "source_id": 3459,

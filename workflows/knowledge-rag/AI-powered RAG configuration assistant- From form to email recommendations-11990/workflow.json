@@ -412,6 +412,6 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信",
-    "description_zh": "邮件、RAG"
+    "description_zh": "RAG 检索增强生成系统，基于文档向量库的知识问答（Powered）"
   }
 }

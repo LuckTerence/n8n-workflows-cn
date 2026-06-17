@@ -451,7 +451,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "Consolidate Data from 5 Source",
+    "description_zh": "数据库操作工具，自动查询或写入数据库，定时执行",
     "replacements": {
       "b28ea25c-3c5e-44ca-856f-d5f057fce8ab": {
         "type": "n8n-nodes-base.googleSheets",

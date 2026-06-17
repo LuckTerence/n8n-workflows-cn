@@ -495,7 +495,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Automated·Referral）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送，Webhook 触发（Referral）",
     "replacements": {
       "eb052f76-0c33-418a-a6a2-c9a1835e46ab": {
         "type": "n8n-nodes-base.googleSheets",

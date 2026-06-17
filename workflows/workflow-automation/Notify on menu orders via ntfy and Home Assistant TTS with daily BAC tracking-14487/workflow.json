@@ -352,6 +352,6 @@
     "foreign_services": [
       "Notion"
     ],
-    "description_zh": "Notify on menu orders via ntfy"
+    "description_zh": "AI 语音处理工作流，语音合成或转录，Webhook 触发（Notify）"
   }
 }

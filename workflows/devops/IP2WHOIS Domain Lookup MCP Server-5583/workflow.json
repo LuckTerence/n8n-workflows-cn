@@ -180,6 +180,6 @@
     "tier": "A",
     "source_id": 5583,
     "synced_at": "2026-06-17T14:18:44.037355",
-    "description_zh": "IP2WHOIS Domain Lookup MCP Ser"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Whois）"
   }
 }

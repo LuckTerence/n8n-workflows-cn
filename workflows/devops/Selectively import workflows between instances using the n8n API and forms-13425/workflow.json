@@ -1557,7 +1557,7 @@
       "Notion",
       "Supabase"
     ],
-    "description_zh": "Selectively import workflows b",
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈（Selectively）",
     "replacements": {
       "39db5553-77e5-4a12-9b98-716d16bcb445": {
         "type": "n8n-nodes-base.notion",

@@ -636,7 +636,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "邮件（Social）",
+    "description_zh": "邮件自动化处理，AI 分类整理或定时发送（Social）",
     "replacements": {
       "923cca3d-69a9-4d26-80a3-e9062d42d8a8": {
         "type": "n8n-nodes-base.googleSheets",

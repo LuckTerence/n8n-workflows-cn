@@ -282,6 +282,6 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格",
-    "description_zh": "Run Hugging Face open-source A"
+    "description_zh": "Run Hugging Face open-source AI models via webhook（自动化）"
   }
 }

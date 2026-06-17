@@ -405,7 +405,7 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "自动化工作流（Detect）",
+    "description_zh": "Detect account and contact growth signals with Lus（自动化）",
     "replacements": {
       "c9873e32-cbc3-4c4b-b796-b3038562960e": {
         "type": "n8n-nodes-base.hubspot",

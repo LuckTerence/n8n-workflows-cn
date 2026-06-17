@@ -632,7 +632,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Docs→飞书文档、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "Telegram 机器人（Simple）",
+    "description_zh": "Telegram 机器人，消息驱动自动化流程（Simple）",
     "replacements": {
       "f0979cce-8c53-46c7-8391-b72f1aa719bd": {
         "type": "n8n-nodes-base.googleCalendarTool",

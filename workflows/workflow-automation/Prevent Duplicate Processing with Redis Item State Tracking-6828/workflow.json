@@ -795,7 +795,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Prevent）",
+    "description_zh": "Prevent Duplicate Processing with Redis Item State（自动化）",
     "replacements": {
       "d93cee23-3274-4105-be43-d7972c79da87": {
         "type": "n8n-nodes-base.googleSheets",

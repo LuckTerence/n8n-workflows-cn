@@ -162,7 +162,7 @@
       "Google Sheets"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格",
-    "description_zh": "自动化工作流（Preparing）",
+    "description_zh": "Preparing data to be sent to a service（自动化）",
     "replacements": {
       "": {
         "type": "n8n-nodes-base.googleSheets",

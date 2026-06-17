@@ -440,6 +440,6 @@
     "tier": "A",
     "source_id": 6140,
     "synced_at": "2026-06-17T14:18:21.507616",
-    "description_zh": "DevOps Infrastructure Automati"
+    "description_zh": "自动部署流水线，代码提交后自动构建和发布"
   }
 }

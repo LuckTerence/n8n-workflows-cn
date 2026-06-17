@@ -1876,7 +1876,7 @@
       "Google Drive"
     ],
     "upgrade_note": "Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS",
-    "description_zh": "股票、图像",
+    "description_zh": "金融数据分析系统，市场行情采集与 AI 分析告警，定时执行（Stock）",
     "replacements": {
       "874d35db-a40a-4ee4-a789-c260a193eda1": {
         "type": "n8n-nodes-base.googleSheets",

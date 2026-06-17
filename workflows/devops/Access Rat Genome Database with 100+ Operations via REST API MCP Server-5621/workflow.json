@@ -2601,6 +2601,6 @@
     "tier": "A",
     "source_id": 5621,
     "synced_at": "2026-06-17T14:17:40.159579",
-    "description_zh": "Access Rat Genome Database wit"
+    "description_zh": "MCP 协议工具服务，为 AI Agent 暴露 API 接口（Access）"
   }
 }

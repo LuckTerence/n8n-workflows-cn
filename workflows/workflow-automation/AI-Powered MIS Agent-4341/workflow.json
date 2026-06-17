@@ -19718,7 +19718,7 @@
       "Gmail"
     ],
     "upgrade_note": "Gmail→QQ邮箱/企业微信、Google Sheets→飞书多维表格、Google Sheets→飞书多维表格、Google Drive→阿里云OSS、Google Drive→阿里云OSS、Pinecone→Milvus/腾讯云向量库",
-    "description_zh": "AI 智能体（Powered）",
+    "description_zh": "AI-Powered MIS Agent（AI 增强）",
     "replacements": {
       "807f7bbd-f4c0-48bf-b46b-dd43ea6462f0": {
         "type": "n8n-nodes-base.googleDrive",

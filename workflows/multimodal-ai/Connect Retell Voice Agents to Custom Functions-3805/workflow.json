@@ -1588,6 +1588,6 @@
     "foreign_services": [
       "Slack"
     ],
-    "description_zh": "Agent、语音（Connect）"
+    "description_zh": "AI 语音处理工作流，语音合成或转录，Webhook 触发（Connect）"
   }
 }

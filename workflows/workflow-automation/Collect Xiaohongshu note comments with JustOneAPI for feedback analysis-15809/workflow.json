@@ -280,6 +280,6 @@
     "tier": "A",
     "source_id": 15809,
     "synced_at": "2026-06-17T14:12:22.992264",
-    "description_zh": "API 接口（Collect）"
+    "description_zh": "表单问卷工具，自动收集和处理用户反馈（Collect）"
   }
 }
