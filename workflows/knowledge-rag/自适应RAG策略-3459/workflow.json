@@ -348,14 +348,17 @@
     {
       "id": "fcd29f6b-17e8-442c-93f9-b93fbad7cd10",
       "name": "Gemini Classification",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         360,
         180
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash-lite"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash-lite",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -368,14 +371,17 @@
     {
       "id": "c0828ee3-f184-41f5-9a25-0f1059b03711",
       "name": "Gemini Factual",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         1120,
         -560
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -388,14 +394,17 @@
     {
       "id": "98f9981d-ea8e-45cb-b91d-3c8d1fe33e25",
       "name": "Gemini Analytical",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         1120,
         -20
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -438,14 +447,17 @@
     {
       "id": "52dcd9f0-e6b3-4d33-bc6f-621ef880178e",
       "name": "Gemini Opinion",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         1120,
         520
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -473,14 +485,17 @@
     {
       "id": "3cb6bf32-5937-49b9-acf7-d7d01dc2ddd1",
       "name": "Gemini Contextual",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         1120,
         1060
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -514,7 +529,8 @@
         200
       ],
       "parameters": {
-        "modelName": "models/text-embedding-004"
+        "modelName": "models/text-embedding-004",
+        "model": "text-embedding-3-small"
       },
       "credentials": {
         "googlePalmApi": {
@@ -670,14 +686,17 @@
     {
       "id": "0c623ca1-da85-48a3-9d8b-90d97283a015",
       "name": "Gemini Answer",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         2720,
         200
       ],
       "parameters": {
-        "options": {},
-        "modelName": "models/gemini-2.0-flash"
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "modelName": "models/gemini-2.0-flash",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -1224,8 +1243,9 @@
     "title_zh": "自适应RAG策略",
     "description_zh": "查询分类+Qdrant",
     "category": "knowledge-rag",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3459,
-    "synced_at": "2026-06-17T11:21:15.195687"
+    "synced_at": "2026-06-17T11:21:15.195687",
+    "upgraded_at": "2026-06-17"
   }
 }

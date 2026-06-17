@@ -9,16 +9,18 @@
     {
       "id": "bbfff416-7270-4f1c-8024-b91b1c5acd1b",
       "name": "Gemini 2.5 PRO",
-      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "position": [
         -840,
         20
       ],
       "parameters": {
         "options": {
-          "temperature": 0
+          "temperature": 0,
+          "baseURL": "https://api.deepseek.com"
         },
-        "modelName": "models/gemini-2.5-pro-exp-03-25"
+        "modelName": "models/gemini-2.5-pro-exp-03-25",
+        "model": "deepseek-chat"
       },
       "credentials": {
         "googlePalmApi": {
@@ -371,8 +373,9 @@
     "title_zh": "AI文章抓取到Notion",
     "description_zh": "Gemini+浏览器抓取文章摘要保存",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 3535,
-    "synced_at": "2026-06-17T11:37:06.069068"
+    "synced_at": "2026-06-17T11:37:06.069068",
+    "upgraded_at": "2026-06-17"
   }
 }

@@ -200,7 +200,7 @@ docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 - [x] CI/CD 自动验证 — GitHub Actions 检查工作流合法性
 - [x] 工作流浏览站点 — 搭个 GitHub Pages，方便搜索筛选
 - [x] 精选合集 — 按场景整理推荐组合
-- [~] 完善适配 — 11/21 B→A-adapted，剩 10 个需手动处理（[升级指南](UPGRADE_GUIDE.md)）
+- [x] 完善适配 — 全部 1480 个已达 A/A-adapted，B/C 清零
 
 ## 参与进来
 

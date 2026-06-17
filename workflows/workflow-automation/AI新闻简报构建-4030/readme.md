@@ -3,7 +3,7 @@
 
 Dumpling AI爬站+GPT-4o摘要+简报
 
-> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 分类：工作流自动化 | 适配等级：A-adapted（GPT-4o→DeepSeek，Gmail需手动替换）
 > 原始来源：https://n8nworkflows.xyz/workflows/4030
 
 ---

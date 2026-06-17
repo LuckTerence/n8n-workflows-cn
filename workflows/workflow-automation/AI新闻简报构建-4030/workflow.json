@@ -151,10 +151,15 @@
         "modelId": {
           "__rl": true,
           "mode": "list",
-          "value": "gpt-4o",
-          "cachedResultName": "GPT-4O"
+          "value": "deepseek-chat"
         },
-        "options": {},
+        "options": {
+          "baseURL": {
+            "__rl": true,
+            "value": "https://api.deepseek.com",
+            "mode": "url"
+          }
+        },
         "messages": {
           "values": [
             {
@@ -318,8 +323,9 @@
     "title_zh": "AI新闻简报构建",
     "description_zh": "Dumpling AI爬站+GPT-4o摘要+简报",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 4030,
-    "synced_at": "2026-06-17T11:37:07.518720"
+    "synced_at": "2026-06-17T11:37:07.518720",
+    "upgraded_at": "2026-06-17"
   }
 }

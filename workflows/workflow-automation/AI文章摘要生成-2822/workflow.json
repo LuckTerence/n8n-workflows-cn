@@ -55,7 +55,10 @@
         -600
       ],
       "parameters": {
-        "options": {}
+        "options": {
+          "baseURL": "https://api.deepseek.com"
+        },
+        "model": "deepseek-chat"
       },
       "credentials": {
         "openAiApi": {
@@ -1035,8 +1038,9 @@
     "title_zh": "AI文章摘要生成",
     "description_zh": "WordPress文章AI摘要",
     "category": "workflow-automation",
-    "tier": "B",
+    "tier": "A-adapted",
     "source_id": 2822,
-    "synced_at": "2026-06-17T11:21:16.021371"
+    "synced_at": "2026-06-17T11:21:16.021371",
+    "upgraded_at": "2026-06-17"
   }
 }

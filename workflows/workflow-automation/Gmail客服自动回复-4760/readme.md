@@ -3,7 +3,7 @@
 
 Ollama+Pinecone RAG
 
-> 分类：工作流自动化 | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 分类：工作流自动化 | 适配等级：A-adapted（AI模型已本地化Ollama，Pinecone/Gmail需手动替换）
 > 原始来源：https://n8nworkflows.xyz/workflows/4760
 
 ---

@@ -3,7 +3,7 @@
 
 查询分类+Qdrant
 
-> 分类：知识库 RAG | 适配等级：B（核心链路通了，边角节点可能要自己调）
+> 分类：知识库 RAG | 适配等级：A-adapted（AI模型已适配，部分外服节点需手动替换为国内服务）
 > 原始来源：https://n8nworkflows.xyz/workflows/3459
 
 ---
