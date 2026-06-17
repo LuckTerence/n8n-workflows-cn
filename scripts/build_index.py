@@ -350,7 +350,10 @@ def build():
             lines.append(f'<summary><b>{sub_name}</b>（{len(entries)} 个）</summary>')
             lines.append("")
             for wf_dir, desc in sorted(entries):
-                link = f"{prefix}workflows/{cat}/{wf_dir}/"
+                if prefix.startswith("http"):
+                    link = f"{prefix}/tree/main/workflows/{cat}/{wf_dir}/"
+                else:
+                    link = f"{prefix}workflows/{cat}/{wf_dir}/"
                 display_clean = wf_dir.replace("[", "(").replace("]", ")")
                 lines.append(f"- [{display_clean}]({link}) — {desc}")
             lines.append("")
@@ -405,7 +408,7 @@ def build():
         cat_lines.append("")
         cat_lines.append("---")
         cat_lines.append("")
-        cat_lines.extend(write_category_index(cat, prefix="../"))
+        cat_lines.extend(write_category_index(cat, prefix="https://github.com/LuckTerence/n8n-workflows-cn"))
 
         cat_path = os.path.join(BASE, f"index/INDEX-{cat}.md")
         with open(cat_path, "w", encoding="utf-8") as f:
